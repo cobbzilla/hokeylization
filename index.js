@@ -11,14 +11,6 @@ if (process.env.__HOKEY_DIR) {
 
 // verify env vars
 const projectId = process.env.GOOGLE_TRANSLATE_PROJECT_ID
-if (!projectId) {
-    console.error('Env var GOOGLE_TRANSLATE_PROJECT_ID not defined')
-    process.exit(1)
-}
-if (!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
-    console.error('Env var GOOGLE_APPLICATION_CREDENTIALS not defined')
-    process.exit(1)
-}
 
 const { Translate } = require('@google-cloud/translate').v2
 
@@ -79,6 +71,17 @@ const processDirectory = (jsFile, lang, outfile) => {
     walk(jsFile)
 }
 
+const verifyEnv = () => {
+    if (!projectId) {
+        console.error('Env var GOOGLE_TRANSLATE_PROJECT_ID not defined')
+        process.exit(1)
+    }
+    if (!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+        console.error('Env var GOOGLE_APPLICATION_CREDENTIALS not defined')
+        process.exit(1)
+    }
+}
+
 const program = new commander.Command()
     .command('hokey')
     .summary(`Quick translation service using Google Translate\nVersion ${VERSION}`)
@@ -91,6 +94,7 @@ const program = new commander.Command()
     .version(VERSION)
     .showHelpAfterError()
     .action(async (jsFile, opts) => {
+        verifyEnv()
         if (opts.language.length !== 2) {
             throw new TypeError(`lang must be 2 characters: ${opts.language}`)
         }
