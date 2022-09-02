@@ -3,12 +3,23 @@ const fs = require('fs')
 const path = require('path')
 const commander = require('commander')
 
-/**
- * TODO(developer): Uncomment the following line before running the sample.
- */
-const projectId = process.env.GOOGLE_TRANSLATE_PROJECT_ID
+// When run globally, we lose the original user pwd
+// The wrapper script passes it via this env var
+if (process.env.__HOKEY_DIR) {
+    process.chdir(process.env.__HOKEY_DIR)
+}
 
-// Imports the Google Cloud client library
+// verify env vars
+const projectId = process.env.GOOGLE_TRANSLATE_PROJECT_ID
+if (!projectId) {
+    console.error('Env var GOOGLE_TRANSLATE_PROJECT_ID not defined')
+    process.exit(1)
+}
+if (!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+    console.error('Env var GOOGLE_APPLICATION_CREDENTIALS not defined')
+    process.exit(1)
+}
+
 const { Translate } = require('@google-cloud/translate').v2
 
 const VERSION = require('./package.json').version;
