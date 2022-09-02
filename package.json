@@ -1,0 +1,38 @@
+{
+  "name": "hokeylization",
+  "version": "1.0.0",
+  "description": "Automate translation of string tables and emails",
+  "main": "index.js",
+  "keywords": [
+    "translation",
+    "translate",
+    "language",
+    "localization",
+    "internationalization",
+    "cli",
+    "tool"
+  ],
+  "homepage": "https://github.com/cobbzilla/hokeylization",
+  "author": "Jonathan Cobb <udo9jqld@duck.com> (https://github.com/cobbzilla)",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/cobbzilla"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cobbzilla/hokeylization"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@google-cloud/translate": "^7.0.1",
+    "commander": "^9.4.0",
+    "dotenv": "^16.0.2"
+  },
+  "scripts": {
+    "run": "node index.js",
+    "hokey": "node index.js"
+  },
+  "bin": {
+    "hokey": "./hokey"
+  }
+}

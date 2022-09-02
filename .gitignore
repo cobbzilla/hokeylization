@@ -1,0 +1,7 @@
+.idea
+*.iml
+tmp
+.env
+gcreds.json
+*~
+node_modules
