@@ -30,9 +30,9 @@ Your string table **must** be in a JavaScript file in the form:
       ... more keys ...
     }
 
-If this file was named `myfile.json`, you can translate it to Spanish with:
+If this file was named `myfile.js`, you can translate it to Spanish with:
 
-    hokey -l es -o myfile.es.json myfile.json
+    hokey -l es -o myfile.es.js myfile.js
 
 For the `-l` / `--language` option, you can use any 2-letter language code
 [supported by Google Translate](https://cloud.google.com/translate/docs/languages)

@@ -1,6 +1,6 @@
 {
   "name": "hokeylization",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automate translation of string tables and emails",
   "main": "index.js",
   "keywords": [
