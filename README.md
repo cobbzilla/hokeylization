@@ -32,9 +32,9 @@ Your string table **must** be in a JavaScript file in the form:
 
 If this file was named `myfile.json`, you can translate it to Spanish with:
 
-    hokey -L es -o myfile.es.json myfile.json
+    hokey -l es -o myfile.es.json myfile.json
 
-For the `-L` / `--language` option, you can use any 2-letter language code
+For the `-l` / `--language` option, you can use any 2-letter language code
 [supported by Google Translate](https://cloud.google.com/translate/docs/languages)
 
 ## Translating a directory of text files
@@ -55,7 +55,7 @@ that is within your input directory! If you do, you will:
 
 Here is an example of what *not to do*:
 
-    hokey -L es -o templates/es templates    # <--- DON'T DO THIS!
+    hokey -l es -o templates/es templates    # <--- DON'T DO THIS!
 
 When this runs, translated files are written to `templates/es`, and thus become new
 source files to translate, since they are under `templates/` -- this process continues
@@ -72,7 +72,7 @@ OK, let's say you have some email templates in a directory:
 
 To translate all of these to Spanish, run:
 
-    hokey -L es -o templates/email/es templates/email/en
+    hokey -l es -o templates/email/es templates/email/en
 
 What happens when the above runs:
 * The `templates/email/es` will be created if it doesn't exist

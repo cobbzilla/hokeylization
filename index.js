@@ -73,8 +73,8 @@ const program = new commander.Command()
     .summary(`Quick translation service using Google Translate\nVersion ${VERSION}`)
     .description('Set the GOOGLE_TRANSLATE_PROJECT_ID environment variable to your Google Translate project\n' +
         'Set the GOOGLE_APPLICATION_CREDENTIALS environment variable to point to your credentials JSON file')
-    .requiredOption('-L, --language <lang>', '2-letter code for language to translate into')
-    .requiredOption('-O, --outfile <out-file>', 'Write JS output to this file. Default is input filename with lang extension\n' +
+    .requiredOption('-l, --language <lang>', '2-letter code for language to translate into')
+    .requiredOption('-o, --outfile <out-file>', 'Write JS output to this file. Default is input filename with lang extension\n' +
         'For directory processing, this is the output directory. It will be created if it does not exist')
     .argument('<js-file>', 'A JS file that exports strings to translate\nOr, if a directory, a directory filled with text files to translate')
     .version(VERSION)
