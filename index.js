@@ -129,7 +129,10 @@ const program = new commander.Command()
                 } else {
                     result += ',\n'
                 }
-                result += `  ${key}: '${translation.replaceAll("'", "\\'")}'`
+                const quotedTranslation = translation.replaceAll("'", "\\'");
+                const different = quotedTranslation !== translation
+                result += `  ${key}: '${quotedTranslation}'`
+                console.log(`${key} => ${translation}${different ? `(quoted as ${quotedTranslation})` : ''}`)
             }
             result += '\n}\n'
         } catch (e) {
