@@ -1,4 +1,5 @@
 #!/bin/sh
+USER_DIR="$(pwd)"
 SCRIPT_DIR="$(cd "$(dirname "${0}")" && pwd)"
 TARGET_SCRIPT="$(readlink "${0}")"
 if [ -n "${TARGET_SCRIPT}" ] ; then
@@ -8,5 +9,5 @@ else
 fi
 
 exec 3>&1
-yarn -s run hokey "$@" 2>&1 >&3 3>&- | grep -v 'No license field' 3>&-
+cd "${USER_DIR}" && yarn --cwd "${SCRIPT_DIR}" -s run hokey "$@" 2>&1 >&3 3>&- | grep -v 'No license field' 3>&-
 exec 3>&-
