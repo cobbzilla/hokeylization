@@ -44,7 +44,7 @@ const readDirFiles = async (dir) => {
     return files
 }
 
-const processDirectory = async (translate, inDir, fromLang, inFiles, lang, outfile, force, handlebars) => {
+const processDirectory = async (translate, inDir, fromLang, inFiles, lang, outfile, force, handlebars, processAs) => {
     const langOut = outfile.replace(LANG_PLACEHOLDER, lang)
     if (langOut === outfile || !langOut.includes(lang)) {
         throw new TypeError(`processDirectory: expected outfile to contain 'LANG' (to be replaced with ${lang})`)
@@ -64,7 +64,7 @@ const processDirectory = async (translate, inDir, fromLang, inFiles, lang, outfi
         } else {
             langFile = path.resolve(path.join(langOut, inFile.relative))
         }
-        const translation = await translateString(translate, inFile.data, fromLang, lang, handlebars, langFile)
+        const translation = await translateString(translate, inFile.data, fromLang, lang, handlebars, langFile, processAs)
         fs.mkdirSync(path.dirname(langFile), {recursive: true})
         fs.writeFileSync(langFile, translation)
         console.log(`WROTE: ${langFile}`)

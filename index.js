@@ -33,6 +33,7 @@ const program = new commander.Command()
     .description('Set the GOOGLE_TRANSLATE_PROJECT_ID environment variable to your Google Translate project\n' +
         'Set the GOOGLE_APPLICATION_CREDENTIALS environment variable to point to your credentials JSON file')
     .option('-i, --input-language <lang>', '2-letter codes for languages to translate from. Default is en')
+    .option('-p, --process-as <type>', 'Type can be text or html. Default is text')
     .requiredOption('-l, --languages <lang>', 'Comma-separated list of 2-letter codes for languages to translate into')
     .requiredOption('-o, --outfile <out-file>', 'Write JS output to this file. Default is input filename with lang extension\n' +
         'For directory processing, this is the output directory. It will be created if it does not exist')
@@ -46,6 +47,7 @@ const program = new commander.Command()
         const langs = opts.languages.toLowerCase().split(',')
         const outfile = opts.outfile
         const fromLang = opts.fromLanguage || 'en'
+        const processAs = opts.processAs || 'text'
         const translate = new Translate({projectId})
 
         const stat = fs.lstatSync(jsFile)
@@ -55,7 +57,7 @@ const program = new commander.Command()
                 if (lang.trim().length === 0) {
                     continue
                 }
-                await processDirectory(translate, jsFile, fromLang, inFiles, lang, outfile, opts.force, opts.handlebars)
+                await processDirectory(translate, jsFile, fromLang, inFiles, lang, outfile, opts.force, opts.handlebars, processAs)
             }
         } else {
             const keys = await readMessageKeys(jsFile)
