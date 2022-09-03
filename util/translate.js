@@ -51,10 +51,11 @@ const revertHandlebars = (translation, hbs) => {
     return result
 }
 
-const translateString = async (translate, value, lang, handlebars) => {
+const translateString = async (translate, value, fromLang, toLang, handlebars, label) => {
     if (handlebars) {
         const hbs = replaceHandlebars(value)
-        const [translation] = await translate.translate(hbs.value, {to: lang, format: 'text'})
+        const [translation] = await translate.translate(hbs.value, {from: fromLang, to: toLang, format: 'text'})
+        console.log(`translateString(${fromLang}, ${toLang}) ${label} translated ${value.length} chars to ${translation.length} chars`)
         return revertHandlebars(translation, hbs)
     } else {
         const [translation] = await translate.translate(value, lang)

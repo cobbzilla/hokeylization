@@ -41,7 +41,7 @@ output files, so the above command creates the files:
     myfile.es.js
     myfile.de.js
 
-The `-l` / `--language` option is a comma-separated list of 2-letter language codes
+The `-l` / `--languages` option is a comma-separated list of 2-letter language codes
 [supported by Google Translate](https://cloud.google.com/translate/docs/languages)
 
 If the output file already exists, it will not be overwritten. Instead, only translations

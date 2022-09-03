@@ -16,7 +16,7 @@ const readMessageKeys = async (file) => {
     return eval('Object.assign({}, ' + data.substring(firstCurly) + ')')
 }
 
-const processFile = async (translate, infile, keys, lang, outfile, force, handlebars) => {
+const processFile = async (translate, infile, fromLang, keys, lang, outfile, force, handlebars) => {
     const langOut = outfile.replace(LANG_PLACEHOLDER, lang)
     if (langOut === outfile || !langOut.includes(lang)) {
         throw new TypeError(`processFile: expected outfile to contain 'LANG' (to be replaced with ${lang})`)
@@ -31,8 +31,7 @@ const processFile = async (translate, infile, keys, lang, outfile, force, handle
             if (!force && langKeys[key]) {
                 continue
             }
-            langKeys[key] = await translateString(translate, keys[key], lang, handlebars)
-            console.log(`translated(${lang}) ${key} = ${langKeys[key]}`)
+            langKeys[key] = await translateString(translate, keys[key], fromLang, lang, handlebars, key)
         }
         // write lang file
         let first = true
