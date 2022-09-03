@@ -54,11 +54,18 @@ const revertHandlebars = (translation, hbs) => {
 const translateString = async (translate, value, fromLang, toLang, handlebars, label) => {
     if (handlebars) {
         const hbs = replaceHandlebars(value)
-        const [translation] = await translate.translate(hbs.value, {from: fromLang, to: toLang, format: 'text'})
-        console.log(`translateString(${fromLang}, ${toLang}) ${label} translated ${value.length} chars to ${translation.length} chars`)
-        return revertHandlebars(translation, hbs)
+
+        // wrap with <p> tag and translate as HTML, since we need to use <span class="notranslate">
+        const [translation] = await translate.translate(`<p>${hbs.value}</p>`, {from: fromLang, to: toLang, format: 'html'})
+
+        // unwrap <p> tag if present (it should be, but let's be safe)
+        let result = translation.startsWith('<p>') ? translation.substring('<p>'.length) : translation
+        result = result.endsWith('</p>') ? result.substring(result.length - '</p>'.length) : result
+
+        console.log(`translateString(${fromLang}, ${toLang}) ${label} translated ${value.length} chars to ${result.length} chars`)
+        return revertHandlebars(result, hbs)
     } else {
-        const [translation] = await translate.translate(value, lang)
+        const [translation] = await translate.translate(value, {from: fromLang, to: toLang, format: 'text'})
         return translation
     }
 }
