@@ -42,9 +42,6 @@ const program = new commander.Command()
     .showHelpAfterError()
     .action(async (jsFile, opts) => {
         verifyEnv()
-        if (opts.language.length !== 2) {
-            throw new TypeError(`lang must be 2 characters: ${opts.language}`)
-        }
         const langs = opts.language.toLowerCase().split(',')
         const outfile = opts.outfile
         const translate = new Translate({projectId})

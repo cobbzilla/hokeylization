@@ -12,7 +12,7 @@ const readMessageKeys = async (file) => {
         throw new TypeError(`readMessageKeys: expected file to start with 'export default' but found: ${data.length < 20 ? data : data.substring(0, 20)}...`)
     }
     const firstCurly = data.indexOf('{')
-    if (firstCurly === -1) throw new TypeError(`invalid json in ${jsFile}`)
+    if (firstCurly === -1) throw new TypeError(`invalid json in ${file}`)
     return eval('Object.assign({}, ' + data.substring(firstCurly) + ')')
 }
 
