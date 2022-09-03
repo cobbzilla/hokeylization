@@ -38,7 +38,7 @@ const program = new commander.Command()
     .requiredOption('-o, --outfile <out-file>', 'Write JS output to this file. Default is input filename with lang extension\n' +
         'For directory processing, this is the output directory. It will be created if it does not exist')
     .option('-f, --force', 'Always generate fresh translations, overwriting any existing output files')
-    .option('-h, --handlebars', 'Ensure {{ handlebars }} content is NOT translated')
+    .option('-H, --handlebars', 'Ensure {{ handlebars }} content is NOT translated')
     .argument('<js-file>', 'A JS file that exports strings to translate\nOr, if a directory, a directory filled with text files to translate')
     .version(VERSION)
     .showHelpAfterError()

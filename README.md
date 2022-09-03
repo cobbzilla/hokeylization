@@ -104,7 +104,12 @@ The strings to translate might contain `{{ handlebars }}` templates, either with
 
 You probably *DON'T* want the stuff inside those templates to be translated.
 
-Pass the `-h` / `--handlebars` flag, and anything within `{{ ... }}` will not be translated.
+Pass the `-H` / `--handlebars` flag, and anything within `{{ ... }}` will not be translated.
+
+### Process-as
+Normally everything is processed as plain text.
+
+If your content is HTML, it will get mangled unless you pass the `-p html` / `--process-as html` option.
 
 ### Help
 Use `-h` / `--help` to show help
