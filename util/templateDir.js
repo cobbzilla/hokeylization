@@ -4,7 +4,13 @@ const { LANG_PLACEHOLDER, translateString } = require("./translate");
 
 // adapted from https://stackoverflow.com/a/26828355/1251543
 const walk = (dir, files = []) => {
-    const dirFiles = fs.readdirSync(dir)
+    let dirFiles
+    try {
+        dirFiles = fs.readdirSync(dir)
+    } catch (e) {
+        console.warn(`walk(${dir}): error reading: ${e}`)
+        return files
+    }
     for (const f of dirFiles) {
         const stat = fs.lstatSync(dir + path.sep + f)
         if (stat.isDirectory()) {
