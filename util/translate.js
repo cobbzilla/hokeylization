@@ -67,8 +67,12 @@ const translateString = async (translate, value, fromLang, toLang, handlebars, l
             result = translation.replaceAll('<br/>', '\n')
 
             // unwrap <p> tag if present (it should be, but let's be safe)
-            result = result.startsWith('<p>') ? result.substring('<p>'.length) : result
-            result = result.endsWith('</p>') ? result.substring(0, result.length - '</p>'.length) : result
+            if (result.startsWith('<p')) {
+                result = result.substring(result.indexOf('>'))
+            }
+            if (result.endsWith('</p>')) {
+                result = result.substring(0, result.length - '</p>'.length)
+            }
         } else {
             result = translation
         }
