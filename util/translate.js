@@ -60,7 +60,7 @@ const translateString = async (translate, value, fromLang, toLang, handlebars, l
 
         // unwrap <p> tag if present (it should be, but let's be safe)
         let result = translation.startsWith('<p>') ? translation.substring('<p>'.length) : translation
-        result = result.endsWith('</p>') ? result.substring(result.length - '</p>'.length) : result
+        result = result.endsWith('</p>') ? result.substring(0, result.length - '</p>'.length) : result
 
         console.log(`translateString(${fromLang}, ${toLang}) ${label} translated ${value.length} chars to ${result.length} chars`)
         return revertHandlebars(result, hbs)
