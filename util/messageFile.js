@@ -32,6 +32,7 @@ const processFile = async (translate, infile, keys, lang, outfile, force, handle
                 continue
             }
             langKeys[key] = await translateString(translate, keys[key], lang, handlebars)
+            console.log(`translated(${lang}) ${key} = ${langKeys[key]}`)
         }
         // write lang file
         let first = true
@@ -46,7 +47,6 @@ const processFile = async (translate, infile, keys, lang, outfile, force, handle
 
             const val = langKeys[key]
             const quotedTranslation = val.replaceAll("'", "\\'");
-            console.log(`translated(${lang}) ${key} = ${val}`)
             result += `${key}: '${quotedTranslation}'`
         }
         result += '\n}'
