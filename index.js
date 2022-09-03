@@ -50,11 +50,17 @@ const program = new commander.Command()
         if (stat.isDirectory()) {
             const inFiles = await readDirFiles(jsFile)
             for (const lang of langs) {
+                if (lang.trim().length === 0) {
+                    continue
+                }
                 await processDirectory(translate, jsFile, inFiles, lang, outfile, opts.force, opts.handlebars)
             }
         } else {
             const keys = await readMessageKeys(jsFile)
             for (const lang of langs) {
+                if (lang.trim().length === 0) {
+                    continue
+                }
                 await processFile(translate, jsFile, keys, lang, outfile, opts.force, opts.handlebars)
             }
         }
