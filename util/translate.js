@@ -55,11 +55,16 @@ const translateString = async (translate, value, fromLang, toLang, handlebars, l
     if (handlebars) {
         const hbs = replaceHandlebars(value)
 
-        // wrap with <p> tag and translate as HTML, since we need to use <span class="notranslate">
-        const [translation] = await translate.translate(`<p>${hbs.value}</p>`, {from: fromLang, to: toLang, format: 'html'})
+
+        // We need to use <span class="notranslate">
+        // So we wrap with <p> tag, replace newlines with <br/> and translate as HTML
+        const [translation] = await translate.translate(`<p>${hbs.value.replaceAll('\n', '<br/>')}</p>`, {from: fromLang, to: toLang, format: 'html'})
+
+        // replace <br/> with newline
+        let result = translation.replaceAll('<br/>', '\n')
 
         // unwrap <p> tag if present (it should be, but let's be safe)
-        let result = translation.startsWith('<p>') ? translation.substring('<p>'.length) : translation
+        result = result.startsWith('<p>') ? result.substring('<p>'.length) : result
         result = result.endsWith('</p>') ? result.substring(0, result.length - '</p>'.length) : result
 
         console.log(`translateString(${fromLang}, ${toLang}) ${label} translated ${value.length} chars to ${result.length} chars`)
