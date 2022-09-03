@@ -29,7 +29,6 @@ const processFile = async (translate, infile, keys, lang, outfile, force, handle
         for (const key of Object.keys(keys)) {
             // Does the translation already exist?
             if (!force && langKeys[key]) {
-                console.log(`processFile(${lang}): key ${key} already exists, not re-translating`)
                 continue
             }
             langKeys[key] = await translateString(translate, keys[key], lang, handlebars)

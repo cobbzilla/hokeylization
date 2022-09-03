@@ -19,7 +19,11 @@ const walk = (dir, files = []) => {
 const readDirFiles = async (dir) => {
     const outfileStat = fs.lstatSync(dir, {throwIfNoEntry: false})
     if (!outfileStat) {
-        fs.mkdirSync(dir, {recursive: true})
+        try {
+            fs.mkdirSync(dir, {recursive: true})
+        } catch (e) {
+            console.error(`readDirFiles(${dir}): error reading: ${e}`)
+        }
     } else if (!outfileStat.isDirectory()) {
         throw new TypeError(`processDirectory: not a directory: ${dir}`)
     }
