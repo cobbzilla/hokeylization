@@ -1,75 +1,20 @@
 require('dotenv').config()
 const fs = require('fs')
-const path = require('path')
 const commander = require('commander')
+const { Translate } = require('@google-cloud/translate').v2
+const { readMessageKeys, processFile } = require('./util/messageFile')
+const { readDirFiles, processDirectory } = require('./util/templateDir')
 
-// When run globally, we lose the original user pwd
+// When run from a global installation, we lose the user's original cwd
 // The wrapper script passes it via this env var
-if (process.env.__HOKEY_DIR) {
-    process.chdir(process.env.__HOKEY_DIR)
+if (process.env.___HOKEY_PWD) {
+    process.chdir(process.env.___HOKEY_PWD)
 }
 
 // verify env vars
 const projectId = process.env.GOOGLE_TRANSLATE_PROJECT_ID
 
-const { Translate } = require('@google-cloud/translate').v2
-
 const VERSION = require('./package.json').version;
-
-// adapted from https://stackoverflow.com/a/26828357/1251543
-const processDirectory = (jsFile, lang, outfile) => {
-    const outfileStat = fs.lstatSync(jsFile, {throwIfNoEntry: false})
-    if (!outfileStat) {
-        fs.mkdirSync(outfile, {recursive: true})
-    } else if (!outfileStat.isDirectory()) {
-        throw new TypeError(`processDirectory: not a directory: ${outfile}`)
-    }
-
-    const translate = new Translate({projectId})
-    const visitor = async (fullPath) => {
-        const contents = fs.readFileSync(fullPath, 'utf8')
-        const [translation] = await translate.translate(contents, lang)
-        let translationFile
-        if (fullPath.includes(jsFile)) {
-            const start = fullPath.indexOf(jsFile)
-            const relativePath = fullPath.substring(start + jsFile.length)
-            translationFile = path.resolve(path.join(outfile, relativePath))
-        } else {
-            translationFile = path.resolve(path.join(outfile, fullPath.replaceAll('/', '_')))
-        }
-        fs.mkdirSync(path.dirname(translationFile), {recursive: true})
-        fs.writeFileSync(translationFile, translation)
-        console.log(`WROTE: ${translationFile}`)
-    }
-    const walk = (directoryName) => {
-        fs.readdir(directoryName, (e, files) => {
-            if (e) {
-                console.log('Error: ', e)
-                return
-            }
-            for (const file of files) {
-                const fullPath = path.join(directoryName,file);
-                fs.stat(fullPath, (e, f) => {
-                    if (e) {
-                        console.log('Error: ', e)
-                        return
-                    }
-                    if (f.isDirectory()) {
-                        walk(fullPath)
-                    } else {
-                        visitor(fullPath).then(
-                            () => {},
-                            (err) => {
-                                console.error(`Error translating ${fullPath}: ${err}`)
-                            }
-                        )
-                    }
-                })
-            }
-        })
-    }
-    walk(jsFile)
-}
 
 const verifyEnv = () => {
     if (!projectId) {
@@ -87,9 +32,11 @@ const program = new commander.Command()
     .summary(`Quick translation service using Google Translate\nVersion ${VERSION}`)
     .description('Set the GOOGLE_TRANSLATE_PROJECT_ID environment variable to your Google Translate project\n' +
         'Set the GOOGLE_APPLICATION_CREDENTIALS environment variable to point to your credentials JSON file')
-    .requiredOption('-l, --language <lang>', '2-letter code for language to translate into')
+    .requiredOption('-l, --language <lang>', 'Comma-separated list of 2-letter codes for languages to translate into')
     .requiredOption('-o, --outfile <out-file>', 'Write JS output to this file. Default is input filename with lang extension\n' +
         'For directory processing, this is the output directory. It will be created if it does not exist')
+    .option('-f, --force', 'Always generate fresh translations, overwriting any existing output files')
+    .option('-h, --handlebars', 'Ensure {{ handlebars }} content is NOT translated')
     .argument('<js-file>', 'A JS file that exports strings to translate\nOr, if a directory, a directory filled with text files to translate')
     .version(VERSION)
     .showHelpAfterError()
@@ -98,52 +45,21 @@ const program = new commander.Command()
         if (opts.language.length !== 2) {
             throw new TypeError(`lang must be 2 characters: ${opts.language}`)
         }
-        const lang = opts.language.toLowerCase()
+        const langs = opts.language.toLowerCase().split(',')
+        const outfile = opts.outfile
+        const translate = new Translate({projectId})
+
         const stat = fs.lstatSync(jsFile)
         if (stat.isDirectory()) {
-            await processDirectory(jsFile, lang, opts.outfile || `./${path.basename(jsFile)}_${lang}_${Date.now()}`)
-            return
-        }
-
-        const file = fs.readFileSync(jsFile).toString('utf8').trim()
-        let keys
-        if (file.startsWith('export default ')) {
-            const firstCurly = file.indexOf('{')
-            if (firstCurly === -1) throw new TypeError(`invalid json in ${jsFile}`)
-            keys = eval('Object.assign({}, ' + file.substring(firstCurly) + ')')
-        } else {
-            keys = require(jsFile)
-        }
-        let result = "export default {"
-        let first = true
-        try {
-            // create a client
-            const translate = new Translate({projectId})
-
-            for (const key of Object.keys(keys)) {
-                // Translates some text into Russian
-                const [translation] = await translate.translate(keys[key], lang)
-                if (first) {
-                    result += '\n'
-                    first = false
-                } else {
-                    result += ',\n'
-                }
-                const quotedTranslation = translation.replaceAll("'", "\\'");
-                const different = quotedTranslation !== translation
-                result += `  ${key}: '${quotedTranslation}'`
-                console.log(`${key} => ${translation}${different ? `(quoted as ${quotedTranslation})` : ''}`)
+            const inFiles = await readDirFiles(jsFile)
+            for (const lang of langs) {
+                await processDirectory(translate, jsFile, inFiles, lang, outfile, opts.force, opts.handlebars)
             }
-            result += '\n}\n'
-        } catch (e) {
-            console.error(` **** Error translating: ${e}`)
-        }
-
-        const outfile = opts.outfile || lang + '_' + Date.now() + '_' + jsFile
-        try {
-            fs.writeFileSync(outfile, result)
-        } catch (e) {
-            console.error(` **** Error writing to outfile ${opts.outputFile}: ${e}`)
+        } else {
+            const keys = await readMessageKeys(jsFile)
+            for (const lang of langs) {
+                await processFile(translate, jsFile, keys, lang, outfile, opts.force, opts.handlebars)
+            }
         }
     })
 

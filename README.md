@@ -30,12 +30,24 @@ Your string table **must** be in a JavaScript file in the form:
       ... more keys ...
     }
 
-If this file was named `myfile.js`, you can translate it to Spanish with:
+If this file was named `myfile.en.js`, you can translate it to Spanish and German with:
 
-    hokey -l es -o myfile.es.js myfile.js
+    hokey -l es,de -o myfile.LANG.js myfile.en.js
 
-For the `-l` / `--language` option, you can use any 2-letter language code
+The `LANG` in the above is special -- I hope you're not using it in your filenames, because
+it's a reserved word in this tool! The `LANG` is replaced with the language code for the
+output files, so the above command creates the files:
+
+    myfile.es.js
+    myfile.de.js
+
+The `-l` / `--language` option is a comma-separated list of 2-letter language codes
 [supported by Google Translate](https://cloud.google.com/translate/docs/languages)
+
+If the output file already exists, it will not be overwritten. Instead, only translations
+for missing keys will be generated and appended to the end of the output JS file.
+
+To re-translate all keys, use the `-f` / `--force` option.
 
 ## Translating a directory of text files
 You can also translate a directory, hokey will recursively visit every file
@@ -70,13 +82,31 @@ OK, let's say you have some email templates in a directory:
     templates/email/en/reset-password.txt
     templates/email/en/reset-password.html
 
-To translate all of these to Spanish, run:
+To translate all of these to Spanish and German, run:
 
-    hokey -l es -o templates/email/es templates/email/en
+    hokey -l es,de -o templates/email/LANG templates/email/en
+
+In the above, `LANG` is a reserved word and will be replaced with the 2-letter locale code.
 
 What happens when the above runs:
-* The `templates/email/es` will be created if it doesn't exist
-* Every file in `templates/email/en` will be translated
-* You'll end up with an identical directory structure under `es` that you have under `en`
+* The `templates/email/es` and `templates/email/de` directories will be created (if they don't exist)
+* Every file in `templates/email/en` will be translated to Spanish and German
+  * Existing output files will not be regenerated unless you use `-f` / `--force`
+* You'll end up with an identical directory structure and files within `es` and `de` like you have under `en`
+
+## Other options
+
+### Force
+Pass `-f` / `--force` to always regenerate translations, even if they already exist.
+
+### Handlebars
+The strings to translate might contain `{{ handlebars }}` templates, either with two or three curly-braces.
+
+You probably *DON'T* want the stuff inside those templates to be translated.
+
+Pass the `-h` / `--handlebars` flag, and anything within `{{ ... }}` will not be translated.
+
+### Help
+Use `-h` / `--help` to show help
 
 ## Happy Translating!
