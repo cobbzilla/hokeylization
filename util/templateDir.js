@@ -44,7 +44,10 @@ const readDirFiles = async (dir) => {
     return files
 }
 
-const processDirectory = async (translate, inDir, fromLang, inFiles, lang, outfile, force, handlebars, processAs) => {
+const processDirectory = async (translate, inDir, fromLang, inFiles, lang, outfile, options) => {
+    const force = options.force || false
+    const dryRun = options.dryRun || false
+    const match = options.match || null
     const langOut = outfile.replace(LANG_PLACEHOLDER, lang)
     if (langOut === outfile || !langOut.includes(lang)) {
         throw new TypeError(`processDirectory: expected outfile to contain 'LANG' (to be replaced with ${lang})`)
@@ -52,7 +55,7 @@ const processDirectory = async (translate, inDir, fromLang, inFiles, lang, outfi
     if (langOut === inDir) {
         throw new TypeError(`processDirectory: refusing to overwrite input lang directory: ${inDir}`)
     }
-    const outFiles = await readDirFiles(langOut)
+    const outFiles = await readDirFiles(langOut).filter(f => !match || f.match(match))
     for (const inFile of inFiles) {
         let langFile = outFiles.find(f => f.relative === inFile.relative);
         if (langFile) {
@@ -64,10 +67,16 @@ const processDirectory = async (translate, inDir, fromLang, inFiles, lang, outfi
         } else {
             langFile = path.resolve(path.join(langOut, inFile.relative))
         }
-        const translation = await translateString(translate, inFile.data, fromLang, lang, handlebars, langFile, processAs)
-        fs.mkdirSync(path.dirname(langFile), {recursive: true})
-        fs.writeFileSync(langFile, translation)
-        console.log(`WROTE: ${langFile}`)
+        const translation = dryRun
+            ? `(dry run) not writing translation for file: ${langFile}`
+            : await translateString(translate, inFile.data, fromLang, lang, langFile, options)
+        if (dryRun) {
+            console.log(`(dry-run) WOULD HAVE WROTE: ${langFile}`)
+        } else {
+            fs.mkdirSync(path.dirname(langFile), {recursive: true})
+            fs.writeFileSync(langFile, translation)
+            console.log(`WROTE: ${langFile}`)
+        }
     }
 }
 

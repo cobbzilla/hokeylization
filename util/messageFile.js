@@ -16,7 +16,9 @@ const readMessageKeys = async (file) => {
     return eval('Object.assign({}, ' + data.substring(firstCurly) + ')')
 }
 
-const processFile = async (translate, infile, fromLang, keys, lang, outfile, force, handlebars) => {
+const processFile = async (translate, infile, fromLang, keys, lang, outfile, options) => {
+    const force = options.force || false
+    const dryRun = options.dryRun || false
     const langOut = outfile.replace(LANG_PLACEHOLDER, lang)
     if (langOut === outfile || !langOut.includes(lang)) {
         throw new TypeError(`processFile: expected outfile to contain 'LANG' (to be replaced with ${lang})`)
@@ -31,7 +33,9 @@ const processFile = async (translate, infile, fromLang, keys, lang, outfile, for
             if (!force && langKeys[key]) {
                 continue
             }
-            langKeys[key] = await translateString(translate, keys[key], fromLang, lang, handlebars, key)
+            langKeys[key] = dryRun
+                ? `(dry run) not writing translation for key: ${keys[key]}`
+                : await translateString(translate, keys[key], fromLang, lang, key, options)
         }
         // write lang file
         let first = true
@@ -49,10 +53,14 @@ const processFile = async (translate, infile, fromLang, keys, lang, outfile, for
             result += `${key}: '${quotedTranslation}'`
         }
         result += '\n}'
-        try {
-            fs.writeFileSync(langOut, result)
-        } catch (e) {
-            console.error(` **** Error writing to outfile for ${lang}: ${langOut}: ${e}`)
+        if (dryRun) {
+            console.log(`(dry run) WOULD HAVE WROTE: ${langOut}`)
+        } else {
+            try {
+                fs.writeFileSync(langOut, result)
+            } catch (e) {
+                console.error(` **** Error writing to outfile for ${lang}: ${langOut}: ${e}`)
+            }
         }
     } catch (e) {
         console.error(` **** Error translating: ${e}`)

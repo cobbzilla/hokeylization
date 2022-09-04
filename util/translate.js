@@ -1,3 +1,5 @@
+const he = require('he')
+
 const LANG_PLACEHOLDER = 'LANG';
 const REPLACEMENT_STUB = '<span class="notranslate">' + '_'.repeat(10) + '</span>'
 
@@ -51,15 +53,22 @@ const revertHandlebars = (translation, hbs) => {
     return result
 }
 
-const translateString = async (translate, value, fromLang, toLang, handlebars, label, format = 'text') => {
+const translateString = async (translate, value, fromLang, toLang, label, options) => {
+    const handlebars = options.handlebars || false
+    const format = options.processAs || 'text'
+
+    // all callers already handle dryRun, but just in case, we also handle it because
+    // the guarantee of dryRun is that we won't make any API calls to Google Translate
+    const dryRun = options.dryRun || false
     if (handlebars) {
         const hbs = replaceHandlebars(value)
-
 
         // We need to use <span class="notranslate">
         // If format is text, we wrap with <p> tag, replace newlines with <br/> and translate as HTML
         const inValue = format === 'text' ? `<p>${hbs.value.replaceAll('\n', '<br/>')}</p>` : hbs.value
-        const [translation] = await translate.translate(inValue, {from: fromLang, to: toLang, format: 'html'})
+        const [translation] = dryRun
+            ? 'dry-run-no-translation'
+            : await translate.translate(inValue, {from: fromLang, to: toLang, format: 'html'})
 
         let result
         if (format === 'text') {

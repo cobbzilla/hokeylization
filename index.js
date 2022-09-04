@@ -30,16 +30,25 @@ const verifyEnv = () => {
 const program = new commander.Command()
     .command('hokey')
     .summary(`Quick translation service using Google Translate\nVersion ${VERSION}`)
-    .description('Set the GOOGLE_TRANSLATE_PROJECT_ID environment variable to your Google Translate project\n' +
-        'Set the GOOGLE_APPLICATION_CREDENTIALS environment variable to point to your credentials JSON file')
-    .option('-i, --input-language <lang>', '2-letter codes for languages to translate from. Default is en')
+    .description('=== Source ===\n' +
+        'GitHub: https://github.com/cobbzilla/hokeylization\n' +
+        'npm: https://www.npmjs.com/package/hokeylization\n\n' +
+        '=== REQUIRED environment variables ===\n' +
+        ' * GOOGLE_TRANSLATE_PROJECT_ID: your Google Translate project\n' +
+        ' * GOOGLE_APPLICATION_CREDENTIALS: your credentials JSON file\n\n' +
+        '=== ISO language codes ===\n' +
+        'When specifying ISO codes (either input language or target languages) use these codes:\n' +
+        'https://cloud.google.com/translate/docs/languages')
+    .option('-i, --input-language <lang>', 'ISO code for languages to translate from. Default is en')
     .option('-p, --process-as <type>', 'Type can be text or html. Default is text')
-    .requiredOption('-l, --languages <lang>', 'Comma-separated list of 2-letter codes for languages to translate into')
-    .requiredOption('-o, --outfile <out-file>', 'Write JS output to this file. Default is input filename with lang extension\n' +
-        'For directory processing, this is the output directory. It will be created if it does not exist')
+    .option('-m, --match <regex>', 'When processing a directory, only consider files that match this regex')
+    .option('-n, --dry-run', 'Do not make write any files or make any API calls to Google Translate, but log what would have been done')
+    .requiredOption('-l, --languages <lang>', 'Comma-separated list of ISO codes for languages to translate into')
+    .requiredOption('-o, --outfile <out-file>', 'For JS file processing: write JS output to this file\n' +
+        'For directory processing: write files to this directory, which will be created if it does not exist')
     .option('-f, --force', 'Always generate fresh translations, overwriting any existing output files')
-    .option('-H, --handlebars', 'Ensure {{ handlebars }} content is NOT translated')
-    .argument('<js-file>', 'A JS file that exports strings to translate\nOr, if a directory, a directory filled with text files to translate')
+    .option('-H, --handlebars', 'Ensure {{ handlebars }} content is preserved as-is and NOT translated')
+    .argument('<source>', 'The source for translations; can be a JS file or a directory of files to translate')
     .version(VERSION)
     .showHelpAfterError()
     .action(async (jsFile, opts) => {
@@ -47,8 +56,19 @@ const program = new commander.Command()
         const langs = opts.languages.toLowerCase().split(',')
         const outfile = opts.outfile
         const fromLang = opts.fromLanguage || 'en'
+        const handlebars = opts.handlebars || false
         const processAs = opts.processAs || 'text'
+        if (processAs !== 'text' && processAs !== 'html') {
+            throw new TypeError(`Invalid option value for -p / --process-as : this option only supports values of 'text' or 'html'`)
+        }
+        const dryRun = opts.dryRun || false
+        const force = opts.force || false
+        const match = opts.match || null
         const translate = new Translate({projectId})
+
+        const options = {
+            fromLang, handlebars, processAs, dryRun, force, match: new RegExp(match)
+        }
 
         const stat = fs.lstatSync(jsFile)
         if (stat.isDirectory()) {
@@ -57,7 +77,7 @@ const program = new commander.Command()
                 if (lang.trim().length === 0) {
                     continue
                 }
-                await processDirectory(translate, jsFile, fromLang, inFiles, lang, outfile, opts.force, opts.handlebars, processAs)
+                await processDirectory(translate, jsFile, fromLang, inFiles, lang, outfile, options)
             }
         } else {
             const keys = await readMessageKeys(jsFile)
@@ -65,7 +85,7 @@ const program = new commander.Command()
                 if (lang.trim().length === 0) {
                     continue
                 }
-                await processFile(translate, jsFile, fromLang, keys, lang, outfile, opts.force, opts.handlebars)
+                await processFile(translate, jsFile, fromLang, keys, lang, outfile, options)
             }
         }
     })

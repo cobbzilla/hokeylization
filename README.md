@@ -8,6 +8,23 @@ You can translate:
 * a JavaScript object containing messages
 * a directory of files, recursively
 
+### Dogfooding because why not
+With the benefit of reflection, this README.md itself has been translated, using hokeylization,
+into every language supported by Google Translate! I'm certain it's not perfect, but I hope it's
+better than nothing!
+
+### Is there a problem with this translation of the README?
+This particular translation of the original [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
+may be flawed -- *corrections are very welcome!* Please send a [pull request on GitHub](https://github.com/cobbzilla/yuebing/pulls),
+or if you're not comfortable doing that, [open an issue](https://github.com/cobbzilla/yuebing/issues)
+
+When you create a new GitHub issue about a translation, please do:
+* include the page URL (copy/paste from browser address bar)
+* include the exact text that is wrong (copy/paste from browser)
+* kindly offer a suggestion of a better translation
+* **Thank you!**
+
+
 ## Source
 * [hokeylization on GitHub](https://github.com/cobbzilla/hokeylization)
 * [hokeylization on npm](https://www.npmjs.com/package/hokeylization)
@@ -86,7 +103,7 @@ To translate all of these to Spanish and German, run:
 
     hokey -l es,de -o templates/email/LANG templates/email/en
 
-In the above, `LANG` is a reserved word and will be replaced with the 2-letter locale code.
+In the above, `LANG` is a reserved word and will be replaced with the 2-letter locale code
 
 What happens when the above runs:
 * The `templates/email/es` and `templates/email/de` directories will be created (if they don't exist)
@@ -96,20 +113,33 @@ What happens when the above runs:
 
 ## Other options
 
+### Dry run
+Pass `-n` / `--dry-run` to display what would be done, but do not actually make any API calls  or write any files
+
 ### Force
-Pass `-f` / `--force` to always regenerate translations, even if they already exist.
+Pass `-f` / `--force` to always regenerate translations, even if they already exist
+
+### Match
+Pass `-m` / `--match` to limit the files processed when running in directory-mode
+
+You may not always want to translate *every* file in your source directory to your target directory
+
+The value of the `-m` / `--match` option is a regex (beware shell quoting rules!) that specifies
+which files should be translated
+
+When in doubt, you can combine this option with `-n` / `--dry-run` to see which files would be translated
 
 ### Handlebars
-The strings to translate might contain `{{ handlebars }}` templates, either with two or three curly-braces.
+The strings to translate might contain `{{ handlebars }}` templates, either with two or three curly-braces
 
-You probably *DON'T* want the stuff inside those templates to be translated.
+You probably *DON'T* want the stuff inside those templates to be translated
 
-Pass the `-H` / `--handlebars` flag, and anything within `{{ ... }}` will not be translated.
+Pass the `-H` / `--handlebars` flag, and anything within `{{ ... }}` will not be translated
 
 ### Process-as
-Normally everything is processed as plain text.
+Normally everything is processed as plain text
 
-If your content is HTML, it will get mangled unless you pass the `-p html` / `--process-as html` option.
+If your content is HTML, it will get mangled unless you pass the `-p html` / `--process-as html` option
 
 ### Help
 Use `-h` / `--help` to show help
