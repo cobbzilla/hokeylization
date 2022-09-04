@@ -9,8 +9,8 @@ You can translate:
 * a directory of files, recursively
 
 # Read this in another language
-This README.md document has been translated, using the hokeylization tool itself,
-into **[every language supported by Google Translate](lang/README.md)!**
+This README.md document has been translated, using the hokeylization tool itself, into
+**[every language supported by Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
 I'm certain it's not perfect, but I hope it's better than nothing!
 
