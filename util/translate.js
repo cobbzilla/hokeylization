@@ -1,7 +1,17 @@
 const he = require('he')
+const chalk = require('chalk')
 
-const LANG_PLACEHOLDER = 'LANG';
-const REPLACEMENT_STUB = '<span class="notranslate">' + '_'.repeat(10) + '</span>'
+const { messages } = require("./localize")
+
+const LANG_PLACEHOLDER = 'LANG'
+
+const NO_TRANSLATE_START_PREFIX = '<span class="notranslate"'
+
+const noTranslateStart = (leadingSpaces) => `${NO_TRANSLATE_START_PREFIX} hokey-leading-spaces="${leadingSpaces}">`
+
+const NO_TRANSLATE_START = `${NO_TRANSLATE_START_PREFIX}>`
+const NO_TRANSLATE_END = '</span>'
+const REPLACEMENT_STUB = NO_TRANSLATE_START + '_'.repeat(10) + NO_TRANSLATE_END
 
 const nextCurly = (value, index) => {
     const triple = value.indexOf('{{{', index)
@@ -54,14 +64,77 @@ const revertHandlebars = (translation, hbs) => {
 }
 
 const translateString = async (translate, value, fromLang, toLang, label, options) => {
+    const msg = messages()
     const handlebars = !!options.handlebars
     const format = options.processAs || 'text'
     const markdown = !!options.markdown
+    const escapeNewlines = options.newlines && options.newlines === 'escape'
 
     // all callers already handle dryRun, but just in case, we also handle it because
     // the guarantee of dryRun is that we won't make any API calls to Google Translate
     const dryRun = !!options.dryRun
-    if (handlebars) {
+    if (markdown) {
+        let adjusted = ''
+        const lines = value.split('\n');
+        for (const line of lines) {
+            if (line.startsWith('    ')) {
+                const leadingSpaces = line.match(/^\s+/)[0].length
+                adjusted += noTranslateStart(leadingSpaces) + line + NO_TRANSLATE_END + '\n'
+            } else if (line.includes('`')) {
+                const replacement = line.replaceAll(/`([^`]+)`/g, NO_TRANSLATE_START + "`$1`" + NO_TRANSLATE_END) + '\n';
+                adjusted += replacement
+            } else {
+                adjusted += line + '\n'
+            }
+        }
+        adjusted = '<pre>' + adjusted.replaceAll('\n', '<br/>') + '</pre>'
+        const [translation] = dryRun
+            ? 'dry-run-no-translation'
+            : await translate.translate(adjusted, {from: fromLang, to: toLang, format: 'html'})
+
+        // remove all translation stubs
+        let result = ''
+        let lineNumber = 0
+        const translatedLines = translation.split('<br/>');
+        for (const line of translatedLines) {
+            lineNumber++
+            if (line.startsWith(NO_TRANSLATE_START_PREFIX) && line.endsWith(NO_TRANSLATE_END)) {
+                const end = line.indexOf('>');
+                const tag = line.substring(line.indexOf(NO_TRANSLATE_START_PREFIX), end)
+                const leadingSpaces = tag.match(/hokey-leading-spaces="([^"]+)"/)[1]
+                result += ' '.repeat(+leadingSpaces) + line.substring(end + 1, line.length - NO_TRANSLATE_END.length).trim() + '\n'
+            } else if (line.includes(NO_TRANSLATE_START)) {
+                const start = line.indexOf(NO_TRANSLATE_START)
+                let partResult = line.substring(0, start)
+                let index = line.indexOf('>', start)
+                let end = -1
+                while (index !== -1) {
+                    end = line.indexOf(NO_TRANSLATE_END, index)
+                    partResult += line.substring(index + 1, end)
+                    index = line.indexOf(NO_TRANSLATE_START, end)
+                    if (index !== -1) {
+                        partResult += line.substring(end + NO_TRANSLATE_END.length, index)
+                        index = line.indexOf('>', index)
+                    }
+                }
+                partResult += end !== -1 ? line.substring(end + NO_TRANSLATE_END.length) : ''
+                result += partResult + '\n'
+            } else {
+                result += line + '\n'
+            }
+        }
+        // replace HTML entities with text equivalents
+        result = he.decode(result)
+        // unwrap <pre> tag if present (it should be, but let's be safe)
+        if (result.startsWith('<pre')) {
+            result = result.substring(result.indexOf('>') + 1)
+        }
+        if (result.endsWith('</pre>')) {
+            result = result.substring(0, result.length - '</pre>'.length)
+        }
+        return result
+
+    } else if (handlebars) {
         const hbs = replaceHandlebars(value)
 
         // We need to use <span class="notranslate">
@@ -74,7 +147,7 @@ const translateString = async (translate, value, fromLang, toLang, label, option
         let result
         if (format === 'text') {
             // replace <br/> with escaped newlines, or real newlines, depending on mode
-            if (options.newlines && options.newlines === 'escape') {
+            if (escapeNewlines) {
                 result = translation.replaceAll('<br/>', '\\' + 'n')
             } else {
                 result = translation.replaceAll('<br/>', '\n')
