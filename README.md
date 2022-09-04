@@ -2,14 +2,17 @@ Hokeylization
 =============
 The name is a portmanteau, meaning 'hokey localization'
 
-It's hokey because it's very simple: it runs some strings against Google Translate
+It's hokey because it's very simple: it sends strings to Google Translate
 
 You can translate:
 * a JavaScript object containing messages
 * a directory of files, recursively
 
 # Read this in another language
-This is localization software, so the documentation is available in many languages:
+This README.md document has been translated, using the hokeylization tool itself,
+into **[every language supported by Google Translate](lang/README.md)!**
+
+I'm certain it's not perfect, but I hope it's better than nothing!
 
 &nbsp;&nbsp;&nbsp;[🇸🇦 Arabic](lang/ar/README.md)
 &nbsp;&nbsp;&nbsp;[🇧🇩 Bengali](lang/bn/README.md)
@@ -34,13 +37,8 @@ This is localization software, so the documentation is available in many languag
 &nbsp;&nbsp;&nbsp;[🇻🇳 Vietnamese](lang/vi/README.md)
 &nbsp;&nbsp;&nbsp;[🇨🇳 Chinese](lang/zh/README.md)
 <br/>
-&nbsp;&nbsp;&nbsp;**[📚 ALL LANGUAGES](lang/README.md)**
+&nbsp;&nbsp;&nbsp;**[📚 ... All Languages ...](lang/README.md)**
 ----
-
-### Dogfooding because why not
-With the benefit of reflection, this README.md itself has been translated, using hokeylization,
-into every language supported by Google Translate! I'm certain it's not perfect, but I hope it's
-better than nothing!
 
 ### Is there a problem with this translation of the README?
 This particular translation of the original [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
@@ -65,13 +63,13 @@ When you create a new GitHub issue about a translation, please do:
 * [hokeylization on npm](https://www.npmjs.com/package/hokeylization)
 
 ## Setup
-Set the `GOOGLE_TRANSLATE_PROJECT_ID` env var to identify your project
+Set the `GOOGLE_TRANSLATE_PROJECT_ID` environment variable to identify your Google Translate project
 
-Set the `GOOGLE_APPLICATION_CREDENTIALS` env var to the JSON credentials you downloaded
-after navigating the holy hell that is figuring out authentication on Google cloud
+Set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to the JSON credentials you downloaded
+after figuring out how authentication works on Google cloud (it can be fun)
 
-If you're running from source, you can also put these in a `.env` file in the source directory
-they'll be loaded at runtime via [dotenv](https://www.npmjs.com/package/dotenv)
+If you're running from the source code, you can also put these in a `.env` file in the source
+directory they'll be loaded at runtime via [dotenv](https://www.npmjs.com/package/dotenv)
 
 ## Translating a JavaScript string resource file
 Your string table **must** be in a JavaScript file in one of these two forms:
@@ -96,24 +94,27 @@ If this file was named `myfile.en.js`, you can translate it to Spanish and Germa
 
     hokey -l es,de -o myfile.LANG.js myfile.en.js
 
-The `LANG` in the above is special -- I hope you're not using it in your filenames, because
-it's a reserved word in this tool! The `LANG` is replaced with the language code for the
-output files, so the above command creates the files:
+The `LANG` in the above is special -- it is a reserved word in this tool!
+
+The `LANG` is replaced with the language code for the output files
+
+Thus the above command creates the files:
 
     myfile.es.js
     myfile.de.js
 
-The `-l` / `--languages` option is a comma-separated list of 2-letter language codes
+The `-l` / `--languages` option is a comma-separated list of ISO language codes
 [supported by Google Translate](https://cloud.google.com/translate/docs/languages)
 
-If the output file already exists, it will not be overwritten. Instead, only translations
-for missing keys will be generated and appended to the end of the output JS file.
+If the output file already exists, it will be examined to determine which keys already exist.
+Existing keys will not be translated. Translations for missing keys will be generated and appended
+to the end of the JS object. The entire file is always rewritten.
 
-To re-translate all keys, use the `-f` / `--force` option.
+To force retranslation all keys, use the `-f` / `--force` option.
 
 ## Translating a directory of text files
-You can also translate a directory, hokey will recursively visit every file
-in the directory and run its contents through Google Translate, and save the output
+You can also translate a directory of files. hokeylization will recursively visit every
+file in the directory and run its contents through Google Translate, and save the output
 to an identically named file in a separate directory tree
 
 When the target of your translation is a directory, this mode is enabled
@@ -121,7 +122,7 @@ When the target of your translation is a directory, this mode is enabled
 The `-o` / `--outfile` option specifies the output directory
 
 **BIG WARNING**: When translating directories, **DO NOT** specify an output directory
-that is within your input directory! If you do, you will:
+that is within your input directory! If you do this, you will:
 * induce infinite recursion
 * run up your Google bill
 * fill up your disk
@@ -135,6 +136,7 @@ When this runs, translated files are written to `templates/es`, and thus become 
 source files to translate, since they are under `templates/` -- this process continues
 forever, don't do it!
 
+#### Correct usage
 OK, let's say you have some email templates in a directory:
 
     templates/email/en/welcome.txt
@@ -159,7 +161,7 @@ What happens when the above runs:
 ## Other options
 
 ### Dry run
-Pass `-n` / `--dry-run` to display what would be done, but do not actually make any API calls  or write any files
+Pass `-n` / `--dry-run` to display what would be done, but do not actually make any API calls or write any files
 
 ### Force
 Pass `-f` / `--force` to always regenerate translations, even if they already exist
@@ -175,7 +177,7 @@ which files should be translated
 When in doubt, you can combine this option with `-n` / `--dry-run` to see which files would be translated
 
 ### Excludes
-Sometimes your match matches too many files. Use the `-e` / `--excludes` option to explicitly exclude
+Sometimes your `-m` matches too many files. Use the `-e` / `--excludes` option to explicitly exclude
 files that otherwise would have matched
 
 You can list multiple regexes, separated by spaces
@@ -192,12 +194,13 @@ Pass the `-H` / `--handlebars` flag, and anything within `{{ ... }}` will not be
 ### Markdown
 Markdown is neither text nor html, so Google Translate has some difficulties with it
 
-Hokeylizer handles things decently well, but with markdown files, you may oftentimes see,
-in the translation, a space character in between a markdown link description and its target link,
-thereby causing the markdown, when rendered, to not properly display the link (it may show a broken
-link, or otherwise broken markdown)
+Hokeylizer handles things decently well, but with markdown files, you may oftentimes see a common
+problem: in the translation, a space character appears after a markdown link description ends (with `]`) but
+before its target link begins (with `(`). This causes the markdown to render incorrectly, and the link
+is broken when viewing the document.
 
-Set the `-M` / `--markdown` flag and the pattern `] (` will be condensed to `](` thus fixing the links
+Set the `-M` / `--markdown` flag and the pattern `] (` will be condensed to `](` thus fixing the
+broken markdown links
 
 ### Process-as
 Normally everything is processed as plain text
@@ -208,9 +211,9 @@ If your content is HTML, it will get mangled unless you pass the `-p html` / `--
 For the adventurous: when processing files in a directory, you can pass the `-F` / `--filter` option
 to filter the output before it is written to the filesystem
 
-The value of this option must be a JS file that exports a function named `filter`
+The value of this option must be a path to a JS file that exports a function named `filter`
 
-The `filter` function must be `async`, as `await` will be called upon it
+The `filter` function must be `async` because `await` will be called upon it
 
 Before files are written to disk, the entire file contents will be passed to the `filter` function as a string
 
