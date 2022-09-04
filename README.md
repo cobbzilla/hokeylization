@@ -1,5 +1,5 @@
-Hokeylization
-=============
+Hokeylization-lite
+==================
 The name is a portmanteau, meaning 'hokey localization'
 
 It's hokey because it's very simple: it sends strings to Google Translate
@@ -8,48 +8,47 @@ You can translate:
 * a JavaScript object containing messages
 * a directory of files, recursively
 
+### This is hokeylization-lite
+In order to lighten the weight of this npm package, this branch does not include any localized translations
+of the hokeylization documentation
+
+The tool works the same, you can translate any language to any language. However, the tool's documentation
+and command-line help output will only be in English
+
+To see command-line help for the `hokey` command in your native language, use the
+regular `hokeylization` package instead of `hokeylization-lite`
+
 # Read this in another language
 This README.md document has been translated, using the hokeylization tool itself,
-into **[every language supported by Google Translate](lang/README.md)!**
+into **[every language supported by Google Translate](https://github.com/cobbzilla/hokeylization/blob/master/README.md)!**
 
 I'm certain it's not perfect, but I hope it's better than nothing!
 
-&nbsp;&nbsp;&nbsp;[🇸🇦 Arabic](lang/ar/README.md)
-&nbsp;&nbsp;&nbsp;[🇧🇩 Bengali](lang/bn/README.md)
-&nbsp;&nbsp;&nbsp;[🇩🇪 German](lang/de/README.md)
-&nbsp;&nbsp;&nbsp;[🇺🇸 English](lang/en/README.md)
-&nbsp;&nbsp;&nbsp;[🇪🇸 Spanish](lang/es/README.md)
-&nbsp;&nbsp;&nbsp;[🇫🇷 French](lang/fr/README.md)
-&nbsp;&nbsp;&nbsp;[🇹🇩 Hausa](lang/ha/README.md)
-&nbsp;&nbsp;&nbsp;[🇮🇳 Hindi](lang/hi/README.md)
-&nbsp;&nbsp;&nbsp;[🇮🇩 Indonesian](lang/id/README.md)
-&nbsp;&nbsp;&nbsp;[🇮🇹 Italian](lang/it/README.md)
-&nbsp;&nbsp;&nbsp;[🇯🇵 Japanese](lang/ja/README.md)
-&nbsp;&nbsp;&nbsp;[🇰🇷 Korean](lang/ko/README.md)
-&nbsp;&nbsp;&nbsp;[🇮🇳 Maranthi](lang/mr/README.md)
-&nbsp;&nbsp;&nbsp;[🇵🇱 Polish](lang/pl/README.md)
-&nbsp;&nbsp;&nbsp;[🇧🇷 Portuguese](lang/pt/README.md)
-&nbsp;&nbsp;&nbsp;[🇷🇺 Russian](lang/ru/README.md)
-&nbsp;&nbsp;&nbsp;[🇰🇪 Swahili](lang/sw/README.md)
-&nbsp;&nbsp;&nbsp;[🇵🇭 Tagalog](lang/tl/README.md)
-&nbsp;&nbsp;&nbsp;[🇹🇷 Turkish](lang/tr/README.md)
-&nbsp;&nbsp;&nbsp;[🇵🇰 Urdu](lang/ur/README.md)
-&nbsp;&nbsp;&nbsp;[🇻🇳 Vietnamese](lang/vi/README.md)
-&nbsp;&nbsp;&nbsp;[🇨🇳 Chinese](lang/zh/README.md)
+&nbsp;&nbsp;&nbsp;[🇸🇦 Arabic](https://github.com/cobbzilla/hokeylization/blob/master/lang/ar/README.md)
+&nbsp;&nbsp;&nbsp;[🇧🇩 Bengali](https://github.com/cobbzilla/hokeylization/blob/master/lang/bn/README.md)
+&nbsp;&nbsp;&nbsp;[🇩🇪 German](https://github.com/cobbzilla/hokeylization/blob/master/lang/de/README.md)
+&nbsp;&nbsp;&nbsp;[🇺🇸 English](https://github.com/cobbzilla/hokeylization/blob/master/lang/en/README.md)
+&nbsp;&nbsp;&nbsp;[🇪🇸 Spanish](https://github.com/cobbzilla/hokeylization/blob/master/lang/es/README.md)
+&nbsp;&nbsp;&nbsp;[🇫🇷 French](https://github.com/cobbzilla/hokeylization/blob/master/lang/fr/README.md)
+&nbsp;&nbsp;&nbsp;[🇹🇩 Hausa](https://github.com/cobbzilla/hokeylization/blob/master/lang/ha/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇳 Hindi](https://github.com/cobbzilla/hokeylization/blob/master/lang/hi/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇩 Indonesian](https://github.com/cobbzilla/hokeylization/blob/master/lang/id/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇹 Italian](https://github.com/cobbzilla/hokeylization/blob/master/lang/it/README.md)
+&nbsp;&nbsp;&nbsp;[🇯🇵 Japanese](https://github.com/cobbzilla/hokeylization/blob/master/lang/ja/README.md)
+&nbsp;&nbsp;&nbsp;[🇰🇷 Korean](https://github.com/cobbzilla/hokeylization/blob/master/lang/ko/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇳 Maranthi](https://github.com/cobbzilla/hokeylization/blob/master/lang/mr/README.md)
+&nbsp;&nbsp;&nbsp;[🇵🇱 Polish](https://github.com/cobbzilla/hokeylization/blob/master/lang/pl/README.md)
+&nbsp;&nbsp;&nbsp;[🇧🇷 Portuguese](https://github.com/cobbzilla/hokeylization/blob/master/lang/pt/README.md)
+&nbsp;&nbsp;&nbsp;[🇷🇺 Russian](https://github.com/cobbzilla/hokeylization/blob/master/lang/ru/README.md)
+&nbsp;&nbsp;&nbsp;[🇰🇪 Swahili](https://github.com/cobbzilla/hokeylization/blob/master/lang/sw/README.md)
+&nbsp;&nbsp;&nbsp;[🇵🇭 Tagalog](https://github.com/cobbzilla/hokeylization/blob/master/lang/tl/README.md)
+&nbsp;&nbsp;&nbsp;[🇹🇷 Turkish](https://github.com/cobbzilla/hokeylization/blob/master/lang/tr/README.md)
+&nbsp;&nbsp;&nbsp;[🇵🇰 Urdu](https://github.com/cobbzilla/hokeylization/blob/master/lang/ur/README.md)
+&nbsp;&nbsp;&nbsp;[🇻🇳 Vietnamese](https://github.com/cobbzilla/hokeylization/blob/master/lang/vi/README.md)
+&nbsp;&nbsp;&nbsp;[🇨🇳 Chinese](https://github.com/cobbzilla/hokeylization/blob/master/lang/zh/README.md)
 <br/>
-&nbsp;&nbsp;&nbsp;**[📚 ... All Languages ...](lang/README.md)**
+&nbsp;&nbsp;&nbsp;**[📚 ... All Languages ...](https://github.com/cobbzilla/hokeylization/blob/master/lang/README.md)**
 ----
-
-### Is there a problem with this translation of the README?
-This particular translation of the original [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
-may be flawed -- *corrections are very welcome!* Please send a [pull request on GitHub](https://github.com/cobbzilla/yuebing/pulls),
-or if you're not comfortable doing that, [open an issue](https://github.com/cobbzilla/yuebing/issues)
-
-When you create a new GitHub issue about a translation, please do:
-* include the page URL (copy/paste from browser address bar)
-* include the exact text that is wrong (copy/paste from browser)
-* kindly offer a suggestion of a better translation
-* **Thank you!**
 
 # Contents
 * [Source](#Source)
