@@ -234,7 +234,7 @@ Hokeilizācija
 
  `-M` "-M" / `--markdown` nodrošina īpašu atzīmju failu apstrādi
 
- Hokeylizer lieliski tiek galā ar lietām, taču ar atzīmes failiem bieži var rasties šādas problēmas:
+ Izmantojot atzīmes failus, ja neizmantojat karodziņu `-M` , jūs, iespējams, atradīsit šādas problēmas:
  * Bojātas saites. Tulkojumā atstarpes rakstzīme parādās pēc atzīmes saites apraksta beigām (ar `]` ), bet
  pirms sākas tās mērķa saite (ar `(` ). Tādējādi atzīme tiek atveidota nepareizi, un saite
  ir bojāts, skatoties dokumentu.
@@ -253,7 +253,7 @@ Hokeilizācija
  Ja jūsu saturs ir HTML, tas tiks sabojāts, ja vien nenodosit opciju `-p html` " / `--process-as html`
 
  ### Filtrs
- Piedzīvojumu meklētājiem: apstrādājot failus direktorijā, varat nodot opciju `-F` / `--filter`
+ Piedzīvojumu cienītājiem: apstrādājot failus direktorijā, varat nodot opciju `-F` / `--filter`
  lai filtrētu izvadi, pirms tā tiek ierakstīta failu sistēmā
 
  Šīs opcijas vērtībai ir jābūt ceļam uz JS failu, kas eksportē funkciju ar nosaukumu `filter`

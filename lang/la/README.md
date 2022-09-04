@@ -234,7 +234,7 @@ Hokeylization
 
  `-M` / `--markdown` vexillum speciale pertractatio dat pro markdownum files
 
- Hokeylizer bene decenter tractat, sed cum fasciculis notis, saepe problemata haec potes:
+ Cum imagini notae, si vexillum `-M` non uteris, has difficultates verisimiliter invenies:
  *Fracto nexus. In translatione spatium character videtur post notam descriptionis extremitatum ( `]` ) sed
  antequam scopum suum nexus incipit (per `(` ). Hoc notam facit ut perperam reddat et nexum
  Rumpitur spectans documentum.

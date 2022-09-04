@@ -234,7 +234,7 @@ Hokeyylization
 
  `-M` / `--markdown` jẹ́ kí ìṣàmúlò àkànṣe fún àwọn fáìlì isàpamọ́
 
- Hokeylizer mu awọn nkan mu daradara, ṣugbọn pẹlu awọn faili isamisi, o le nigbagbogbo awọn iṣoro wọnyi:
+ Pẹlu awọn faili isamisi, ti o ko ba lo asia `-M` , o ṣee ṣe ki o rii awọn iṣoro wọnyi:
  * Awọn ọna asopọ ti o bajẹ. Ninu itumọ, kikọ aaye kan han lẹhin apejuwe ọna asopọ isamisi ti pari (pẹlu `]` ) ṣugbọn
  ṣaaju ki ọna asopọ ibi-afẹde rẹ to bẹrẹ (pẹlu `(` ) Eyi fa isamisi lati ṣe ti ko tọ, ati ọna asopọ naa
  ti bajẹ nigba wiwo iwe-ipamọ naa.

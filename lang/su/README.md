@@ -234,7 +234,7 @@ Hokeylization
 
  Bandéra `-M` / `--markdown` ngamungkinkeun penanganan husus pikeun file markdown
 
- Hokeylizer nanganan hal-hal kalayan saé, tapi kalayan file markdown, anjeun tiasa sering masalah ieu:
+ Kalayan file markdown, upami anjeun henteu nganggo bandéra `-M` , anjeun panginten bakal mendakan masalah ieu:
  * Tumbu rusak. Dina tarjamahan, karakter spasi muncul sanggeus pedaran link markdown ends (kalawan `]` ) tapi
  sateuacan tautan targétna dimimitian (kalayan `(` ). Hal ieu nyababkeun markdown teu leres, sareng tautan
  rusak nalika ningali dokumén.

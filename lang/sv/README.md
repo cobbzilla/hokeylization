@@ -234,7 +234,7 @@ Hokeylisering
 
  `-M` / `--markdown` möjliggör speciell hantering av markdown-filer
 
- Hokeylizer hanterar saker hyfsat bra, men med markdown-filer kan du ofta dessa problem:
+ Med markdown-filer, om du inte använder flaggan `-M` , kommer du förmodligen att hitta dessa problem:
  * Trasiga länkar. I översättningen visas ett mellanslagstecken efter att en markdownlänksbeskrivning slutar (med `]` ) men
  innan dess mållänk börjar (med `(` ). Detta gör att nedmärkningen renderas felaktigt och länken
  är trasig när du visar dokumentet.
@@ -256,13 +256,13 @@ Hokeylisering
  För den äventyrliga: när du bearbetar filer i en katalog kan du skicka alternativet `-F` / `--filter`
  för att filtrera utdata innan det skrivs till filsystemet
 
- Värdet för detta alternativ måste vara en sökväg till en JS-fil som exporterar en funktion som heter `filter`
+ Värdet på detta alternativ måste vara en sökväg till en JS-fil som exporterar en funktion som heter `filter`
 
- `filter` funktionen måste vara `async` eftersom `await` kommer att anropas på den
+ `filter` funktionen måste vara `async` eftersom `await` kommer att anropas
 
  Innan filer skrivs till disk kommer hela filinnehållet att skickas till `filter` funktionen som en sträng
 
- `filter` från "filter"-funktionen är det som faktiskt kommer att skrivas till minnet
+ `filter` från "filter"-funktionen är det som faktiskt kommer att skrivas till lagringen
 
  Därmed har du total kontroll över vad som slutligen kommer att skrivas
 

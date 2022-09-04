@@ -234,7 +234,7 @@ Hokeylization
 
  Folakha ea `-M` / `--markdown` e thusa ho sebetsana ka mokhoa o khethehileng bakeng sa lifaele tsa matšoao
 
- Hokeylizer e sebetsana le lintho ka bokhabane, empa ka lifaele tsa marang-rang, hangata o ka ba le mathata ana:
+ Ka lifaele tsa markdown, haeba u sa sebelise `-M` folakha, mohlomong u tla fumana mathata ana:
  * Lihokelo tse robehileng. Phetolelong, tlhaku ea sebaka e hlaha kamora hore tlhaloso ea sehokelo sa markdown e fele (ka `]` ) empa
  pele sehokelo sa eona sa sepheo se qala (ka `(` ). Sena se etsa hore markdown e fane ka phoso, le sehokelo
  e robehile ha o shebile tokomane.

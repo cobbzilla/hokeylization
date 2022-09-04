@@ -234,7 +234,7 @@ Hokeylizace
 
  `-M` / `--markdown` umožňuje speciální manipulaci se soubory markdown
 
- Hokeylizer zvládá věci slušně dobře, ale se soubory markdown můžete často řešit tyto problémy:
+ Pokud u souborů markdown nepoužijete příznak `-M` , pravděpodobně narazíte na tyto problémy:
  * Nefunkční odkazy. V překladu se po ukončení popisu odkazu markdown objeví mezera (s `]` ), ale
  dříve, než začne jeho cílový odkaz (s `(` ). To způsobí, že se značka down vykreslí nesprávně a odkaz
  je při prohlížení dokumentu nefunkční.

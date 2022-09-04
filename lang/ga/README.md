@@ -234,7 +234,7 @@ Hokeylization
 
  Cumasaíonn an bhratach `-M` / `--markdown` láimhseáil speisialta do chomhaid marcála síos
 
- Láimhseálann Hokeylizer rudaí go réasúnta maith, ach le comhaid marcála síos, is féidir leat na fadhbanna seo a amú go minic:
+ Le comhaid marcála síos, mura n-úsáideann tú an bhratach `-M` , is dócha go bhfaighidh tú na fadhbanna seo:
  * Naisc briste. San aistriúchán, feictear carachtar spáis nuair a chríochnaíonn cur síos ar nasc marcála síos (le `]` ) ach
  sula gcuirtear tús lena nasc sprice (le `(` ). Fágann sé seo go bhfuil an marc síos le rindreáil mícheart, agus an nasc
  briste nuair a bhreathnaítear ar an doiciméad.

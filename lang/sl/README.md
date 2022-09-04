@@ -234,7 +234,7 @@ Hokeilizacija
 
  `-M` / `--markdown` omogoča posebno obravnavo datotek markdown
 
- Hokeylizer spodobno dobro obravnava stvari, toda z datotekami markdown lahko pogosto pride do naslednjih težav:
+ Če pri markdown datotekah ne uporabljate zastavice `-M` , boste verjetno naleteli na te težave:
  * Nedelujoče povezave. V prevodu se znak za presledek pojavi po koncu opisa povezave za označevanje (z `]` ), vendar
  preden se začne njena ciljna povezava (z `(` ). To povzroči nepravilno upodabljanje oznake in povezava
  se pri ogledu dokumenta pokvari.

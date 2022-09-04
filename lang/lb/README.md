@@ -234,7 +234,7 @@ Hokeylizéierung
 
  Den `-M` / `--markdown` Fändel erméiglecht speziell Handhabung fir Markdown Dateien
 
- Hokeylizer handhabt Saachen anstänneg gutt, awer mat Markdown-Dateien, kënnt Dir dacks dës Probleemer:
+ Mat Markdown-Dateien, wann Dir den `-M` Fändel net benotzt, fannt Dir wahrscheinlech dës Probleemer:
  * Broken Linken. An der Iwwersetzung erschéngt e Raum Charakter nodeems eng Markdown Link Beschreiwung eriwwer ass (mat `]` ) awer
  ier säin Zillink ufänkt (mat `(` ). Dëst bewierkt datt d'Markdown falsch rendert, an de Link
  ass gebrach wann Dir d'Dokument kuckt.
@@ -254,7 +254,7 @@ Hokeylizéierung
 
  ### Filter
  Fir Abenteuer: Wann Dir Dateien an engem Verzeichnis veraarbecht, kënnt Dir d'Optioun `-F` / `--filter`
- fir den Ausgang ze filteren ier se an de Dateiesystem geschriwwe gëtt
+ fir den Ausgang ze filteren ier en an de Dateiesystem geschriwwe gëtt
 
  De Wäert vun dëser Optioun muss e Wee zu enger JS-Datei sinn, déi eng Funktioun mam Numm `filter`
 
@@ -262,7 +262,7 @@ Hokeylizéierung
 
  Ier Dateien op Disk geschriwwe ginn, gëtt de ganze Fichierinhalt un d' `filter` als String weiderginn
 
- De `filter` vun der "Filter" Funktioun ass wat tatsächlech op d'Späichere geschriwwe gëtt
+ De `filter` vun der 'Filter' Funktioun ass wat tatsächlech op d'Späichere geschriwwe gëtt
 
  Also hutt Dir total Kontroll iwwer dat wat endlech geschriwwe gëtt
 

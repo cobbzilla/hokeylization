@@ -234,7 +234,7 @@ Hokeilizacija
 
  Oznaka `-M` / `--markdown` omogućava posebno rukovanje datotekama za smanjenje vrijednosti
 
- Hokeylizer prilično dobro rješava stvari, ali s mardown fajlovima često možete imati ove probleme:
+ Sa mardown fajlovima, ako ne koristite `-M` zastavicu, vjerovatno ćete pronaći ove probleme:
  * Neispravne veze. U prijevodu, razmak se pojavljuje nakon što se završi opis linka za smanjenje (sa `]` ), ali
  prije nego počne njegova ciljna veza (sa `(` ). Ovo uzrokuje da se umanjenje neispravno renderira, a veza
  je pokvaren prilikom pregledavanja dokumenta.

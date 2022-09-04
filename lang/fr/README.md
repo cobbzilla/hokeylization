@@ -198,7 +198,7 @@ Hokeyylisation
 
  ## Autres options
 
- ### Essai à vide
+ ### Essai à sec
  Passez `-n` / `--dry-run` pour afficher ce qui serait fait, mais n'effectuez pas d'appels d'API ni n'écrivez de fichiers
 
  ### Force
@@ -234,7 +234,7 @@ Hokeyylisation
 
  Le `-M` / `--markdown` permet une gestion spéciale des fichiers de démarquage
 
- Hokeylizer gère décemment bien les choses, mais avec les fichiers de démarquage, vous pouvez souvent ces problèmes :
+ Avec les fichiers Markdown, si vous n'utilisez pas le drapeau `-M` , vous rencontrerez probablement ces problèmes :
  * Liens brisés. Dans la traduction, un espace apparaît après la fin d'une description de lien de démarquage (avec `]` ) mais
  avant que son lien cible ne commence (avec `(` ). Cela entraîne un rendu incorrect du démarquage et le lien
  est cassé lors de la visualisation du document.

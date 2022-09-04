@@ -234,7 +234,7 @@ Hokeylizimi
 
  `-M` / `--markdown` mundëson trajtim të veçantë për skedarët e shënjimit
 
- Hokeylizer i trajton gjërat mirë, por me skedarët e shënimit, shpesh mund t'i keni këto probleme:
+ Me skedarët e shënimit, nëse nuk përdorni flamurin `-M` , me siguri do të gjeni këto probleme:
  * Lidhje të prishura. Në përkthim, një karakter hapësinor shfaqet pasi përfundon përshkrimi i lidhjes së shënuar (me `]` ) por
  para se të fillojë lidhja e saj e synuar (me `(` ). Kjo bën që shënjimi të jepet gabimisht dhe lidhja
  prishet gjatë shikimit të dokumentit.

@@ -234,7 +234,7 @@ Hokeylizasiýa
 
  " `--markdown` `-M` baýdagy bellik faýllary üçin ýörite işlemäge mümkinçilik berýär
 
- Hokeylizer zatlary gowy alyp barýar, ýöne bellik faýllary bilen köplenç bu problemalary edip bilersiňiz:
+ Bellenen faýllar bilen, " `-M` " baýdagyny ulanmasaňyz, bu problemalary taparsyňyz:
  * Döwülen baglanyşyklar. Terjimede, baglanyşyk baglanyşygynyň beýany gutarandan soň (" `]` " bilen) boşluk nyşany peýda bolýar, ýöne
  nyşan baglanyşygy başlamazdan ozal ( `(` ) bilen. Bu bellikleriň nädogry görkezilmegine we baglanyşyk
  resminama seredende bozulýar.

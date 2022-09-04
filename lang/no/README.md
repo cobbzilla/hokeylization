@@ -234,7 +234,7 @@ Hokeylisering
 
  `-M` / `--markdown` flagget muliggjør spesiell håndtering av markdown-filer
 
- Hokeylizer håndterer ting anstendig bra, men med markdown-filer kan du ofte disse problemene:
+ Med markdown-filer, hvis du ikke bruker `-M` -flagget, vil du sannsynligvis finne disse problemene:
  * Ødelagte lenker. I oversettelsen vises et mellomromstegn etter at en beskrivelse av markdown-lenker slutter (med `]` ) men
  før målkoblingen begynner (med `(` ). Dette fører til at markdown-en blir feil gjengitt, og koblingen
  er ødelagt når du ser på dokumentet.

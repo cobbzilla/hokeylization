@@ -234,7 +234,7 @@ Hokeyləşmə
 
  `-M` / `--markdown` bayrağı markdown faylları üçün xüsusi işləməyə imkan verir
 
- Hokeylizer işləri layiqincə idarə edir, lakin qeyd faylları ilə siz tez-tez bu problemlərlə üzləşə bilərsiniz:
+ Markdown faylları ilə, əgər `-M` bayrağından istifadə etməsəniz, yəqin ki, bu problemlərlə rastlaşacaqsınız:
  * Sınıq bağlantılar. Tərcümədə, işarələmə linkinin təsviri bitdikdən sonra boşluq simvolu görünür ( `]` ilə) lakin
  hədəf linki başlamazdan əvvəl ( `(` ilə). Bu, işarələmənin səhv göstərilməsinə səbəb olur və link
  sənədə baxarkən pozulur.

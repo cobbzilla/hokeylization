@@ -234,7 +234,7 @@ Hokeyylization
 
  `-M` / `--markdown` uu suurtageliyaa in si gaar ah loo maamulo faylalka calaamadaynta
 
- Hokeylizer wuxuu wax u qabtaa si wanaagsan, laakiin faylalka calaamadaynta, waxaa laga yaabaa inaad marar badan dhibaatooyinkan:
+ Faylasha calaamadaynta, haddii aadan isticmaalin calanka `-M` , waxaad u badan tahay inaad la kulanto dhibaatooyinkan:
  * Xiriirada jaban. Turjumaada dhexdeeda, jilaa meel bannaan ayaa soo baxaysa ka dib markii sharraxaadda xidhiidhinta calaamadaynta ay dhammaato ( `]` ) laakiin
  ka hor inta uusan bilaabin isku xirka bartilmaameedka ( `(` ) Tani waxay keenaysaa in calaamadaynta si khaldan loo sameeyo, iyo isku xidhka
  wuu jabaa marka la eego dukumeentiga.
@@ -262,7 +262,7 @@ Hokeyylization
 
  Ka hor inta aan faylasha loo qorin saxanka, dhammaan waxa ku jira faylka waxaa loo gudbin doonaa shaqada `filter` ' sida xadhig ahaan
 
- Qiimaha soo `filter` waa waxa run ahaantii lagu qori doono kaydinta
+ Qiimaha soo `filter` waa waxa runtii lagu qori doono kaydinta
 
  Markaa, waxaad si buuxda gacanta ugu haysaa waxa ugu dambayn la qori doono
 

@@ -234,7 +234,7 @@ Hokeylisaatio
 
  Lippu "-M" / `--markdown` `-M` merkintätiedostojen erikoiskäsittelyn
 
- Hokeylizer hoitaa asiat kunnon hyvin, mutta markdown-tiedostoilla saatat usein kohdata näitä ongelmia:
+ Merkintätiedostoissa, jos et käytä `-M` lippua, löydät todennäköisesti seuraavat ongelmat:
  * Rikkinäiset linkit. Käännöksessä välilyönti näkyy sen jälkeen, kun merkintälinkin kuvaus päättyy (kirjaimella `]` ), mutta
  ennen kuin sen kohdelinkki alkaa (merkillä `(` ). Tämä saa merkinnän hahmontumaan väärin ja linkki
  on rikki asiakirjaa katseltaessa.

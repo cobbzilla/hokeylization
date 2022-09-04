@@ -234,7 +234,7 @@ Hokeylização
 
  O `-M` / `--markdown` permite o tratamento especial para arquivos markdown
 
- Hokeylizer lida com as coisas decentemente bem, mas com arquivos de remarcação, muitas vezes você pode ter esses problemas:
+ Com arquivos markdown, se você não usar o `-M` , provavelmente encontrará estes problemas:
  * Links quebrados. Na tradução, um caractere de espaço aparece após o término de uma descrição de link de remarcação (com `]` ), mas
  antes de seu link de destino começar (com `(` ). Isso faz com que o markdown seja renderizado incorretamente e o link
  está quebrado ao visualizar o documento.

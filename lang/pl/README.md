@@ -234,7 +234,7 @@ Hokeylizacja
 
  Flaga `-M` / `--markdown` włącza specjalną obsługę plików markdown
 
- Hokeylizer radzi sobie przyzwoicie dobrze, ale w przypadku plików przecen często możesz napotkać następujące problemy:
+ W przypadku plików markdown, jeśli nie używasz flagi `-M` , prawdopodobnie napotkasz następujące problemy:
  * Zepsute połączenia. W tłumaczeniu znak spacji pojawia się po zakończeniu opisu odnośnika przeceny (z `]` ), ale
  przed rozpoczęciem linku docelowego (z `(` ). Powoduje to nieprawidłowe renderowanie znaczników i link
  jest uszkodzony podczas przeglądania dokumentu.

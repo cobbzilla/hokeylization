@@ -234,7 +234,7 @@ Hokeylization
 
  Ang `-M` / `--markdown` nga bandera makahimo sa espesyal nga pagdumala sa markdown nga mga file
 
- Maayo ang pagdumala sa Hokeylizer sa mga butang, apan sa mga markdown file, mahimo nimo kini nga mga problema:
+ Uban sa mga markdown file, kung dili nimo gamiton ang `-M` nga bandila, lagmit makit-an nimo kini nga mga problema:
  * Naguba nga mga link. Sa paghubad, usa ka karakter sa espasyo ang makita pagkahuman sa usa ka paghulagway sa link sa markdown matapos (uban ang `]` ) apan
  sa dili pa magsugod ang target nga link niini (uban sa `(` ). Kini maoy hinungdan nga ang markdown dili ma-render, ug ang link
  nabuak kung nagtan-aw sa dokumento.

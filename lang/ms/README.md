@@ -234,7 +234,7 @@ Hokeylization
 
  `-M` / `--markdown` membolehkan pengendalian khas untuk fail markdown
 
- Hokeylizer mengendalikan perkara dengan baik, tetapi dengan fail penurunan harga, anda mungkin sering mengalami masalah ini:
+ Dengan fail penurunan nilai, jika anda tidak menggunakan bendera `-M` , anda mungkin akan menemui masalah ini:
  * Pautan terputus. Dalam terjemahan, aksara ruang muncul selepas perihalan pautan markdown tamat (dengan `]` ) tetapi
  sebelum pautan sasarannya bermula (dengan `(` ). Ini menyebabkan penurunan nilai menjadi tidak betul dan pautan
  rosak apabila melihat dokumen.

@@ -234,7 +234,7 @@ Hokeylizacija
 
  `-M` / `--markdown` įgalina specialų žymėjimo failų tvarkymą
 
- Hokeylizer puikiai tvarko reikalus, tačiau naudodami žymėjimo failus dažnai galite susidurti su šiomis problemomis:
+ Naudodami žymėjimo failus, jei nenaudosite `-M` vėliavėlės, tikriausiai rasite šias problemas:
  * Sugedusios nuorodos. Vertime tarpo simbolis pasirodo po žymėjimo nuorodos aprašymo pabaigos (su `]` ), bet
  prieš prasidedant tikslinei nuorodai (su `(` ). Dėl to žymėjimas pateikiamas neteisingai, o nuoroda
  sugenda peržiūrint dokumentą.

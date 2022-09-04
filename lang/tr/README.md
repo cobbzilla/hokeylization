@@ -234,7 +234,7 @@ hokeyleşme
 
  `-M` / `--markdown` bayrağı, işaretleme dosyaları için özel işleme sağlar
 
- Hokeylizer işleri iyi idare eder, ancak işaretleme dosyalarıyla çoğu zaman şu sorunları yaşayabilirsiniz:
+ Markdown dosyalarıyla, `-M` bayrağını kullanmazsanız, muhtemelen şu sorunları bulacaksınız:
  * Bozuk bağlantılar. Çeviride, bir işaretleme bağlantısı açıklaması sona erdikten sonra ( `]` ile) bir boşluk karakteri görünür, ancak
  hedef bağlantısı başlamadan önce ( `(` ile). Bu, işaretlemenin yanlış oluşturulmasına neden olur ve bağlantı
  belgeyi görüntülerken bozuldu.

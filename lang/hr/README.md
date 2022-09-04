@@ -234,7 +234,7 @@ Hokeilizacija
 
  Oznaka `-M` / `--markdown` omogućuje posebno rukovanje datotekama markdown
 
- Hokeylizer pristojno rješava stvari, ali s markdown datotekama često možete imati ove probleme:
+ S markdown datotekama, ako ne koristite zastavu `-M` , vjerojatno ćete naići na ove probleme:
  * Neispravne veze. U prijevodu se znak za razmak pojavljuje nakon što opis veze za označavanje završi (sa `]` ), ali
  prije početka ciljane veze (s `(` ). To uzrokuje neispravno prikazivanje oznake i vezu
  se pokvari prilikom gledanja dokumenta.

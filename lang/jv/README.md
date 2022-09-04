@@ -234,7 +234,7 @@ Hokeylization
 
  `-M` / `--markdown` mbisakake penanganan khusus kanggo file markdown
 
- Hokeylizer nangani samubarang kanthi apik, nanging kanthi file markdown, sampeyan bisa uga ngalami masalah iki:
+ Kanthi file markdown, yen sampeyan ora nggunakake gendera `-M` , sampeyan bakal nemokake masalah iki:
  * Link rusak. Ing terjemahan, karakter spasi katon sawise deskripsi link markdown rampung (karo `]` ) nanging
  sadurunge pranala target diwiwiti (karo `(` ). Iki nyebabake markdown dadi salah, lan link
  rusak nalika ndeleng dokumen.

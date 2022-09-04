@@ -234,11 +234,11 @@ I-Hokeylization
 
  `-M` / `--markdown` amandla ukuphathwa okukhethekile kwamafayela okumaka
 
- I-Hokeylizer iphatha izinto kahle, kepha ngamafayela wokumaka, ungavama lezi zinkinga:
+ Ngamafayela okubeka phansi, uma ungasebenzisi ifulegi `-M` , cishe uzothola lezi zinkinga:
  * Izixhumanisi eziphukile. Ekuhumusheni, kuvela uhlamvu lwesikhala ngemva kokuphela kwencazelo yesixhumanisi sokubeka phansi (nokuthi `]` ) kodwa
  ngaphambi kokuthi isixhumanisi sayo esiqondiswe kuso siqale (ngokuthi `(` ). Lokhu kubangela ukuthi ukubeke phansi kunikezwe ngokungalungile, kanye nesixhumanisi
  iphukile uma ubuka idokhumenti.
- * Amabhulokhi ekhodi ayahunyushwa. I-Google Translate ayazi ukuthi i-markdown icabangani ngekhodi nokuthi yini engayazi
+ * Amabhulokhi ekhodi ahunyushwa. I-Google Translate ayazi ukuthi i-markdown icabangani ngekhodi nokuthi yini engayazi
  * Isikhala esingalungile samabhulokhi ekhodi ehlehlisiwe. Isikhala sinzima ukusigcina ekuhumusheni
  * Izinto ezingaphakathi kokuthi `backticks` zizohunyushwa, lapho cishe uhlale ufuna ukuthi abe amanani angokoqobo
 
@@ -264,7 +264,7 @@ I-Hokeylization
 
  Inani lokubuyisela elisuka `filter` isitoreji
 
- Ngakho, uyakwazi ukulawula lokho okuzobhalwa ekugcineni
+ Ngakho-ke, uyakwazi ukulawula lokho okuzobhalwa ekugcineni
 
  ### Usizo
  Sebenzisa `-h` / `--help` ukuze ubonise usizo

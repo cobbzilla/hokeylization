@@ -234,7 +234,7 @@ Hokeyzation
 
  `-M` / `--markdown` cho phép xử lý đặc biệt đối với các tệp đánh dấu
 
- Hokeylizer xử lý tốt mọi thứ, nhưng với các tệp đánh dấu, đôi khi bạn có thể gặp những vấn đề sau:
+ Với các tệp đánh dấu, nếu bạn không sử dụng cờ `-M` , bạn có thể sẽ gặp các vấn đề sau:
  * Liên kết bị hỏng. Trong bản dịch, một ký tự khoảng trắng xuất hiện sau khi mô tả liên kết đánh dấu kết thúc (với `]` ) nhưng
  trước khi liên kết đích của nó bắt đầu (với `(` ). Điều này làm cho dấu xuống hiển thị không chính xác và liên kết
  bị hỏng khi xem tài liệu.

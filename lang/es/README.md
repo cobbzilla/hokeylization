@@ -234,7 +234,7 @@ Hokeylización
 
  El `-M` / `--markdown` permite un manejo especial para los archivos de rebajas
 
- Hokeylizer maneja las cosas decentemente bien, pero con los archivos de descuento, a menudo puede tener estos problemas:
+ Con los archivos Markdown, si no usa el `-M` , probablemente encontrará estos problemas:
  * Enlaces rotos. En la traducción, aparece un carácter de espacio después de que finaliza la descripción de un enlace de descuento (con `]` ), pero
  antes de que comience su enlace de destino (con `(` ). Esto hace que el descuento se muestre incorrectamente y el enlace
  se rompe al ver el documento.

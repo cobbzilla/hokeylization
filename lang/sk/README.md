@@ -234,11 +234,11 @@ Hokeylizácia
 
  `-M` / `--markdown` umožňuje špeciálne zaobchádzanie so súbormi značiek
 
- Hokeylizer zvláda veci slušne dobre, ale so súbormi markdown môžete často riešiť tieto problémy:
+ Ak pri súboroch markdown nepoužijete príznak `-M` , pravdepodobne narazíte na tieto problémy:
  * Nefunkčné odkazy. V preklade sa medzera objaví po ukončení popisu odkazu označenia (s `]` ), ale
  predtým, než sa začne jeho cieľový odkaz (s `(` ). To spôsobí nesprávne vykreslenie označenia a odkazu
  pri prezeraní dokumentu sa pokazí.
- * Bloky kódu sa preložia. Prekladač Google nevie, čo markdown považuje za kód a čo nie
+ * Bloky kódu sa prekladajú. Prekladač Google nevie, čo markdown považuje za kód a čo nie
  * Nesprávne medzery pre odsadené bloky kódu. V preklade je ťažké zachovať medzery
  * Veci vnútri `backticks` sa preložia, keď takmer vždy chcete, aby to boli doslovné hodnoty
 

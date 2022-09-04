@@ -234,7 +234,7 @@ Hokeylization
 
  Ang `-M` / `--markdown` flag ay nagbibigay-daan sa espesyal na pangangasiwa para sa mga markdown na file
 
- Mahusay na pinangangasiwaan ng Hokeylizer ang mga bagay, ngunit sa mga markdown na file, maaari mong madalas ang mga problemang ito:
+ Sa mga markdown file, kung hindi mo gagamitin ang flag na `-M` , malamang na mahahanap mo ang mga problemang ito:
  * Sirang mga link. Sa pagsasalin, lumilitaw ang isang space character pagkatapos magtapos ang paglalarawan ng markdown link (na may `]` ) ngunit
  bago magsimula ang target na link nito (na may `(` ). Nagdudulot ito ng hindi tamang pag-render ng markdown, at ang link
  ay sira kapag tinitingnan ang dokumento.

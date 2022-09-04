@@ -234,7 +234,7 @@ Hokeylisierung
 
  Das `-M` / `--markdown` Flag ermöglicht eine spezielle Handhabung für Markdown-Dateien
 
- Hokeylizer handhabt die Dinge anständig gut, aber mit Markdown-Dateien können Sie oft diese Probleme haben:
+ Wenn Sie bei Markdown-Dateien das `-M` Flag nicht verwenden, werden Sie wahrscheinlich auf diese Probleme stoßen:
  * Kaputte Links. In der Übersetzung erscheint ein Leerzeichen, nachdem eine Markdown-Link-Beschreibung endet (mit `]` ), aber
  bevor der Ziellink beginnt (mit `(` ). Dies führt dazu, dass der Markdown falsch gerendert wird und der Link
  ist beim Anzeigen des Dokuments defekt.

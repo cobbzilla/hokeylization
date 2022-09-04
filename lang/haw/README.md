@@ -234,7 +234,7 @@ Hokeylization
 
  Hiki i ka `-M` / `--markdown` ke lawelawe kūikawā no nā faila markdown
 
- Mālama maikaʻi ʻo Hokeylizer i nā mea, akā me nā faila markdown, hiki iā ʻoe ke hana pinepine i kēia mau pilikia:
+ Me nā faila markdown, inā ʻaʻole ʻoe e hoʻohana i ka hae `-M` , e ʻike paha ʻoe i kēia mau pilikia:
  * Nā loulou haki. Ma ka unuhi, ʻike ʻia kahi ʻano kikoʻī ma hope o ka pau ʻana o ka wehewehe ʻana i ka loulou markdown (me `]` ) akā
  ma mua o ka hoʻomaka ʻana o kāna loulou (me ka `(` ).
  ua haki ke nānā ʻana i ka palapala.
@@ -258,11 +258,11 @@ Hokeylization
 
  Pono ka waiwai o kēia koho he ala i kahi faila JS e hoʻokuʻu aku i kahi hana i kapa `filter`
 
- Pono ka hana `async` `filter` ka mea, e kāhea ʻia ʻo `await` '
+ Pono ka hana `async` `filter` ka mea `await` ' e kāhea ʻia ma luna o ia
 
  Ma mua o ka kākau ʻia ʻana o nā faila i ka diski, e hāʻawi ʻia nā ʻike āpau āpau i ka hana `filter` ma ke ʻano he kaula
 
- ʻO ka waiwai hoʻihoʻi mai ka hana `filter` ka mea e kākau maoli ʻia i kahi waihona
+ ʻO ka waiwai hoʻihoʻi mai ka hana `filter` ka mea e kākau maoli ʻia i ka waihona
 
  No laila, loaʻa iā ʻoe ka mana piha ma luna o ka mea e kākau hope ʻia
 

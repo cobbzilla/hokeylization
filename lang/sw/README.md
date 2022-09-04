@@ -234,7 +234,7 @@ Hokeylization
 
  Alama ya `-M` / `--markdown` huwezesha utunzaji maalum wa faili za alama
 
- Hokeylizer hushughulikia mambo kwa heshima, lakini kwa faili za alama, unaweza mara nyingi shida hizi:
+ Na faili za alama, ikiwa hautumii bendera ya `-M` , labda utapata shida hizi:
  * Viungo vilivyovunjika. Katika tafsiri, herufi ya nafasi inaonekana baada ya maelezo ya kiungo cha alama kuisha (na `]` ) lakini
  kabla ya kiungo chake kinacholengwa kuanza (na `(` ). Hii husababisha alama chini kutoa kimakosa, na kiungo
  imevunjwa wakati wa kutazama hati.

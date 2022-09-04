@@ -234,10 +234,10 @@ Hokeylization
 
  Il- `-M` / `--markdown` tippermetti ġestjoni speċjali għall-fajls markdown
 
- Hokeylizer jimmaniġġja l-affarijiet b'mod deċenti tajjeb, iżda bil-fajls ta 'markdown, ħafna drabi tista' dawn il-problemi:
+ Bil-fajls tal-markdown, jekk ma tużax il-bandiera `-M` , probabilment issib dawn il-problemi:
  * Links miksura. Fit-traduzzjoni, karattru spazjali jidher wara li tispiċċa deskrizzjoni tal-link markdown (b `]` ) iżda
  qabel ma tibda l-link fil-mira tagħha (bil- `(` ). Dan jikkawża li l-markdown tirrendi ħażin, u l-link
- jitkisser meta tara d-dokument.
+ jinkiser meta tara d-dokument.
  * Il-blokki tal-kodiċi jiġu tradotti. Google translate ma jafx x'jikkunsidra l-markdown kodiċi u dak li ma jagħmilx
  * Spazjar mhux korrett għall-blokki tal-kodiċi indentati. L-ispazjar huwa diffiċli biex jiġi ppreservat fit-traduzzjoni
  * Affarijiet ġewwa `backticks` se jiġu tradotti, meta kważi dejjem trid li jkunu valuri letterali

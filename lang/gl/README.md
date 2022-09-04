@@ -234,7 +234,7 @@ Hokeylización
 
  A `-M` / `--markdown` permite un manexo especial dos ficheiros de rebaixa
 
- Hokeylizer manexa as cousas decentemente ben, pero con ficheiros de rebaixa, moitas veces podes atopar estes problemas:
+ Cos ficheiros de rebaixa, se non usa a `-M` , probablemente atopará estes problemas:
  * Ligazóns rotas. Na tradución, aparece un espazo despois de que remate a descrición da ligazón de rebaixa (con `]` ) pero
  antes de que comece a súa ligazón de destino (con `(` ). Isto fai que a rebaixa se represente incorrectamente e a ligazón
  está roto ao ver o documento.

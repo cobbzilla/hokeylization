@@ -234,7 +234,7 @@ Hokeylisearring
 
  De flagge `-M` / `--markdown` makket spesjale ôfhanneling mooglik foar markdown-bestannen
 
- Hokeylizer behannelet dingen fatsoenlik goed, mar mei markdown-bestannen kinne jo faaks dizze problemen:
+ Mei markdown-bestannen, as jo de flagge `-M` net brûke, sille jo wierskynlik dizze problemen fine:
  * Broken keppelings. Yn 'e oersetting ferskynt in spaasjekarakter nei't in markdown-keppelingsbeskriuwing einiget (mei `]` ) mar
  foardat de doelkeppeling begjint (mei `(` ). Dit soarget dat de markdown ferkeard werjûn wurdt, en de keppeling
  is brutsen by it besjen fan it dokumint.
@@ -256,7 +256,7 @@ Hokeylisearring
  Foar de aventoerlike: by it ferwurkjen fan bestannen yn in map, kinne jo de opsje `-F` / `--filter`
  om de útfier te filterjen foardat it nei it bestânsysteem skreaun wurdt
 
- De wearde fan dizze opsje moat in paad wêze nei in JS-bestân dat in funksje mei de namme `filter`
+ De wearde fan dizze opsje moat in paad wêze nei in JS-bestân dat in funksje eksportearret mei de namme `filter`
 
  De funksje `filter` ' moat `async` om't `await` oanroppen wurde sil
 
@@ -264,7 +264,7 @@ Hokeylisearring
 
  De `filter` fan 'e funksje 'filter' is wat wirklik nei opslach skreaun wurdt
 
- Sa hawwe jo totale kontrôle oer wat úteinlik skreaun wurde sil
+ Sa hawwe jo folsleine kontrôle oer wat úteinlik skreaun wurde sil
 
  ### Help
  Brûk `-h` / `--help` om help te sjen

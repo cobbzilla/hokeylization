@@ -234,7 +234,7 @@ Hokeylization
 
  La flago `-M` / `--markdown` ebligas specialan uzadon por markdown dosieroj
 
- Hokeylizer pritraktas aferojn dece bone, sed kun markdown-dosieroj, vi povas ofte ĉi tiujn problemojn:
+ Kun markdown-dosieroj, se vi ne uzas la flagon `-M` , vi verŝajne trovos ĉi tiujn problemojn:
  * Rompitaj ligiloj. En la traduko, spaceto aperas post kiam finiĝas priskribo de markdown-ligo (kun `]` ) sed
  antaŭ ol ĝia celligo komenciĝas (kun `(` ). Ĉi tio kaŭzas ke la markdown malĝuste bildigas, kaj la ligo
  estas rompita dum rigardado de la dokumento.

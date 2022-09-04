@@ -234,7 +234,7 @@ Hokeylization
 
  Tus `-M` " / `--markdown` ua kom muaj kev tuav tshwj xeeb rau cov ntaub ntawv markdown
 
- Hokeylizer ua haujlwm tau zoo, tab sis nrog cov ntaub ntawv markdown, koj tuaj yeem ua rau cov teeb meem no ntau zaus:
+ Nrog cov ntaub ntawv markdown, yog tias koj tsis siv tus chij `-M` , koj yuav pom cov teeb meem no:
  * Cov kab txuas tawg. Hauv kev txhais lus, qhov chaw cim tshwm tom qab cov lus piav qhia txuas txuas xaus (nrog `]` ) tab sis
  ua ntej nws lub hom phiaj txuas pib (nrog `(` ).
  tawg thaum saib daim ntawv.

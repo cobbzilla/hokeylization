@@ -234,7 +234,7 @@ Hokeylization
 
  Tha am bratach `-M` / `--markdown` a 'comasachadh làimhseachadh sònraichte airson faidhlichean comharrachaidh
 
- Bidh Hokeylizer a’ làimhseachadh rudan gu dòigheil, ach le faidhlichean comharrachaidh, faodaidh tu na duilgheadasan sin a dhèanamh gu tric:
+ Le faidhlichean comharrachaidh, mura cleachd thu am bratach `-M` , is dòcha gum faigh thu na duilgheadasan seo:
  * Ceanglaichean briste. Anns an eadar-theangachadh, nochdaidh caractar fànais às deidh tuairisgeul ceangail comharrachaidh a thighinn gu crìch (le `]` ) ach
  mus tòisich an ceangal targaid aige (le `(` ). Bidh seo ag adhbhrachadh gu bheil an comharradh sìos ceàrr, agus an ceangal
  briste nuair a choimheadas tu air an sgrìobhainn.

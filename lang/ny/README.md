@@ -234,7 +234,7 @@ Hokeylization
 
  Mbendera ya `-M` / `--markdown` imathandizira kugwira ntchito mwapadera kwamafayilo otsitsa
 
- Hokeylizer imayendetsa zinthu bwino, koma ndi mafayilo oyika, mutha nthawi zambiri mavuto awa:
+ Ndi mafayilo otsitsa, ngati simugwiritsa ntchito mbendera ya `-M` , mutha kupeza mavuto awa:
  * Maulalo osweka. Pomasulira, chilembo cha danga chikuwonekera pambuyo pofotokozera ulalo wotsikirako (ndi `]` ) koma
  ulalo wake wa chandamale usanayambe (ndi `(` ). Izi zimapangitsa kuti kutsika kuwoneke molakwika, ndi ulalo
  imasweka powonera chikalatacho.

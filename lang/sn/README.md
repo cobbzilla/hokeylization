@@ -234,7 +234,7 @@ Hokeylization
 
  Iyo `-M` / `--markdown` mureza inogonesa yakakosha kubata kwemafaera ekumaka
 
- Hokeylizer inobata zvinhu zvine mutsindo, asi nemafaera ekumaka, unogona kazhinji matambudziko aya:
+ Nemafaera ekumaka, kana `-M` mureza, ungangowana aya matambudziko:
  * Zvisungo zvakaputsika. Mushanduro, mavara emuchadenga anooneka mushure mekunge tsananguro yelinkdown yapera (ne `]` ) asi
  pamberi pekuti chinongedzo chayo chisati chatanga (ne `(` ).
  yakaputsika pakuona gwaro.

@@ -234,7 +234,7 @@ Hokeylisation
 
  Ibendera rya `-M` / `--markdown` rituma habaho uburyo bwihariye bwo gukora dosiye
 
- Hokeylizer ikemura ibintu neza, ariko hamwe namadosiye yerekana, ushobora kenshi ibibazo:
+ Hamwe na dosiye zerekana, niba udakoresheje ibendera rya `-M` , birashoboka ko uzabona ibi bibazo:
  * Amahuza yacitse. Mubisobanuro, umwanya wimiterere ugaragara nyuma yikimenyetso cyo guhuza ibisobanuro birangiye (hamwe na `]` ) ariko
  mbere yuko intego yayo ihuza itangira (hamwe na `(` ) .Ibyo bitera ikimenyetso cyo gukora nabi, hamwe nu murongo
  ivunika iyo ureba inyandiko.

@@ -234,7 +234,7 @@ Hokeylització
 
  El `-M` / `--markdown` permet un maneig especial dels fitxers de reducció
 
- Hokeylizer gestiona les coses decentment bé, però amb els fitxers de rebaixes, sovint podeu tenir aquests problemes:
+ Amb els fitxers de marcatge, si no feu servir el `-M` , probablement trobareu aquests problemes:
  * Enllaços trencats. A la traducció, apareix un caràcter d'espai després d'acabar la descripció d'un enllaç de reducció (amb `]` ), però
  abans que comenci el seu enllaç de destinació (amb `(` ). Això fa que el marcador es mostri incorrectament i l'enllaç
  està trencat en visualitzar el document.

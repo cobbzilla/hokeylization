@@ -58,7 +58,7 @@ Hokeylization
  * [Installazione] (#Installazione)
  * [Configurazione](#Configurazione)
  * [Traduzzione di un schedariu di risorse di stringa JavaScript] (#Translating-a-JavaScript-string-resource-file)
- * [Traduzzione di un repertoriu di schedarii di testu] (#Traduzzione-di-directory-of-text-files)
+ * [Traduzzione di un repertoriu di schedarii di testu] (#Translating-a-directory-of-text-files)
  * [Altre opzioni](#Altre-opzioni)
 
  ## Fonte
@@ -234,7 +234,7 @@ Hokeylization
 
  A `-M` / `--markdown` permette una gestione speciale per i schedarii di marcatura
 
- Hokeylizer tratta e cose decentemente bè, ma cù i schedarii di marcatura, pudete spessu questi prublemi:
+ Cù i schedarii di marcatura, se ùn utilizate micca a bandiera `-M` , probabilmente truverete questi prublemi:
  * Ligami rotti. In a traduzzione, un caratteru spaziale appare dopu chì una descrizzione di ligame di marcatura finisce (cù `]` ) ma
  prima chì u so ligame di destinazione principia (cù `(` ). Questu face chì u markdown si rende incorrectamente, è u ligame.
  hè rottu quandu vede u documentu.
@@ -256,7 +256,7 @@ Hokeylization
  Per l'avventurosi: quandu processate i schedari in un cartulare, pudete passà l' `-F` / `--filter`
  per filtrà l'output prima ch'ellu sia scrittu à u filesystem
 
- U valore di sta opzione deve esse una strada per un schedariu JS chì esporta una funzione chjamata `filter`
+ U valore di sta opzione deve esse una strada à un schedariu JS chì esporta una funzione chjamata `filter`
 
  A funzione `filter` deve esse `async` perchè `await` serà chjamatu
 

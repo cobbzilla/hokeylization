@@ -234,7 +234,7 @@ Hokeyleiddiad
 
  Mae'r `-M` / `--markdown` yn galluogi trin arbennig ar gyfer ffeiliau marcio i lawr
 
- Mae Hokeylizer yn trin pethau'n weddus o dda, ond gyda ffeiliau marcio i lawr, efallai y byddwch chi'n aml yn amseru'r problemau hyn:
+ Gyda ffeiliau marcio i lawr, os na ddefnyddiwch y faner `-M` , mae'n debyg y byddwch yn dod o hyd i'r problemau hyn:
  * Dolenni toredig. Yn y cyfieithiad, mae nod gofod yn ymddangos ar ôl i ddisgrifiad cyswllt marcio i lawr ddod i ben (gyda `]` ) ond
  cyn i'w ddolen darged ddechrau (gyda `(` ). Mae hyn yn achosi i'r marcio i lawr rendr yn anghywir, a'r ddolen
  wedi torri wrth edrych ar y ddogfen.

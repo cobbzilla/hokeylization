@@ -234,7 +234,7 @@ Hokeyylization
 
  `-M` / `--markdown` ba da damar sarrafa musammam don fayiloli masu alama
 
- Hokeylizer yana sarrafa abubuwa da kyau da kyau, amma tare da fayilolin da aka saka, ƙila sau da yawa waɗannan matsalolin:
+ Tare da fayilolin alama, idan ba ku yi amfani da tutar `-M` ba, ƙila za ku sami waɗannan matsalolin:
  * Abubuwan da aka karye. A cikin fassarar, yanayin sararin samaniya yana bayyana bayan bayanin hanyar haɗin gwiwa ya ƙare (tare da `]` ) amma
  kafin a fara hanyar haɗin yanar gizon sa (tare da `(` ) Wannan yana sa alamar ta yi kuskure, da kuma hanyar haɗin yanar gizon.
  ya karye lokacin kallon takardar.

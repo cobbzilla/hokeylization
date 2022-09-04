@@ -234,7 +234,7 @@ Hokeylization
 
  O `-M` / `--markdown` e mafai ai ona fa'atautaia fa'apitoa mo faila fa'ailoga
 
- O le Hokeylizer e faʻatautaia lelei mea, ae faʻatasi ai ma faila faʻailoga, atonu e masani ona e faʻafitauli nei:
+ Faatasi ai ma faila faʻailoga, afai e te le faʻaogaina le `-M` fuʻa, atonu o le ae mauaina nei faʻafitauli:
  * So'oga motusia. I le fa'aliliuga, e aliali mai se uiga avanoa pe a uma le fa'amatalaga o so'otaga fa'ailoga (i le `]` ) ae
  a'o le'i amataina lona so'oga fa'atatau (i le `(` ). E mafua ai ona sese le fa'ailoga, ma le so'oga.
  ua malepe pe a matamata i le pepa.

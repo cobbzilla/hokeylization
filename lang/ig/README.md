@@ -109,7 +109,7 @@ Hokeyylization
  Ọ bụrụ na ị na-agba ọsọ site na koodu isi mmalite, ị nwekwara ike itinye ndị a na faịlụ `.env` na isi mmalite
  A ga-ebunye ndekọ aha ha na oge ojiri gaa site na [dotenv](https://www.npmjs.com/package/dotenv)
 
- ## Ịsụgharị faịlụ akụrụngwa Javascript
+ ## Ịsụgharị faịlụ akụ eriri Javascript
  Tebụl eriri gị ** ga-abụrịrị na faịlụ Javascript n'otu n'ime ụdị abụọ a:
 
  Mbupu ES6:
@@ -234,7 +234,7 @@ Hokeyylization
 
  `-M` / `--markdown` na-enyere njikwa pụrụ iche maka faịlụ akara akara
 
- Hokeylizer na-edozi ihe nke ọma, mana site na faịlụ akara akara, ị nwere ike na-enwekarị nsogbu ndị a:
+ Site na faịlụ akara akara, ọ bụrụ na ijighị ọkọlọtọ `-M` , ị ga-ahụ nsogbu ndị a:
  * Njikọ ndị gbajiri agbaji. Na ntụgharị asụsụ, mkpụrụedemede oghere na-apụta mgbe nkọwa njikọ akara gwụchara (ya na `]` ) mana
  tupu njikọ ebumnuche ya amalite (ya na `(` ) Nke a na-eme ka akara akara emeghị nke ọma, yana njikọ ahụ.
  agbajikwa mgbe ị na-elele akwụkwọ ahụ.

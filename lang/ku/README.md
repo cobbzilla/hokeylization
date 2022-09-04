@@ -215,7 +215,7 @@ Hokeylization
  Dema ku hûn guman dikin, hûn dikarin vê vebijarkê bi `-n` / `--dry-run` re hev bikin da ku bibînin ka kîjan pel dê werin wergerandin.
 
  ### Derdixe
- Carinan `-m` we pir pelan li hev dike. `-e` / `--excludes` bikar bînin da ku bi eşkereyî jêbirin
+ Carinan `-m` we gelek pelan li hev dike. `-e` / `--excludes` bikar bînin da ku bi eşkereyî jêbirin
  pelên ku wekî din dê li hev bihata
 
  Hûn dikarin gelek regexes navnîş bikin, ji hêla cîhan ve têne veqetandin
@@ -234,12 +234,12 @@ Hokeylization
 
  `-M` / `--markdown` ji bo pelên nîşankirinê karkirina taybetî pêk tîne
 
- Hokeylizer tiştan bi awakî xweş bi rê ve dibe, lê digel pelên nîşankirinê, dibe ku hûn pir caran van pirsgirêkan bikin:
+ Digel pelên nîşankirinê, heke hûn ala `-M` bikar neynin, dibe ku hûn van pirsgirêkan bibînin:
  * Girêdanên şikestî. Di wergerandinê de, karekterek cîhê piştî ku danasîna girêdana nîşankirinê bi dawî dibe (bi `]` ) xuya dike lê
  berî ku girêdana wê ya hedef dest pê bike (bi `(` ). Ev dibe sedem ku nîşankirin bi xeletî were pêşkêş kirin, û girêdan
  dema dîtina belgeyê têk diçe.
  * Blokên kodê têne wergerandin. Google werger nizane markdown kîjan kodê dihesibîne û çi nake
- * Cihê çewt ji bo blokên kodê yên binavkirî. Di wergerê de parastin zehmet e
+ * Cihê xelet ji bo blokên kodê yên binavkirî. Di wergerê de parastin zehmet e
  * Tiştên di hundurê `backticks` dê werin wergerandin, gava ku hûn hema hema her gav dixwazin ku ew bibin nirxên wêjeyî
 
  Dema ku ala `-M` / `--markdown` çalak be:

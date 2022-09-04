@@ -233,7 +233,7 @@ Markdown is neither text nor html, so Google Translate has some difficulties wit
 
 The `-M` / `--markdown` flag enables special handling for markdown files
 
-Hokeylizer handles things decently well, but with markdown files, you may oftentimes these problems:
+With markdown files, if you don't use the `-M` flag, you will probably find these problems:
 * Broken links. In the translation, a space character appears after a markdown link description ends (with `]`) but
 before its target link begins (with `(`). This causes the markdown to render incorrectly, and the link
 is broken when viewing the document.

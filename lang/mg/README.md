@@ -234,7 +234,7 @@ Hokeylization
 
  Ny `-M` / `--markdown` dia mamela ny fikarakarana manokana ny rakitra markdown
 
- Ny Hokeylizer dia mitantana tsara ny zavatra, fa amin'ny alàlan'ny fisie markdown, dia mety matetika ireto olana ireto:
+ Miaraka amin'ny rakitra markdown, raha tsy mampiasa ny saina `-M` ianao, dia mety hahita ireto olana ireto ianao:
  * Rohy tapaka. Ao amin'ny dikanteny, misy tarehin-tsoratra iray miseho rehefa tapitra ny famaritana rohy misy marika (miaraka amin'ny `]` ) fa
  alohan'ny hanombohan'ny rohy kendrena azy (miaraka amin'ny `(` ).
  tapaka rehefa mijery ny antontan-taratasy.

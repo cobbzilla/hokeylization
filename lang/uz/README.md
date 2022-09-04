@@ -234,7 +234,7 @@ Hokeylizatsiya
 
  `-M` / `--markdown` markdown fayllari uchun maxsus ishlov berish imkonini beradi
 
- Hokeylizer narsalarni yaxshi boshqaradi, lekin markdown fayllari bilan siz ko'pincha quyidagi muammolarga duch kelishingiz mumkin:
+ Markdown fayllari bilan " `-M` bayrog'idan foydalanmasangiz, ehtimol siz quyidagi muammolarni topasiz:
  * Buzilgan havolalar. Tarjimada belgilash havolasi tavsifi tugagandan so'ng bo'sh joy belgisi paydo bo'ladi ( `]` bilan), lekin
  maqsadli havola boshlanishidan oldin ( `(` ) bilan). Bu belgining notoʻgʻri koʻrsatilishiga olib keladi va havola
  hujjatni ko'rishda buziladi.

@@ -234,7 +234,7 @@ Hokeylization
 
  `-M` / `--markdown` memungkinkan penanganan khusus untuk file penurunan harga
 
- Hokeylizer menangani berbagai hal dengan baik, tetapi dengan file penurunan harga, Anda mungkin sering mengalami masalah ini:
+ Dengan file penurunan harga, jika Anda tidak menggunakan flag `-M` , Anda mungkin akan menemukan masalah berikut:
  * Tautan rusak. Dalam terjemahan, karakter spasi muncul setelah deskripsi tautan penurunan harga berakhir (dengan `]` ) tetapi
  sebelum tautan target dimulai (dengan `(` ). Hal ini menyebabkan penurunan harga tidak ditampilkan dengan benar, dan tautan
  rusak saat melihat dokumen.

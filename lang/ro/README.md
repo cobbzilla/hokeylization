@@ -234,7 +234,7 @@ Hokeylizare
 
  Indicatorul `-M` / `--markdown` permite o gestionare specială pentru fișierele de reducere
 
- Hokeylizer gestionează lucrurile decent de bine, dar cu fișierele de reducere, de multe ori s-ar putea să ai aceste probleme:
+ Cu fișierele markdown, dacă nu utilizați steag- `-M` , probabil veți găsi aceste probleme:
  * Legături rupte. În traducere, un caracter spațiu apare după ce o descriere a link-ului de reducere se termină (cu `]` ), dar
  înainte ca linkul său țintă să înceapă (cu `(` ). Acest lucru face ca marcarea să fie redată incorect, iar linkul
  este stricat la vizualizarea documentului.

@@ -234,7 +234,7 @@ Hokeylizazioa
 
  `-M` / `--markdown` markdown fitxategiak kudeatzeko aukera ematen du
 
- Hokeylizer-ek ondo kudeatzen ditu gauzak, baina markdown fitxategiekin askotan arazo hauek izan ditzakezu:
+ Markdown fitxategiekin, `-M` bandera erabiltzen ez baduzu, ziurrenik arazo hauek aurkituko dituzu:
  * Hautsitako estekak. Itzulpenean, zuriune bat agertzen da markdown estekaren deskribapena amaitu ondoren ( `]` rekin) baina
  helburuko esteka hasi baino lehen ( `(` )-rekin). Honek markdown-a gaizki errendatzea eragiten du, eta esteka
  dokumentua ikustean hautsita dago.

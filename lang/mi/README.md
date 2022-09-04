@@ -234,7 +234,7 @@ Hokeylization
 
  Ko te `-M` / `--markdown` ka taea te whakahaere motuhake mo nga konae tohu
 
- He pai te whakahaere a Hokeylizer i nga mea, engari me nga konae tohu, he maha nga wa ka raru koe:
+ Me nga konae tohu, ki te kore koe e whakamahi i te haki `-M` , ka kitea pea enei raru:
  * Nga hononga pakaru. I roto i te whakamaoritanga, ka puta he mokowhiti i muri i te mutunga o te whakamaarama hono tohu (me te `]` ) engari
  i mua i te tiimata o tana hononga whainga (me te `(` ). Na tenei ka he te whakaatu i te tohu, me te hono
  kua pakaru i te wa e tiro ana i te tuhinga.

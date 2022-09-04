@@ -234,7 +234,7 @@ Hokeylization
 
  Drapo a `-M` / `--markdown` pèmèt manyen espesyal pou dosye markdown yo
 
- Hokeylizer jere bagay yo byen, men ak dosye markdown, ou ka souvan pwoblèm sa yo:
+ Avèk dosye markdown, si ou pa sèvi ak drapo `-M` , ou pral pwobableman jwenn pwoblèm sa yo:
  * Lyen kase. Nan tradiksyon an, yon karaktè espas parèt apre yon deskripsyon lyen markdown fini (ak `]` ) men
  anvan lyen sib li a kòmanse (avèk `(` ). Sa lakòz markdown la rann mal, epi lyen an).
  kase lè w ap gade dokiman an.

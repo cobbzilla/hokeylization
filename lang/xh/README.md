@@ -234,7 +234,7 @@ Hokeylization
 
  I `-M` / `--markdown` iflegi yenza ukubamba okukhethekileyo kweefayile zokumakisha
 
- I-Hokeylizer iphatha izinto ngokufanelekileyo, kodwa ngeefayile zokumakisha, unokuhlala ezi ngxaki:
+ Ngeefayile zokumakisha, ukuba awusebenzisi `-M` iflegi, uya kufumana ezi ngxaki.
  * Amakhonkco aqhawukileyo. Kuguqulo, uphawu lwesithuba luvela emva kokuba inkcazo yekhonkco lokuphawula iphelile (nge `]` ) kodwa
  phambi kokuba ikhonkco layo ekujoliswe kulo liqale ( nge `(` ) Oku kubangela ukuba uphawulo lunike ngokungalunganga, kunye nekhonkco
  yaphukile xa ujonga uxwebhu.

@@ -234,7 +234,7 @@ Hokeyliseerimine
 
  Lipp "-M" / `--markdown` `-M` allahindlusfailide erikäsitlust
 
- Hokeylizer saab asjadega hästi hakkama, kuid allahindlusfailidega võivad sageli tekkida järgmised probleemid:
+ Kui te ei kasuta märgistusfailide puhul lippu `-M` , leiate tõenäoliselt järgmised probleemid:
  * Katkised lingid. Tõlkes ilmub tühik pärast allahindluslingi kirjelduse lõppu (tähisega `]` ), kuid
  enne selle sihtlingi algust (koos `(` ). Selle tulemusel renderdatakse allahindlus valesti ja link
  on dokumendi vaatamisel katki.
@@ -258,7 +258,7 @@ Hokeyliseerimine
 
  Selle suvandi väärtus peab olema JS-faili tee, mis ekspordib funktsiooni nimega `filter`
 
- Funktsioon `filter` peab olema `async` , kuna sellele kutsutakse välja "oota `await`
+ Funktsioon `filter` peab olema `async` , kuna sellele kutsutakse välja „oota `await`
 
  Enne failide kettale kirjutamist edastatakse kogu faili sisu stringina funktsioonile `filter`
 

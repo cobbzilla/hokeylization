@@ -234,7 +234,7 @@ Hokeylization
 
  De vlag `-M` / `--markdown` maakt speciale verwerking mogelijk voor markdown-bestanden
 
- Hokeylizer handelt de zaken redelijk goed af, maar met markdown-bestanden heb je vaak de volgende problemen:
+ Als u bij markdown-bestanden de `-M` vlag niet gebruikt, zult u waarschijnlijk de volgende problemen tegenkomen:
  * Gebroken links. In de vertaling verschijnt een spatie nadat een beschrijving van een afprijslink eindigt (met `]` ) maar
  voordat de doellink begint (met `(` ). Dit zorgt ervoor dat de markdown onjuist wordt weergegeven en de link
  is gebroken bij het bekijken van het document.

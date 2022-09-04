@@ -234,7 +234,7 @@ Hokeylizálás
 
  A `-M` / `--markdown` jelző lehetővé teszi a leértékelési fájlok speciális kezelését
 
- A Hokeylizer tisztességesen kezeli a dolgokat, de a markdown fájlokkal gyakran előfordulhatnak a következő problémák:
+ A markdown fájloknál, ha nem használja az `-M` jelzőt, valószínűleg a következő problémákat fogja találni:
  * Törött linkek. A fordításban egy szóköz jelenik meg a lejelölő hivatkozás leírása után (a `]` karakterrel), de
  mielőtt a célhivatkozás elkezdődne ( `(` ). Ez azt okozza, hogy a leértékelés helytelenül jelenik meg, és a link
  elromlik a dokumentum megtekintésekor.

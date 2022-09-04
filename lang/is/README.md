@@ -234,7 +234,7 @@ Hókýlvæðing
 
  `-M` / `--markdown` fáninn gerir sérstaka meðhöndlun fyrir markdown skrár
 
- Hokeylizer höndlar hlutina sæmilega vel, en með markdown skrám gætirðu oft þessi vandamál:
+ Með markdown skrám, ef þú notar ekki `-M` fánann, muntu líklega finna þessi vandamál:
  * Brotnir hlekkir. Í þýðingunni birtist bilstafur eftir að lýsingu á merkingu tengli lýkur (með `]` ) en
  áður en marktengillinn byrjar (með `(` ). Þetta veldur því að merkingin birtist rangt og tengilinn
  er bilað þegar skjalið er skoðað.
@@ -258,9 +258,9 @@ Hókýlvæðing
 
  Gildi þessa valmöguleika verður að vera slóð að JS skrá sem flytur út fall sem heitir `filter`
 
- `filter` aðgerðin verður að vera `async` vegna þess að `await` verður kallað á hana
+ `filter` fallið verður að vera `async` vegna þess að `await` verður kallað á það
 
- Áður en skrár eru skrifaðar á disk, verður allt skráarinnihaldið sent til `filter` aðgerðarinnar sem strengur
+ Áður en skrár eru skrifaðar á disk verður allt skráarinnihaldið sent yfir í `filter` aðgerðina sem strengur
 
  Skilagildið frá `filter` fallinu er það sem í raun verður skrifað í geymslu
 

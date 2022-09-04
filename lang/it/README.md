@@ -234,7 +234,7 @@ Hokeylizzazione
 
  Il `-M` / `--markdown` abilita una gestione speciale per i file markdown
 
- Hokeylizer gestisce le cose in modo decente, ma con i file markdown, potresti spesso avere questi problemi:
+ Con i file markdown, se non usi il flag `-M` , probabilmente troverai questi problemi:
  * Collegamenti interrotti. Nella traduzione, viene visualizzato uno spazio dopo che la descrizione di un collegamento markdown termina (con `]` ) ma
  prima che il suo collegamento di destinazione inizi (con `(` ). Ciò causa un rendering errato del markdown e il collegamento
  è rotto durante la visualizzazione del documento.

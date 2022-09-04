@@ -234,7 +234,7 @@ Hokielisering
 
  Die `-M` / `--markdown` vlag maak spesiale hantering vir markdown lêers moontlik
 
- Hokeylizer hanteer dinge ordentlik goed, maar met afmerklêers kan jy dikwels hierdie probleme hê:
+ Met markdown-lêers, as jy nie die `-M` vlag gebruik nie, sal jy waarskynlik hierdie probleme vind:
  * Gebreekte skakels. In die vertaling verskyn 'n spasiekarakter nadat 'n afmerkskakelbeskrywing eindig (met `]` ) maar
  voordat sy teikenskakel begin (met `(` ). Dit veroorsaak dat die afmerking verkeerd weergee, en die skakel
  is gebreek wanneer die dokument bekyk word.
@@ -256,7 +256,7 @@ Hokielisering
  Vir die avontuurlustiges: wanneer jy lêers in 'n gids verwerk, kan jy die `-F` / `--filter` opsie slaag
  om die uitvoer te filter voordat dit na die lêerstelsel geskryf word
 
- Die waarde van hierdie opsie moet 'n pad na 'n JS-lêer wees wat 'n funksie genaamd `filter`
+ Die waarde van hierdie opsie moet 'n pad wees na 'n JS-lêer wat 'n funksie genaamd `filter`
 
  Die `filter` funksie moet `async` wees omdat `await` daarop geroep sal word
 
