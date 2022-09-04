@@ -94,9 +94,7 @@ Want to see output in your langauge or another language?
 
 You can force a language by setting the `LC_ALL` environment variable:
 
-    > LC_ALL=it hokey --help
-    Usage:  hokey [options] <source>
-    ...
+    LC_ALL=it hokey --help
 
 Note that if you have installed `hokeylization-lite`, command help is only available in English
 
