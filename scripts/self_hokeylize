@@ -2,7 +2,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${0}")" && pwd)"
 BASE_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
-LANGS="${1:-$(cat "${BASE_DIR}/scripts/all-langs-except-en.txt")}"
+LANGS="${1:-"all"}"
 if [[ "${LANGS}" == "all" ]] ; then
   LANGS="$(cat "${BASE_DIR}/scripts/all-langs-except-en.txt")"
 fi
