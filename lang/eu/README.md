@@ -43,8 +43,8 @@ Hokeylizazioa
 
  ### Arazorik al dago IRAKURRI-ren itzulpen honekin?
  [README] jatorrizkoaren itzulpen zehatz hau (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- akatsa izan daiteke -- *zuzenketak oso ongi etorriak dira!* Bidali [pull eskaera GitHub-en] (https://github.com/cobbzilla/yuebing/pulls),
- edo hori egiten eroso ez bazaude, [ireki arazo bat] (https://github.com/cobbzilla/yuebing/issues)
+ akatsa izan daiteke -- *zuzenketak oso ongi etorriak dira!* Bidali [pull eskaera GitHub-en](https://github.com/cobbzilla/yuebing/pulls),
+ edo hori egiten eroso ez bazaude, [ireki arazo bat](https://github.com/cobbzilla/yuebing/issues)
 
  Itzulpen bati buruzko GitHub-en arazo berri bat sortzen duzunean, egin:
  * Sartu orriaren URLa (kopiatu/itsatsi arakatzailearen helbide barratik)
@@ -62,8 +62,8 @@ Hokeylizazioa
  * [Beste aukera batzuk](#Beste aukerak)
 
  ## Iturria
- * [hokeylization GitHub-en] (https://github.com/cobbzilla/hokeylization)
- * [hokeylization npm-n] (https://www.npmjs.com/package/hokeylization)
+ * [hokeylization GitHub-en](https://github.com/cobbzilla/hokeylization)
+ * [hokeylization npm-n](https://www.npmjs.com/package/hokeylization)
 
  ## Laguntza eta finantzaketa
  Kode irekiko software garatzaile profesionala izaten saiatzen ari naiz. lanean aritu naiz
@@ -243,7 +243,7 @@ Hokeylizazioa
  * `backticks` barruan dauden gauzak itzuliko dira, ia beti balio literalak izatea nahi duzunean
 
  `-M` / `--markdown` bandera gaituta dagoenean:
- * Eredua `] (` `](` kondentsatu egingo da, horrela hautsitako markdown estekak konponduko dira
+ * Eredua `](` `](` kondentsatu egingo da, horrela hautsitako markdown estekak konponduko dira
  * Koskatutako kode blokeen inguruan "itzultzerik gabeko" bilgarri bat jarriko da, koska egokia mantenduz eta itzuli ez direla ziurtatuz
  * "itzulpenik gabeko" bilgarri bat jarriko da testuaren inguruan `backticks` barruan, itzuli ez direla ziurtatzeko
 

@@ -17,7 +17,7 @@ Hokeylizácia
  [🇸🇦 arabčina](../ar/README.md)
  [🇧🇩 bengálčina](../bn/README.md)
  [🇩🇪 nemčina](../de/README.md)
- [🇺🇸 angličtina] (lang/en/README.md)
+ [🇺🇸 angličtina](../en/README.md)
  [🇪🇸 španielčina](../es/README.md)
  [🇫🇷 francúzština](../fr/README.md)
  [🇹🇩 hausa](../ha/README.md)
@@ -53,10 +53,10 @@ Hokeylizácia
  * **Ďakujem!**
 
  # Obsah
- * [Source] (#Source)
+ * [Source](#Source)
  * [Support and Funding](#Support-and-Funding)
  * [Inštalácia](#Inštalácia)
- * [Setup] (#Setup)
+ * [Setup](#Setup)
  * [Preklad zdrojového súboru s reťazcom JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Preklad adresára textových súborov](#Translating-a-directory-of-text-files)
  * [Ďalšie možnosti](#Other-options)
@@ -238,12 +238,12 @@ Hokeylizácia
  * Nefunkčné odkazy. V preklade sa medzera objaví po ukončení popisu odkazu označenia (s `]` ), ale
  predtým, než sa začne jeho cieľový odkaz (s `(` ). To spôsobí nesprávne vykreslenie označenia a odkazu
  pri prezeraní dokumentu sa pokazí.
- * Bloky kódu sa prekladajú. Prekladač Google nevie, čo markdown považuje za kód a čo nie
+ * Bloky kódu sú preložené. Prekladač Google nevie, čo markdown považuje za kód a čo nie
  * Nesprávne medzery pre odsadené bloky kódu. V preklade je ťažké zachovať medzery
  * Veci vnútri `backticks` sa preložia, keď takmer vždy chcete, aby to boli doslovné hodnoty
 
  Keď je povolený príznak `-M` / `--markdown` :
- * Vzor `] (` bude zhustený na `](` , čím sa opravia nefunkčné odkazy na zníženie
+ * Vzor `](` bude zhustený na `](` , čím sa opravia nefunkčné odkazy na zníženie
  * Okolo odsadených blokov kódu bude umiestnený obal „bez prekladu“, ktorý zachová správne odsadenie a zabezpečí, že nebudú preložené
  * Okolo textu v rámci `backticks` sa umiestni obálka „bez prekladu“, aby sa zabezpečilo, že nebudú preložené
 

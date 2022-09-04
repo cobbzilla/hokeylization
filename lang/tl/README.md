@@ -243,7 +243,7 @@ Hokeylization
  * Ang mga bagay sa loob ng `backticks` ay isasalin, kapag halos palaging gusto mong maging literal na halaga ang mga ito
 
  Kapag ang `-M` / `--markdown` flag ay pinagana:
- * Ang pattern `] (` ay gagawing `](` kaya inaayos ang mga sirang markdown link
+ * Ang pattern `](` ay gagawing `](` kaya inaayos ang mga sirang markdown link
  * Maglalagay ng wrapper na "no translate" sa paligid ng mga naka-indent na bloke ng code, na pinapanatili ang wastong indentation at tinitiyak na hindi ito isinasalin
  * Maglalagay ng wrapper na "no translate" sa paligid ng text sa loob ng `backticks` upang matiyak na hindi isinasalin ang mga ito
 

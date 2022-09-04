@@ -238,12 +238,12 @@ I-Hokeylization
  * Izixhumanisi eziphukile. Ekuhumusheni, kuvela uhlamvu lwesikhala ngemva kokuphela kwencazelo yesixhumanisi sokubeka phansi (nokuthi `]` ) kodwa
  ngaphambi kokuthi isixhumanisi sayo esiqondiswe kuso siqale (ngokuthi `(` ). Lokhu kubangela ukuthi ukubeke phansi kunikezwe ngokungalungile, kanye nesixhumanisi
  iphukile uma ubuka idokhumenti.
- * Amabhulokhi ekhodi ahunyushwa. I-Google Translate ayazi ukuthi i-markdown icabangani ngekhodi nokuthi yini engayazi
+ * Amabhulokhi ekhodi ayahunyushwa. I-Google Translate ayazi ukuthi i-markdown icabangani ngekhodi nokuthi yini engayazi
  * Isikhala esingalungile samabhulokhi ekhodi ehlehlisiwe. Isikhala sinzima ukusigcina ekuhumusheni
  * Izinto ezingaphakathi kokuthi `backticks` zizohunyushwa, lapho cishe uhlale ufuna ukuthi abe amanani angokoqobo
 
  Uma `-M` / `--markdown` :
- * Iphethini `] (` izofinyezwa ukuze ithi `](` ngaleyo ndlela kulungiswe izixhumanisi zokumaka eziphukile
+ * Iphethini `](` izofinyezwa ukuze ithi `](` ngaleyo ndlela kulungiswe izixhumanisi zokumaka eziphukile
  *Isembozo esithi "no translate" sizobekwa eduze kwamabhulokhi amakhodi ahlehlisiwe, alondoloze ukuhlehlisa okulungile nokuqinisekisa ukuthi awahunyushwa
  *Isembozo esithi "no translate" sizobekwa phakathi kombhalo phakathi `backticks` ukuze kuqinisekiswe ukuthi awahunyushwa
 
@@ -256,7 +256,7 @@ I-Hokeylization
  Okwesikhashana: lapho ucubungula amafayela ohlwini lwemibhalo, ungadlula `-F` / `--filter`
  ukuhlunga okukhiphayo ngaphambi kokuthi kubhalwe ohlelweni lwefayela
 
- Inani lale nketho kufanele libe indlela eya efayeleni le-JS elithumela ngaphandle umsebenzi okuthiwa `filter`
+ Inani lale nketho kumelwe libe indlela eya efayeleni le-JS elithumela ngaphandle umsebenzi okuthiwa `filter`
 
  Umsebenzi `filter` kumelwe `async` ngoba `await` kuwo
 
@@ -264,7 +264,7 @@ I-Hokeylization
 
  Inani lokubuyisela elisuka `filter` isitoreji
 
- Ngakho-ke, uyakwazi ukulawula lokho okuzobhalwa ekugcineni
+ Ngakho, uyakwazi ukulawula lokho okuzobhalwa ekugcineni
 
  ### Usizo
  Sebenzisa `-h` / `--help` ukuze ubonise usizo

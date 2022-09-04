@@ -243,7 +243,7 @@ Hokeylization
  * O mea i totonu o le `backticks` o le a fa'aliliuina, pe a e mana'o i taimi uma ia avea ma mea taua
 
  A mafai le fu'a `-M` / `--markdown` :
- * O le mamanu `] (` o le a fa'apu'upu'u i le `](` fa'apea ona toe fa'aleleia so'otaga fa'ailoga ua motusia.
+ * O le mamanu `](` o le a fa'apu'upu'u i le `](` fa'apea ona toe fa'aleleia so'otaga fa'ailoga ua motusia.
  * O se afifi "leai se fa'aliliu" o le a tu'u fa'ata'amilo i poloka fa'ailoga, fa'asao sa'o le fa'ailoga ma fa'amautinoa e le'o fa'aliliuina.
  * O se afifi "leai se faaliliu" o le a tuu i autafa o tusitusiga i totonu o `backticks` ina ia mautinoa e le o faaliliuina.
 

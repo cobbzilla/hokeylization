@@ -243,7 +243,7 @@ Hokeylization
  * Hal-hal di dalam `backticks` akan diterjemahkan, ketika Anda hampir selalu menginginkannya menjadi nilai literal
 
  Saat tanda `-M` / `--markdown` diaktifkan:
- * Pola `] (` akan diringkas menjadi `](` sehingga memperbaiki tautan penurunan harga yang rusak
+ * Pola `](` akan diringkas menjadi `](` sehingga memperbaiki tautan penurunan harga yang rusak
  * Pembungkus "tidak ada terjemahan" akan ditempatkan di sekitar blok kode indentasi, menjaga lekukan yang tepat dan memastikan mereka tidak diterjemahkan
  * Pembungkus "no translate" akan ditempatkan di sekitar teks dalam `backticks` untuk memastikan bahwa teks tersebut tidak diterjemahkan
 

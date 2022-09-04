@@ -44,7 +44,7 @@ Hokeylization
  ### Èske gen yon pwoblèm ak tradiksyon README sa a?
  Tradiksyon patikilye sa a orijinal [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
  ka gen defo -- *Koreksyon yo trè akeyi!* Tanpri voye yon [demann rale sou GitHub](https://github.com/cobbzilla/yuebing/pulls),
- oswa si w pa konfòtab pou w fè sa, [louvri yon pwoblèm] (https://github.com/cobbzilla/yuebing/issues)
+ oswa si w pa konfòtab pou w fè sa, [louvri yon pwoblèm](https://github.com/cobbzilla/yuebing/issues)
 
  Lè ou kreye yon nouvo pwoblèm GitHub sou yon tradiksyon, tanpri fè:
  * enkli URL paj la (kopi/kole nan ba adrès navigatè a)
@@ -63,7 +63,7 @@ Hokeylization
 
  ## Sous
  * [hokeylization sou GitHub](https://github.com/cobbzilla/hokeylization)
- * [hokeylization sou npm] (https://www.npmjs.com/package/hokeylization)
+ * [hokeylization sou npm](https://www.npmjs.com/package/hokeylization)
 
  ## Sipò ak Finansman
  Mwen eseye vin yon pwofesyonèl devlopè lojisyèl sous louvri. Mwen te travay nan
@@ -72,7 +72,7 @@ Hokeylization
 
  Se konsa, mwen pral eseye ekri lojisyèl itil epi wè si sa ap travay
 
- Mwen ta sensèman apresye menm pi piti a [kontribisyon chak mwa atravè Patreon] (https://www.patreon.com/cobbzilla)
+ Mwen ta sensèman apresye menm pi piti a [kontribisyon chak mwa atravè Patreon](https://www.patreon.com/cobbzilla)
 
  ## Enstalasyon
  Pou itilize zouti liy lòd la, enstale lè l sèvi avèk `npm` oswa `yarn` :
@@ -243,7 +243,7 @@ Hokeylization
  * Bagay ki andedan `backticks` yo pral tradui, lè ou prèske toujou vle yo dwe valè literal
 
  Lè `-M` / `--markdown` aktive:
- * Modèl la `] (` pral kondanse nan `](` konsa ranje lyen markdown ki kase yo
+ * Modèl la `](` pral kondanse nan `](` konsa ranje lyen markdown ki kase yo
  * Y ap mete yon anvlòp "pa gen okenn tradiksyon" ozalantou blòk kòd indentated, prezève endentasyon apwopriye epi asire yo pa tradui.
  * Yo pral mete yon anvlòp "pa gen okenn tradiksyon" alantou tèks nan `backticks` pou asire yo pa tradui yo.
 

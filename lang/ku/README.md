@@ -44,7 +44,7 @@ Hokeylization
  ### Di vê wergera README de pirsgirêkek heye?
  Ev wergera taybetî ya orîjînal [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
  dibe ku xelet be -- *serrastkirin pir bi xêr hatin!* Ji kerema xwe [daxwaza vekişînê li ser GitHub] bişînin (https://github.com/cobbzilla/yuebing/pulls),
- an heke hûn ne rehet in ku wiya bikin, [pirsek veke] (https://github.com/cobbzilla/yuebing/issues)
+ an heke hûn ne rehet in ku wiya bikin, [pirsek veke](https://github.com/cobbzilla/yuebing/issues)
 
  Dema ku hûn der barê wergerekê de pirsgirêkek nû ya GitHub çêkin, ji kerema xwe bikin:
  * URL-ya rûpelê têxe (ji barika navnîşana gerokê kopî/pêç bike)
@@ -54,12 +54,12 @@ Hokeylization
 
  # Naverok
  * [Çavkanî](#Çavkanî)
- * [Piştgirî û Fînanse] (#Piştgirî-û-Fona)
- * [Sazkirin] (# Sazkirin)
- * [Sazkirin] (# Sazkirin)
- * [Wergerandina pelê çavkaniyek rêzika JavaScript] (#Translating-a-JavaScript-string-resource-file)
- * [Wergerandina pelrêça pelên nivîsê] (#Translating-a-directory-of-text-files)
- * [Vebijarkên din] (# Vebijêrkên din)
+ * [Piştgirî û Fînanse](#Piştgirî-û-Fona)
+ * [Sazkirin](# Sazkirin)
+ * [Sazkirin](# Sazkirin)
+ * [Wergerandina pelê çavkaniyek rêzika JavaScript](#Translating-a-JavaScript-string-resource-file)
+ * [Wergerandina pelrêça pelên nivîsê](#Translating-a-directory-of-text-files)
+ * [Vebijarkên din](# Vebijêrkên din)
 
  ## Çavkanî
  * [hokeylization li ser GitHub](https://github.com/cobbzilla/hokeylization)
@@ -72,7 +72,7 @@ Hokeylization
 
  Ji ber vê yekê ez ê hewl bidim ku nermalava alîkar binivîsim û bibînim ka ew kar dike
 
- Ez ê ji dil spasiya herî piçûk jî [beşdariya mehane bi rêya Patreon] (https://www.patreon.com/cobbzilla)
+ Ez ê ji dil spasiya herî piçûk jî [beşdariya mehane bi rêya Patreon](https://www.patreon.com/cobbzilla)
 
  ## Sazkirin
  Ji bo ku amûra rêzika fermanê bikar bînin, bi karanîna `npm` an `yarn` :
@@ -172,7 +172,7 @@ Hokeylization
 
  Dema ku ev dimeşîne, pelên wergerandî li `templates/es` " têne nivîsandin, û bi vî rengî nû dibin
  pelên çavkanî ji bo wergerandinê, ji ber ku ew di bin `templates/` de ne -- ev pêvajo berdewam dike
- her û her, wê neke!
+ heta hetayê, wê nekin!
 
  #### Bikaranîna rast
  Baş e, em bibêjin ku hûn di pelrêçek de hin şablonên e-nameyê hene:
@@ -215,7 +215,7 @@ Hokeylization
  Dema ku hûn guman dikin, hûn dikarin vê vebijarkê bi `-n` / `--dry-run` re hev bikin da ku bibînin ka kîjan pel dê werin wergerandin.
 
  ### Derdixe
- Carinan `-m` we gelek pelan li hev dike. `-e` / `--excludes` bikar bînin da ku bi eşkereyî jêbirin
+ Carinan `-m` we pir pelan li hev dike. `-e` / `--excludes` bikar bînin da ku bi eşkereyî jêbirin
  pelên ku wekî din dê li hev bihata
 
  Hûn dikarin gelek regexes navnîş bikin, ji hêla cîhan ve têne veqetandin
@@ -243,7 +243,7 @@ Hokeylization
  * Tiştên di hundurê `backticks` dê werin wergerandin, gava ku hûn hema hema her gav dixwazin ku ew bibin nirxên wêjeyî
 
  Dema ku ala `-M` / `--markdown` çalak be:
- * Nimûneya `] (` dê li ser `](` were komkirin
+ * Nimûneya `](` dê li ser `](` were komkirin
  * Dê pêça "ne werger" li dor blokên kodê yên binavkirî were danîn, dakêşana rast biparêze û piştrast bike ku ew nehatine wergerandin.
  * Dê pêça "bê werger" li dora nivîsê di nav `backticks` de were danîn da ku ew neyên wergerandin.
 

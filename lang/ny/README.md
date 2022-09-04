@@ -243,7 +243,7 @@ Hokeylization
  * Zinthu zomwe zili mkati mwa `backticks` zimamasuliridwa, nthawi zonse mukafuna kuti zikhale zenizeni
 
  Pamene `-M` / `--markdown` :
- * Ndondomeko `] (` idzafupikitsidwa kukhala `](` potero kukonza maulalo osweka
+ * Mtundu `](` udzafupikitsidwa kukhala `](` potero kukonza maulalo osweka
  * Chokulunga cha "no translate" chidzayikidwa mozungulira midadada yokhazikika, kusunga ma indentation oyenera ndikuwonetsetsa kuti sikumasuliridwa.
  * Chopukutira cha "no translate" chidzayikidwa mozungulira mawu mkati mwa `backticks` kuwonetsetsa kuti asamasuliridwe
 

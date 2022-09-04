@@ -107,7 +107,7 @@ Hokeyləşmə
  autentifikasiyanın Google buludunda necə işlədiyini anladıqdan sonra (əyləncəli ola bilər)
 
  Əgər mənbə kodundan işləyirsinizsə, `.env` faylına da qoya bilərsiniz
- qovluq onlar [dotenv] (https://www.npmjs.com/package/dotenv) vasitəsilə iş vaxtında yüklənəcəklər
+ qovluq onlar [dotenv](https://www.npmjs.com/package/dotenv) vasitəsilə iş vaxtında yüklənəcəklər
 
  ## JavaScript sətir resurs faylının tərcüməsi
  Sətir cədvəliniz **gərək** bu iki formadan birində JavaScript faylında olmalıdır:
@@ -243,7 +243,7 @@ Hokeyləşmə
  * `backticks` daxilində olan şeylər, demək olar ki, həmişə onların hərfi dəyərlər olmasını istədiyiniz zaman tərcümə ediləcək
 
  `-M` / `--markdown` bayrağı aktiv olduqda:
- * Nümunə `] (` `](` sıxlaşdırılacaq, beləliklə, pozulmuş işarələmə bağlantıları düzəldilir.
+ * Nümunə `](` `](` sıxlaşdırılacaq, beləliklə, pozulmuş işarələmə bağlantıları düzəldilir.
  * "Tərcümə yoxdur" bandı girintili kod bloklarının ətrafına yerləşdiriləcək, düzgün girintiləri qoruyacaq və onların tərcümə edilməməsini təmin edəcək.
  * Tərcümə olunmamasını təmin etmək üçün mətnin ətrafında "tərcümə yoxdur" `backticks` yerləşdiriləcək
 

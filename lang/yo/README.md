@@ -55,7 +55,7 @@ Hokeyylization
  # Awọn akoonu
  * [Orisun](#Orisun)
  * [Atilẹyin ati Ifowopamọ](#Atilẹyin-ati-Ifunwo)
- * [Fifi sori ẹrọ] (#Fifi sori ẹrọ)
+ * [Fifi sori ẹrọ](#Fifi sori ẹrọ)
  * [Ṣeto](#Eto)
  * [Titumọ faili orisun okun JavaScript kan](#Translating-a-JavaScript-string-resource-file)
  * [Titumọ iwe ilana ti awọn faili ọrọ](#Translating-a-directory-of-text-files)
@@ -107,7 +107,7 @@ Hokeyylization
  lẹhin ti o rii bi ijẹrisi ṣe n ṣiṣẹ lori awọsanma Google (o le jẹ igbadun)
 
  Ti o ba nṣiṣẹ lati koodu orisun, o tun le fi awọn wọnyi sinu faili `.env` ni orisun
- Ilana ti wọn yoo kojọpọ ni akoko ṣiṣe nipasẹ [dotenv] (https://www.npmjs.com/package/dotenv)
+ Ilana ti wọn yoo kojọpọ ni akoko ṣiṣe nipasẹ [dotenv](https://www.npmjs.com/package/dotenv)
 
  ## Titumọ faili orisun okun JavaScript kan
  Tabili okun rẹ ** gbọdọ *** wa ninu faili JavaScript ni ọkan ninu awọn fọọmu meji wọnyi:
@@ -243,7 +243,7 @@ Hokeyylization
  * Awọn nkan inu `backticks` yoo ni itumọ, nigbati o fẹrẹ fẹ nigbagbogbo lati jẹ awọn iye gidi
 
  Nigbati `-M` / `--markdown` ti ṣiṣẹ:
- * Apẹrẹ `] (` yoo jẹ dipọ si `](` nitorinaa atunṣe awọn ọna asopọ isamisi ti o bajẹ
+ * Apẹrẹ `](` yoo jẹ dipọ si `](` nitorinaa atunṣe awọn ọna asopọ isamisi ti o bajẹ
  * Ohun ipari “ko si itumọ” ni yoo gbe ni ayika awọn bulọọki koodu indented, titọju ifisilẹ to dara ati rii daju pe wọn ko tumọ
  * A yoo gbe iwe-itumọ “ko si itumọ” ni ayika ọrọ laarin `backticks` lati rii daju pe wọn ko tumọ wọn
 

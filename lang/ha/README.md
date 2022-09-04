@@ -17,7 +17,7 @@ Hokeyylization
  [🇸🇦 Larabci](../ar/README.md)
  [🇧🇩 Bengali](../bn/README.md)
  [🇩🇪 Jamusanci](../de/README.md)
- [🇺🇸 Turanci] (lang/ha/README.md)
+ [🇺🇸 Turanci](../ha/README.md)
  [🇪🇸 Mutanen Espanya](../es/README.md)
  [🇫🇷 Faransanci](../fr/README.md)
  [🇹🇩 Hausa](../ha/README.md)
@@ -56,7 +56,7 @@ Hokeyylization
  * [Madogararsa](#Source)
  * [Tallafawa da Kuɗi](#Taimako-da-Kudade)
  * [Shigarwa](#Shigarwa)
- * [Saituna] (# Saita)
+ * [Saituna](# Saita)
  * [Fassara fayil ɗin albarkatun kirtani na JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Fassara kundin fayilolin rubutu](#Translating-a-directory-of-text-files)
  * [Sauran zaɓuɓɓuka](#Sauran-zaɓuɓɓuka)
@@ -243,7 +243,7 @@ Hokeyylization
  * Abubuwan da ke cikin `backticks` za a fassara su, lokacin da kusan koyaushe kuna son su zama dabi'u na zahiri
 
  Lokacin da aka kunna tutar `-M` / `--markdown` :
- * Alamar `] (` za'a tattara ta zuwa `](` don haka gyara hanyoyin haɗin da aka karye
+ * Alamar `](` za'a tattara ta zuwa `](` don haka gyara hanyoyin haɗin da aka karye
  * Za a sanya murfi na "babu fassarar" a kusa da ɓangarorin lambobi, adana ingantacciyar shigar da kuma tabbatar da cewa ba a fassara su ba.
  * Za a sanya murfi na "babu fassara" a kusa da rubutu a cikin `backticks` don tabbatar da cewa ba a fassara su ba
 

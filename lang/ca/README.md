@@ -243,7 +243,7 @@ Hokeylització
  * Les coses dins de `backticks` es traduiran, quan gairebé sempre voleu que siguin valors literals
 
  Quan el `-M` / `--markdown` està habilitat:
- * El patró `] (` es condensarà a `](` arreglant així els enllaços de reducció trencats
+ * El patró `](` es condensarà a `](` arreglant així els enllaços de reducció trencats
  * Es col·locarà un embolcall "sense traducció" al voltant dels blocs de codi amb sagnat, conservant el sagnat adequat i assegurant que no es tradueixin
  * Es col·locarà un embolcall "sense traducció" al voltant del text dins dels `backticks` per assegurar-se que no es tradueixin
 

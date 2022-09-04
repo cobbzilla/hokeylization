@@ -243,7 +243,7 @@ Hokeylizare
  * Lucrurile din interiorul `backticks` vor fi traduse, când aproape întotdeauna doriți ca ele să fie valori literale
 
  Când steag-ul `-M` / `--markdown` este activat:
- * Modelul `] (` va fi condensat la `](` , reparând astfel linkurile de reducere defalcate
+ * Modelul `](` va fi condensat la `](` , reparând astfel linkurile de reducere defalcate
  * Un înveliș „fără traducere” va fi plasat în jurul blocurilor de cod indentate, păstrând indentarea corespunzătoare și asigurându-se că acestea nu sunt traduse
  * Un înveliș „fără traducere” va fi plasat în jurul textului în `backticks` pentru a se asigura că acestea nu sunt traduse
 

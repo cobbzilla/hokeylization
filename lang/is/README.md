@@ -243,7 +243,7 @@ Hókýlvæðing
  * Hlutir inni í `backticks` verða þýddir, þegar þú vilt næstum alltaf að þau séu bókstafleg gildi
 
  Þegar `-M` / `--markdown` fáninn er virkur:
- * Mynstrið `] (` verður þétt í `](` og lagar þannig brotnu afmörkunartenglana
+ * Mynstrið `](` verður þétt í `](` og lagar þannig brotnu afmörkunartenglana
  * „No translate“ umbúðir verða settar utan um inndregna kóðablokka, varðveita rétta inndrátt og tryggja að þeir séu ekki þýddir
  * „No translate“ umbúðir verða settar utan um texta innan `backticks` til að tryggja að þeir séu ekki þýddir
 

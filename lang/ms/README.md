@@ -243,7 +243,7 @@ Hokeylization
  * Perkara di dalam `backticks` akan diterjemahkan, apabila anda hampir sentiasa mahu ia menjadi nilai literal
 
  Apabila `-M` / `--markdown` didayakan:
- * Corak `] (` akan dipekatkan kepada `](` sekali gus membetulkan pautan penurunan nilai yang rosak
+ * Corak `](` akan dipekatkan kepada `](` sekali gus membetulkan pautan penurunan nilai yang rosak
  * Pembalut "tiada terjemah" akan diletakkan di sekeliling blok kod yang diinden, mengekalkan lekukan yang betul dan memastikan ia tidak diterjemahkan
  * Pembalut "tiada terjemah" akan diletakkan di sekeliling teks dalam `backticks` untuk memastikan bahawa ia tidak diterjemahkan
 

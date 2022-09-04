@@ -72,7 +72,7 @@ Hokeylizacja
 
  Więc spróbuję napisać pomocne oprogramowanie i zobaczę, czy to działa
 
- Szczerze doceniłbym nawet najmniejszy [miesięczny wkład przez Patreon] (https://www.patreon.com/cobbzilla)
+ Szczerze doceniłbym nawet najmniejszy [miesięczny wkład przez Patreon](https://www.patreon.com/cobbzilla)
 
  ## Instalacja
  Aby użyć narzędzia wiersza poleceń, zainstaluj używając `npm` lub `yarn` :
@@ -243,7 +243,7 @@ Hokeylizacja
  * Rzeczy wewnątrz `backticks` zostaną przetłumaczone, gdy prawie zawsze chcesz, aby były to wartości dosłowne
 
  Gdy `-M` / `--markdown` jest włączona:
- * Wzorzec `] (` zostanie skrócony do `](` w ten sposób naprawi uszkodzone linki przeceny
+ * Wzorzec `](` zostanie skrócony do `](` w ten sposób naprawi uszkodzone linki przeceny
  * Wokół wciętych bloków kodu zostanie umieszczona otoczka „bez tłumaczenia”, zachowująca prawidłowe wcięcia i zapewniająca, że nie zostaną przetłumaczone
  * Wokół tekstu w obrębie `backticks` zostanie umieszczone opakowanie „bez tłumaczenia”, aby upewnić się, że nie są one tłumaczone
 

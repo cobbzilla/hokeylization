@@ -21,7 +21,7 @@ Hokeylizimi
  [🇪🇸 Spanjisht](gjuhë/es/README.md)
  [🇫🇷 Frengjisht](gjuhë/fr/README.md)
  [🇹🇩 Hausa](gjuhë/ha/README.md)
- [🇮🇳 Hindi] (gjuhë/hi/README.md)
+ [🇮🇳 Hindi](gjuhë/hi/README.md)
  [🇮🇩 Indonezisht](gjuhë/id/README.md)
  [🇮🇹 Italisht](gjuhë/it/README.md)
  [🇯🇵 Japonisht](../ja/README.md)
@@ -54,12 +54,12 @@ Hokeylizimi
 
  # Përmbajtje
  * [Burimi](#Burimi)
- * [Mbështetje dhe financim] (#Support-and-Funding)
- * [Instalim] (#Instalim)
- * [Setup] (#Setup)
- * [Përkthimi i skedarit të burimit të vargut JavaScript] (#Translating-a-JavaScript-string-resource-file)
- * [Përkthimi i një drejtorie skedarësh teksti] (#Translating-a-directory-of-text-files)
- * [Opsione të tjera] (#Other-options)
+ * [Mbështetje dhe financim](#Support-and-Funding)
+ * [Instalim](#Instalim)
+ * [Setup](#Setup)
+ * [Përkthimi i skedarit të burimit të vargut JavaScript](#Translating-a-JavaScript-string-resource-file)
+ * [Përkthimi i një drejtorie skedarësh teksti](#Translating-a-directory-of-text-files)
+ * [Opsione të tjera](#Other-options)
 
  ## Burimi
  * [hokeylization në GitHub](https://github.com/cobbzilla/hokeylization)
@@ -243,7 +243,7 @@ Hokeylizimi
  * Gjërat brenda `backticks` do të përkthehen, kur pothuajse gjithmonë dëshironi që ato të jenë vlera të drejtpërdrejta
 
  Kur aktivizohet flamuri `-M` / `--markdown` :
- * Modeli `] (` do të kondensohet në `](` duke rregulluar kështu lidhjet e prishura të shënimit
+ * Modeli `](` do të kondensohet në `](` duke rregulluar kështu lidhjet e prishura të shënimit
  * Një mbështjellës "pa përkthim" do të vendoset rreth blloqeve të kodit të futur, duke ruajtur dhëmbëzimin e duhur dhe duke siguruar që ato të mos përkthehen
  * Një mbështjellës "pa përkthim" do të vendoset rreth tekstit brenda `backticks` për të siguruar që ato të mos përkthehen
 

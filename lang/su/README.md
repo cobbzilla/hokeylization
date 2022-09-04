@@ -72,7 +72,7 @@ Hokeylization
 
  Janten kuring badé nyobian nyerat parangkat lunak anu mangpaat sareng ningali upami éta jalanna
 
- Abdi bakal ngahargaan pisan bahkan anu pangleutikna [kontribusi bulanan via Patreon] (https://www.patreon.com/cobbzilla)
+ Abdi bakal ngahargaan pisan bahkan anu pangleutikna [kontribusi bulanan via Patreon](https://www.patreon.com/cobbzilla)
 
  ## Pamasangan
  Pikeun nganggo alat baris paréntah, pasang nganggo `npm` atanapi `yarn` :
@@ -107,7 +107,7 @@ Hokeylization
  sanggeus figuring kaluar kumaha auténtikasi jalan dina Google awan (tiasa senang)
 
  Upami anjeun ngajalankeun kode sumber, anjeun ogé tiasa nempatkeun ieu dina file `.env` dina sumberna
- diréktori aranjeunna bakal dimuat dina runtime via [dotenv] (https://www.npmjs.com/package/dotenv)
+ diréktori aranjeunna bakal dimuat dina runtime via [dotenv](https://www.npmjs.com/package/dotenv)
 
  ## Narjamahkeun file sumberdaya string JavaScript
  Tabel string anjeun **kedah** aya dina file JavaScript dina salah sahiji tina dua bentuk ieu:
@@ -243,7 +243,7 @@ Hokeylization
  * Hal-hal di jero `backticks` bakal ditarjamahkeun, nalika anjeun ampir sok hoyong aranjeunna janten nilai literal
 
  Nalika `-M` / `--markdown` diaktipkeun:
- * Pola `] (` bakal dikondensasi jadi `](` sahingga ngalereskeun tautan markdown anu rusak
+ * Pola `](` bakal dikondensasi jadi `](` sahingga ngalereskeun tautan markdown anu rusak
  * Bungkus "henteu narjamahkeun" bakal disimpen di sabudeureun blok kode anu indented, ngajaga indentasi anu leres sareng mastikeun aranjeunna henteu ditarjamahkeun
  * Bungkus "henteu narjamahkeun" bakal disimpen di sabudeureun téks dina `backticks` pikeun mastikeun yén éta henteu ditarjamahkeun
 

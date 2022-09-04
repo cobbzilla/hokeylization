@@ -10,41 +10,41 @@ Hokeylizasiýa
 
  # Muny başga dilde okaň
  Bu README.md resminamasy, hokeylizasiýa guralyny ulanyp terjime edildi
- ** [Google Translate tarapyndan goldanýan her dil] (https://cloud.google.com/translate/docs/languages)! **
+ ** [Google Translate tarapyndan goldanýan her dil](https://cloud.google.com/translate/docs/languages)! **
 
  Kämil däldigine ynanýaryn, ýöne hiç zatdan gowudyr diýip umyt edýärin!
 
- [🇸🇦 Arapça] (lang / ar / README.md)
- [Ali Bengali] (lang / bn / README.md)
- [🇩🇪 Nemesçe] (lang / de / README.md)
- [🇺🇸 Iňlis] (lang / en / README.md)
- [🇪🇸 Ispança] (lang / es / README.md)
- [🇫🇷 Fransuzça] (lang / fr / README.md)
- [🇹🇩 Hausa] (lang / ha / README.md)
- [🇮🇳 Hindi] (lang / hi / README.md)
- [🇮🇩 Indoneziýa] (lang / id / README.md)
- [🇮🇹 Italýança] (lang / it / README.md)
- [🇯🇵 Japaneseaponça] (lang / ja / README.md)
- [🇰🇷 Koreýçe] (lang / ko / README.md)
- [🇮🇳 Maranthi] (lang / mr / README.md)
- [Ish Polýakça] (lang / pl / README.md)
- [🇧🇷 Portugaliýa] (lang / pt / README.md)
- [🇷🇺 Rusça] (lang / ru / README.md)
- [Wa Suwaýili] (lang / sw / README.md)
- [Ag Tagalog] (lang / tl / README.md)
- [Ish Türkçe] (lang / tr / README.md)
- [🇵🇰 urdu] (lang / ur / README.md)
- [🇻🇳 Wýetnamly] (lang / vi / README.md)
- [🇨🇳 Hytaýça] (lang / zh / README.md)
+ [🇸🇦 Arapça](lang / ar / README.md)
+ [Ali Bengali](lang / bn / README.md)
+ [🇩🇪 Nemesçe](lang / de / README.md)
+ [🇺🇸 Iňlis](lang / en / README.md)
+ [🇪🇸 Ispança](lang / es / README.md)
+ [🇫🇷 Fransuzça](lang / fr / README.md)
+ [🇹🇩 Hausa](lang / ha / README.md)
+ [🇮🇳 Hindi](lang / hi / README.md)
+ [🇮🇩 Indoneziýa](lang / id / README.md)
+ [🇮🇹 Italýança](lang / it / README.md)
+ [🇯🇵 Japaneseaponça](lang / ja / README.md)
+ [🇰🇷 Koreýçe](lang / ko / README.md)
+ [🇮🇳 Maranthi](lang / mr / README.md)
+ [Ish Polýakça](lang / pl / README.md)
+ [🇧🇷 Portugaliýa](lang / pt / README.md)
+ [🇷🇺 Rusça](lang / ru / README.md)
+ [Wa Suwaýili](lang / sw / README.md)
+ [Ag Tagalog](lang / tl / README.md)
+ [Ish Türkçe](lang / tr / README.md)
+ [🇵🇰 urdu](lang / ur / README.md)
+ [🇻🇳 Wýetnamly](lang / vi / README.md)
+ [🇨🇳 Hytaýça](lang / zh / README.md)
 
 
- ** [📚 ... Languageshli diller ...] (lang / README.md) **
+ ** [📚 ... Languageshli diller ...](lang / README.md) **
  ----
 
  ### README-iň bu terjimesinde näsazlyk barmy?
- Asyl terjimesi [README] (https://github.com/cobbzilla/yuebing/blob/master/README.md)
+ Asyl terjimesi [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
  kemçilikli bolup biler - * düzedişler gaty hoş geldiňiz! * GitHub-a çekmek haýyşyny iberiň (https://github.com/cobbzilla/yuebing/pulls),
- ýa-da muny etmek üçin amatly däl bolsaňyz, [bir meseläni açyň] (https://github.com/cobbzilla/yuebing/issues)
+ ýa-da muny etmek üçin amatly däl bolsaňyz, [bir meseläni açyň](https://github.com/cobbzilla/yuebing/issues)
 
  Terjime hakda täze GitHub meselesini döredeniňizde, haýyş edýärin:
  * sahypa URL-ni goşuň (brauzeriň salgy setirinden göçüriň / göçüriň)
@@ -53,17 +53,17 @@ Hokeylizasiýa
  * **Sagbol!**
 
  # Mazmuny
- * [Çeşme] (# Çeşme)
- * [Goldaw we maliýeleşdirmek] (# Goldaw we maliýeleşdirmek)
- * [Gurnama] (# Gurnama)
- * [Gurnama] (# Gurnama)
- * [JavaScript simli çeşme faýlyny terjime etmek] (# Terjime-a-JavaScript-string-source-file)
- * [Tekst faýllarynyň katalogyny terjime etmek] (# Tekst-faýllaryň terjimesi-a-katalogy)
- * [Beýleki wariantlar] (# Beýleki wariantlar)
+ * [Çeşme](# Çeşme)
+ * [Goldaw we maliýeleşdirmek](# Goldaw we maliýeleşdirmek)
+ * [Gurnama](# Gurnama)
+ * [Gurnama](# Gurnama)
+ * [JavaScript simli çeşme faýlyny terjime etmek](# Terjime-a-JavaScript-string-source-file)
+ * [Tekst faýllarynyň katalogyny terjime etmek](# Tekst-faýllaryň terjimesi-a-katalogy)
+ * [Beýleki wariantlar](# Beýleki wariantlar)
 
  ## Çeşme
- * [GitHub-da hokeylizasiýa] (https://github.com/cobbzilla/hokeylization)
- * [npm-de hokeylizasiýa] (https://www.npmjs.com/package/hokeylization)
+ * [GitHub-da hokeylizasiýa](https://github.com/cobbzilla/hokeylization)
+ * [npm-de hokeylizasiýa](https://www.npmjs.com/package/hokeylization)
 
  ## Goldaw we maliýeleşdirmek
  Professional açyk çeşme programma üpjünçisi bolmaga synanyşýaryn. Men işleýärin
@@ -107,7 +107,7 @@ Hokeylizasiýa
  Google buludynda autentifikasiýanyň nähili işleýändigini anyklandan soň (gyzykly bolup biler)
 
  Çeşme kodundan işleýän bolsaňyz, çeşmäni " `.env` " faýlyna hem goýup bilersiňiz
- [dotenv] (https://www.npmjs.com/package/dotenv) arkaly iş wagty ýüklener.
+ [dotenv](https://www.npmjs.com/package/dotenv) arkaly iş wagty ýüklener.
 
  ## JavaScript setir çeşme faýlyny terjime etmek
  Setir tablisasy ** şu iki görnüşiň birinde JavaScript faýlynda bolmaly:
@@ -142,7 +142,7 @@ Hokeylizasiýa
     myfile.de.js
 
  `-l` / `--languages` opsiýasy ISO dil kodlarynyň vergul bilen bölünen sanawydyr
- [Google Translate tarapyndan goldanýar] (https://cloud.google.com/translate/docs/languages)
+ [Google Translate tarapyndan goldanýar](https://cloud.google.com/translate/docs/languages)
 
  Çykyş faýly eýýäm bar bolsa, haýsy düwmeleriň bardygyny anyklamak üçin gözden geçiriler.
  Bar bolan düwmeler terjime edilmez. Missingitirilen düwmeler üçin terjimeler dörediler we goşular
@@ -243,7 +243,7 @@ Hokeylizasiýa
  * “ `backticks` ” içindäki zatlar, hemişe diýen ýaly göçme manyda bolmagyny islän wagtyňyz terjime ediler
 
  Haçan-da " `--markdown` `-M` açyk bolsa:
- * Nusga `] (` " kondensirlener " `](` şeýlelik bilen döwülen bellik baglanyşyklaryny düzeder
+ * Nusga `](` " kondensirlener " `](` şeýlelik bilen döwülen bellik baglanyşyklaryny düzeder
  * "Terjime edilmeýän" örtük indentirlenen kod bloklarynyň töweregine ýerleşdiriler, dogry indentasiýa saklanar we terjime edilmezligini üpjün eder.
  * Terjime `backticks` üpjün etmek üçin "arka ýazgylaryň" içinde tekstiň töweregine "terjime ýok" deri ýerleşdiriler
 

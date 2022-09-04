@@ -243,7 +243,7 @@ Hokeylizzazione
  * Le cose all'interno di `backticks` verranno tradotte, quando quasi sempre vorrai che siano valori letterali
 
  Quando il `-M` / `--markdown` è abilitato:
- * Il pattern `] (` sarà condensato in `](` così i link di markdown interrotti
+ * Il pattern `](` sarà condensato in `](` così i link di markdown interrotti
  * Un wrapper "no translate" verrà posizionato attorno ai blocchi di codice rientrati, preservando la corretta indentazione e assicurando che non vengano tradotti
  * Un wrapper "nessuna traduzione" verrà posizionato attorno al testo all'interno di `backticks` per garantire che non vengano tradotti
 

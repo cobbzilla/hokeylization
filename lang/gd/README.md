@@ -14,37 +14,37 @@ Hokeylization
 
  Tha mi cinnteach nach eil e foirfe, ach tha mi an dòchas gu bheil e nas fheàrr na dad!
 
- [🇸🇦 Arabais] (lang/ar/README.md)
- [🇧🇩 Bengali] (lang/bn/README.md)
- [🇩🇪 Gearmailtis] (lang/de/README.md)
- [🇺🇸 Beurla] (lang/ga/README.md)
- [🇪🇸 Spàinntis] (lang/es/README.md)
- [🇫🇷 Fraingis] (lang/fr/README.md)
- [🇹🇩 Hausa] (lang/ha/README.md)
- [🇮🇳 Hindi] (lang/hi/README.md)
- [🇮🇩 Indonesian] (lang/id/README.md)
- [🇮🇹 Eadailtis] (lang/it/README.md)
- [🇯🇵 Seapanais] (lang/ja/README.md)
- [🇰🇷 Coirèanais] (lang/ko/README.md)
- [🇮🇳 Maranthi] (lang/mr/README.md)
- [🇵🇱 Pòlainn] (lang/pl/README.md)
- [🇧🇷 Portuguese] (lang/pt/README.md)
- [🇷🇺 Ruisis] (lang/ru/README.md)
- [🇰🇪 Swahili] (lang/sw/README.md)
- [🇵🇭 Tagalog] (lang/tl/README.md)
- [🇹🇷 Turcais] (lang/tr/README.md)
- [🇵🇰 Urdu] (lang/ur/README.md)
- [🇻🇳 Bhietnam] (lang/vi/README.md)
- [🇨🇳 Sìnis] (lang/zh/README.md)
+ [🇸🇦 Arabais](../ar/README.md)
+ [🇧🇩 Bengali](../bn/README.md)
+ [🇩🇪 Gearmailtis](../de/README.md)
+ [🇺🇸 Beurla](../ga/README.md)
+ [🇪🇸 Spàinntis](../es/README.md)
+ [🇫🇷 Fraingis](../fr/README.md)
+ [🇹🇩 Hausa](../ha/README.md)
+ [🇮🇳 Hindi](../hi/README.md)
+ [🇮🇩 Indonesian](../id/README.md)
+ [🇮🇹 Eadailtis](../it/README.md)
+ [🇯🇵 Seapanais](../ja/README.md)
+ [🇰🇷 Coirèanais](../ko/README.md)
+ [🇮🇳 Maranthi](../mr/README.md)
+ [🇵🇱 Pòlainn](../pl/README.md)
+ [🇧🇷 Portuguese](../pt/README.md)
+ [🇷🇺 Ruisis](../ru/README.md)
+ [🇰🇪 Swahili](../sw/README.md)
+ [🇵🇭 Tagalog](../tl/README.md)
+ [🇹🇷 Turcais](../tr/README.md)
+ [🇵🇰 Urdu](../ur/README.md)
+ [🇻🇳 Bhietnam](../vi/README.md)
+ [🇨🇳 Sìnis](../zh/README.md)
 
 
- **[📚 ... a h-uile cànan ...] (lang/README.md)**
+ **[📚 ... a h-uile cànan ...](../README.md)**
  ----
 
  ### A bheil duilgheadas ann leis an eadar-theangachadh seo den README?
- An eadar-theangachadh sònraichte seo den fhear thùsail [README] (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- faodaidh gu bheil e lochtach -- * tha fàilte mhòr air ceartachaidhean!* Feuch an cuir thu [iarrtas tarraing air GitHub] (https://github.com/cobbzilla/yuebing/pulls),
- no mura h-eil thu comhfhurtail a’ dèanamh sin, [fosgail cùis] (https://github.com/cobbzilla/yuebing/issues)
+ An eadar-theangachadh sònraichte seo den fhear thùsail [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
+ faodaidh gu bheil e lochtach -- * tha fàilte mhòr air ceartachaidhean!* Feuch an cuir thu [iarrtas tarraing air GitHub](https://github.com/cobbzilla/yuebing/pulls),
+ no mura h-eil thu comhfhurtail a’ dèanamh sin, [fosgail cùis](https://github.com/cobbzilla/yuebing/issues)
 
  Nuair a chruthaicheas tu cùis GitHub ùr mu eadar-theangachadh, feuch an dèan thu:
  * cuir a-steach URL na duilleige (lethbhreac / pasg bho bhàr seòlaidh a’ bhrobhsair)
@@ -53,17 +53,17 @@ Hokeylization
  * **Tapadh leat!**
 
  # Susbaint
- * [Stòr] (#Stòr)
- * [Taic is Maoineachadh] (#Taic-is-Maoineachadh)
- * [Stàladh] (#Stàladh)
- * [Suidhich] (#Setup)
+ * [Stòr](#Stòr)
+ * [Taic is Maoineachadh](#Taic-is-Maoineachadh)
+ * [Stàladh](#Stàladh)
+ * [Suidhich](#Setup)
  * [Ag eadar-theangachadh faidhle goireas sreang JavaScript](#Translating-a-JavaScript-string-resource-file)
- * [Ag eadar-theangachadh eòlaire de fhaidhlichean teacsa] (# Translating-a-directory-of-text-files)
- * [Roghainnean eile] (#Other-roghainnean)
+ * [Ag eadar-theangachadh eòlaire de fhaidhlichean teacsa](# Translating-a-directory-of-text-files)
+ * [Roghainnean eile](#Other-roghainnean)
 
  ## Stòr
- * [hokeylization air GitHub] (https://github.com/cobbzilla/hokeylization)
- * [hokeylization air npm] (https://www.npmjs.com/package/hokeylization)
+ * [hokeylization air GitHub](https://github.com/cobbzilla/hokeylization)
+ * [hokeylization air npm](https://www.npmjs.com/package/hokeylization)
 
  ## Taic agus Maoineachadh
  Tha mi a’ feuchainn ri bhith nam leasaiche bathar-bog còd fosgailte proifeasanta. Tha mi air a bhith ag obair ann
@@ -72,7 +72,7 @@ Hokeylization
 
  Mar sin tha mi a’ dol a dh’fheuchainn ri bathar-bog feumail a sgrìobhadh agus faicinn a bheil sin ag obair
 
- Bhithinn gu dùrachdach a’ cur luach air eadhon an tabhartas as lugha [tabhartas mìosail tro Patreon] (https://www.patreon.com/cobbzilla)
+ Bhithinn gu dùrachdach a’ cur luach air eadhon an tabhartas as lugha [tabhartas mìosail tro Patreon](https://www.patreon.com/cobbzilla)
 
  ## Stàladh
  Gus an inneal loidhne-àithne a chleachdadh, stàlaich le bhith a’ cleachdadh `npm` no `yarn` :
@@ -107,7 +107,7 @@ Hokeylization
  às deidh dhut faighinn a-mach mar a tha dearbhadh ag obair air sgòth Google (faodaidh e a bhith spòrsail)
 
  Ma tha thu a' ruith bhon chòd thùsail, 's urrainn dhut iad sin a chur ann am faidhle `.env` san stòr cuideachd
- eòlaire thèid an luchdachadh aig àm ruith tro [dotenv] (https://www.npmjs.com/package/dotenv)
+ eòlaire thèid an luchdachadh aig àm ruith tro [dotenv](https://www.npmjs.com/package/dotenv)
 
  ## Ag eadar-theangachadh faidhle goireas sreang JavaScript
  Feumaidh do bhòrd sreang **** a bhith ann am faidhle JavaScript ann an aon den dà chruth seo:
@@ -142,7 +142,7 @@ Hokeylization
     myfile.de.js
 
  Tha an `-l` / `--languages` na liosta de chòdan cànain ISO air a sgaradh le cromag
- [le taic bho Google Translate] ( https://cloud.google.com/translate/docs/languages)
+ [le taic bho Google Translate]( https://cloud.google.com/translate/docs/languages)
 
  Ma tha am faidhle toraidh ann mu thràth, thèid a sgrùdadh gus faighinn a-mach dè na h-iuchraichean a tha ann mu thràth.
  Cha tèid iuchraichean gnàthaichte eadar-theangachadh. Thèid eadar-theangachaidhean airson iuchraichean a tha a dhìth a chruthachadh agus a chur ris
@@ -243,7 +243,7 @@ Hokeylization
  * Thèid rudan taobh a-staigh `backticks` ’ eadar-theangachadh, nuair a tha thu cha mhòr an-còmhnaidh ag iarraidh gum bi iad nan luachan litearra
 
  Nuair a bhios am `-M` / `--markdown` air a chomasachadh:
- * Bidh am pàtran `] (` air a dhlùthadh gu `](` mar sin a' càradh nan ceanglaichean briste briste
+ * Bidh am pàtran `](` air a dhlùthadh gu `](` mar sin a' càradh nan ceanglaichean briste briste
  * Thèid pasgan “gun eadar-theangachadh” a chuir timcheall air blocaichean còd indented, a ’gleidheadh fèidh ceart agus a’ dèanamh cinnteach nach tèid an eadar-theangachadh
  * Thèid pasgan “gun eadar-theangachadh” a chuir timcheall air teacsa taobh a-staigh `backticks` gus dèanamh cinnteach nach tèid an eadar-theangachadh
 

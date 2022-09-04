@@ -243,7 +243,7 @@ Hokeylization
  * Affarijiet ġewwa `backticks` se jiġu tradotti, meta kważi dejjem trid li jkunu valuri letterali
 
  Meta l- `-M` / `--markdown` tkun attivata:
- * Il-mudell `] (` se jiġi kkondensat għal `](` u b'hekk jiġu ffissati r-rabtiet tal-markdown imkissra
+ * Il-mudell `](` se jiġi kkondensat għal `](` u b'hekk jiġu ffissati r-rabtiet tal-markdown imkissra
  * Se jitqiegħed tgeżwir "mingħajr traduzzjoni" madwar blokok ta' kodiċi indentati, li jippreserva l-indentazzjoni xierqa u jiżgura li ma jiġux tradotti
  * Se jitqiegħed tgeżwir "no translate" madwar it-test fi ħdan `backticks` biex jiġi żgurat li ma jiġux tradotti
 

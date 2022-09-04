@@ -243,7 +243,7 @@ Hokeylizatsiya
  * " `backticks` " ichidagi narsalar deyarli har doim tom ma'noda bo'lishini xohlasangiz, tarjima qilinadi.
 
  `-M` / `--markdown` bayrog'i yoqilganda:
- * `] (` naqsh `] (` `](` qisqartiriladi, shu bilan buzilgan belgilash havolalarini tuzatadi.
+ * `](` naqsh `](` `](` qisqartiriladi, shu bilan buzilgan belgilash havolalarini tuzatadi.
  * "Tarjima qilinmagan" o'rami chuqurlashtirilgan kod bloklari atrofida joylashtiriladi, bu to'g'ri chekinishni saqlaydi va ular tarjima qilinmasligini ta'minlaydi.
  * "Tarjima qilinmagan" o'rami matnning tarjima qilinmasligiga ishonch hosil qilish uchun " `backticks` " ichidagi matn atrofida joylashtiriladi.
 

@@ -14,10 +14,10 @@ Hokeylizace
 
  Jsem si jistý, že to není dokonalé, ale doufám, že je to lepší než nic!
 
- [🇸🇦 arabština] (lang/ar/README.md)
- [🇧🇩 bengálština] (lang/bn/README.md)
- [🇩🇪 němčina] (lang/de/README.md)
- [🇺🇸 angličtina] (lang/en/README.md)
+ [🇸🇦 arabština](../ar/README.md)
+ [🇧🇩 bengálština](../bn/README.md)
+ [🇩🇪 němčina](../de/README.md)
+ [🇺🇸 angličtina](../en/README.md)
  [🇪🇸 španělština](../es/README.md)
  [🇫🇷 francouzština](../fr/README.md)
  [🇹🇩 hausa](../ha/README.md)
@@ -53,10 +53,10 @@ Hokeylizace
  * **Děkuji!**
 
  # Obsah
- * [Zdroj] (#Source)
+ * [Zdroj](#Source)
  * [Support and Funding](#Support-and-Funding)
  * [Instalace](#Instalace)
- * [Nastavení] (#Setup)
+ * [Nastavení](#Setup)
  * [Překlad zdrojového souboru řetězce JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Překlad adresáře textových souborů](#Translating-a-directory-of-text-files)
  * [Další možnosti](#Other-options)
@@ -243,7 +243,7 @@ Hokeylizace
  * Věci uvnitř `backticks` se přeloží, když téměř vždy chcete, aby to byly doslovné hodnoty
 
  Když je povolen příznak `-M` / `--markdown` :
- * Vzor `] (` bude zhuštěn na `](` čímž se opraví nefunkční odkazy na markdown
+ * Vzor `](` bude zhuštěn na `](` čímž se opraví nefunkční odkazy na markdown
  * Kolem odsazených bloků kódu bude umístěn obal „bez překladu“, který zachová správné odsazení a zajistí, že nebudou přeloženy
  * Obálka "bez překladu" bude umístěna kolem textu v `backticks` , aby bylo zajištěno, že nebudou přeloženy
 

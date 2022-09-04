@@ -243,7 +243,7 @@ Hokeylisering
  * Ting inne i `backticks` blir oversatt når du nesten alltid vil at de skal være bokstavelige verdier
 
  Når flagget `-M` / `--markdown` er aktivert:
- * Mønsteret `] (` vil bli komprimert til `](` og fikser dermed de ødelagte markdown-lenkene
+ * Mønsteret `](` vil bli komprimert til `](` og fikser dermed de ødelagte markdown-lenkene
  * En "no translate"-omslag vil bli plassert rundt innrykkede kodeblokker, for å bevare riktig innrykk og sikre at de ikke blir oversatt
  * En "no translate"-omslag vil bli plassert rundt tekst innenfor `backticks` for å sikre at de ikke blir oversatt
 

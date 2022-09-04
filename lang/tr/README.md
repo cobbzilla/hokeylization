@@ -243,7 +243,7 @@ hokeyleşme
  * Neredeyse her zaman değişmez değerler olmasını istediğinizde, `backticks` içindeki şeyler çevrilecektir.
 
  `-M` / `--markdown` bayrağı etkinleştirildiğinde:
- * `] (` kalıbı `] (` `](` yoğunlaştırılacak ve böylece bozuk işaretleme bağlantıları düzeltilecektir.
+ * `](` kalıbı `](` `](` yoğunlaştırılacak ve böylece bozuk işaretleme bağlantıları düzeltilecektir.
  * Girintili kod bloklarının çevresine, uygun girintiyi koruyarak ve çevrilmemelerini sağlayan bir "çeviri yok" sarmalayıcı yerleştirilecektir.
  * Tercüme edilmediklerinden emin olmak için "geri dönüş işaretleri `backticks` içindeki metnin etrafına "çeviri yok" sarmalayıcı yerleştirilecektir.
 

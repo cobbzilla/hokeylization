@@ -243,7 +243,7 @@ Hokeylisierung
  * Dinge innerhalb von `backticks` werden übersetzt, wenn Sie fast immer wollen, dass sie wörtliche Werte sind
 
  Wenn das `-M` / `--markdown` Flag aktiviert ist:
- * Das Muster `] (` wird zu `](` verdichtet, wodurch die defekten Markdown-Links repariert werden
+ * Das Muster `](` wird zu `](` verdichtet, wodurch die defekten Markdown-Links repariert werden
  * Ein "no translate"-Wrapper wird um eingerückte Codeblöcke gelegt, um die richtige Einrückung zu erhalten und sicherzustellen, dass sie nicht übersetzt werden
  * Ein "no translate"-Wrapper wird um Text innerhalb von `backticks` " platziert, um sicherzustellen, dass sie nicht übersetzt werden
 

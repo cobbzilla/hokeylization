@@ -72,7 +72,7 @@ Hokeylization
 
  Dadi aku bakal nyoba nulis piranti lunak sing migunani lan ndeleng manawa bisa digunakake
 
- Aku bakal ngormati sing paling cilik [kontribusi saben wulan liwat Patreon] (https://www.patreon.com/cobbzilla)
+ Aku bakal ngormati sing paling cilik [kontribusi saben wulan liwat Patreon](https://www.patreon.com/cobbzilla)
 
  ## Instalasi
  Kanggo nggunakake alat baris perintah, instal nggunakake `npm` utawa `yarn` :
@@ -243,7 +243,7 @@ Hokeylization
  * Bab-bab `backticks` bakal diterjemahake, yen sampeyan pengin dadi nilai harfiah
 
  Nalika `-M` / `--markdown` diaktifake:
- * Pola `] (` bakal dikondensasi dadi `](` saéngga ndandani pranala markdown sing rusak
+ * Pola `](` bakal dikondensasi dadi `](` saéngga ndandani pranala markdown sing rusak
  * Bungkus "ora ana terjemahake" bakal diselehake ing saubengé blok kode indentasi, njaga indentasi sing tepat lan mesthekake yen ora diterjemahake
  * Bungkus "ora ana terjemahake" bakal diselehake ing sakubenge teks ing `backticks` kanggo mesthekake yen ora diterjemahake
 

@@ -10,31 +10,31 @@ Hokeylization
 
  # Lege hoc in alia lingua
  Hoc README.md documentum translatum est, utens ipso instrumento hokeylizationis, in-
- **[Omnis lingua a Google Translate] (https://cloud.google.com/translate/docs/languages)!
+ **[Omnis lingua a Google Translate](https://cloud.google.com/translate/docs/languages)!
 
  Perfectum certe non sum, sed spero melius quam nihil!
 
- [🇸🇦 Arabic] (lang/ar/README.md)
- [🇧🇩 Bengalica] (lang/bn/README.md)
- [🇩🇪 German] (lang/de/README.md)
+ [🇸🇦 Arabic](../ar/README.md)
+ [🇧🇩 Bengalica](../bn/README.md)
+ [🇩🇪 German](../de/README.md)
  [🇺🇸 English](../en/README.md)
  [🇪🇸 Spanish](../es/README.md)
  [🇫🇷 French](../fr/README.md)
  [🇹🇩 Hausa](../ha/README.md)
  [🇮🇳 Hindi](../hi/README.md)
- [🇮🇩 Indonesiaca] (lang/id/README.md)
- [🇮🇹 Italian] (lang/it/README.md)
- [🇯🇵 Japanese] (lang/ja/README.md)
+ [🇮🇩 Indonesiaca](../id/README.md)
+ [🇮🇹 Italian](../it/README.md)
+ [🇯🇵 Japanese](../ja/README.md)
  [🇰🇷 Coreanica](../ko/README.md)
- [🇮🇳 Maranthi] (lang/mr/README.md)
+ [🇮🇳 Maranthi](../mr/README.md)
  [🇵🇱 Polonica](../pl/README.md)
- [🇧🇷 Portuguese] (lang/pt/README.md)
+ [🇧🇷 Portuguese](../pt/README.md)
  [🇷🇺 Russian](../ru/README.md)
  [🇰🇪 Swahili](../sw/README.md)
  [🇵🇭 Tagalog](../tl/README.md)
  [🇹🇷 Turkish](../tr/README.md)
  [🇵🇰 Urdu](../ur/README.md)
- [🇻🇳 Vietnamica] (lang/vi/README.md)
+ [🇻🇳 Vietnamica](../vi/README.md)
  [🇨🇳 Chinese](../zh/README.md)
 
 
@@ -42,9 +42,9 @@ Hokeylization
  ----
 
  ### Estne problema cum hac translatione README?
- Haec praecipua translatio originalis [README] (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- fortasse vitiosum -- *corrigenda valde grata!* Mitte quaeso [in GitHub rogationem viverra] (https://github.com/cobbzilla/yuebing/pulls);
- aut si parum commode id facis, [profluvium aperi] (https://github.com/cobbzilla/yuebing/issues)
+ Haec praecipua translatio originalis [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
+ fortasse vitiosum -- *corrigenda valde grata!* Mitte quaeso [in GitHub rogationem viverra](https://github.com/cobbzilla/yuebing/pulls);
+ aut si parum commode id facis, [profluvium aperi](https://github.com/cobbzilla/yuebing/issues)
 
  Cum novam GitHub quaestionem de translatione creas, quaeso fac;
  * Paginam URL includere (exemplum / crustulum ex vecte electronica)
@@ -54,16 +54,16 @@ Hokeylization
 
  # Contents
  * [Source](#Source)
- * [Support and Funding] (Support-and-Funding)
- * [Installation] (#Installation)
+ * [Support and Funding](Support-and-Funding)
+ * [Installation](#Installation)
  * [Setup](#Setup)
  * [JavaScript-filum-resource-file)
- * [Index indicis de text lima] (# Translatio-in-directorium-of-textu lima)
+ * [Index indicis de text lima](# Translatio-in-directorium-of-textu lima)
  * [Alia options]
 
  ## Source
- * [Hokeylization on GitHub] (https://github.com/cobbzilla/hokeylization)
- * [Hokeylization in npm] (https://www.npmjs.com/package/hokeylization)
+ * [Hokeylization on GitHub](https://github.com/cobbzilla/hokeylization)
+ * [Hokeylization in npm](https://www.npmjs.com/package/hokeylization)
 
  ## Support et Donec
  Conor esse professionalem fontem programmatum elit. I have been working in
@@ -142,7 +142,7 @@ Hokeylization
     myfile.de.js
 
  The `-l` / `--languages` est comma separatum indicem in codice linguae ISO
- [a Google Translate] (https://cloud.google.com/translate/docs/languages)
+ [a Google Translate](https://cloud.google.com/translate/docs/languages)
 
  Si fasciculus output iam existit, examinabitur uter iam exstantibus.
  Existens claves interpretari non poterunt. Translationes pro clauibus absentis generabuntur et apponentur
@@ -243,7 +243,7 @@ Hokeylization
  * Res interiores `backticks` transferentur, cum fere semper eas valores litterales esse vis
 
  Cum `-M` / `--markdown` potest:
- * Exemplar `] (` condensetur ad `](` sic nexus notae fractorum figens
+ * Exemplar `](` condensetur ad `](` sic nexus notae fractorum figens
  * A "no translate" fascia circumpositae incisae incisae ponentur, servatis propriis incisis et in tuto non transferuntur.
  * A "no translate" fascia circum texta collocabitur intra `backticks` ut ne transferantur
 

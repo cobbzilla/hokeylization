@@ -243,7 +243,7 @@ Hokeilizacija
  * Stvari znotraj `backticks` bodo prevedene, ko skoraj vedno želite, da so dobesedne vrednosti
 
  Ko je omogočena zastavica `-M` / `--markdown` :
- * Vzorec `] (` bo zgoščen v `](` s čimer se bodo popravile pokvarjene označevalne povezave
+ * Vzorec `](` bo zgoščen v `](` s čimer se bodo popravile pokvarjene označevalne povezave
  * Okoli zamaknjenih blokov kode bo nameščen ovoj »brez prevajanja«, ki bo ohranil pravilen zamik in zagotovil, da niso prevedeni
  * Ovoj »no translate« bo nameščen okoli besedila znotraj `backticks` , da se zagotovi, da niso prevedena
 
@@ -253,7 +253,7 @@ Hokeilizacija
  Če je vaša vsebina HTML, bo poškodovana, razen če posredujete možnost `-p html` / `--process-as html`
 
  ### Filter
- Za pustolovce: pri obdelavi datotek v imeniku lahko podate možnost `-F` / `--filter`
+ Za pustolovce: pri obdelavi datotek v imeniku lahko posredujete možnost `-F` / `--filter`
  za filtriranje izhoda, preden se zapiše v datotečni sistem
 
  Vrednost te možnosti mora biti pot do datoteke JS, ki izvozi funkcijo z imenom `filter`

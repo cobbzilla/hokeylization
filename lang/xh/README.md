@@ -243,7 +243,7 @@ Hokeylization
  * Izinto ezingaphakathi kwe `backticks` ziya kuguqulelwa, xa usoloko ufuna ukuba zibengamaxabiso oqobo
 
  Xa i- `-M` / `--markdown` iflegi yenziwe yasebenza:
- * Ipatheni `] (` iya kucushwa ibe ku `](` ngaloo ndlela kulungiswa amakhonkco okuphawula aphukileyo
+ * Ipatheni `](` iya kucushwa ibe ku `](` ngaloo ndlela kulungiswa amakhonkco okuphawula aphukileyo
  * Isisongelo esithi "akukho guquleli" siya kubekwa ngeenxa zonke kwiibhloko zekhowudi ezifakwe ngaphakathi, zigcina ukubekwa kwindawo efanelekileyo kunye nokuqinisekisa ukuba aziguqulelwanga.
  *Umqulu othi "akukho guquleli" uya kubekwa ujikeleze okubhaliweyo ngaphakathi `backticks` ukuqinisekisa ukuba aziguqulelwanga
 

@@ -243,7 +243,7 @@ Hokielisering
  * Dinge binne-in `backticks` ' sal vertaal word as jy amper altyd wil hê dit moet letterlike waardes wees
 
  Wanneer die `-M` / `--markdown` vlag geaktiveer is:
- * Die patroon `] (` sal gekondenseer word na `](` om sodoende die gebroke afmerkskakels reg te stel
+ * Die patroon `](` sal gekondenseer word na `](` om sodoende die gebroke afmerkskakels reg te stel
  * 'n "No translate"-omhulsel sal rondom ingekeep kodeblokke geplaas word, wat behoorlike inkeping behou en verseker dat hulle nie vertaal word nie
  * 'n "No translate"-omhulsel sal rondom teks binne `backticks` geplaas word om te verseker dat hulle nie vertaal word nie
 
@@ -256,7 +256,7 @@ Hokielisering
  Vir die avontuurlustiges: wanneer jy lêers in 'n gids verwerk, kan jy die `-F` / `--filter` opsie slaag
  om die uitvoer te filter voordat dit na die lêerstelsel geskryf word
 
- Die waarde van hierdie opsie moet 'n pad wees na 'n JS-lêer wat 'n funksie genaamd `filter`
+ Die waarde van hierdie opsie moet 'n pad na 'n JS-lêer wees wat 'n funksie genaamd `filter`
 
  Die `filter` funksie moet `async` wees omdat `await` daarop geroep sal word
 

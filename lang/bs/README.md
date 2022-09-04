@@ -243,7 +243,7 @@ Hokeilizacija
  * Stvari unutar `backticks` će se prevesti kada skoro uvijek želite da budu doslovne vrijednosti
 
  Kada je omogućena zastavica `-M` / `--markdown` :
- * Uzorak `] (` će se sažeti u `](` čime se popravljaju pokvarene veze za smanjenje vrijednosti
+ * Uzorak `](` će se sažeti u `](` čime se popravljaju pokvarene veze za smanjenje vrijednosti
  * Omot "bez prevođenja" bit će postavljen oko uvučenih blokova koda, čuvajući ispravno uvlačenje i osiguravajući da nisu prevedeni
  * Omotač "bez prevođenja" bit će postavljen oko teksta unutar `backticks` kako bi se osiguralo da nisu prevedeni
 

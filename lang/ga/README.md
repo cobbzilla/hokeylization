@@ -17,19 +17,19 @@ Hokeylization
  [🇸🇦 Araibis](../ar/README.md)
  [🇧🇩 Beangáilis](../bn/README.md)
  [🇩🇪 Gearmáinis](../de/README.md)
- [🇺🇸 Béarla] (lang/ga/README.md)
+ [🇺🇸 Béarla](../ga/README.md)
  [🇪🇸 Spáinnis](../es/README.md)
  [🇫🇷 Fraincis](../fr/README.md)
  [🇹🇩 Hausa](../ha/README.md)
  [🇮🇳 Hiondúis](../hi/README.md)
  [🇮🇩 Indinéisis](../id/README.md)
  [🇮🇹 Iodáilis](../it/README.md)
- [🇯🇵 Seapáinis] (lang/ja/README.md)
+ [🇯🇵 Seapáinis](../ja/README.md)
  [🇰🇷 Cóiréis](../ko/README.md)
  [🇮🇳 Maranthi](../mr/README.md)
  [🇵🇱 Polainnis](../pl/README.md)
  [🇧🇷 Portaingéilis](../pt/README.md)
- [🇷🇺 Rúisis] (lang/ru/README.md)
+ [🇷🇺 Rúisis](../ru/README.md)
  [🇰🇪 Svahaílis](../sw/README.md)
  [🇵🇭 Tagálaigis](../tl/README.md)
  [🇹🇷 Tuircis](../tr/README.md)
@@ -58,8 +58,8 @@ Hokeylization
  * [Suiteáil](#Suiteáil)
  * [Socrú](#Socrú)
  * [Comhad acmhainne teaghrán JavaScript a aistriú](#Translating-a-JavaScript-string-resource-file)
- * [Eolaire comhaid téacs a aistriú] (#Translating-a-directory-of-text-files)
- * [Roghanna eile] (#Other-options)
+ * [Eolaire comhaid téacs a aistriú](#Translating-a-directory-of-text-files)
+ * [Roghanna eile](#Other-options)
 
  ## Foinse
  * [hokeylization ar GitHub]( https://github.com/cobbzilla/hokeylization)
@@ -72,7 +72,7 @@ Hokeylization
 
  Mar sin táim chun iarracht a dhéanamh bogearraí cabhrach a scríobh agus féachaint an n-oibríonn sin
 
- Bheinn buíoch ó chroí fiú an méid is lú [de chuidiú míosúil trí Patreon] (https://www.patreon.com/cobbzilla)
+ Bheinn buíoch ó chroí fiú an méid is lú [de chuidiú míosúil trí Patreon](https://www.patreon.com/cobbzilla)
 
  ## Suiteáil
  Chun an uirlis líne ordaithe a úsáid, suiteáil le `npm` nó `yarn` :
@@ -243,7 +243,7 @@ Hokeylization
  * Aistreofar rudaí taobh istigh de `backticks` , nuair is mian leat beagnach i gcónaí gur luachanna litriúla iad
 
  Nuair atá an `-M` / `--markdown` cumasaithe:
- * Beidh an patrún `] (` comhdhlúite go `](` mar sin ag socrú na naisc briste marcála síos
+ * Beidh an patrún `](` comhdhlúite go `](` mar sin ag socrú na naisc briste marcála síos
  * Cuirfear fillteán "gan aistriú" thart ar bhlocanna cód eangaithe, ag caomhnú eangú cuí agus ag cinntiú nach n-aistrítear iad.
  * Cuirfear fillteán "gan aistriú" thart ar an téacs laistigh de `backticks` lena chinntiú nach n-aistrítear iad
 

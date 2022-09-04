@@ -10,41 +10,41 @@ Hokeyzation
 
  # Đọc sách này bằng ngôn ngữ khác
  Tài liệu README.md này đã được dịch, sử dụng chính công cụ hokeyzation, sang
- ** [mọi ngôn ngữ được Google Dịch hỗ trợ] (https://cloud.google.com/translate/docs/languages)! **
+ ** [mọi ngôn ngữ được Google Dịch hỗ trợ](https://cloud.google.com/translate/docs/languages)! **
 
  Tôi chắc chắn rằng nó không hoàn hảo, nhưng tôi hy vọng nó còn hơn không!
 
- [🇸🇦 tiếng Ả Rập] (lang / ar / README.md)
- [🇧🇩 Bengali] (lang / bn / README.md)
- [🇩🇪 tiếng Đức] (lang / de / README.md)
- [🇺🇸 Tiếng Anh] (lang / en / README.md)
- [🇪🇸 Tiếng Tây Ban Nha] (lang / es / README.md)
- [🇫🇷 tiếng Pháp] (lang / fr / README.md)
- [🇹🇩 Hausa] (lang / ha / README.md)
- [🇮🇳 Hindi] (lang / hi / README.md)
- [🇮🇩 tiếng Indonesia] (lang / id / README.md)
- [🇮🇹 tiếng Ý] (lang / it / README.md)
- [🇯🇵 Tiếng Nhật] (lang / ja / README.md)
- [🇰🇷 Tiếng Hàn] (lang / ko / README.md)
- [🇮🇳 Maranthi] (lang / mr / README.md)
- [🇵🇱 Tiếng Ba Lan] (lang / pl / README.md)
- [🇧🇷 tiếng Bồ Đào Nha] (lang / pt / README.md)
- [🇷🇺 tiếng Nga] (lang / ru / README.md)
- [🇰🇪 Swahili] (lang / sw / README.md)
- [🇵🇭 Tagalog] (lang / tl / README.md)
- [🇹🇷 tiếng Thổ Nhĩ Kỳ] (lang / tr / README.md)
- [🇵🇰 Urdu] (lang / ur / README.md)
- [🇻🇳 Vietnamese] (lang / vi / README.md)
- [🇨🇳 Tiếng Trung] (lang / zh / README.md)
+ [🇸🇦 tiếng Ả Rập](lang / ar / README.md)
+ [🇧🇩 Bengali](lang / bn / README.md)
+ [🇩🇪 tiếng Đức](lang / de / README.md)
+ [🇺🇸 Tiếng Anh](lang / en / README.md)
+ [🇪🇸 Tiếng Tây Ban Nha](lang / es / README.md)
+ [🇫🇷 tiếng Pháp](lang / fr / README.md)
+ [🇹🇩 Hausa](lang / ha / README.md)
+ [🇮🇳 Hindi](lang / hi / README.md)
+ [🇮🇩 tiếng Indonesia](lang / id / README.md)
+ [🇮🇹 tiếng Ý](lang / it / README.md)
+ [🇯🇵 Tiếng Nhật](lang / ja / README.md)
+ [🇰🇷 Tiếng Hàn](lang / ko / README.md)
+ [🇮🇳 Maranthi](lang / mr / README.md)
+ [🇵🇱 Tiếng Ba Lan](lang / pl / README.md)
+ [🇧🇷 tiếng Bồ Đào Nha](lang / pt / README.md)
+ [🇷🇺 tiếng Nga](lang / ru / README.md)
+ [🇰🇪 Swahili](lang / sw / README.md)
+ [🇵🇭 Tagalog](lang / tl / README.md)
+ [🇹🇷 tiếng Thổ Nhĩ Kỳ](lang / tr / README.md)
+ [🇵🇰 Urdu](lang / ur / README.md)
+ [🇻🇳 Vietnamese](lang / vi / README.md)
+ [🇨🇳 Tiếng Trung](lang / zh / README.md)
 
 
- ** [📚 ... Tất cả các ngôn ngữ ...] (lang / README.md) **
+ ** [📚 ... Tất cả các ngôn ngữ ...](lang / README.md) **
  ----
 
  ### Có sự cố với bản dịch README này không?
- Bản dịch cụ thể này của bản gốc [README] (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- có thể có sai sót - * rất hoan nghênh việc sửa chữa! * Vui lòng gửi [yêu cầu kéo trên GitHub] (https://github.com/cobbzilla/yuebing/pulls),
- hoặc nếu bạn không thoải mái khi làm điều đó, hãy [mở sự cố] (https://github.com/cobbzilla/yuebing/issues)
+ Bản dịch cụ thể này của bản gốc [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
+ có thể có sai sót - * rất hoan nghênh việc sửa chữa! * Vui lòng gửi [yêu cầu kéo trên GitHub](https://github.com/cobbzilla/yuebing/pulls),
+ hoặc nếu bạn không thoải mái khi làm điều đó, hãy [mở sự cố](https://github.com/cobbzilla/yuebing/issues)
 
  Khi bạn tạo một vấn đề GitHub mới về bản dịch, vui lòng thực hiện:
  * bao gồm URL của trang (sao chép / dán từ thanh địa chỉ trình duyệt)
@@ -53,17 +53,17 @@ Hokeyzation
  * **Cảm ơn bạn!**
 
  # Nội dung
- * [Nguồn] (# Nguồn)
- * [Hỗ trợ và Tài trợ] (# Hỗ trợ và Tài trợ)
- * [Cài đặt] (# Cài đặt)
+ * [Nguồn](# Nguồn)
+ * [Hỗ trợ và Tài trợ](# Hỗ trợ và Tài trợ)
+ * [Cài đặt](# Cài đặt)
  * [Thiết lập thiết lập)
- * [Dịch tệp tài nguyên chuỗi JavaScript] (# Dịch-a-JavaScript-chuỗi-tài nguyên-tệp)
- * [Dịch thư mục tệp văn bản] (# Dịch-một-thư-mục-của-tệp-văn-bản)
- * [Tùy chọn khác] (# Tùy chọn khác)
+ * [Dịch tệp tài nguyên chuỗi JavaScript](# Dịch-a-JavaScript-chuỗi-tài nguyên-tệp)
+ * [Dịch thư mục tệp văn bản](# Dịch-một-thư-mục-của-tệp-văn-bản)
+ * [Tùy chọn khác](# Tùy chọn khác)
 
  ## Nguồn
- * [hokeyzation trên GitHub] (https://github.com/cobbzilla/hokeyption)
- * [hokeyfication on npm] (https://www.npmjs.com/package/hokeyption)
+ * [hokeyzation trên GitHub](https://github.com/cobbzilla/hokeyption)
+ * [hokeyfication on npm](https://www.npmjs.com/package/hokeyption)
 
  ## Hỗ trợ và Tài trợ
  Tôi đang cố gắng trở thành một nhà phát triển phần mềm nguồn mở chuyên nghiệp. Tôi đã làm việc ở
@@ -72,7 +72,7 @@ Hokeyzation
 
  Vì vậy, tôi sẽ thử viết phần mềm hữu ích và xem nó có hoạt động không
 
- Tôi chân thành đánh giá cao dù là nhỏ nhất [đóng góp hàng tháng qua Patreon] (https://www.patreon.com/cobbzilla)
+ Tôi chân thành đánh giá cao dù là nhỏ nhất [đóng góp hàng tháng qua Patreon](https://www.patreon.com/cobbzilla)
 
  ## Cài đặt
  Để sử dụng công cụ dòng lệnh, hãy cài đặt bằng cách sử dụng `npm` `yarn` :
@@ -107,7 +107,7 @@ Hokeyzation
  sau khi tìm hiểu cách xác thực hoạt động trên đám mây của Google (có thể rất thú vị)
 
  Nếu bạn đang chạy từ mã nguồn, bạn cũng có thể đặt chúng vào tệp `.env` trong nguồn
- thư mục chúng sẽ được tải trong thời gian chạy qua [dotenv] (https://www.npmjs.com/package/dotenv)
+ thư mục chúng sẽ được tải trong thời gian chạy qua [dotenv](https://www.npmjs.com/package/dotenv)
 
  ## Dịch tệp tài nguyên chuỗi JavaScript
  Bảng chuỗi của bạn ** phải ** ở trong tệp JavaScript ở một trong hai dạng sau:
@@ -142,7 +142,7 @@ Hokeyzation
     myfile.de.js
 
  Tùy chọn `-l` / `--languages` là danh sách mã ngôn ngữ ISO được phân tách bằng dấu phẩy
- [được hỗ trợ bởi Google Dịch] (https://cloud.google.com/translate/docs/languages)
+ [được hỗ trợ bởi Google Dịch](https://cloud.google.com/translate/docs/languages)
 
  Nếu tệp đầu ra đã tồn tại, nó sẽ được kiểm tra để xác định khóa nào đã tồn tại.
  Các khóa hiện có sẽ không được dịch. Bản dịch cho các khóa bị thiếu sẽ được tạo và thêm vào
@@ -243,7 +243,7 @@ Hokeyzation
  * Những thứ bên trong `backticks` sẽ được dịch, khi bạn hầu như luôn muốn chúng là giá trị theo nghĩa đen
 
  Khi cờ `-M` / `--markdown` được bật:
- * Mẫu `] (` sẽ được cô đọng thành `](` do đó sửa các liên kết đánh dấu bị hỏng
+ * Mẫu `](` sẽ được cô đọng thành `](` do đó sửa các liên kết đánh dấu bị hỏng
  * Một trình bao bọc "không dịch" sẽ được đặt xung quanh các khối mã được thụt lề, duy trì thụt lề phù hợp và đảm bảo chúng không được dịch
  * Một trình bao bọc "không dịch" sẽ được đặt xung quanh văn bản trong `backticks` để đảm bảo rằng chúng không được dịch
 

@@ -44,7 +44,7 @@ Hokeylisearring
  ### Is der in probleem mei dizze oersetting fan de README?
  Dizze bysûndere oersetting fan it orizjineel [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
  kin defekt wêze -- *korreksjes binne tige wolkom!* Stjoer asjebleaft in [pull request on GitHub](https://github.com/cobbzilla/yuebing/pulls),
- of as jo it net noflik binne om dat te dwaan, [iepenje in probleem] (https://github.com/cobbzilla/yuebing/issues)
+ of as jo it net noflik binne om dat te dwaan, [iepenje in probleem](https://github.com/cobbzilla/yuebing/issues)
 
  As jo in nij GitHub-probleem oanmeitsje oer in oersetting, dwaan dan:
  * befetsje de side-URL (kopiearje / plakke fan browseradresbalke)
@@ -54,12 +54,12 @@ Hokeylisearring
 
  # Ynhâld
  * [Boarne](#Boarne)
- * [Support and Funding] (#Support-and-Funding)
+ * [Support and Funding](#Support-and-Funding)
  * [Ynstallaasje](#Ynstallaasje)
  * [Setup](#Setup)
  * [Oersette fan in JavaScript-string-boarnebestân](#Translating-a-JavaScript-string-resource-file)
  * [It oersetten fan in map mei tekstbestannen](#Translating-a-directory-of-text-files)
- * [Oare opsjes] (#Oare-opsjes)
+ * [Oare opsjes](#Oare-opsjes)
 
  ## Boarne
  * [hokeylization op GitHub](https://github.com/cobbzilla/hokeylization)
@@ -142,7 +142,7 @@ Hokeylisearring
     myfile.de.js
 
  De opsje `-l` / `--languages` is in komma-skieden list mei ISO-taalkoades
- [stipe troch Google Translate] (https://cloud.google.com/translate/docs/languages)
+ [stipe troch Google Translate](https://cloud.google.com/translate/docs/languages)
 
  As it útfiertriem al bestiet, sil it ûndersocht wurde om te bepalen hokker kaaien al bestean.
  Besteande kaaien wurde net oerset. Oersetten foar ûntbrekkende kaaien wurde oanmakke en taheakke
@@ -243,7 +243,7 @@ Hokeylisearring
  * Dingen yn `backticks` sille oerset wurde, as jo hast altyd wolle dat se letterlike wearden binne
 
  As de flagge `-M` / `--markdown` ynskeakele is:
- * It patroan `] (` sil kondinsearre wurde ta `](` sadat de brutsen markdown-keppelings reparearje
+ * It patroan `](` sil kondinsearre wurde ta `](` sadat de brutsen markdown-keppelings reparearje
  * In omslach "gjin oersetten" sil pleatst wurde om ynspringende koadeblokken, it behâld fan juste ynspringen en garandearret dat se net oerset wurde
  * In "no translate" wrapper sil pleatst wurde om tekst binnen `backticks` om te soargjen dat se net oerset wurde
 

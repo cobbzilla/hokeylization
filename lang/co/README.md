@@ -43,8 +43,8 @@ Hokeylization
 
  ### Ci hè un prublema cù sta traduzzione di u README ?
  Questa traduzzione particulare di u [README] originale (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- pò esse difettu - * e currezzione sò assai benvenute! * Mandate una [richiesta pull in GitHub] (https://github.com/cobbzilla/yuebing/pulls),
- o se ùn site micca còmode di fà quessa, [apre un prublema] (https://github.com/cobbzilla/yuebing/issues)
+ pò esse difettu - * e currezzione sò assai benvenute! * Mandate una [richiesta pull in GitHub](https://github.com/cobbzilla/yuebing/pulls),
+ o se ùn site micca còmode di fà quessa, [apre un prublema](https://github.com/cobbzilla/yuebing/issues)
 
  Quandu create un novu prublema GitHub nantu à una traduzzione, fate:
  * include l'URL di a pagina (copia / incollà da a barra di indirizzu di u navigatore)
@@ -54,16 +54,16 @@ Hokeylization
 
  # Cuntinutu
  * [Source](#Source)
- * [Supportu è Finanziamentu] (#Supportu-è-Fundamentu)
- * [Installazione] (#Installazione)
+ * [Supportu è Finanziamentu](#Supportu-è-Fundamentu)
+ * [Installazione](#Installazione)
  * [Configurazione](#Configurazione)
- * [Traduzzione di un schedariu di risorse di stringa JavaScript] (#Translating-a-JavaScript-string-resource-file)
- * [Traduzzione di un repertoriu di schedarii di testu] (#Translating-a-directory-of-text-files)
+ * [Traduzzione di un schedariu di risorse di stringa JavaScript](#Translating-a-JavaScript-string-resource-file)
+ * [Traduzzione di un repertoriu di schedarii di testu](#Translating-a-directory-of-text-files)
  * [Altre opzioni](#Altre-opzioni)
 
  ## Fonte
- * [hokeylization in GitHub] (https://github.com/cobbzilla/hokeylization)
- * [hokeylization in npm] (https://www.npmjs.com/package/hokeylization)
+ * [hokeylization in GitHub](https://github.com/cobbzilla/hokeylization)
+ * [hokeylization in npm](https://www.npmjs.com/package/hokeylization)
 
  ## Supportu è Finanziamentu
  Aghju pruvatu à esse un sviluppatore prufessiunale di software open source. Aghju travagliatu in
@@ -72,7 +72,7 @@ Hokeylization
 
  Dunque, aghju da pruvà à scrive un software utile è vede s'ellu funziona
 
- Aghju sinceramente apprezzà ancu u più chjucu [cuntribuzione mensile via Patreon] (https://www.patreon.com/cobbzilla)
+ Aghju sinceramente apprezzà ancu u più chjucu [cuntribuzione mensile via Patreon](https://www.patreon.com/cobbzilla)
 
  ## Installazione
  Per utilizà l'uttellu di linea di cumanda, installate cù `npm` o `yarn` :
@@ -107,7 +107,7 @@ Hokeylization
  dopu avè capitu cumu funziona l'autentificazione in Google cloud (pò esse divertente)
 
  Sè vo site da u codice fonte, pudete ancu mette questi in un schedariu `.env` in a fonte
- cartulare seranu caricati in runtime via [dotenv] (https://www.npmjs.com/package/dotenv)
+ cartulare seranu caricati in runtime via [dotenv](https://www.npmjs.com/package/dotenv)
 
  ## Traducendu un schedariu di risorse di stringa JavaScript
  A vostra tabella di stringa **deve** esse in un schedariu JavaScript in una di queste duie forme:
@@ -243,7 +243,7 @@ Hokeylization
  * E cose à l'internu di `backticks` saranu tradutte, quandu quasi sempre vulete chì sò valori literali
 
  Quandu a `-M` / `--markdown` hè attivata:
- * U mudellu `] (` serà cundensatu à `](` risolve cusì i ligami di marcatura rotti
+ * U mudellu `](` serà cundensatu à `](` risolve cusì i ligami di marcatura rotti
  * Un wrapper "senza traduzzione" serà piazzatu intornu à i blocchi di codice indentati, priservendu l'indentazione curretta è assicurendu chì ùn sò micca tradutti.
  * Un wrapper "senza traduzzione" serà piazzatu intornu à u testu in `backticks` per assicurà chì ùn sò micca tradutti
 

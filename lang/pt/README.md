@@ -243,7 +243,7 @@ Hokeylização
  * Coisas dentro de `backticks` serão traduzidas, quando você quase sempre quer que sejam valores literais
 
  Quando o `-M` / `--markdown` está ativado:
- * O padrão `] (` será condensado em `](` corrigindo assim os links de markdown quebrados
+ * O padrão `](` será condensado em `](` corrigindo assim os links de markdown quebrados
  * Um wrapper "sem tradução" será colocado em torno de blocos de código recuados, preservando o recuo adequado e garantindo que eles não sejam traduzidos
  * Um wrapper "sem tradução" será colocado ao redor do texto dentro de `backticks` para garantir que eles não sejam traduzidos
 

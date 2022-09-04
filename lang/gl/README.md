@@ -243,7 +243,7 @@ Hokeylización
  * As cousas dentro de `backticks` traduciranse, cando case sempre queres que sexan valores literais
 
  Cando a `-M` / `--markdown` está activada:
- * O patrón `] (` condensarase en `](` , corrixindo así as ligazóns de rebaixa rotas
+ * O patrón `](` condensarase en `](` , corrixindo así as ligazóns de rebaixa rotas
  * Colocarase un envoltorio "sen tradución" ao redor dos bloques de código con sangría, preservando a sangría adecuada e garantindo que non se traduzan
  * Colocarase un envoltorio "sen traducir" ao redor do texto dentro de `backticks` para garantir que non se traduzan
 
@@ -260,7 +260,7 @@ Hokeylización
 
  A función `filter` debe ser `async` porque se chamará `await`
 
- Antes de que os ficheiros se escriban no disco, todo o contido do ficheiro pasará á función `filter` como unha cadea
+ Antes de escribir os ficheiros no disco, todo o contido do ficheiro pasará á función `filter` como unha cadea
 
  O valor de retorno da función `filter` é o que realmente se escribirá no almacenamento
 

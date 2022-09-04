@@ -27,7 +27,7 @@ Hokeylisaatio
  [🇯🇵 japani](../ja/README.md)
  [🇰🇷 korea](../ko/README.md)
  [🇮🇳 Maranthi](../mr/README.md)
- [🇵🇱 puola] (lang/pl/README.md)
+ [🇵🇱 puola](../pl/README.md)
  [🇧🇷 portugali](../pt/README.md)
  [🇷🇺 venäjä](../ru/README.md)
  [🇰🇪 swahili](../sw/README.md)
@@ -243,7 +243,7 @@ Hokeylisaatio
  * `backticks` sisällä olevat asiat käännetään, kun haluat melkein aina niiden olevan kirjaimellisia arvoja
 
  Kun `-M` / `--markdown` on käytössä:
- * Kuvio `] (` tiivistetään muotoon `](` mikä korjaa rikkinäiset merkintälinkit
+ * Kuvio `](` tiivistetään muotoon `](` mikä korjaa rikkinäiset merkintälinkit
  * "No translate" -kääre sijoitetaan sisennettyjen koodilohkojen ympärille, mikä säilyttää oikean sisennyksen ja varmistaa, että niitä ei käännetä
  * "Ei käännöstä" -kääre sijoitetaan tekstin ympärille `backticks` sen varmistamiseksi, että niitä ei käännetä
 

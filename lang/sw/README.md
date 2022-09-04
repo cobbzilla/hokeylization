@@ -243,7 +243,7 @@ Hokeylization
  * Mambo ya ndani ya `backticks` , wakati karibu kila mara unataka yawe maadili halisi
 
  Wakati bendera ya `-M` / `--markdown` imewashwa:
- * Mchoro `] (` utafupishwa hadi `](` hivyo kurekebisha viungo vilivyovunjika
+ * Mchoro `](` utafupishwa hadi `](` hivyo kurekebisha viungo vilivyovunjika
  * Kanga ya "hakuna kutafsiri" itawekwa karibu na vizuizi vya msimbo vilivyowekwa ndani, kuhifadhi ujongezaji ufaao na kuhakikisha kuwa hazitafsiriwi.
  * Karatasi ya "hakuna tafsiri" itawekwa karibu na maandishi ndani ya `backticks` ili kuhakikisha kuwa hazitafsiriwi
 

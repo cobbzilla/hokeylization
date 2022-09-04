@@ -17,7 +17,7 @@ Hokeyylization
  [🇸🇦 Arabic](../ar/README.md)
  [🇧🇩 Bengali](../bn/README.md)
  [🇩🇪 German](../de/README.md)
- [🇺🇸 Bekee] (lang/en/README.md)
+ [🇺🇸 Bekee](../en/README.md)
  [🇪🇸 Spanish](../es/README.md)
  [🇫🇷 French](../fr/README.md)
  [🇹🇩 Hausa](../ha/README.md)
@@ -243,7 +243,7 @@ Hokeyylization
  * A ga-atụgharị asụsụ ihe dị n'ime `backticks` , mgbe ị na-achọkarị ka ha bụrụ ụkpụrụ nkịtị
 
  Mgbe agbanyere ọkọlọtọ `-M` / `--markdown` :
- * Usoro `] (` ga-agbakọ na `](` si otú a na-edozi njikọ ndị mebiri emebi
+ * Usoro `](` ga-agbakọ na `](` si otú a na-edozi njikọ ndị mebiri emebi
  * A ga-edowe ihe mkpuchi "enweghị ntụgharị asụsụ" n'akụkụ ngọngọ koodu, na-echekwa ntinye kwesịrị ekwesị yana hụ na atụgharịghị ya.
  * A ga-edowe ihe mkpuchi "enweghị ntụgharị asụsụ" n'akụkụ ederede n'ime `backticks` iji hụ na atụgharịghị ya
 

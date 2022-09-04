@@ -43,8 +43,8 @@ Hokeylización
 
  ### ¿Hay algún problema con esta traducción del LÉAME?
  Esta traducción particular del [README] original (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- puede tener fallas -- * ¡las correcciones son muy bienvenidas! * Envíe una [solicitud de extracción en GitHub] (https://github.com/cobbzilla/yuebing/pulls),
- o si no se siente cómodo haciendo eso, [abra un problema] (https://github.com/cobbzilla/yuebing/issues)
+ puede tener fallas -- * ¡las correcciones son muy bienvenidas! * Envíe una [solicitud de extracción en GitHub](https://github.com/cobbzilla/yuebing/pulls),
+ o si no se siente cómodo haciendo eso, [abra un problema](https://github.com/cobbzilla/yuebing/issues)
 
  Cuando cree un nuevo problema de GitHub sobre una traducción, haga lo siguiente:
  * incluir la URL de la página (copiar/pegar desde la barra de direcciones del navegador)
@@ -243,7 +243,7 @@ Hokeylización
  * Las cosas dentro de `backticks` se traducirán, cuando casi siempre quieres que sean valores literales
 
  Cuando el `-M` / `--markdown` está habilitado:
- * El patrón `] (` se condensará en `](` , por lo que se arreglarán los enlaces de rebajas rotos
+ * El patrón `](` se condensará en `](` , por lo que se arreglarán los enlaces de rebajas rotos
  * Se colocará un envoltorio "no traducir" alrededor de los bloques de código con sangría, conservando la sangría adecuada y asegurando que no se traduzcan
  * Se colocará un envoltorio "no traducir" alrededor del texto dentro de las `backticks` para garantizar que no se traduzcan
 

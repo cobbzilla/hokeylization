@@ -10,41 +10,41 @@
 
  # Моны бүтән телдә укыгыз
  Бу README.md документ, хоккейлаштыру коралын кулланып, тәрҗемә ителде
- ** [Google Translate ярдәмендә һәр тел] (https://cloud.google.com/translate/docs/languages)! **
+ ** [Google Translate ярдәмендә һәр тел](https://cloud.google.com/translate/docs/languages)! **
 
  Мин камил түгел дип ышанам, ләкин бернәрсәдән дә яхшырак түгел дип ышанам!
 
- [🇸🇦 Гарәпчә] (lang / ar / README.md)
- [🇧🇩 Бенгали] (lang / bn / README.md)
- [🇩🇪 Алманча] (lang / de / README.md)
- [🇺🇸 Инглизчә] (lang / en / README.md)
- [🇪🇸 Испанча] (lang / es / README.md)
- [🇫🇷 Французча] (lang / fr / README.md)
- [🇹🇩 Хауса] (lang / ha / README.md)
- [🇮🇳 Hindiинди] (lang / hi / README.md)
- [🇮🇩 Индонезия] (lang / id / README.md)
- [🇮🇹 Италия] (lang / it / README.md)
- [🇯🇵 Япон] (lang / ja / README.md)
- [🇰🇷 Корея] (lang / ko / README.md)
- [🇮🇳 Маранти] (lang / mr / README.md)
- [🇵🇱 Поляк] (lang / pl / README.md)
- [🇧🇷 Португалча] (lang / pt / README.md)
- [🇷🇺 русча] (lang / ru / README.md)
- [🇰🇪 Суахили] (lang / sw / README.md)
- [🇵🇭 Тагалог] (lang / tl / README.md)
- [🇹🇷 Төрекчә] (lang / tr / README.md)
- [🇵🇰 Урду] (lang / ur / README.md)
- [🇻🇳 Вьетнам] (lang / vi / README.md)
- [🇨🇳 Кытай] (lang / zh / README.md)
+ [🇸🇦 Гарәпчә](lang / ar / README.md)
+ [🇧🇩 Бенгали](lang / bn / README.md)
+ [🇩🇪 Алманча](lang / de / README.md)
+ [🇺🇸 Инглизчә](lang / en / README.md)
+ [🇪🇸 Испанча](lang / es / README.md)
+ [🇫🇷 Французча](lang / fr / README.md)
+ [🇹🇩 Хауса](lang / ha / README.md)
+ [🇮🇳 Hindiинди](lang / hi / README.md)
+ [🇮🇩 Индонезия](lang / id / README.md)
+ [🇮🇹 Италия](lang / it / README.md)
+ [🇯🇵 Япон](lang / ja / README.md)
+ [🇰🇷 Корея](lang / ko / README.md)
+ [🇮🇳 Маранти](lang / mr / README.md)
+ [🇵🇱 Поляк](lang / pl / README.md)
+ [🇧🇷 Португалча](lang / pt / README.md)
+ [🇷🇺 русча](lang / ru / README.md)
+ [🇰🇪 Суахили](lang / sw / README.md)
+ [🇵🇭 Тагалог](lang / tl / README.md)
+ [🇹🇷 Төрекчә](lang / tr / README.md)
+ [🇵🇰 Урду](lang / ur / README.md)
+ [🇻🇳 Вьетнам](lang / vi / README.md)
+ [🇨🇳 Кытай](lang / zh / README.md)
 
 
- ** [📚 ... Барлык телләр ...] (lang / README.md) **
+ ** [📚 ... Барлык телләр ...](lang / README.md) **
  ----
 
  ### README тәрҗемәсендә проблема бармы?
- Бу оригиналь тәрҗемә [README] (https://github.com/cobbzilla/yuebing/blob/master/README.md)
+ Бу оригиналь тәрҗемә [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
  кимчелекле булырга мөмкин - * төзәтмәләр бик рәхимле! * Зинһар өчен, GitHub'ка тарту соравын җибәрегез (https://github.com/cobbzilla/yuebing/pulls),
- яисә моны эшләү уңайлы булмаса, [проблеманы ачыгыз] (https://github.com/cobbzilla/yuebing/issues)
+ яисә моны эшләү уңайлы булмаса, [проблеманы ачыгыз](https://github.com/cobbzilla/yuebing/issues)
 
  Тәрҗемә турында яңа GitHub чыгарганда, зинһар өчен:
  * битнең URL-ны кертегез (браузер адрес тактасыннан күчереп языгыз)
@@ -53,17 +53,17 @@
  * **Рәхмәт!**
 
  # Эчтәлек
- * [Чыганак] (# Чыганак)
- * [Ярдәм һәм финанслау] (# Ярдәм-финанслау)
- * [Урнаштыру] (# урнаштыру)
- * [Урнаштыру] (# Урнаштыру)
- * [JavaScript чыганак ресурс файлын тәрҗемә итү] (# Тәрҗемә итү-a-JavaScript-string-ресурс-файл)
- * [Текст файллары каталогын тәрҗемә итү] (# Тәрҗемә итү-a-каталог-текст-файллар)
- * [Башка вариантлар] (# Башка вариантлар)
+ * [Чыганак](# Чыганак)
+ * [Ярдәм һәм финанслау](# Ярдәм-финанслау)
+ * [Урнаштыру](# урнаштыру)
+ * [Урнаштыру](# Урнаштыру)
+ * [JavaScript чыганак ресурс файлын тәрҗемә итү](# Тәрҗемә итү-a-JavaScript-string-ресурс-файл)
+ * [Текст файллары каталогын тәрҗемә итү](# Тәрҗемә итү-a-каталог-текст-файллар)
+ * [Башка вариантлар](# Башка вариантлар)
 
  ## Чыганак
- * [GitHub'та хоккейлаштыру] (https://github.com/cobbzilla/hokeylization)
- * [төнге хоккейлаштыру] (https://www.npmjs.com/package/hokeylization)
+ * [GitHub'та хоккейлаштыру](https://github.com/cobbzilla/hokeylization)
+ * [төнге хоккейлаштыру](https://www.npmjs.com/package/hokeylization)
 
  ## Ярдәм һәм финанслау
  Мин профессиональ ачык чыганак программа тәэминаты булырга тырышам. Мин эшлим
@@ -142,7 +142,7 @@
     myfile.de.js
 
  `-l` / `--languages` параметры - ISO тел кодларының үтемле аерылган исемлеге
- [Google Translate ярдәмендә] (https://cloud.google.com/translate/docs/languages)
+ [Google Translate ярдәмендә](https://cloud.google.com/translate/docs/languages)
 
  Әгәр чыгару файллары бар икән, нинди ачкычларның барлыгын ачыклау тикшереләчәк.
  Хәзерге ачкычлар тәрҗемә ителмәячәк. Missingгалган ачкычлар өчен тәрҗемәләр ясалачак һәм өстәләчәк
@@ -243,7 +243,7 @@
  * " `backticks` " эчендәге әйберләр тәрҗемә ителәчәк, сез аларның һәрвакыт диярлек туры мәгънәдә булуын теләгәндә
 
  " `-M` / " `--markdown` флагы кушылганда:
- * `] (` " конденсацияләнәчәк " `](` шулай итеп өзелгән сылтамаларны төзәтә
+ * `](` " конденсацияләнәчәк " `](` шулай итеп өзелгән сылтамаларны төзәтә
  * "Тәрҗемә ителмәгән" төргәк индексацияләнгән код блоклары тирәсендә урнаштырылачак, тиешле индуктивлыкны саклый һәм аларның тәрҗемә ителмәвен тәэмин итә.
  * "Тәрҗемә ителмәгән" `backticks` текстның тирәсенә урнаштырылачак, алар тәрҗемә ителмәсен өчен
 
@@ -253,7 +253,7 @@
  Әгәр сезнең эчтәлек HTML булса, " `-p html` / " `--process-as html` параметрын үтәмәсәгез, ул бозылачак.
 
  ### Фильтр
- Авантюристлар өчен: файлларны каталогта эшкәрткәндә, сез " `-F` / "- фильтр" `--filter` уза аласыз
+ Авантюристлар өчен: каталогтагы файлларны эшкәрткәндә, сез " `-F` / "- фильтр" `--filter` уза аласыз
  файл системасына язылганчы чыгаруны фильтрлау
 
  Бу параметрның кыйммәте " `filter` " дигән функцияне экспортлаучы JS файлына юл булырга тиеш

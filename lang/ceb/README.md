@@ -243,7 +243,7 @@ Hokeylization
  * Ang mga butang sa sulod sa `backticks` mahubad, kung gusto nimo kini nga literal nga mga kantidad
 
  Sa diha nga ang `-M` / `--markdown` nga bandila gipalihok:
- * Ang pattern nga `] (` ipamub-ot ngadto sa `](` busa ayohon ang naguba nga markdown links
+ * Ang pattern nga `](` ipamub-ot ngadto sa `](` busa ayohon ang naguba nga markdown links
  * Usa ka wrapper nga "walay paghubad" ibutang sa palibot sa mga indented nga mga bloke sa code, pagpreserbar sa husto nga indentasyon ug pagsiguro nga kini dili mahubad
  * Usa ka "no translate" wrapper ang ibutang sa palibot sa teksto sulod sa `backticks` aron masiguro nga kini dili mahubad
 

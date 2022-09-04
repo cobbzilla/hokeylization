@@ -55,11 +55,11 @@ Hokeyleiddiad
  # Cynnwys
  * [Ffynhonnell](#Ffynhonnell)
  * [Cymorth a Chyllido](#Cymorth-a-Cyllid)
- * [Gosod] (# Gosod)
- * [Gosod] (#Gosod)
+ * [Gosod](# Gosod)
+ * [Gosod](#Gosod)
  * [Cyfieithu ffeil adnodd llinyn JavaScript](#Translating-a-JavaScript-string-resource-file)
- * [Cyfieithu cyfeiriadur o ffeiliau testun] (#Cyfieithu-cyfeiriadur-o-ffeiliau testun)
- * [Dewisiadau eraill] (#Other-options)
+ * [Cyfieithu cyfeiriadur o ffeiliau testun](#Cyfieithu-cyfeiriadur-o-ffeiliau testun)
+ * [Dewisiadau eraill](#Other-options)
 
  ## Ffynhonnell
  * [hokeylization ar GitHub]( https://github.com/cobbzilla/hokeylization)
@@ -72,7 +72,7 @@ Hokeyleiddiad
 
  Felly rydw i'n mynd i geisio ysgrifennu meddalwedd defnyddiol a gweld a yw hynny'n gweithio
 
- Byddwn yn gwerthfawrogi'n ddiffuant y cyfraniad lleiaf [misol trwy Patreon] ( https://www.patreon.com/cobbzilla )
+ Byddwn yn gwerthfawrogi'n ddiffuant y cyfraniad lleiaf [misol trwy Patreon]( https://www.patreon.com/cobbzilla )
 
  ## Gosod
  I ddefnyddio'r offeryn llinell orchymyn, gosodwch gan ddefnyddio `npm` neu `yarn` :
@@ -243,7 +243,7 @@ Hokeyleiddiad
  * Bydd pethau y tu mewn i `backticks` yn cael eu cyfieithu, pan fyddwch bron bob amser eisiau iddynt fod yn werthoedd llythrennol
 
  Pan fydd y `-M` / `--markdown` wedi'i galluogi:
- * Bydd y patrwm `] (` yn cael ei gyddwyso i `](` gan osod y dolenni marcio i lawr sydd wedi torri
+ * Bydd y patrwm `](` yn cael ei gyddwyso i `](` gan osod y dolenni marcio i lawr sydd wedi torri
  * Bydd papur lapio "dim cyfieithu" yn cael ei osod o amgylch blociau cod wedi'u hindentio, gan gadw'r mewnoliad cywir a sicrhau nad ydynt yn cael eu cyfieithu
  * Bydd papur lapio "dim cyfieithu" yn cael ei osod o amgylch y testun o fewn `backticks` i sicrhau nad ydynt yn cael eu cyfieithu
 

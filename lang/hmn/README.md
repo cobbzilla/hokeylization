@@ -19,12 +19,12 @@ Hokeylization
  [🇩🇪 German](../de/README.md)
  [🇺🇸 English](../en/README.md)
  [🇪🇸 Spanish](../es/README.md)
- [🇫🇷 Fabkis] (lang/fr/README.md)
+ [🇫🇷 Fabkis](../fr/README.md)
  [🇹🇩 Hausa](../ha/README.md)
  [🇮🇳 Hindi](../hi/README.md)
  [🇮🇩 Indonesian](../id/README.md)
  [🇮🇹 Italian](../it/README.md)
- [🇯🇵 Nyiv] (lang/ja/README.md)
+ [🇯🇵 Nyiv](../ja/README.md)
  [🇰🇷 Korean](../ko/README.md)
  [🇮🇳 Maranthi](../mr/README.md)
  [🇵🇱 Polish](../pl/README.md)
@@ -44,7 +44,7 @@ Hokeylization
  ### Puas muaj teeb meem nrog qhov kev txhais lus ntawm README?
  Qhov kev txhais lus tshwj xeeb ntawm tus thawj [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
  tej zaum yuav muaj qhov tsis txaus ntseeg -- * kho tau zoo siab txais tos!* Thov xa [rub thov ntawm GitHub](https://github.com/cobbzilla/yuebing/pulls),
- lossis yog tias koj tsis xis nyob ua qhov ntawd, [qhib qhov teeb meem] (https://github.com/cobbzilla/yuebing/issues)
+ lossis yog tias koj tsis xis nyob ua qhov ntawd, [qhib qhov teeb meem](https://github.com/cobbzilla/yuebing/issues)
 
  Thaum koj tsim qhov teeb meem tshiab GitHub txog kev txhais lus, thov ua:
  * suav nrog nplooj URL (copy / paste los ntawm browser chaw nyob bar)
@@ -59,7 +59,7 @@ Hokeylization
  * [Setup](#Setup)
  * [Kev txhais cov ntaub ntawv JavaScript string resource](#Translating-a-JavaScript-string-resource-file)
  * [Hloov cov npe ntawm cov ntawv nyeem](#Translating-a-directory-of-text-files)
- * [Lwm txoj kev xaiv] (#Lwm txoj kev xaiv)
+ * [Lwm txoj kev xaiv](#Lwm txoj kev xaiv)
 
  ## Source
  * [hokeylization ntawm GitHub](https://github.com/cobbzilla/hokeylization)
@@ -72,7 +72,7 @@ Hokeylization
 
  Yog li kuv yuav sim sau cov software pab tau thiab saib seb qhov ntawd ua haujlwm
 
- Kuv xav ua tsaug txawm tias qhov tsawg tshaj plaws [kev pab nyiaj hli ntawm Patreon] (https://www.patreon.com/cobbzilla)
+ Kuv xav ua tsaug txawm tias qhov tsawg tshaj plaws [kev pab nyiaj hli ntawm Patreon](https://www.patreon.com/cobbzilla)
 
  ## Kev teeb tsa
  Txhawm rau siv cov cuab yeej hais kom ua kab, nruab siv `npm` lossis `yarn` :
@@ -243,7 +243,7 @@ Hokeylization
  * Tej yam hauv `backticks` yuav tau txhais, thaum koj yuav luag ib txwm xav kom lawv ua qhov tseem ceeb
 
  Thaum tus `-M` " / `--markdown` tau qhib:
- * Tus qauv `] (` yuav tsum condensed rau `](` yog li kho qhov sib txuas markdown
+ * Tus qauv `](` yuav tsum condensed rau `](` yog li kho qhov sib txuas markdown
  * Ib daim ntawv "tsis muaj neeg txhais lus" yuav muab tso rau ib puag ncig cov kab thaiv kab thaiv, khaws cia kom raug indentation thiab xyuas kom lawv tsis raug txhais
  * Ib daim ntawv "tsis muaj txhais" yuav muab tso rau ib puag ncig cov ntawv hauv `backticks` kom ntseeg tau tias lawv tsis raug txhais
 

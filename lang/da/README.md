@@ -85,7 +85,7 @@ Hokeylisering
     npm install -g hokeylization-lite
     yarn global add hokeylization-lite
 
- Se derefter hjælpen til `hokey` kommandoen:
+ Se derefter hjælpen til kommandoen `hokey` :
 
     hokey --help
     hokey -h
@@ -243,7 +243,7 @@ Hokeylisering
  * Ting inde i `backticks` bliver oversat, når du næsten altid vil have dem til at være bogstavelige værdier
 
  Når `-M` / `--markdown` er aktiveret:
- * Mønsteret `] (` vil blive kondenseret til `](` og fikserer således de ødelagte markdown-links
+ * Mønsteret `](` vil blive kondenseret til `](` og fikserer således de ødelagte markdown-links
  * En "no translate"-indpakning vil blive placeret rundt om indrykkede kodeblokke, hvilket bevarer korrekt indrykning og sikrer, at de ikke oversættes
  * En "no translate"-indpakning vil blive placeret rundt om tekst i `backticks` for at sikre, at de ikke oversættes
 

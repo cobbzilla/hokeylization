@@ -10,41 +10,41 @@ Hokeylisation
 
  # Soma ibi mu rundi rurimi
  Iyi nyandiko ya README.md yarahinduwe, ikoresheje igikoresho cya hokeylisation ubwayo, muri
- ** [ururimi rwose rushyigikiwe na Google Translate] (https://cloud.google.com/translate/docs/ururimi)! **
+ ** [ururimi rwose rushyigikiwe na Google Translate](https://cloud.google.com/translate/docs/ururimi)! **
 
  Nzi neza ko bidatunganye, ariko nizere ko biruta ubusa!
 
- [🇸🇦 Icyarabu] (lang / ar / README.md)
- [🇧🇩 Ikibengali] (lang / bn / README.md)
- [🇩🇪 Ikidage] (lang / de / README.md)
- [🇺🇸 Icyongereza] (lang / en / README.md)
- [🇪🇸 Icyesipanyoli] (lang / es / README.md)
- [🇫🇷 Igifaransa] (lang / fr / README.md)
- [🇹🇩 Hausa] (lang / ha / README.md)
- [🇮🇳 Hindi] (lang / hi / README.md)
- [🇮🇩 Indoneziya] (lang / id / README.md)
- [🇮🇹 Umutaliyani] (lang / it / README.md)
- [🇯🇵 Ikiyapani] (lang / ja / README.md)
- [🇰🇷 Igikoreya] (lang / ko / README.md)
- [🇮🇳 Maranthi] (lang / mr / README.md)
- [Ish Igipolonye] (lang / pl / README.md)
- [🇧🇷 Igiporutugali] (lang / pt / README.md)
- [🇷🇺 Ikirusiya] (lang / ru / README.md)
- [Wa Igiswahiri] (lang / sw / README.md)
- [🇵🇭 Tagalog] (lang / tl / README.md)
- [🇹🇷 Turukiya] (lang / tr / README.md)
- [🇵🇰 Urdu] (lang / ur / README.md)
- [🇻🇳 Abanya Viyetinamu] (lang / vi / README.md)
- [🇨🇳 Igishinwa] (lang / zh / README.md)
+ [🇸🇦 Icyarabu](lang / ar / README.md)
+ [🇧🇩 Ikibengali](lang / bn / README.md)
+ [🇩🇪 Ikidage](lang / de / README.md)
+ [🇺🇸 Icyongereza](lang / en / README.md)
+ [🇪🇸 Icyesipanyoli](lang / es / README.md)
+ [🇫🇷 Igifaransa](lang / fr / README.md)
+ [🇹🇩 Hausa](lang / ha / README.md)
+ [🇮🇳 Hindi](lang / hi / README.md)
+ [🇮🇩 Indoneziya](lang / id / README.md)
+ [🇮🇹 Umutaliyani](lang / it / README.md)
+ [🇯🇵 Ikiyapani](lang / ja / README.md)
+ [🇰🇷 Igikoreya](lang / ko / README.md)
+ [🇮🇳 Maranthi](lang / mr / README.md)
+ [Ish Igipolonye](lang / pl / README.md)
+ [🇧🇷 Igiporutugali](lang / pt / README.md)
+ [🇷🇺 Ikirusiya](lang / ru / README.md)
+ [Wa Igiswahiri](lang / sw / README.md)
+ [🇵🇭 Tagalog](lang / tl / README.md)
+ [🇹🇷 Turukiya](lang / tr / README.md)
+ [🇵🇰 Urdu](lang / ur / README.md)
+ [🇻🇳 Abanya Viyetinamu](lang / vi / README.md)
+ [🇨🇳 Igishinwa](lang / zh / README.md)
 
 
- ** [📚 ... Indimi zose ...] (lang / README.md) **
+ ** [📚 ... Indimi zose ...](lang / README.md) **
  ----
 
  ### Hari ikibazo cyubu busobanuro bwa README?
- Ubu busobanuro bwihariye bwumwimerere [README] (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- irashobora kuba ifite inenge - * gukosora biremewe cyane! * Nyamuneka ohereza [gukurura icyifuzo kuri GitHub] (https://github.com/cobbzilla/yuebing/pulls),
- cyangwa niba utishimiye gukora ibyo, [fungura ikibazo] (https://github.com/cobbzilla/yuebing/issues)
+ Ubu busobanuro bwihariye bwumwimerere [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
+ irashobora kuba ifite inenge - * gukosora biremewe cyane! * Nyamuneka ohereza [gukurura icyifuzo kuri GitHub](https://github.com/cobbzilla/yuebing/pulls),
+ cyangwa niba utishimiye gukora ibyo, [fungura ikibazo](https://github.com/cobbzilla/yuebing/issues)
 
  Mugihe uremye ikibazo gishya cya GitHub kubyerekeye ubusobanuro, nyamuneka kora:
  * shyiramo urupapuro rwa URL (kopi / komatanya uhereye kuri aderesi ya aderesi)
@@ -53,17 +53,17 @@ Hokeylisation
  * ** Urakoze! **
 
  # Ibirimo
- * [Inkomoko] (# Inkomoko)
- * [Inkunga n'inkunga] (# Inkunga-na-Inkunga)
- * [Kwinjiza] (# Kwinjiza)
- * [Gushiraho] (# Gushiraho)
+ * [Inkomoko](# Inkomoko)
+ * [Inkunga n'inkunga](# Inkunga-na-Inkunga)
+ * [Kwinjiza](# Kwinjiza)
+ * [Gushiraho](# Gushiraho)
  *
- * [Guhindura ububiko bwamadosiye yinyandiko] (# Guhindura-a-ububiko-bw-inyandiko-dosiye)
- * [Ubundi buryo] (# Ibindi-amahitamo)
+ * [Guhindura ububiko bwamadosiye yinyandiko](# Guhindura-a-ububiko-bw-inyandiko-dosiye)
+ * [Ubundi buryo](# Ibindi-amahitamo)
 
  ## Inkomoko
- * [hokeylisation kuri GitHub] (https://github.com/cobbzilla/hokeylization)
- * [hokeylisation kuri npm] (https://www.npmjs.com/package/hokeylization)
+ * [hokeylisation kuri GitHub](https://github.com/cobbzilla/hokeylization)
+ * [hokeylisation kuri npm](https://www.npmjs.com/package/hokeylization)
 
  ## Inkunga ninkunga
  Ndagerageza kuba umuhanga ufungura isoko yumwuga. Nakoraga
@@ -72,7 +72,7 @@ Hokeylisation
 
  Ngiye rero kugerageza kwandika software ifasha ndebe niba ibyo bikora
 
- Ndashimira byimazeyo nintoya [umusanzu wa buri kwezi ukoresheje Patreon] (https://www.patreon.com/cobbzilla)
+ Ndashimira byimazeyo nintoya [umusanzu wa buri kwezi ukoresheje Patreon](https://www.patreon.com/cobbzilla)
 
  ## Kwinjiza
  Kugira ngo ukoreshe igikoresho cyumurongo, shyiramo ukoresheje `npm` `yarn` :
@@ -107,7 +107,7 @@ Hokeylisation
  nyuma yo kumenya uburyo kwemeza bikora kubicu bya Google (birashobora gushimisha)
 
  Niba urimo ukora kuva kode yinkomoko, urashobora kandi kubishyira muri dosiye ya `.env`
- ububiko bazapakirwa mugihe cyogukoresha binyuze kuri [dotenv] (https://www.npmjs.com/package/dotenv)
+ ububiko bazapakirwa mugihe cyogukoresha binyuze kuri [dotenv](https://www.npmjs.com/package/dotenv)
 
  ## Guhindura JavaScript umugozi wumutungo dosiye
  Imbonerahamwe yawe yumugozi ** igomba ** kuba muri dosiye ya JavaScript muri bumwe murubwo buryo bubiri:
@@ -142,7 +142,7 @@ Hokeylisation
     myfile.de.js
 
  Ihitamo rya `-l` / `--languages` ni urutonde rwatandukanijwe na koma y'ururimi rwa ISO
- [ushyigikiwe na Google Translate] (https://cloud.google.com/translate/docs/ururimi)
+ [ushyigikiwe na Google Translate](https://cloud.google.com/translate/docs/ururimi)
 
  Niba dosiye isohoka imaze kubaho, izasuzumwa kugirango hamenyekane urufunguzo ruriho.
  Urufunguzo ruriho ntiruzahindurwa. Ubusobanuro bwimfunguzo zabuze bizakorwa kandi byongeweho
@@ -243,7 +243,7 @@ Hokeylisation
  * Ibintu biri imbere ya `backticks` bizahindurwa, mugihe hafi buri gihe ushaka ko biba indangagaciro
 
  Iyo ibendera rya `-M` / `--markdown` :
- * Igishushanyo `] (` kizahuzwa na `](` bityo ukosore amahuza yamenetse
+ * Igishushanyo `](` kizahuzwa na `](` bityo ukosore amahuza yamenetse
  * Ipfunyika "nta musemuzi" izashyirwa hafi ya kode yatanzwe, irinde indente ikwiye kandi urebe ko idahinduwe.
  * Ipfunyika "nta musemuzi" izashyirwa hafi yinyandiko muri " `backticks` kugirango barebe ko zidahinduwe
 
@@ -256,13 +256,13 @@ Hokeylisation
  Kubitangaza: mugihe utunganya dosiye mububiko, urashobora gutambutsa `-F` / `--filter`
  gushungura ibisohoka mbere yuko byandikwa kuri dosiye
 
- Agaciro kiyi option igomba kuba inzira ya dosiye ya JS yohereza hanze imikorere yitwa `filter`
+ Agaciro kiyi option igomba kuba inzira igana dosiye ya JS yohereza hanze imikorere yitwa `filter`
 
- Imikorere ya " `filter` igomba kuba `async` `await` izahamagarwa
+ Imikorere ya " `filter` igomba kuba `async` kuko `await` " izahamagarwa
 
  Mbere yuko dosiye zandikwa kuri disiki, ibiri muri dosiye byose bizanyuzwa mumikorere ya 'filteri' `filter`
 
- Garuka agaciro kuva mumikorere ya `filter` nicyo kizandikwa mububiko
+ Garuka agaciro kiva mumikorere ya `filter` nicyo kizandikwa mububiko
 
  Rero, ufite igenzura ryuzuye kubizarangira
 

@@ -239,11 +239,11 @@ Hokeylization
  pamberi pekuti chinongedzo chayo chisati chatanga (ne `(` ).
  yakaputsika pakuona gwaro.
  * Mabhuroki ekodhi anoshandurwa. Google kuturikira haizive kuti chiratidzo chinotariswa sei nekodhi uye zvachisingazive
- * Nzvimbo isiriyo yemabhuraki ekodhi. Kupatsanura kwakaoma kuchengetedza mushanduro
+ * Nzvimbo isiriyo yemabhuraki ekodhi. Kupatsanura kwakaoma kuchengetedza mukududzira
  * Zvinhu zviri mukati me `backticks` zvinoshandurwa, kana iwe uchinge wagara uchida kuti zvive chaizvo zvakakosha
 
  Kana iyo `-M` / `--markdown` mureza inogoneswa:
- * Iyo pateni `] (` ichapfupikiswa kuita `](` nokudaro kugadzirisa akatyoka mamakidown link
+ * Iyo pateni `](` ichapfupikiswa kuita `](` nokudaro kugadzirisa akatyoka mamakidown link
  * A "hapana dudziro" wrapper ichaiswa yakatenderedza indented code block, inochengetedza indentation chaiyo uye nekuona kuti haina kududzirwa.
  * Kapetera ka "hapana kuturikira" ichaiswa mukati memashoko mukati me `backticks` kuti zvionekwe kuti haashandurwe
 
@@ -254,9 +254,9 @@ Hokeylization
 
  ### Sefa
  Kune iyo inodakadza: kana uchigadzira mafaera mudhairekitori, unogona kupfuura iyo `-F` / `--filter` sarudzo.
- kusefa zvinobuda zvisati zvanyorwa kune iyo faira system
+ kusefa zvinobuda zvisati zvanyorwa kune iyo filesystem
 
- Kukosha kweiyi sarudzo kunofanirwa kuve nzira yeJS faira inotumira kunze basa rakanzi `filter`
+ Kukosha kweiyi sarudzo inofanira kunge iri nzira yeJS faira inotumira kunze basa rakanzi `filter`
 
  The `filter` basa rinofanira kuva `async` nekuti `await` pairi
 

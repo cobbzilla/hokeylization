@@ -14,28 +14,28 @@ Hokeilizācija
 
  Esmu pārliecināts, ka tas nav ideāls, bet es ceru, ka tas ir labāk nekā nekas!
 
- [🇸🇦 arābu] (lang/ar/README.md)
- [🇧🇩 bengāļu] (lang/bn/README.md)
- [🇩🇪 vācu] (lang/de/README.md)
+ [🇸🇦 arābu](../ar/README.md)
+ [🇧🇩 bengāļu](../bn/README.md)
+ [🇩🇪 vācu](../de/README.md)
  [🇺🇸 angļu valodā](../en/README.md)
- [🇪🇸 spāņu] (lang/es/README.md)
- [🇫🇷 franču] (lang/fr/README.md)
- [🇹🇩 Hausa] (lang/ha/README.md)
- [🇮🇳 Hindi] (lang/hi/README.md)
- [🇮🇩 Indonēziešu] (lang/id/README.md)
- [🇮🇹 itāļu] (lang/it/README.md)
- [🇯🇵 japāņu] (lang/ja/README.md)
- [🇰🇷 korejiešu] (lang/ko/README.md)
- [🇮🇳 Maranthi] (lang/mr/README.md)
- [🇵🇱 poļu] (lang/pl/README.md)
- [🇧🇷 portugāļu] (lang/pt/README.md)
- [🇷🇺 krievu] (lang/ru/README.md)
- [🇰🇪 Svahili] (lang/sw/README.md)
+ [🇪🇸 spāņu](../es/README.md)
+ [🇫🇷 franču](../fr/README.md)
+ [🇹🇩 Hausa](../ha/README.md)
+ [🇮🇳 Hindi](../hi/README.md)
+ [🇮🇩 Indonēziešu](../id/README.md)
+ [🇮🇹 itāļu](../it/README.md)
+ [🇯🇵 japāņu](../ja/README.md)
+ [🇰🇷 korejiešu](../ko/README.md)
+ [🇮🇳 Maranthi](../mr/README.md)
+ [🇵🇱 poļu](../pl/README.md)
+ [🇧🇷 portugāļu](../pt/README.md)
+ [🇷🇺 krievu](../ru/README.md)
+ [🇰🇪 Svahili](../sw/README.md)
  [🇵🇭 Tagalogs](../tl/README.md)
- [🇹🇷 turku] (lang/tr/README.md)
- [🇵🇰 urdu] (lang/ur/README.md)
- [🇻🇳 vjetnamiešu] (lang/vi/README.md)
- [🇨🇳 ķīniešu] (lang/zh/README.md)
+ [🇹🇷 turku](../tr/README.md)
+ [🇵🇰 urdu](../ur/README.md)
+ [🇻🇳 vjetnamiešu](../vi/README.md)
+ [🇨🇳 ķīniešu](../zh/README.md)
 
 
  **[📚 ... Visas valodas ...](../README.md)**
@@ -72,7 +72,7 @@ Hokeilizācija
 
  Tāpēc es mēģināšu uzrakstīt noderīgu programmatūru un pārbaudīt, vai tā darbojas
 
- Es patiesi novērtēšu pat vismazāko [ikmēneša ieguldījumu, izmantojot Patreon] (https://www.patreon.com/cobbzilla)
+ Es patiesi novērtēšu pat vismazāko [ikmēneša ieguldījumu, izmantojot Patreon](https://www.patreon.com/cobbzilla)
 
  ## Uzstādīšana
  Lai izmantotu komandrindas rīku, instalējiet, izmantojot `npm` vai `yarn` :
@@ -243,7 +243,7 @@ Hokeilizācija
  * Lietas, kas atrodas `backticks` , tiks tulkotas, ja gandrīz vienmēr vēlaties, lai tās būtu burtiskas vērtības
 
  Kad ir iespējots karogs `-M` / `--markdown` :
- * Raksts `] (` tiks saīsināts uz `](` tādējādi izlabojot bojātās atzīmes saites
+ * Raksts `](` tiks saīsināts uz `](` tādējādi izlabojot bojātās atzīmes saites
  * Ap koda blokiem ar atkāpēm tiks novietots iesaiņojums “nav tulkot”, saglabājot pareizu atkāpi un nodrošinot, ka tie netiek tulkoti.
  * Ap tekstiem, kas atrodas `backticks` , tiks ievietots iesaiņojums "nav tulkot", lai nodrošinātu, ka tie netiek tulkoti.
 

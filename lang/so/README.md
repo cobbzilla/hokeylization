@@ -14,22 +14,22 @@ Hokeyylization
 
  Waan hubaa inaysan qummanayn, laakiin waxaan rajeynayaa inay ka fiican tahay waxba!
 
- [🇸🇦 Carabi] (lang/ar/README.md)
+ [🇸🇦 Carabi](../ar/README.md)
  [🇧🇩 Bengali](../bn/README.md)
  [🇩🇪 Jarmal](../de/README.md)
- [🇺🇸 Ingiriis] (lang/en/README.md)
- [🇪🇸 Isbaanish] (lang/es/README.md)
- [🇫🇷 Faransiis] (lang/fr/README.md)
+ [🇺🇸 Ingiriis](../en/README.md)
+ [🇪🇸 Isbaanish](../es/README.md)
+ [🇫🇷 Faransiis](../fr/README.md)
  [🇹🇩 Hausa](../ha/README.md)
  [🇮🇳 Hindi](../hi/README.md)
  [🇮🇩 Indonesian](../id/README.md)
- [🇮🇹 Talyaani] (lang/it/README.md)
+ [🇮🇹 Talyaani](../it/README.md)
  [🇯🇵 Jabbaan](../ja/README.md)
  [🇰🇷 Kuuriyaan](../ko/README.md)
  [🇮🇳 Maranthi](../mr/README.md)
  [🇵🇱 Polish](../pl/README.md)
  [🇧🇷 Boortaqiis](../pt/README.md)
- [🇷🇺 Ruush] (lang/ru/README.md)
+ [🇷🇺 Ruush](../ru/README.md)
  [🇰🇪 Swahili](../sw/README.md)
  [🇵🇭 Tagalog](../tl/README.md)
  [🇹🇷 Turki](../tr/README.md)
@@ -54,12 +54,12 @@ Hokeyylization
 
  # Nuxurka
  * [Isha](#Isha)
- * [Taageerada iyo Maalgelinta] (#Taageerada-iyo Maalgelinta)
- * [Rakibka] (#Rakiba)
- * [Dejinta] (#Setup)
+ * [Taageerada iyo Maalgelinta](#Taageerada-iyo Maalgelinta)
+ * [Rakibka](#Rakiba)
+ * [Dejinta](#Setup)
  * [Turjumaadda faylka kheyraadka xargaha JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Turjumaadda tusaha faylasha qoraalka](#Translating-a-directory-of-text-files)
- * [Ikhtiyaar kale] (#Doorasho kale)
+ * [Ikhtiyaar kale](#Doorasho kale)
 
  ## Isha
  * [hokeylization on GitHub](https://github.com/cobbzilla/hokeylization)
@@ -198,7 +198,7 @@ Hokeyylization
 
  ## Doorashooyin kale
 
- ### orod qallalan
+ ### orod qalalan
  Gudub `-n` / `--dry-run` si aad u muujiso waxa la samayn doono, laakiin dhab ahaantii ha samayn wax wicitaan API ah ama ha qorin wax fayl ah
 
  ### Xoog
@@ -238,12 +238,12 @@ Hokeyylization
  * Xiriirada jaban. Turjumaada dhexdeeda, jilaa meel bannaan ayaa soo baxaysa ka dib markii sharraxaadda xidhiidhinta calaamadaynta ay dhammaato ( `]` ) laakiin
  ka hor inta uusan bilaabin isku xirka bartilmaameedka ( `(` ) Tani waxay keenaysaa in calaamadaynta si khaldan loo sameeyo, iyo isku xidhka
  wuu jabaa marka la eego dukumeentiga.
- * Xirmooyinka kood waa la turjumay Turjumida Google ma garanayso waxa calaamadayntu ay tixgeliso koodka iyo waxa aanu ahayn
+ * Koodadka kood waa la turjumay Turjumida Google ma garanayso waxa calaamadayntu ay tixgeliso koodka iyo waxa aanu ahayn
  * Kala fogaanshaha khaldan ee baloogyada koodka ee goglan. Kala dheeraynta way adagtahay in lagu xafido tarjumaada
  * Waxyaabaha ku jira `backticks` waa la tarjumi doonaa, marka aad had iyo jeer rabto inay noqdaan qiyam sax ah
 
  Marka calanka `-M` / `--markdown` la furo:
- * Qaabka `] (` waxa lagu koobi doonaa `](` si loo hagaajiyo xiriirinta calaamadaynta jaban
+ * Qaabka `](` waxa lagu koobi doonaa `](` si loo hagaajiyo xiriirinta calaamadaynta jaban
  * Duub "ma turjumi" ayaa la dhigi doonaa hareeraha koodka jeexan, iyadoo la ilaalinayo galitaanka saxda ah iyo hubinta inaan la turjumayn
  Duubka "ma turjumi" ayaa lagu dhejin doonaa hareeraha qoraalka gudaha `backticks` si loo hubiyo inaan la turjumayn
 

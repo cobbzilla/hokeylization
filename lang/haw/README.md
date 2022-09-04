@@ -243,7 +243,7 @@ Hokeylization
  * E unuhi ʻia nā mea i loko o ka `backticks` ', ke makemake mau ʻoe iā lākou he waiwai maoli
 
  Ke hoʻohana ʻia ka hae `-M` / `--markdown` :
- * E hoʻopili ʻia ke kumu `] (` i `](` pēlā e hoʻoponopono ai i nā loulou i haki ʻia.
+ * E hoʻopili ʻia ke kumu `](` i `](` pēlā e hoʻoponopono ai i nā loulou i haki ʻia.
  * E kau ʻia kahi ʻōwili "ʻaʻole unuhi" a puni nā poloka code indented, e mālama ana i ka hoʻopono kūpono a me ka hōʻoia ʻana ʻaʻole i unuhi ʻia.
  * E kau ʻia kahi ʻōwili "ʻaʻole unuhi" a puni ka kikokikona i loko o nā `backticks` e hōʻoia i ka unuhi ʻole ʻia.
 

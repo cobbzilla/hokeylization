@@ -63,7 +63,7 @@ Hokeylization
 
  ## Fonto
  * [hokeylization sur GitHub](https://github.com/cobbzilla/hokeylization)
- * [hokeylization sur npm] (https://www.npmjs.com/package/hokeylization)
+ * [hokeylization sur npm](https://www.npmjs.com/package/hokeylization)
 
  ## Subteno kaj Financado
  Mi provas esti profesia liberkoda programisto. Mi laboris en
@@ -243,7 +243,7 @@ Hokeylization
  * Aferoj ene de `backticks` estos tradukitaj, kiam vi preskaŭ ĉiam volas, ke ili estu laŭvortaj valoroj
 
  Kiam la flago `-M` / `--markdown` estas ebligita:
- * La ŝablono `] (` estos densigita al `](` tiel riparante la rompitajn markdown-ligilojn
+ * La ŝablono `](` estos densigita al `](` tiel riparante la rompitajn markdown-ligilojn
  * Envolvaĵo "ne tradukita" estos metita ĉirkaŭ indentitaj kodblokoj, konservante taŭgan indentaĵon kaj certigante ke ili ne estas tradukitaj
  * "Ne tradukebla" envolvaĵo estos metita ĉirkaŭ teksto ene de `backticks` por certigi ke ili ne estas tradukitaj
 

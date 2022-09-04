@@ -243,7 +243,7 @@ Hokeylization
  * Lintho tse ka hare ho `backticks` tla fetoleloa, ha u batla hore e be boleng ba 'nete
 
  Ha folaga ea `-M` / `--markdown` e kentsoe tšebetsong:
- * Paterone `] (` e tla fokotsoa hore e be `](` kahoo ho lokisa lihokelo tse robehileng
+ * Paterone `](` e tla fokotsoa hore e be `](` kahoo ho lokisa lihokelo tse robehileng
  * Sekoahelo sa "no translate" se tla behoa ho pota-pota li-code tse kentsoeng, ho boloka indentation e nepahetseng le ho netefatsa hore ha e fetoleloe.
  * Sephutheloana sa "no translate" se tla behoa ho pota-pota mongolo ka har'a `backticks` ho netefatsa hore ha li fetoleloe
 

@@ -57,9 +57,9 @@ Hokeylizéierung
  * [Support a Finanzéierung](#Support-a-Finanzéierung)
  * [Installatioun](#Installatioun)
  * [Setup](#Setup)
- * [Eng JavaScript String Ressource Datei iwwersetzen] (#Iwwersetzen-e-JavaScript-String-Ressource-Datei)
- * [E Verzeechnes vun Textdateien iwwersetzen] (#Iwwersetzen-en-Verzeechnes-vun-Text-Dateien)
- * [Aner Optiounen] (#Aner-Optiounen)
+ * [Eng JavaScript String Ressource Datei iwwersetzen](#Iwwersetzen-e-JavaScript-String-Ressource-Datei)
+ * [E Verzeechnes vun Textdateien iwwersetzen](#Iwwersetzen-en-Verzeechnes-vun-Text-Dateien)
+ * [Aner Optiounen](#Aner-Optiounen)
 
  ## Quell
  * [Hokeylization op GitHub](https://github.com/cobbzilla/hokeylization)
@@ -107,7 +107,7 @@ Hokeylizéierung
  nodeems ech erausfonnt hunn wéi d'Authentifikatioun op Google Cloud funktionnéiert (et kann lëschteg sinn)
 
  Wann Dir aus dem Quellcode leeft, kënnt Dir dës och an eng `.env` Datei an der Quell setzen
- Verzeechnes gi se während der Runtime iwwer [dotenv] (https://www.npmjs.com/package/dotenv) gelueden
+ Verzeechnes gi se während der Runtime iwwer [dotenv](https://www.npmjs.com/package/dotenv) gelueden
 
  ## Eng JavaScript String Ressource Datei iwwersetzen
  Är String Tabell **muss** an enger JavaScript Datei an enger vun dësen zwou Formen sinn:
@@ -243,7 +243,7 @@ Hokeylizéierung
  * D'Saache bannent `backticks` " ginn iwwersat, wann Dir bal ëmmer wëllt datt se wuertwiertlech Wäerter sinn
 
  Wann de `-M` / `--markdown` Fändel aktivéiert ass:
- * D'Muster `] (` wäert op `](` kondenséiert ginn, sou datt déi futtis Markdown Links fixéiert ginn
+ * D'Muster `](` wäert op `](` kondenséiert ginn, sou datt déi futtis Markdown Links fixéiert ginn
  * E "no translate" Wrapper gëtt ronderëm agedréckte Codeblocken plazéiert, déi richteg Abriecher behalen an sécherstellen datt se net iwwersat ginn
  * E "no translate" Wrapper gëtt ronderëm den Text bannent `backticks` fir sécherzestellen datt se net iwwersat ginn
 

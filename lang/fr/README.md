@@ -75,7 +75,7 @@ Hokeyylisation
  J'apprécierais sincèrement même la plus petite [contribution mensuelle via Patreon](https://www.patreon.com/cobbzilla)
 
  ## Installation
- Pour utiliser l'outil de ligne de commande, installez en utilisant `npm` ou `yarn` :
+ Pour utiliser l'outil de ligne de commande, installez en utilisant `npm` ou `yarn` :
 
     npm install -g hokeylization
     yarn global add hokeylization
@@ -243,12 +243,12 @@ Hokeyylisation
  * Les choses à l'intérieur de `backticks` seront traduites, alors que vous voulez presque toujours qu'elles soient des valeurs littérales
 
  Lorsque le `-M` / `--markdown` est activé :
- * Le motif `] (` sera condensé en `](` corrigeant ainsi les liens de démarquage rompus
+ * Le motif `](` sera condensé en `](` corrigeant ainsi les liens de démarquage rompus
  * Un wrapper "sans traduction" sera placé autour des blocs de code indentés, préservant l'indentation appropriée et garantissant qu'ils ne sont pas traduits
  * Un wrapper "pas de traduction" sera placé autour du texte dans `backticks` pour s'assurer qu'ils ne sont pas traduits
 
  ### Traiter comme
- Normalement, tout est traité en texte brut
+ Normalement, tout est traité comme du texte brut
 
  Si votre contenu est HTML, il sera mutilé à moins que vous ne passiez l' `-p html` / `--process-as html`
 

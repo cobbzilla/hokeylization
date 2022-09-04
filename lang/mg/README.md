@@ -243,7 +243,7 @@ Hokeylization
  * Ny zavatra ao anatin'ny ' `backticks` ' dia ho voadika, rehefa saika tianao ho sanda ara-bakiteny foana izy ireo
 
  Rehefa alefa ny saina `-M` / `--markdown` :
- * Ny lamina `] (` dia hafohezina amin'ny `](` amin'izany dia manamboatra ny rohy simba.
+ * Ny lamina `](` dia hafohezina amin'ny `](` amin'izany dia manamboatra ny rohy simba.
  * Apetaka eo amin'ny blocs misy kaody mitsindroka ny fonosina "tsy misy dikanteny", mitahiry ny indent ary miantoka fa tsy voadika.
  * Hapetraka manodidina ny lahatsoratra ao anatin'ny `backticks` ' ny fonony "tsy misy dikanteny" mba hahazoana antoka fa tsy voadika
 
@@ -260,7 +260,7 @@ Hokeylization
 
  Ny asa `filter` dia tsy maintsy ho `async` satria `await` no hiantsoana azy
 
- Alohan'ny hanoratana ny rakitra amin'ny kapila, ny votoatin'ny rakitra manontolo dia halefa any amin'ny asa `filter` ho tady
+ Alohan'ny hanoratana ny rakitra ao amin'ny kapila, ny votoatin'ny rakitra iray manontolo dia halefa any amin'ny asa `filter` ho tady
 
  Ny sanda miverina avy amin'ny fiasa `filter` no tena hosoratana amin'ny fitahirizana
 

@@ -14,28 +14,28 @@ Hokeylizálás
 
  Biztos vagyok benne, hogy nem tökéletes, de remélem, jobb a semminél!
 
- [🇸🇦 arab] (lang/ar/README.md)
- [🇧🇩 bengáli] (lang/bn/README.md)
+ [🇸🇦 arab](../ar/README.md)
+ [🇧🇩 bengáli](../bn/README.md)
  [🇩🇪 német](../de/README.md)
  [🇺🇸 angol](../en/README.md)
  [🇪🇸 spanyol](../es/README.md)
- [🇫🇷 francia] (lang/fr/README.md)
- [🇹🇩 Hausa] (lang/ha/README.md)
- [🇮🇳 hindi] (lang/hi/README.md)
+ [🇫🇷 francia](../fr/README.md)
+ [🇹🇩 Hausa](../ha/README.md)
+ [🇮🇳 hindi](../hi/README.md)
  [🇮🇩 indonéz](../id/README.md)
- [🇮🇹 olasz] (lang/it/README.md)
- [🇯🇵 japán] (lang/ja/README.md)
- [🇰🇷 koreai] (lang/ko/README.md)
+ [🇮🇹 olasz](../it/README.md)
+ [🇯🇵 japán](../ja/README.md)
+ [🇰🇷 koreai](../ko/README.md)
  [🇮🇳 Maranthi](../mr/README.md)
- [🇵🇱 lengyel] (lang/pl/README.md)
- [🇧🇷 portugál] (lang/pt/README.md)
- [🇷🇺 orosz] (lang/ru/README.md)
- [🇰🇪 szuahéli] (lang/sw/README.md)
+ [🇵🇱 lengyel](../pl/README.md)
+ [🇧🇷 portugál](../pt/README.md)
+ [🇷🇺 orosz](../ru/README.md)
+ [🇰🇪 szuahéli](../sw/README.md)
  [🇵🇭 Tagalog](../tl/README.md)
- [🇹🇷 török] (lang/tr/README.md)
- [🇵🇰 urdu] (lang/ur/README.md)
- [🇻🇳 vietnami] (lang/vi/README.md)
- [🇨🇳 kínai] (lang/zh/README.md)
+ [🇹🇷 török](../tr/README.md)
+ [🇵🇰 urdu](../ur/README.md)
+ [🇻🇳 vietnami](../vi/README.md)
+ [🇨🇳 kínai](../zh/README.md)
 
 
  **[📚 ... Minden nyelv ...](../README.md)**
@@ -243,7 +243,7 @@ Hokeylizálás
  * A `backticks` belüli dolgokat a rendszer lefordítja, ha szinte mindig azt szeretné, hogy azok szó szerinti értékek legyenek
 
  Ha a `-M` / `--markdown` jelző engedélyezve van:
- * A `] (` minta `] (` `](` tömörítve ezzel javítva a hibás leíró hivatkozásokat
+ * A `](` minta `](` `](` tömörítve ezzel javítva a hibás leíró hivatkozásokat
  * A behúzott kódblokkok köré "nincs fordítás" burkoló kerül elhelyezésre, amely megőrzi a megfelelő behúzást, és biztosítja, hogy ne legyenek lefordítva.
  * A „fordítás nélkül” burkoló a `backticks` belüli szöveg körül lesz elhelyezve annak biztosítására, hogy ne legyenek lefordítva.
 

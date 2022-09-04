@@ -14,28 +14,28 @@ Hokeyliseerimine
 
  Olen kindel, et see pole täiuslik, aga ma loodan, et see on parem kui mitte midagi!
 
- [🇸🇦 araabia] (lang/ar/README.md)
- [🇧🇩 bengali] (lang/bn/README.md)
+ [🇸🇦 araabia](../ar/README.md)
+ [🇧🇩 bengali](../bn/README.md)
  [🇩🇪 saksa keel](../de/README.md)
  [🇺🇸 inglise keel](../en/README.md)
  [🇪🇸 hispaania](../es/README.md)
  [🇫🇷 prantsuse keel](../fr/README.md)
  [🇹🇩 Hausa](../ha/README.md)
  [🇮🇳 Hindi](../hi/README.md)
- [🇮🇩 Indoneesia] (lang/id/README.md)
- [🇮🇹 itaalia] (lang/it/README.md)
- [🇯🇵 jaapani] (lang/ja/README.md)
- [🇰🇷 korea] (lang/ko/README.md)
+ [🇮🇩 Indoneesia](../id/README.md)
+ [🇮🇹 itaalia](../it/README.md)
+ [🇯🇵 jaapani](../ja/README.md)
+ [🇰🇷 korea](../ko/README.md)
  [🇮🇳 Maranthi](../mr/README.md)
- [🇵🇱 Poola] (lang/pl/README.md)
- [🇧🇷 portugali] (lang/pt/README.md)
+ [🇵🇱 Poola](../pl/README.md)
+ [🇧🇷 portugali](../pt/README.md)
  [🇷🇺 vene keel](../ru/README.md)
- [🇰🇪 suahiili] (lang/sw/README.md)
+ [🇰🇪 suahiili](../sw/README.md)
  [🇵🇭 Tagalog](../tl/README.md)
- [🇹🇷 türgi] (lang/tr/README.md)
- [🇵🇰 Urdu] (lang/ur/README.md)
+ [🇹🇷 türgi](../tr/README.md)
+ [🇵🇰 Urdu](../ur/README.md)
  [🇻🇳 vietnami](../vi/README.md)
- [🇨🇳 hiina] (lang/zh/README.md)
+ [🇨🇳 hiina](../zh/README.md)
 
 
  **[📚 ... Kõik keeled ...](../README.md)**
@@ -243,7 +243,7 @@ Hokeyliseerimine
  * `backticks` sees olevad asjad tõlgitakse, kui soovite peaaegu alati, et need oleksid sõnasõnalised väärtused
 
  Kui lipp "-M" / `--markdown` `-M` lubatud:
- * Muster `] (` tihendatakse `](` -ga parandades katkised allahindluslingid
+ * Muster `](` tihendatakse `](` -ga parandades katkised allahindluslingid
  * Taandega koodiplokkide ümber asetatakse ümbris "tõlketa", mis säilitab õige taande ja tagab, et neid ei tõlgita
  * "Tõlketa" ümbris asetatakse teksti ümber `backticks` tagamaks, et neid ei tõlgita
 

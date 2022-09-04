@@ -243,7 +243,7 @@ Hokeylization
  * Dingen binnen `backticks` worden vertaald, terwijl je bijna altijd wilt dat het letterlijke waarden zijn
 
  Wanneer de vlag `-M` / `--markdown` is ingeschakeld:
- * Het patroon `] (` zal worden gecomprimeerd tot `](` waardoor de verbroken markdown-links worden hersteld
+ * Het patroon `](` zal worden gecomprimeerd tot `](` waardoor de verbroken markdown-links worden hersteld
  * Er wordt een "no translate"-wrapper rond ingesprongen codeblokken geplaatst, zodat de juiste inspringing behouden blijft en ze niet worden vertaald
  * Er wordt een "no translate" wrapper om tekst geplaatst binnen `backticks` om ervoor te zorgen dat ze niet worden vertaald
 
