@@ -15,6 +15,7 @@ export default {
     err_processFile_writeFile: '*** Error writing to outfile for {{lang}}: {{langOut}}: {{e}}',
     err_processFile_error: '*** Error translating: {{e}}',
     err_processing: '*** Unexpected error: {{e}}',
+    warn_missing_close_notranslate_tag: 'Output from translation was missing a closing tag where one was expected. Label {{ label }}, line number {{ lineNumber }}, line: {{ line }}',
 
     info_summary: 'Quick translation service using Google Translate\nVersion {{VERSION}}',
     info_description: '=== Source ===\n' +

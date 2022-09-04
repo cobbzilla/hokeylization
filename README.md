@@ -54,6 +54,7 @@ When you create a new GitHub issue about a translation, please do:
 # Contents
 * [Source](#Source)
 * [Support and Funding](#Support-and-Funding)
+* [Installation](#Installation)
 * [Setup](#Setup)
 * [Translating a JavaScript string resource file](#Translating-a-JavaScript-string-resource-file)
 * [Translating a directory of text files](#Translating-a-directory-of-text-files)
@@ -71,6 +72,32 @@ Recently I lost my job, and I don't really have any other work lined up
 So I'm going to try writing helpful software and see if that works
 
 I would sincerely appreciate even the smallest [monthly contribution via Patreon](https://www.patreon.com/cobbzilla)
+
+## Installation
+To use the command line tool, install using `npm` or `yarn`:
+
+    npm install -g hokeylization
+    yarn global add hokeylization
+
+To use as a library, install the `lite` version, which is much smaller:
+
+    npm install -g hokeylization-lite
+    yarn global add hokeylization-lite
+
+Then look at help for the `hokey` command:
+
+    hokey --help
+    hokey -h
+
+Want to see output in your langauge or another language?
+
+`hokey` tries to detect the language automatically from your shell's environment variables
+
+You can force a language by setting the `LC_ALL` environment variable:
+
+    LC_ALL=it hokey --help
+
+Note that if you have installed `hokeylization-lite`, command help is only available in English
 
 ## Setup
 Set the `GOOGLE_TRANSLATE_PROJECT_ID` environment variable to identify your Google Translate project
