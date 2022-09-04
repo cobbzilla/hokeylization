@@ -49,7 +49,8 @@ Hokeylization
  Lè ou kreye yon nouvo pwoblèm GitHub sou yon tradiksyon, tanpri fè:
  * enkli URL paj la (kopi/kole nan ba adrès navigatè a)
  * enkli tèks egzak ki mal (kopi/kole nan navigatè a)
- * Tanpri ofri yon sijesyon pou yon pi bon tradiksyon
+ * Tanpri dekri sa ki mal -- èske tradiksyon an pa kòrèk? se fòma a kase yon jan kanmenm?
+ * Tanpri ofri yon sijesyon pou yon pi bon tradiksyon, oswa ki jan tèks la ta dwe byen fòma
  * **Mèsi!**
 
  # Kontni
@@ -269,6 +270,6 @@ Hokeylization
  ### Ede
  Sèvi ak `-h` / `--help` pou montre èd
 
- ## Bon Tradiksyon!
+ ## Pran yon tan amizan tradui lang!
 
 </pre>

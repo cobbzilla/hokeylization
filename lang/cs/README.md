@@ -49,7 +49,8 @@ Hokeylizace
  Když vytvoříte nový problém na GitHubu o překladu, proveďte prosím:
  * zahrňte adresu URL stránky (zkopírujte/vložte z adresního řádku prohlížeče)
  * uveďte přesný text, který je nesprávný (zkopírujte/vložte z prohlížeče)
- * Nabídněte laskavě návrh na lepší překlad
+ * popište prosím, co je špatně - je překlad nesprávný? je formátování nějak narušené?
+ * laskavě nabídněte návrh lepšího překladu nebo jak by měl být text správně naformátován
  * **Děkuji!**
 
  # Obsah
@@ -269,6 +270,6 @@ Hokeylizace
  ### Pomoc
  K zobrazení nápovědy použijte `-h` / `--help`
 
- ## Hodně štěstí při překládání!
+ ## Bavte se při překládání jazyků!
 
 </pre>

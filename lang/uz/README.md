@@ -49,7 +49,8 @@ Hokeylizatsiya
  Tarjima haqida yangi GitHub muammosini yaratganingizda, iltimos:
  * sahifa URL manzilini qo'shing (brauzer manzil satridan nusxalash/joylashtirish)
  * noto'g'ri bo'lgan aniq matnni kiriting (brauzerdan nusxalash/joylashtirish)
- * Yaxshiroq tarjima taklifini bering
+ * nima noto'g'ri ekanligini tushuntirib bering -- tarjima noto'g'ri? formatlash qandaydir tarzda buzilganmi?
+ * Yaxshiroq tarjima bo'yicha taklif yoki matnni qanday qilib to'g'ri formatlash kerakligini taklif qiling
  * **Rahmat!**
 
  # Tarkib
@@ -258,17 +259,17 @@ Hokeylizatsiya
 
  Ushbu parametr qiymati `filter` nomli funksiyani eksport qiluvchi JS fayliga yoʻl boʻlishi kerak
 
- " `filter` " funksiyasi " `async` " bo'lishi kerak, chunki u " `await` " deb chaqiriladi
+ " `filter` " funksiyasi " `async` " bo'lishi kerak, chunki u " `await` " ni chaqiradi
 
  Fayllar diskka yozilishidan oldin butun fayl mazmuni " `filter` funksiyasiga satr sifatida uzatiladi.
 
- " `filter` funksiyasidan qaytariladigan qiymat aslida saqlashga yoziladigan narsadir
+ " `filter` funktsiyasidan qaytariladigan qiymat aslida saqlashga yoziladigan narsadir
 
  Shunday qilib, siz oxirida nima yozilishini to'liq nazorat qilasiz
 
  ### Yordam bering
  Yordamni ko'rsatish uchun `-h` / `--help` dan foydalaning
 
- ## Baxtli tarjima!
+ ## Tillarni tarjima qilishdan zavqlaning!
 
 </pre>

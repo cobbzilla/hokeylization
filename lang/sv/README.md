@@ -49,7 +49,8 @@ Hokeylisering
  När du skapar ett nytt GitHub-nummer om en översättning, vänligen gör:
  * inkludera sidans URL (kopiera/klistra in från webbläsarens adressfält)
  * inkludera den exakta texten som är fel (kopiera/klistra in från webbläsaren)
- * kom gärna med ett förslag på en bättre översättning
+ * vänligen beskriv vad som är fel -- är översättningen felaktig? är formateringen trasig på något sätt?
+ * kom gärna med ett förslag på en bättre översättning eller hur texten bör formateras korrekt
  * **Tack!**
 
  # Innehåll
@@ -269,6 +270,6 @@ Hokeylisering
  ### Hjälp
  Använd `-h` / `--help` för att visa hjälp
 
- ## Lycka till med översättningen!
+ ## Ha det roligt med att översätta språk!
 
 </pre>

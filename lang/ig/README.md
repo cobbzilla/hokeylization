@@ -49,7 +49,8 @@ Hokeyylization
  Mgbe ị mepụtara mbipụta GitHub ọhụrụ gbasara ntụgharị asụsụ, biko mee:
  * tinye URL ibe (detuo / mado site na ebe adreesị ihe nchọgharị)
  * tinye ederede ezighi ezi (detuo / mado site na ihe nchọgharị)
- * jiri nwayọ nye ntụnye ntụgharị asụsụ ka mma
+ * biko kọwaa ihe adịghị mma -- ntụgharị asụsụ ezighi ezi? Agbajiri usoro nhazi ahụ n'ụzọ ụfọdụ?
+ * jiri obiọma nye ntụnye nke ntụgharị asụsụ ka mma, ma ọ bụ ka esi ahazi ederede nke ọma
  * **Daalụ!**
 
  # ọdịnaya
@@ -269,6 +270,6 @@ Hokeyylization
  ### Enyemaka
  Jiri `-h` / `--help` gosi enyemaka
 
- ## Ntụgharị asụsụ obi ụtọ!
+ ## Nwee obi ụtọ ịsụgharị asụsụ!
 
 </pre>

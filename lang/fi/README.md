@@ -49,7 +49,8 @@ Hokeylisaatio
  Kun luot uuden GitHub-ongelman käännöksestä, toimi seuraavasti:
  * sisällytä sivun URL-osoite (kopioi/liitä selaimen osoiteriviltä)
  * sisällytä täsmällinen virheellinen teksti (kopioi/liitä selaimesta)
- * Ehdota ystävällisesti parempaa käännöstä
+ * kuvaile mikä on vialla -- onko käännös virheellinen? onko muotoilu rikki jotenkin?
+ * Ehdota ystävällisesti parempaa käännöstä tai tekstin oikeaa muotoilua
  * **Kiitos!**
 
  # Sisältö
@@ -269,6 +270,6 @@ Hokeylisaatio
  ### Auta
  Käytä `-h` / `--help` näyttääksesi ohjeen
 
- ## Hyvää kääntämistä!
+ ## Pidä hauskaa kielten kääntämisestä!
 
 </pre>

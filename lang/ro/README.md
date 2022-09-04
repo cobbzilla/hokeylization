@@ -49,7 +49,8 @@ Hokeylizare
  Când creați o nouă problemă GitHub despre o traducere, faceți:
  * includeți adresa URL a paginii (copiați/lipiți din bara de adrese a browserului)
  * includeți textul exact care este greșit (copiați/lipiți din browser)
- * Vă rugăm să oferiți o sugestie pentru o traducere mai bună
+ * vă rugăm să descrieți ce este greșit -- traducerea este incorectă? formatarea este stricata cumva?
+ * Vă rugăm să oferiți o sugestie pentru o traducere mai bună sau cum ar trebui să fie formatat corect textul
  * **Mulțumesc!**
 
  # Cuprins
@@ -264,11 +265,11 @@ Hokeylizare
 
  Valoarea returnată de la funcția `filter` este ceea ce va fi de fapt scrisă în stocare
 
- Astfel, aveți control total asupra a ceea ce va fi scris în cele din urmă
+ Astfel, ai control total asupra a ceea ce va fi scris în cele din urmă
 
  ### Ajutor
- Folosiți `-h` / `--help` pentru a afișa ajutorul
+ Folosiți `-h` / `--help` pentru a afișa ajutor
 
- ## Traducere fericită!
+ ## Distrează-te traducând limbi!
 
 </pre>

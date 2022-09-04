@@ -49,7 +49,8 @@ Hokeylization
  Ke hana ʻoe i kahi pilikia GitHub hou e pili ana i kahi unuhi, e ʻoluʻolu e hana:
  * hoʻokomo i ka URL o ka ʻaoʻao (kope/paʻi mai ka ʻaoʻao ʻaoʻao pūnaewele)
  * hoʻokomo i ka kikokikona pololei i hewa (kope/paʻi mai ka polokalamu kele pūnaewele)
- * ʻoluʻolu e hāʻawi i ka manaʻo o kahi unuhi ʻoi aku ka maikaʻi
+ * ʻoluʻolu e wehewehe i ka hewa -- hewa ka unuhi? Ua haki paha ke ʻano o ke ʻano?
+ * ʻoluʻolu e hāʻawi i ka manaʻo o kahi unuhi ʻoi aku ka maikaʻi, a i ʻole pehea e hoʻopili pono ʻia ai ka kikokikona
  * **Mahalo!**
 
  # Maʻiʻo
@@ -258,17 +259,17 @@ Hokeylization
 
  Pono ka waiwai o kēia koho he ala i kahi faila JS e hoʻokuʻu aku i kahi hana i kapa `filter`
 
- Pono ka hana `async` `filter` ka mea, e kāhea ʻia ʻo `await` '
+ Pono ka hana `async` `filter` ka mea `await` ' e kāhea ʻia ma luna o ia
 
  Ma mua o ka kākau ʻia ʻana o nā faila i ka diski, e hāʻawi ʻia nā ʻike āpau āpau i ka hana `filter` ma ke ʻano he kaula
 
- ʻO ka waiwai hoʻihoʻi mai ka hana `filter` ka mea e kākau maoli ʻia i kahi waihona
+ ʻO ka waiwai hoʻihoʻi mai ka hana `filter` ka mea e kākau maoli ʻia i ka waihona
 
  No laila, loaʻa iā ʻoe ka mana piha ma luna o ka mea e kākau hope ʻia
 
  ### Kōkua
  E hoʻohana `-h` / `--help` e hōʻike i ke kōkua
 
- ## Hauʻoli i ka unuhi ʻana!
+ ## E hauʻoli i ka unuhi ʻana i nā ʻōlelo!
 
 </pre>

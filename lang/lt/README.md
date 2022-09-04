@@ -49,7 +49,8 @@ Hokeylizacija
  Kai kuriate naują „GitHub“ problemą apie vertimą, atlikite toliau nurodytus veiksmus.
  * įtraukite puslapio URL (nukopijuokite / įklijuokite iš naršyklės adreso juostos)
  * įtraukite tikslų tekstą, kuris neteisingas (nukopijuokite / įklijuokite iš naršyklės)
- * maloniai pasiūlykite geresnio vertimo pasiūlymą
+ * aprašykite, kas negerai – ar vertimas neteisingas? ar formatavimas kažkaip sugedęs?
+ * maloniai pasiūlykite geresnio vertimo pasiūlymą arba kaip tinkamai suformatuoti tekstą
  * **Ačiū!**
 
  # Turinys
@@ -269,6 +270,6 @@ Hokeylizacija
  ### Pagalba
  Norėdami parodyti pagalbą, naudokite `-h` / `--help` .
 
- ## Laimingo vertimo!
+ ## Smagiai praleiskite laiką versdami kalbas!
 
 </pre>

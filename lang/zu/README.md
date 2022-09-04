@@ -49,7 +49,8 @@ I-Hokeylization
  Uma udala udaba olusha lwe-GitHub mayelana nokuhumusha, sicela wenze:
  * faka i-URL yekhasi (kopisha/unamathisele kubha yekheli lesiphequluli)
  * faka phakathi nombhalo ongalungile (kopisha/unamathisele esipheqululini)
- * ngomusa nikeza isiphakamiso senguqulo engcono
+ * ngicela uchaze ukuthi yini engalungile -- ingabe ukuhumusha akulungile? ingabe ukufometha kwephukile ngandlela thile?
+ * ngomusa nikeza isiphakamiso senguqulo engcono kakhulu, noma indlela umbhalo okufanele ufomethwe kahle ngayo
  * **Ngiyabonga!**
 
  # Okuqukethwe
@@ -238,8 +239,8 @@ I-Hokeylization
  * Izixhumanisi eziphukile. Ekuhumusheni, kuvela uhlamvu lwesikhala ngemva kokuphela kwencazelo yesixhumanisi sokubeka phansi (nokuthi `]` ) kodwa
  ngaphambi kokuthi isixhumanisi sayo esiqondiswe kuso siqale (ngokuthi `(` ). Lokhu kubangela ukuthi ukubeke phansi kunikezwe ngokungalungile, kanye nesixhumanisi
  iphukile uma ubuka idokhumenti.
- * Amabhulokhi ekhodi ahunyushwa. I-Google Translate ayazi ukuthi i-markdown icabangani ngekhodi nokuthi yini engayazi
- * Isikhala esingalungile samabhulokhi amakhodi ahlehlisiwe. Isikhala sinzima ukusigcina ekuhumusheni
+ * Amabhulokhi ekhodi ayahunyushwa. I-Google Translate ayazi ukuthi i-markdown icabangani ngekhodi nokuthi yini engayazi
+ * Isikhala esingalungile samabhulokhi ekhodi ehlehlisiwe. Isikhala sinzima ukusigcina ekuhumusheni
  * Izinto ezingaphakathi kokuthi `backticks` zizohunyushwa, lapho cishe uhlale ufuna ukuthi abe amanani angokoqobo
 
  Uma `-M` / `--markdown` :
@@ -269,6 +270,6 @@ I-Hokeylization
  ### Usizo
  Sebenzisa `-h` / `--help` ukuze ubonise usizo
 
- ## Jabulela Ukuhumusha!
+ ## Yiba nesikhathi esimnandi sokuhumusha izilimi!
 
 </pre>

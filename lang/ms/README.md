@@ -49,7 +49,8 @@ Hokeylization
  Apabila anda membuat isu GitHub baharu tentang terjemahan, sila lakukan:
  * sertakan URL halaman (salin/tampal dari bar alamat penyemak imbas)
  * sertakan teks tepat yang salah (salin/tampal dari penyemak imbas)
- * sila tawarkan cadangan terjemahan yang lebih baik
+ * sila terangkan apa yang salah -- adakah terjemahan itu salah? adakah pemformatan rosak entah bagaimana?
+ * sila tawarkan cadangan terjemahan yang lebih baik, atau cara teks harus diformat dengan betul
  * **Terima kasih!**
 
  # Kandungan
@@ -269,6 +270,6 @@ Hokeylization
  ### Bantuan
  Gunakan `-h` / `--help` untuk menunjukkan bantuan
 
- ## Selamat Menterjemah!
+ ## Berseronoklah menterjemah bahasa!
 
 </pre>

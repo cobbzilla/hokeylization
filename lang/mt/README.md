@@ -49,7 +49,8 @@ Hokeylization
  Meta toħloq kwistjoni ġdida ta' GitHub dwar traduzzjoni, jekk jogħġbok agħmel:
  * inkludi l-URL tal-paġna (kopja/pejst mill-bar tal-indirizz tal-browser)
  * inkludi t-test eżatt li huwa ħażin (ikkopja/pejst mill-browser)
- * ġentilment toffri suġġeriment għal traduzzjoni aħjar
+ * jekk jogħġbok iddeskrivi x'inhu ħażin -- it-traduzzjoni hija żbaljata? l-ifformattjar huwa miksur b'xi?
+ * ġentilment toffri suġġeriment għal traduzzjoni aħjar, jew kif it-test għandu jkun ifformattjat kif suppost
  * **Grazzi!**
 
  # Kontenut
@@ -237,7 +238,7 @@ Hokeylization
  Bil-fajls tal-markdown, jekk ma tużax il-bandiera `-M` , probabilment issib dawn il-problemi:
  * Links miksura. Fit-traduzzjoni, karattru spazjali jidher wara li tispiċċa deskrizzjoni tal-link markdown (b `]` ) iżda
  qabel ma tibda l-link fil-mira tagħha (bil- `(` ). Dan jikkawża li l-markdown tirrendi ħażin, u l-link
- jinkiser meta tara d-dokument.
+ jitkisser meta tara d-dokument.
  * Il-blokki tal-kodiċi jiġu tradotti. Google translate ma jafx x'jikkunsidra l-markdown kodiċi u dak li ma jagħmilx
  * Spazjar mhux korrett għall-blokki tal-kodiċi indentati. L-ispazjar huwa diffiċli biex jiġi ppreservat fit-traduzzjoni
  * Affarijiet ġewwa `backticks` se jiġu tradotti, meta kważi dejjem trid li jkunu valuri letterali
@@ -260,7 +261,7 @@ Hokeylization
 
  Il-funzjoni `filter` trid tkun `async` " għaliex `await` se tissejjaħ fuqha
 
- Qabel ma l-fajls jinkitbu fuq id-diska, il-kontenut kollu tal-fajl se jiġi mgħoddi għall-funzjoni `filter` bħala string
+ Qabel ma l-fajls jinkitbu fuq id-disk, il-kontenut kollu tal-fajl se jiġi mgħoddi għall-funzjoni `filter` bħala string
 
  Il-valur tar-ritorn mill-funzjoni `filter` huwa dak li fil-fatt se jinkiteb fil-ħażna
 
@@ -269,6 +270,6 @@ Hokeylization
  ### Għajnuna
  Uża `-h` / `--help` biex turi l-għajnuna
 
- ## Traduzzjoni kuntenta!
+ ## Ħu gost tittraduċi l-lingwi!
 
 </pre>

@@ -49,7 +49,8 @@ Hokeylisation
  Mugihe uremye ikibazo gishya cya GitHub kubyerekeye ubusobanuro, nyamuneka kora:
  * shyiramo urupapuro rwa URL (kopi / komatanya uhereye kuri aderesi ya aderesi)
  * shyiramo inyandiko nyayo itariyo (kopi / komatanya kuri mushakisha)
- * mutange igitekerezo cyo gusobanura neza
+ * nyamuneka sobanura ibitagenda neza - ubusobanuro ntabwo aribwo? imiterere yacitse kuburyo runaka?
+ * mutange igitekerezo cyo gusobanura neza, cyangwa uburyo inyandiko igomba guhindurwa neza
  * ** Urakoze! **
 
  # Ibirimo
@@ -269,6 +270,6 @@ Hokeylisation
  ### Ubufasha
  Koresha `-h` / `--help` kwerekana ubufasha
 
- ## Guhindura neza!
+ ## Mugire ibihe bishimishije muguhindura indimi!
 
 </pre>

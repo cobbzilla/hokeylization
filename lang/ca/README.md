@@ -49,7 +49,8 @@ Hokeylització
  Quan creeu un nou problema de GitHub sobre una traducció, feu el següent:
  * incloure l'URL de la pàgina (copiar/enganxar des de la barra d'adreces del navegador)
  * inclou el text exacte que és incorrecte (copiar/enganxar des del navegador)
- * Si us plau, ofereix un suggeriment d'una millor traducció
+ * si us plau, descriu què està malament: la traducció és incorrecta? el format està trencat d'alguna manera?
+ * Oferiu amablement un suggeriment d'una millor traducció o com s'hauria de formatar correctament el text
  * **Gràcies!**
 
  # Continguts
@@ -256,9 +257,9 @@ Hokeylització
  Per als aventurers: quan processeu fitxers en un directori, podeu passar l' `-F` / `--filter`
  per filtrar la sortida abans que s'escriu al sistema de fitxers
 
- El valor d'aquesta opció ha de ser un camí d'accés a un fitxer JS que exporti una funció anomenada `filter`
+ El valor d'aquesta opció ha de ser una ruta d'accés a un fitxer JS que exporti una funció anomenada `filter`
 
- La funció `filter` ha de ser `async` perquè se'n cridarà `await`
+ La funció `filter` ha de ser `async` " perquè s'hi cridarà `await`
 
  Abans que els fitxers s'escriguin al disc, tot el contingut del fitxer es passarà a la funció `filter` com a cadena
 
@@ -269,6 +270,6 @@ Hokeylització
  ### Ajuda
  Utilitzeu `-h` / `--help` per mostrar l'ajuda
 
- ## Feliç traducció!
+ ## Passeu-vos una estona divertida traduint idiomes!
 
 </pre>

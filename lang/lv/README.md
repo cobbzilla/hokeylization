@@ -49,7 +49,8 @@ Hokeilizācija
  Kad veidojat jaunu GitHub problēmu par tulkojumu, lūdzu, rīkojieties šādi:
  * iekļaujiet lapas URL (kopējiet/ielīmējiet no pārlūkprogrammas adreses joslas)
  * iekļaujiet precīzu nepareizo tekstu (kopējiet/ielīmējiet no pārlūkprogrammas)
- * laipni piedāvājiet labāka tulkojuma ieteikumu
+ * Lūdzu, aprakstiet, kas ir nepareizi — vai tulkojums ir nepareizs? vai formatējums ir kaut kā bojāts?
+ * laipni piedāvājiet ieteikumu par labāku tulkojumu vai kā pareizi formatēt tekstu
  * **Paldies!**
 
  # Saturs
@@ -253,7 +254,7 @@ Hokeilizācija
  Ja jūsu saturs ir HTML, tas tiks sabojāts, ja vien nenodosit opciju `-p html` " / `--process-as html`
 
  ### Filtrs
- Piedzīvojumu cienītājiem: apstrādājot failus direktorijā, varat nodot opciju `-F` / `--filter`
+ Piedzīvojumu meklētājiem: apstrādājot failus direktorijā, varat nodot opciju `-F` / `--filter`
  lai filtrētu izvadi, pirms tā tiek ierakstīta failu sistēmā
 
  Šīs opcijas vērtībai ir jābūt ceļam uz JS failu, kas eksportē funkciju ar nosaukumu `filter`
@@ -269,6 +270,6 @@ Hokeilizācija
  ### Palīdzība
  Lai parādītu palīdzību, izmantojiet taustiņu `-h` / `--help`
 
- ## Laimīgu tulkošanu!
+ ## Jautri laiku tulkojot valodas!
 
 </pre>

@@ -49,7 +49,8 @@ Hokeylisierung
  Wenn Sie ein neues GitHub-Problem zu einer Übersetzung erstellen, gehen Sie bitte wie folgt vor:
  * Fügen Sie die Seiten-URL hinzu (Kopieren/Einfügen aus der Adressleiste des Browsers)
  * Geben Sie genau den falschen Text ein (Kopieren/Einfügen aus dem Browser)
- * Bitte machen Sie einen Vorschlag für eine bessere Übersetzung
+ * Bitte beschreiben Sie, was falsch ist -- ist die Übersetzung falsch? ist die Formatierung irgendwie kaputt?
+ * Machen Sie bitte einen Vorschlag für eine bessere Übersetzung oder wie der Text richtig formatiert werden sollte
  * **Vielen Dank!**
 
  # Inhalt
@@ -269,6 +270,6 @@ Hokeylisierung
  ### Hilfe
  Verwenden Sie `-h` / `--help` , um Hilfe anzuzeigen
 
- ## Viel Spaß beim Übersetzen!
+ ## Viel Spaß beim Übersetzen von Sprachen!
 
 </pre>

@@ -49,7 +49,8 @@ hokeyleşme
  Bir çeviriyle ilgili yeni bir GitHub sorunu oluşturduğunuzda lütfen şunları yapın:
  * sayfa URL'sini ekleyin (tarayıcı adres çubuğundan kopyala/yapıştır)
  * yanlış olan metni tam olarak ekleyin (tarayıcıdan kopyala/yapıştır)
- * lütfen daha iyi bir çeviri önerisi sunun
+ * lütfen neyin yanlış olduğunu açıklayın -- çeviri yanlış mı? biçimlendirme bir şekilde bozuk mu?
+ * lütfen daha iyi bir çeviri veya metnin nasıl düzgün biçimlendirilmesi gerektiği konusunda bir öneride bulunun
  * **Teşekkürler!**
 
  # İçindekiler
@@ -269,6 +270,6 @@ hokeyleşme
  ### Yardım
  Yardımı göstermek için `-h` / `--help` kullanın
 
- ## Mutlu Çeviri!
+ ## Dil çevirirken iyi eğlenceler!
 
 </pre>

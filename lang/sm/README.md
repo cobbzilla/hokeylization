@@ -49,7 +49,8 @@ Hokeylization
  A e fatuina se lomiga fou GitHub e uiga i se faaliliuga, faamolemole fai:
  * fa'aaofia ai le itulau URL (kopi/pa'i mai le tuatusi tuatusi pa)
  * fa'aaofia ai le fa'amatalaga sa'o e sese (kopi/pa'i mai le su'esu'ega)
- * ofo mai ma le agalelei se fautuaga o se faaliliuga e sili atu
+ * fa'amolemole fa'amatala le mea o lo'o fa'aletonu -- e le sa'o le fa'aliliuga? ua malepe le faatulagaga?
+ * ofo mai ma le agalelei se fautuaga o se faaliliuga e sili atu, po o le auala e tatau ona faatulaga lelei ai le tusitusiga
  * **Faafetai!**
 
  # I totonu
@@ -258,7 +259,7 @@ Hokeylization
 
  O le tau o lenei filifiliga e tatau ona avea ma ala i se faila JS e auina atu i fafo se galuega e igoa `filter`
 
- O le galuega `filter` e tatau ona `async` aua `await` ' o le a valaauina i ai
+ O le galuega `filter` e tatau ona `async` aua `await` ' o le a vala'au i ai
 
  A'o le'i tusia faila i le tisiki, o le a tu'uina atu uma mea o lo'o i totonu o faila i le `filter` galuega o se manoa
 
@@ -269,6 +270,6 @@ Hokeylization
  ### Fesoasoani
  Fa'aaoga `-h` / `--help` e fa'aali ai le fesoasoani
 
- ## Manuia le Faaliliu!
+ ## Ia maua se taimi fiafia e faaliliu gagana!
 
 </pre>

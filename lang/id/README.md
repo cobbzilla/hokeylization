@@ -49,7 +49,8 @@ Hokeylization
  Saat Anda membuat masalah GitHub baru tentang terjemahan, lakukan:
  * sertakan URL halaman (salin/tempel dari bilah alamat browser)
  * sertakan teks persis yang salah (salin/tempel dari browser)
- * mohon menawarkan saran terjemahan yang lebih baik
+ * tolong jelaskan apa yang salah -- apakah terjemahannya salah? apakah formatnya rusak entah bagaimana?
+ * mohon menawarkan saran terjemahan yang lebih baik, atau bagaimana teks harus diformat dengan benar
  * **Terima kasih!**
 
  # Isi
@@ -269,6 +270,6 @@ Hokeylization
  ### Membantu
  Gunakan `-h` / `--help` untuk menampilkan bantuan
 
- ## Selamat Menerjemahkan!
+ ## Bersenang-senang menerjemahkan bahasa!
 
 </pre>

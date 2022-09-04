@@ -49,7 +49,8 @@ Hokeylizasiýa
  Terjime hakda täze GitHub meselesini döredeniňizde, haýyş edýärin:
  * sahypa URL-ni goşuň (brauzeriň salgy setirinden göçüriň / göçüriň)
  * nädogry teksti goşuň (brauzerden göçüriň / göçüriň)
- * has gowy terjime teklibini teklip ediň
+ * nämäniň nädogrydygyny düşündirmegiňizi haýyş edýäris - terjime nädogrymy? formatlamak nädip bozuldy?
+ * has gowy terjime ýa-da tekstiň nädip formatlanmalydygy barada teklip hödürläň
  * **Sagbol!**
 
  # Mazmuny
@@ -269,6 +270,6 @@ Hokeylizasiýa
  ### Kömek ediň
  `--help` görkezmek üçin "-h" / " `-h` " ulanyň
 
- ## Terjimäňiz gutly bolsun!
+ ## Dilleri terjime etmekde hezil ediň!
 
 </pre>

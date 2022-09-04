@@ -49,7 +49,8 @@ Hokeylization
  Kiam vi kreas novan GitHub-an numeron pri traduko, bonvolu fari:
  * inkluzivu la paĝon URL (kopiu/gluu el retumila adresbreto)
  * inkluzivu la ĝustan tekston malĝustan (kopiu/gluu el retumilo)
- * bonvolu proponi sugeston pri pli bona traduko
+ * bonvolu priskribi kio estas malĝusta -- ĉu la traduko estas malĝusta? ĉu la formatado estas rompita iel?
+ * bonvolu proponi sugeston pri pli bona traduko, aŭ kiel la teksto estu taŭge formatita
  * **Dankon!**
 
  # Enhavo
@@ -269,6 +270,6 @@ Hokeylization
  ### Helpu
  Uzu `-h` / `--help` por montri helpon
 
- ## Feliĉa Tradukado!
+ ## Amuziĝu tradukante lingvojn!
 
 </pre>

@@ -49,7 +49,8 @@ Hokeylization
  Kapag gumawa ka ng bagong isyu sa GitHub tungkol sa isang pagsasalin, mangyaring gawin ang:
  * isama ang URL ng pahina (kopyahin/i-paste mula sa address bar ng browser)
  * isama ang eksaktong text na mali (kopyahin/i-paste mula sa browser)
- * mabait na mag-alok ng mungkahi ng isang mas mahusay na pagsasalin
+ * mangyaring ilarawan kung ano ang mali -- mali ba ang pagsasalin? sira ba ang formatting kahit papaano?
+ * mabait na mag-alok ng isang mungkahi ng isang mas mahusay na pagsasalin, o kung paano ang teksto ay dapat na maayos na na-format
  * **Salamat!**
 
  # Nilalaman
@@ -269,6 +270,6 @@ Hokeylization
  ### Tulong
  Gamitin `-h` / `--help` para magpakita ng tulong
 
- ## Maligayang Pagsasalin!
+ ## Magsaya sa pagsasalin ng mga wika!
 
 </pre>

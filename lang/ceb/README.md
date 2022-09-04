@@ -49,7 +49,8 @@ Hokeylization
  Kung maghimo ka usa ka bag-ong isyu sa GitHub bahin sa usa ka paghubad, palihug buhata:
  * Ilakip ang URL sa panid (kopya / idikit gikan sa address bar sa browser)
  * Ilakip ang eksakto nga teksto nga sayup (kopya / idikit gikan sa browser)
- * malulotong paghatag ug sugyot sa mas maayong hubad
+ * palihug ihulagway kung unsa ang sayup -- sayop ba ang paghubad? naguba ba ang pag-format sa usa ka paagi?
+ * malulotong maghatag ug sugyot sa mas maayong hubad, o kon sa unsang paagi ang teksto kinahanglang hustong maporma
  * **Salamat!**
 
  # Mga sulud
@@ -269,6 +270,6 @@ Hokeylization
  ### Tabang
  Gamita `-h` / `--help` aron ipakita ang tabang
 
- ## Malipayon nga Paghubad!
+ ## Paglingaw sa paghubad sa mga pinulongan!
 
 </pre>

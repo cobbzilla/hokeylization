@@ -49,7 +49,8 @@ Hokeylization
  Nuair a chruthaíonn tú saincheist nua GitHub faoi aistriúchán, déan:
  * cuir isteach URL an leathanaigh (cóipeáil/greamaigh ó bharra seoltaí an bhrabhsálaí)
  * cuir isteach an téacs cruinn atá mícheart (cóipeáil/greamaigh ón mbrabhsálaí)
- * go cineálta moladh aistriúchán níos fearr a thairiscint
+ * Déan cur síos le do thoil ar a bhfuil mícheart -- an bhfuil an t-aistriúchán mícheart? an bhfuil an fhormáidiú briste ar bhealach éigin?
+ * go cineálta moladh a thabhairt faoi aistriúchán níos fearr, nó conas is ceart an téacs a fhormáidiú i gceart
  * **Go raibh maith agat!**
 
  # Ábhar
@@ -269,6 +270,6 @@ Hokeylization
  ### Cabhrú
  Úsáid `-h` / `--help` chun cabhair a thaispeáint
 
- ## Aistriúchán Shona!
+ ##Bíodh am spraoi agat ag aistriú teangacha!
 
 </pre>

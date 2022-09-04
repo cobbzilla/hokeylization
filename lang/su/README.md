@@ -49,7 +49,8 @@ Hokeylization
  Lamun anjeun nyieun masalah GitHub anyar ngeunaan tarjamahan, mangga ngalakukeun:
  * kalebet URL halaman (salinan/témpél tina bar alamat browser)
  * kalebet téks anu leres anu salah (salin/témpél tina browser)
- * punten nawiskeun usulan tarjamahan anu langkung saé
+ * Punten terangkeun naon anu lepat -- naha tarjamahanna lepat? formatna rusak kumaha bae?
+ * punten nawiskeun usulan tarjamahan anu langkung saé, atanapi kumaha téks kedah diformat leres
  * **Hatur nuhun!**
 
  # Eusi
@@ -136,7 +137,7 @@ Hokeylization
 
  `LANG` diganti ku kode basa pikeun file kaluaran
 
- Ku kituna paréntah di luhur nyiptakeun file:
+ Janten paréntah di luhur nyiptakeun file:
 
     myfile.es.js
     myfile.de.js
@@ -269,6 +270,6 @@ Hokeylization
  ### Tulung
  Anggo `-h` / `--help` pikeun nunjukkeun pitulung
 
- ## Wilujeng Narjamahkeun!
+ ## Wilujeng narjamahkeun basa!
 
 </pre>

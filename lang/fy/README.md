@@ -49,7 +49,8 @@ Hokeylisearring
  As jo in nij GitHub-probleem oanmeitsje oer in oersetting, dwaan dan:
  * befetsje de side-URL (kopiearje / plakke fan browseradresbalke)
  * befetsje de krekte tekst dy't ferkeard is (kopiearje / plakke fan browser)
- * biede freonlik in suggestje foar in bettere oersetting
+ * beskriuw asjebleaft wat der mis is -- is de oersetting ferkeard? is de opmaak op ien of oare manier brutsen?
+ * biede freonlik in suggestje foar in bettere oersetting, of hoe't de tekst goed opmakke wurde moat
  * **Dankewol!**
 
  # Ynhâld
@@ -269,6 +270,6 @@ Hokeylisearring
  ### Help
  Brûk `-h` / `--help` om help te sjen
 
- ## Lokkich oersetten!
+ ## Hawwe in leuke tiid mei it oersetten fan talen!
 
 </pre>

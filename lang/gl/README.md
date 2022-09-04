@@ -49,7 +49,8 @@ Hokeylización
  Cando crees un novo problema de GitHub sobre unha tradución, fai:
  * inclúa o URL da páxina (copiar/pegar da barra de enderezos do navegador)
  * inclúa o texto exacto incorrecto (copiar/pegar desde o navegador)
- * Ofrecer amablemente unha suxestión dunha mellor tradución
+ * Describe o que está mal: a tradución é incorrecta? o formato está roto dalgún xeito?
+ * Ofrecer amablemente unha suxestión dunha mellor tradución, ou como o texto debe estar formateado correctamente
  * **Grazas!**
 
  # Contidos
@@ -260,7 +261,7 @@ Hokeylización
 
  A función `filter` debe ser `async` porque se chamará `await`
 
- Antes de escribir os ficheiros no disco, todo o contido do ficheiro pasará á función `filter` como unha cadea
+ Antes de que os ficheiros se escriban no disco, todo o contido do ficheiro pasará á función `filter` como unha cadea
 
  O valor de retorno da función `filter` é o que realmente se escribirá no almacenamento
 
@@ -269,6 +270,6 @@ Hokeylización
  ### Axuda
  Use `-h` / `--help` para mostrar a axuda
 
- ## Tradución feliz!
+ ## Pasa un rato divertido traducindo idiomas!
 
 </pre>

@@ -49,7 +49,8 @@ Hokeylization
  Quandu create un novu prublema GitHub nantu à una traduzzione, fate:
  * include l'URL di a pagina (copia / incollà da a barra di indirizzu di u navigatore)
  * include u testu esatta chì hè sbagliatu (copia / incollà da u navigatore)
- * Per piacè offre un suggerimentu di una traduzzione megliu
+ * per piacè descrivi ciò chì hè sbagliatu -- a traduzzione hè sbagliata? a formattazione hè rotta in qualchì modu?
+ * Per piacè offre un suggerimentu di una traduzzione megliu, o cumu u testu deve esse furmatu bè
  * **Grazie!**
 
  # Cuntinutu
@@ -269,6 +270,6 @@ Hokeylization
  ### Aiutu
  Aduprate `-h` / `--help` per mustrà l'aiutu
 
- ## Bonne traduction !
+ ## Divertitevi à traduce e lingue!
 
 </pre>

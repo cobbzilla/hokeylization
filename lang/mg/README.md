@@ -49,7 +49,8 @@ Hokeylization
  Rehefa mamorona olana GitHub vaovao momba ny fandikan-teny ianao, azafady:
  * Ampidiro ny URL pejy (adikao / apetaho amin'ny bara adiresy navigateur)
  * Ampidiro ny lahatsoratra marina izay diso (kodikao / apetaho amin'ny navigateur)
- * manolora soso-kevitra amin'ny fandikan-teny tsara kokoa
+ * farito azafady izay tsy mety - diso ve ny dikanteny? simba ve ny format?
+ * Manomeza soso-kevitra amin-katsaram-panahy momba ny fandikan-teny tsara kokoa, na ny fomba tokony handrafetana ny lahatsoratra
  * **Misaotra anao!**
 
  # Votoaty
@@ -260,15 +261,15 @@ Hokeylization
 
  Ny asa `filter` dia tsy maintsy ho `async` satria `await` no hiantsoana azy
 
- Alohan'ny hanoratana ny rakitra ao amin'ny kapila, ny votoatin'ny rakitra iray manontolo dia halefa any amin'ny asa `filter` ho tady
+ Alohan'ny hanoratana ny rakitra amin'ny kapila, ny votoatin'ny rakitra manontolo dia halefa any amin'ny asa `filter` ho tady
 
  Ny sanda miverina avy amin'ny fiasa `filter` no tena hosoratana amin'ny fitahirizana
 
  Noho izany, manana fifehezana tanteraka amin'izay hosoratana amin'ny farany ianao
 
  ### Vonjeo
- Mampiasà `-h` / `--help` hanehoana fanampiana
+ Ampiasao `-h` / `--help` hanehoana fanampiana
 
- ## Faly Mandika!
+ ## Mahafinaritra ny mandika teny!
 
 </pre>

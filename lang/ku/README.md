@@ -49,7 +49,8 @@ Hokeylization
  Dema ku hûn der barê wergerekê de pirsgirêkek nû ya GitHub çêkin, ji kerema xwe bikin:
  * URL-ya rûpelê têxe (ji barika navnîşana gerokê kopî/pêç bike)
  * nivîsa tam a ku xelet e tê de (ji gerokê kopî/paste)
- * ji kerema xwe pêşniyarek wergerek çêtir pêşkêş bikin
+ * ji kerema xwe re şirove bike ka çi xelet e -- werger xelet e? formatkirin bi rengekî şikestî ye?
+ * Ji kerema xwe pêşniyarek wergerek çêtir pêşkêşî bikin, an jî nivîs çawa bi rêkûpêk were şekil kirin
  * **Spas dikim!**
 
  # Naverok
@@ -258,7 +259,7 @@ Hokeylization
 
  Nirxa vê vebijarkê divê rêyek be ji pelek JS re ku fonksiyonek bi navê `filter`
 
- Pêdivî ye ku fonksiyona `filter` `async` `await` be ji ber ku dê li benda wê were gotin
+ Divê fonksiyona `filter` `async` `await` be ji ber ku dê li benda wê were gotin
 
  Berî ku pel li ser dîskê werin nivîsandin, tevahiya naveroka pelê dê wekî rêzek ji fonksiyona `filter` were derbas kirin
 
@@ -269,6 +270,6 @@ Hokeylization
  ### Alîkarî
  Ji bo nîşankirina alîkariyê `-h` / `--help` bînin
 
- ## Wergera xweş!
+ ## Wergerandina zimanan dem xweş be!
 
 </pre>

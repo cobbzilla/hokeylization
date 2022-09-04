@@ -49,7 +49,8 @@ Hokeyliseerimine
  Kui loote tõlke kohta uue GitHubi probleemi, tehke järgmist.
  * lisage lehe URL (kopeerige/kleepige brauseri aadressiribalt)
  * lisage täpne tekst, mis on vale (kopeeri/kleebi brauserist)
- * pakkuge lahkelt ettepanekut parema tõlke kohta
+ * palun kirjeldage, mis on valesti – kas tõlge on vale? kas vormindus on kuidagi katki?
+ * pakkuge lahkelt ettepanekut parema tõlke kohta või kuidas tekst tuleks õigesti vormistada
  * **Aitäh!**
 
  # Sisu
@@ -258,7 +259,7 @@ Hokeyliseerimine
 
  Selle suvandi väärtus peab olema JS-faili tee, mis ekspordib funktsiooni nimega `filter`
 
- Funktsioon `filter` peab olema `async` , kuna sellele kutsutakse välja "oota `await`
+ Funktsioon `filter` peab olema `async` , kuna sellele kutsutakse välja „oota `await`
 
  Enne failide kettale kirjutamist edastatakse kogu faili sisu stringina funktsioonile `filter`
 
@@ -269,6 +270,6 @@ Hokeyliseerimine
  ### Abi
  Kasutage abi kuvamiseks klahve `-h` / `--help` .
 
- ## Head tõlkimist!
+ ## Lõbutsege keelte tõlkimise aega!
 
 </pre>

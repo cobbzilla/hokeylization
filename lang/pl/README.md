@@ -49,7 +49,8 @@ Hokeylizacja
  Tworząc nowy problem na GitHubie dotyczący tłumaczenia, wykonaj następujące czynności:
  * dołącz adres URL strony (skopiuj/wklej z paska adresu przeglądarki)
  * dołącz dokładny tekst, który jest błędny (skopiuj/wklej z przeglądarki)
- * uprzejmie proponuję lepsze tłumaczenie
+ * proszę opisać, co jest nie tak – czy tłumaczenie jest niepoprawne? czy formatowanie jest jakoś zepsute?
+ * uprzejmie zasugeruj lepsze tłumaczenie, czyli jak tekst powinien być odpowiednio sformatowany
  * **Dziękuję Ci!**
 
  # Zawartość
@@ -269,6 +270,6 @@ Hokeylizacja
  ### Pomoc
  Użyj `-h` / `--help` , aby wyświetlić pomoc
 
- ## Miłego tłumaczenia!
+ ## Baw się dobrze, tłumacząc języki!
 
 </pre>

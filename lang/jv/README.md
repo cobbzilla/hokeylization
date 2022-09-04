@@ -49,7 +49,8 @@ Hokeylization
  Nalika sampeyan nggawe masalah GitHub anyar babagan terjemahan, mangga tindakake:
  * kalebu URL kaca (salinan / tempel saka bilah alamat browser)
  * Lebokna teks pas sing salah (salin/tempel saka browser)
- * nyuwun saran terjemahan sing luwih apik
+ * monggo katrangan apa sing salah -- apa terjemahane salah? format rusak piye wae?
+ * nyuwun saran terjemahan sing luwih apik, utawa carane teks kudu diformat kanthi bener
  **Matur nuwun!**
 
  # Isi
@@ -269,6 +270,6 @@ Hokeylization
  ### Bantuan
  Gunakake `-h` / `--help` kanggo nuduhake pitulung
 
- ## Sugeng Nerjemahake!
+ ## Seneng nerjemahake basa!
 
 </pre>

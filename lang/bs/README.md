@@ -49,7 +49,8 @@ Hokeilizacija
  Kada kreirate novi GitHub problem o prijevodu, učinite:
  * uključite URL stranice (kopirajte/zalijepite iz adresne trake pretraživača)
  * uključite tačan tekst koji je pogrešan (kopirajte/zalijepite iz pretraživača)
- * ljubazno ponudite prijedlog boljeg prijevoda
+ * opišite šta nije u redu -- da li je prevod netačan? da li je formatiranje nekako pokvareno?
+ * ljubazno ponudite prijedlog boljeg prijevoda, odnosno kako bi tekst trebao biti pravilno formatiran
  * **Hvala ti!**
 
  # Sadržaj
@@ -269,6 +270,6 @@ Hokeilizacija
  ### Pomoć
  Koristite `-h` / `--help` za prikaz pomoći
 
- ## Sretan prevod!
+ ## Zabavite se prevodeći jezike!
 
 </pre>

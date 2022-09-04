@@ -49,7 +49,8 @@ Hokeylizazioa
  Itzulpen bati buruzko GitHub-en arazo berri bat sortzen duzunean, egin:
  * Sartu orriaren URLa (kopiatu/itsatsi arakatzailearen helbide barratik)
  * sartu oker dagoen testu zehatza (kopiatu/itsatsi arakatzailetik)
- * Mesedez, eskaini itzulpen hobeago baten iradokizuna
+ * Mesedez, deskribatu zer dagoen gaizki -- itzulpena okerra al da? formatua hautsi al da nolabait?
+ * Mesedez, eskaini itzulpen hobeago baten iradokizuna, edo testua nola formateatu behar den
  * **Eskerrik asko!**
 
  # Edukiak
@@ -269,6 +270,6 @@ Hokeylizazioa
  ### Laguntza
  Erabili `-h` / `--help` laguntza erakusteko
 
- ## Itzulpen zoriontsua!
+ ## Ondo pasa hizkuntzak itzultzen!
 
 </pre>

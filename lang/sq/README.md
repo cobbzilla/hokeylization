@@ -49,7 +49,8 @@ Hokeylizimi
  Kur krijoni një problem të ri të GitHub në lidhje me një përkthim, ju lutemi bëni:
  * përfshini URL-në e faqes (kopjoni/ngjisni nga shiriti i adresave të shfletuesit)
  * përfshini tekstin e saktë që është i gabuar (kopjoni/ngjisni nga shfletuesi)
- * ofroni një sugjerim për një përkthim më të mirë
+ * ju lutemi përshkruani se çfarë nuk shkon -- a është përkthimi i gabuar? a është thyer disi formatimi?
+ * me mirësi ofroni një sugjerim për një përkthim më të mirë, ose se si teksti duhet të formatohet siç duhet
  * **Faleminderit!**
 
  # Përmbajtje
@@ -269,6 +270,6 @@ Hokeylizimi
  ### Ndihmë
  Përdorni `-h` / `--help` për të treguar ndihmë
 
- ## Gëzuar Përkthimin!
+ ## Kalofshi bukur duke përkthyer gjuhë!
 
 </pre>

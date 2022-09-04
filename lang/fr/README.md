@@ -49,7 +49,8 @@ Hokeyylisation
  Lorsque vous créez un nouveau ticket GitHub à propos d'une traduction, veuillez faire :
  * inclure l'URL de la page (copier/coller depuis la barre d'adresse du navigateur)
  * inclure le texte exact qui est erroné (copier/coller depuis le navigateur)
- * merci de suggérer une meilleure traduction
+ * veuillez décrire ce qui ne va pas -- la traduction est-elle incorrecte ? le formatage est-il cassé d'une manière ou d'une autre ?
+ * veuillez suggérer une meilleure traduction, ou comment le texte doit être correctement formaté
  * **Merci!**
 
  # Contenu
@@ -75,7 +76,7 @@ Hokeyylisation
  J'apprécierais sincèrement même la plus petite [contribution mensuelle via Patreon](https://www.patreon.com/cobbzilla)
 
  ## Installation
- Pour utiliser l'outil de ligne de commande, installez en utilisant `npm` ou `yarn` :
+ Pour utiliser l'outil de ligne de commande, installez en utilisant `npm` ou `yarn` :
 
     npm install -g hokeylization
     yarn global add hokeylization
@@ -198,7 +199,7 @@ Hokeyylisation
 
  ## Autres options
 
- ### Essai à sec
+ ### Essai à vide
  Passez `-n` / `--dry-run` pour afficher ce qui serait fait, mais n'effectuez pas d'appels d'API ni n'écrivez de fichiers
 
  ### Force
@@ -269,6 +270,6 @@ Hokeyylisation
  ### Aider
  Utilisez `-h` / `--help` pour afficher l'aide
 
- ## Bonne traduction !
+ ## Amusez-vous à traduire des langues !
 
 </pre>

@@ -49,7 +49,8 @@ Hokeyleiddiad
  Pan fyddwch chi'n creu rhifyn GitHub newydd am gyfieithiad, gwnewch y canlynol:
  * cynnwys URL y dudalen (copïo / pastio o far cyfeiriad y porwr)
  * cynnwys yr union destun sy'n anghywir (copïo / pastio o'r porwr)
- * yn garedig iawn cynigiwch awgrym o gyfieithiad gwell
+ * disgrifiwch beth sy'n bod -- ydy'r cyfieithiad yn anghywir? a yw'r fformatio wedi torri rhywsut?
+ * cynigiwch yn garedig awgrym o well cyfieithiad, neu sut y dylid fformatio'r testun yn gywir
  * **Diolch!**
 
  # Cynnwys
@@ -269,6 +270,6 @@ Hokeyleiddiad
  ### Help
  Defnyddiwch `-h` / `--help` i ddangos help
 
- ## Cyfieithu Hapus!
+ ## Cael hwyl yn cyfieithu ieithoedd!
 
 </pre>

@@ -49,7 +49,8 @@ Hokeyzation
  Khi bạn tạo một vấn đề GitHub mới về bản dịch, vui lòng thực hiện:
  * bao gồm URL của trang (sao chép / dán từ thanh địa chỉ trình duyệt)
  * bao gồm văn bản chính xác bị sai (sao chép / dán từ trình duyệt)
- * vui lòng đưa ra gợi ý về một bản dịch tốt hơn
+ * vui lòng mô tả những gì là sai - bản dịch không chính xác? định dạng có bị hỏng bằng cách nào đó không?
+ * vui lòng đưa ra gợi ý về bản dịch tốt hơn hoặc cách văn bản phải được định dạng đúng
  * **Cảm ơn bạn!**
 
  # Nội dung
@@ -269,6 +270,6 @@ Hokeyzation
  ### Cứu giúp
  Sử dụng `-h` / `--help` để hiển thị trợ giúp
 
- ## Chúc bạn dịch vui vẻ!
+ ## Chúc bạn có thời gian vui vẻ khi dịch ngôn ngữ!
 
 </pre>

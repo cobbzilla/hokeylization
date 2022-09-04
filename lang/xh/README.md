@@ -49,7 +49,8 @@ Hokeylization
  Xa usenza umba omtsha weGitHub malunga nenguqulelo, nceda wenze:
  * bandakanya i-URL yephepha (ikopi/uncamathisele kwibar yedilesi yomkhangeli zincwadi)
  * bandakanya isicatshulwa kanye esingalunganga (khuphela/uncamathisele kwisikhangeli)
- * ngobubele nikela icebiso lenguqulelo engcono
+ * Nceda uchaze ukuba yintoni engalunganga -- ingaba uguqulelo aluchanekanga? Ngaba ukufomatha kwaphukile ngandlela ithile?
+ * ngobubele nikela icebiso lenguqulelo engcono, okanye indlela umbhalo ofanele ubhalwe ngokufanelekileyo
  * **Enkosi!**
 
  # Imixholo
@@ -269,6 +270,6 @@ Hokeylization
  ### Nceda
  Sebenzisa `-h` / `--help` ukubonisa uncedo
 
- ## Ndonwabile ukuGuqulela!
+ ## Yiba nexesha elimnandi lokuguqulela iilwimi!
 
 </pre>

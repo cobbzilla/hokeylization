@@ -49,7 +49,8 @@ Hokeylizálás
  Amikor új GitHub-kiadást hoz létre egy fordítással kapcsolatban, tegye a következőket:
  * tartalmazza az oldal URL-jét (másolás/beillesztés a böngésző címsorából)
  * Pontosan adja meg a hibás szöveget (másolás/beillesztés a böngészőből)
- * Ajánljon egy jobb fordítási javaslatot
+ * Kérem írja le, mi a hiba -- hibás a fordítás? elromlott valahogy a formázás?
+ * Kérem, tegyen javaslatot jobb fordításra, vagy a szöveg helyes formázására
  * **Köszönöm!**
 
  # Tartalom
@@ -269,6 +270,6 @@ Hokeylizálás
  ### Segítség
  Használja a `-h` / `--help` a súgó megjelenítéséhez
 
- ## Boldog fordítást!
+ ## Jó szórakozást a nyelvek fordításához!
 
 </pre>

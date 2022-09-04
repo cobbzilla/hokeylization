@@ -49,7 +49,8 @@ Hokeylizzazione
  Quando crei un nuovo problema GitHub su una traduzione, esegui:
  * includi l'URL della pagina (copia/incolla dalla barra degli indirizzi del browser)
  * includi il testo esatto che è sbagliato (copia/incolla dal browser)
- * gentilmente offrire un suggerimento per una traduzione migliore
+ * per favore descrivi cosa c'è che non va -- la traduzione è errata? la formattazione è rotta in qualche modo?
+ * offrire gentilmente un suggerimento per una traduzione migliore o come formattare correttamente il testo
  * **Grazie!**
 
  # Contenuti
@@ -215,7 +216,7 @@ Hokeylizzazione
  In caso di dubbio, puoi combinare questa opzione con `-n` / `--dry-run` per vedere quali file verrebbero tradotti
 
  ### Esclude
- A volte il tuo `-m` corrisponde a troppi file. Usa l' `-e` / `--excludes` per escludere esplicitamente
+ A volte il tuo `-m` corrisponde a troppi file. Utilizzare l' `-e` / `--excludes` per escludere esplicitamente
  file che altrimenti avrebbero corrisposto
 
  Puoi elencare più espressioni regolari, separate da spazi
@@ -269,6 +270,6 @@ Hokeylizzazione
  ### Aiuto
  Usa `-h` / `--help` per mostrare la guida
 
- ## Buona traduzione!
+ ## Divertiti a tradurre le lingue!
 
 </pre>

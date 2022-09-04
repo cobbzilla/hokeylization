@@ -49,7 +49,8 @@ Hokeylization
  Ina hanga e koe he take GitHub hou mo te whakamaoritanga, mahia:
  * whakauruhia te URL wharangi (kape/whakapiri mai i te pae wahitau tirotiro)
  * whakaurua te tuhinga tika e he ana (tārua/whakapiri mai i te kaitirotiro)
- * Tena koa tuku mai he whakaaro mo te whakamaoritanga pai ake
+ * whakaahuatia mai he aha te he -- kei te he te whakamaoritanga? kua pakaru te whakatakotoranga?
+ * tuku mai he whakaaro mo te whakamaoritanga pai ake, me pehea ranei te whakatakotoranga tika o te tuhinga
  * **Mauruuru!**
 
  # Ihirangi
@@ -237,7 +238,7 @@ Hokeylization
  Me nga konae tohu, ki te kore koe e whakamahi i te haki `-M` , ka kitea pea enei raru:
  * Nga hononga pakaru. I roto i te whakamaoritanga, ka puta he mokowhiti i muri i te mutunga o te whakamaarama hono tohu (me te `]` ) engari
  i mua i te tiimata o tana hononga whainga (me te `(` ). Na tenei ka he te whakaatu i te tohu, me te hono
- kua pakaru i te wa e tiro ana i te tuhinga.
+ kua pakaru i te tiro i te tuhinga.
  * Ka whakamaoritia nga poraka waehere. Ko te whakamaori a Google kaore e mohio he aha te tohu tohu e kiia ana he waehere me nga mea kaore
  * He mokowā hē mō ngā poraka waehere kua nukuhia. He uaua ki te pupuri i te mokowhiti i te whakamaoritanga
  * Ko nga mea o roto o `backticks` ka whakamaoritia, ina tata ki te hiahia koe he uara mooni
@@ -269,6 +270,6 @@ Hokeylization
  ### Awhina
  Whakamahia `-h` / `--help` hei whakaatu awhina
 
- ## Harikoa Whakamaori!
+ ## Kia harikoa ki te whakamaori reo!
 
 </pre>

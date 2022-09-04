@@ -49,7 +49,8 @@ Hokeyylization
  Markaad abuurto arrin cusub oo GitHub ah oo ku saabsan tarjumaada, fadlan samee:
  * ku dar URL bogga (koobi/ku dheji barta ciwaanka browserka)
  * ku dar qoraalka saxda ah ee khaldan (koobi ka soo gal browserka)
- * si naxariis leh u soo jeedi soo jeedin tarjumaad ka wanaagsan
+ * fadlan sharax waxa khaldan -- turjumaada ma khaldan tahay? qaabaynta si uun ma u jabtay?
+ * si naxariis leh u soo jeedi soo jeedin tarjumaad ka wanaagsan, ama sida qoraalka si habboon loo qaabeeyey
  * **Mahadsanid!**
 
  # Nuxurka
@@ -269,6 +270,6 @@ Hokeyylization
  ### I caawi
  Isticmaal `-h` / `--help` si aad u muujiso caawimo
 
- ## Turjumaada Wacan!
+ ## Ku raaxayso tarjumaada luqadaha!
 
 </pre>

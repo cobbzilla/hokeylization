@@ -49,7 +49,8 @@ Hókýlvæðing
  Þegar þú býrð til nýtt GitHub tölublað um þýðingu, vinsamlegast gerðu:
  * láttu vefslóð síðunnar fylgja (afritaðu/límdu af veffangastiku vafrans)
  * láttu nákvæmlega texta sem er rangur fylgja með (afrita/líma úr vafra)
- * vinsamlegast komdu með tillögu um betri þýðingu
+ * vinsamlegast lýstu hvað er rangt -- er þýðingin röng? er sniðið eitthvað bilað?
+ * komdu með tillögu um betri þýðingu eða hvernig textinn ætti að vera rétt sniðinn
  * **Þakka þér fyrir!**
 
  # Innihald
@@ -258,9 +259,9 @@ Hókýlvæðing
 
  Gildi þessa valmöguleika verður að vera slóð að JS skrá sem flytur út fall sem heitir `filter`
 
- `filter` aðgerðin verður að vera `async` vegna þess að `await` verður kallað á hana
+ `filter` fallið verður að vera `async` vegna þess að `await` verður kallað á það
 
- Áður en skrár eru skrifaðar á disk, verður allt skráarinnihaldið sent til `filter` aðgerðarinnar sem strengur
+ Áður en skrár eru skrifaðar á disk verður allt skráarinnihaldið sent yfir í `filter` aðgerðina sem strengur
 
  Skilagildið frá `filter` fallinu er það sem í raun verður skrifað í geymslu
 
@@ -269,6 +270,6 @@ Hókýlvæðing
  ### Hjálp
  Notaðu `-h` / `--help` til að sýna hjálp
 
- ## Til hamingju með þýðinguna!
+ ## Skemmtu þér vel við að þýða tungumál!
 
 </pre>

@@ -49,7 +49,8 @@ Hokeylisering
  Når du opretter et nyt GitHub-problem om en oversættelse, skal du gøre følgende:
  * inkludere sidens URL (kopier/indsæt fra browserens adresselinje)
  * medtag den nøjagtige tekst, der er forkert (kopier/indsæt fra browser)
- * Kom gerne med et forslag til en bedre oversættelse
+ * beskriv venligst hvad der er galt -- er oversættelsen forkert? er formateringen brudt på en eller anden måde?
+ * kom med et forslag til en bedre oversættelse, eller hvordan teksten skal formateres korrekt
  * **Tak skal du have!**
 
  # Indhold
@@ -235,7 +236,7 @@ Hokeylisering
  `-M` / `--markdown` muliggør speciel håndtering af markdown-filer
 
  Med markdown-filer, hvis du ikke bruger `-M` flaget, vil du sandsynligvis finde disse problemer:
- * Ødelagte links. I oversættelsen vises et mellemrumstegn, efter at en markdown-linkbeskrivelse slutter (med `]` ), men
+ * Ødelagte links. I oversættelsen vises et mellemrumstegn efter en markdown-linkbeskrivelse slutter (med `]` ), men
  før dets mållink begynder (med `(` ). Dette får markdown til at gengives forkert, og linket
  er i stykker, når du ser dokumentet.
  * Kodeblokke bliver oversat. Google translate ved ikke, hvad markdown betragter som kode, og hvad det ikke gør
@@ -269,6 +270,6 @@ Hokeylisering
  ### Hjælp
  Brug `-h` / `--help` for at vise hjælp
 
- ## God oversættelse!
+ ## Hav det sjovt med at oversætte sprog!
 
 </pre>

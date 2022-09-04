@@ -49,7 +49,8 @@ Hokeyylization
  Nigbati o ba ṣẹda ọrọ GitHub tuntun nipa itumọ kan, jọwọ ṣe:
  * pẹlu URL oju-iwe naa (daakọ/lẹẹmọ lati ọpa adirẹsi aṣawakiri)
  * pẹlu ọrọ gangan ti o jẹ aṣiṣe (daakọ/lẹẹmọ lati ẹrọ aṣawakiri)
- * fi inurere funni ni imọran itumọ ti o dara julọ
+ * Jọwọ ṣapejuwe ohun ti ko tọ -- ṣe itumọ naa ko tọ? ti wa ni awọn kika baje bakan?
+ * Fi inurere funni ni imọran itumọ ti o dara julọ, tabi bi o ṣe yẹ ki ọrọ naa ṣe tito daradara
  * **E dupe!**
 
  # Awọn akoonu
@@ -238,7 +239,7 @@ Hokeyylization
  * Awọn ọna asopọ ti o bajẹ. Ninu itumọ, kikọ aaye kan han lẹhin apejuwe ọna asopọ isamisi ti pari (pẹlu `]` ) ṣugbọn
  ṣaaju ki ọna asopọ ibi-afẹde rẹ to bẹrẹ (pẹlu `(` ) Eyi fa isamisi lati ṣe ti ko tọ, ati ọna asopọ naa
  ti bajẹ nigba wiwo iwe-ipamọ naa.
- * Awọn bulọọki koodu ni itumọ. Google tumọ ko mọ kini isamisi ka koodu ati ohun ti kii ṣe
+ * Awọn bulọọki koodu ni itumọ. Google sélédemírán kò mọ ohun ti isamisi ka koodu ati ohun ti o ko
  * Aye ti ko tọ fun awọn bulọọki koodu indented. Aaye jẹ soro lati tọju ni itumọ
  * Awọn nkan inu `backticks` yoo ni itumọ, nigbati o fẹrẹ fẹ nigbagbogbo lati jẹ awọn iye gidi
 
@@ -250,17 +251,17 @@ Hokeyylization
  ### Ilana-bi
  Ni deede ohun gbogbo ti ni ilọsiwaju bi ọrọ itele
 
- Ti àkóónú rẹ ba jẹ HTML, yoo jẹ titọ ayafi ti o ba kọja `-p html` / `--process-as html`
+ Ti akoonu rẹ ba jẹ HTML, yoo jẹ titọ ayafi ti o ba kọja `-p html` / `--process-as html`
 
  ### Ajọ
  Fun adventurous: nigba ṣiṣe awọn faili ni ilana, o le kọja `-F` / `--filter`
  lati ṣe àlẹmọ iṣelọpọ ṣaaju ki o to kọ ọ si eto faili
 
- Iye aṣayan yii gbọdọ jẹ ọna si faili JS kan ti o ṣe okeere iṣẹ kan ti a npè ni `filter`
+ Iye aṣayan yii gbọdọ jẹ ọna si faili JS ti o ṣe okeere iṣẹ kan ti a npè ni `filter`
 
  Iṣẹ `filter` gbọdọ jẹ `async` ' nitori a yoo pe `await` sori rẹ
 
- Ṣaaju ki o to kọ awọn faili si disk, gbogbo akoonu faili yoo kọja si iṣẹ `filter` gẹgẹbi okun
+ Ṣaaju ki o to kọ awọn faili si disiki, gbogbo akoonu faili yoo kọja si iṣẹ `filter` gẹgẹbi okun
 
  Iye ipadabọ lati iṣẹ `filter` jẹ ohun ti yoo kọ gangan si ibi ipamọ
 
@@ -269,6 +270,6 @@ Hokeyylization
  ### Egba Mi O
  Lo `-h` / `--help` lati fi iranlọwọ han
 
- ## Itumọ Ayọ!
+ ## Ni akoko igbadun titumọ awọn ede!
 
 </pre>

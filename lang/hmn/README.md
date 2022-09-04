@@ -49,7 +49,8 @@ Hokeylization
  Thaum koj tsim qhov teeb meem tshiab GitHub txog kev txhais lus, thov ua:
  * suav nrog nplooj URL (copy / paste los ntawm browser chaw nyob bar)
  * suav nrog cov ntawv tseeb uas tsis yog (copy / paste los ntawm browser)
- * Ua siab zoo muab cov lus qhia txog kev txhais lus zoo dua
+ * thov piav qhia qhov tsis raug - puas yog kev txhais lus tsis raug? yog formatting puas lawm?
+ * Ua siab zoo muab cov lus pom zoo ntawm kev txhais lus zoo dua, lossis yuav ua li cas cov ntawv yuav tsum raug formatted kom raug
  ** Ua tsaug!**
 
  # Cov ntsiab lus
@@ -242,13 +243,13 @@ Hokeylization
  * Qhov sib txawv tsis raug rau indented code blocks. Qhov sib txawv yog qhov nyuaj rau khaws cia hauv kev txhais lus
  * Tej yam hauv `backticks` yuav tau txhais, thaum koj yuav luag ib txwm xav kom lawv ua qhov tseem ceeb
 
- Thaum tus `-M` " / `--markdown` tau qhib:
+ Thaum tus `-M` / `--markdown` tau qhib:
  * Tus qauv `](` yuav tsum condensed rau `](` yog li kho qhov sib txuas markdown
  * Ib daim ntawv "tsis muaj neeg txhais lus" yuav muab tso rau ib puag ncig cov kab thaiv kab thaiv, khaws cia kom raug indentation thiab xyuas kom lawv tsis raug txhais
  * Ib daim ntawv "tsis muaj txhais" yuav muab tso rau ib puag ncig cov ntawv hauv `backticks` kom ntseeg tau tias lawv tsis raug txhais
 
  ### Process-as
- Feem ntau txhua yam yog ua tiav raws li cov ntawv dawb
+ Feem ntau txhua yam yog ua tiav raws li cov ntawv nyeem
 
  Yog tias koj cov ntsiab lus yog HTML, nws yuav raug mangled tshwj tsis yog tias koj dhau qhov `-p html` / `--process-as html` kev xaiv
 
@@ -269,6 +270,6 @@ Hokeylization
  ### Pab
  Siv `-h` / `--help` los qhia kev pab
 
- ## Zoo siab txhais!
+ ## Txaus siab rau lub sijhawm txhais lus!
 
 </pre>

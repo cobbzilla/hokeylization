@@ -49,7 +49,8 @@ Hokeylizéierung
  Wann Dir en neit GitHub Thema iwwer eng Iwwersetzung erstellt, maacht w.e.g.:
  * enthält d'Säit URL (Kopie / Paste vun der Adressbar vum Browser)
  * enthält den exakten Text dee falsch ass (copy/paste vum Browser)
- * bitt frëndlech e Virschlag fir eng besser Iwwersetzung
+ * beschreiw w.e.g. wat falsch ass - ass d'Iwwersetzung falsch? ass d'Formatéierung iergendwéi gebrach?
+ * bitt frëndlech e Virschlag fir eng besser Iwwersetzung un, oder wéi den Text richteg formatéiert soll sinn
  * **Merci!**
 
  # Inhalter
@@ -254,7 +255,7 @@ Hokeylizéierung
 
  ### Filter
  Fir Abenteuer: Wann Dir Dateien an engem Verzeichnis veraarbecht, kënnt Dir d'Optioun `-F` / `--filter`
- fir den Ausgang ze filteren ier se an de Dateiesystem geschriwwe gëtt
+ fir den Ausgang ze filteren ier en an de Dateiesystem geschriwwe gëtt
 
  De Wäert vun dëser Optioun muss e Wee zu enger JS-Datei sinn, déi eng Funktioun mam Numm `filter`
 
@@ -269,6 +270,6 @@ Hokeylizéierung
  ### Hëllef
  Benotzt `-h` / `--help` fir Hëllef ze weisen
 
- ## Happy Iwwersetzung!
+ ## Vill Spaass beim Iwwersetzen vun Sproochen!
 
 </pre>

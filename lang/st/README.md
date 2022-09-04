@@ -49,7 +49,8 @@ Hokeylization
  Ha o theha taba e ncha ea GitHub mabapi le phetolelo, ka kopo etsa:
  * kenyelletsa URL ea leqephe (kopi / beha ho tsoa bareng ea aterese ea sebatli)
  * kenyelletsa mongolo o nepahetseng (kopi / beha ho tsoa ho sebatli)
- * ka mosa fana ka tlhahiso ea phetolelo e molemonyana
+ * Ka kopo hlalosa se fosahetseng -- na phetolelo e fosahetse? na sebopeho se robehile ka tsela e itseng?
+ * ka mosa fana ka tlhahiso ea phetolelo e molemonyana, kapa hore na taba e ngotsoe joang ka tsela e nepahetseng
  * **Kea leboha!**
 
  # Litaba
@@ -269,6 +270,6 @@ Hokeylization
  ### Thusa
  Sebelisa `-h` / `--help` ho bontša thuso
 
- ## Thabela Ho Fetolela!
+ ## Eba le nako e monate ea ho fetolela lipuo!
 
 </pre>

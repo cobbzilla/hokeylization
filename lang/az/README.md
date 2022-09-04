@@ -49,7 +49,8 @@ Hokeyləşmə
  Tərcümə ilə bağlı yeni GitHub məsələsi yaratdığınız zaman, lütfən:
  * səhifənin URL-ni daxil edin (brauzerin ünvan çubuğundan kopyalayın/yapışdırın)
  * səhv olan mətni daxil edin (brauzerdən kopyalayın/yapışdırın)
- * lütfən daha yaxşı tərcümə təklif edin
+ * zəhmət olmasa nəyin səhv olduğunu təsvir edin -- tərcümə səhvdir? formatlama birtəhər pozuldu?
+ * lütfən daha yaxşı tərcümə təklifi və ya mətnin düzgün formatlaşdırılması ilə bağlı təklif verin
  * **Çox sağ ol!**
 
  # Məzmun
@@ -269,6 +270,6 @@ Hokeyləşmə
  ### Kömək
  Yardım göstərmək üçün `-h` / `--help` istifadə edin
 
- ## Xoşbəxt Tərcümə!
+ ## Dilləri tərcümə etməklə əylənin!
 
 </pre>

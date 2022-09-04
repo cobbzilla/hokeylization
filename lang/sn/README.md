@@ -49,7 +49,8 @@ Hokeylization
  Kana iwe ukagadzira itsva GitHub nyaya nezve dudziro, ndapota ita:
  * sanganisira iyo URL peji (kopi/namira kubva kubrowser kero bar)
  * sanganisira iwo chaiwo mameseji asiri iwo (kopi/namira kubva kubrowser)
- * nemutsa ipa zano reshanduro iri nani
+ * ndapota tsanangura kuti chii chakaipa -- shanduro haina kururama here? iyo fomati yakatyoka neimwe nzira?
+ * nemutsa ipa zano reshanduro iri nani, kana kuti mashoko acho anofanira kurongwa zvakanaka sei
  * **Ndatenda!**
 
  # Zviri mukati
@@ -269,6 +270,6 @@ Hokeylization
  ### Batsira
  Shandisa `-h` / `--help` kuratidza rubatsiro
 
- ## Unofara Kushandura!
+ ## Iva nenguva inonakidza kushandura mitauro!
 
 </pre>

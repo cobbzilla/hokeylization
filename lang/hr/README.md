@@ -49,7 +49,8 @@ Hokeilizacija
  Kada stvorite novi GitHub problem o prijevodu, učinite sljedeće:
  * uključite URL stranice (kopirajte/zalijepite iz adresne trake preglednika)
  * uključite točan tekst koji je pogrešan (kopirajte/zalijepite iz preglednika)
- * ljubazno ponudite prijedlog boljeg prijevoda
+ * molimo opišite što nije u redu -- je li prijevod netočan? je li formatiranje nekako pokvareno?
+ * ljubazno ponudite prijedlog boljeg prijevoda ili kako bi tekst trebao biti pravilno oblikovan
  * **Hvala vam!**
 
  # Sadržaj
@@ -244,7 +245,7 @@ Hokeilizacija
 
  Kada je omogućena oznaka `-M` / `--markdown` :
  * Uzorak `](` bit će kondenziran u `](` čime se popravljaju neispravne veze označavanja
- * Omot "no translate" bit će postavljen oko uvučenih blokova koda, čuvajući pravilno uvlačenje i osiguravajući da nisu prevedeni
+ * Omotač "no translate" bit će postavljen oko uvučenih blokova koda, čuvajući pravilno uvlačenje i osiguravajući da nisu prevedeni
  * Omot "no translate" bit će postavljen oko teksta unutar `backticks` kako bi se osiguralo da nisu prevedeni
 
  ### Proces-as
@@ -269,6 +270,6 @@ Hokeilizacija
  ### Pomozite
  Koristite `-h` / `--help` za prikaz pomoći
 
- ## Sretno prevođenje!
+ ## Zabavite se prevodeći jezike!
 
 </pre>

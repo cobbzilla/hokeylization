@@ -49,7 +49,8 @@ Hokeylization
  Mukapanga nkhani yatsopano ya GitHub yokhudza kumasulira, chonde chitani:
  * Phatikizani ulalo watsamba (koperani / kumata kuchokera pa adilesi ya msakatuli)
  * Phatikizani zomwe zili zolakwika (koperani/mata kuchokera pa msakatuli)
- * mokoma mtima perekani lingaliro la kumasulira kwabwinoko
+ * chonde fotokozani chomwe chalakwika -- kodi kumasulira kwake ndikolakwika? Kodi masanjidwewo awonongeka mwanjira ina?
+ * perekani mokoma mtima lingaliro la kumasulira kwabwinoko, kapena mmene malembawo ayenera kusanjidwira bwino
  * **Zikomo!**
 
  # Zamkatimu
@@ -237,7 +238,7 @@ Hokeylization
  Ndi mafayilo otsitsa, ngati simugwiritsa ntchito mbendera ya `-M` , mutha kupeza mavuto awa:
  * Maulalo osweka. Pomasulira, chilembo cha danga chikuwonekera pambuyo pofotokozera ulalo wotsikirako (ndi `]` ) koma
  ulalo wake wa chandamale usanayambe (ndi `(` ). Izi zimapangitsa kuti kutsika kuwoneke molakwika, ndi ulalo
- imasweka powonera chikalatacho.
+ imasweka poyang'ana chikalatacho.
  * Ma code block amamasuliridwa. Zomasulira za Google sizimadziwa zomwe kutsitsa kumatengera ma code komanso zomwe sadziwa
  * Kutalikirana kolakwika kwa midadada yopindika. Mipata imakhala yovuta kusunga pomasulira
  * Zinthu zomwe zili mkati mwa `backticks` zimamasuliridwa, nthawi zonse mukafuna kuti zikhale zenizeni
@@ -248,7 +249,7 @@ Hokeylization
  * Chopukutira cha "no translate" chidzayikidwa mozungulira mawu mkati mwa `backticks` kuwonetsetsa kuti asamasuliridwe
 
  ### Njira-monga
- Nthawi zambiri zonse zimakonzedwa ngati mawu osavuta
+ Nthawi zambiri zonse zimasinthidwa kukhala mawu osavuta
 
  Ngati zomwe muli nazo ndi HTML, zitha kusokonekera pokhapokha mutadutsa njira ya `-p html` / `--process-as html` .
 
@@ -269,6 +270,6 @@ Hokeylization
  ### Thandizeni
  Gwiritsani ntchito `-h` / `--help` kuti muwonetse thandizo
 
- ## Mwadala Kumasulira!
+ ## Khalani ndi nthawi yosangalatsa yomasulira zilankhulo!
 
 </pre>

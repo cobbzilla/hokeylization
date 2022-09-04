@@ -49,7 +49,8 @@ Hokeyylization
  Lokacin da kuka ƙirƙiri sabon batun GitHub game da fassarar, da fatan za a yi:
  * hada da URL na shafi (kwafi / manna daga mashaya adireshin mashigin)
  * hada da ainihin rubutun da ba daidai ba (kwafi / manna daga mai bincike)
- * da fatan za a ba da shawarar ingantacciyar fassarar
+ * don Allah bayyana abin da ba daidai ba -- shin fassarar ba daidai ba ce? an karye tsarin ko ta yaya?
+ * a hankali ba da shawarar mafi kyawun fassarar, ko yadda ya kamata a tsara rubutun yadda ya kamata
  * **Na gode!**
 
  # Abubuwan ciki
@@ -245,7 +246,7 @@ Hokeyylization
  Lokacin da aka kunna tutar `-M` / `--markdown` :
  * Alamar `](` za'a tattara ta zuwa `](` don haka gyara hanyoyin haɗin da aka karye
  * Za a sanya murfi na "babu fassarar" a kusa da ɓangarorin lambobi, adana ingantacciyar shigar da kuma tabbatar da cewa ba a fassara su ba.
- * Za a sanya murfi na "babu fassara" a kusa da rubutu a cikin `backticks` don tabbatar da cewa ba a fassara su ba
+ * Za a sanya murfi na "babu fassarar" a kusa da rubutu a cikin `backticks` don tabbatar da cewa ba a fassara su ba
 
  ### Tsari-kamar
  Yawanci ana sarrafa komai azaman rubutu bayyananne
@@ -269,6 +270,6 @@ Hokeyylization
  ### Taimako
  Yi amfani `-h` / `--help` don nuna taimako
 
- ## Fassarar Farin Ciki!
+ ## Yi farin ciki da fassarar harsuna!
 
 </pre>

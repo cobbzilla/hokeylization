@@ -49,7 +49,8 @@ Hokeylization
  Nuair a chruthaicheas tu cùis GitHub ùr mu eadar-theangachadh, feuch an dèan thu:
  * cuir a-steach URL na duilleige (lethbhreac / pasg bho bhàr seòlaidh a’ bhrobhsair)
  * cuir a-steach an dearbh theacsa a tha ceàrr (lethbhreac / pasgain bhon bhrobhsair)
- * thoir seachad moladh air eadar-theangachadh nas fheàrr
+ * thoir cunntas air dè tha ceàrr -- a bheil an t-eadar-theangachadh ceàrr? A bheil an cruth briste ann an dòigh air choreigin?
+ * thoir gu coibhneil moladh air eadar-theangachadh nas fheàrr, no mar a bu chòir an teacsa a bhith air a chruth ceart
  * **Tapadh leat!**
 
  # Susbaint
@@ -269,6 +270,6 @@ Hokeylization
  ### Cuideachadh
  Cleachd `-h` / `--help` gus cuideachadh a shealltainn
 
- ## Eadar-theangachadh sona dhut!
+ ## Faigh ùine spòrsail ag eadar-theangachadh chànanan!
 
 </pre>

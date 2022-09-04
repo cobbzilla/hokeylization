@@ -49,7 +49,8 @@ Hokeylizácia
  Keď vytvoríte nový problém na GitHub o preklade, postupujte takto:
  * uveďte adresu URL stránky (skopírujte/prilepte z panela s adresou prehliadača)
  * uveďte presný text, ktorý je nesprávny (skopírujte/prilepte z prehliadača)
- * láskavo ponúknite návrh na lepší preklad
+ * popíšte, čo je nesprávne - je preklad nesprávny? je formátovanie nejako porušené?
+ * láskavo ponúknite návrh na lepší preklad alebo ako by mal byť text správne naformátovaný
  * **Ďakujem!**
 
  # Obsah
@@ -238,7 +239,7 @@ Hokeylizácia
  * Nefunkčné odkazy. V preklade sa medzera objaví po ukončení popisu odkazu označenia (s `]` ), ale
  predtým, než sa začne jeho cieľový odkaz (s `(` ). To spôsobí nesprávne vykreslenie označenia a odkazu
  pri prezeraní dokumentu sa pokazí.
- * Bloky kódu sú preložené. Prekladač Google nevie, čo markdown považuje za kód a čo nie
+ * Bloky kódu sa prekladajú. Prekladač Google nevie, čo markdown považuje za kód a čo nie
  * Nesprávne medzery pre odsadené bloky kódu. V preklade je ťažké zachovať medzery
  * Veci vnútri `backticks` sa preložia, keď takmer vždy chcete, aby to boli doslovné hodnoty
 
@@ -253,7 +254,7 @@ Hokeylizácia
  Ak je váš obsah HTML, poškodí sa, pokiaľ nezadáte možnosť `-p html` / `--process-as html`
 
  ### Filter
- Pre odvážlivcov: pri spracovaní súborov v adresári môžete použiť možnosť `-F` / `--filter`
+ Pre odvážnych: pri spracovávaní súborov v adresári môžete použiť možnosť `-F` / `--filter`
  na filtrovanie výstupu pred jeho zapísaním do súborového systému
 
  Hodnota tejto možnosti musí byť cesta k súboru JS, ktorý exportuje funkciu s názvom `filter`
@@ -269,6 +270,6 @@ Hokeylizácia
  ### Pomoc
  Na zobrazenie pomoci použite `-h` / `--help`
 
- ## Veľa šťastia pri prekladaní!
+ ## Príjemnú zábavu pri prekladaní jazykov!
 
 </pre>

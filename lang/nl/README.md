@@ -49,7 +49,8 @@ Hokeylization
  Wanneer u een nieuw GitHub-probleem maakt over een vertaling, doet u het volgende:
  * inclusief de pagina-URL (kopiëren/plakken uit de adresbalk van de browser)
  * voeg de exacte tekst toe die fout is (kopiëren/plakken vanuit browser)
- * graag een suggestie voor een betere vertaling
+ * beschrijf a.u.b. wat er mis is -- is de vertaling onjuist? is de opmaak op de een of andere manier kapot?
+ * graag een suggestie voor een betere vertaling, of hoe de tekst correct moet worden opgemaakt
  * **Dank je!**
 
  # Inhoud
@@ -269,6 +270,6 @@ Hokeylization
  ### Helpen
  Gebruik `-h` / `--help` om hulp weer te geven
 
- ## Veel plezier met vertalen!
+ ## Veel plezier met het vertalen van talen!
 
 </pre>

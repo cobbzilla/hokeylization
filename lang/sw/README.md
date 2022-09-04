@@ -49,7 +49,8 @@ Hokeylization
  Unapounda toleo jipya la GitHub kuhusu tafsiri, tafadhali fanya:
  * jumuisha URL ya ukurasa (nakili/bandika kutoka kwa upau wa anwani ya kivinjari)
  * jumuisha maandishi kamili ambayo sio sahihi (nakili/bandika kutoka kwa kivinjari)
- * tafadhali toa pendekezo la tafsiri bora zaidi
+ * tafadhali eleza kilicho kibaya -- je tafsiri si sahihi? umbizo limevunjika kwa namna fulani?
+ * tafadhali toa pendekezo la tafsiri bora zaidi, au jinsi maandishi yanapaswa kupangwa vizuri
  * **Asante!**
 
  # Yaliyomo
@@ -269,6 +270,6 @@ Hokeylization
  ### Msaada
  Tumia `-h` / `--help` ili kuonyesha usaidizi
 
- ## Furaha ya Kutafsiri!
+ ## Furahia kutafsiri lugha!
 
 </pre>

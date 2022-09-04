@@ -49,7 +49,8 @@ Hokeylization
  Cum novam GitHub quaestionem de translatione creas, quaeso fac;
  * Paginam URL includere (exemplum / crustulum ex vecte electronica)
  * Textum includere quod est nefas (exemplum / crustulum ex pasco)
- Suggestionem melioris translationis benigne offerre *
+ * Quaeso describere quid sit iniuria — est interpretatio falsa? fractum est forma aliqua?
+ * benigne suggestionem praebeant translationis melioris vel quomodo textus debite formatus sit
  * **Gratias tibi!**
 
  # Contents
@@ -269,6 +270,6 @@ Hokeylization
  ### Auxilium
  Utere `-h` / `--help` ad auxilium ostende
 
- ## Felix Translation!
+ ## Ludi tempus habent linguae vertendae!
 
 </pre>

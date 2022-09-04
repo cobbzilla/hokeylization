@@ -49,7 +49,8 @@ Hokielisering
  Wanneer jy 'n nuwe GitHub-uitgawe oor 'n vertaling skep, doen asseblief:
  * sluit die bladsy-URL in (kopieer/plak vanaf blaaieradresbalk)
  * sluit die presiese teks in wat verkeerd is (kopieer/plak vanaf blaaier)
- * Bied asseblief 'n voorstel van 'n beter vertaling
+ * Beskryf asseblief wat fout is -- is die vertaling verkeerd? is die formatering op een of ander manier gebreek?
+ * Bied asseblief 'n voorstel van 'n beter vertaling, of hoe die teks behoorlik geformateer moet word
  * **Dankie!**
 
  # Inhoud
@@ -256,7 +257,7 @@ Hokielisering
  Vir die avontuurlustiges: wanneer jy lêers in 'n gids verwerk, kan jy die `-F` / `--filter` opsie slaag
  om die uitvoer te filter voordat dit na die lêerstelsel geskryf word
 
- Die waarde van hierdie opsie moet 'n pad wees na 'n JS-lêer wat 'n funksie genaamd `filter`
+ Die waarde van hierdie opsie moet 'n pad na 'n JS-lêer wees wat 'n funksie genaamd `filter`
 
  Die `filter` funksie moet `async` wees omdat `await` daarop geroep sal word
 
@@ -269,6 +270,6 @@ Hokielisering
  ### Hulp
  Gebruik `-h` / `--help` om hulp te wys
 
- ## Gelukkige vertaling!
+ ## Geniet dit om tale te vertaal!
 
 </pre>
