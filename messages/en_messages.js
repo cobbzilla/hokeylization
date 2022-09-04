@@ -10,7 +10,7 @@ export default {
     err_cannotWriteSource: 'refusing to overwrite input source (was specified in output languages): {{source}}',
     err_invalidOutfile: 'expected outfile to contain \'LANG\' (to be replaced with {{lang}})',
 
-    err_readMessageKeys_invalidFileStart: 'readMessageKeys: expected file to start with \'export default\' but found: {{actualPrefix}}...',
+    err_readMessageKeys_invalidFileStart: 'readMessageKeys: expected file {{ file }} to start with \'export default\' or \'module.exports\' but found: {{actualPrefix}}...',
     err_readMessageKeys_invalidJson: 'invalid json in {{file}}',
     err_processFile_writeFile: '*** Error writing to outfile for {{lang}}: {{langOut}}: {{e}}',
     err_processFile_error: '*** Error translating: {{e}}',

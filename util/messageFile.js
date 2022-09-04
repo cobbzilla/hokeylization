@@ -9,7 +9,7 @@ const ES6_STYLE = {
     start: () => 'export default {'
 }
 const CJS_STYLE = {
-    start: () => 'modules.exports = {'
+    start: () => 'module.exports = {'
 }
 
 const readMessageKeys = async (file, defaultStyle = ES6_STYLE) => {
@@ -26,7 +26,7 @@ const readMessageKeys = async (file, defaultStyle = ES6_STYLE) => {
         style = CJS_STYLE
     } else {
         const actualPrefix = data.length < 20 ? data : data.substring(0, 20);
-        throw new HokeyError(msg.err_readMessageKeys_invalidFileStart.parseMessage({ actualPrefix }))
+        throw new HokeyError(msg.err_readMessageKeys_invalidFileStart.parseMessage({ file, actualPrefix }))
     }
     const firstCurly = data.indexOf('{')
     if (firstCurly === -1) throw new HokeyError(msg.err_readMessageKeys_invalidJson.parseMessage({ file }))
