@@ -53,6 +53,7 @@ When you create a new GitHub issue about a translation, please do:
 
 # Contents
 * [Source](#Source)
+* [Support and Funding](#Support-and-Funding)
 * [Setup](#Setup)
 * [Translating a JavaScript string resource file](#Translating-a-JavaScript-string-resource-file)
 * [Translating a directory of text files](#Translating-a-directory-of-text-files)
@@ -61,6 +62,15 @@ When you create a new GitHub issue about a translation, please do:
 ## Source
 * [hokeylization on GitHub](https://github.com/cobbzilla/hokeylization)
 * [hokeylization on npm](https://www.npmjs.com/package/hokeylization)
+
+## Support and Funding
+I am attempting to be a professional open source software developer. I have been working in
+the software industry for many years, I have started successful companies and sold them to public companies.
+Recently I lost my job, and I don't really have any other work lined up
+
+So I'm going to try writing helpful software and see if that works
+
+I would sincerely appreciate even the smallest [monthly contribution via Patreon](https://www.patreon.com/cobbzilla)
 
 ## Setup
 Set the `GOOGLE_TRANSLATE_PROJECT_ID` environment variable to identify your Google Translate project
@@ -110,7 +120,7 @@ If the output file already exists, it will be examined to determine which keys a
 Existing keys will not be translated. Translations for missing keys will be generated and appended
 to the end of the JS object. The entire file is always rewritten.
 
-To force retranslation all keys, use the `-f` / `--force` option.
+To force retranslation all keys, use the `-f` / `--force` option
 
 ## Translating a directory of text files
 You can also translate a directory of files. hokeylization will recursively visit every
@@ -150,7 +160,7 @@ To translate all of these to Spanish and German, run:
 
     hokey -l es,de -o templates/email/LANG templates/email/en
 
-In the above, `LANG` is a reserved word and will be replaced with the 2-letter locale code
+In the above, `LANG` is a reserved word and will be replaced with the ISO language code
 
 What happens when the above runs:
 * The `templates/email/es` and `templates/email/de` directories will be created (if they don't exist)
@@ -194,13 +204,20 @@ Pass the `-H` / `--handlebars` flag, and anything within `{{ ... }}` will not be
 ### Markdown
 Markdown is neither text nor html, so Google Translate has some difficulties with it
 
-Hokeylizer handles things decently well, but with markdown files, you may oftentimes see a common
-problem: in the translation, a space character appears after a markdown link description ends (with `]`) but
+The `-M` / `--markdown` flag enables special handling for markdown files
+
+Hokeylizer handles things decently well, but with markdown files, you may oftentimes these problems:
+* Broken links. In the translation, a space character appears after a markdown link description ends (with `]`) but
 before its target link begins (with `(`). This causes the markdown to render incorrectly, and the link
 is broken when viewing the document.
+* Code blocks get translated. Google translate doesn't know what markdown considers code and what it doesn't
+* Incorrect spacing for indented code blocks. Spacing is difficult to preserve in translation
+* Things inside of `backticks` will get translated, when you almost always want them to be literal values
 
-Set the `-M` / `--markdown` flag and the pattern `] (` will be condensed to `](` thus fixing the
-broken markdown links
+When the `-M` / `--markdown` flag is enabled:
+* The pattern `] (` will be condensed to `](` thus fixing the broken markdown links
+* A "no translate" wrapper will be placed around indented code blocks, preserving proper indentation and ensuring they are not translated
+* A "no translate" wrapper will be placed around text within `backticks` to ensure that they are not translated
 
 ### Process-as
 Normally everything is processed as plain text
