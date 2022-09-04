@@ -9,8 +9,8 @@ Hokeylization
  * dosierujo de dosieroj, rekursie
 
  # Legu ĉi tion en alia lingvo
- Ĉi tiu dokumento README.md estis tradukita, uzante la hokeylization ilo mem,
- en **[ĉiu lingvo subtenata de Google Translate](../README.md)!**
+ Ĉi tiu dokumento README.md estis tradukita, uzante la hokeylization ilo mem, en
+ **[ĉiu lingvo subtenata de Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Mi certas, ke ĝi ne estas perfekta, sed mi esperas, ke ĝi estas pli bona ol nenio!
 

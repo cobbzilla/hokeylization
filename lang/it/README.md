@@ -9,8 +9,8 @@ Hokeylizzazione
  * una directory di file, ricorsivamente
 
  # Leggi questo in un'altra lingua
- Questo documento README.md è stato tradotto, utilizzando lo stesso strumento di hokeylization,
- in **[ogni lingua supportata da Google Translate](../README.md)!**
+ Questo documento README.md è stato tradotto, utilizzando lo stesso strumento di hokeylization, in
+ **[ogni lingua supportata da Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Sono certa che non sia perfetto, ma spero sia meglio di niente!
 
@@ -215,7 +215,7 @@ Hokeylizzazione
  In caso di dubbio, puoi combinare questa opzione con `-n` / `--dry-run` per vedere quali file verrebbero tradotti
 
  ### Esclude
- A volte il tuo `-m` corrisponde a troppi file. Usa l' `-e` / `--excludes` per escludere esplicitamente
+ A volte il tuo `-m` corrisponde a troppi file. Utilizzare l' `-e` / `--excludes` per escludere esplicitamente
  file che altrimenti avrebbero corrisposto
 
  Puoi elencare più espressioni regolari, separate da spazi

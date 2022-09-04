@@ -9,8 +9,8 @@ Hokeylization
  * eòlaire de fhaidhlichean, ath-chùrsach
 
  # Leugh seo ann an cànan eile
- Chaidh an sgrìobhainn README.md seo eadar-theangachadh, a’ cleachdadh an inneal hokeylization fhèin,
- a-steach ** [gach cànan le taic bho Google Translate](../README.md)!**
+ Chaidh an sgrìobhainn README.md seo eadar-theangachadh, a’ cleachdadh an inneal hokeylization fhèin, gu
+ **[a h-uile cànan le taic bho Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Tha mi cinnteach nach eil e foirfe, ach tha mi an dòchas gu bheil e nas fheàrr na dad!
 

@@ -9,8 +9,8 @@ Hokeylization
  * diréktori file, sacara rekursif
 
  # Baca ieu dina basa sanés
- Dokumén README.md ieu parantos ditarjamahkeun, nganggo alat hokeylization sorangan,
- kana **[unggal basa dirojong ku Google Tarjamah](../README.md)!**
+ Ieu dokumén README.md geus ditarjamahkeun, ngagunakeun alat hokeylization sorangan, kana
+ **[sagala basa dirojong ku Google Tarjamah](https://cloud.google.com/translate/docs/languages)!**
 
  Kuring yakin éta teu sampurna, tapi kuring miharep éta leuwih hade tinimbang nanaon!
 

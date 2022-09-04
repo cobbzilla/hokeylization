@@ -9,8 +9,8 @@ Hokeylization
  * een map met bestanden, recursief
 
  # Lees dit in een andere taal
- Dit README.md-document is vertaald met behulp van de hokeylization-tool zelf,
- in **[elke taal ondersteund door Google Translate](../README.md)!**
+ Dit README.md document is vertaald, met behulp van de hokeylization tool zelf, in
+ **[elke taal ondersteund door Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Ik weet zeker dat het niet perfect is, maar ik hoop dat het beter is dan niets!
 

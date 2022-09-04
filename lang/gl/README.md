@@ -9,8 +9,8 @@ Hokeylización
  * un directorio de ficheiros, de forma recursiva
 
  # Le isto noutro idioma
- Este documento README.md foi traducido mediante a propia ferramenta de hokeylization,
- a **[todos os idiomas admitidos por Google Translate](../README.md)!**
+ Este documento README.md foi traducido, mediante a propia ferramenta de hokeylization, a
+ **[todos os idiomas admitidos por Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Estou seguro de que non é perfecto, pero espero que sexa mellor que nada!
 
@@ -260,7 +260,7 @@ Hokeylización
 
  A función `filter` debe ser `async` porque se chamará `await`
 
- Antes de escribir os ficheiros no disco, todo o contido do ficheiro pasará á función `filter` como unha cadea
+ Antes de que os ficheiros se escriban no disco, todo o contido do ficheiro pasará á función `filter` como unha cadea
 
  O valor de retorno da función `filter` é o que realmente se escribirá no almacenamento
 

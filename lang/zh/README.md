@@ -9,8 +9,8 @@
 * 文件目录，递归
 
 # 用另一种语言阅读
-这个 README.md 文件已经被翻译，使用了 hokeyization 工具本身，
-变成**[谷歌翻译支持的所有语言](../README.md)！**
+此 README.md 文档已使用 hokeyization 工具本身翻译成
+**[谷歌翻译支持的所有语言](https://cloud.google.com/translate/docs/languages)！**
 
 我敢肯定它并不完美，但我希望它总比没有好！
 

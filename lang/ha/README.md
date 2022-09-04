@@ -9,8 +9,8 @@ Hokeyylization
  * kundin adireshi na fayiloli, akai-akai
 
  # Karanta wannan a wani yare
- An fassara wannan takaddar README.md, ta amfani da kayan aikin hokeylization kanta,
- zuwa **[kowane harshe da Google Translate ke tallafawa](../README.md)!**
+ An fassara wannan takaddar README.md, ta amfani da kayan aikin hokeylization kanta, zuwa cikin
+ **[kowane harshe yana da tallafin Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Na tabbata ba cikakke ba ne, amma ina fata ya fi komai kyau!
 
@@ -236,14 +236,14 @@ Hokeyylization
 
  Hokeylizer yana sarrafa abubuwa da kyau da kyau, amma tare da fayilolin da aka saka, ƙila sau da yawa waɗannan matsalolin:
  * Abubuwan da aka karye. A cikin fassarar, yanayin sararin samaniya yana bayyana bayan bayanin hanyar haɗin gwiwa ya ƙare (tare da `]` ) amma
- kafin mahaɗin da aka sa a gaba ya fara (tare da `(` ) Wannan yana sa alamar ta yi kuskure, da kuma hanyar haɗin yanar gizon.
+ kafin a fara hanyar haɗin yanar gizon sa (tare da `(` ) Wannan yana sa alamar ta yi kuskure, da kuma hanyar haɗin yanar gizon.
  ya karye lokacin kallon takardar.
  * An fassara tubalan lambobi. Google Translation bai san abin da alamar ke ɗaukar lamba da abin da baya sani ba
  * Ba daidai ba tazara don tubalan lamba. Tazara yana da wuyar adanawa a cikin fassarar
  * Abubuwan da ke cikin `backticks` za a fassara su, lokacin da kusan koyaushe kuna son su zama dabi'u na zahiri
 
  Lokacin da aka kunna tutar `-M` / `--markdown` :
- * Alamar `] (` za a tattara ta zuwa `](` don haka gyara hanyoyin haɗin da aka karye
+ * Alamar `] (` za'a tattara ta zuwa `](` don haka gyara hanyoyin haɗin da aka karye
  * Za a sanya murfi na "babu fassarar" a kusa da ɓangarorin lambobi, adana ingantacciyar shigar da kuma tabbatar da cewa ba a fassara su ba.
  * Za a sanya murfi na "babu fassara" a kusa da rubutu a cikin `backticks` don tabbatar da cewa ba a fassara su ba
 

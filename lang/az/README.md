@@ -9,8 +9,8 @@ Hokeyləşmə
  * rekursiv olaraq faylların kataloqu
 
  # Bunu başqa dildə oxuyun
- Bu README.md sənədi hokeyləşdirmə alətinin özündən istifadə etməklə tərcümə edilmişdir.
- **[Google Translate tərəfindən dəstəklənən bütün dillər](../README.md) dilinə!**
+ Bu README.md sənədi hokeyləşdirmə alətinin özündən istifadə etməklə tərcümə edilmişdir
+ **[Google Translate tərəfindən dəstəklənən bütün dillər](https://cloud.google.com/translate/docs/languages)!**
 
  Əminəm ki, mükəmməl deyil, amma ümid edirəm ki, heç nədən yaxşıdır!
 

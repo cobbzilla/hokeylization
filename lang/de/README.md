@@ -9,8 +9,8 @@ Hokeylisierung
  * ein Verzeichnis von Dateien, rekursiv
 
  # Lesen Sie dies in einer anderen Sprache
- Dieses README.md-Dokument wurde mit dem Hokeylization-Tool selbst übersetzt.
- in **[jede von Google Übersetzer unterstützte Sprache](../README.md)!**
+ Dieses README.md-Dokument wurde mit dem Hokeylization-Tool selbst in übersetzt
+ **[jede von Google Übersetzer unterstützte Sprache](https://cloud.google.com/translate/docs/languages)!**
 
  Ich bin sicher, es ist nicht perfekt, aber ich hoffe, es ist besser als nichts!
 

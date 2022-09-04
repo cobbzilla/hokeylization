@@ -9,8 +9,8 @@ Hokeyleiddiad
  * cyfeiriadur o ffeiliau, yn ailadroddus
 
  # Darllenwch hwn mewn iaith arall
- Mae'r ddogfen README.md hon wedi'i chyfieithu, gan ddefnyddio'r offeryn hokeylization ei hun,
- i mewn i **[pob iaith a gefnogir gan Google Translate](../README.md)!**
+ Mae'r ddogfen README.md hon wedi'i chyfieithu, gan ddefnyddio'r offeryn hokeylization ei hun, i
+ **[pob iaith a gefnogir gan Google Translate]( https://cloud.google.com/translate/docs/languages)!**
 
  Rwy'n sicr nad yw'n berffaith, ond gobeithio ei fod yn well na dim!
 

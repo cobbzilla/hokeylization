@@ -9,8 +9,8 @@ Hokeylization
  * ib daim ntawv teev cov ntaub ntawv, recursively
 
  # Nyeem qhov no ua lwm hom lus
- Cov ntaub ntawv README.md no tau raug txhais, siv cov cuab yeej hokeylization nws tus kheej,
- rau hauv **[txhua yam lus txhawb nqa los ntawm Google Txhais](../README.md)!**
+ Cov ntaub ntawv README.md no tau raug txhais, siv cov cuab yeej hokeylization nws tus kheej, rau hauv
+ **[txhua hom lus txhawb nqa los ntawm Google Txhais](https://cloud.google.com/translate/docs/languages)!**
 
  Kuv paub tseeb tias nws tsis zoo tag nrho, tab sis kuv vam tias nws zoo dua tsis muaj dab tsi!
 

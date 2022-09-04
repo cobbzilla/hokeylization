@@ -9,8 +9,8 @@ Hokeylizatsiya
  * rekursiv fayllar katalogi
 
  # Buni boshqa tilda o'qing
- Ushbu README.md hujjati hokeylizatsiya vositasi yordamida tarjima qilingan,
- **[Google Translate tomonidan qo‘llab-quvvatlanadigan barcha tillar](../README.md)ga!**
+ Ushbu README.md hujjati hokeylizatsiya vositasi yordamida tarjima qilingan
+ **[Google Translate tomonidan qo‘llab-quvvatlanadigan barcha tillar](https://cloud.google.com/translate/docs/languages)!**
 
  Ishonchim komilki, bu mukammal emas, lekin umid qilamanki, bu hech narsadan yaxshiroq!
 
@@ -258,11 +258,11 @@ Hokeylizatsiya
 
  Ushbu parametr qiymati `filter` nomli funksiyani eksport qiluvchi JS fayliga yoʻl boʻlishi kerak
 
- " `filter` " funksiyasi " `async` " bo'lishi kerak, chunki u " `await` " ni chaqiradi
+ " `filter` " funksiyasi " `async` " bo'lishi kerak, chunki u " `await` " deb chaqiriladi
 
  Fayllar diskka yozilishidan oldin butun fayl mazmuni " `filter` funksiyasiga satr sifatida uzatiladi.
 
- " `filter` funktsiyasidan qaytariladigan qiymat aslida saqlashga yoziladigan narsadir
+ " `filter` funksiyasidan qaytariladigan qiymat aslida saqlashga yoziladigan narsadir
 
  Shunday qilib, siz oxirida nima yozilishini to'liq nazorat qilasiz
 

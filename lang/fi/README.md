@@ -9,8 +9,8 @@ Hokeylisaatio
  * tiedostohakemisto, rekursiivisesti
 
  # Lue tämä toisella kielellä
- Tämä README.md-dokumentti on käännetty itse hokeylisointityökalulla,
- **[kaikki Google-kääntäjän tukemat kielet](../README.md)!**
+ Tämä README.md-dokumentti on käännetty itse hokeylisointityökalulla kielelle
+ **[kaikki Google-kääntäjän tukemat kielet](https://cloud.google.com/translate/docs/languages)!**
 
  Olen varma, että se ei ole täydellinen, mutta toivon, että se on parempi kuin ei mitään!
 

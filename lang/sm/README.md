@@ -9,8 +9,8 @@ Hokeylization
  * se lisi o faila, faʻasolosolo
 
  # Faitau lenei i se isi gagana
- O lenei README.md pepa ua faaliliuina, faʻaaoga le meafaigaluega hokeylization lava ia,
- i **[gagana uma e lagolagoina e Google Translate](../README.md)!**
+ O lenei README.md pepa ua faaliliuina, faʻaaoga le meafaigaluega hokeylization lava ia, i totonu
+ **[gagana uma e lagolagoina e Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Ou te mautinoa e le atoatoa, ae ou te faʻamoemoe e sili atu nai lo le leai!
 

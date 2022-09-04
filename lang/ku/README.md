@@ -9,8 +9,8 @@ Hokeylization
  * pelrêçek pelan, bi paşverû
 
  # Vê bi zimanekî din bixwînin
- Ev belgeya README.md hatiye wergerandin, bi karanîna amûra hokeylîzasyonê bixwe,
- nav **[her zimanê ku ji hêla Google Wergerê ve tê piştgirî kirin](../README.md)!**
+ Ev belgeya README.md, bi karanîna amûra hokeylîzasyonê bixwe, hatî wergerandin
+ **[her ziman ji hêla Google Wergerê ve tê piştgirî kirin](https://cloud.google.com/translate/docs/languages)!**
 
  Ez bawer im ku ew ne bêkêmasî ye, lê ez hêvî dikim ku ew ji tunebûnê çêtir e!
 
@@ -258,7 +258,7 @@ Hokeylization
 
  Nirxa vê vebijarkê divê rêyek be ji pelek JS re ku fonksiyonek bi navê `filter`
 
- Pêdivî ye ku fonksiyona `filter` `async` `await` be ji ber ku dê li benda wê were gotin
+ Divê fonksiyona `filter` `async` `await` be ji ber ku dê li benda wê were gotin
 
  Berî ku pel li ser dîskê werin nivîsandin, tevahiya naveroka pelê dê wekî rêzek ji fonksiyona `filter` were derbas kirin
 

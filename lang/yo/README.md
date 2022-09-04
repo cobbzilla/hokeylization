@@ -9,8 +9,8 @@ Hokeyylization
  * itọsọna ti awọn faili, loorekoore
 
  # Ka eyi ni ede miiran
- A ti tumọ iwe README.md yii, ni lilo ohun elo hokeylization funrararẹ,
- sinu **[gbogbo ede ni atilẹyin nipasẹ Google Translate](../README.md)!**
+ Iwe README.md yii ti ni itumọ, ni lilo ohun elo hokeylization funrararẹ, sinu
+ **[gbogbo ede ni atilẹyin nipasẹ Google Tumọ](https://cloud.google.com/translate/docs/languages)!**
 
  Mo ni idaniloju pe ko pe, ṣugbọn Mo nireti pe o dara ju ohunkohun lọ!
 

@@ -9,8 +9,8 @@ Hokeyzation
  * một thư mục các tệp, đệ quy
 
  # Đọc sách này bằng ngôn ngữ khác
- Tài liệu README.md này đã được dịch, sử dụng chính công cụ hokeyzation,
- sang ** [mọi ngôn ngữ được Google Dịch hỗ trợ] (lang / README.md)! **
+ Tài liệu README.md này đã được dịch, sử dụng chính công cụ hokeyzation, sang
+ ** [mọi ngôn ngữ được Google Dịch hỗ trợ] (https://cloud.google.com/translate/docs/languages)! **
 
  Tôi chắc chắn rằng nó không hoàn hảo, nhưng tôi hy vọng nó còn hơn không!
 

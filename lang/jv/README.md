@@ -9,8 +9,8 @@ Hokeylization
  * direktori file, rekursif
 
  # Waca iki ing basa liya
- Dokumen README.md iki wis diterjemahake, nggunakake alat hokeylization dhewe,
- menyang **[saben basa sing didhukung Google Translate](../README.md)!**
+ Dokumen README.md iki wis diterjemahake, nggunakake alat hokeylization dhewe, menyang
+ **[saben basa didhukung Google Terjemahan](https://cloud.google.com/translate/docs/languages)!**
 
  Aku yakin ora sampurna, nanging muga-muga luwih apik tinimbang ora ana!
 
@@ -262,7 +262,7 @@ Hokeylization
 
  Sadurunge file ditulis menyang disk, kabeh isi file bakal diterusake menyang fungsi `filter` minangka string
 
- Nilai bali saka fungsi `filter` yaiku apa sing bakal ditulis ing panyimpenan
+ Nilai bali saka fungsi `filter` apa bener bakal ditulis kanggo panyimpenan
 
  Mangkono, sampeyan duwe kontrol total babagan apa sing bakal ditulis
 

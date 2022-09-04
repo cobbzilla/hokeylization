@@ -9,8 +9,8 @@ I-Hokeylization
  * umkhombandlela wamafayela, ngokuphindaphindiwe
 
  # Funda lokhu ngolunye ulimi
- Lo mbhalo we-README.md uhunyushwe, kusetshenziswa ithuluzi le-hokeylization ngokwalo,
- ku-*[zonke izilimi ezisekelwa i-Google Translate](../README.md)!**
+ Lo mbhalo we-README.md uhunyushwe, kusetshenziswa ithuluzi le-hokeylization ngokwalo, kwaba
+ **[zonke izilimi zisekelwa i-Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Ngiqinisekile ukuthi ayiphelele, kodwa ngethemba ukuthi ingcono kunalutho!
 
@@ -256,7 +256,7 @@ I-Hokeylization
  Okwesikhashana: lapho ucubungula amafayela ohlwini lwemibhalo, ungadlula `-F` / `--filter`
  ukuhlunga okukhiphayo ngaphambi kokuthi kubhalwe ohlelweni lwefayela
 
- Inani lale nketho kumelwe libe indlela eya efayeleni le-JS elithumela ngaphandle umsebenzi okuthiwa `filter`
+ Inani lale nketho kufanele libe indlela eya efayeleni le-JS elithumela ngaphandle umsebenzi okuthiwa `filter`
 
  Umsebenzi `filter` kumelwe `async` ngoba `await` kuwo
 

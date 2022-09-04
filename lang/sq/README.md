@@ -9,8 +9,8 @@ Hokeylizimi
  * një drejtori skedarësh, në mënyrë rekursive
 
  # Lexojeni këtë në një gjuhë tjetër
- Ky dokument README.md është përkthyer, duke përdorur vetë mjetin hokeylization,
- në **[çdo gjuhë e mbështetur nga Google Translate](../README.md)!**
+ Ky dokument README.md është përkthyer, duke përdorur vetë mjetin hokeylization, në
+ **[çdo gjuhë e mbështetur nga Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Jam i sigurt se nuk është perfekt, por shpresoj të jetë më mirë se asgjë!
 

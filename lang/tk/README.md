@@ -9,8 +9,8 @@ Hokeylizasiýa
  * faýllaryň katalogy, yzygiderli
 
  # Muny başga dilde okaň
- Bu README.md resminamasy hokeylizasiýa guralynyň kömegi bilen terjime edildi,
- ** [Google Translate tarapyndan goldanýan her dilde] (lang / README.md)! **
+ Bu README.md resminamasy, hokeylizasiýa guralyny ulanyp terjime edildi
+ ** [Google Translate tarapyndan goldanýan her dil] (https://cloud.google.com/translate/docs/languages)! **
 
  Kämil däldigine ynanýaryn, ýöne hiç zatdan gowudyr diýip umyt edýärin!
 

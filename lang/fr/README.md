@@ -9,8 +9,8 @@ Hokeyylisation
  * un répertoire de fichiers, récursivement
 
  # Lire ceci dans une autre langue
- Ce document README.md a été traduit, à l'aide de l'outil de hokeyylisation lui-même,
- dans **[toutes les langues prises en charge par Google Traduction](../README.md) !**
+ Ce document README.md a été traduit, à l'aide de l'outil de hokeyylisation lui-même, en
+ **[toutes les langues prises en charge par Google Translate](https://cloud.google.com/translate/docs/languages) !**
 
  Je suis certain que ce n'est pas parfait, mais j'espère que c'est mieux que rien !
 
@@ -198,7 +198,7 @@ Hokeyylisation
 
  ## Autres options
 
- ### Essai à sec
+ ### Essai à vide
  Passez `-n` / `--dry-run` pour afficher ce qui serait fait, mais n'effectuez pas d'appels d'API ni n'écrivez de fichiers
 
  ### Force
@@ -248,7 +248,7 @@ Hokeyylisation
  * Un wrapper "pas de traduction" sera placé autour du texte dans `backticks` pour s'assurer qu'ils ne sont pas traduits
 
  ### Traiter comme
- Normalement, tout est traité comme du texte brut
+ Normalement, tout est traité en texte brut
 
  Si votre contenu est HTML, il sera mutilé à moins que vous ne passiez l' `-p html` / `--process-as html`
 

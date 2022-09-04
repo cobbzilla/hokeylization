@@ -9,8 +9,8 @@ Hokeylization
  * direttorju ta' fajls, b'mod rikorsiv
 
  # Aqra dan b'lingwa oħra
- Dan id-dokument README.md ġie tradott, bl-użu tal-għodda tal-hokeylization innifisha,
- fi **[kull lingwa appoġġjata minn Google Translate](../README.md)!**
+ Dan id-dokument README.md ġie tradott, bl-użu tal-għodda tal-hokeylization innifsu, fi
+ **[kull lingwa appoġġjata minn Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Jien ċert li mhuwiex perfett, imma nispera li huwa aħjar minn xejn!
 
@@ -146,7 +146,7 @@ Hokeylization
 
  Jekk il-fajl tal-output diġà jeżisti, se jiġi eżaminat biex jiġi ddeterminat liema ċwievet diġà jeżistu.
  Iċ-ċwievet eżistenti mhux se jiġu tradotti. It-traduzzjonijiet għaċ-ċwievet neqsin jiġu ġġenerati u mehmuża
- sal-aħħar tal-oġġett JS. Il-fajl kollu huwa dejjem miktub mill-ġdid.
+ sat-tmiem tal-oġġett JS. Il-fajl kollu huwa dejjem miktub mill-ġdid.
 
  Biex tisforza t-traduzzjoni mill-ġdid taċ-ċwievet kollha, uża l- `-f` / `--force`
 
@@ -161,7 +161,7 @@ Hokeylization
 
  **TWISSIJA KBIRA**: Meta tittraduċi direttorji, **MA** tispeċifika direttorju tal-output
  li huwa fid-direttorju input tiegħek! Jekk tagħmel dan, int se:
- * jinduċi rikorsjoni infinita
+ * jinduċu rikorsi infinit
  * iżżid il-kont tal-Google tiegħek
  * imla d-disk tiegħek
  * tieħdu pjaċir inqas
@@ -237,7 +237,7 @@ Hokeylization
  Hokeylizer jimmaniġġja l-affarijiet b'mod deċenti tajjeb, iżda bil-fajls ta 'markdown, ħafna drabi tista' dawn il-problemi:
  * Links miksura. Fit-traduzzjoni, karattru spazjali jidher wara li tispiċċa deskrizzjoni tal-link markdown (b `]` ) iżda
  qabel ma tibda l-link fil-mira tagħha (bil- `(` ). Dan jikkawża li l-markdown tirrendi ħażin, u l-link
- jinkiser meta tara d-dokument.
+ jitkisser meta tara d-dokument.
  * Il-blokki tal-kodiċi jiġu tradotti. Google translate ma jafx x'jikkunsidra l-markdown kodiċi u dak li ma jagħmilx
  * Spazjar mhux korrett għall-blokki tal-kodiċi indentati. L-ispazjar huwa diffiċli biex jiġi ppreservat fit-traduzzjoni
  * Affarijiet ġewwa `backticks` se jiġu tradotti, meta kważi dejjem trid li jkunu valuri letterali
@@ -260,7 +260,7 @@ Hokeylization
 
  Il-funzjoni `filter` trid tkun `async` " għaliex `await` se tissejjaħ fuqha
 
- Qabel ma l-fajls jinkitbu fuq id-disk, il-kontenut kollu tal-fajl se jiġi mgħoddi għall-funzjoni `filter` bħala string
+ Qabel ma l-fajls jinkitbu fuq id-diska, il-kontenut kollu tal-fajl se jiġi mgħoddi għall-funzjoni `filter` bħala string
 
  Il-valur tar-ritorn mill-funzjoni `filter` huwa dak li fil-fatt se jinkiteb fil-ħażna
 

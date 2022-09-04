@@ -9,8 +9,8 @@ Hokeylização
  * um diretório de arquivos, recursivamente
 
  # Leia isso em outro idioma
- Este documento README.md foi traduzido, utilizando a própria ferramenta de hokeylization,
- em **[todos os idiomas suportados pelo Google Tradutor](../README.md)!**
+ Este documento README.md foi traduzido, usando a própria ferramenta de hokeylization, para
+ **[todos os idiomas suportados pelo Google Tradutor](https://cloud.google.com/translate/docs/languages)!**
 
  Tenho certeza que não é perfeito, mas espero que seja melhor que nada!
 

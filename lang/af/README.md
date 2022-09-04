@@ -9,8 +9,8 @@ Hokielisering
  * 'n gids van lêers, rekursief
 
  # Lees dit in 'n ander taal
- Hierdie README.md-dokument is vertaal, met behulp van die hokeylisasie-instrument self,
- in **[elke taal wat deur Google Translate ondersteun word](../README.md)!**
+ Hierdie README.md-dokument is met behulp van die hokeylisasie-instrument self vertaal in
+ **[elke taal wat deur Google Translate ondersteun word](https://cloud.google.com/translate/docs/languages)!**
 
  Ek is seker dit is nie perfek nie, maar ek hoop dit is beter as niks!
 

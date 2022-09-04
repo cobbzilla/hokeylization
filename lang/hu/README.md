@@ -9,8 +9,8 @@ Hokeylizálás
  * fájlok könyvtára, rekurzívan
 
  # Olvassa el ezt egy másik nyelven
- Ezt a README.md dokumentumot maga a hokeylization eszköz segítségével fordították le,
- **[a Google Fordító által támogatott minden nyelv](../README.md)!**
+ Ezt a README.md dokumentumot maga a hokeylization eszköz segítségével fordították le
+ **[a Google Fordító által támogatott minden nyelv](https://cloud.google.com/translate/docs/languages)!**
 
  Biztos vagyok benne, hogy nem tökéletes, de remélem, jobb a semminél!
 
@@ -264,7 +264,7 @@ Hokeylizálás
 
  A `filter` függvény visszatérési értéke az, ami ténylegesen a tárolóba kerül
 
- Így teljes ellenőrzése alatt áll, hogy végül mi kerül megírásra
+ Így teljes irányítása alatt áll, hogy végül mi kerül megírásra
 
  ### Segítség
  Használja a `-h` / `--help` a súgó megjelenítéséhez

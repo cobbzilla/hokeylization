@@ -9,8 +9,8 @@ Hokeilizācija
  * rekursīvi failu direktorijs
 
  # Lasiet to citā valodā
- Šis README.md dokuments ir tulkots, izmantojot pašu hokeylizācijas rīku,
- **[visās valodās, ko atbalsta Google tulkotājs](../README.md)!**
+ Šis README.md dokuments ir tulkots, izmantojot pašu hokeylizācijas rīku
+ **[Visas valodas, ko atbalsta Google tulkotājs](https://cloud.google.com/translate/docs/languages)!**
 
  Esmu pārliecināts, ka tas nav ideāls, bet es ceru, ka tas ir labāk nekā nekas!
 

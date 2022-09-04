@@ -9,8 +9,8 @@ Hokeyylization
  * akwụkwọ ndekọ aha faịlụ, ugboro ugboro
 
  # Gụọ nke a n'asụsụ ọzọ
- Atụgharịrị ntụgharị akwụkwọ README.md a, na-eji ngwa hokeylization n'onwe ya,
- banye **[asụsụ ọ bụla Google Translate na-akwado](../README.md)!**
+ Atụgharịala akwụkwọ README.md a, na-eji ngwa hokeyylization n'onwe ya, banye
+ **[Google Translate na-akwado asụsụ ọ bụla](https://cloud.google.com/translate/docs/languages)!**
 
  Eji m n'aka na ọ zughị oke, mana enwere m olileanya na ọ ka mma karịa ihe ọ bụla!
 
@@ -109,7 +109,7 @@ Hokeyylization
  Ọ bụrụ na ị na-agba ọsọ site na koodu isi mmalite, ị nwekwara ike itinye ndị a na faịlụ `.env` na isi mmalite
  A ga-ebunye ndekọ aha ha na oge ojiri gaa site na [dotenv](https://www.npmjs.com/package/dotenv)
 
- ## Ịsụgharị faịlụ akụ eriri Javascript
+ ## Ịsụgharị faịlụ akụrụngwa Javascript
  Tebụl eriri gị ** ga-abụrịrị na faịlụ Javascript n'otu n'ime ụdị abụọ a:
 
  Mbupu ES6:

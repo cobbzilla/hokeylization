@@ -9,8 +9,8 @@ Hokeylization
  * direktori fail, secara rekursif
 
  # Baca ini dalam bahasa lain
- Dokumen README.md ini telah diterjemahkan, menggunakan alat hokeylization itu sendiri,
- ke dalam **[setiap bahasa yang disokong oleh Terjemahan Google](../README.md)!**
+ Dokumen README.md ini telah diterjemahkan, menggunakan alat hokeylization itu sendiri, ke dalam
+ **[setiap bahasa disokong oleh Terjemahan Google](https://cloud.google.com/translate/docs/languages)!**
 
  Saya pasti ia tidak sempurna, tetapi saya harap ia lebih baik daripada tiada!
 

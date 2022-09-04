@@ -9,8 +9,8 @@ Hokeylization
  * Uluhlu lweefayile, ngokuphindaphindiweyo
 
  # Funda oku ngolunye ulwimi
- Olu xwebhu README.md luguqulelwe, kusetyenziswa isixhobo se-hokeylization ngokwaso,
- kwi-*[lonke ulwimi oluxhaswa yiToliki kaGoogle](../README.md)!**
+ Olu xwebhu README.md luguqulelwe, kusetyenziswa isixhobo se-hokeylization ngokwaso, kwi
+ **[lonke ulwimi luxhaswa yiToliki kaGoogle](https://cloud.google.com/translate/docs/languages)!**
 
  Ndiqinisekile ukuba ayifezekanga, kodwa ndiyathemba ukuba ingcono kunanto!
 

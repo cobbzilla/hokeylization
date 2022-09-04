@@ -9,8 +9,8 @@ Hokeylizazioa
  * Fitxategien direktorio bat, modu errekurtsiboan
 
  # Irakurri hau beste hizkuntza batean
- README.md dokumentu hau itzuli da, hokeylization tresna bera erabiliz,
- **[Google Translate-k onartzen duen hizkuntza guztietan](../README.md)!**
+ README.md dokumentu hau, hokeylization tresna bera erabiliz, itzuli da
+ **[Google Translate-k onartzen duen hizkuntza guztietan](https://cloud.google.com/translate/docs/languages)!**
 
  Ziur nago ez dela perfektua, baina espero dut ezer baino hobea izatea!
 
@@ -262,7 +262,7 @@ Hokeylizazioa
 
  Fitxategiak diskoan idatzi aurretik, fitxategiaren eduki osoa `filter` funtziora pasatuko da kate gisa
 
- `filter` funtzioaren itzulera-balioa biltegiratze-ra benetan idatziko dena da
+ `filter` funtzioaren itzulera-balioa benetan biltegiratzean idatziko dena da
 
  Horrela, azkenean idatziko denaren gaineko kontrol osoa duzu
 

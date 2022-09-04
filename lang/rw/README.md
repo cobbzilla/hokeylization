@@ -9,8 +9,8 @@ Hokeylisation
  * ububiko bwamadosiye, mubisubiramo
 
  # Soma ibi mu rundi rurimi
- Iyi nyandiko ya README.md yarahinduwe, ikoresheje igikoresho cya hokeylization ubwayo,
- muri ** [ururimi rwose rushyigikiwe na Google Translate] (lang / README.md)! **
+ Iyi nyandiko ya README.md yarahinduwe, ikoresheje igikoresho cya hokeylisation ubwayo, muri
+ ** [ururimi rwose rushyigikiwe na Google Translate] (https://cloud.google.com/translate/docs/ururimi)! **
 
  Nzi neza ko bidatunganye, ariko nizere ko biruta ubusa!
 

@@ -9,8 +9,8 @@ Hokeylizace
  * adresář souborů, rekurzivně
 
  # Přečtěte si to v jiném jazyce
- Tento dokument README.md byl přeložen pomocí samotného nástroje hokeyylizace,
- do **[každý jazyk podporovaný Překladačem Google](../README.md)!**
+ Tento dokument README.md byl přeložen pomocí samotného nástroje pro hokeyylizaci
+ **[každý jazyk podporovaný Překladačem Google](https://cloud.google.com/translate/docs/languages)!**
 
  Jsem si jistý, že to není dokonalé, ale doufám, že je to lepší než nic!
 

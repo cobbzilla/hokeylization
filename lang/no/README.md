@@ -9,8 +9,8 @@ Hokeylisering
  * en katalog med filer, rekursivt
 
  # Les dette på et annet språk
- Dette README.md-dokumentet har blitt oversatt ved å bruke selve hokeyliseringsverktøyet,
- til **[alle språk som støttes av Google Translate](../README.md)!**
+ Dette README.md-dokumentet har blitt oversatt, ved å bruke selve hokeyliseringsverktøyet, til
+ **[alle språk som støttes av Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Jeg er sikker på at det ikke er perfekt, men jeg håper det er bedre enn ingenting!
 

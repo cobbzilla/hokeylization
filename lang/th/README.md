@@ -9,8 +9,8 @@ Hokeylization
  * ไดเร็กทอรีของไฟล์แบบเรียกซ้ำ
 
  #อ่านเป็นภาษาอื่น
- เอกสาร README.md นี้ได้รับการแปลโดยใช้เครื่องมือ hokeylization
- เป็น **[ทุกภาษาที่ Google Translate รองรับ](../README.md)!**
+ เอกสาร README.md นี้ได้รับการแปลโดยใช้เครื่องมือ hokeylization เป็น
+ **[ทุกภาษาที่ Google Translate รองรับ](https://cloud.google.com/translate/docs/languages)!**
 
  ฉันแน่ใจว่ามันไม่สมบูรณ์แบบ แต่ฉันหวังว่าจะดีกว่าไม่ทำอะไรเลย!
 

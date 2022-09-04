@@ -9,8 +9,8 @@ Hokeylization
  * lahatahiry misy rakitra, miverimberina
 
  # Vakio amin'ny fiteny hafa ity
- Ity rakitra README.md ity dia nadika, tamin'ny fampiasana ny fitaovana hokeylization mihitsy,
- amin'ny **[fiteny rehetra tohanan'ny Dikanteny Google](../README.md)!**
+ Ity antontan-taratasy README.md ity dia nadika, tamin'ny fampiasana ny fitaovana hokeylization mihitsy, ho
+ **[ny fiteny rehetra tohanan'ny Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  azoko antoka fa tsy tonga lafatra izany fa manantena aho fa tsara noho ny tsy misy!
 
@@ -267,7 +267,7 @@ Hokeylization
  Noho izany, manana fifehezana tanteraka amin'izay hosoratana amin'ny farany ianao
 
  ### Vonjeo
- Ampiasao `-h` / `--help` hanehoana fanampiana
+ Mampiasà `-h` / `--help` hanehoana fanampiana
 
  ## Faly Mandika!
 

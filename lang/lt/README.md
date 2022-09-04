@@ -9,8 +9,8 @@ Hokeylizacija
  * failų katalogas, rekursyviai
 
  # Skaitykite tai kita kalba
- Šis README.md dokumentas buvo išverstas naudojant patį hokeylizacijos įrankį,
- į **[visas kalbas palaiko „Google“ vertėjas](../README.md)!**
+ Šis README.md dokumentas buvo išverstas naudojant patį hokeylization įrankį į
+ **[Visos kalbos palaikomos „Google“ vertėjo](https://cloud.google.com/translate/docs/languages)!**
 
  Esu tikras, kad tai nėra tobula, bet tikiuosi, kad tai geriau nei nieko!
 

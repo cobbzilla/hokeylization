@@ -9,8 +9,8 @@ Hokeylization
  * saraka ya faili, kwa kurudia
 
  # Soma hii kwa lugha nyingine
- Hati hii ya README.md imetafsiriwa, kwa kutumia zana ya kufanya hokeylization yenyewe,
- katika **[kila lugha inayotumika na Google Tafsiri](../README.md)!**
+ Hati hii ya README.md imetafsiriwa, kwa kutumia zana ya hokeylization yenyewe, kuwa
+ **[kila lugha inayotumika na Google Tafsiri](https://cloud.google.com/translate/docs/languages)!**
 
  Nina hakika sio kamili, lakini natumai ni bora kuliko chochote!
 
@@ -256,7 +256,7 @@ Hokeylization
  Kwa adventurous: wakati wa kusindika faili kwenye saraka, unaweza kupitisha chaguo la `-F` / `--filter`
  kuchuja matokeo kabla ya kuandikwa kwa mfumo wa faili
 
- Thamani ya chaguo hili lazima iwe njia ya faili ya JS inayohamisha chaguo la kukokotoa `filter`
+ Thamani ya chaguo hili lazima iwe njia ya faili ya JS inayohamisha kipengele cha kukokotoa kiitwacho `filter`
 
  `filter` za kukokotoa za `kichujio` lazima `async` kwa sababu `await` itaitwa juu yake
 

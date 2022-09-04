@@ -9,8 +9,8 @@ Hokeylisering
  * en katalog med filer, rekursivt
 
  # Läs detta på ett annat språk
- Det här README.md-dokumentet har översatts, med hjälp av själva hokeyliseringsverktyget,
- till **[alla språk som stöds av Google Translate](../README.md)!**
+ Detta README.md-dokument har översatts, med hjälp av själva verktyget för hokeylisering, till
+ **[alla språk som stöds av Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Jag är säker på att det inte är perfekt, men jag hoppas att det är bättre än ingenting!
 
@@ -256,13 +256,13 @@ Hokeylisering
  För den äventyrliga: när du bearbetar filer i en katalog kan du skicka alternativet `-F` / `--filter`
  för att filtrera utdata innan det skrivs till filsystemet
 
- Värdet på detta alternativ måste vara en sökväg till en JS-fil som exporterar en funktion som heter `filter`
+ Värdet för detta alternativ måste vara en sökväg till en JS-fil som exporterar en funktion som heter `filter`
 
- `filter` funktionen måste vara `async` eftersom `await` kommer att anropas
+ `filter` funktionen måste vara `async` eftersom `await` kommer att anropas på den
 
  Innan filer skrivs till disk kommer hela filinnehållet att skickas till `filter` funktionen som en sträng
 
- `filter` från "filter"-funktionen är det som faktiskt kommer att skrivas till lagringen
+ `filter` från "filter"-funktionen är det som faktiskt kommer att skrivas till minnet
 
  Därmed har du total kontroll över vad som slutligen kommer att skrivas
 

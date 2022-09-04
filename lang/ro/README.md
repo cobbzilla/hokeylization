@@ -9,8 +9,8 @@ Hokeylizare
  * un director de fișiere, recursiv
 
  # Citiți asta într-o altă limbă
- Acest document README.md a fost tradus, folosind instrumentul de hokeylization propriu-zis,
- în **[fiecare limbă acceptată de Google Translate](../README.md)!**
+ Acest document README.md a fost tradus, folosind instrumentul de hokeylization propriu-zis, în
+ **[fiecare limbă acceptată de Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Sunt sigur că nu este perfect, dar sper că este mai bine decât nimic!
 

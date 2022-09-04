@@ -9,8 +9,8 @@ Hokeylization
  * ថតឯកសារ, ឡើងវិញ
 
  # អាននេះជាភាសាផ្សេង
- ឯកសារ README.md នេះត្រូវបានបកប្រែ ដោយប្រើឧបករណ៍ hokeylization ខ្លួនវាផ្ទាល់។
- ចូលទៅក្នុង **[គ្រប់ភាសាដែលគាំទ្រដោយ Google Translate](../README.md)!**
+ ឯកសារ README.md នេះត្រូវបានបកប្រែ ដោយប្រើឧបករណ៍ hokeylization ខ្លួនវាចូលទៅក្នុង
+ **[គ្រប់ភាសាដែលគាំទ្រដោយ Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  ខ្ញុំប្រាកដថាវាមិនល្អឥតខ្ចោះ ប៉ុន្តែខ្ញុំសង្ឃឹមថាវាប្រសើរជាងគ្មានអ្វីសោះ!
 

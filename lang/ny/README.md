@@ -9,8 +9,8 @@ Hokeylization
  * chikwatu cha mafayilo, mobwerezabwereza
 
  # Werengani izi muchilankhulo china
- Chikalata cha README.md chamasuliridwa, pogwiritsa ntchito chida cha hokeylization chomwe,
- mu **[chinenero chilichonse chothandizidwa ndi Google Translate](../README.md)!**
+ Chikalata cha README.md chamasuliridwa, pogwiritsa ntchito chida cha hokeylization, kukhala
+ **[chinenero chilichonse chimathandizidwa ndi Zomasulira za Google](https://cloud.google.com/translate/docs/languages)!**
 
  Ndikutsimikiza kuti sizabwino, koma ndikukhulupirira kuti nzabwino kuposa chilichonse!
 

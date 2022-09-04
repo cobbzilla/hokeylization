@@ -9,8 +9,8 @@ Hokeylització
  * un directori de fitxers, de forma recursiva
 
  # Llegeix això en un altre idioma
- Aquest document README.md s'ha traduït, utilitzant la pròpia eina hokeylization,
- a **[cada idioma compatible amb Google Translate](../README.md)!**
+ Aquest document README.md s'ha traduït, utilitzant la pròpia eina hokeylization, a
+ **[cada idioma compatible amb Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Estic segur que no és perfecte, però espero que sigui millor que res!
 
@@ -256,9 +256,9 @@ Hokeylització
  Per als aventurers: quan processeu fitxers en un directori, podeu passar l' `-F` / `--filter`
  per filtrar la sortida abans que s'escriu al sistema de fitxers
 
- El valor d'aquesta opció ha de ser una ruta d'accés a un fitxer JS que exporti una funció anomenada `filter`
+ El valor d'aquesta opció ha de ser un camí d'accés a un fitxer JS que exporti una funció anomenada `filter`
 
- La funció `filter` ha de ser `async` " perquè s'hi cridarà `await`
+ La funció `filter` ha de ser `async` perquè se'n cridarà `await`
 
  Abans que els fitxers s'escriguin al disc, tot el contingut del fitxer es passarà a la funció `filter` com a cadena
 

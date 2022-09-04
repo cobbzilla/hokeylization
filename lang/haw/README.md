@@ -9,8 +9,8 @@ Hokeylization
  * he papa kuhikuhi o nā faila, recursively
 
  # E heluhelu i kēia ma ka ʻōlelo ʻē aʻe
- Ua unuhi ʻia kēia palapala README.md, me ka hoʻohana ʻana i ka mea hana hokeylization ponoʻī,
- i **[nā ʻōlelo a pau i kākoʻo ʻia e ka Unuhi Google](../README.md)!**
+ Ua unuhi ʻia kēia palapala README.md, me ka hoʻohana ʻana i ka mea hana hokeylization ponoʻī, i loko
+ **[kākoʻo ʻia kēlā me kēia ʻōlelo e ka Unuhi Google](https://cloud.google.com/translate/docs/languages)!**
 
  Ua maopopo iaʻu ʻaʻole ia i hemolele, akā manaʻo wau ʻoi aku ka maikaʻi ma mua o ka ʻole!
 
@@ -258,11 +258,11 @@ Hokeylization
 
  Pono ka waiwai o kēia koho he ala i kahi faila JS e hoʻokuʻu aku i kahi hana i kapa `filter`
 
- Pono ka hana `async` `filter` ka mea `await` ' e kāhea ʻia ma luna o ia
+ Pono ka hana `async` `filter` ka mea, e kāhea ʻia ʻo `await` '
 
  Ma mua o ka kākau ʻia ʻana o nā faila i ka diski, e hāʻawi ʻia nā ʻike āpau āpau i ka hana `filter` ma ke ʻano he kaula
 
- ʻO ka waiwai hoʻihoʻi mai ka hana `filter` ka mea e kākau maoli ʻia i ka waihona
+ ʻO ka waiwai hoʻihoʻi mai ka hana `filter` ka mea e kākau maoli ʻia i kahi waihona
 
  No laila, loaʻa iā ʻoe ka mana piha ma luna o ka mea e kākau hope ʻia
 

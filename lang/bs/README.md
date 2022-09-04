@@ -9,8 +9,8 @@ Hokeilizacija
  * direktorij datoteka, rekurzivno
 
  # Pročitajte ovo na drugom jeziku
- Ovaj README.md dokument je preveden pomoću samog alata za hokeilizaciju,
- na **[svaki jezik koji podržava Google prevodilac](../README.md)!**
+ Ovaj README.md dokument je preveden, koristeći sam alat za hokeilizaciju, u
+ **[svaki jezik podržan od strane Google prevodioca](https://cloud.google.com/translate/docs/languages)!**
 
  Siguran sam da nije savršeno, ali nadam se da je bolje nego ništa!
 

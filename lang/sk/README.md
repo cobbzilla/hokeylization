@@ -9,8 +9,8 @@ Hokeylizácia
  * adresár súborov, rekurzívne
 
  # Prečítajte si to v inom jazyku
- Tento dokument README.md bol preložený pomocou samotného nástroja na hokeyylizáciu,
- do **[každý jazyk podporovaný Prekladačom Google](../README.md)!**
+ Tento dokument README.md bol preložený pomocou samotného nástroja na hokeyylizáciu
+ **[každý jazyk podporovaný Prekladačom Google](https://cloud.google.com/translate/docs/languages)!**
 
  Som si istý, že to nie je dokonalé, ale dúfam, že je to lepšie ako nič!
 
@@ -238,7 +238,7 @@ Hokeylizácia
  * Nefunkčné odkazy. V preklade sa medzera objaví po ukončení popisu odkazu označenia (s `]` ), ale
  predtým, než sa začne jeho cieľový odkaz (s `(` ). To spôsobí nesprávne vykreslenie označenia a odkazu
  pri prezeraní dokumentu sa pokazí.
- * Bloky kódu sa prekladajú. Prekladač Google nevie, čo markdown považuje za kód a čo nie
+ * Bloky kódu sa preložia. Prekladač Google nevie, čo markdown považuje za kód a čo nie
  * Nesprávne medzery pre odsadené bloky kódu. V preklade je ťažké zachovať medzery
  * Veci vnútri `backticks` sa preložia, keď takmer vždy chcete, aby to boli doslovné hodnoty
 

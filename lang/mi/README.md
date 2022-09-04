@@ -9,8 +9,8 @@ Hokeylization
  * he whaiaronga o nga konae, he recursively
 
  # Panuitia tenei ki tetahi atu reo
- Kua whakamaoritia tenei tuhinga README.md, ma te whakamahi i te taputapu hokeylization ake,
- ki **[nga reo katoa e tautokohia ana e Google Translate](../README.md)!**
+ Kua whakamaoritia tenei tuhinga README.md, ma te whakamahi i te taputapu hokeylization ake, ki roto
+ **[nga reo katoa e tautokohia ana e Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  E mohio ana ahau ehara i te mea tino tika, engari ko taku tumanako he pai ake i te kore!
 

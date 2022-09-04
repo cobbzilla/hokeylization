@@ -9,8 +9,8 @@ Hokeylization
  * eolaire comhad, go hathchúrsach
 
  # Léigh é seo i dteanga eile
- Aistríodh an doiciméad README.md seo, ag baint úsáide as an uirlis hkeylization féin,
- isteach **[gach teanga a dtacaíonn Google Translate léi](../README.md)!**
+ Aistríodh an doiciméad README.md seo, ag baint úsáide as an uirlis hokeylization féin, go
+ **[gach teanga a dtacaíonn Google Translate léi]( https://cloud.google.com/translate/docs/languages)!**
 
  Tá mé cinnte nach bhfuil sé foirfe, ach tá súil agam go bhfuil sé níos fearr ná rud ar bith!
 

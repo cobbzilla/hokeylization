@@ -1,6 +1,6 @@
 Hokeylization
  =============
- නම portmanteau, එහි තේරුම 'hokey දේශීයකරණය'
+ නම Portmanteau, එහි තේරුම 'hokey දේශීයකරණය'
 
  එය ඉතා සරල නිසා එය hokey: එය Google Translate වෙත නූල් යවයි
 
@@ -9,8 +9,8 @@ Hokeylization
  * ගොනු නාමාවලියක්, පුනරාවර්තන ලෙස
 
  # මෙය වෙනත් භාෂාවකින් කියවන්න
- මෙම README.md ලේඛනය hokeylization මෙවලම භාවිතයෙන් පරිවර්තනය කර ඇත,
- තුලට **[Google Translate මඟින් සහාය දක්වන සෑම භාෂාවක්ම](../README.md)!**
+ මෙම README.md ලේඛනය hokeylization මෙවලම භාවිතයෙන් පරිවර්තනය කර ඇත
+ **[Google Translate මඟින් සහාය දක්වන සෑම භාෂාවක්ම](https://cloud.google.com/translate/docs/languages)!**
 
  එය පරිපූර්ණ නොවන බව මට විශ්වාසයි, නමුත් එය කිසිවකට වඩා හොඳ යැයි මම බලාපොරොත්තු වෙමි!
 

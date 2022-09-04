@@ -9,8 +9,8 @@ Hokeylization
  * usa ka direktoryo sa mga file, recursively
 
  # Basaha kini sa laing pinulongan
- Kini nga README.md nga dokumento gihubad, gamit ang hokeylization tool mismo,
- ngadto sa **[matag pinulongan nga gisuportahan sa Google Translate](../README.md)!**
+ Kining README.md nga dokumento gihubad, gamit ang hokeylization tool mismo, ngadto sa
+ **[matag pinulongan gisuportahan sa Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Sigurado ko nga dili kini perpekto, apan nanghinaut ko nga kini mas maayo kaysa wala!
 
@@ -253,7 +253,7 @@ Hokeylization
  Kung HTML ang imong sulod, madaot kini gawas kung ipasa nimo ang opsyon nga `-p html` / `--process-as html`
 
  ### Filter
- Para sa mga adventurous: sa pagproseso sa mga file sa usa ka direktoryo, mahimo nimong ipasa ang opsyon nga `-F` / `--filter`
+ Para sa mga adventurous: kung nagproseso sa mga file sa usa ka direktoryo, mahimo nimong ipasa ang kapilian nga `-F` / `--filter`
  sa pagsala sa output sa wala pa kini isulat sa filesystem
 
  Ang bili niini nga opsyon kinahanglan nga usa ka dalan sa usa ka JS file nga nag-eksport sa usa ka function nga ginganlan og `filter`

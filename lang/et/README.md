@@ -9,8 +9,8 @@ Hokeyliseerimine
  * failide kataloog rekursiivselt
 
  # Lugege seda teises keeles
- See README.md dokument on tõlgitud, kasutades hokeyliseerimise tööriista,
- **[kõiki Google'i tõlke toetatavaid keeli](../README.md)!**
+ See README.md dokument on tõlgitud keelde, kasutades hokeyliseerimise tööriista
+ **[Google'i tõlge toetab kõiki keeli](https://cloud.google.com/translate/docs/languages)!**
 
  Olen kindel, et see pole täiuslik, aga ma loodan, et see on parem kui mitte midagi!
 
@@ -258,7 +258,7 @@ Hokeyliseerimine
 
  Selle suvandi väärtus peab olema JS-faili tee, mis ekspordib funktsiooni nimega `filter`
 
- Funktsioon `filter` peab olema `async` , kuna sellele kutsutakse välja „oota `await`
+ Funktsioon `filter` peab olema `async` , kuna sellele kutsutakse välja "oota `await`
 
  Enne failide kettale kirjutamist edastatakse kogu faili sisu stringina funktsioonile `filter`
 

@@ -9,8 +9,8 @@ Hokeylization
  * Directorium files, recursively
 
  # Lege hoc in alia lingua
- Hoc documentum README.md translatum est, utens ipso instrumento hokeylizationis;
- in **[omnis lingua a Google Translate](../README.md)!**
+ Hoc README.md documentum translatum est, utens ipso instrumento hokeylizationis, in-
+ **[Omnis lingua a Google Translate] (https://cloud.google.com/translate/docs/languages)!
 
  Perfectum certe non sum, sed spero melius quam nihil!
 

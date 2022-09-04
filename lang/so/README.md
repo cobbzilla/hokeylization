@@ -9,8 +9,8 @@ Hokeyylization
  * Hagaha faylalka, si isdaba joog ah
 
  # Ku akhri luqad kale
- Dukumeentigan README.md waa la turjumay, iyada oo la adeegsanayo qalabaynta lafteeda,
- galay **[Luqadda kasta oo ay taageerto Google Translate](../README.md)!**
+ Dukumeentigan README.md waa la turjumay, iyada oo la adeegsanayo qalabaynta lafteeda, la geliyay
+ **[Luqadda kasta oo ay taageerto Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Waan hubaa inaysan qummanayn, laakiin waxaan rajeynayaa inay ka fiican tahay waxba!
 
@@ -198,7 +198,7 @@ Hokeyylization
 
  ## Doorashooyin kale
 
- ### orod qalalan
+ ### orod qallalan
  Gudub `-n` / `--dry-run` si aad u muujiso waxa la samayn doono, laakiin dhab ahaantii ha samayn wax wicitaan API ah ama ha qorin wax fayl ah
 
  ### Xoog
@@ -250,7 +250,7 @@ Hokeyylization
  ### Habka-sida
  Caadi ahaan wax walba waxaa loo habeeyaa sida qoraal cad
 
- Haddi nuxurkaagu yahay HTML, waa la khaldami doonaa ilaa aad ka gudubto `-p html` / `--process-as html` doorashada
+ Haddii nuxurkaagu yahay HTML, waa la qallajin doonaa ilaa aad dhaafto `-p html` / `--process-as html` doorashada
 
  ### Shaandhayso
  Kuwa xamaasadda leh: marka faylasha ku jira hagaha, waxaad gudbi kartaa `-F` / `--filter`
@@ -262,7 +262,7 @@ Hokeyylization
 
  Ka hor inta aan faylasha loo qorin saxanka, dhammaan waxa ku jira faylka waxaa loo gudbin doonaa shaqada `filter` ' sida xadhig ahaan
 
- Qiimaha soo `filter` waa waxa runtii lagu qori doono kaydinta
+ Qiimaha soo `filter` waa waxa run ahaantii lagu qori doono kaydinta
 
  Markaa, waxaad si buuxda gacanta ugu haysaa waxa ugu dambayn la qori doono
 

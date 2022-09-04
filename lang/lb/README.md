@@ -9,8 +9,8 @@ Hokeylizéierung
  * e Verzeechnes vu Fichieren, rekursiv
 
  # Liest dëst an enger anerer Sprooch
- Dëst README.md Dokument gouf iwwersat, mam Hokeylizéierungsinstrument selwer,
- an **[all Sprooch ënnerstëtzt vu Google Translate](../README.md)!**
+ Dëst README.md Dokument gouf iwwersat, mam Hokeylizéierungsinstrument selwer, an
+ **[all Sprooch ënnerstëtzt vu Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Ech si sécher datt et net perfekt ass, awer ech hoffen et ass besser wéi näischt!
 

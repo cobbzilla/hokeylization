@@ -9,8 +9,8 @@ Hokeylization
  * dhairekitori remafaira, achidzokorodza
 
  # Verenga izvi mune mumwe mutauro
- Gwaro iri README.md rakashandurwa, uchishandisa hokeylization turusi pachayo,
- kupinda mu **[mutauro wese unotsigirwa neGoogle Translate](../README.md)!**
+ Gwaro iri README.md rakashandurwa, pachishandiswa hokeylization turusi pachayo, kupinda
+ **[mitauro yese inotsigirwa neGoogle Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Ndine chokwadi kuti haina kukwana, asi ndinovimba iri nani pane hapana!
 

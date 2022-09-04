@@ -9,8 +9,8 @@ Hokeylization
  * bukana ea lifaele, ka ho pheta-pheta
 
  # Bala sena ka puo e 'ngoe
- Tokomane ena ea README.md e fetoletsoe, ho sebelisoa sesebelisoa sa hokeylization ka bosona,
- ho **[puo e nngwe le e nngwe e tshehetswang ke Google Translate](../README.md)!**
+ Tokomane ena ea README.md e fetoletsoe, ho sebelisoa sesebelisoa sa hokeylization ka bosona, ho
+ **[puo e nngwe le e nngwe e tshehetswa ke Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Ke na le bonnete ba hore ha ea phethahala, empa ke ts'epa hore e betere ho feta letho!
 

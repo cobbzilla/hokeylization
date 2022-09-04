@@ -9,8 +9,8 @@ Hokeylisering
  * en mappe med filer, rekursivt
 
  # Læs dette på et andet sprog
- Dette README.md-dokument er blevet oversat ved hjælp af selve hokeyliseringsværktøjet,
- til **[alle sprog, der understøttes af Google Translate](../README.md)!**
+ Dette README.md-dokument er blevet oversat ved hjælp af selve hokeyliseringsværktøjet til
+ **[alle sprog understøttet af Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Jeg er sikker på, at det ikke er perfekt, men jeg håber, det er bedre end ingenting!
 

@@ -9,8 +9,8 @@ Hokeylizacja
  * katalog plików, rekurencyjnie
 
  # Przeczytaj to w innym języku
- Ten dokument README.md został przetłumaczony przy użyciu samego narzędzia hokeylization,
- na **[każdy język obsługiwany przez Tłumacza Google](../README.md)!**
+ Ten dokument README.md został przetłumaczony przy użyciu samego narzędzia do hokeylizacji na język
+ **[każdy język obsługiwany przez Tłumacza Google](https://cloud.google.com/translate/docs/languages)!**
 
  Jestem pewien, że nie jest idealny, ale mam nadzieję, że to lepsze niż nic!
 

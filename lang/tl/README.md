@@ -9,8 +9,8 @@ Hokeylization
  * isang direktoryo ng mga file, recursively
 
  # Basahin ito sa ibang wika
- Itong README.md na dokumento ay isinalin, gamit ang hokeylization tool mismo,
- sa **[bawat wikang sinusuportahan ng Google Translate](../README.md)!**
+ Itong README.md na dokumento ay isinalin, gamit ang hokeylization tool mismo, sa
+ **[bawat wikang sinusuportahan ng Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Natitiyak kong hindi ito perpekto, ngunit umaasa ako na ito ay mas mahusay kaysa sa wala!
 

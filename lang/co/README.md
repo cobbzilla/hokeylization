@@ -9,8 +9,8 @@ Hokeylization
  * un repertoriu di schedari, recursivamente
 
  # Leghjite questu in un'altra lingua
- Stu documentu README.md hè statu traduttu, utilizendu u strumentu di hokeylization stessu,
- in **[ogni lingua supportata da Google Translate](../README.md)!**
+ Stu documentu README.md hè statu traduttu, utilizendu l'uttellu di hokeylization stessu, in
+ **[tutte lingue supportate da Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
  Sò sicuru chì ùn hè micca perfettu, ma spergu chì hè megliu cà nunda !
 

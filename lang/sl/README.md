@@ -9,8 +9,8 @@ Hokeilizacija
  * imenik datotek, rekurzivno
 
  # Preberite to v drugem jeziku
- Ta dokument README.md je bil preveden z uporabo samega orodja za hokeilizacijo,
- v **[vse jezike, ki jih podpira Google Translate](../README.md)!**
+ Ta dokument README.md je bil z uporabo samega orodja za hokeilizacijo preveden v
+ **[vsak jezik, ki ga podpira Google Prevajalnik](https://cloud.google.com/translate/docs/languages)!**
 
  Prepričan sem, da ni popolno, a upam, da je bolje kot nič!
 
@@ -253,7 +253,7 @@ Hokeilizacija
  Če je vaša vsebina HTML, bo poškodovana, razen če posredujete možnost `-p html` / `--process-as html`
 
  ### Filter
- Za pustolovce: pri obdelavi datotek v imeniku lahko posredujete možnost `-F` / `--filter`
+ Za pustolovce: pri obdelavi datotek v imeniku lahko podate možnost `-F` / `--filter`
  za filtriranje izhoda, preden se zapiše v datotečni sistem
 
  Vrednost te možnosti mora biti pot do datoteke JS, ki izvozi funkcijo z imenom `filter`

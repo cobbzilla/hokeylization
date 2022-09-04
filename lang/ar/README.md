@@ -9,8 +9,8 @@
  * دليل الملفات بشكل متكرر
 
  # اقرأ هذا بلغة أخرى
- تمت ترجمة هذا المستند README.md ، باستخدام أداة hokeylization نفسها ،
- إلى ** [كل لغة مدعومة من Google Translate] (lang / README.md)! **
+ تمت ترجمة هذا المستند README.md ، باستخدام أداة hokeylization نفسها ، إلى
+ ** [كل لغة تدعمها ترجمة Google] (https://cloud.google.com/translate/docs/languages)! **
 
  أنا متأكد من أنها ليست مثالية ، لكني آمل أن تكون أفضل من لا شيء!
 

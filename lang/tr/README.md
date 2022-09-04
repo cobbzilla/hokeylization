@@ -9,8 +9,8 @@ hokeyleşme
  * özyinelemeli bir dosya dizini
 
  # Bunu başka bir dilde oku
- Bu README.md belgesi, hokeylization aracının kendisi kullanılarak çevrilmiştir,
- **[Google Çeviri tarafından desteklenen her dile](../README.md)!**
+ Bu README.md belgesi, hokeylization aracının kendisi kullanılarak şu dile çevrilmiştir:
+ **[Google Çeviri tarafından desteklenen her dil](https://cloud.google.com/translate/docs/languages)!**
 
  Mükemmel olmadığına eminim ama umarım hiç yoktan iyidir!
 

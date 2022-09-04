@@ -9,8 +9,8 @@ Hokeylization
  * yon anyè nan dosye, recursively
 
  # Li sa nan yon lòt lang
- Dokiman README.md sa a te tradui, avèk zouti hokeylization li menm,
- nan **[chak lang Google Translate sipòte](../README.md)!**
+ Dokiman README.md sa a te tradui, lè l sèvi avèk zouti nan hokeylization tèt li, nan
+ **[chak lang Google Translate sipòte](https://cloud.google.com/translate/docs/languages)!**
 
  Mwen sèten li pa pafè, men mwen espere ke li pi bon pase anyen!
 
