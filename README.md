@@ -19,8 +19,8 @@ To see command-line help for the `hokey` command in your native language, use th
 regular `hokeylization` package instead of `hokeylization-lite`
 
 # Read this in another language
-This README.md document has been translated, using the hokeylization tool itself,
-into **[every language supported by Google Translate](https://github.com/cobbzilla/hokeylization/blob/master/README.md)!**
+This README.md document has been translated, using the hokeylization tool itself, into
+**[every language supported by Google Translate](https://cloud.google.com/translate/docs/languages)!**
 
 I'm certain it's not perfect, but I hope it's better than nothing!
 
