@@ -104,8 +104,7 @@ const program = new commander.Command()
         }
     })
 
-const args = process.argv
-
+const args = process.argv.filter(a => a.length > 0)
 try {
     program.parse(args)
 } catch (e) {
