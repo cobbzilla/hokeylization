@@ -5,3 +5,5 @@ tmp
 gcreds.json
 *~
 node_modules
+#*
+*/#*
