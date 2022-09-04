@@ -1,14 +1,19 @@
 const fs = require('fs')
 const path = require('path')
-const { LANG_PLACEHOLDER, translateString } = require("./translate");
+const chalk = require("chalk")
+
+const { LANG_PLACEHOLDER, translateString } = require("./translate")
+const { messages } = require("./localize")
+const { HokeyError } = require("./error");
 
 // adapted from https://stackoverflow.com/a/26828355/1251543
 const walk = (dir, files = []) => {
+    const msg = messages()
     let dirFiles
     try {
         dirFiles = fs.readdirSync(dir)
     } catch (e) {
-        console.warn(`walk(${dir}): error reading: ${e}`)
+        console.warn(chalk.yellowBright(msg.warn_walk_readDir.parseMessage({ dir, e })))
         return files
     }
     for (const f of dirFiles) {
@@ -22,60 +27,72 @@ const walk = (dir, files = []) => {
     return files
 }
 
-const readDirFiles = async (dir) => {
+const readDirFiles = async (dir, options = null) => {
+    const msg = messages()
+    const dryRun = !!options.dryRun
+    const mch = options.match ? new RegExp(options.match) : null
+    const exc = options.excludes ? options.excludes.map(ex => new RegExp(ex)) : null
     const outfileStat = fs.lstatSync(dir, {throwIfNoEntry: false})
     if (!outfileStat) {
+        if (dryRun) {
+            return []
+        }
         try {
             fs.mkdirSync(dir, {recursive: true})
         } catch (e) {
-            console.error(`readDirFiles(${dir}): error reading: ${e}`)
+            console.error(chalk.redBright(msg.err_readDirFiles_mkdir.parseMessage({ dir, e })))
         }
     } else if (!outfileStat.isDirectory()) {
-        throw new TypeError(`processDirectory: not a directory: ${dir}`)
+        throw new HokeyError(msg.err_readDirFiles_notDir.parseMessage({ dir }))
     }
     const paths = walk(dir)
-    const files = paths.map(path => {
+    const filtered = paths.filter(f => !mch || f.match(mch))
+        .filter(f => !exc || !exc.find(excludeRegex => f.match(excludeRegex)))
+    return filtered.map(path => {
         return {
             file: path,
             relative: path.substring(dir.length + 1),
             data: fs.readFileSync(path, 'utf8')
         }
     })
-    return files
 }
 
-const processDirectory = async (translate, inDir, fromLang, inFiles, lang, outfile, options) => {
-    const force = options.force || false
-    const dryRun = options.dryRun || false
-    const match = options.match || null
+const processDirectory = async (translate, inDir, inFiles, lang, outfile, options) => {
+    const msg = messages()
+    const fromLang = options.fromLang
+    const force = !!options.force
+    const dryRun = !!options.dryRun
+    const filter = options.filter ? require(options.filter).filter : null
     const langOut = outfile.replace(LANG_PLACEHOLDER, lang)
     if (langOut === outfile || !langOut.includes(lang)) {
-        throw new TypeError(`processDirectory: expected outfile to contain 'LANG' (to be replaced with ${lang})`)
+        throw new HokeyError(msg.err_invalidOutfile.parseMessage({ lang }))
     }
     if (langOut === inDir) {
-        throw new TypeError(`processDirectory: refusing to overwrite input lang directory: ${inDir}`)
+        throw new HokeyError(msg.err_cannotWriteSource.parseMessage({ source: inDir }))
     }
-    const outFiles = await readDirFiles(langOut).filter(f => !match || f.match(match))
+    const outFiles = await readDirFiles(langOut, options)
     for (const inFile of inFiles) {
         let langFile = outFiles.find(f => f.relative === inFile.relative);
         if (langFile) {
             if (!force) {
-                console.log(`processDirectory(${lang}): skipping existing file: ${langFile.file}`)
+                console.log(msg.info_processDirectory_skippingExisting.parseMessage({ lang, langFile }))
                 continue
             }
             langFile = langFile.file
         } else {
             langFile = path.resolve(path.join(langOut, inFile.relative))
         }
-        const translation = dryRun
-            ? `(dry run) not writing translation for file: ${langFile}`
-            : await translateString(translate, inFile.data, fromLang, lang, langFile, options)
+        const translation = dryRun ? '' : await translateString(translate, inFile.data, fromLang, lang, langFile, options)
         if (dryRun) {
-            console.log(`(dry-run) WOULD HAVE WROTE: ${langFile}`)
+            console.log(msg.info_dryRun_file.parseMessage({ langOut: langFile }))
         } else {
+            const filtered = filter ? await filter(translation) : translation
+            if (filtered !== translation) {
+                console.log(msg.info_filter_applied.parseMessage({ langFile }))
+            }
             fs.mkdirSync(path.dirname(langFile), {recursive: true})
-            fs.writeFileSync(langFile, translation)
-            console.log(`WROTE: ${langFile}`)
+            fs.writeFileSync(langFile, filtered)
+            console.log(msg.info_processDirectory_fileWritten.parseMessage({ langFile }))
         }
     }
 }

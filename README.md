@@ -8,6 +8,35 @@ You can translate:
 * a JavaScript object containing messages
 * a directory of files, recursively
 
+# Read this in another language
+This is localization software, so the documentation is available in many languages:
+
+&nbsp;&nbsp;&nbsp;[🇸🇦 Arabic](lang/ar/README.md)
+&nbsp;&nbsp;&nbsp;[🇧🇩 Bengali](lang/bn/README.md)
+&nbsp;&nbsp;&nbsp;[🇩🇪 German](lang/de/README.md)
+&nbsp;&nbsp;&nbsp;[🇺🇸 English](lang/en/README.md)
+&nbsp;&nbsp;&nbsp;[🇪🇸 Spanish](lang/es/README.md)
+&nbsp;&nbsp;&nbsp;[🇫🇷 French](lang/fr/README.md)
+&nbsp;&nbsp;&nbsp;[🇹🇩 Hausa](lang/ha/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇳 Hindi](lang/hi/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇩 Indonesian](lang/id/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇹 Italian](lang/it/README.md)
+&nbsp;&nbsp;&nbsp;[🇯🇵 Japanese](lang/ja/README.md)
+&nbsp;&nbsp;&nbsp;[🇰🇷 Korean](lang/ko/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇳 Maranthi](lang/mr/README.md)
+&nbsp;&nbsp;&nbsp;[🇵🇱 Polish](lang/pl/README.md)
+&nbsp;&nbsp;&nbsp;[🇧🇷 Portuguese](lang/pt/README.md)
+&nbsp;&nbsp;&nbsp;[🇷🇺 Russian](lang/ru/README.md)
+&nbsp;&nbsp;&nbsp;[🇰🇪 Swahili](lang/sw/README.md)
+&nbsp;&nbsp;&nbsp;[🇵🇭 Tagalog](lang/tl/README.md)
+&nbsp;&nbsp;&nbsp;[🇹🇷 Turkish](lang/tr/README.md)
+&nbsp;&nbsp;&nbsp;[🇵🇰 Urdu](lang/ur/README.md)
+&nbsp;&nbsp;&nbsp;[🇻🇳 Vietnamese](lang/vi/README.md)
+&nbsp;&nbsp;&nbsp;[🇨🇳 Chinese](lang/zh/README.md)
+<br/>
+&nbsp;&nbsp;&nbsp;**[📚 ALL LANGUAGES](lang/README.md)**
+----
+
 ### Dogfooding because why not
 With the benefit of reflection, this README.md itself has been translated, using hokeylization,
 into every language supported by Google Translate! I'm certain it's not perfect, but I hope it's
@@ -24,6 +53,12 @@ When you create a new GitHub issue about a translation, please do:
 * kindly offer a suggestion of a better translation
 * **Thank you!**
 
+# Contents
+* [Source](#Source)
+* [Setup](#Setup)
+* [Translating a JavaScript string resource file](#Translating-a-JavaScript-string-resource-file)
+* [Translating a directory of text files](#Translating-a-directory-of-text-files)
+* [Other options](#Other-options)
 
 ## Source
 * [hokeylization on GitHub](https://github.com/cobbzilla/hokeylization)
@@ -39,9 +74,19 @@ If you're running from source, you can also put these in a `.env` file in the so
 they'll be loaded at runtime via [dotenv](https://www.npmjs.com/package/dotenv)
 
 ## Translating a JavaScript string resource file
-Your string table **must** be in a JavaScript file in the form:
+Your string table **must** be in a JavaScript file in one of these two forms:
+
+ES6 export:
 
     export default {
+      string_key: "some value",
+      another_key: "another value",
+      ... more keys ...
+    }
+
+CommonJS export
+
+    module.exports = {
       string_key: "some value",
       another_key: "another value",
       ... more keys ...
@@ -129,6 +174,14 @@ which files should be translated
 
 When in doubt, you can combine this option with `-n` / `--dry-run` to see which files would be translated
 
+### Excludes
+Sometimes your match matches too many files. Use the `-e` / `--excludes` option to explicitly exclude
+files that otherwise would have matched
+
+You can list multiple regexes, separated by spaces
+
+A common usage would be: `--excludes node_modules dist \.git build tmp`
+
 ### Handlebars
 The strings to translate might contain `{{ handlebars }}` templates, either with two or three curly-braces
 
@@ -136,10 +189,34 @@ You probably *DON'T* want the stuff inside those templates to be translated
 
 Pass the `-H` / `--handlebars` flag, and anything within `{{ ... }}` will not be translated
 
+### Markdown
+Markdown is neither text nor html, so Google Translate has some difficulties with it
+
+Hokeylizer handles things decently well, but with markdown files, you may oftentimes see,
+in the translation, a space character in between a markdown link description and its target link,
+thereby causing the markdown, when rendered, to not properly display the link (it may show a broken
+link, or otherwise broken markdown)
+
+Set the `-M` / `--markdown` flag and the pattern `] (` will be condensed to `](` thus fixing the links
+
 ### Process-as
 Normally everything is processed as plain text
 
 If your content is HTML, it will get mangled unless you pass the `-p html` / `--process-as html` option
+
+### Filter
+For the adventurous: when processing files in a directory, you can pass the `-F` / `--filter` option
+to filter the output before it is written to the filesystem
+
+The value of this option must be a JS file that exports a function named `filter`
+
+The `filter` function must be `async`, as `await` will be called upon it
+
+Before files are written to disk, the entire file contents will be passed to the `filter` function as a string
+
+The return value from the `filter` function is what will actually be written to storage
+
+Thus, you have total control over what will finally be written
 
 ### Help
 Use `-h` / `--help` to show help

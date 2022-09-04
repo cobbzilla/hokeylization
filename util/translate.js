@@ -54,12 +54,13 @@ const revertHandlebars = (translation, hbs) => {
 }
 
 const translateString = async (translate, value, fromLang, toLang, label, options) => {
-    const handlebars = options.handlebars || false
+    const handlebars = !!options.handlebars
     const format = options.processAs || 'text'
+    const markdown = !!options.markdown
 
     // all callers already handle dryRun, but just in case, we also handle it because
     // the guarantee of dryRun is that we won't make any API calls to Google Translate
-    const dryRun = options.dryRun || false
+    const dryRun = !!options.dryRun
     if (handlebars) {
         const hbs = replaceHandlebars(value)
 
@@ -72,8 +73,12 @@ const translateString = async (translate, value, fromLang, toLang, label, option
 
         let result
         if (format === 'text') {
-            // replace <br/> with newline
-            result = translation.replaceAll('<br/>', '\n')
+            // replace <br/> with escaped newlines, or real newlines, depending on mode
+            if (options.newlines && options.newlines === 'escape') {
+                result = translation.replaceAll('<br/>', '\\' + 'n')
+            } else {
+                result = translation.replaceAll('<br/>', '\n')
+            }
 
             // unwrap <p> tag if present (it should be, but let's be safe)
             if (result.startsWith('<p')) {
@@ -82,10 +87,14 @@ const translateString = async (translate, value, fromLang, toLang, label, option
             if (result.endsWith('</p>')) {
                 result = result.substring(0, result.length - '</p>'.length)
             }
+            result = he.decode(result) // replace HTML entities with text equivalents
         } else {
             result = translation
         }
-        console.log(`translateString(${fromLang}, ${toLang}) ${label} translated ${value.length} chars to ${result.length} chars`)
+        if (markdown) {
+            result = result.replaceAll(/] \(/, '](')
+        }
+        console.log(`translateString(${fromLang}, ${toLang}) ${label} source_length(${value.length}) --> dest_length(${result.length})`)
         return revertHandlebars(result, hbs)
     } else {
         const [translation] = await translate.translate(value, {from: fromLang, to: toLang, format: 'text'})

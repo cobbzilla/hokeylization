@@ -1,45 +1,70 @@
 const fs = require('fs')
+const chalk = require('chalk')
 
 const { translateString, LANG_PLACEHOLDER } = require('./translate')
+const { messages } = require('./localize')
+const { HokeyError } = require('./error')
 
-const readMessageKeys = async (file) => {
-    const stat = fs.lstatSync(file, {throwIfNoEntry: false})
-    if (!stat) {
-        return {}
-    }
-    const data = fs.readFileSync(file).toString('utf8').trim()
-    if (!data.startsWith('export default ')) {
-        throw new TypeError(`readMessageKeys: expected file to start with 'export default' but found: ${data.length < 20 ? data : data.substring(0, 20)}...`)
-    }
-    const firstCurly = data.indexOf('{')
-    if (firstCurly === -1) throw new TypeError(`invalid json in ${file}`)
-    return eval('Object.assign({}, ' + data.substring(firstCurly) + ')')
+const ES6_STYLE = {
+    start: () => 'export default {'
+}
+const CJS_STYLE = {
+    start: () => 'modules.exports = {'
 }
 
-const processFile = async (translate, infile, fromLang, keys, lang, outfile, options) => {
-    const force = options.force || false
-    const dryRun = options.dryRun || false
+const readMessageKeys = async (file, defaultStyle = ES6_STYLE) => {
+    const msg = messages()
+    const stat = fs.lstatSync(file, {throwIfNoEntry: false})
+    if (!stat) {
+        return { keys: {}, style: defaultStyle }
+    }
+    const data = fs.readFileSync(file).toString('utf8').trim()
+    let style
+    if (data.startsWith('export default ')) {
+        style = ES6_STYLE
+    } else if (data.startsWith('module.exports')) {
+        style = CJS_STYLE
+    } else {
+        const actualPrefix = data.length < 20 ? data : data.substring(0, 20);
+        throw new HokeyError(msg.err_readMessageKeys_invalidFileStart.parseMessage({ actualPrefix }))
+    }
+    const firstCurly = data.indexOf('{')
+    if (firstCurly === -1) throw new HokeyError(msg.err_readMessageKeys_invalidJson.parseMessage({ file }))
+    return {
+        style,
+        keys: eval('Object.assign({}, ' + data.substring(firstCurly) + ')')
+    }
+}
+
+const processFile = async (translate, infile, inMsgKeys, lang, outfile, options) => {
+    const msg = messages()
+    const fromLang = options.fromLang
+    const force = !!options.force
+    const dryRun = !!options.dryRun
     const langOut = outfile.replace(LANG_PLACEHOLDER, lang)
     if (langOut === outfile || !langOut.includes(lang)) {
-        throw new TypeError(`processFile: expected outfile to contain 'LANG' (to be replaced with ${lang})`)
+        throw new HokeyError(msg.err_invalidOutfile.parseMessage({ lang }))
     }
     if (langOut === infile) {
-        throw new TypeError(`processFile: refusing to overwrite input lang file: ${infile}`)
+        throw new HokeyError(msg.err_cannotWriteSource.parseMessage({ source: infile }))
     }
-    const langKeys = force ? {} : await readMessageKeys(langOut)
+    const msgKeys = force ? { keys: {}, style: inMsgKeys.style } : await readMessageKeys(langOut, inMsgKeys.style)
+    const inKeys = inMsgKeys.keys
+    const langKeys = msgKeys.keys
+    options.newlines = 'escape'
     try {
-        for (const key of Object.keys(keys)) {
+        for (const key of Object.keys(inKeys)) {
             // Does the translation already exist?
             if (!force && langKeys[key]) {
                 continue
             }
             langKeys[key] = dryRun
-                ? `(dry run) not writing translation for key: ${keys[key]}`
-                : await translateString(translate, keys[key], fromLang, lang, key, options)
+                ? msg.info_dryRun_key.parseMessage({ key: inKeys[key] })
+                : await translateString(translate, inKeys[key], fromLang, lang, key, options)
         }
         // write lang file
         let first = true
-        let result = 'export default {'
+        let result = msgKeys.style.start()
         for (const key of Object.keys(langKeys)) {
             if (first) {
                 result += '\n  '
@@ -54,16 +79,16 @@ const processFile = async (translate, infile, fromLang, keys, lang, outfile, opt
         }
         result += '\n}'
         if (dryRun) {
-            console.log(`(dry run) WOULD HAVE WROTE: ${langOut}`)
+            console.log(msg.info_dryRun_file.parseMessage({ langOut }))
         } else {
             try {
                 fs.writeFileSync(langOut, result)
             } catch (e) {
-                console.error(` **** Error writing to outfile for ${lang}: ${langOut}: ${e}`)
+                console.error(chalk.redBright(msg.err_processFile_writeFile.parseMessage({ lang, langOut, e })))
             }
         }
     } catch (e) {
-        console.error(` **** Error translating: ${e}`)
+        console.error(chalk.redBright(msg.err_processFile_error.parseMessage({ e })))
     }
 }
 

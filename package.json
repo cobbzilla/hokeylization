@@ -1,6 +1,6 @@
 {
   "name": "hokeylization",
-  "version": "1.1.14",
+  "version": "1.2.0",
   "description": "Automate translation of string tables and emails",
   "main": "index.js",
   "keywords": [
@@ -26,13 +26,16 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@google-cloud/translate": "^7.0.1",
+    "chalk": "4",
     "commander": "^9.4.0",
     "dotenv": "^16.0.2",
-    "he": "^1.2.0"
+    "he": "^1.2.0",
+    "safe-eval": "^0.4.1"
   },
   "scripts": {
     "run": "node index.js",
     "hokey": "node index.js",
+    "self-hokey": "scripts/self_hokeylize",
     "test": "mocha ./test/*.spec.js"
   },
   "bin": {
