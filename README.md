@@ -48,7 +48,8 @@ or if you're not comfortable doing that, [open an issue](https://github.com/cobb
 When you create a new GitHub issue about a translation, please do:
 * include the page URL (copy/paste from browser address bar)
 * include the exact text that is wrong (copy/paste from browser)
-* kindly offer a suggestion of a better translation
+* please describe what is wrong -- is the translation incorrect? is the formatting broken somehow?
+* kindly offer a suggestion of a better translation, or how the text should be properly formatted
 * **Thank you!**
 
 # Contents
