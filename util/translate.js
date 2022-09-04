@@ -132,6 +132,7 @@ const translateString = async (translate, value, fromLang, toLang, label, option
         if (result.endsWith('</pre>')) {
             result = result.substring(0, result.length - '</pre>'.length)
         }
+        result = result.replaceAll(/]\s+\(/g, '](')
         return result
 
     } else if (handlebars) {
@@ -163,9 +164,6 @@ const translateString = async (translate, value, fromLang, toLang, label, option
             result = he.decode(result) // replace HTML entities with text equivalents
         } else {
             result = translation
-        }
-        if (markdown) {
-            result = result.replaceAll(/] \(/, '](')
         }
         console.log(`translateString(${fromLang}, ${toLang}) ${label} source_length(${value.length}) --> dest_length(${result.length})`)
         return revertHandlebars(result, hbs)
