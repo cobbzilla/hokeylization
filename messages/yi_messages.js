@@ -11,8 +11,9 @@ export default {
   err_processFile_writeFile: '*** טעות שרייבן צו אָוטפילע פֿאַר {{lang}} : {{langOut}} : {{e}}',
   err_processFile_error: '*** טעות איבערזעצן: {{e}}',
   err_processing: '*** אומגעריכט טעות: {{e}}',
+  warn_missing_close_notranslate_tag: 'אויסצוג פון איבערזעצונג האט געפעלט א פארמאכט קוויטל וואו מען האט ערווארטעט. פירמע {{ label }} , שורה נומער {{ lineNumber }} , שורה: {{ line }}',
   info_summary: 'שנעל איבערזעצונג דינסט ניצן Google Translate\n ווערסיע {{VERSION}}',
-  info_description: '=== מקור ===\n גיטהוב: https://github.com/cobbzilla/hokeylization\n npm: https://www.npmjs.com/package/hokeylization\n\n === פארלאנגט סוויווע וועריאַבאַלז ===\n * GOOGLE_TRANSLATE_PROJECT_ID: דיין Google Translate פּרויעקט\n * GOOGLE_APPLICATION_CREDENTIALS: דיין קראַדענטשאַלז JSON טעקע\n\n === יסאָ שפּראַך קאָודז ===\n ווען איר ספּעציפיצירן ISO קאָודז (אָדער אַרייַנשרייַב שפּראַך אָדער ציל שפּראַכן) נוצן די קאָודז:\n https://cloud.google.com/translate/docs/languages',
+  info_description: 'א געצייַג פֿאַר דעוועלאָפּערס. מיט כאָקיליזאַטיאָן, לאָוקאַלייזינג דיין אַפּ קענען זיין שנעל, שפּאַס און גרינג!\n\n === מקור ===\n גיטהוב: https://github.com/cobbzilla/hokeylization\n npm: https://www.npmjs.com/package/hokeylization\n\n === פארלאנגט סוויווע וועריאַבאַלז ===\n * GOOGLE_TRANSLATE_PROJECT_ID: דיין Google Translate פּרויעקט\n * GOOGLE_APPLICATION_CREDENTIALS: דיין קראַדענטשאַלז JSON טעקע\n\n === יסאָ שפּראַך קאָודז ===\n ווען איר ספּעציפיצירן ISO קאָודז (אָדער אַרייַנשרייַב שפּראַך אָדער ציל שפּראַכן) נוצן די קאָודז:\n https://cloud.google.com/translate/docs/languages',
   info_option_inputLanguage: 'ISO קאָד פֿאַר שפּראַכן פון איבערזעצן. פעליקייַט איז {{DEFAULT_LOCALE}}',
   info_option_processAs: 'טיפּ קענען זיין טעקסט אָדער HTML. פעליקייַט איז טעקסט',
   info_option_match: 'ווען פּראַסעסינג אַ וועגווייַזער, באַטראַכטן בלויז טעקעס וואָס גלייַכן דעם רעגעקס',
@@ -31,6 +32,6 @@ export default {
   warn_walk_readDir: 'גיין ( {{dir}} ): טעות לייענען: {{e}}',
   err_readDirFiles_mkdir: 'readDirFiles ( {{dir}} ): אַ טעות איז פארגעקומען ווען טריינג צו רשימה טעקעס אין וועגווייַזער: {{e}}',
   err_readDirFiles_notDir: 'readDirFiles ( {{dir}} ): דער דרך איז נישט אַ וועגווייַזער',
-  info_processDirectory_skippingExisting: 'פּראָצעסדירעקטאָרי ( {{lang}} ): סקיפּינג יגזיסטינג טעקע: {{langFile.file}}',
-  info_processDirectory_fileWritten: 'דער טעקע איז געשריבן: {{langFile}}'
+  info_processDirectory_skippingExisting: 'processDirectory ( {{lang}} ): סקיפּינג יגזיסטינג טעקע: {{langFile.file}}',
+  info_processDirectory_fileWritten: 'די טעקע איז געשריבן: {{langFile}}'
 }

@@ -256,11 +256,11 @@ Hokeyylization
  Fun adventurous: nigba ṣiṣe awọn faili ni ilana, o le kọja `-F` / `--filter`
  lati ṣe àlẹmọ iṣelọpọ ṣaaju ki o to kọ ọ si eto faili
 
- Iye aṣayan yii gbọdọ jẹ ọna si faili JS ti o ṣe okeere iṣẹ kan ti a npè ni `filter`
+ Iye aṣayan yii gbọdọ jẹ ọna si faili JS kan ti o ṣe okeere iṣẹ kan ti a npè ni `filter`
 
  Iṣẹ `filter` gbọdọ jẹ `async` ' nitori a yoo pe `await` sori rẹ
 
- Ṣaaju ki o to kọ awọn faili si disiki, gbogbo akoonu faili yoo kọja si iṣẹ `filter` gẹgẹbi okun
+ Ṣaaju ki o to kọ awọn faili si disk, gbogbo akoonu faili yoo kọja si iṣẹ `filter` gẹgẹbi okun
 
  Iye ipadabọ lati iṣẹ `filter` jẹ ohun ti yoo kọ gangan si ibi ipamọ
 

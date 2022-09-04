@@ -58,7 +58,7 @@ Hokeylization
  * [Installazione](#Installazione)
  * [Configurazione](#Configurazione)
  * [Traduzzione di un schedariu di risorse di stringa JavaScript](#Translating-a-JavaScript-string-resource-file)
- * [Traduzzione di un repertoriu di schedarii di testu](#Translating-a-directory-of-text-files)
+ * [Traduzzione di un repertoriu di schedarii di testu](#Traduzzione-di-directory-of-text-files)
  * [Altre opzioni](#Altre-opzioni)
 
  ## Fonte
@@ -256,7 +256,7 @@ Hokeylization
  Per l'avventurosi: quandu processate i schedari in un cartulare, pudete passà l' `-F` / `--filter`
  per filtrà l'output prima ch'ellu sia scrittu à u filesystem
 
- U valore di sta opzione deve esse una strada à un schedariu JS chì esporta una funzione chjamata `filter`
+ U valore di sta opzione deve esse una strada per un schedariu JS chì esporta una funzione chjamata `filter`
 
  A funzione `filter` deve esse `async` perchè `await` serà chjamatu
 

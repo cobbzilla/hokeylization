@@ -239,7 +239,7 @@ Hokeylization
  pamberi pekuti chinongedzo chayo chisati chatanga (ne `(` ).
  yakaputsika pakuona gwaro.
  * Mabhuroki ekodhi anoshandurwa. Google kuturikira haizive kuti chiratidzo chinotariswa sei nekodhi uye zvachisingazive
- * Nzvimbo isiriyo yemabhuraki ekodhi. Kupatsanura kwakaoma kuchengetedza mukududzira
+ * Nzvimbo isiriyo yemabhuraki ekodhi. Kupatsanura kwakaoma kuchengetedza mushanduro
  * Zvinhu zviri mukati me `backticks` zvinoshandurwa, kana iwe uchinge wagara uchida kuti zvive chaizvo zvakakosha
 
  Kana iyo `-M` / `--markdown` mureza inogoneswa:

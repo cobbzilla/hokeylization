@@ -258,7 +258,7 @@ Hokeylization
 
  O le tau o lenei filifiliga e tatau ona avea ma ala i se faila JS e auina atu i fafo se galuega e igoa `filter`
 
- O le galuega `filter` e tatau ona `async` aua `await` ' o le a vala'au i ai
+ O le galuega `filter` e tatau ona `async` aua `await` ' o le a valaauina i ai
 
  A'o le'i tusia faila i le tisiki, o le a tu'uina atu uma mea o lo'o i totonu o faila i le `filter` galuega o se manoa
 

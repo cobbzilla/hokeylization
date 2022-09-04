@@ -253,7 +253,7 @@ Hokeilizacija
  Če je vaša vsebina HTML, bo poškodovana, razen če posredujete možnost `-p html` / `--process-as html`
 
  ### Filter
- Za pustolovce: pri obdelavi datotek v imeniku lahko posredujete možnost `-F` / `--filter`
+ Za pustolovce: pri obdelavi datotek v imeniku lahko podate možnost `-F` / `--filter`
  za filtriranje izhoda, preden se zapiše v datotečni sistem
 
  Vrednost te možnosti mora biti pot do datoteke JS, ki izvozi funkcijo z imenom `filter`

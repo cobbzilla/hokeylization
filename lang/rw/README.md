@@ -256,13 +256,13 @@ Hokeylisation
  Kubitangaza: mugihe utunganya dosiye mububiko, urashobora gutambutsa `-F` / `--filter`
  gushungura ibisohoka mbere yuko byandikwa kuri dosiye
 
- Agaciro kiyi option igomba kuba inzira igana dosiye ya JS yohereza hanze imikorere yitwa `filter`
+ Agaciro kiyi option igomba kuba inzira ya dosiye ya JS yohereza hanze imikorere yitwa `filter`
 
- Imikorere ya " `filter` igomba kuba `async` kuko `await` " izahamagarwa
+ Imikorere ya " `filter` igomba kuba `async` `await` izahamagarwa
 
  Mbere yuko dosiye zandikwa kuri disiki, ibiri muri dosiye byose bizanyuzwa mumikorere ya 'filteri' `filter`
 
- Garuka agaciro kiva mumikorere ya `filter` nicyo kizandikwa mububiko
+ Garuka agaciro kuva mumikorere ya `filter` nicyo kizandikwa mububiko
 
  Rero, ufite igenzura ryuzuye kubizarangira
 

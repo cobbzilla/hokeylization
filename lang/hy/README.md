@@ -53,10 +53,10 @@
  * **Շնորհակալություն!**
 
  # Բովանդակություն
- * [Աղբյուր](#Աղբյուր)
+ * [Աղբյուր](# Աղբյուր)
  * [Աջակցություն և ֆինանսավորում](#Support-and-Funding)
  * [Տեղադրում](# Տեղադրում)
- * [Setup](#Setup)
+ * [Կարգավորում](#Կարգավորում)
  * [Translating a JavaScript string resource file](#Translating-a-JavaScript-string-resource-file)
  * [Translating a directory of text files](#Translating-a-directory-of-text-files)
  * [Այլ տարբերակներ](#Other-options)

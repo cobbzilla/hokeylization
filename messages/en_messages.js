@@ -18,7 +18,8 @@ export default {
     warn_missing_close_notranslate_tag: 'Output from translation was missing a closing tag where one was expected. Label {{ label }}, line number {{ lineNumber }}, line: {{ line }}',
 
     info_summary: 'Quick translation service using Google Translate\nVersion {{VERSION}}',
-    info_description: '=== Source ===\n' +
+    info_description: 'A tool for developers. With hokeylization, localizing your app can be fast, fun and easy!\n\n' +
+        '=== Source ===\n' +
         'GitHub: https://github.com/cobbzilla/hokeylization\n' +
         'npm: https://www.npmjs.com/package/hokeylization\n\n' +
         '=== REQUIRED environment variables ===\n' +

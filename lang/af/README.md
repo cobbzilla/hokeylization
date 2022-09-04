@@ -256,7 +256,7 @@ Hokielisering
  Vir die avontuurlustiges: wanneer jy lêers in 'n gids verwerk, kan jy die `-F` / `--filter` opsie slaag
  om die uitvoer te filter voordat dit na die lêerstelsel geskryf word
 
- Die waarde van hierdie opsie moet 'n pad na 'n JS-lêer wees wat 'n funksie genaamd `filter`
+ Die waarde van hierdie opsie moet 'n pad wees na 'n JS-lêer wat 'n funksie genaamd `filter`
 
  Die `filter` funksie moet `async` wees omdat `await` daarop geroep sal word
 

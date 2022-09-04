@@ -256,7 +256,7 @@ Hokeylization
  Kwa adventurous: wakati wa kusindika faili kwenye saraka, unaweza kupitisha chaguo la `-F` / `--filter`
  kuchuja matokeo kabla ya kuandikwa kwa mfumo wa faili
 
- Thamani ya chaguo hili lazima iwe njia ya faili ya JS inayohamisha kipengele cha kukokotoa kiitwacho `filter`
+ Thamani ya chaguo hili lazima iwe njia ya faili ya JS inayohamisha chaguo la kukokotoa `filter`
 
  `filter` za kukokotoa za `kichujio` lazima `async` kwa sababu `await` itaitwa juu yake
 

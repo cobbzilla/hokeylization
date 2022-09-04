@@ -239,7 +239,7 @@ Hokeylization
  i mua i te tiimata o tana hononga whainga (me te `(` ). Na tenei ka he te whakaatu i te tohu, me te hono
  kua pakaru i te wa e tiro ana i te tuhinga.
  * Ka whakamaoritia nga poraka waehere. Ko te whakamaori a Google kaore e mohio he aha te tohu tohu e kiia ana he waehere me nga mea kaore
- * He mokowā hē mō ngā poraka waehere nuku. He uaua ki te pupuri i te mokowhiti i te whakamaoritanga
+ * He mokowā hē mō ngā poraka waehere kua nukuhia. He uaua ki te pupuri i te mokowhiti i te whakamaoritanga
  * Ko nga mea o roto o `backticks` ka whakamaoritia, ina tata ki te hiahia koe he uara mooni
 
  Ina whakahohea te haki `-M` / `--markdown` :
@@ -256,11 +256,11 @@ Hokeylization
  Mo te hunga rikarika: i te wa e tukatuka ana i nga konae ki roto i te raarangi, ka taea e koe te tuku i te `-F` / `--filter`
  ki te tātari i te putanga i mua i te tuhi ki te punaha konae
 
- Ko te uara o tenei kowhiringa he ara ki te konae JS ka kaweake i tetahi taumahi i tapaina ko te `filter`
+ Ko te uara o tenei kowhiringa he ara ki te konae JS ka kaweake i tetahi taumahi ko `filter`
 
  Ko te mahi `filter` me `async` no te mea ka karangahia te `await` ki runga
 
- I mua i te tuhi i nga konae ki te kōpae, ka tukuna katoatia nga ihirangi o nga konae ki te mahi `filter` hei aho
+ I mua i te tuhi i nga konae ki te kōpae, ka tukuna katoatia nga ihirangi o te konae ki te mahi `filter` hei aho
 
  Ko te uara whakahoki mai i te mahi `filter` ko te mea ka tuhia ki te rokiroki
 

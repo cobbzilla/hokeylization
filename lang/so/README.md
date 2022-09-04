@@ -238,7 +238,7 @@ Hokeyylization
  * Xiriirada jaban. Turjumaada dhexdeeda, jilaa meel bannaan ayaa soo baxaysa ka dib markii sharraxaadda xidhiidhinta calaamadaynta ay dhammaato ( `]` ) laakiin
  ka hor inta uusan bilaabin isku xirka bartilmaameedka ( `(` ) Tani waxay keenaysaa in calaamadaynta si khaldan loo sameeyo, iyo isku xidhka
  wuu jabaa marka la eego dukumeentiga.
- * Koodadka kood waa la turjumay Turjumida Google ma garanayso waxa calaamadayntu ay tixgeliso koodka iyo waxa aanu ahayn
+ * Xirmooyinka kood waa la turjumay Turjumida Google ma garanayso waxa calaamadayntu ay tixgeliso koodka iyo waxa aanu ahayn
  * Kala fogaanshaha khaldan ee baloogyada koodka ee goglan. Kala dheeraynta way adagtahay in lagu xafido tarjumaada
  * Waxyaabaha ku jira `backticks` waa la tarjumi doonaa, marka aad had iyo jeer rabto inay noqdaan qiyam sax ah
 

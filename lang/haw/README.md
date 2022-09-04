@@ -258,11 +258,11 @@ Hokeylization
 
  Pono ka waiwai o kēia koho he ala i kahi faila JS e hoʻokuʻu aku i kahi hana i kapa `filter`
 
- Pono ka hana `async` `filter` ka mea `await` ' e kāhea ʻia ma luna o ia
+ Pono ka hana `async` `filter` ka mea, e kāhea ʻia ʻo `await` '
 
  Ma mua o ka kākau ʻia ʻana o nā faila i ka diski, e hāʻawi ʻia nā ʻike āpau āpau i ka hana `filter` ma ke ʻano he kaula
 
- ʻO ka waiwai hoʻihoʻi mai ka hana `filter` ka mea e kākau maoli ʻia i ka waihona
+ ʻO ka waiwai hoʻihoʻi mai ka hana `filter` ka mea e kākau maoli ʻia i kahi waihona
 
  No laila, loaʻa iā ʻoe ka mana piha ma luna o ka mea e kākau hope ʻia
 

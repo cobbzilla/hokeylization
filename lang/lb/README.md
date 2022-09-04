@@ -254,7 +254,7 @@ Hokeylizéierung
 
  ### Filter
  Fir Abenteuer: Wann Dir Dateien an engem Verzeichnis veraarbecht, kënnt Dir d'Optioun `-F` / `--filter`
- fir den Ausgang ze filteren ier en an de Dateiesystem geschriwwe gëtt
+ fir den Ausgang ze filteren ier se an de Dateiesystem geschriwwe gëtt
 
  De Wäert vun dëser Optioun muss e Wee zu enger JS-Datei sinn, déi eng Funktioun mam Numm `filter`
 

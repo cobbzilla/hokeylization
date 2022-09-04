@@ -258,9 +258,9 @@ Hókýlvæðing
 
  Gildi þessa valmöguleika verður að vera slóð að JS skrá sem flytur út fall sem heitir `filter`
 
- `filter` fallið verður að vera `async` vegna þess að `await` verður kallað á það
+ `filter` aðgerðin verður að vera `async` vegna þess að `await` verður kallað á hana
 
- Áður en skrár eru skrifaðar á disk verður allt skráarinnihaldið sent yfir í `filter` aðgerðina sem strengur
+ Áður en skrár eru skrifaðar á disk, verður allt skráarinnihaldið sent til `filter` aðgerðarinnar sem strengur
 
  Skilagildið frá `filter` fallinu er það sem í raun verður skrifað í geymslu
 

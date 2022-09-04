@@ -172,7 +172,7 @@ Hokeylization
 
  Dema ku ev dimeşîne, pelên wergerandî li `templates/es` " têne nivîsandin, û bi vî rengî nû dibin
  pelên çavkanî ji bo wergerandinê, ji ber ku ew di bin `templates/` de ne -- ev pêvajo berdewam dike
- heta hetayê, wê nekin!
+ her û her, wê neke!
 
  #### Bikaranîna rast
  Baş e, em bibêjin ku hûn di pelrêçek de hin şablonên e-nameyê hene:
@@ -215,7 +215,7 @@ Hokeylization
  Dema ku hûn guman dikin, hûn dikarin vê vebijarkê bi `-n` / `--dry-run` re hev bikin da ku bibînin ka kîjan pel dê werin wergerandin.
 
  ### Derdixe
- Carinan `-m` we pir pelan li hev dike. `-e` / `--excludes` bikar bînin da ku bi eşkereyî jêbirin
+ Carinan `-m` we gelek pelan li hev dike. `-e` / `--excludes` bikar bînin da ku bi eşkereyî jêbirin
  pelên ku wekî din dê li hev bihata
 
  Hûn dikarin gelek regexes navnîş bikin, ji hêla cîhan ve têne veqetandin
@@ -258,7 +258,7 @@ Hokeylization
 
  Nirxa vê vebijarkê divê rêyek be ji pelek JS re ku fonksiyonek bi navê `filter`
 
- Divê fonksiyona `filter` `async` `await` be ji ber ku dê li benda wê were gotin
+ Pêdivî ye ku fonksiyona `filter` `async` `await` be ji ber ku dê li benda wê were gotin
 
  Berî ku pel li ser dîskê werin nivîsandin, tevahiya naveroka pelê dê wekî rêzek ji fonksiyona `filter` were derbas kirin
 

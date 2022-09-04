@@ -244,7 +244,7 @@ Hokeilizacija
 
  Kada je omogućena oznaka `-M` / `--markdown` :
  * Uzorak `](` bit će kondenziran u `](` čime se popravljaju neispravne veze označavanja
- * Omotač "no translate" bit će postavljen oko uvučenih blokova koda, čuvajući pravilno uvlačenje i osiguravajući da nisu prevedeni
+ * Omot "no translate" bit će postavljen oko uvučenih blokova koda, čuvajući pravilno uvlačenje i osiguravajući da nisu prevedeni
  * Omot "no translate" bit će postavljen oko teksta unutar `backticks` kako bi se osiguralo da nisu prevedeni
 
  ### Proces-as

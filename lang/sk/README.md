@@ -253,7 +253,7 @@ Hokeylizácia
  Ak je váš obsah HTML, poškodí sa, pokiaľ nezadáte možnosť `-p html` / `--process-as html`
 
  ### Filter
- Pre odvážnych: pri spracovávaní súborov v adresári môžete použiť možnosť `-F` / `--filter`
+ Pre odvážlivcov: pri spracovaní súborov v adresári môžete použiť možnosť `-F` / `--filter`
  na filtrovanie výstupu pred jeho zapísaním do súborového systému
 
  Hodnota tejto možnosti musí byť cesta k súboru JS, ktorý exportuje funkciu s názvom `filter`

@@ -215,7 +215,7 @@ Hokeylizzazione
  In caso di dubbio, puoi combinare questa opzione con `-n` / `--dry-run` per vedere quali file verrebbero tradotti
 
  ### Esclude
- A volte il tuo `-m` corrisponde a troppi file. Utilizzare l' `-e` / `--excludes` per escludere esplicitamente
+ A volte il tuo `-m` corrisponde a troppi file. Usa l' `-e` / `--excludes` per escludere esplicitamente
  file che altrimenti avrebbero corrisposto
 
  Puoi elencare più espressioni regolari, separate da spazi
