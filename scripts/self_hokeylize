@@ -33,7 +33,7 @@ echo " ========== Processing README.md ... " && \
     --outfile lang/LANG \
     --excludes lang/ node_modules/ \.git/ tmp/ \
     --filter "${BASE_DIR}/util/filterReadme.js" \
-    --handlebars "${FORCE}" \
+    --markdown "${FORCE}" \
     --match README\.md \
     . && \
 echo " ========== DONE! "
