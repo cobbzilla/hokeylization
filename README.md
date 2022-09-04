@@ -268,4 +268,4 @@ Thus, you have total control over what will finally be written
 ### Help
 Use `-h` / `--help` to show help
 
-## Happy Translating!
+## Have a fun time translating languages!
