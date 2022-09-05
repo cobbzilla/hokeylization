@@ -10,7 +10,10 @@ const DEFAULT_HOKEY_JSON_FILE = 'hokey.json'
 
 const LANG_PLACEHOLDER = 'LANG'
 
+// adapted from https://stackoverflow.com/a/3561711/1251543
+const escapeRegex = (string) => string.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')
+
 module.exports = {
     VERSION, DEFAULT_LANG, ALL_LANGS, ALL_LANGS_NAME, LANG_PLACEHOLDER,
-    DEFAULT_HOKEY_JSON_FILE
+    DEFAULT_HOKEY_JSON_FILE, escapeRegex
 }
