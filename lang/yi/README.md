@@ -276,6 +276,12 @@
 
  אזוי, איר האָבן גאַנץ קאָנטראָל איבער וואָס וועט לעסאָף זיין געשריבן
 
+ די `filter` שריפט וועט זיין געזוכט אין די פאלגענדע לאָוקיישאַנז:
+ * די קראַנט וועגווייַזער
+ * א וועגווייַזער מיטן נאָמען `.hokey-filters` אין דעם קראַנט וועגווייַזער
+ * א וועגווייַזער מיטן נאָמען `${HOME}/.hokey-filters` , ווו `${HOME}` איז דער איצטיקער באַניצער ס היים וועגווייַזער
+ * די געבויט-אין [פילטערס וועגווייַזער](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### הילף
  ניצן `-h` / `--help` צו ווייַזן הילף
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

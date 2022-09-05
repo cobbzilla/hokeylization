@@ -276,6 +276,12 @@ Hokeylization
 
  ដូច្នេះ អ្នកមានការគ្រប់គ្រងទាំងស្រុងលើអ្វីដែលនឹងត្រូវសរសេរជាចុងក្រោយ
 
+ ស្គ្រីប `filter` នឹងត្រូវបានរកមើលនៅកន្លែងដូចខាងក្រោម៖
+ * ថតបច្ចុប្បន្ន
+ * ថតមួយដែលមានឈ្មោះថា `.hokey-filters` នៅក្នុងថតបច្ចុប្បន្ន
+ * ថតមួយដែលមានឈ្មោះថា `${HOME}/.hokey-filters` ដែល `${HOME}` គឺជាថតផ្ទះរបស់អ្នកប្រើប្រាស់បច្ចុប្បន្ន
+ * ភ្ជាប់មកជាមួយ [ថតឯកសារ](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### ជួយ
  ប្រើ `-h` / `--help` ដើម្បីបង្ហាញជំនួយ
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

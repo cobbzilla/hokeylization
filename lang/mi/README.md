@@ -171,7 +171,7 @@ Hokeylization
 
  **TUPATOTANGA NUI**: I te wa e whakamaori ana i nga raarangi whaiaronga, ** KAUA E ** te tohu i tetahi raarangi whakaputa
  kei roto tena i to raarangi whakauru! Ki te mahi koe i tenei, ka:
- * whakaawe i te recursion mutunga kore
+ * whakakorikori mutunga kore
  * whakahaere i to pire Google
  * whakakiia to kōpae
  * iti ake te ngahau
@@ -276,6 +276,12 @@ Hokeylization
 
  No reira, kei a koe te mana katoa mo nga mea ka tuhia
 
+ Ka rapua te tuhinga `filter` ki nga waahi e whai ake nei:
+ * Te whaiaronga o naianei
+ * He whaiaronga ko `.hokey-filters` i roto i te whaiaronga o naianei
+ * He whaiaronga ko `${HOME}/.hokey-filters` , ko `${HOME}` ko te whaiaronga kainga o te kaiwhakamahi o naianei
+ * Ko te [whaiaronga tātari](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Awhina
  Whakamahia `-h` / `--help` hei whakaatu awhina
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

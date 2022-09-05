@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Index van vertalingen',
   label_findYourLanguageCode: 'Vind uw taalcode',
   err_processing_unknown: '*** Onverwachte fout: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Er is geen uitvoerbestand gegenereerd voor taal {{ lang }} , dus het wordt uitgesloten van de index'
+  warn_missingLangFile: 'Er is geen uitvoerbestand gegenereerd voor taal {{ lang }} , dus het wordt uitgesloten van de index',
+  err_filter_loading: 'Filter niet gevonden: {{ filter }}\n Het filter is niet gevonden in: de huidige map, de map ./.hokey-filters, de map ${HOME}/.hokey-filters, noch de map met ingebouwde filters'
 }

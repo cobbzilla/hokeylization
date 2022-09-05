@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Fa\'asinomaga o fa\'aliliuga',
   label_findYourLanguageCode: 'Su\'e lau code gagana',
   err_processing_unknown: '*** Sese fa\'afuase\'i: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Leai se faila faila na faia mo le gagana {{ lang }} , o lea o le a le aofia ai mai le faasino igoa'
+  warn_missingLangFile: 'Leai se faila faila na faia mo le gagana {{ lang }} , o lea o le a le aofia ai mai le faasino igoa',
+  err_filter_loading: 'E le maua le filiga: {{ filter }}\n E le\'i maua le faamama i so\'o se tasi o: le lisi o lo\'o i ai nei, le ./.hokey-filters directory, le ${HOME}/.hokey-filters directory, po\'o le lisi o filiga ua fausia i totonu.'
 }

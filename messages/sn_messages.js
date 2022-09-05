@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Indekisi yeshanduro',
   label_findYourLanguageCode: 'Tsvaga mutauro wako',
   err_processing_unknown: '***Kanganiso isingatarisirwe: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Hapana faira rekubuda rakagadzirwa remutauro {{ lang }} , saka harichaverengerwa muindex'
+  warn_missingLangFile: 'Hapana faira rekubuda rakagadzirwa remutauro {{ lang }} , saka harichaverengerwa muindex',
+  err_filter_loading: 'Sefa haina kuwanikwa: {{ filter }}\n Sefa haina kuwanikwa mune ipi zvayo: dhairekitori razvino, ./.hokey-filters directory, ${HOME}/.hokey-filters directory, kana dhairekitori remasefa akavakirwa-mukati'
 }

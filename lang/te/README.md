@@ -276,6 +276,12 @@
 
  కాబట్టి, చివరకు ఏమి వ్రాయబడుతుందనే దానిపై మీకు పూర్తి నియంత్రణ ఉంటుంది
 
+ `filter` స్క్రిప్ట్ కింది స్థానాల్లో శోధించబడుతుంది:
+ * ప్రస్తుత డైరెక్టరీ
+ * ప్రస్తుత డైరెక్టరీలో `.hokey-filters` పేరుతో ఒక డైరెక్టరీ
+ * `${HOME}/.hokey-filters` పేరుతో ఉన్న డైరెక్టరీ, ఇక్కడ `${HOME}` ప్రస్తుత వినియోగదారు హోమ్ డైరెక్టరీ
+ * అంతర్నిర్మిత [ఫిల్టర్‌ల డైరెక్టరీ](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### సహాయం
  సహాయం చూపడానికి `-h` / `--help` ఉపయోగించండి
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

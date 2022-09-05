@@ -276,6 +276,12 @@ Hokeyization
 
  Έτσι, έχετε τον απόλυτο έλεγχο του τι θα γραφτεί τελικά
 
+ Το σενάριο `filter` θα αναζητηθεί στις ακόλουθες τοποθεσίες:
+ * Ο τρέχων κατάλογος
+ * Ένας κατάλογος με το όνομα `.hokey-filters` στον τρέχοντα κατάλογο
+ * Ένας κατάλογος με το όνομα `${HOME}/.hokey-filters` , όπου το `${HOME}` είναι ο κεντρικός κατάλογος του τρέχοντος χρήστη
+ * Ο ενσωματωμένος [κατάλογος φίλτρων](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Βοήθεια
  Χρησιμοποιήστε `-h` / `--help` για να δείξετε βοήθεια
 
@@ -326,7 +332,7 @@ Hokeyization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

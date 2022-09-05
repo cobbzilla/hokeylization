@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Mlozera wa zomasulira',
   label_findYourLanguageCode: 'Pezani chilankhulo chanu',
   err_processing_unknown: '*** Vuto losayembekezereka: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Palibe fayilo yotulutsa yomwe idapangidwa m\'chinenero {{ lang }} , choncho sichidzachotsedwa pamndandanda'
+  warn_missingLangFile: 'Palibe fayilo yotulutsa yomwe idapangidwa m\'chinenero {{ lang }} , choncho sichidzachotsedwa pamndandanda',
+  err_filter_loading: 'Zosefera sizinapezeke: {{ filter }}\n Zosefera sizinapezeke mu chilichonse mwa: chikwatu chomwe chilipo, ./.hokey-filters directory, ${HOME}/.hokey-filters directory, kapena zosefera zomwe zamangidwa'
 }

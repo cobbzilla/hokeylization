@@ -276,6 +276,12 @@
 
  Таким образом, у вас есть полный контроль над тем, что в конечном итоге будет написано
 
+ `filter` будет искаться в следующих местах:
+ * Текущий каталог
+ * Каталог с именем `.hokey-filters` в текущем каталоге
+ * Каталог с именем `${HOME}/.hokey-filters` , где `${HOME}` — это домашний каталог текущего пользователя.
+ * Встроенный [каталог фильтров](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Помощь
  Используйте `-h` / `--help` , чтобы показать справку
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

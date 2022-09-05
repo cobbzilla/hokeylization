@@ -276,6 +276,12 @@ Hokeylization
 
  Mar sin, tha smachd iomlan agad air na thèid a sgrìobhadh mu dheireadh
 
+ Bithear a’ coimhead airson an sgriobt ‘ `filter` ’ anns na h-àiteachan a leanas:
+ * An eòlaire gnàthach
+ * Eòlaire leis an ainm `.hokey-filters` taobh a-staigh an eòlaire gnàthach
+ * Eòlaire leis an ainm `${HOME}/.hokey-filters` , far a bheil `${HOME}` mar eòlaire dachaigh a' chleachdaiche làithreach
+ * An [eòlaire sìoltachain] a chaidh a thogail a-steach (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Cuideachadh
  Cleachd `-h` / `--help` gus cuideachadh a shealltainn
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

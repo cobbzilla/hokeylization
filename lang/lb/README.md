@@ -276,6 +276,12 @@ Hokeylizéierung
 
  Also hutt Dir total Kontroll iwwer dat wat endlech geschriwwe gëtt
 
+ De `filter` Skript gëtt op de folgende Plazen gesicht:
+ * Den aktuelle Verzeechnes
+ * E Verzeechnes mam Numm `.hokey-filters` am aktuellen Verzeechnes
+ * E Verzeichnis mam Numm `${HOME}/.hokey-filters` , wou `${HOME}` den aktuelle Benotzer säin Heemverzeichnis ass
+ * Den agebaute [Filterverzeechnes](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Hëllef
  Benotzt `-h` / `--help` fir Hëllef ze weisen
 
@@ -326,7 +332,7 @@ Hokeylizéierung
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

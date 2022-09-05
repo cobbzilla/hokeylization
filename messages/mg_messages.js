@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Fanondroana fandikan-teny',
   label_findYourLanguageCode: 'Tadiavo ny kaody fiteninao',
   err_processing_unknown: '*** Error tsy nampoizina: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Tsy nisy rakitra vokarina noforonina ho an\'ny fiteny {{ lang }} , noho izany dia tsy ho tafiditra ao amin\'ny fanondroana'
+  warn_missingLangFile: 'Tsy nisy rakitra vokarina noforonina ho an\'ny fiteny {{ lang }} , noho izany dia tsy ho tafiditra ao amin\'ny fanondroana',
+  err_filter_loading: 'Sivana tsy hita: {{ filter }}\n Tsy hita tao amin\'ny iray amin\'ireo ny sivana: ny lahatahiry ankehitriny, ny lahatahiry ./.hokey-filters, ny lahatahiry ${HOME}/.hokey-filters, na ny lahatahiry sivana anatiny'
 }

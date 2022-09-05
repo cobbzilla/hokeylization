@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Çeviri dizini',
   label_findYourLanguageCode: 'Dil kodunuzu bulun',
   err_processing_unknown: '*** Beklenmeyen hata: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} dili için çıktı dosyası oluşturulmadı, bu nedenle dizinden hariç tutulacak'
+  warn_missingLangFile: '{{ lang }} dili için çıktı dosyası oluşturulmadı, bu nedenle dizinden hariç tutulacak',
+  err_filter_loading: 'Filtre bulunamadı: {{ filter }}\n Filtre şunlardan hiçbirinde bulunamadı: geçerli dizin, ./.hokey-filters dizini, ${HOME}/.hokey-filters dizini veya yerleşik filtreler dizini'
 }

@@ -161,7 +161,7 @@ Hokeylization
  Kumanikidza kududzirazve makiyi ese, shandisa iyo `-f` / `--force` sarudzo
 
  ## Kushandura dhairekitori remavara mafaira
- Iwe unogona zvakare kushandura dhairekitori remafaira. hokeylization ichadzokorora kushanyira yega yega
+ Unogonawo kushandura dhairekitori remafaira. hokeylization ichadzokorora kushanyira yega yega
  faira mudhairekitori uye womhanyisa zvirimo kuburikidza neGoogle Translate, uye chengetedza zvabuda
  kune faira rakafanana rine zita mune yakaparadzana dhairekitori muti
 
@@ -276,6 +276,12 @@ Hokeylization
 
  Nokudaro, une simba rose pane zvichazonyorwa pakupedzisira
 
+ Iyo `filter` script ichatsvakwa munzvimbo dzinotevera:
+ * Iyo yazvino dhairekitori
+ * Dhairekitori rine zita `.hokey-filters` mukati medhairekitori razvino
+ * Dhairekitori rine zita `${HOME}/.hokey-filters` , uko `${HOME}` ndiro dhairekitori remusha remushandisi
+ * Iyo yakavakirwa-mukati [mafirita dhairekitori](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Batsira
  Shandisa `-h` / `--help` kuratidza rubatsiro
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

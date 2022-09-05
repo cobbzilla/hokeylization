@@ -276,6 +276,12 @@
 
  وبالتالي ، لديك سيطرة كاملة على ما سيتم كتابته في النهاية
 
+ سيتم البحث عن البرنامج النصي `filter` في المواقع التالية:
+ * الدليل الحالي
+ * دليل باسم `.hokey-filters` داخل الدليل الحالي
+ * دليل باسم `${HOME}/.hokey-filters` ، حيث يكون` `${HOME}` هو الدليل الرئيسي للمستخدم الحالي
+ * [دليل الفلاتر] المدمج (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### مساعدة
  استخدم `-h` " / `--help` لإظهار المساعدة
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

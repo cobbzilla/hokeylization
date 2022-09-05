@@ -276,6 +276,12 @@ Hokeylization
 
  Yog li, koj muaj peev xwm tswj tau tag nrho qhov yuav tsum tau sau thaum kawg
 
+ Cov ntawv `filter` yuav raug saib rau hauv cov chaw hauv qab no:
+ * Daim ntawv teev npe tam sim no
+ * Cov npe hu ua `.hokey-filters` nyob rau hauv cov npe tam sim no
+ * Ib daim ntawv teev npe hu ua `${HOME}/.hokey-filters` , qhov twg `${HOME}` yog tus neeg siv tam sim no cov npe hauv tsev
+ * Lub built-in [filters directory](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Pab
  Siv `-h` / `--help` los qhia kev pab
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Index vun Iwwersetzungen',
   label_findYourLanguageCode: 'Fannt Äre Sproochecode',
   err_processing_unknown: '*** Onerwaart Feeler: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Keen Ausgangsdatei gouf fir d\'Sprooch {{ lang }} generéiert, sou datt se aus dem Index ausgeschloss ginn'
+  warn_missingLangFile: 'Keen Ausgangsdatei gouf fir d\'Sprooch {{ lang }} generéiert, sou datt se aus dem Index ausgeschloss ginn',
+  err_filter_loading: 'Filter net fonnt: {{ filter }}\n De Filter gouf a kengem vun: den aktuelle Verzeichnis, dem ./.hokey-filters Verzeichnis, dem ${HOME}/.hokey-filters Verzeichnis, nach am agebaute Filterverzeichnis fonnt.'
 }

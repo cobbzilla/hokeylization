@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'अनुवादांची अनुक्रमणिका',
   label_findYourLanguageCode: 'तुमचा भाषा कोड शोधा',
   err_processing_unknown: '*** अनपेक्षित त्रुटी: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} भाषेसाठी कोणतीही आउटपुट फाइल तयार केलेली नाही, त्यामुळे ती अनुक्रमणिकेतून वगळली जाईल'
+  warn_missingLangFile: '{{ lang }} भाषेसाठी कोणतीही आउटपुट फाइल तयार केलेली नाही, त्यामुळे ती अनुक्रमणिकेतून वगळली जाईल',
+  err_filter_loading: 'फिल्टर आढळले नाही: {{ filter }}\n फिल्टर कोणत्याही मध्ये आढळले नाही: वर्तमान निर्देशिका, ./.hokey-filters निर्देशिका, ${HOME}/.hokey-filters निर्देशिका, किंवा अंगभूत फिल्टर निर्देशिका'
 }

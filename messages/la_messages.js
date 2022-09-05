@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Index translationum',
   label_findYourLanguageCode: 'Invenies tua lingua codice',
   err_processing_unknown: '*** inopinatus error: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Nullus fasciculus outputus pro lingua {{ lang }} generatus est, ideo ab indice excludetur'
+  warn_missingLangFile: 'Nullus fasciculus outputus pro lingua {{ lang }} generatus est, ideo ab indice excludetur',
+  err_filter_loading: 'Filtrum non inveni: {{ filter }}\n Filtrum non in aliquo repertum est: directorium currentis, directorium ./.hokey-filtrorum, ${HOME}/.hokey-filtrorum directorium, nec in directorium aedificatum.'
 }

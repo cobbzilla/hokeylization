@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Орчуулгын индекс',
   label_findYourLanguageCode: 'Хэлнийхээ кодыг олоорой',
   err_processing_unknown: '*** Гэнэтийн алдаа: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} хэлний хувьд гаралтын файл үүсгээгүй тул үүнийг индексээс хасах болно'
+  warn_missingLangFile: '{{ lang }} хэлний хувьд гаралтын файл үүсгээгүй тул үүнийг индексээс хасах болно',
+  err_filter_loading: 'Шүүлтүүр олдсонгүй: {{ filter }}\n Шүүлтүүрийг одоогийн лавлах, ./.hokey-filters лавлах, ${HOME}/.hokey-filters лавлах, эсвэл суулгасан шүүлтүүрийн лавлах зэрэг дотроос олдсонгүй.'
 }

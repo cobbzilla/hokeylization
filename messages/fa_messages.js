@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'فهرست ترجمه ها',
   label_findYourLanguageCode: 'کد زبان خود را پیدا کنید',
   err_processing_unknown: '*** خطای غیرمنتظره: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'هیچ فایل خروجی برای زبان {{ lang }} ایجاد نشد، بنابراین از فهرست حذف خواهد شد.'
+  warn_missingLangFile: 'هیچ فایل خروجی برای زبان {{ lang }} ایجاد نشد، بنابراین از فهرست حذف خواهد شد.',
+  err_filter_loading: 'فیلتر پیدا نشد: {{ filter }}\n فیلتر در هیچ یک از این موارد یافت نشد: دایرکتوری فعلی، دایرکتوری ./.hokey-filters، دایرکتوری ${HOME}/.hokey-filters، و نه دایرکتوری فیلترهای داخلی'
 }

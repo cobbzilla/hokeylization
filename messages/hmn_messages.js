@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Index ntawm translations',
   label_findYourLanguageCode: 'Nrhiav koj hom lus code',
   err_processing_unknown: '*** Tsis xav txog qhov yuam kev: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Tsis muaj cov ntaub ntawv tso tawm tau tsim rau hom lus {{ lang }} , yog li nws yuav raug cais tawm ntawm qhov ntsuas'
+  warn_missingLangFile: 'Tsis muaj cov ntaub ntawv tso tawm tau tsim rau hom lus {{ lang }} , yog li nws yuav raug cais tawm ntawm qhov ntsuas',
+  err_filter_loading: 'Lim tsis pom: {{ filter }}\n Cov lim tsis pom nyob rau hauv ib qho ntawm: cov npe tam sim no, ./.hokey-filters directory, ${HOME}/.hokey-filters directory, los yog cov ntawv teev cov lim hauv built-in'
 }

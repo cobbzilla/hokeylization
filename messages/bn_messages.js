@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'অনুবাদের সূচক',
   label_findYourLanguageCode: 'আপনার ভাষা কোড খুঁজুন',
   err_processing_unknown: '*** অপ্রত্যাশিত ত্রুটি: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'ভাষার জন্য কোনো আউটপুট ফাইল তৈরি করা হয়নি {{ lang }} , তাই এটি সূচক থেকে বাদ দেওয়া হবে'
+  warn_missingLangFile: 'ভাষার জন্য কোনো আউটপুট ফাইল তৈরি করা হয়নি {{ lang }} , তাই এটি সূচক থেকে বাদ দেওয়া হবে',
+  err_filter_loading: 'ফিল্টার পাওয়া যায়নি: {{ filter }}\n ফিল্টারটি এর কোনোটিতে পাওয়া যায়নি: বর্তমান ডিরেক্টরি, ./.hokey-filters ডিরেক্টরি, ${HOME}/.hokey-filters ডিরেক্টরি, বা অন্তর্নির্মিত ফিল্টার ডিরেক্টরি'
 }

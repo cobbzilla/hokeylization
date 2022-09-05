@@ -276,6 +276,12 @@
 
  Ҳамин тариқ, шумо назорати пурраи он чизеро, ки дар охир навишта мешавад, доред
 
+ `filter` " дар ҷойҳои зерин ҷустуҷӯ карда мешавад:
+ * Феҳристи ҷорӣ
+ * Директория бо номи `.hokey-filters` дар дохили директорияи ҷорӣ
+ * Феҳрист бо номи `${HOME}/.hokey-filters` , ки дар он `${HOME}` феҳристи хонагии корбари ҷорӣ аст
+ * Дарунсохт [Феҳристи филтрҳо](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Кумак
  Барои нишон додани кӯмак аз `-h` / `--help` истифода баред
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

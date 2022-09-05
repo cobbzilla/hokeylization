@@ -276,6 +276,12 @@ Hokeylisaatio
 
  Näin ollen sinulla on täysi määräysvalta siihen, mitä lopulta kirjoitetaan
 
+ `filter` seuraavista paikoista:
+ * Nykyinen hakemisto
+ * Hakemisto nimeltä `.hokey-filters` nykyisessä hakemistossa
+ * Hakemisto nimeltä `${HOME}/.hokey-filters` , jossa `${HOME}` on nykyisen käyttäjän kotihakemisto
+ * Sisäänrakennettu [suodatinhakemisto](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Auta
  Käytä `-h` / `--help` näyttääksesi ohjeen
 
@@ -326,7 +332,7 @@ Hokeylisaatio
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

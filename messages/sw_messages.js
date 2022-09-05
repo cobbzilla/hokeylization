@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Kielezo cha tafsiri',
   label_findYourLanguageCode: 'Tafuta msimbo wako wa lugha',
   err_processing_unknown: '*** Hitilafu isiyotarajiwa: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Hakuna faili towe iliyotolewa kwa lugha {{ lang }} , kwa hivyo haitajumuishwa kwenye faharasa'
+  warn_missingLangFile: 'Hakuna faili towe iliyotolewa kwa lugha {{ lang }} , kwa hivyo haitajumuishwa kwenye faharasa',
+  err_filter_loading: 'Kichujio hakijapatikana: {{ filter }}\n Kichujio hakikupatikana katika mojawapo ya: saraka ya sasa, saraka ya vichujio vya ./.hokey, saraka ya ${HOME}/.hokey-filters, wala saraka ya vichujio vilivyojengewa ndani.'
 }

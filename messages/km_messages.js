@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'សន្ទស្សន៍នៃការបកប្រែ',
   label_findYourLanguageCode: 'ស្វែងរកលេខកូដភាសារបស់អ្នក។',
   err_processing_unknown: '*** កំហុសដែលមិនបានរំពឹងទុក៖ {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'គ្មានឯកសារលទ្ធផលត្រូវបានបង្កើតសម្រាប់ភាសា {{ lang }} ដូច្នេះវានឹងត្រូវបានដកចេញពីលិបិក្រម'
+  warn_missingLangFile: 'គ្មានឯកសារលទ្ធផលត្រូវបានបង្កើតសម្រាប់ភាសា {{ lang }} ដូច្នេះវានឹងត្រូវបានដកចេញពីលិបិក្រម',
+  err_filter_loading: 'រកមិនឃើញតម្រង៖ {{ filter }}\n តម្រងមិនត្រូវបានរកឃើញនៅក្នុងណាមួយនៃ៖ ថតបច្ចុប្បន្ន ថតឯកសារ ./.hokey-filters ថត ${HOME}/.hokey-filters ឬថតឯកសារតម្រងដែលភ្ជាប់មកជាមួយ'
 }

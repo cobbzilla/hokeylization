@@ -276,6 +276,12 @@
 
  Այսպիսով, դուք լիովին վերահսկում եք այն, ինչ վերջապես կգրվի
 
+ `filter` հետևյալ վայրերում.
+ * Ընթացիկ գրացուցակը
+ * `.hokey-filters` անունով գրացուցակ ընթացիկ գրացուցակում
+ * `${HOME}/.hokey-filters` » անունով գրացուցակ, որտեղ `${HOME}` -ը ներկայիս օգտվողի հիմնական գրացուցակն է
+ * Ներկառուցված [ֆիլտրերի գրացուցակը](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Օգնություն
  Օգտագործեք `-h` / `--help` օգնություն ցույց տալու համար
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

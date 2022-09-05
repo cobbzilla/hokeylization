@@ -276,6 +276,12 @@ Hokeylizazioa
 
  Horrela, azkenean idatziko denaren gaineko kontrol osoa duzu
 
+ `filter` script-a kokapen hauetan bilatuko da:
+ * Uneko direktorioa
+ * `.hokey-filters` izeneko direktorio bat uneko direktorioaren barruan
+ * `${HOME}/.hokey-filters` izeneko direktorio bat, non `${HOME}` uneko erabiltzailearen hasierako direktorioa den
+ * [iragazkien direktorioa] integratua (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Laguntza
  Erabili `-h` / `--help` laguntza erakusteko
 
@@ -326,7 +332,7 @@ Hokeylizazioa
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

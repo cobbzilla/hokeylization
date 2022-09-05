@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Clàr-innse eadar-theangachaidhean',
   label_findYourLanguageCode: 'Lorg do chòd cànain',
   err_processing_unknown: '*** Mearachd ris nach robh dùil: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Cha deach faidhle toraidh a chruthachadh airson cànan {{ lang }} , agus mar sin bidh e air a dùnadh a-mach às a’ chlàr-amais'
+  warn_missingLangFile: 'Cha deach faidhle toraidh a chruthachadh airson cànan {{ lang }} , agus mar sin bidh e air a dùnadh a-mach às a’ chlàr-amais',
+  err_filter_loading: 'Cha deach sìoltachan a lorg: {{ filter }}\n Cha deach an criathar a lorg ann an gin dhe: an eòlaire làithreach, an eòlaire ./.hokey-filters, an eòlaire ${HOME}/.hokey-filters, no an eòlaire criathragan togte'
 }

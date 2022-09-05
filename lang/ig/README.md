@@ -276,6 +276,12 @@ Hokeyylization
 
  Ya mere, ị na-achịkwa ihe niile a ga-ede n'ikpeazụ
 
+ A ga-achọ edemede `filter` n'ebe ndị a:
+ * Akwụkwọ ndekọ aha ugbu a
+ * Akwụkwọ ndekọ aha `.hokey-filters` n'ime ndekọ aha ugbu a
+ * Ndekọ aha ya bụ `${HOME}/.hokey-filters` , ebe `${HOME}` bụ ndekọ ụlọ nke onye ọrụ ugbu a
+ * Ihe arụnyere n'ime [ndekọ ihe nzacha](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Enyemaka
  Jiri `-h` / `--help` gosi enyemaka
 
@@ -326,7 +332,7 @@ Hokeyylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

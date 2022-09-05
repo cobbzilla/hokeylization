@@ -276,6 +276,12 @@ Hokeylization
 
  Noho izany, manana fifehezana tanteraka amin'izay hosoratana amin'ny farany ianao
 
+ Ny script `filter` dia hotadiavina amin'ireto toerana manaraka ireto:
+ * Ny lahatahiry ankehitriny
+ * Lahatahiry iray antsoina hoe `.hokey-filters` ao anatin'ny lahatahiry ankehitriny
+ * Lahatahiry iray antsoina hoe `${HOME}/.hokey-filters` , izay misy `${HOME}` ny lahatahirin'ny mpampiasa ankehitriny
+ * Ny [direktera sivana](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Vonjeo
  Ampiasao `-h` / `--help` hanehoana fanampiana
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

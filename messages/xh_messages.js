@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Isalathiso seenguqulelo',
   label_findYourLanguageCode: 'Fumana ikhowudi yolwimi lwakho',
   err_processing_unknown: '*** Impazamo engalindelekanga: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Akukho fayile yemveliso yenziweyo yolwimi {{ lang }} , ngoko ke ayizukuqukwa kwisalathiso'
+  warn_missingLangFile: 'Akukho fayile yemveliso yenziweyo yolwimi {{ lang }} , ngoko ke ayizukuqukwa kwisalathiso',
+  err_filter_loading: 'Isihluzo asifunyenwanga: {{ filter }}\n Isihluzi asifunyaniswanga nakweyiphi na: ulawulo lwangoku, i ./.hokey-izihluzi ulawulo, i ${HOME}/.hokey-izihluzi ulawulo, okanye izihluzi eyakhelwe-ngaphakathi ulawulo.'
 }

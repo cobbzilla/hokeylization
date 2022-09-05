@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Tõlgete register',
   label_findYourLanguageCode: 'Leidke oma keelekood',
   err_processing_unknown: '*** Ootamatu viga: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Keele {{ lang }} jaoks ei loodud väljundfaili, seega jäetakse see registrist välja'
+  warn_missingLangFile: 'Keele {{ lang }} jaoks ei loodud väljundfaili, seega jäetakse see registrist välja',
+  err_filter_loading: 'Filtrit ei leitud: {{ filter }}\n Filtrit ei leitud ühestki järgmistest: praegusest kataloogist, kataloogist ./.hokey-filters, kataloogist ${HOME}/.hokey-filters ega ka sisseehitatud filtrite kataloogist'
 }

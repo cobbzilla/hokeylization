@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Tarjimalar indeksi',
   label_findYourLanguageCode: 'Til kodingizni toping',
   err_processing_unknown: '*** Kutilmagan xato: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} tili uchun hech qanday chiqish fayli yaratilmadi, shuning uchun u indeksdan chiqarib tashlanadi'
+  warn_missingLangFile: '{{ lang }} tili uchun hech qanday chiqish fayli yaratilmadi, shuning uchun u indeksdan chiqarib tashlanadi',
+  err_filter_loading: 'Filtr topilmadi: {{ filter }}\n Filtr hech birida topilmadi: joriy katalogda, ./.hokey-filters katalogida, ${HOME}/.hokey-filters katalogida yoki o‘rnatilgan filtrlar katalogida'
 }

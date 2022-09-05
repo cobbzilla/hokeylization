@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Indexul traducerilor',
   label_findYourLanguageCode: 'Găsiți codul de limbă',
   err_processing_unknown: '*** Eroare neașteptată: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Nu a fost generat niciun fișier de ieșire pentru limba {{ lang }} , așa că va fi exclus din index'
+  warn_missingLangFile: 'Nu a fost generat niciun fișier de ieșire pentru limba {{ lang }} , așa că va fi exclus din index',
+  err_filter_loading: 'Filtrul nu a fost găsit: {{ filter }}\n Filtrul nu a fost găsit în niciunul dintre: directorul curent, directorul ./.hokey-filters, directorul ${HOME}/.hokey-filters și nici directorul încorporat filtre'
 }

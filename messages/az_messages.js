@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Tərcümələr indeksi',
   label_findYourLanguageCode: 'Dil kodunuzu tapın',
   err_processing_unknown: '*** Gözlənilməz xəta: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} dili üçün heç bir çıxış faylı yaradılmayıb, ona görə də o, indeksdən çıxarılacaq'
+  warn_missingLangFile: '{{ lang }} dili üçün heç bir çıxış faylı yaradılmayıb, ona görə də o, indeksdən çıxarılacaq',
+  err_filter_loading: 'Filtr tapılmadı: {{ filter }}\n Filtr heç birində tapılmadı: cari kataloq, ./.hokey-filters kataloqu, ${HOME}/.hokey-filters kataloqu, nə də daxili filtrlər kataloqu'
 }

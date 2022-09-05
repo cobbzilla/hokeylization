@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'ດັດຊະນີການແປ',
   label_findYourLanguageCode: 'ຊອກຫາລະຫັດພາສາຂອງທ່ານ',
   err_processing_unknown: '*** ຄວາມຜິດພາດທີ່ບໍ່ຄາດຄິດ: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'ບໍ່​ມີ​ໄຟລ​໌​ຜົນ​ຜະ​ລິດ​ສໍາ​ລັບ​ພາ​ສາ {{ lang }} , ສະ​ນັ້ນ​ມັນ​ຈະ​ໄດ້​ຮັບ​ການ​ຍົກ​ເວັ້ນ​ຈາກ​ດັດ​ຊະ​ນີ'
+  warn_missingLangFile: 'ບໍ່​ມີ​ໄຟລ​໌​ຜົນ​ຜະ​ລິດ​ສໍາ​ລັບ​ພາ​ສາ {{ lang }} , ສະ​ນັ້ນ​ມັນ​ຈະ​ໄດ້​ຮັບ​ການ​ຍົກ​ເວັ້ນ​ຈາກ​ດັດ​ຊະ​ນີ',
+  err_filter_loading: 'ບໍ່ພົບການກັ່ນຕອງ: {{ filter }}\n ບໍ່ພົບຕົວກອງໃດໆໃນ: ໄດເຣັກທໍຣີປັດຈຸບັນ, ໄດເຣັກທໍຣີ ./.hokey-filters, ໄດເຣັກທໍຣີ ${HOME}/.hokey-filters, ຫຼືໄດເຣັກທໍຣີຕົວກອງໃນຕົວ.'
 }

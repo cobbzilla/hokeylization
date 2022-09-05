@@ -276,6 +276,12 @@ Hokeylisering
 
  Dermed har du total kontrol over, hvad der til sidst skal skrives
 
+ `filter` vil blive ledt efter følgende steder:
+ * Den aktuelle mappe
+ * En mappe med navnet `.hokey-filters` i den aktuelle mappe
+ * En mappe ved navn `${HOME}/.hokey-filters` , hvor `${HOME}` er den aktuelle brugers hjemmemappe
+ * Den indbyggede [filtermappe](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Hjælp
  Brug `-h` / `--help` for at vise hjælp
 
@@ -326,7 +332,7 @@ Hokeylisering
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

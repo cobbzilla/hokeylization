@@ -172,7 +172,7 @@
  **중대한 경고**: 디렉토리를 번역할 때 **출력 디렉토리를 지정하지 마세요**
  그것은 당신의 입력 디렉토리 안에 있습니다! 이렇게 하면 다음을 수행할 수 있습니다.
  * 무한 재귀 유도
- * 귀하의 Google 청구서를 실행
+ * Google 청구서를 실행
  * 디스크 채우기
  * 재미가 덜하다
 
@@ -276,6 +276,12 @@
 
  따라서 최종적으로 작성될 내용을 완전히 제어할 수 있습니다.
 
+ `filter` 스크립트는 다음 위치에서 찾습니다.
+ * 현재 디렉토리
+ * 현재 디렉토리 내의 `.hokey-filters` 라는 디렉토리
+ * `${HOME}/.hokey-filters` 라는 디렉토리, 여기서 `${HOME}` 은 현재 사용자의 홈 디렉토리입니다.
+ * 내장 [필터 디렉토리](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### 돕다
  `-h` / `--help` 를 사용하여 도움말 표시
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

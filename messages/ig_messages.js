@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Ndekọ ntụgharị asụsụ',
   label_findYourLanguageCode: 'Chọta koodu asụsụ gị',
   err_processing_unknown: '*** Njehie a na-atụghị anya ya: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Enweghị faịlụ mmepụta emepụtara maka asụsụ {{ lang }} , yabụ a ga-ewepụ ya na ndeksi'
+  warn_missingLangFile: 'Enweghị faịlụ mmepụta emepụtara maka asụsụ {{ lang }} , yabụ a ga-ewepụ ya na ndeksi',
+  err_filter_loading: 'Achọtaghị ihe nzacha: {{ filter }}\n Ahụghị nzacha ahụ n\'ime nke ọ bụla: akwụkwọ ndekọ aha ugbu a, ndekọ ndekọ ./.hokey-filters, akwụkwọ ndekọ aha ${HOME}/.hokey-filters, ma ọ bụ ndekọ ndekọ ihe nzacha arụnyere n\'ime ya.'
 }

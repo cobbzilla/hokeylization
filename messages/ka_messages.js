@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'თარგმანების ინდექსი',
   label_findYourLanguageCode: 'იპოვეთ თქვენი ენის კოდი',
   err_processing_unknown: '*** მოულოდნელი შეცდომა: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'გამომავალი ფაილი არ შეიქმნა {{ lang }} ენისთვის, ამიტომ ის გამოირიცხება ინდექსიდან'
+  warn_missingLangFile: 'გამომავალი ფაილი არ შეიქმნა {{ lang }} ენისთვის, ამიტომ ის გამოირიცხება ინდექსიდან',
+  err_filter_loading: 'ფილტრი ვერ მოიძებნა: {{ filter }}\n ფილტრი ვერ მოიძებნა არცერთში: მიმდინარე დირექტორიაში, ./.hokey-filters დირექტორიაში, ${HOME}/.hokey-filters დირექტორიაში და არც ჩაშენებულ ფილტრების დირექტორიაში.'
 }

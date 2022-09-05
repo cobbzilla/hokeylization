@@ -276,6 +276,12 @@ Hokeyzation
 
  Do đó, bạn có toàn quyền kiểm soát những gì cuối cùng sẽ được viết
 
+ Tập lệnh `filter` sẽ được tìm kiếm ở các vị trí sau:
+ * Thư mục hiện tại
+ * Một thư mục có tên `.hokey-filters` trong thư mục hiện tại
+ * Một thư mục có tên là `${HOME}/.hokey-filters` , trong đó` `${HOME}` là thư mục chính của người dùng hiện tại
+ * [Thư mục bộ lọc] tích hợp sẵn (https://github.com/cobbzilla/hokeyption/tree/master/util/filter)
+
  ### Cứu giúp
  Sử dụng `-h` / `--help` để hiển thị trợ giúp
 
@@ -326,7 +332,7 @@ Hokeyzation
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

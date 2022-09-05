@@ -276,6 +276,12 @@ Hokeylization
 
  ດັ່ງນັ້ນ, ທ່ານມີການຄວບຄຸມທັງຫມົດກ່ຽວກັບສິ່ງທີ່ຈະຂຽນໃນທີ່ສຸດ
 
+ script `filter` ຈະຖືກຊອກຫາຢູ່ໃນສະຖານທີ່ຕໍ່ໄປນີ້:
+ * ລະ​ບົບ​ປະ​ຈຸ​ບັນ​
+ * ໄດເຣັກທໍຣີທີ່ມີຊື່ວ່າ `.hokey-filters` ພາຍໃນໄດເລກະທໍລີປະຈຸບັນ
+ * ໄດເຣັກທໍຣີທີ່ມີຊື່ວ່າ `${HOME}/.hokey-filters` , ເຊິ່ງ `${HOME}` ແມ່ນໄດເຣັກທໍຣີຫຼັກຂອງຜູ້ໃຊ້ປັດຈຸບັນ.
+ * ໃນຕົວ [ໄດເລກະທໍລີການກັ່ນຕອງ](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### ຊ່ວຍ
  ໃຊ້ `-h` / `--help` ເພື່ອສະແດງການຊ່ວຍເຫຼືອ
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

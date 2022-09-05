@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Указатель переводов',
   label_findYourLanguageCode: 'Найдите код своего языка',
   err_processing_unknown: '*** Непредвиденная ошибка: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Для языка {{ lang }} не создан выходной файл, поэтому он будет исключен из индекса.'
+  warn_missingLangFile: 'Для языка {{ lang }} не создан выходной файл, поэтому он будет исключен из индекса.',
+  err_filter_loading: 'Фильтр не найден: {{ filter }}\n Фильтр не найден ни в одном из следующих каталогов: текущем каталоге, каталоге ./.hokey-filters, каталоге ${HOME}/.hokey-filters или каталоге встроенных фильтров.'
 }

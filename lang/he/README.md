@@ -276,6 +276,12 @@
 
  לפיכך, יש לך שליטה מוחלטת על מה שייכתב לבסוף
 
+ הסקריפט `filter` במיקומים הבאים:
+ * הספרייה הנוכחית
+ * ספרייה בשם `.hokey-filters` בתוך הספרייה הנוכחית
+ * ספרייה בשם `${HOME}/.hokey-filters` , כאשר `${HOME}` היא ספריית הבית של המשתמש הנוכחי
+ * [ספריית המסננים] המובנית (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### עזרה
  השתמש `-h` / `--help` כדי להציג עזרה
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -358,7 +364,7 @@
  השתמש ב- `-A` / `--index-template` כדי לקבוע כיצד פלט האינדקס מעוצב. אתה יכול לציין 'html',
  'markdown', 'text', או נתיב הקובץ לתבנית [HandlebarsJS](https://handlebarsjs.com/) משלך
 
- אם אתה מציין תבנית משלך, עליך לציין גם קובץ (לא ספריה) עבור ה `-I` / `--index`
+ אם אתה מציין תבנית משלך, עליך לציין גם קובץ (לא ספריה) עבור `-I` / `--index`
  אוֹפְּצִיָה
 
  ## תהנה בתרגום שפות!

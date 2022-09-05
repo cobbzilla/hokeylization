@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Fihirisar fassarorin',
   label_findYourLanguageCode: 'Nemo lambar yaren ku',
   err_processing_unknown: '*** Kuskuren da ba a zato: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Ba a samar da fayil mai fitarwa don harshe {{ lang }} ba, don haka za a cire shi daga fihirisar'
+  warn_missingLangFile: 'Ba a samar da fayil mai fitarwa don harshe {{ lang }} ba, don haka za a cire shi daga fihirisar',
+  err_filter_loading: 'Ba a samo tace: {{ filter }}\n Ba a sami tacewar a cikin ɗaya daga cikin: kundin adireshi na yanzu, ./.hokey-filters directory, ${HOME}/.hokey-filters directory, ko ginannen kundiren tacewa.'
 }

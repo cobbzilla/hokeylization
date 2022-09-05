@@ -276,6 +276,12 @@
 
  അങ്ങനെ, അവസാനം എഴുതേണ്ട കാര്യങ്ങളിൽ നിങ്ങൾക്ക് പൂർണ നിയന്ത്രണമുണ്ട്
 
+ ഇനിപ്പറയുന്ന സ്ഥലങ്ങളിൽ `filter` സ്ക്രിപ്റ്റ് തിരയപ്പെടും:
+ * നിലവിലെ ഡയറക്‌ടറി
+ * നിലവിലെ ഡയറക്‌ടറിയിൽ `.hokey-filters` എന്ന് പേരുള്ള ഒരു ഡയറക്‌ടറി
+ * `${HOME}/.hokey-filters` എന്ന് പേരുള്ള ഒരു ഡയറക്‌ടറി, ഇവിടെ `${HOME}` എന്നത് നിലവിലെ ഉപയോക്താവിന്റെ ഹോം ഡയറക്‌ടറിയാണ്
+ * അന്തർനിർമ്മിത [ഫിൽട്ടറുകൾ ഡയറക്ടറി](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### സഹായം
  സഹായം കാണിക്കാൻ `-h` / `--help` ഉപയോഗിക്കുക
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

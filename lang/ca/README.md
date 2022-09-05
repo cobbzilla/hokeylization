@@ -276,6 +276,12 @@ Hokeylització
 
  Així, tens un control total sobre el que finalment s'escriurà
 
+ L'script `filter` es buscarà a les ubicacions següents:
+ * El directori actual
+ * Un directori anomenat `.hokey-filters` dins del directori actual
+ * Un directori anomenat `${HOME}/.hokey-filters` , on `${HOME}` és el directori inicial de l'usuari actual
+ * El [directori de filtres] integrat (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Ajuda
  Utilitzeu `-h` / `--help` per mostrar l'ajuda
 
@@ -326,7 +332,7 @@ Hokeylització
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -353,7 +359,7 @@ Hokeylització
  *Quan genereu índexs, només podeu tenir una font d'entrada*
 
  Passeu l' `-I` / `--index` , el valor és on es generarà el fitxer d'índex, que pot ser un fitxer
- o un directori. Si és un directori, s'utilitzarà un nom de fitxer per defecte, basat en la plantilla (vegeu més avall)
+ o un directori. Si es tracta d'un directori, s'utilitzarà un nom de fitxer predeterminat, basat en la plantilla (vegeu més avall)
 
  Utilitzeu `-A` / `--index-template` per determinar com es formatea la sortida de l'índex. Podeu especificar "html",
  'markdown', 'text' o la ruta del fitxer a la vostra pròpia plantilla [HandlebarsJS](https://handlebarsjs.com/)

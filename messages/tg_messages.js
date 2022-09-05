@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Индекси тарҷумаҳо',
   label_findYourLanguageCode: 'Рамзи забони худро пайдо кунед',
   err_processing_unknown: '*** Хатои ғайричашмдошт: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Ягон файли баромад барои забони {{ lang }} тавлид нашудааст, аз ин рӯ он аз индекс хориҷ карда мешавад'
+  warn_missingLangFile: 'Ягон файли баромад барои забони {{ lang }} тавлид нашудааст, аз ин рӯ он аз индекс хориҷ карда мешавад',
+  err_filter_loading: 'Филтр ёфт нашуд: {{ filter }}\n Филтр дар ҳеҷ яке аз инҳо ёфт нашуд: феҳристи ҷорӣ, феҳристи ./.hokey-filters, феҳристи ${HOME}/.hokey-filters, ва дар феҳристи филтрҳои дарунсохт'
 }

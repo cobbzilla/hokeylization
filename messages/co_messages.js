@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Indice di traduzzioni',
   label_findYourLanguageCode: 'Truvate u vostru codice di lingua',
   err_processing_unknown: '*** Errore imprevisu: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Nisun schedariu di output hè statu generatu per a lingua {{ lang }} , cusì serà esclusu da l\'indici'
+  warn_missingLangFile: 'Nisun schedariu di output hè statu generatu per a lingua {{ lang }} , cusì serà esclusu da l\'indici',
+  err_filter_loading: 'Filtru micca trovu: {{ filter }}\n U filtru ùn hè statu trovu in alcunu di: u cartulare attuale, u cartulare ./.hokey-filters, u cartulare ${HOME}/.hokey-filters, nè u repertoriu di filtri integrati.'
 }

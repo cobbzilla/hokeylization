@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Indeks over oversettelser',
   label_findYourLanguageCode: 'Finn språkkoden din',
   err_processing_unknown: '*** Uventet feil: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Ingen utdatafil ble generert for språk {{ lang }} , så den vil bli ekskludert fra indeksen'
+  warn_missingLangFile: 'Ingen utdatafil ble generert for språk {{ lang }} , så den vil bli ekskludert fra indeksen',
+  err_filter_loading: 'Filter ikke funnet: {{ filter }}\n Filteret ble ikke funnet i noen av: den gjeldende katalogen, ./.hokey-filters-katalogen, ${HOME}/.hokey-filters-katalogen eller den innebygde filterkatalogen'
 }

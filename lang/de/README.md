@@ -276,10 +276,16 @@ Hokeylisierung
 
  Somit haben Sie die volle Kontrolle darüber, was letztendlich geschrieben wird
 
+ Das `filter` wird an den folgenden Orten gesucht:
+ * Das aktuelle Verzeichnis
+ * Ein Verzeichnis namens `.hokey-filters` innerhalb des aktuellen Verzeichnisses
+ * Ein Verzeichnis namens `${HOME}/.hokey-filters` , wobei `${HOME}` das Heimatverzeichnis des aktuellen Benutzers ist
+ * Das eingebaute [Filterverzeichnis](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Hilfe
  Verwenden Sie `-h` / `--help` , um Hilfe anzuzeigen
 
- ## JSON-Batch-Befehle
+ ## JSON-Stapelbefehle
  Mit der Option `-j` / `--json` können Sie mehrere koordinierte `hokey` Befehle ausführen
 
  Konventionell heißt diese Datei `hokey.json` , aber Sie können sie beliebig benennen
@@ -326,7 +332,7 @@ Hokeylisierung
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

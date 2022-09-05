@@ -276,6 +276,12 @@ Hokeyylization
 
  Don haka, kuna da cikakken iko akan abin da a ƙarshe za a rubuta
 
+ Za a nemo rubutun `filter` a wurare masu zuwa:
+ * Littafin jagora na yanzu
+ * Littafin adireshi mai suna `.hokey-filters` a cikin kundin adireshi na yanzu
+ * Littafin adireshi mai suna `${HOME}/.hokey-filters` , inda `${HOME}` shine kundin adireshin gida na mai amfani na yanzu
+ * Ginin da aka gina (directory directory)(https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Taimako
  Yi amfani `-h` / `--help` don nuna taimako
 
@@ -326,7 +332,7 @@ Hokeyylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

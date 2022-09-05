@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Indéks tarjamahan',
   label_findYourLanguageCode: 'Panggihan kode basa anjeun',
   err_processing_unknown: '*** Kasalahan teu kaduga: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Taya file kaluaran dihasilkeun pikeun basa {{ lang }} , jadi bakal kaasup ti indéks dina'
+  warn_missingLangFile: 'Taya file kaluaran dihasilkeun pikeun basa {{ lang }} , jadi bakal kaasup ti indéks dina',
+  err_filter_loading: 'Filter teu kapanggih: {{ filter }}\n Saringan teu kapanggih dina salah sahiji: diréktori ayeuna, diréktori ./.hokey-filters, diréktori ${HOME}/.hokey-filters, atawa diréktori saringan anu diwangun.'
 }

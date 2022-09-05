@@ -276,6 +276,12 @@ Hokeylização
 
  Assim, você tem total controle sobre o que finalmente será escrito
 
+ O script `filter` será procurado nos seguintes locais:
+ * O diretório atual
+ * Um diretório chamado `.hokey-filters` dentro do diretório atual
+ * Um diretório chamado `${HOME}/.hokey-filters` , onde `${HOME}` é o diretório inicial do usuário atual
+ * O [diretório de filtros] integrado (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Ajuda
  Use `-h` / `--help` para mostrar a ajuda
 
@@ -326,7 +332,7 @@ Hokeylização
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

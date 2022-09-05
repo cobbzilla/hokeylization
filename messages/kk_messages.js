@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Аудармалар индексі',
   label_findYourLanguageCode: 'Тіл кодын табыңыз',
   err_processing_unknown: '*** Күтпеген қате: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} тілі үшін ешқандай шығыс файлы жасалмады, сондықтан ол индекстен шығарылады'
+  warn_missingLangFile: '{{ lang }} тілі үшін ешқандай шығыс файлы жасалмады, сондықтан ол индекстен шығарылады',
+  err_filter_loading: 'Сүзгі табылмады: {{ filter }}\n Сүзгі ешбір жерден табылмады: ағымдағы каталогта, ./.hokey-filters каталогында, ${HOME}/.hokey-filters каталогында немесе кірістірілген сүзгілер каталогында'
 }

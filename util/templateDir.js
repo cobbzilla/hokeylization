@@ -59,9 +59,11 @@ const readDirFiles = async (dir, options = null) => {
 
 const FILTER_LOAD_PATHS = [
     './', './.hokey-filters',
-    process.env.HOME ? join(process.env.HOME, '.hokey-filters') : null
+    process.env.HOME ? join(process.env.HOME, '.hokey-filters') : null,
+    join(resolve(__dirname), 'filter')
 ]
 const loadFilter = (filter) => {
+    const msg = messages()
     for (const path of FILTER_LOAD_PATHS) {
         if (path === null) {
             continue
@@ -72,9 +74,10 @@ const loadFilter = (filter) => {
                 return f.filter
             }
         } catch (e) {
-            console.log('bad filter: ' + e)
+            // it's OK, we will try another
         }
     }
+    throw new HokeyError(msg.err_filter_loading.parseMessage({ filter }))
 }
 
 const processDirectory = async (translate, inDir, inFiles, lang, options) => {

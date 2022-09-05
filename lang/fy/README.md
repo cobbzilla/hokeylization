@@ -156,7 +156,7 @@ Hokeylisearring
 
  As it útfiertriem al bestiet, sil it ûndersocht wurde om te bepalen hokker kaaien al bestean.
  Besteande kaaien wurde net oerset. Oersetten foar ûntbrekkende kaaien wurde oanmakke en taheakke
- oan 'e ein fan' e JS foarwerp. De hiele triem wurdt altyd oerskreaun.
+ oan 'e ein fan it JS foarwerp. De hiele triem wurdt altyd oerskreaun.
 
  Om alle kaaien opnij te oersetten, brûk de opsje `-f` / `--force`
 
@@ -276,6 +276,12 @@ Hokeylisearring
 
  Sa hawwe jo totale kontrôle oer wat úteinlik skreaun wurde sil
 
+ It `filter` skript sil socht wurde op de folgjende lokaasjes:
+ * De hjoeddeistige map
+ * In map mei de namme `.hokey-filters` binnen de hjoeddeiske map
+ * In map mei de namme `${HOME}/.hokey-filters` , wêrby `${HOME}` de thúsmap fan de hjoeddeiske brûker is
+ * De ynboude [filtermap](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Help
  Brûk `-h` / `--help` om help te sjen
 
@@ -326,7 +332,7 @@ Hokeylisearring
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

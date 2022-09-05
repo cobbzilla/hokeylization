@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Itzulpenen aurkibidea',
   label_findYourLanguageCode: 'Bilatu zure hizkuntza kodea',
   err_processing_unknown: '*** Ustekabeko errorea: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Ez da irteera fitxategirik sortu {{ lang }} hizkuntzarako, beraz, indizetik kanpo geratuko da'
+  warn_missingLangFile: 'Ez da irteera fitxategirik sortu {{ lang }} hizkuntzarako, beraz, indizetik kanpo geratuko da',
+  err_filter_loading: 'Ez da iragazkia aurkitu: {{ filter }}\n Iragazkia ez da aurkitu hauetako batean: uneko direktorioan, ./.hokey-filters direktorioa, ${HOME}/.hokey-filters direktorioan, ezta integratutako filters direktorioa.'
 }

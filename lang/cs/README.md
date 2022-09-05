@@ -276,6 +276,12 @@ Hokeylizace
 
  Máte tak úplnou kontrolu nad tím, co bude nakonec napsáno
 
+ Skript `filter` bude vyhledán v následujících umístěních:
+ * Aktuální adresář
+ * Adresář s názvem `.hokey-filters` v aktuálním adresáři
+ * Adresář s názvem `${HOME}/.hokey-filters` , kde `${HOME}` je domovský adresář aktuálního uživatele
+ * Vestavěný [adresář filtrů](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Pomoc
  K zobrazení nápovědy použijte `-h` / `--help`
 
@@ -326,7 +332,7 @@ Hokeylizace
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

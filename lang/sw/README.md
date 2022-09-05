@@ -276,6 +276,12 @@ Hokeylization
 
  Kwa hivyo, una udhibiti kamili juu ya kile kitakachoandikwa
 
+ Hati ya `filter` katika maeneo yafuatayo:
+ * Saraka ya sasa
+ * Saraka inayoitwa `.hokey-filters` ndani ya saraka ya sasa
+ * Saraka inayoitwa `${HOME}/.hokey-filters` , ambapo `${HOME}` ndio saraka ya nyumbani ya mtumiaji wa sasa
+ * [saraka ya vichujio] iliyojengewa ndani (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Msaada
  Tumia `-h` / `--help` ili kuonyesha usaidizi
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

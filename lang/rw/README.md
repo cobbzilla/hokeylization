@@ -276,6 +276,12 @@ Hokeylisation
 
  Rero, ufite igenzura ryuzuye kubizarangira
 
+ " `filter` izashakishwa ahantu hakurikira:
+ * Ububiko
+ * Ububiko `.hokey-filters` mububiko bwubu
+ * Ububiko `${HOME}/.hokey-filters` `${HOME}` nububiko bwumukoresha murugo
+ * Byubatswe [muyungurura ububiko](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Ubufasha
  Koresha `-h` / `--help` kwerekana ubufasha
 
@@ -326,7 +332,7 @@ Hokeylisation
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

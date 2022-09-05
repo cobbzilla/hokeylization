@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Ironderero ry\'ubuhinduzi',
   label_findYourLanguageCode: 'Shakisha ururimi rwawe',
   err_processing_unknown: '*** Ikosa ritunguranye: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Nta dosiye isohoka yakozwe mururimi {{ lang }} , bityo izakurwa kurutonde'
+  warn_missingLangFile: 'Nta dosiye isohoka yakozwe mururimi {{ lang }} , bityo izakurwa kurutonde',
+  err_filter_loading: 'Akayunguruzo ntikaboneka: {{ filter }}\n Akayunguruzo ntikabonetse muri kimwe muri: ububiko bwubu, ./.hokey-filters ububiko, $ {URUGO} /.'
 }

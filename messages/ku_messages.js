@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Indeksa wergeran',
   label_findYourLanguageCode: 'Koda zimanê xwe bibînin',
   err_processing_unknown: '*** Çewtiya nediyar: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Ji bo ziman {{ lang }} pelê encam nehatiye çêkirin, ji ber vê yekê ew ê ji navnîşê were derxistin'
+  warn_missingLangFile: 'Ji bo ziman {{ lang }} pelê encam nehatiye çêkirin, ji ber vê yekê ew ê ji navnîşê were derxistin',
+  err_filter_loading: 'Parzûn nehat dîtin: {{ filter }}\n Parzûn di yek ji wan de nehat dîtin: pelrêça heyî, pelrêça ./.hokey-filters, pelrêça ${HOME}/.hokey-filters, ne jî pelrêça fîlterên çêkirî'
 }

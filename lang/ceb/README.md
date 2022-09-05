@@ -276,6 +276,12 @@ Hokeylization
 
  Sa ingon, ikaw adunay bug-os nga kontrol sa kung unsa ang isulat sa katapusan
 
+ Ang `filter` nga script pangitaon sa mosunod nga mga lokasyon:
+ * Ang kasamtangan nga direktoryo
+ * Usa ka direktoryo nga ginganlag `.hokey-filters` sulod sa kasamtangan nga direktoryo
+ * Usa ka direktoryo nga ginganlag `${HOME}/.hokey-filters` , diin ang `${HOME}` mao ang direktoryo sa balay sa kasamtangang user
+ * Ang built-in nga [filter directory](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Tabang
  Gamita `-h` / `--help` aron ipakita ang tabang
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

@@ -276,6 +276,12 @@
 
  Осылайша, сіз соңында не жазылатынын толық бақылауға аласыз
 
+ " `filter` сценарийі келесі орындардан ізделеді:
+ * Ағымдағы каталог
+ * Ағымдағы каталогтағы `.hokey-filters` деп аталатын каталог
+ * `${HOME}/.hokey-filters` , мұндағы `${HOME}` ағымдағы пайдаланушының негізгі каталогы
+ * Кірістірілген [сүзгілер каталогы](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Көмектесіңдер
  Анықтаманы көрсету үшін `-h` / `--help` пайдаланыңыз
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'ਅਨੁਵਾਦਾਂ ਦਾ ਸੂਚਕਾਂਕ',
   label_findYourLanguageCode: 'ਆਪਣਾ ਭਾਸ਼ਾ ਕੋਡ ਲੱਭੋ',
   err_processing_unknown: '*** ਅਚਾਨਕ ਗਲਤੀ: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'ਭਾਸ਼ਾ ਲਈ ਕੋਈ ਆਉਟਪੁੱਟ ਫਾਈਲ ਨਹੀਂ ਬਣਾਈ ਗਈ ਸੀ {{ lang }} , ਇਸਲਈ ਇਸਨੂੰ ਸੂਚਕਾਂਕ ਤੋਂ ਬਾਹਰ ਰੱਖਿਆ ਜਾਵੇਗਾ।'
+  warn_missingLangFile: 'ਭਾਸ਼ਾ ਲਈ ਕੋਈ ਆਉਟਪੁੱਟ ਫਾਈਲ ਨਹੀਂ ਬਣਾਈ ਗਈ ਸੀ {{ lang }} , ਇਸਲਈ ਇਸਨੂੰ ਸੂਚਕਾਂਕ ਤੋਂ ਬਾਹਰ ਰੱਖਿਆ ਜਾਵੇਗਾ।',
+  err_filter_loading: 'ਫਿਲਟਰ ਨਹੀਂ ਮਿਲਿਆ: {{ filter }}\n ਫਿਲਟਰ ਇਹਨਾਂ ਵਿੱਚੋਂ ਕਿਸੇ ਵਿੱਚ ਨਹੀਂ ਮਿਲਿਆ: ਮੌਜੂਦਾ ਡਾਇਰੈਕਟਰੀ, ./.hokey-filters ਡਾਇਰੈਕਟਰੀ, ${HOME}/.hokey-filters ਡਾਇਰੈਕਟਰੀ, ਨਾ ਹੀ ਬਿਲਟ-ਇਨ ਫਿਲਟਰ ਡਾਇਰੈਕਟਰੀ।'
 }

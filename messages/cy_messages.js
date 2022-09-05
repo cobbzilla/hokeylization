@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Mynegai o gyfieithiadau',
   label_findYourLanguageCode: 'Dewch o hyd i\'ch cod iaith',
   err_processing_unknown: '*** Gwall annisgwyl: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Ni chynhyrchwyd unrhyw ffeil allbwn ar gyfer iaith {{ lang }} , felly ni chaiff ei chynnwys yn y mynegai'
+  warn_missingLangFile: 'Ni chynhyrchwyd unrhyw ffeil allbwn ar gyfer iaith {{ lang }} , felly ni chaiff ei chynnwys yn y mynegai',
+  err_filter_loading: 'Heb ganfod yr hidlydd: {{ filter }}\n Ni chanfuwyd yr hidlydd yn unrhyw un o\'r canlynol: y cyfeiriadur presennol, y cyfeiriadur ./.hokey-filters, y cyfeiriadur ${HOME}/.hokey-filters, na\'r cyfeiriadur hidlyddion adeiledig'
 }

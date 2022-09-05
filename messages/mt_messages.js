@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Indiċi tat-traduzzjonijiet',
   label_findYourLanguageCode: 'Sib il-kodiċi tal-lingwa tiegħek',
   err_processing_unknown: '*** Żball mhux mistenni: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'L-ebda fajl tal-output ma ġie ġġenerat għal-lingwa {{ lang }} , għalhekk se jiġi eskluż mill-indiċi'
+  warn_missingLangFile: 'L-ebda fajl tal-output ma ġie ġġenerat għal-lingwa {{ lang }} , għalhekk se jiġi eskluż mill-indiċi',
+  err_filter_loading: 'Filtru ma nstabx: {{ filter }}\n Il-filtru ma nstab fl-ebda wieħed minn: id-direttorju attwali, id-direttorju ./.hokey-filters, id-direttorju ${HOME}/.hokey-filters, u lanqas id-direttorju tal-filtri integrati'
 }

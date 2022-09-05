@@ -276,6 +276,12 @@ Hokeylization
 
  ಹೀಗಾಗಿ, ಅಂತಿಮವಾಗಿ ಏನು ಬರೆಯಲಾಗುವುದು ಎಂಬುದರ ಮೇಲೆ ನೀವು ಸಂಪೂರ್ಣ ನಿಯಂತ್ರಣವನ್ನು ಹೊಂದಿರುತ್ತೀರಿ
 
+ `filter` ಸ್ಕ್ರಿಪ್ಟ್ ಅನ್ನು ಈ ಕೆಳಗಿನ ಸ್ಥಳಗಳಲ್ಲಿ ಹುಡುಕಲಾಗುತ್ತದೆ:
+ * ಪ್ರಸ್ತುತ ಡೈರೆಕ್ಟರಿ
+ * ಪ್ರಸ್ತುತ ಡೈರೆಕ್ಟರಿಯಲ್ಲಿ `.hokey-filters` ಹೆಸರಿನ ಡೈರೆಕ್ಟರಿ
+ * `${HOME}/.hokey-filters` ಹೆಸರಿನ ಡೈರೆಕ್ಟರಿ, ಇಲ್ಲಿ `${HOME}` ಪ್ರಸ್ತುತ ಬಳಕೆದಾರರ ಹೋಮ್ ಡೈರೆಕ್ಟರಿಯಾಗಿದೆ
+ * ಅಂತರ್ನಿರ್ಮಿತ [ಫಿಲ್ಟರ್‌ಗಳ ಡೈರೆಕ್ಟರಿ](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### ಸಹಾಯ
  ಸಹಾಯವನ್ನು ತೋರಿಸಲು `-h` / `--help` ಬಳಸಿ
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

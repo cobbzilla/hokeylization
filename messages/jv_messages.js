@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Indeks terjemahan',
   label_findYourLanguageCode: 'Temokake kode basa sampeyan',
   err_processing_unknown: '*** Kesalahan sing ora dikarepke: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Ora ana file output sing digawe kanggo basa {{ lang }} , saengga ora kalebu saka indeks kasebut'
+  warn_missingLangFile: 'Ora ana file output sing digawe kanggo basa {{ lang }} , saengga ora kalebu saka indeks kasebut',
+  err_filter_loading: 'Filter ora ditemokake: {{ filter }}\n Filter kasebut ora ditemokake ing salah sawijining: direktori saiki, direktori ./.hokey-filters, direktori ${HOME}/.hokey-filters, utawa direktori filters sing dibangun.'
 }

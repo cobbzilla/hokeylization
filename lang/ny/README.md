@@ -276,6 +276,12 @@ Hokeylization
 
  Choncho, muli ndi mphamvu zonse pa zomwe zidzalembedwe
 
+ Zolemba za `filter` m'malo otsatirawa:
+ * Chikwatu chapano
+ * Chikwatu chotchedwa `.hokey-filters` mkati mwa chikwatu chomwe chilipo
+ * Chikwatu chotchedwa `${HOME}/.hokey-filters` , pomwe `${HOME}` ndi chikwatu chakunyumba kwa ogwiritsa ntchito pano
+ * Zomangamanga [zosefera](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Thandizeni
  Gwiritsani ntchito `-h` / `--help` kuti muwonetse thandizo
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

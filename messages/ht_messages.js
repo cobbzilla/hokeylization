@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Endèks tradiksyon',
   label_findYourLanguageCode: 'Jwenn kòd lang ou a',
   err_processing_unknown: '*** Erè inatandi: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Pa gen okenn dosye pwodiksyon te pwodwi pou lang {{ lang }} , kidonk li pral eskli nan endèks la'
+  warn_missingLangFile: 'Pa gen okenn dosye pwodiksyon te pwodwi pou lang {{ lang }} , kidonk li pral eskli nan endèks la',
+  err_filter_loading: 'Filtre pa jwenn: {{ filter }}\n Yo pa jwenn filtè a nan okenn nan: anyè aktyèl la, anyè ./.hokey-filters, anyè ${HOME}/.hokey-filters, ni anyè filtè entegre yo.'
 }

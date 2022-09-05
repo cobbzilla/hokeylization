@@ -276,6 +276,12 @@ Hokeylization
 
  Mar sin, tá smacht iomlán agat ar an méid a scríobhfar ar deireadh
 
+ `filter` sna háiteanna seo a leanas:
+ * An eolaire reatha
+ * Comhadlann darb ainm `.hokey-filters` laistigh den eolaire reatha
+ * Comhadlann darb ainm `${HOME}/.hokey-filters` , arb é `${HOME}` eolaire baile an úsáideora reatha
+ * An [eolaire scagairí] ionsuite (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Cabhrú
  Úsáid `-h` / `--help` chun cabhair a thaispeáint
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

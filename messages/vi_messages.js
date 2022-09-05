@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Mục lục bản dịch',
   label_findYourLanguageCode: 'Tìm mã ngôn ngữ của bạn',
   err_processing_unknown: '*** Lỗi không mong muốn: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Không có tệp đầu ra nào được tạo cho ngôn ngữ {{ lang }} , vì vậy nó sẽ bị loại trừ khỏi chỉ mục'
+  warn_missingLangFile: 'Không có tệp đầu ra nào được tạo cho ngôn ngữ {{ lang }} , vì vậy nó sẽ bị loại trừ khỏi chỉ mục',
+  err_filter_loading: 'Không tìm thấy bộ lọc: {{ filter }}\n Không tìm thấy bộ lọc trong bất kỳ thư mục nào trong số: thư mục hiện tại, thư mục ./.hokey-filters, $ {HOME} /. Hokey-filter, cũng như thư mục bộ lọc tích hợp'
 }

@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Treguesi i përkthimeve',
   label_findYourLanguageCode: 'Gjeni kodin tuaj të gjuhës',
   err_processing_unknown: '*** Gabim i papritur: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Asnjë skedar dalës nuk u krijua për gjuhën {{ lang }} , kështu që do të përjashtohet nga indeksi'
+  warn_missingLangFile: 'Asnjë skedar dalës nuk u krijua për gjuhën {{ lang }} , kështu që do të përjashtohet nga indeksi',
+  err_filter_loading: 'Filtri nuk u gjet: {{ filter }}\n Filtri nuk u gjet në asnjërën nga: drejtoria aktuale, direktoria ./.hokey-filters, drejtoria ${HOME}/.hokey-filters, as drejtoria e integruar e filtrave'
 }

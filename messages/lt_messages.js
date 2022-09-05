@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Vertimų rodyklė',
   label_findYourLanguageCode: 'Raskite savo kalbos kodą',
   err_processing_unknown: '*** Netikėta klaida: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} išvesties failas nesukurtas, todėl jis bus pašalintas iš indekso'
+  warn_missingLangFile: '{{ lang }} išvesties failas nesukurtas, todėl jis bus pašalintas iš indekso',
+  err_filter_loading: 'Filtras nerastas: {{ filter }}\n Filtras nerastas nei viename iš: dabartiniame kataloge, ./.hokey-filters kataloge, ${HOME}/.hokey-filters kataloge ar integruotame filtrų kataloge'
 }

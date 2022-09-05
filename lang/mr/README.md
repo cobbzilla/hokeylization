@@ -276,6 +276,12 @@
 
  अशा प्रकारे, शेवटी काय लिहिले जाईल यावर आपले संपूर्ण नियंत्रण आहे
 
+ `filter` स्क्रिप्ट खालील ठिकाणी शोधली जाईल:
+ * वर्तमान निर्देशिका
+ * वर्तमान निर्देशिकेत `.hokey-filters` नावाची निर्देशिका
+ * `${HOME}/.hokey-filters` , जिथे `${HOME}` ही वर्तमान वापरकर्त्याची होम डिरेक्टरी आहे
+ * अंगभूत [फिल्टर्स निर्देशिका](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### मदत
  मदत दर्शविण्यासाठी `-h` / `--help` वापरा
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

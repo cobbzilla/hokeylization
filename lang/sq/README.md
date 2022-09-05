@@ -276,6 +276,12 @@ Hokeylizimi
 
  Kështu, ju keni kontroll të plotë mbi atë që më në fund do të shkruhet
 
+ `filter` " do të kërkohet në vendet e mëposhtme:
+ * Drejtoria aktuale
+ * Një direktori me emrin `.hokey-filters` brenda drejtorisë aktuale
+ * Një drejtori me emrin `${HOME}/.hokey-filters` , ku `${HOME}` është drejtoria kryesore e përdoruesit aktual
+ * [Direktoria e filtrave] e integruar (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Ndihmë
  Përdorni `-h` / `--help` për të treguar ndihmë
 
@@ -326,7 +332,7 @@ Hokeylizimi
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

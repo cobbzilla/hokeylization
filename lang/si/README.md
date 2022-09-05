@@ -276,6 +276,12 @@ Hokeylization
 
  මේ අනුව, අවසානයේ ලියන දේ පිළිබඳ සම්පූර්ණ පාලනය ඔබට ඇත
 
+ `filter` ස්ක්‍රිප්ටය පහත ස්ථානවල සොයනු ඇත:
+ * වත්මන් නාමාවලිය
+ * වත්මන් නාමාවලිය තුළ `.hokey-filters` නම් නාමාවලියක්
+ * `${HOME}/.hokey-filters` , මෙහි `${HOME}` වත්මන් පරිශීලකයාගේ මුල් නාමාවලිය වේ
+ * තනා ඇති [පෙරහන් නාමාවලිය](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### උදව්
  උදව් පෙන්වීමට `-h` / `--help` භාවිත කරන්න
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -358,7 +364,7 @@ Hokeylization
  දර්ශක ප්‍රතිදානය ෆෝමැට් කර ඇති ආකාරය තීරණය කිරීමට `-A` / `--index-template` භාවිතා කරන්න. ඔබට 'html' සඳහන් කළ හැක,
  'markdown', 'text', හෝ ඔබේම [HandlebarsJS](https://handlebarsjs.com/) අච්චුව වෙත ගොනු මාර්ගය
 
- ඔබ ඔබේම අච්චුවක් සඳහන් කරන්නේ නම්, ඔබ විසින් `-I` / `--index` සඳහා ගොනුවක් (ඩිරෙක්ටරියක් නොවේ) ද නියම කළ යුතුය.
+ ඔබ ඔබේම අච්චුවක් සඳහන් කරන්නේ නම්, ඔබ විසින් `-I` / `--index` සඳහා ගොනුවක් (ඩිරෙක්ටරයක් නොවේ) ද නියම කළ යුතුය.
  විකල්පය
 
  ## භාෂා පරිවර්තනය කිරීමට විනෝදජනක කාලයක් ගත කරන්න!

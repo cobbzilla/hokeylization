@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'පරිවර්තන දර්ශකය',
   label_findYourLanguageCode: 'ඔබේ භාෂා කේතය සොයා ගන්න',
   err_processing_unknown: '*** අනපේක්ෂිත දෝෂය: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} භාෂාව සඳහා ප්‍රතිදාන ගොනුවක් උත්පාදනය කර නැත, එබැවින් එය දර්ශකයෙන් බැහැර කරනු ලැබේ'
+  warn_missingLangFile: '{{ lang }} භාෂාව සඳහා ප්‍රතිදාන ගොනුවක් උත්පාදනය කර නැත, එබැවින් එය දර්ශකයෙන් බැහැර කරනු ලැබේ',
+  err_filter_loading: 'පෙරහන සොයාගත නොහැකි විය: {{ filter }}\n පෙරහන කිසිවකින් හමු නොවීය: වත්මන් නාමාවලිය, ./.hokey-filters බහලුම, ${HOME}/.hokey-filters නාමාවලිය, හෝ බිල්ට්-ඉන් ෆිල්ටර් නාමාවලිය'
 }

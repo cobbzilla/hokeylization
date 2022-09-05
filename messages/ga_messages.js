@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Innéacs na n-aistriúchán',
   label_findYourLanguageCode: 'Aimsigh do chód teanga',
   err_processing_unknown: '*** Earráid gan choinne: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Níor gineadh aon chomhad aschuir don teanga {{ lang }} , mar sin fágfar amach as an innéacs é'
+  warn_missingLangFile: 'Níor gineadh aon chomhad aschuir don teanga {{ lang }} , mar sin fágfar amach as an innéacs é',
+  err_filter_loading: 'Ní bhfuarthas an scagaire: {{ filter }}\n Ní bhfuarthas an scagaire in aon cheann de: an eolaire reatha, an eolaire ./.hokey-filters, an eolaire ${HOME}/.hokey-filters, ná an t-eolaire scagairí ionsuite'
 }

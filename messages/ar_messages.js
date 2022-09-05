@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'فهرس الترجمات',
   label_findYourLanguageCode: 'ابحث عن رمز لغتك',
   err_processing_unknown: '*** خطأ غير متوقع: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'لم يتم إنشاء ملف إخراج للغة {{ lang }} ، لذلك سيتم استبعادها من الفهرس'
+  warn_missingLangFile: 'لم يتم إنشاء ملف إخراج للغة {{ lang }} ، لذلك سيتم استبعادها من الفهرس',
+  err_filter_loading: 'الفلتر غير موجود: {{ filter }}\n لم يتم العثور على الفلتر في أي من: الدليل الحالي ، أو دليل ./.hokey-filters ، أو دليل المرشحات $ {HOME} /. hokey ، ولا دليل المرشحات المدمج'
 }

@@ -276,6 +276,12 @@ Hokeyylization
 
  Markaa, waxaad si buuxda gacanta ugu haysaa waxa ugu dambayn la qori doono
 
+ Qoraalka `filter` waxaa laga raadin doonaa meelaha soo socda:
+ * Hagaha hadda jira
+ * Hagaha lagu magacaabo `.hokey-filters` oo ku dhex jira hagaha hadda
+ * Hagaha lagu magacaabo `${HOME}/.hokey-filters` , halkaasoo `${HOME}` uu yahay tusaha guriga isticmaalaha hadda
+ * Ku dhex-dhisan [tusaha filtarrada](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### I caawi
  Isticmaal `-h` / `--help` si aad u muujiso caawimo
 
@@ -326,7 +332,7 @@ Hokeyylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

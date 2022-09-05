@@ -276,6 +276,12 @@ Hokeylization
 
  Quapropter summam potestatem habes in ea quae tandem scribentur
 
+ `filter` in sequentibus locis requiretur.
+ * In current Directory
+ * Directorium nominatum `.hokey-filters` in directorio current
+ * Directorium nominatum `${HOME}/.hokey-filters` , ubi `${HOME}` est usoris domicilium directorium
+ * In constructum-in [filters directorium](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Auxilium
  Utere `-h` / `--help` ad auxilium ostende
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

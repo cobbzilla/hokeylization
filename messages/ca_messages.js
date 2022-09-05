@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Índex de traduccions',
   label_findYourLanguageCode: 'Trobeu el vostre codi d\'idioma',
   err_processing_unknown: '*** Error inesperat: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'No s\'ha generat cap fitxer de sortida per a l\'idioma {{ lang }} , de manera que s\'exclourà de l\'índex'
+  warn_missingLangFile: 'No s\'ha generat cap fitxer de sortida per a l\'idioma {{ lang }} , de manera que s\'exclourà de l\'índex',
+  err_filter_loading: 'No s\'ha trobat el filtre: {{ filter }}\n El filtre no s\'ha trobat en cap dels: el directori actual, el directori ./.hokey-filters, el directori ${HOME}/.hokey-filters ni el directori de filtres integrat.'
 }

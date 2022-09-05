@@ -161,7 +161,7 @@ Hokeylisering
  För att tvinga om översättning av alla nycklar, använd `-f` / `--force`
 
  ## Översätta en katalog med textfiler
- Du kan också översätta en katalog med filer. hokeylization kommer rekursivt att besöka varje
+ Du kan också översätta en katalog med filer. hokeylisering kommer rekursivt att besöka varje
  filen i katalogen och kör dess innehåll via Google Translate och spara utdata
  till en fil med samma namn i ett separat katalogträd
 
@@ -276,6 +276,12 @@ Hokeylisering
 
  Därmed har du total kontroll över vad som slutligen kommer att skrivas
 
+ `filter` kommer att sökas efter på följande platser:
+ * Den aktuella katalogen
+ * En katalog som heter `.hokey-filters` i den aktuella katalogen
+ * En katalog som heter `${HOME}/.hokey-filters` , där `${HOME}` är den aktuella användarens hemkatalog
+ * Den inbyggda [filterkatalogen](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Hjälp
  Använd `-h` / `--help` för att visa hjälp
 
@@ -326,7 +332,7 @@ Hokeylisering
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

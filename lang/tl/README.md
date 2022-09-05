@@ -276,6 +276,12 @@ Hokeylization
 
  Kaya, mayroon kang ganap na kontrol sa kung ano ang isusulat sa wakas
 
+ Ang script na `filter` ay hahanapin sa mga sumusunod na lokasyon:
+ * Ang kasalukuyang direktoryo
+ * Isang direktoryo na pinangalanang `.hokey-filters` sa loob ng kasalukuyang direktoryo
+ * Isang direktoryo na pinangalanang `${HOME}/.hokey-filters` , kung saan ang `${HOME}` ay ang home directory ng kasalukuyang user
+ * Ang built-in na [filters directory](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Tulong
  Gamitin `-h` / `--help` para magpakita ng tulong
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

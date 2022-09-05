@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Papa kuhikuhi o nā unuhi',
   label_findYourLanguageCode: 'E huli i kāu code ʻōlelo',
   err_processing_unknown: '*** Kupa i manaʻo ʻole ʻia: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'ʻAʻole i hoʻokumu ʻia kahi faila no ka ʻōlelo {{ lang }} , no laila e kāpae ʻia mai ka papa kuhikuhi'
+  warn_missingLangFile: 'ʻAʻole i hoʻokumu ʻia kahi faila no ka ʻōlelo {{ lang }} , no laila e kāpae ʻia mai ka papa kuhikuhi',
+  err_filter_loading: 'ʻAʻole i loaʻa ke kānana: {{ filter }}\n ʻAʻole i loaʻa ka kānana ma kekahi o: ka papa kuhikuhi o kēia manawa, ka papa kuhikuhi ./.hokey-filters, ka papa kuhikuhi ${HOME}/.hokey-filters, a i ʻole ka papa kuhikuhi kānana i kūkulu ʻia.'
 }

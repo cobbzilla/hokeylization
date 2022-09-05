@@ -156,7 +156,7 @@ Hokeylization
 
  Jekk il-fajl tal-output diġà jeżisti, se jiġi eżaminat biex jiġi ddeterminat liema ċwievet diġà jeżistu.
  Iċ-ċwievet eżistenti mhux se jiġu tradotti. It-traduzzjonijiet għaċ-ċwievet neqsin jiġu ġġenerati u mehmuża
- sal-aħħar tal-oġġett JS. Il-fajl kollu huwa dejjem miktub mill-ġdid.
+ sat-tmiem tal-oġġett JS. Il-fajl kollu huwa dejjem miktub mill-ġdid.
 
  Biex tisforza t-traduzzjoni mill-ġdid taċ-ċwievet kollha, uża l- `-f` / `--force`
 
@@ -171,7 +171,7 @@ Hokeylization
 
  **TWISSIJA KBIRA**: Meta tittraduċi direttorji, **MA** tispeċifika direttorju tal-output
  li huwa fid-direttorju input tiegħek! Jekk tagħmel dan, int se:
- * jinduċi rikorsjoni infinita
+ * jinduċu rikorsi infinit
  * iżżid il-kont tal-Google tiegħek
  * imla d-disk tiegħek
  * tieħdu pjaċir inqas
@@ -276,6 +276,12 @@ Hokeylization
 
  Għalhekk, għandek kontroll totali fuq dak li finalment se jinkiteb
 
+ L-iskritt `filter` se jitfittex fil-postijiet li ġejjin:
+ * Id-direttorju attwali
+ * Direttorju msemmi `.hokey-filters` fid-direttorju kurrenti
+ * Direttorju jismu `${HOME}/.hokey-filters` , fejn `${HOME}` huwa d-direttorju tad-dar tal-utent kurrenti
+ * Id-[direttorju tal-filtri] inkorporat (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Għajnuna
  Uża `-h` / `--help` biex turi l-għajnuna
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

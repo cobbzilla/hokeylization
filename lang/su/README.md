@@ -276,6 +276,12 @@ Hokeylization
 
  Ku kituna, anjeun boga kontrol total leuwih naon tungtungna bakal ditulis
 
+ `filter` bakal dipilarian di lokasi ieu:
+ * Diréktori ayeuna
+ * A diréktori ngaranna `.hokey-filters` dina diréktori ayeuna
+ * Diréktori ngaranna `${HOME}/.hokey-filters` , dimana `${HOME}` nyaéta diréktori imah pamaké ayeuna
+ * Diwangun-di [diréktori saringan](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Tulung
  Anggo `-h` / `--help` pikeun nunjukkeun pitulung
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

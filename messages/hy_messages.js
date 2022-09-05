@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Թարգմանությունների ցուցիչ',
   label_findYourLanguageCode: 'Գտեք ձեր լեզվի կոդը',
   err_processing_unknown: '*** Անսպասելի սխալ՝ {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} լեզվի համար ելքային ֆայլ չի ստեղծվել, ուստի այն կբացառվի ինդեքսից'
+  warn_missingLangFile: '{{ lang }} լեզվի համար ելքային ֆայլ չի ստեղծվել, ուստի այն կբացառվի ինդեքսից',
+  err_filter_loading: 'Զտիչը չի գտնվել՝ {{ filter }}\n Զտիչը չի գտնվել որևէ մեկում՝ ընթացիկ գրացուցակում, ./.hokey-filters գրացուցակում, ${HOME}/.hokey-filters գրացուցակում և ոչ էլ ներկառուցված ֆիլտրերի գրացուցակում:'
 }

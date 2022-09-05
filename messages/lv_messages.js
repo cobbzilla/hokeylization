@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Tulkojumu rādītājs',
   label_findYourLanguageCode: 'Atrodiet savu valodas kodu',
   err_processing_unknown: '*** Negaidīta kļūda: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} izvades fails netika ģenerēts, tāpēc tas tiks izslēgts no indeksa'
+  warn_missingLangFile: '{{ lang }} izvades fails netika ģenerēts, tāpēc tas tiks izslēgts no indeksa',
+  err_filter_loading: 'Filtrs nav atrasts: {{ filter }}\n Filtrs netika atrasts nevienā no: pašreizējā direktorijā, direktorijā ./.hokey-filters, direktorijā ${HOME}/.hokey-filters, ne arī iebūvēto filtru direktorijā.'
 }

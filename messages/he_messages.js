@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'אינדקס תרגומים',
   label_findYourLanguageCode: 'מצא את קוד השפה שלך',
   err_processing_unknown: '*** שגיאה לא צפויה: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'לא נוצר קובץ פלט עבור השפה {{ lang }} , ולכן הוא לא ייכלל באינדקס'
+  warn_missingLangFile: 'לא נוצר קובץ פלט עבור השפה {{ lang }} , ולכן הוא לא ייכלל באינדקס',
+  err_filter_loading: 'מסנן לא נמצא: {{ filter }}\n המסנן לא נמצא באף אחד מהספרייה הנוכחית, ספריית ./.hokey-filters, ספריית ${HOME}/.hokey-filters, וגם לא ספריית המסננים המובנית.'
 }

@@ -276,6 +276,12 @@ Hokeylization
 
  ထို့ကြောင့် နောက်ဆုံးတွင် ရေးသားမည့်အရာအပေါ် လုံး၀ထိန်းချုပ်နိုင်မည်ဖြစ်သည်။
 
+ `filter` ဇာတ်ညွှန်းကို အောက်ပါနေရာများတွင် ရှာဖွေလိမ့်မည်-
+ * လက်ရှိလမ်းညွှန်
+ * လက်ရှိလမ်းညွှန်အတွင်း `.hokey-filters` ဟု အမည်ပေးထားသည့် လမ်းညွှန်တစ်ခု
+ * `${HOME}/.hokey-filters` ၊ `${HOME}` သည် လက်ရှိအသုံးပြုသူ၏ ပင်မလမ်းညွှန်ဖြစ်သည်။
+ * built-in [filters directory](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### ကူညီပါ
  အကူအညီကိုပြသရန် `-h` / `--help` ကိုသုံးပါ။
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

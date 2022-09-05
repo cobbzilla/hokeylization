@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Atọka ti awọn itumọ',
   label_findYourLanguageCode: 'Wa koodu ede rẹ',
   err_processing_unknown: '*** Aṣiṣe airotẹlẹ: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Ko si faili igbejade ti a ṣe fun ede {{ lang }} , nitorinaa yoo yọkuro kuro ninu atọka'
+  warn_missingLangFile: 'Ko si faili igbejade ti a ṣe fun ede {{ lang }} , nitorinaa yoo yọkuro kuro ninu atọka',
+  err_filter_loading: 'A ko ri àlẹmọ: {{ filter }}\n A ko ri àlẹmọ naa ni eyikeyi ninu: itọsọna lọwọlọwọ, itọsọna ./.hokey-filters, itọsọna ${HOME}/.hokey-filters, tabi itọsọna awọn asẹ ti a ṣe sinu rẹ'
 }

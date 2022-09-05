@@ -276,6 +276,12 @@
 
  Таким чином, ви маєте повний контроль над тим, що врешті буде написано
 
+ Сценарій `filter` в таких місцях:
+ * Поточний каталог
+ * Каталог під назвою `.hokey-filters` у поточному каталозі
+ * Каталог із назвою `${HOME}/.hokey-filters` , де `${HOME}` — домашній каталог поточного користувача
+ * Вбудований [каталог фільтрів](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Допоможіть
  Використовуйте `-h` / `--help` , щоб показати довідку
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

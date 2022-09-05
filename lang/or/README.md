@@ -276,6 +276,12 @@
 
  ଏହିପରି, ଶେଷରେ ଯାହା ଲେଖାଯିବ ତାହା ଉପରେ ତୁମର ସମ୍ପୂର୍ଣ୍ଣ ନିୟନ୍ତ୍ରଣ ଅଛି |
 
+ ନିମ୍ନଲିଖିତ ସ୍ଥାନରେ `filter` :
+ * ସାମ୍ପ୍ରତିକ ଡିରେକ୍ଟୋରୀ |
+ ସାମ୍ପ୍ରତିକ ଡିରେକ୍ଟୋରୀ ମଧ୍ୟରେ `.hokey-filters` ନାମକ ଏକ ଡିରେକ୍ଟୋରୀ |
+ * `${HOME}/.hokey-filters` ନାମକ ଏକ ଡିରେକ୍ଟୋରୀ, ଯେଉଁଠାରେ `${HOME}` ହେଉଛି ବର୍ତ୍ତମାନର ଉପଭୋକ୍ତାଙ୍କର ହୋମ୍ ଡିରେକ୍ଟୋରୀ |
+ * ବିଲ୍ଟ-ଇନ୍ [ଫିଲ୍ଟର ଡିରେକ୍ଟୋରୀ](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### ସହାୟତା
  ସାହାଯ୍ୟ ଦେଖାଇବାକୁ `-h` / `--help` ବ୍ୟବହାର କରନ୍ତୁ |
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

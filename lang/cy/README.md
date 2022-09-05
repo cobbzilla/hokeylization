@@ -276,6 +276,12 @@ Hokeyleiddiad
 
  Felly, mae gennych reolaeth lwyr dros yr hyn a fydd yn cael ei ysgrifennu yn y pen draw
 
+ Edrychir am y sgript `filter` yn y lleoliadau canlynol:
+ * Y cyfeiriadur presennol
+ * Cyfeiriadur o'r enw `.hokey-filters` o fewn y cyfeiriadur cyfredol
+ * Cyfeiriadur o'r enw `${HOME}/.hokey-filters` , lle mae `${HOME}` yn gyfeiriadur cartref y defnyddiwr presennol
+ * Y [cyfeiriadur hidlwyr] adeiledig (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Help
  Defnyddiwch `-h` / `--help` i ddangos help
 
@@ -326,7 +332,7 @@ Hokeyleiddiad
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

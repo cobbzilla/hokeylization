@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'ترجمن جي فهرست',
   label_findYourLanguageCode: 'پنھنجي ٻولي جو ڪوڊ ڳولھيو',
   err_processing_unknown: '*** اڻڄاتل غلطي: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'ٻولي لاءِ ڪا به آئوٽ پٽ فائل نه ٺاهي وئي {{ lang }} ، ان ڪري ان کي انڊيڪس مان خارج ڪيو ويندو'
+  warn_missingLangFile: 'ٻولي لاءِ ڪا به آئوٽ پٽ فائل نه ٺاهي وئي {{ lang }} ، ان ڪري ان کي انڊيڪس مان خارج ڪيو ويندو',
+  err_filter_loading: 'فلٽر نه مليو: {{ filter }}\n فلٽر ڪنهن ۾ به نه مليو: موجوده ڊاريڪٽري، ./.hokey-filters ڊاريڪٽري، ${HOME}/.hokey-filters ڊاريڪٽري، ۽ نه ئي بلٽ ان فلٽر ڊاريڪٽري'
 }

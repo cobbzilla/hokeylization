@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'تەرجىمە كۆرسەتكۈچى',
   label_findYourLanguageCode: 'تىل كودىڭىزنى تېپىڭ',
   err_processing_unknown: '*** ئويلىمىغان خاتالىق: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'تىل {{ lang }} ئۈچۈن ھېچقانداق چىقىرىش ھۆججىتى ھاسىل قىلىنمىدى ، شۇڭا ئۇ كۆرسەتكۈچتىن چىقىرىۋېتىلىدۇ'
+  warn_missingLangFile: 'تىل {{ lang }} ئۈچۈن ھېچقانداق چىقىرىش ھۆججىتى ھاسىل قىلىنمىدى ، شۇڭا ئۇ كۆرسەتكۈچتىن چىقىرىۋېتىلىدۇ',
+  err_filter_loading: 'سۈزگۈچ تېپىلمىدى: {{ filter }}\n سۈزگۈچ ھېچقايسىدىن تېپىلمىدى: نۆۋەتتىكى مۇندەرىجە ، ./.hokey-filters مۇندەرىجىسى ، $ {HOME} /. Hokey- سۈزگۈچ مۇندەرىجىسى ، ياكى ئىچىگە سۈزۈلگەن مۇندەرىجە.'
 }

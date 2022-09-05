@@ -276,6 +276,12 @@ Hokeylizacija
 
  Taigi jūs visiškai kontroliuojate, kas pagaliau bus parašyta
 
+ Scenarijaus `filter` bus ieškoma šiose vietose:
+ * Dabartinis katalogas
+ * Katalogas pavadinimu `.hokey-filters` “ dabartiniame kataloge
+ * Katalogas pavadinimu `${HOME}/.hokey-filters` , kur `${HOME}` yra dabartinio vartotojo namų katalogas
+ * Integruotas [filtrų katalogas](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Pagalba
  Norėdami parodyti pagalbą, naudokite `-h` / `--help` .
 
@@ -326,7 +332,7 @@ Hokeylizacija
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

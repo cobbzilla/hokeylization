@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Ευρετήριο μεταφράσεων',
   label_findYourLanguageCode: 'Βρείτε τον κωδικό της γλώσσας σας',
   err_processing_unknown: '*** Μη αναμενόμενο σφάλμα: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Δεν δημιουργήθηκε αρχείο εξόδου για τη γλώσσα {{ lang }} , επομένως θα εξαιρεθεί από το ευρετήριο'
+  warn_missingLangFile: 'Δεν δημιουργήθηκε αρχείο εξόδου για τη γλώσσα {{ lang }} , επομένως θα εξαιρεθεί από το ευρετήριο',
+  err_filter_loading: 'Το φίλτρο δεν βρέθηκε: {{ filter }}\n Το φίλτρο δεν βρέθηκε σε κανένα από τα εξής: τον τρέχοντα κατάλογο, τον κατάλογο ./.hokey-filters, τον κατάλογο ${HOME}/.hokey-filters ούτε τον ενσωματωμένο κατάλογο φίλτρων'
 }

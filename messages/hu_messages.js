@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Fordítások mutatója',
   label_findYourLanguageCode: 'Keresse meg nyelvi kódját',
   err_processing_unknown: '*** Váratlan hiba: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'A(z) {{ lang }} nyelvhez nem készült kimeneti fájl, ezért az ki lesz zárva az indexből'
+  warn_missingLangFile: 'A(z) {{ lang }} nyelvhez nem készült kimeneti fájl, ezért az ki lesz zárva az indexből',
+  err_filter_loading: 'A szűrő nem található: {{ filter }}\n A szűrő egyikben sem található: az aktuális könyvtárban, a ./.hokey-filters könyvtárban, a ${HOME}/.hokey-filters könyvtárban, sem a beépített filters könyvtárban'
 }

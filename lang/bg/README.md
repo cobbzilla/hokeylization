@@ -276,6 +276,12 @@
 
  Така вие имате пълен контрол върху това, което накрая ще бъде написано
 
+ Скриптът `filter` ще се търси на следните места:
+ * Текущата директория
+ * Директория с име `.hokey-filters` в текущата директория
+ * Директория с име `${HOME}/.hokey-filters` , където `${HOME}` е домашната директория на текущия потребител
+ * Вградената [директория за филтри](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Помогне
  Използвайте `-h` / `--help` , за да покажете помощ
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

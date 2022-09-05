@@ -276,6 +276,12 @@
 
  Такім чынам, вы цалкам кантралюеце тое, што ў выніку будзе напісана
 
+ Скрыпт `filter` будзе шукацца ў наступных месцах:
+ * Бягучы каталог
+ * Каталог з назвай `.hokey-filters` у бягучым каталогу
+ * Каталог з назвай `${HOME}/.hokey-filters` , дзе `${HOME}` - хатні каталог бягучага карыстальніка
+ * Убудаваны [каталог фільтраў](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Дапамажыце
  Выкарыстоўвайце `-h` / `--help` , каб паказаць даведку
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

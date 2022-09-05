@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: '翻訳索引',
   label_findYourLanguageCode: '言語コードを見つける',
   err_processing_unknown: '*** 予期しないエラー: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '言語{{ lang }}の出力ファイルが生成されなかったため、インデックスから除外されます'
+  warn_missingLangFile: '言語{{ lang }}の出力ファイルが生成されなかったため、インデックスから除外されます',
+  err_filter_loading: 'フィルタが見つかりません: {{ filter }}\nフィルタは、現在のディレクトリ、./.hokey-filters ディレクトリ、${HOME}/.hokey-filters ディレクトリ、組み込みのフィルタ ディレクトリのいずれにも見つかりませんでした'
 }

@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'ଅନୁବାଦଗୁଡ଼ିକର ସୂଚକାଙ୍କ |',
   label_findYourLanguageCode: 'ତୁମର ଭାଷା କୋଡ୍ ଖୋଜ |',
   err_processing_unknown: '*** ଅପ୍ରତ୍ୟାଶିତ ତ୍ରୁଟି: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'ଭାଷା {{ lang }} ପାଇଁ କ output ଣସି ଆଉଟପୁଟ୍ ଫାଇଲ୍ ସୃଷ୍ଟି କରାଯାଇ ନାହିଁ, ତେଣୁ ଏହାକୁ ସୂଚକାଙ୍କରୁ ବାଦ ଦିଆଯିବ |'
+  warn_missingLangFile: 'ଭାଷା {{ lang }} ପାଇଁ କ output ଣସି ଆଉଟପୁଟ୍ ଫାଇଲ୍ ସୃଷ୍ଟି କରାଯାଇ ନାହିଁ, ତେଣୁ ଏହାକୁ ସୂଚକାଙ୍କରୁ ବାଦ ଦିଆଯିବ |',
+  err_filter_loading: 'ଫିଲ୍ଟର ମିଳିଲା ନାହିଁ: {{ filter }}\n ଫିଲ୍ଟରଟି କ any ଣସିଟିରେ ମିଳିଲା ନାହିଁ: ସାମ୍ପ୍ରତିକ ଡିରେକ୍ଟୋରୀ, ./.hokey-filters ଡିରେକ୍ଟୋରୀ, $ {HOME} /। ହକି-ଫିଲ୍ଟର୍ ଡିରେକ୍ଟୋରୀ, କିମ୍ବା ବିଲ୍ଟ-ଇନ୍ ଫିଲ୍ଟର୍ ଡିରେକ୍ଟୋରୀ |'
 }

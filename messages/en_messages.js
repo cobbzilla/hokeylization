@@ -52,6 +52,7 @@ export default {
     info_option_markdown: 'Process as a markdown file. Code blocks and backtick-quoted strings will not be translated',
     info_arg_sources: 'The source(s) for translations; this can be one or more JavaScript files or directories',
     info_filter_applied: 'Filter successfully applied before writing: {{langFile}} ',
+    err_filter_loading: 'Filter not found: {{ filter }}\nThe filter was not found in any of: the current directory, the ./.hokey-filters directory, the ${HOME}/.hokey-filters directory, nor the built-in filters directory',
 
     info_dryRun_key: '(dry run) not writing translation for key: {{key}}',
     info_dryRun_file: '(dry run) would have written file: {{langOut}}',

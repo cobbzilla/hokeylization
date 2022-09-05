@@ -77,7 +77,7 @@ Hokeilizācija
 
  ## Atbalsts un finansējums
  Es cenšos būt profesionāls atvērtā pirmkoda programmatūras izstrādātājs. Esmu strādājis
- Programmatūras nozarē jau daudzus gadus esmu dibinājis veiksmīgus uzņēmumus un pārdevis tos valsts uzņēmumiem.
+ programmatūras industrijā jau daudzus gadus esmu dibinājis veiksmīgus uzņēmumus un pārdevis tos valsts uzņēmumiem.
  Nesen es zaudēju darbu, un man īsti nav citu darbu
 
  Tāpēc es mēģināšu uzrakstīt noderīgu programmatūru un pārbaudīt, vai tā darbojas
@@ -276,6 +276,12 @@ Hokeilizācija
 
  Tādējādi jums ir pilnīga kontrole pār to, kas beidzot tiks uzrakstīts
 
+ `filter` skripts tiks meklēts šādās vietās:
+ * Pašreizējais direktorijs
+ * Katalogs ar nosaukumu `.hokey-filters` " pašreizējā direktorijā
+ * Direktorijs ar nosaukumu `${HOME}/.hokey-filters` , kur `${HOME}` ir pašreizējā lietotāja mājas direktorijs
+ * Iebūvētais [filtru direktorijs](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Palīdzība
  Lai parādītu palīdzību, izmantojiet taustiņu `-h` / `--help`
 
@@ -326,7 +332,7 @@ Hokeilizācija
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

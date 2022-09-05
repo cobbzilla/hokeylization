@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Index prekladov',
   label_findYourLanguageCode: 'Nájdite kód svojho jazyka',
   err_processing_unknown: '*** Neočakávaná chyba: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Pre jazyk {{ lang }} nebol vygenerovaný žiadny výstupný súbor, takže bude vylúčený z indexu'
+  warn_missingLangFile: 'Pre jazyk {{ lang }} nebol vygenerovaný žiadny výstupný súbor, takže bude vylúčený z indexu',
+  err_filter_loading: 'Filter sa nenašiel: {{ filter }}\n Filter sa nenašiel v: aktuálnom adresári, adresári ./.hokey-filters, adresári ${HOME}/.hokey-filters ani v adresári vstavaných filtrov'
 }

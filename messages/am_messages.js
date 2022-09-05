@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'የትርጉም ማውጫ',
   label_findYourLanguageCode: 'የቋንቋ ኮድዎን ያግኙ',
   err_processing_unknown: '*** ያልተጠበቀ ስህተት: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'ለቋንቋ {{ lang }} ምንም የውጤት ፋይል አልተፈጠረም፣ ስለዚህ ከመረጃ ጠቋሚው ውጭ ይሆናል።'
+  warn_missingLangFile: 'ለቋንቋ {{ lang }} ምንም የውጤት ፋይል አልተፈጠረም፣ ስለዚህ ከመረጃ ጠቋሚው ውጭ ይሆናል።',
+  err_filter_loading: 'ማጣሪያ አልተገኘም: {{ filter }}\n ማጣሪያው በማናቸውም ውስጥ አልተገኘም፦ አሁን ባለው ማውጫ፣ የ./.ሆኪ-ማጣሪያዎች ማውጫ፣ የ${HOME}/.የሆኪ-ማጣሪያዎች ማውጫ ወይም አብሮገነብ የማጣሪያዎች ማውጫ'
 }

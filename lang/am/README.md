@@ -276,6 +276,12 @@
 
  ስለዚህ፣ በመጨረሻ በሚፃፈው ላይ ሙሉ ቁጥጥር አለህ
 
+ የ `filter` ስክሪፕቱ በሚከተሉት ቦታዎች ላይ ይፈለጋል
+ * የአሁኑ ማውጫ
+ * አሁን ባለው ማውጫ ውስጥ `.hokey-filters` የሚል ማውጫ
+ * `${HOME}/.hokey-filters` ፣ `${HOME}` የአሁኑ የተጠቃሚ ቤት ማውጫ የሆነበት
+ * አብሮ የተሰራው [የማጣሪያ ማውጫ](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### እገዛ
  እገዛን ለማሳየት `-h` / `--help` ን ይጠቀሙ
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

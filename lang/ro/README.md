@@ -220,7 +220,7 @@ Hokeylizare
  Este posibil să nu doriți întotdeauna să traduceți *fiecare* fișier din directorul sursă în directorul țintă
 
  Valoarea `-m` / `--match` este o expresie regex (atenție la regulile de citare a shell-ului!) care specifică
- ce fișiere trebuie traduse
+ care fișiere trebuie traduse
 
  Când aveți îndoieli, puteți combina această opțiune cu `-n` / `--dry-run` pentru a vedea ce fișiere vor fi traduse
 
@@ -276,6 +276,12 @@ Hokeylizare
 
  Astfel, ai control total asupra a ceea ce va fi scris în cele din urmă
 
+ Scriptul `filter` va fi căutat în următoarele locații:
+ * Directorul curent
+ * Un director numit `.hokey-filters` în directorul curent
+ * Un director numit `${HOME}/.hokey-filters` , unde `${HOME}` este directorul principal al utilizatorului curent
+ * [Directorul filtrelor] încorporat (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Ajutor
  Folosiți `-h` / `--help` pentru a afișa ajutor
 
@@ -326,7 +332,7 @@ Hokeylizare
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

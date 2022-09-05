@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Index ng mga pagsasalin',
   label_findYourLanguageCode: 'Hanapin ang iyong code ng wika',
   err_processing_unknown: '*** Hindi inaasahang error: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Walang nabuong output file para sa wikang {{ lang }} , kaya hindi ito isasama sa index'
+  warn_missingLangFile: 'Walang nabuong output file para sa wikang {{ lang }} , kaya hindi ito isasama sa index',
+  err_filter_loading: 'Hindi nahanap ang filter: {{ filter }}\n Ang filter ay hindi natagpuan sa alinman sa: ang kasalukuyang direktoryo, ang ./.hokey-filters na direktoryo, ang ${HOME}/.hokey-filters na direktoryo, o ang built-in na direktoryo ng mga filter'
 }

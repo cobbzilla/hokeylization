@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'د ژباړو شاخص',
   label_findYourLanguageCode: 'د خپلې ژبې کوډ ومومئ',
   err_processing_unknown: '*** ناڅاپي تېروتنه: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'د ژبې لپاره هیڅ دوتنې فایل ندی رامینځته شوی {{ lang }} ، نو دا به د شاخص څخه خارج شي'
+  warn_missingLangFile: 'د ژبې لپاره هیڅ دوتنې فایل ندی رامینځته شوی {{ lang }} ، نو دا به د شاخص څخه خارج شي',
+  err_filter_loading: 'فلټر ونه موندل شو: {{ filter }}\n فلټر په هیڅ یو کې ونه موندل شو: اوسنۍ ډایرکټر، د ./.hokey-filters لارښود، د ${HOME}/.hokey-filters ډایرکټر، او نه د جوړ شوي فلټر لارښود'
 }

@@ -276,6 +276,12 @@ Hokeylization
 
  Tiel, vi havas tutan kontrolon pri tio, kio finfine estos skribita
 
+ La skripto `filter` " estos serĉata en la sekvaj lokoj:
+ * La nuna dosierujo
+ * Dosierujo nomita `.hokey-filters` ene de la nuna dosierujo
+ * Dosierujo nomita `${HOME}/.hokey-filters` , kie `${HOME}` estas la hejma dosierujo de la nuna uzanto
+ * La enkonstruita [filtrila dosierujo](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Helpu
  Uzu `-h` / `--help` por montri helpon
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

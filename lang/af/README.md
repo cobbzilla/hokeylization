@@ -276,6 +276,12 @@ Hokielisering
 
  Jy het dus totale beheer oor wat uiteindelik geskryf gaan word
 
+ Die `filter` skrip sal op die volgende plekke gesoek word:
+ * Die huidige gids
+ * 'n Gids met die naam `.hokey-filters` binne die huidige gids
+ * 'n Gids met die naam `${HOME}/.hokey-filters` , waar `${HOME}` die huidige gebruiker se tuisgids is
+ * Die ingeboude [filtergids](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Hulp
  Gebruik `-h` / `--help` om hulp te wys
 
@@ -326,7 +332,7 @@ Hokielisering
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

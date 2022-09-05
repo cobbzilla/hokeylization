@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Skrá yfir þýðingar',
   label_findYourLanguageCode: 'Finndu tungumálakóðann þinn',
   err_processing_unknown: '*** Óvænt villa: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Engin úttaksskrá var búin til fyrir tungumálið {{ lang }} , þannig að hún verður útilokuð frá skránni'
+  warn_missingLangFile: 'Engin úttaksskrá var búin til fyrir tungumálið {{ lang }} , þannig að hún verður útilokuð frá skránni',
+  err_filter_loading: 'Sía fannst ekki: {{ filter }}\n Sían fannst ekki í neinu af: núverandi möppu, ./.hokey-filters skránni, ${HOME}/.hokey-filters skránni, né innbyggðu síaskránni'
 }

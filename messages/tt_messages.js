@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Тәрҗемә индексы',
   label_findYourLanguageCode: 'Тел кодыгызны табыгыз',
   err_processing_unknown: '*** Көтелмәгән хата: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} теле өчен чыгару файллары ясалмады, шуңа күрә ул индекстан чыгарылачак'
+  warn_missingLangFile: '{{ lang }} теле өчен чыгару файллары ясалмады, шуңа күрә ул индекстан чыгарылачак',
+  err_filter_loading: 'Фильтр табылмады: {{ filter }}\n Фильтр берсендә дә табылмады: хәзерге каталог, ./.hokey-filters каталогы, $ {HOME} /. Хоки-фильтрлар каталогы, яки урнаштырылган фильтрлар каталогы'
 }

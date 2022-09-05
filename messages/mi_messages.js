@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Taurangi o nga whakamaoritanga',
   label_findYourLanguageCode: 'Kimihia to waehere reo',
   err_processing_unknown: '*** Hapa ohorere: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Karekau he konae whakaputa i hangaia mo te reo {{ lang }} , no reira ka kapea mai i te taurangi'
+  warn_missingLangFile: 'Karekau he konae whakaputa i hangaia mo te reo {{ lang }} , no reira ka kapea mai i te taurangi',
+  err_filter_loading: 'Kāore i kitea te tātari: {{ filter }}\n Karekau te tātari i kitea i roto i tetahi o: te whaiaronga o naianei, te raarangi ./.hokey-filters, te raarangi ${HOME}/.hokey-filters, me te raarangi whiriwhiringa whakauru'
 }

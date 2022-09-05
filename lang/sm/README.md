@@ -171,7 +171,7 @@ Hokeylization
 
  ** LAPATA'IGA TELE**: A'o fa'aliliu tusi tusi, **AUA LE** fa'ama'oti mai se lisi o mea e fai
  o lo'o i totonu o lau lisi fa'aoga! Afai e te faia lenei mea, o le ae:
- * faʻaosoina le toe faʻafoʻisia e le gata
+ * faʻaosoina le toe faʻaleleia e le gata
  * fa'aola lau pili Google
  * faatumu lau tisiki
  * faaitiitia le fiafia
@@ -276,6 +276,12 @@ Hokeylization
 
  O lea la, ua ia te oe le pule atoa i mea o le a mulimuli ane tusia
 
+ O le `filter` script o le a su'eina i nofoaga nei:
+ * Le lisi o iai nei
+ * O se lisi e ta'ua `.hokey-filters` i totonu o le lisi o iai nei
+ * O se lisi e ta'ua o `${HOME}/.hokey-filters` , lea `${HOME}` o lo'o iai le lisi o le fale a le tagata o lo'o iai nei.
+ * O le faletusi [filters directory](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Fesoasoani
  Fa'aaoga `-h` / `--help` e fa'aali ai le fesoasoani
 
@@ -326,14 +332,14 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }
         ]
     }
 
- ### Fa'ailoga faila e tele
+ ### Faiga faila e tele
  Tu'u atu le tele o ala faila e pei o `infiles` nai lo le tasi ala `infile` , pei o lenei fa'ata'ita'iga:
 
     {

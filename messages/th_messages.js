@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'ดัชนีการแปล',
   label_findYourLanguageCode: 'ค้นหารหัสภาษาของคุณ',
   err_processing_unknown: '*** ข้อผิดพลาดที่ไม่คาดคิด: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'ไม่มีการสร้างไฟล์เอาต์พุตสำหรับภาษา {{ lang }} ดังนั้นจะถูกแยกออกจากดัชนี'
+  warn_missingLangFile: 'ไม่มีการสร้างไฟล์เอาต์พุตสำหรับภาษา {{ lang }} ดังนั้นจะถูกแยกออกจากดัชนี',
+  err_filter_loading: 'ไม่พบตัวกรอง: {{ filter }}\n ไม่พบตัวกรองในใด ๆ ต่อไปนี้: ไดเร็กทอรีปัจจุบัน ไดเร็กทอรี ./.hokey-filters ไดเร็กทอรี ${HOME}/.hokey-filters หรือไดเร็กทอรีตัวกรองในตัว'
 }

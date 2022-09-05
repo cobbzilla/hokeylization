@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Котормолордун индекси',
   label_findYourLanguageCode: 'Тил кодуңузду табыңыз',
   err_processing_unknown: '*** Күтүлбөгөн ката: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} тили үчүн эч кандай чыгаруу файлы түзүлгөн жок, андыктан ал индекстен чыгарылат'
+  warn_missingLangFile: '{{ lang }} тили үчүн эч кандай чыгаруу файлы түзүлгөн жок, андыктан ал индекстен чыгарылат',
+  err_filter_loading: 'Чыпка табылган жок: {{ filter }}\n Чыпка төмөнкүлөрдүн эч биринде табылган жок: учурдагы каталогдо, ./.hokey-filters каталогунда, ${HOME}/.hokey-filters каталогунда, же камтылган чыпкалар каталогунда'
 }

@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Lenane la liphetolelo',
   label_findYourLanguageCode: 'Fumana khoutu ea puo ea hau',
   err_processing_unknown: '*** Phoso e neng e sa lebelloa: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Ha ho faele e hlahisoang bakeng sa puo {{ lang }} , kahoo e ke ke ea kenyelletsoa ho index'
+  warn_missingLangFile: 'Ha ho faele e hlahisoang bakeng sa puo {{ lang }} , kahoo e ke ke ea kenyelletsoa ho index',
+  err_filter_loading: 'Sefe ha se fumanehe: {{ filter }}\n Sesefe ha sea fumanoa ho efe kapa efe ea: bukana ea hajoale, bukana ea ./.hokey-filters, ${HOME}/.hokey-filters directory, kapa lethathamo la li-filters tse hahelletsoeng ka hare.'
 }

@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Terjimeleriň görkezijisi',
   label_findYourLanguageCode: 'Dil koduňyzy tapyň',
   err_processing_unknown: '*** Garaşylmadyk ýalňyşlyk: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} dili üçin hiç hili faýl döredilmedi, şonuň üçin ol indeksden aýrylar'
+  warn_missingLangFile: '{{ lang }} dili üçin hiç hili faýl döredilmedi, şonuň üçin ol indeksden aýrylar',
+  err_filter_loading: 'Süzgüç tapylmady: {{ filter }}\n Süzgüç hiç birinde tapylmady: häzirki katalog, ./.hokey-filters katalogy, $ {HOME} /. Hokey-filtrler katalogy ýa-da gurlan süzgüçler katalogy'
 }

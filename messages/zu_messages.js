@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Inkomba yezinguqulo',
   label_findYourLanguageCode: 'Thola ikhodi yakho yolimi',
   err_processing_unknown: '*** Iphutha elingalindelekile: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Alikho ifayela lokuphumayo elakhiwe ngolimi {{ lang }} , ngakho-ke ngeke lifakwe ohlwini'
+  warn_missingLangFile: 'Alikho ifayela lokuphumayo elakhiwe ngolimi {{ lang }} , ngakho-ke ngeke lifakwe ohlwini',
+  err_filter_loading: 'Isihlungi asitholakali: {{ filter }}\n Isihlungi asitholakalanga kunoma yikuphi: uhla lwemibhalo lwamanje, uhla lwemibhalo ./.hokey-filters, ${HOME}/.hokey-filters directory, noma inkomba yezihlungi ezakhelwe ngaphakathi'
 }

@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'ترجمہ کا اشاریہ',
   label_findYourLanguageCode: 'اپنی زبان کا کوڈ تلاش کریں۔',
   err_processing_unknown: '*** غیر متوقع غلطی: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'زبان کے لیے کوئی آؤٹ پٹ فائل نہیں بنائی گئی {{ lang }} ، اس لیے اسے انڈیکس سے خارج کر دیا جائے گا'
+  warn_missingLangFile: 'زبان کے لیے کوئی آؤٹ پٹ فائل نہیں بنائی گئی {{ lang }} ، اس لیے اسے انڈیکس سے خارج کر دیا جائے گا',
+  err_filter_loading: 'فلٹر نہیں ملا: {{ filter }}\n فلٹر ان میں سے کسی میں نہیں ملا: موجودہ ڈائرکٹری، ./.hokey-filters ڈائرکٹری، ${HOME}/.hokey-filters ڈائرکٹری، اور نہ ہی بلٹ ان فلٹرز ڈائرکٹری'
 }

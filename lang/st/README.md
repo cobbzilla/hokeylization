@@ -276,6 +276,12 @@ Hokeylization
 
  Kahoo, u na le taolo e felletseng holim'a se tla qetella se ngotsoe
 
+ Sengoliloeng sa `filter` se tla batloa libakeng tse latelang:
+ * Bukana ea hona joale
+ * Bukana e bitsoang `.hokey-filters` ka har'a bukana ea hajoale
+ * Bukana e bitsoang `${HOME}/.hokey-filters` , moo `${HOME}` e leng bukana ea lehae ea mosebelisi ea hajoale
+ * Sengoloa se hahelletsoeng ka har'a [sengoloa sa lifilimi](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Thusa
  Sebelisa `-h` / `--help` ho bontša thuso
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

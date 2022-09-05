@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Index sa mga hubad',
   label_findYourLanguageCode: 'Pangitaa ang imong code sa pinulongan',
   err_processing_unknown: '*** Wala damha nga sayop: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Walay output file ang namugna para sa pinulongan {{ lang }} , mao nga dili kini iapil sa index'
+  warn_missingLangFile: 'Walay output file ang namugna para sa pinulongan {{ lang }} , mao nga dili kini iapil sa index',
+  err_filter_loading: 'Dili makit-an ang filter: {{ filter }}\n Ang filter wala makit-an sa bisan hain sa: ang kasamtangan nga direktoryo, ang ./.hokey-filters directory, ang ${HOME}/.hokey-filters directory, o ang built-in nga filter nga direktoryo'
 }

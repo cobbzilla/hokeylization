@@ -276,6 +276,12 @@ Hokeylization
 
  شۇڭا ، ئاخىرىدا نېمە يېزىلىدىغانلىقىنى پۈتۈنلەي كونترول قىلىسىز
 
+ «سۈزگۈچ» قوليازمىسى تۆۋەندىكى ئورۇنلاردىن `filter` :
+ * نۆۋەتتىكى مۇندەرىجە
+ * نۆۋەتتىكى مۇندەرىجە ئىچىدىكى `.hokey-filters` دېگەن مۇندەرىجە
+ * `${HOME}/.hokey-filters` دەپ ئاتىلىدىغان مۇندەرىجە ، بۇ يەردە `${HOME}` نۆۋەتتىكى ئىشلەتكۈچىنىڭ ئائىلە مۇندەرىجىسى.
+ * ئىچىگە قاچىلانغان [سۈزگۈچ مۇندەرىجىسى](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### ياردەم
  ياردەمنى كۆرسىتىش ئۈچۈن `-h` / `--help` نى ئىشلىتىڭ
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

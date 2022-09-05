@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Yndeks fan oersettingen',
   label_findYourLanguageCode: 'Fyn jo taalkoade',
   err_processing_unknown: '*** Unferwachte flater: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Gjin útfiertriem is oanmakke foar taal {{ lang }} , dus it sil útsletten wurde fan de yndeks'
+  warn_missingLangFile: 'Gjin útfiertriem is oanmakke foar taal {{ lang }} , dus it sil útsletten wurde fan de yndeks',
+  err_filter_loading: 'Filter net fûn: {{ filter }}\n It filter is net fûn yn ien fan: de hjoeddeiske map, de map ./.hokey-filters, de map ${HOME}/.hokey-filters, noch de map mei ynboude filters'
 }

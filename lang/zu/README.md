@@ -276,6 +276,12 @@ I-Hokeylization
 
  Ngakho-ke, uyakwazi ukulawula lokho okuzobhalwa ekugcineni
 
+ Iskripthi `filter` sizobhekwa ezindaweni ezilandelayo:
+ * Inkomba yamanje
+ * Uhla lwemibhalo `.hokey-filters` ngaphakathi kohla lwemibhalo lwamanje
+ * Uhla lwemibhalo `${HOME}/.hokey-filters` , lapho `${HOME}` kuwuhlu lwamanje lwasekhaya lomsebenzisi
+ * Uhlu olwakhelwe ngaphakathi [lwemibhalo yezihlungi](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Usizo
  Sebenzisa `-h` / `--help` ukuze ubonise usizo
 
@@ -326,7 +332,7 @@ I-Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

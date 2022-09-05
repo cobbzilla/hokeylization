@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: '翻译索引',
   label_findYourLanguageCode: '查找您的语言代码',
   err_processing_unknown: '*** 意外错误： {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '没有为语言{{ lang }}生成输出文件，因此它将被排除在索引之外'
+  warn_missingLangFile: '没有为语言{{ lang }}生成输出文件，因此它将被排除在索引之外',
+  err_filter_loading: '未找到过滤器： {{ filter }}\n在以下任何一个目录中都找不到过滤器：当前目录、./.hokey-filters 目录、${HOME}/.hokey-filters 目录或内置过滤器目录'
 }

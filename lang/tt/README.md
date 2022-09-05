@@ -276,6 +276,12 @@
 
  Шулай итеп, сез ниһаять язылачакны тулысынча контрольдә тотасыз
 
+ " `filter` " скрипты түбәндәге урыннарда эзләнәчәк:
+ * Хәзерге каталог
+ * Хәзерге каталог эчендә " `.hokey-filters` " исемле каталог
+ * " `${HOME}/.hokey-filters` " исемле каталог, монда " `${HOME}` " - хәзерге кулланучының өй каталогы.
+ * Эчке [фильтрлар каталогы](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Ярдәм итегез
  Ярдәм күрсәтү өчен "-h" / `--help` `-h` кулланыгыз
 
@@ -326,7 +332,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

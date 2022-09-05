@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Indeks terjemahan',
   label_findYourLanguageCode: 'Cari kod bahasa anda',
   err_processing_unknown: '*** Ralat tidak dijangka: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Tiada fail output dijana untuk bahasa {{ lang }} , jadi ia akan dikecualikan daripada indeks'
+  warn_missingLangFile: 'Tiada fail output dijana untuk bahasa {{ lang }} , jadi ia akan dikecualikan daripada indeks',
+  err_filter_loading: 'Penapis tidak ditemui: {{ filter }}\n Penapis tidak ditemui dalam mana-mana: direktori semasa, direktori ./.hokey-filters, direktori ${HOME}/.hokey-filters, mahupun direktori penapis terbina dalam'
 }

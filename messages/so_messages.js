@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Tusmada tarjumaada',
   label_findYourLanguageCode: 'Hel lambarkaaga luqadda',
   err_processing_unknown: '*** Khalad lama filaan ah: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Fayl wax soo saar ah looma soo saarin luqadda {{ lang }} , markaa waa laga saarayaa tusmada'
+  warn_missingLangFile: 'Fayl wax soo saar ah looma soo saarin luqadda {{ lang }} , markaa waa laga saarayaa tusmada',
+  err_filter_loading: 'Shaandhaynta lama helin: {{ filter }}\n Shaandheeyaha lagama helin mid ka mid ah: tusaha hadda jira, ./.hokey-filters directory, ${HOME}/.hokey-filters directory, ama tusaha filtarrada ku dhex dhisan'
 }

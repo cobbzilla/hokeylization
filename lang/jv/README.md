@@ -276,6 +276,12 @@ Hokeylization
 
  Mangkono, sampeyan duwe kontrol total babagan apa sing bakal ditulis
 
+ Skrip `filter` bakal digoleki ing lokasi ing ngisor iki:
+ * Direktori saiki
+ * Direktori sing jenenge `.hokey-filters` ing direktori saiki
+ * Direktori `${HOME}/.hokey-filters` , ing ngendi `${HOME}` minangka direktori ngarep pangguna saiki
+ * Dibangun ing [direktori saringan](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Bantuan
  Gunakake `-h` / `--help` kanggo nuduhake pitulung
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -356,7 +362,7 @@ Hokeylization
  utawa direktori. Yen direktori, jeneng berkas standar bakal digunakake, adhedhasar cithakan (ndeleng ngisor)
 
  Gunakake `-A` / `--index-template` kanggo nemtokake cara format output indeks. Sampeyan bisa nemtokake 'html',
- 'markdown', 'text', utawa path file menyang template [HandlebarsJS](https://handlebarsjs.com/) sampeyan dhewe
+ 'markdown', 'text', utawa path file menyang cithakan [HandlebarsJS](https://handlebarsjs.com/) sampeyan dhewe
 
  Yen sampeyan nemtokake cithakan sampeyan dhewe, sampeyan uga kudu nemtokake file (dudu direktori) kanggo `-I` / `--index`
  pilihan

@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Käännöshakemisto',
   label_findYourLanguageCode: 'Etsi kielikoodisi',
   err_processing_unknown: '*** Odottamaton virhe: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: '{{ lang }} ei luotu tulostiedostoa, joten se jätetään pois hakemistosta'
+  warn_missingLangFile: '{{ lang }} ei luotu tulostiedostoa, joten se jätetään pois hakemistosta',
+  err_filter_loading: 'Suodatinta ei löydy: {{ filter }}\n Suodatinta ei löytynyt mistään: nykyisestä hakemistosta, ./.hokey-filters -hakemistosta, ${HOME}/.hokey-filters -hakemistosta eikä sisäänrakennetusta suodattimien hakemistosta'
 }

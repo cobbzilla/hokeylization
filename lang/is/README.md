@@ -276,6 +276,12 @@ Hókýlvæðing
 
  Þannig hefur þú fulla stjórn á því sem að lokum verður skrifað
 
+ Leitað verður að `filter` forskriftinni á eftirfarandi stöðum:
+ * Núverandi möppu
+ * Skrá sem heitir `.hokey-filters` í núverandi möppu
+ * Skrá sem heitir `${HOME}/.hokey-filters` , þar sem `${HOME}` er heimaskrá núverandi notanda
+ * Innbyggða [síuskráin](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Hjálp
  Notaðu `-h` / `--help` til að sýna hjálp
 
@@ -326,7 +332,7 @@ Hókýlvæðing
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

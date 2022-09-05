@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'అనువాదాల సూచిక',
   label_findYourLanguageCode: 'మీ భాషా కోడ్‌ను కనుగొనండి',
   err_processing_unknown: '*** ఊహించని లోపం: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'భాష {{ lang }} కోసం అవుట్‌పుట్ ఫైల్ ఏదీ రూపొందించబడలేదు, కనుక ఇది సూచిక నుండి మినహాయించబడుతుంది'
+  warn_missingLangFile: 'భాష {{ lang }} కోసం అవుట్‌పుట్ ఫైల్ ఏదీ రూపొందించబడలేదు, కనుక ఇది సూచిక నుండి మినహాయించబడుతుంది',
+  err_filter_loading: 'ఫిల్టర్ కనుగొనబడలేదు: {{ filter }}\n ఫిల్టర్ దేనిలోనూ కనుగొనబడలేదు: ప్రస్తుత డైరెక్టరీ, ./.hokey-filters డైరెక్టరీ, ${HOME}/.hokey-filters డైరెక్టరీ లేదా అంతర్నిర్మిత ఫిల్టర్‌ల డైరెక్టరీ'
 }

@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Indekso de tradukoj',
   label_findYourLanguageCode: 'Trovu vian lingvokodon',
   err_processing_unknown: '*** Neatendita eraro: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Neniu eligdosiero estis generita por lingvo {{ lang }} , do ĝi estos ekskludita de la indekso'
+  warn_missingLangFile: 'Neniu eligdosiero estis generita por lingvo {{ lang }} , do ĝi estos ekskludita de la indekso',
+  err_filter_loading: 'Filtrilo ne trovita: {{ filter }}\n La filtrilo ne estis trovita en neniu el: la nuna dosierujo, la dosierujo ./.hokey-filters, la dosierujo ${HOME}/.hokey-filters, nek la enkonstruita dosierujo de filtriloj.'
 }

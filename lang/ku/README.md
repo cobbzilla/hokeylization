@@ -276,10 +276,16 @@ Hokeylization
 
  Bi vî rengî, hûn li ser tiştê ku dê di dawiyê de were nivîsandin de kontrola tevahî heye
 
+ `filter` dê li cîhên jêrîn were peyda kirin:
+ * Peldanka heyî
+ * Di pelrêça heyî de pelrêçek bi navê `.hokey-filters`
+ * Peldanka bi navê `${HOME}/.hokey-filters` , ku `${HOME}` pelrêça malê ya bikarhênerê heyî ye
+ * Navnîşana [Pelrêça peldankan](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Alîkarî
  Ji bo nîşankirina alîkariyê `-h` / `--help` bînin
 
- ## Fermanên hevîrê JSON
+ ## Fermanên komê JSON
  Bi `-j` / `--json` , hûn dikarin gelek fermanên hevrêz ên `hokey`
 
  Li gorî peymanê navê vê pelê `hokey.json` tê gotin, lê hûn dikarin navê wê çi bixwazin
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

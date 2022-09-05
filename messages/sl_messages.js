@@ -56,5 +56,6 @@ export default {
   label_indexOfTranslations: 'Kazalo prevodov',
   label_findYourLanguageCode: 'Poiščite kodo svojega jezika',
   err_processing_unknown: '*** Nepričakovana napaka: {{e}}\n {{e.stack}}',
-  warn_missingLangFile: 'Za jezik {{ lang }} ni bila ustvarjena nobena izhodna datoteka, zato bo izključena iz indeksa'
+  warn_missingLangFile: 'Za jezik {{ lang }} ni bila ustvarjena nobena izhodna datoteka, zato bo izključena iz indeksa',
+  err_filter_loading: 'Filtra ni bilo mogoče najti: {{ filter }}\n Filtra ni bilo mogoče najti v nobenem od: trenutnega imenika, imenika ./.hokey-filters, imenika ${HOME}/.hokey-filters niti imenika vgrajenih filtrov'
 }

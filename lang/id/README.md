@@ -276,6 +276,12 @@ Hokeylization
 
  Dengan demikian, Anda memiliki kendali penuh atas apa yang akhirnya akan ditulis
 
+ `filter` akan dicari di lokasi berikut:
+ * Direktori saat ini
+ * Direktori bernama `.hokey-filters` dalam direktori saat ini
+ * Direktori bernama `${HOME}/.hokey-filters` , di mana `${HOME}` adalah direktori home pengguna saat ini
+ * [Direktori filter] bawaan (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
  ### Membantu
  Gunakan `-h` / `--help` untuk menampilkan bantuan
 
@@ -326,7 +332,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }

@@ -276,7 +276,13 @@ Markdown 既不是文本也不是 html，所以谷歌翻译有一些困难
 
 因此，您可以完全控制最终将要写入的内容
 
-＃＃＃ 帮助
+`filter`脚本将在以下位置查找：
+ * 当前目录
+* 当前目录中名为`.hokey-filters`的目录
+* 一个名为`${HOME}/.hokey-filters` ，其中`${HOME}`是当前用户的主目录
+* 内置[filters目录](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ ＃＃＃ 帮助
 使用`-h` / `--help`显示帮助
 
 ## JSON 批处理命令
@@ -326,7 +332,7 @@ Markdown 既不是文本也不是 html，所以谷歌翻译有一些困难
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }
