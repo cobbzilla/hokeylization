@@ -50,9 +50,9 @@ Hokeylisaatio
  ----
 
  ### Onko tässä README-käännöksessä ongelma?
- Tämä käännös alkuperäisestä [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- voi olla virheellinen -- *korjaukset ovat erittäin tervetulleita!* Lähetä [pull-pyyntö GitHubissa](https://github.com/cobbzilla/yuebing/pulls),
- tai jos et halua tehdä niin, [avaa ongelma](https://github.com/cobbzilla/yuebing/issues)
+ Tämä käännös alkuperäisestä [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ voi olla virheellinen -- *korjaukset ovat erittäin tervetulleita!* Lähetä [pull-pyyntö GitHubissa](https://github.com/cobbzilla/hokeylization/pulls),
+ tai jos et halua tehdä niin, [avaa ongelma](https://github.com/cobbzilla/hokeylization/issues)
 
  Kun luot uuden GitHub-ongelman käännöksestä, toimi seuraavasti:
  * sisällytä sivun URL-osoite (kopioi/liitä selaimen osoiteriviltä)

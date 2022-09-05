@@ -50,9 +50,9 @@
  ----
 
  ### README 的这个翻译有问题吗？
-原文 [README](https://github.com/cobbzilla/yuebing/blob/master/README.md) 的特别翻译
-可能有缺陷 -- *非常欢迎更正！* 请发送 [GitHub 上的拉取请求](https://github.com/cobbzilla/yuebing/pulls)，
-或者如果你不习惯这样做，[打开一个问题](https://github.com/cobbzilla/yuebing/issues)
+原始 [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md) 的特殊翻译
+可能有缺陷 -- *非常欢迎更正！* 请发送 [GitHub 上的拉取请求](https://github.com/cobbzilla/hokeylization/pulls)，
+或者如果你不习惯这样做，[打开一个问题](https://github.com/cobbzilla/hokeylization/issues)
 
 当您创建有关翻译的新 GitHub 问题时，请执行以下操作：
  * 包括页面 URL（从浏览器地址栏复制/粘贴）

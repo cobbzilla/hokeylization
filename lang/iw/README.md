@@ -50,9 +50,9 @@
  ----
 
  ### האם יש בעיה עם התרגום הזה של README?
- התרגום הספציפי הזה של [README] המקורי (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- עשוי להיות פגום -- *תיקונים יתקבלו בברכה!* אנא שלח [בקשת משיכה ב-GitHub](https://github.com/cobbzilla/yuebing/pulls),
- או אם לא נוח לך לעשות את זה, [פתח בעיה](https://github.com/cobbzilla/yuebing/issues)
+ התרגום הספציפי הזה של [README] המקורי (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ עשוי להיות פגום -- *תיקונים יתקבלו בברכה!* אנא שלח [pull request on GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ או אם לא נוח לך לעשות את זה, [פתח בעיה](https://github.com/cobbzilla/hokeylization/issues)
 
  כאשר אתה יוצר בעיה חדשה של GitHub על תרגום, אנא עשה:
  * כלול את כתובת האתר של הדף (העתק/הדבק משורת הכתובת של הדפדפן)

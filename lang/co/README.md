@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Ci hè un prublema cù sta traduzzione di u README ?
- Questa traduzzione particulare di u [README] originale (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- pò esse difettu - * e currezzione sò assai benvenute! * Mandate una [richiesta pull in GitHub](https://github.com/cobbzilla/yuebing/pulls),
- o se ùn site micca còmode di fà quessa, [apre un prublema](https://github.com/cobbzilla/yuebing/issues)
+ Questa traduzzione particulare di u [README] originale (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ pò esse difettu - * e currezzione sò assai benvenute! * Mandate una [richiesta di pull in GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ o se ùn site micca còmode di fà quessa, [apre un prublema](https://github.com/cobbzilla/hokeylization/issues)
 
  Quandu create un novu prublema GitHub nantu à una traduzzione, fate:
  * include l'URL di a pagina (copia / incollà da a barra di indirizzu di u navigatore)
@@ -156,7 +156,7 @@ Hokeylization
 
  Se u schedariu di output esiste digià, serà esaminatu per determinà quale chjave esiste digià.
  E chjave esistenti ùn saranu micca tradutte. E traduzioni per i chjavi mancanti saranu generati è appiccicati
- à a fine di l'ughjettu JS. U schedariu sanu hè sempre riscritto.
+ à a fine di l'ughjettu JS. Tuttu u schedariu hè sempre riscritto.
 
  Per furzà a ritraduzzione di tutte e chjave, utilizate l' `-f` / `--force`
 

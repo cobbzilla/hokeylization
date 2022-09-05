@@ -50,9 +50,9 @@ Hokeylización
  ----
 
  ### ¿Hay algún problema con esta traducción del LÉAME?
- Esta traducción particular del [README] original (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- puede tener fallas -- * ¡las correcciones son muy bienvenidas! * Envíe una [solicitud de extracción en GitHub](https://github.com/cobbzilla/yuebing/pulls),
- o si no se siente cómodo haciendo eso, [abra un problema](https://github.com/cobbzilla/yuebing/issues)
+ Esta traducción particular del [README] original (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ puede tener fallas -- * ¡las correcciones son muy bienvenidas! * Envíe una [solicitud de extracción en GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ o si no se siente cómodo haciendo eso, [abra un problema](https://github.com/cobbzilla/hokeylization/issues)
 
  Cuando cree un nuevo problema de GitHub sobre una traducción, haga lo siguiente:
  * incluir la URL de la página (copiar/pegar desde la barra de direcciones del navegador)

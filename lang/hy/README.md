@@ -50,9 +50,9 @@
  ----
 
  ### Խնդիր կա՞ README-ի այս թարգմանության հետ:
- Բնօրինակի այս թարգմանությունը [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
+ Բնօրինակի այս թարգմանությունը [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
  կարող է թերի լինել.
- կամ եթե դա ձեզ հարմար չէ, [բացեք խնդիրը](https://github.com/cobbzilla/yuebing/issues)
+ կամ եթե դա ձեզ հարմար չէ, [բացեք խնդիրը](https://github.com/cobbzilla/hokeylization/issues)
 
  Երբ թարգմանության վերաբերյալ GitHub-ի նոր խնդիր եք ստեղծում, խնդրում ենք անել.
  * ներառել էջի URL-ը (պատճենել/տեղադրել դիտարկիչի հասցեի տողից)

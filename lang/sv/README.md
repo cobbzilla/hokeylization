@@ -50,9 +50,9 @@ Hokeylisering
  ----
 
  ### Finns det ett problem med denna översättning av README?
- Denna speciella översättning av originalet [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- kan vara felaktiga -- *korrigeringar är mycket välkomna!* Skicka en [pull request på GitHub](https://github.com/cobbzilla/yuebing/pulls),
- eller om du inte är bekväm med att göra det, [öppna ett problem](https://github.com/cobbzilla/yuebing/issues)
+ Denna speciella översättning av originalet [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ kan vara felaktiga -- *korrigeringar är mycket välkomna!* Skicka en [pull-förfrågan på GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ eller om du inte är bekväm med att göra det, [öppna ett problem](https://github.com/cobbzilla/hokeylization/issues)
 
  När du skapar ett nytt GitHub-nummer om en översättning, vänligen gör:
  * inkludera sidans URL (kopiera/klistra in från webbläsarens adressfält)
@@ -161,7 +161,7 @@ Hokeylisering
  För att tvinga om översättning av alla nycklar, använd `-f` / `--force`
 
  ## Översätta en katalog med textfiler
- Du kan också översätta en katalog med filer. hokeylisering kommer rekursivt att besöka varje
+ Du kan också översätta en katalog med filer. hokeylization kommer rekursivt att besöka varje
  filen i katalogen och kör dess innehåll via Google Translate och spara utdata
  till en fil med samma namn i ett separat katalogträd
 

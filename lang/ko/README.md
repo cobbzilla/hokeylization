@@ -50,9 +50,9 @@
  ----
 
  ### 이 README 번역에 문제가 있습니까?
- 원본 [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)의 이 특정 번역
- 결함이 있을 수 있음 -- *수정은 매우 환영합니다!* [GitHub에서 pull 요청](https://github.com/cobbzilla/yuebing/pulls)을 보내주세요.
- 또는 그렇게 하는 것이 편하지 않다면 [문제 열기](https://github.com/cobbzilla/yuebing/issues)
+ 원본 [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)의 이 특정 번역
+ 결함이 있을 수 있음 -- *수정은 매우 환영합니다!* [GitHub에서 pull 요청](https://github.com/cobbzilla/hokeylization/pulls)을 보내주십시오.
+ 또는 그렇게 하는 것이 불편하다면 [문제를 여십시오](https://github.com/cobbzilla/hokeylization/issues)
 
  번역에 대한 새 GitHub 문제를 만들 때 다음을 수행하십시오.
  * 페이지 URL 포함(브라우저 주소 표시줄에서 복사/붙여넣기)

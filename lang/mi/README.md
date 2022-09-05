@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### He raru kei tenei whakamaoritanga o te README?
- Ko tenei whakamaoritanga o te [README] taketake(https://github.com/cobbzilla/yuebing/blob/master/README.md)
- kei te he -- *e tino manakohia nga whakatikatika!* Tukuna mai he [tono toia ki a GitHub](https://github.com/cobbzilla/yuebing/pulls),
- ki te kore koe e pai ki te mahi i tera, [whakatuwhera i tetahi take](https://github.com/cobbzilla/yuebing/issues)
+ Ko tenei whakamaoritanga o te [README] taketake(https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ kei te he -- *e tino manakohia nga whakatikatika!* Tukuna mai he [tono toia ki GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ ki te kore koe e pai ki te mahi i tera, [whakatuwhera i tetahi take](https://github.com/cobbzilla/hokeylization/issues)
 
  Ina hanga e koe he take GitHub hou mo te whakamaoritanga, mahia:
  * whakauruhia te URL wharangi (kape/whakapiri mai i te pae wahitau tirotiro)
@@ -171,7 +171,7 @@ Hokeylization
 
  **TUPATOTANGA NUI**: I te wa e whakamaori ana i nga raarangi whaiaronga, ** KAUA E ** te tohu i tetahi raarangi whakaputa
  kei roto tena i to raarangi whakauru! Ki te mahi koe i tenei, ka:
- * whakakorikori mutunga kore
+ * whakaawe i te recursion mutunga kore
  * whakahaere i to pire Google
  * whakakiia to kōpae
  * iti ake te ngahau

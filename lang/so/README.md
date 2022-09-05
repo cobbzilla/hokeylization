@@ -50,9 +50,9 @@ Hokeyylization
  ----
 
  ### Dhib ma ka jirtaa tarjumaada README?
- Turjumaaddan gaarka ah ee asalka ah [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- waxaa laga yaabaa in ay cilladaysan tahay -- *sixitaan aad ayaa loo soo dhawaynayaa!* Fadlan u soo dir [codsi jiid GitHub](https://github.com/cobbzilla/yuebing/pulls),
- ama haddii aadan ku qanacsanayn inaad taas samayso, [fur arrin](https://github.com/cobbzilla/yuebing/issues)
+ Turjumaaddan gaarka ah ee asalka ah [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ waxaa laga yaabaa in ay cilladaysan tahay -- *sixitaanku aad ayaa loo soo dhawaynayaa!* Fadlan u soo dir [codsi jiid GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ ama haddii aadan ku qanacsanayn inaad taas samayso, [fur arrin](https://github.com/cobbzilla/hokeylization/issues)
 
  Markaad abuurto arrin cusub oo GitHub ah oo ku saabsan tarjumaada, fadlan samee:
  * ku dar URL bogga (koobi/ku dheji barta ciwaanka browserka)

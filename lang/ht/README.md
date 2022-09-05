@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Èske gen yon pwoblèm ak tradiksyon README sa a?
- Tradiksyon patikilye sa a orijinal [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- ka gen defo -- *Koreksyon yo trè akeyi!* Tanpri voye yon [demann rale sou GitHub](https://github.com/cobbzilla/yuebing/pulls),
- oswa si w pa konfòtab pou w fè sa, [louvri yon pwoblèm](https://github.com/cobbzilla/yuebing/issues)
+ Tradiksyon patikilye sa a orijinal [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ ka gen defo -- *koreksyon yo trè akeyi!* Tanpri voye yon [pull demand sou GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ oswa si w pa konfòtab pou w fè sa, [louvri yon pwoblèm](https://github.com/cobbzilla/hokeylization/issues)
 
  Lè ou kreye yon nouvo pwoblèm GitHub sou yon tradiksyon, tanpri fè:
  * enkli URL paj la (kopi/kole nan ba adrès navigatè a)

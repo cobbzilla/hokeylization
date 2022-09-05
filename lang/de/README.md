@@ -50,9 +50,9 @@ Hokeylisierung
  ----
 
  ### Gibt es ein Problem mit dieser Übersetzung der README?
- Diese spezielle Übersetzung der ursprünglichen [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- kann fehlerhaft sein -- *Korrekturen sind sehr willkommen!* Bitte senden Sie eine [Pull-Anfrage auf GitHub](https://github.com/cobbzilla/yuebing/pulls),
- oder wenn Sie sich dabei nicht wohl fühlen, [öffnen Sie ein Problem](https://github.com/cobbzilla/yuebing/issues)
+ Diese spezielle Übersetzung der ursprünglichen [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ kann fehlerhaft sein -- *Korrekturen sind sehr willkommen!* Bitte senden Sie eine [Pull-Anfrage auf GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ oder wenn Sie sich dabei nicht wohlfühlen, [öffnen Sie ein Problem](https://github.com/cobbzilla/hokeylization/issues)
 
  Wenn Sie ein neues GitHub-Problem zu einer Übersetzung erstellen, gehen Sie bitte wie folgt vor:
  * Fügen Sie die Seiten-URL hinzu (Kopieren/Einfügen aus der Adressleiste des Browsers)
@@ -279,7 +279,7 @@ Hokeylisierung
  ### Hilfe
  Verwenden Sie `-h` / `--help` , um Hilfe anzuzeigen
 
- ## JSON-Stapelbefehle
+ ## JSON-Batch-Befehle
  Mit der Option `-j` / `--json` können Sie mehrere koordinierte `hokey` Befehle ausführen
 
  Konventionell heißt diese Datei `hokey.json` , aber Sie können sie beliebig benennen

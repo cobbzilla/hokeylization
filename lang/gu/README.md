@@ -50,9 +50,9 @@
  ----
 
  ### શું README ના આ અનુવાદમાં કોઈ સમસ્યા છે?
- મૂળ [README](https://github.com/cobbzilla/yuebing/blob/master/README.md) નો આ વિશિષ્ટ અનુવાદ
- ખામી હોઈ શકે છે -- *સુધારાઓ ખૂબ આવકાર્ય છે!* કૃપા કરીને [GitHub પર પુલ વિનંતી](https://github.com/cobbzilla/yuebing/pulls) મોકલો,
- અથવા જો તમને તે કરવામાં આરામદાયક ન હોય, તો [સમસ્યા ખોલો](https://github.com/cobbzilla/yuebing/issues)
+ મૂળ [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md) નો આ વિશિષ્ટ અનુવાદ
+ ખામી હોઈ શકે છે -- *સુધારાઓ ખૂબ આવકાર્ય છે!* કૃપા કરીને [GitHub પર પુલ વિનંતી](https://github.com/cobbzilla/hokeylization/pulls) મોકલો.
+ અથવા જો તમને તે કરવામાં આરામદાયક ન હોય, તો [સમસ્યા ખોલો](https://github.com/cobbzilla/hokeylization/issues)
 
  જ્યારે તમે અનુવાદ વિશે નવો GitHub મુદ્દો બનાવો છો, ત્યારે કૃપા કરીને આ કરો:
  * પૃષ્ઠ URL શામેલ કરો (બ્રાઉઝર સરનામાં બારમાંથી કૉપિ/પેસ્ટ કરો)

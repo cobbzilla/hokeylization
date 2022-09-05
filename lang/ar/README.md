@@ -50,9 +50,9 @@
  ----
 
  ### هل هناك مشكلة في هذه الترجمة من README؟
- هذه الترجمة المحددة لـ [README] الأصلي (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- قد يكون معيبًا - * نرحب بالتصحيحات! * يُرجى إرسال [طلب سحب على GitHub](https://github.com/cobbzilla/yuebing/pulls) ،
- أو إذا لم تكن مرتاحًا لفعل ذلك ، [افتح مشكلة](https://github.com/cobbzilla/yuebing/issues)
+ هذه الترجمة المحددة لـ [README] الأصلي (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ قد يكون معيبًا - * نرحب بالتصحيحات! * يُرجى إرسال [طلب سحب على GitHub](https://github.com/cobbzilla/hokeylization/pulls) ،
+ أو إذا لم تكن مرتاحًا لفعل ذلك ، [افتح مشكلة](https://github.com/cobbzilla/hokeylization/issues)
 
  عند إنشاء مشكلة جديدة على GitHub بخصوص ترجمة ، يرجى القيام بما يلي:
  * تضمين عنوان URL للصفحة (نسخ / لصق من شريط عنوان المتصفح)
@@ -161,7 +161,7 @@
  لفرض إعادة ترجمة جميع المفاتيح ، استخدم الخيار `-f` / `--force`
 
  ## ترجمة دليل ملفات نصية
- يمكنك أيضًا ترجمة دليل الملفات. hokeylization سوف تزور بشكل متكرر كل
+ يمكنك أيضًا ترجمة دليل الملفات. سوف hokeylization بشكل متكرر زيارة كل
  ملف في الدليل وتشغيل محتوياته من خلال ترجمة جوجل ، وحفظ الإخراج
  إلى ملف مُسمى بشكل مماثل في شجرة دليل منفصلة
 
@@ -176,7 +176,7 @@
  * املأ القرص الخاص بك
  * أقل متعة
 
- فيما يلي مثال على ما * لا يجب القيام به *:
+ فيما يلي مثال على ما * لا يجب فعله *:
 
     hokey -l es -o templates/es templates # <--- DON'T DO THIS!
 

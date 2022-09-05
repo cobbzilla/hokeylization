@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Pane dambudziko here neshanduro iyi yeREADME?
- Iyi chaiyo shanduro yepakutanga [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- inogona kunge isina kukanganisa -- *kugadzirisa kunogamuchirwa!* Ndokumbira utumire [kudhonza chikumbiro paGitHub](https://github.com/cobbzilla/yuebing/pulls),
- kana kuti kana usina kusununguka kuita izvozvo, [vhura nyaya](https://github.com/cobbzilla/yuebing/issues)
+ Iyi chaiyo shanduro yepakutanga [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ inogona kunge isina kukanganisa -- *kugadzirisa kunogamuchirwa!* Ndokumbira utumire [kudhonza chikumbiro paGitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ kana kuti kana usina kusununguka kuita izvozvo, [vhura nyaya](https://github.com/cobbzilla/hokeylization/issues)
 
  Kana iwe ukagadzira itsva GitHub nyaya nezve dudziro, ndapota ita:
  * sanganisira iyo URL peji (kopi/namira kubva kubrowser kero bar)
@@ -161,7 +161,7 @@ Hokeylization
  Kumanikidza kududzirazve makiyi ese, shandisa iyo `-f` / `--force` sarudzo
 
  ## Kushandura dhairekitori remavara mafaira
- Unogonawo kushandura dhairekitori remafaira. hokeylization ichadzokorora kushanyira yega yega
+ Iwe unogona zvakare kushandura dhairekitori remafaira. hokeylization ichadzokorora kushanyira yega yega
  faira mudhairekitori uye womhanyisa zvirimo kuburikidza neGoogle Translate, uye chengetedza zvabuda
  kune faira rakafanana rine zita mune yakaparadzana dhairekitori muti
 

@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Estne problema cum hac translatione README?
- Haec praecipua translatio originalis [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- fortasse vitiosum -- *corrigenda valde grata!* Mitte quaeso [in GitHub rogationem viverra](https://github.com/cobbzilla/yuebing/pulls);
- aut si parum commode id facis, [profluvium aperi](https://github.com/cobbzilla/yuebing/issues)
+ Haec praecipua translatio originalis [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ licet vitiosum esse -- * correctiones valde gratae sunt!* Mitte quaeso [in GitHub rogationem viverra](https://github.com/cobbzilla/hokeylization/pulls);
+ vel si non es commodus id faciens, [aperi fluxum](https://github.com/cobbzilla/hokeylization/issues)
 
  Cum novam GitHub quaestionem de translatione creas, quaeso fac;
  * Paginam URL includere (exemplum / crustulum ex vecte electronica)

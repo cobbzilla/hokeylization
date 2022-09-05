@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### README نىڭ بۇ تەرجىمىسىدە مەسىلە بارمۇ؟
- ئەسلى [README] نىڭ بۇ ئالاھىدە تەرجىمىسى (https://github.com/cobbzilla/yuebing/blob/master/README.md)
+ ئەسلى [README] نىڭ بۇ ئالاھىدە تەرجىمىسى (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
  خاتالىق بولۇشى مۇمكىن - * تۈزىتىشلەرنى قارشى ئالىمىز! * [GitHub غا تارتىش تەلىپى] ئەۋەتىڭ.
- ياكى بۇنداق قىلىشقا راھەت بولمىساڭىز ، [مەسىلە ئېچىڭ](https://github.com/cobbzilla/yuebing/issues)
+ ياكى بۇنداق قىلىشقا راھەت بولمىساڭىز ، [مەسىلە ئېچىڭ](https://github.com/cobbzilla/hokeylization/issues)
 
  تەرجىمىگە مۇناسىۋەتلىك يېڭى GitHub مەسىلىسىنى قۇرغاندا ، قىلىڭ:
  * بەت ئادرېسىنى ئۆز ئىچىگە ئالىدۇ (توركۆرگۈ ئادرېس ستونىدىن كۆچۈرۈش / چاپلاش)

@@ -50,9 +50,9 @@
  ----
 
  ### क्या README के इस अनुवाद में कोई समस्या है?
- मूल [README](https://github.com/cobbzilla/yuebing/blob/master/README.md) का यह विशेष अनुवाद
- त्रुटिपूर्ण हो सकता है -- *सुधारों का बहुत स्वागत है!* कृपया [GitHub पर पुल अनुरोध](https://github.com/cobbzilla/yuebing/pulls) भेजें,
- या यदि आप ऐसा करने में सहज नहीं हैं, तो [एक मुद्दा खोलें](https://github.com/cobbzilla/yuebing/issues)
+ मूल [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md) का यह विशेष अनुवाद
+ त्रुटिपूर्ण हो सकता है -- *सुधारों का बहुत स्वागत है!* कृपया [GitHub पर पुल अनुरोध](https://github.com/cobbzilla/hokeylization/pulls) भेजें,
+ या यदि आप ऐसा करने में सहज नहीं हैं, [एक मुद्दा खोलें](https://github.com/cobbzilla/hokeylization/issues)
 
  जब आप अनुवाद के बारे में एक नया GitHub मुद्दा बनाते हैं, तो कृपया यह करें:
  * पेज यूआरएल शामिल करें (ब्राउज़र एड्रेस बार से कॉपी/पेस्ट करें)

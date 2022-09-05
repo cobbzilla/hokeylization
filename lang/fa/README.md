@@ -50,9 +50,9 @@
  ----
 
  ### آیا این ترجمه README مشکلی دارد؟
- این ترجمه خاص از [README] اصلی (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- ممکن است ناقص باشد -- *اصلاحات بسیار خوش آمدید!* لطفاً یک [درخواست کشش در GitHub](https://github.com/cobbzilla/yuebing/pulls) ارسال کنید.
- یا اگر از انجام آن راحت نیستید، [مشکلی را باز کنید](https://github.com/cobbzilla/yuebing/issues)
+ این ترجمه خاص از [README] اصلی (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ ممکن است ناقص باشد -- *اصلاحات بسیار خوش آمدید!* لطفاً یک [درخواست کشش در GitHub](https://github.com/cobbzilla/hokeylization/pulls) ارسال کنید.
+ یا اگر از انجام آن راحت نیستید، [مشکلی را باز کنید](https://github.com/cobbzilla/hokeylization/issues)
 
  هنگامی که یک مشکل جدید GitHub در مورد ترجمه ایجاد می کنید، لطفاً این کار را انجام دهید:
  * شامل URL صفحه (کپی/پیست از نوار آدرس مرورگر)

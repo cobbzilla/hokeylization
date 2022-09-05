@@ -50,9 +50,9 @@ I-Hokeylization
  ----
 
  ### Ingabe kunenkinga ngalokhu kuhunyushwa kwe- README?
- Lokhu kuhunyushwa koqobo [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- ingase ibe namaphutha -- *izilungiso zamukelekile kakhulu!* Sicela uthumele [isicelo sokudonsa ku-GitHub](https://github.com/cobbzilla/yuebing/pulls),
- noma uma ungakhululekile ukwenza lokho, [vula inkinga](https://github.com/cobbzilla/yuebing/issues)
+ Lokhu kuhunyushwa koqobo [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ ingase ibe namaphutha -- *izilungiso zamukelekile kakhulu!* Sicela uthumele [isicelo sokudonsa ku-GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ noma uma ungakhululekile ukwenza lokho, [vula inkinga](https://github.com/cobbzilla/hokeylization/issues)
 
  Uma udala udaba olusha lwe-GitHub mayelana nokuhumusha, sicela wenze:
  * faka i-URL yekhasi (kopisha/unamathisele kubha yekheli lesiphequluli)

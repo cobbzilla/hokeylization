@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### An bhfuil fadhb leis an aistriúchán seo ar an README?
- An t-aistriúchán áirithe seo ar an mbunleagan [README]( https://github.com/cobbzilla/yuebing/blob/master/README.md)
- d’fhéadfadh sé a bheith lochtach -- *tá fáilte mhór roimh cheartúcháin!* Seol [iarratas tarraingthe ar GitHub](https://github.com/cobbzilla/yuebing/pulls),
- nó mura bhfuil tú compordach é sin a dhéanamh, [oscail ceist]( https://github.com/cobbzilla/yuebing/issues)
+ An t-aistriúchán áirithe seo ar an mbunleagan [README]( https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ d’fhéadfadh sé a bheith lochtach -- *tá fáilte mhór roimh cheartúcháin!* Seol [iarratas tarraingthe ar GitHub](https://github.com/cobbzilla/hokeylization/pulls), le do thoil.
+ nó mura bhfuil tú compordach é sin a dhéanamh, [oscail ceist]( https://github.com/cobbzilla/hokeylization/issues)
 
  Nuair a chruthaíonn tú saincheist nua GitHub faoi aistriúchán, déan:
  * cuir isteach URL an leathanaigh (cóipeáil/greamaigh ó bharra seoltaí an bhrabhsálaí)

@@ -50,9 +50,9 @@ Hokeylizálás
  ----
 
  ### Probléma van a README fordításával?
- Ez a konkrét fordítás az eredeti [README]-nek (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- hibás lehet -- *a javításokat nagyon szívesen fogadjuk!* Kérjük, küldjön [lehívási kérelmet a GitHubon](https://github.com/cobbzilla/yuebing/pulls),
- vagy ha nem érzi jól magát, [nyisson meg egy problémát](https://github.com/cobbzilla/yuebing/issues)
+ Az eredeti [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md) konkrét fordítása
+ hibás lehet -- *a javításokat nagyon szívesen fogadjuk!* Kérjük, küldjön [lehívási kérelmet a GitHubon](https://github.com/cobbzilla/hokeylization/pulls),
+ vagy ha nem érzi jól magát, [nyisson meg egy problémát](https://github.com/cobbzilla/hokeylization/issues)
 
  Amikor új GitHub-kiadást hoz létre egy fordítással kapcsolatban, tegye a következőket:
  * tartalmazza az oldal URL-jét (másolás/beillesztés a böngésző címsorából)

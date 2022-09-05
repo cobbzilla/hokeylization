@@ -50,9 +50,9 @@
  ----
 
  ### README аудармасында ақау бар ма?
- Түпнұсқаның бұл нақты аудармасы [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- ақаулы болуы мүмкін -- *түзетулер өте құпталады!* [GitHub сайтындағы тарту сұрауы](https://github.com/cobbzilla/yuebing/pulls) жіберіңіз.
- немесе мұны істеу ыңғайсыз болса, [мәселені ашыңыз](https://github.com/cobbzilla/yuebing/issues)
+ Түпнұсқаның бұл нақты аудармасы [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ ақаулы болуы мүмкін -- *түзетулер өте құпталады!* [GitHub сайтындағы тарту сұрауын](https://github.com/cobbzilla/hokeylization/pulls) жіберіңіз.
+ немесе мұны істеу ыңғайсыз болса, [мәселені ашыңыз](https://github.com/cobbzilla/hokeylization/issues)
 
  Аударма туралы жаңа GitHub мәселесін жасағанда, мынаны орындаңыз:
  * беттің URL мекенжайын қосу (браузердің мекенжай жолағынан көшіру/қою)

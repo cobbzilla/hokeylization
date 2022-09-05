@@ -50,9 +50,9 @@ Hokeyylisation
  ----
 
  ### Y a-t-il un problème avec cette traduction du README ?
- Cette traduction particulière de l'original [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- peut être défectueux -- *les corrections sont les bienvenues !* Veuillez envoyer une [pull request on GitHub](https://github.com/cobbzilla/yuebing/pulls),
- ou si vous n'êtes pas à l'aise pour le faire, [ouvrez un problème](https://github.com/cobbzilla/yuebing/issues)
+ Cette traduction particulière de l'original [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ peut être défectueux -- *les corrections sont les bienvenues !* Veuillez envoyer une [pull request on GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ ou si vous n'êtes pas à l'aise pour le faire, [ouvrez un problème](https://github.com/cobbzilla/hokeylization/issues)
 
  Lorsque vous créez un nouveau ticket GitHub à propos d'une traduction, veuillez faire :
  * inclure l'URL de la page (copier/coller depuis la barre d'adresse du navigateur)
@@ -208,7 +208,7 @@ Hokeyylisation
 
  ## Autres options
 
- ### Essai à vide
+ ### Essai à sec
  Passez `-n` / `--dry-run` pour afficher ce qui serait fait, mais n'effectuez pas d'appels d'API ni n'écrivez de fichiers
 
  ### Force

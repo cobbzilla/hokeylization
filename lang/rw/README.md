@@ -50,9 +50,9 @@ Hokeylisation
  ----
 
  ### Hari ikibazo cyubu busobanuro bwa README?
- Ubu busobanuro bwihariye bwumwimerere [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- irashobora kuba ifite inenge - * gukosora biremewe cyane! * Nyamuneka ohereza [gukurura icyifuzo kuri GitHub](https://github.com/cobbzilla/yuebing/pulls),
- cyangwa niba utishimiye gukora ibyo, [fungura ikibazo](https://github.com/cobbzilla/yuebing/issues)
+ Ubu busobanuro bwihariye bwumwimerere [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ irashobora kuba ifite inenge - * gukosora biremewe cyane! * Nyamuneka ohereza [gukurura icyifuzo kuri GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ cyangwa niba utishimiye gukora ibyo, [fungura ikibazo](https://github.com/cobbzilla/hokeylization/issues)
 
  Mugihe uremye ikibazo gishya cya GitHub kubyerekeye ubusobanuro, nyamuneka kora:
  * shyiramo urupapuro rwa URL (kopi / komatanya uhereye kuri aderesi ya aderesi)

@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Kodi pali vuto ndi kumasulira kumeneku kwa README?
- Kumasulira kwenikweniku [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- zitha kukhala zolakwika -- *zokonza ndizolandilidwa kwambiri!* Chonde tumizani [kukoka pempho pa GitHub](https://github.com/cobbzilla/yuebing/pulls),
- kapena ngati simumasuka kuchita zimenezo, [tsegulani nkhani](https://github.com/cobbzilla/yuebing/issues)
+ Kumasulira kwenikweniku [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ zitha kukhala zolakwika -- *zokonza ndizolandiridwa!* Chonde tumizani [koka pempho pa GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ kapena ngati simumasuka kuchita zimenezo, [tsegulani nkhani](https://github.com/cobbzilla/hokeylization/issues)
 
  Mukapanga nkhani yatsopano ya GitHub yokhudza kumasulira, chonde chitani:
  * Phatikizani ulalo watsamba (koperani / kumata kuchokera pa adilesi ya msakatuli)

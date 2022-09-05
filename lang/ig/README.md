@@ -50,9 +50,9 @@ Hokeyylization
  ----
 
  ### Enwere nsogbu na ntụgharị asụsụ README a?
- Ntụgharị asụsụ a nke izizi [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- nwere ike nwee ntụpọ -- * A nabatara mgbazi!* Biko ziga arịrịọ [pull arịrịọ na GitHub](https://github.com/cobbzilla/yuebing/pulls),
- ma ọ bụ ọ bụrụ na ahụ adịghị gị mma ime nke ahụ, [mepee mbipụta](https://github.com/cobbzilla/yuebing/issues)
+ Ntụgharị asụsụ nke izizi [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ nwere ike nwee ntụpọ -- * A nabatara mgbazi!* Biko ziga arịrịọ [pull arịrịọ na GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ ma ọ bụ ọ bụrụ na ahụ adịghị gị mma ime nke ahụ, [mepee mbipụta](https://github.com/cobbzilla/hokeylization/issues)
 
  Mgbe ị mepụtara mbipụta GitHub ọhụrụ gbasara ntụgharị asụsụ, biko mee:
  * tinye URL ibe (detuo / mado site na ebe adreesị ihe nchọgharị)

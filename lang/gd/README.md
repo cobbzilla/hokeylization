@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### A bheil duilgheadas ann leis an eadar-theangachadh seo den README?
- An eadar-theangachadh sònraichte seo den fhear thùsail [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- faodaidh gu bheil e lochtach -- * tha fàilte mhòr air ceartachaidhean!* Feuch an cuir thu [iarrtas tarraing air GitHub](https://github.com/cobbzilla/yuebing/pulls),
- no mura h-eil thu comhfhurtail a’ dèanamh sin, [fosgail cùis](https://github.com/cobbzilla/yuebing/issues)
+ An eadar-theangachadh sònraichte seo den fhear thùsail [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ faodaidh gu bheil e lochtach -- * tha fàilte mhòr air ceartachaidhean!* Feuch an cuir thu [iarrtas tarraing air GitHub]( https://github.com/cobbzilla/hokeylization/pulls ),
+ no mura h-eil thu comhfhurtail a’ dèanamh sin, [fosgail cùis]( https://github.com/cobbzilla/hokeylization/issues)
 
  Nuair a chruthaicheas tu cùis GitHub ùr mu eadar-theangachadh, feuch an dèan thu:
  * cuir a-steach URL na duilleige (lethbhreac / pasg bho bhàr seòlaidh a’ bhrobhsair)

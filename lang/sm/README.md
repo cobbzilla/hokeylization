@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### E iai se fa'afitauli i lenei fa'aliliuga o le README?
- Lenei fa'aliliuga fa'apitoa o le ulua'i [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- atonu e sese -- *fa'asa'oga e matua talia lava!* Fa'amolemole lafo mai se [talosaga toso ile GitHub](https://github.com/cobbzilla/yuebing/pulls),
- pe afai e te le fiafia e fai lena mea, [tatala se lomiga](https://github.com/cobbzilla/yuebing/issues)
+ Lenei fa'aliliuga fa'apitoa o le ulua'i [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ atonu e sese -- *fa'asa'oga e matua talia lava!* Fa'amolemole lafo mai se [talosaga toso ile GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ pe afai e te le fiafia e fai lena mea, [tatala se mataupu](https://github.com/cobbzilla/hokeylization/issues)
 
  A e fatuina se lomiga fou GitHub e uiga i se faaliliuga, faamolemole fai:
  * fa'aaofia ai le itulau URL (kopi/pa'i mai le tuatusi tuatusi pa)
@@ -171,7 +171,7 @@ Hokeylization
 
  ** LAPATA'IGA TELE**: A'o fa'aliliu tusi tusi, **AUA LE** fa'ama'oti mai se lisi o mea e fai
  o lo'o i totonu o lau lisi fa'aoga! Afai e te faia lenei mea, o le ae:
- * faʻaosoina le toe faʻaleleia e le gata
+ * faʻaosoina le toe faʻafoʻisia e le gata
  * fa'aola lau pili Google
  * faatumu lau tisiki
  * faaitiitia le fiafia

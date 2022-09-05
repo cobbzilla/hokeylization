@@ -50,9 +50,9 @@
  ----
 
  ### איז עס אַ פּראָבלעם מיט דעם איבערזעצונג פון די README?
- די באַזונדער איבערזעצונג פון דער אָריגינעל [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- קען זיין פלאָז -- * קערעקשאַנז זענען זייער באַגריסן! * ביטע שיקן אַ [ציען בעטן אויף גיטהוב](https://github.com/cobbzilla/yuebing/pulls),
- אָדער אויב איר זענט נישט באַקוועם צו טאָן דאָס, [עפענען אַן אַרויסגעבן](https://github.com/cobbzilla/yuebing/issues)
+ די באַזונדער איבערזעצונג פון דער אָריגינעל [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ קען זיין פלאָז - * קערעקשאַנז זענען זייער באַגריסן!* ביטע שיקן אַ [ציען בעטן אויף גיטהוב](https://github.com/cobbzilla/hokeylization/pulls),
+ אָדער אויב איר זענט נישט באַקוועם צו טאָן דאָס, [עפענען אַן אַרויסגעבן](https://github.com/cobbzilla/hokeylization/issues)
 
  ווען איר שאַפֿן אַ נייַע GitHub אַרויסגעבן וועגן אַ איבערזעצונג, ביטע טאָן:
  * אַרייַננעמען די URL פון די בלאַט (קאָפּי / פּאַפּ פון דעם בלעטערער אַדרעס באַר)

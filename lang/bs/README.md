@@ -50,9 +50,9 @@ Hokeilizacija
  ----
 
  ### Postoji li problem sa ovim prijevodom README-a?
- Ovaj konkretni prijevod originalnog [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- može biti pogrešan -- *ispravke su dobrodošle!* Molimo pošaljite [zahtjev za povlačenje na GitHub](https://github.com/cobbzilla/yuebing/pulls),
- ili ako vam to nije ugodno, [otvorite problem](https://github.com/cobbzilla/yuebing/issues)
+ Ovaj konkretni prijevod originalnog [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ može biti pogrešan -- *ispravke su dobrodošle!* Molimo pošaljite [zahtjev za povlačenje na GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ ili ako vam to nije ugodno, [otvorite problem](https://github.com/cobbzilla/hokeylization/issues)
 
  Kada kreirate novi GitHub problem o prijevodu, učinite:
  * uključite URL stranice (kopirajte/zalijepite iz adresne trake pretraživača)
@@ -220,7 +220,7 @@ Hokeilizacija
  Možda nećete uvijek htjeti prevesti *svaku* datoteku u vašem izvornom direktoriju u ciljni direktorij
 
  Vrijednost opcije `-m` / `--match` je regex (pazite na pravila navođenja ljuske!) koji specificira
- koje fajlove treba prevesti
+ koje datoteke treba prevesti
 
  Kada ste u nedoumici, možete kombinirati ovu opciju sa `-n` / `--dry-run` da vidite koje datoteke će biti prevedene
 

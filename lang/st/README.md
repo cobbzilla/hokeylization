@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Na ho na le bothata ka phetolelo ee ea README?
- Phetolelo ena ea pele ea [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- e kanna ea ba le bofokoli -- *litokiso li amohelehile!* Ka kopo romella [ho hula kopo ho GitHub](https://github.com/cobbzilla/yuebing/pulls),
- kapa ha o sa phutholoha ho etsa joalo, [bula bothata](https://github.com/cobbzilla/yuebing/issues)
+ Phetolelo ena ea pele ea [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ e kanna ea ba le bofokoli -- *litokiso li amohelehile!* Ka kopo, romella [ho hula kopo ho GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ kapa ha o sa phutholoha ho etsa joalo, [bula bothata](https://github.com/cobbzilla/hokeylization/issues)
 
  Ha o theha taba e ncha ea GitHub mabapi le phetolelo, ka kopo etsa:
  * kenyelletsa URL ea leqephe (kopi / beha ho tsoa bareng ea aterese ea sebatli)

@@ -50,9 +50,9 @@
  ----
 
  ### Энэ README орчуулгад асуудал гарсан уу?
- Энэхүү анхны орчуулга нь [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- алдаатай байж магадгүй -- *засвар хийхэд таатай байна!* [GitHub дээр татах хүсэлт](https://github.com/cobbzilla/yuebing/pulls) илгээнэ үү.
- эсвэл та үүнийг хийхэд эвгүй байгаа бол [асуудал нээнэ үү](https://github.com/cobbzilla/yuebing/issues)
+ Энэхүү анхны орчуулга нь [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ алдаатай байж магадгүй -- *засвар хийхэд таатай байна!* [GitHub дээр татах хүсэлт](https://github.com/cobbzilla/hokeylization/pulls) илгээнэ үү.
+ эсвэл та үүнийг хийхэд эвгүй байгаа бол [асуудал нээнэ үү](https://github.com/cobbzilla/hokeylization/issues)
 
  Орчуулгын талаар шинэ GitHub асуудал үүсгэхдээ дараах зүйлийг хийнэ үү:
  * хуудасны URL-г оруулах (хөтчийн хаягийн мөрөнд хуулах/хуулах)

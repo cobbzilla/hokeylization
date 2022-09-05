@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Misy olana ve amin'ity fandikana ny README ity?
- Ity dikanteny manokana amin'ny [README] tany am-boalohany (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- mety misy lesoka -- *tena raisina an-tanana ny fanitsiana!* Alefaso azafady [fangatahana fisarihana ao amin'ny GitHub](https://github.com/cobbzilla/yuebing/pulls),
- na raha tsy mahazo aina amin'izany ianao dia [manokatra olana](https://github.com/cobbzilla/yuebing/issues)
+ Ity dikanteny manokana amin'ny [README] tany am-boalohany (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ mety misy lesoka -- *raisina tsara ny fanitsiana!* Alefaso azafady [fangatahana fisarihana ao amin'ny GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ na raha tsy mahazo aina amin'izany ianao, [manokatra olana](https://github.com/cobbzilla/hokeylization/issues)
 
  Rehefa mamorona olana GitHub vaovao momba ny fandikan-teny ianao, azafady:
  * Ampidiro ny URL pejy (adikao / apetaho amin'ny bara adiresy navigateur)

@@ -50,9 +50,9 @@
  ----
 
  ### README тәрҗемәсендә проблема бармы?
- Бу оригиналь тәрҗемә [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- кимчелекле булырга мөмкин - * төзәтмәләр бик рәхимле! * Зинһар өчен, GitHub'ка тарту соравын җибәрегез (https://github.com/cobbzilla/yuebing/pulls),
- яисә моны эшләү уңайлы булмаса, [проблеманы ачыгыз](https://github.com/cobbzilla/yuebing/issues)
+ Бу оригиналь тәрҗемә [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ кимчелекле булырга мөмкин - * төзәтмәләр бик рәхимле! * Зинһар өчен, GitHub'ка тарту соравын җибәрегез (https://github.com/cobbzilla/hokeylization/pulls),
+ яисә моны эшләү уңайлы булмаса, [проблеманы ачыгыз](https://github.com/cobbzilla/hokeylization/issues)
 
  Тәрҗемә турында яңа GitHub чыгарганда, зинһар өчен:
  * битнең URL-ны кертегез (браузер адрес тактасыннан күчереп языгыз)

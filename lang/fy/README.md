@@ -50,9 +50,9 @@ Hokeylisearring
  ----
 
  ### Is der in probleem mei dizze oersetting fan de README?
- Dizze bysûndere oersetting fan it orizjineel [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- kin defekt wêze -- *korreksjes binne tige wolkom!* Stjoer asjebleaft in [pull request on GitHub](https://github.com/cobbzilla/yuebing/pulls),
- of as jo it net noflik binne om dat te dwaan, [iepenje in probleem](https://github.com/cobbzilla/yuebing/issues)
+ Dizze bysûndere oersetting fan it orizjinele [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ kin defekt wêze -- *korreksjes binne tige wolkom!* Stjoer asjebleaft in [pull request on GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ of as jo it net noflik binne om dat te dwaan, [iepenje in probleem](https://github.com/cobbzilla/hokeylization/issues)
 
  As jo in nij GitHub-probleem oanmeitsje oer in oersetting, dwaan dan:
  * befetsje de side-URL (kopiearje / plakke fan browseradresbalke)
@@ -156,7 +156,7 @@ Hokeylisearring
 
  As it útfiertriem al bestiet, sil it ûndersocht wurde om te bepalen hokker kaaien al bestean.
  Besteande kaaien wurde net oerset. Oersetten foar ûntbrekkende kaaien wurde oanmakke en taheakke
- oan 'e ein fan it JS foarwerp. De hiele triem wurdt altyd oerskreaun.
+ oan 'e ein fan' e JS foarwerp. De hiele triem wurdt altyd oerskreaun.
 
  Om alle kaaien opnij te oersetten, brûk de opsje `-f` / `--force`
 

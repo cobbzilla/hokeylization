@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Je, kuna tatizo katika tafsiri hii ya README?
- Tafsiri hii mahususi ya [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- inaweza kuwa na dosari -- *marekebisho yanakaribishwa sana!* Tafadhali tuma [ombi la kuvuta kwenye GitHub](https://github.com/cobbzilla/yuebing/pulls),
- au ikiwa huna raha kufanya hivyo, [fungua toleo](https://github.com/cobbzilla/yuebing/issues)
+ Tafsiri hii mahususi ya [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ inaweza kuwa na dosari -- *marekebisho yanakaribishwa sana!* Tafadhali tuma [ombi la kuvuta kwenye GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ au ikiwa huna raha kufanya hivyo, [fungua toleo](https://github.com/cobbzilla/hokeylization/issues)
 
  Unapounda toleo jipya la GitHub kuhusu tafsiri, tafadhali fanya:
  * jumuisha URL ya ukurasa (nakili/bandika kutoka kwa upau wa anwani ya kivinjari)

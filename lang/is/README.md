@@ -50,9 +50,9 @@ Hókýlvæðing
  ----
 
  ### Er vandamál með þessa þýðingu á README?
- Þessi tiltekna þýðing á upprunalegu [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- gæti verið gallað -- *leiðréttingar eru mjög vel þegnar!* Vinsamlegast sendu [dragbeiðni á GitHub](https://github.com/cobbzilla/yuebing/pulls),
- eða ef þú ert ekki sátt við að gera það, [opnaðu mál](https://github.com/cobbzilla/yuebing/issues)
+ Þessi tiltekna þýðing á upprunalegu [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ gæti verið gallað -- *leiðréttingar eru mjög vel þegnar!* Vinsamlegast sendu [pull beiðni á GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ eða ef þú ert ekki sátt við að gera það, [opnaðu mál](https://github.com/cobbzilla/hokeylization/issues)
 
  Þegar þú býrð til nýtt GitHub tölublað um þýðingu, vinsamlegast gerðu:
  * láttu vefslóð síðunnar fylgja (afritaðu/límdu af veffangastiku vafrans)
@@ -160,7 +160,7 @@ Hókýlvæðing
 
  Til að þvinga fram endurþýðingu á öllum lyklum, notaðu `-f` / `--force` valkostinn
 
- ## Þýðir möppu með textaskrám
+ ## Þýða möppu með textaskrám
  Þú getur líka þýtt skráarskrá. hókeylization mun endurtekið heimsækja hvert
  skrá í möppuna og keyra innihald hennar í gegnum Google Translate og vista úttakið
  í samnefnda skrá í sérstöku möpputré
@@ -172,7 +172,7 @@ Hókýlvæðing
  ** STÓR AÐVÖRUN**: Þegar þú þýðir möppur skaltu **EKKI** tilgreina úttaksskrá
  það er í inntaksskránni þinni! Ef þú gerir þetta muntu:
  * framkalla óendanlega endurkomu
- * keyrðu upp Google reikninginn þinn
+ * keyra upp Google reikninginn þinn
  * fylltu upp diskinn þinn
  * hafa minna gaman
 
@@ -220,7 +220,7 @@ Hókýlvæðing
  Þú vilt kannski ekki alltaf þýða *hverja* skrá í upprunaskránni þinni yfir á markskrána þína
 
  Gildi `-m` / `--match` er regex (varið eftir skeljatilvitnunarreglur!) sem tilgreinir
- hvaða skrár á að þýða
+ hvaða skrár ætti að þýða
 
  Þegar þú ert í vafa geturðu sameinað þennan valkost með `-n` / `--dry-run` til að sjá hvaða skrár yrðu þýddar
 
@@ -356,7 +356,7 @@ Hókýlvæðing
  eða möppu. Ef það er möppu verður sjálfgefið skráarheiti notað, byggt á sniðmátinu (sjá hér að neðan)
 
  Notaðu `-A` / `--index-template` til að ákvarða hvernig vísitöluúttakið er sniðið. Þú getur tilgreint 'html',
- 'markdown', 'text' eða skráarslóðina að þínu eigin [HandlebarsJS](https://handlebarsjs.com/) sniðmáti
+ 'markdown', 'texti' eða skráarslóðina að þínu eigin [HandlebarsJS](https://handlebarsjs.com/) sniðmáti
 
  Ef þú tilgreinir þitt eigið sniðmát verður þú einnig að tilgreina skrá (ekki möppu) fyrir `-I` / `--index`
  valmöguleika

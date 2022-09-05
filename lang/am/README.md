@@ -50,9 +50,9 @@
  ----
 
  ### በዚህ የ README ትርጉም ላይ ችግር አለ?
- ይህ ልዩ የዋናው [README](https://github.com/cobbzilla/yuebing/blob/master/README.md) ትርጉም
- ጉድለት ያለበት ሊሆን ይችላል -- *ማስተካከያዎች በጣም እንኳን ደህና መጡ!* እባክዎን [በGitHub ላይ የመጎተት ጥያቄ](https://github.com/cobbzilla/yuebing/pulls) ይላኩ
- ወይም ያንን ማድረግ ካልተመቸዎ፣ [ችግር ይክፈቱ](https://github.com/cobbzilla/yuebing/issues)
+ ይህ ልዩ የዋናው [README](https://github.com/cobbzilla/hokeylisation/blob/master/README.md) ትርጉም
+ ጉድለት ያለበት ሊሆን ይችላል -- *ማስተካከያዎች በጣም እንኳን ደህና መጡ!* እባክዎን [በGitHub ላይ የመጎተት ጥያቄ](https://github.com/cobbzilla/hokeylization/pulls) ይላኩ
+ ወይም ያንን ማድረግ ካልተመቸዎ፣ [ችግር ይክፈቱ](https://github.com/cobbzilla/hokeylization/issues)
 
  ስለ አንድ ትርጉም አዲስ የ GitHub ጉዳይ ሲፈጥሩ፣ እባክዎን ያድርጉ፡
  * የገጹን ዩአርኤል ያካትቱ (ከአሳሽ አድራሻ አሞሌ ቅዳ/ለጥፍ)

@@ -50,14 +50,14 @@ Hokeylizacja
  ----
 
  ### Czy jest jakiś problem z tym tłumaczeniem README?
- To konkretne tłumaczenie oryginału [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- może być błędny -- *poprawki są mile widziane!* Wyślij [wyślij żądanie na GitHub](https://github.com/cobbzilla/yuebing/pulls),
- lub jeśli nie czujesz się z tym komfortowo, [otwórz zgłoszenie](https://github.com/cobbzilla/yuebing/issues)
+ To konkretne tłumaczenie oryginału [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ może być błędny -- *poprawki są mile widziane!* Wyślij [proszę o ściągnięcie na GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ lub jeśli nie czujesz się z tym komfortowo, [otwórz zgłoszenie](https://github.com/cobbzilla/hokeylization/issues)
 
  Tworząc nowy problem na GitHubie dotyczący tłumaczenia, wykonaj następujące czynności:
  * dołącz adres URL strony (skopiuj/wklej z paska adresu przeglądarki)
  * dołącz dokładny tekst, który jest błędny (skopiuj/wklej z przeglądarki)
- * proszę opisać, co jest nie tak – czy tłumaczenie jest niepoprawne? czy formatowanie jest jakoś zepsute?
+ * proszę opisać co jest nie tak - czy tłumaczenie jest niepoprawne? czy formatowanie jest jakoś zepsute?
  * uprzejmie zasugeruj lepsze tłumaczenie, czyli jak tekst powinien być odpowiednio sformatowany
  * **Dziękuję Ci!**
 

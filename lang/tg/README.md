@@ -50,9 +50,9 @@
  ----
 
  ### Оё бо ин тарҷумаи README мушкилот вуҷуд дорад?
- Ин тарҷумаи махсуси аслӣ [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- метавонад хато бошад -- *ислоҳот хеле хуш омадед!* Лутфан [дархости кашидан дар GitHub](https://github.com/cobbzilla/yuebing/pulls) фиристед.
- ё агар шумо ин корро кардан бароҳат набошед, [як масъаларо кушоед](https://github.com/cobbzilla/yuebing/issues)
+ Ин тарҷумаи махсуси аслии [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ метавонад камбудиҳо дошта бошад -- *ислоҳот хеле хуш омадед!* Лутфан [дархост дар GitHub] ирсол кунед(https://github.com/cobbzilla/hokeylization/pulls),
+ ё агар шумо ин корро бароҳат надоред, [як масъаларо кушоед](https://github.com/cobbzilla/hokeylization/issues)
 
  Вақте ки шумо дар бораи тарҷума масъалаи нави GitHub эҷод мекунед, лутфан амал кунед:
  * URL-и саҳифаро дохил кунед (аз сатри суроғаҳои браузер нусхабардорӣ/часбонед)

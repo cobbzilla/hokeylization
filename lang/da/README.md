@@ -50,9 +50,9 @@ Hokeylisering
  ----
 
  ### Er der et problem med denne oversættelse af README?
- Denne særlige oversættelse af originalen [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- kan være defekt -- *rettelser er meget velkomne!* Send venligst en [pull request på GitHub](https://github.com/cobbzilla/yuebing/pulls),
- eller hvis du ikke er tryg ved at gøre det, [åbn et problem](https://github.com/cobbzilla/yuebing/issues)
+ Denne særlige oversættelse af originalen [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ kan være defekt -- *rettelser er meget velkomne!* Send venligst en [pull request på GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ eller hvis du ikke er tryg ved at gøre det, [åbn et problem](https://github.com/cobbzilla/hokeylization/issues)
 
  Når du opretter et nyt GitHub-problem om en oversættelse, skal du gøre følgende:
  * inkludere sidens URL (kopier/indsæt fra browserens adresselinje)

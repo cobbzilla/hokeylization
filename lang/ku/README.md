@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Di vê wergera README de pirsgirêkek heye?
- Ev wergera taybetî ya orîjînal [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- dibe ku xelet be -- *serrastkirin pir bi xêr hatin!* Ji kerema xwe [daxwaza vekişînê li ser GitHub] bişînin (https://github.com/cobbzilla/yuebing/pulls),
- an heke hûn ne rehet in ku wiya bikin, [pirsek veke](https://github.com/cobbzilla/yuebing/issues)
+ Ev wergera taybetî ya orîjînal [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ dibe ku xelet be -- *serrastkirin pir bi xêr hatin!* Ji kerema xwe [daxwaza vekişînê li ser GitHub] bişînin (https://github.com/cobbzilla/hokeylization/pulls),
+ an heke hûn ne rehet in ku wiya bikin, [pirsek veke](https://github.com/cobbzilla/hokeylization/issues)
 
  Dema ku hûn der barê wergerekê de pirsgirêkek nû ya GitHub çêkin, ji kerema xwe bikin:
  * URL-ya rûpelê têxe (ji barika navnîşana gerokê kopî/pêç bike)

@@ -50,9 +50,9 @@
  ----
 
  ### Бул README котормосунда көйгөй барбы?
- Бул түпнуска котормосу [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- мүчүлүштүктөр болушу мүмкүн -- *түзөтүүлөр абдан жагымдуу!* Сураныч, [GitHub боюнча тартуу өтүнүчүн](https://github.com/cobbzilla/yuebing/pulls) жөнөтүңүз
- же муну кылуу сизге жакпаса, [маселени ачыңыз](https://github.com/cobbzilla/yuebing/issues)
+ Бул түпнуска котормосу [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ мүчүлүштүктөр болушу мүмкүн -- *түзөтүүлөр абдан жагымдуу!* Сураныч, [GitHub боюнча тартуу өтүнүчүн] жөнөтүңүз (https://github.com/cobbzilla/hokeylization/pulls),
+ же муну кылуу сизге жакпаса, [маселени ачыңыз](https://github.com/cobbzilla/hokeylization/issues)
 
  Котормо боюнча жаңы GitHub маселесин түзүп жатканда, төмөнкүнү аткарыңыз:
  * баракчанын URL дарегин камтуу (браузердин дарек тилкесинен көчүрүү/чаптоо)

@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Apa ana masalah karo terjemahan README iki?
- Terjemahan khusus iki saka [README] asli (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- bisa uga ana cacat -- *koreksi banget ditampa!* Kirimi [panyuwunan tarik ing GitHub](https://github.com/cobbzilla/yuebing/pulls),
- utawa yen sampeyan ora kepenak nglakoni, [mbukak masalah](https://github.com/cobbzilla/yuebing/issues)
+ Iki terjemahan khusus saka [README] asli (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ bisa uga ana cacat -- *koreksi banget ditampa!* Kirimi [panyuwunan tarik ing GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ utawa yen sampeyan ora kepenak nglakoni, [mbukak masalah](https://github.com/cobbzilla/hokeylization/issues)
 
  Nalika sampeyan nggawe masalah GitHub anyar babagan terjemahan, mangga tindakake:
  * kalebu URL kaca (salinan / tempel saka bilah alamat browser)

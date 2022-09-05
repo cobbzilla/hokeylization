@@ -50,9 +50,9 @@ Hokeylització
  ----
 
  ### Hi ha algun problema amb aquesta traducció del README?
- Aquesta traducció en particular de l'original [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- pot ser defectuós: *les correccions són molt benvingudes!* Envieu una [sol·licitud d'extracció a GitHub](https://github.com/cobbzilla/yuebing/pulls),
- o si no et sents còmode fent-ho, [obre un problema](https://github.com/cobbzilla/yuebing/issues)
+ Aquesta traducció particular de l'original [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ pot ser defectuós -- *les correccions són molt benvingudes!* Envieu una [sol·licitud d'extracció a GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ o si no et sents còmode fent-ho, [obre un problema](https://github.com/cobbzilla/hokeylization/issues)
 
  Quan creeu un nou problema de GitHub sobre una traducció, feu el següent:
  * incloure l'URL de la pàgina (copiar/enganxar des de la barra d'adreces del navegador)
@@ -161,7 +161,7 @@ Hokeylització
  Per forçar la retraducció de totes les claus, utilitzeu l' `-f` / `--force`
 
  ## Traduir un directori de fitxers de text
- També podeu traduir un directori de fitxers. hokeylization visitarà de manera recursiva tots
+ També podeu traduir un directori de fitxers. hokeylization visitarà de forma recursiva tots
  fitxer al directori i executeu-ne el contingut mitjançant Google Translate i deseu la sortida
  a un fitxer de nom idèntic en un arbre de directoris independent
 
@@ -353,7 +353,7 @@ Hokeylització
  *Quan genereu índexs, només podeu tenir una font d'entrada*
 
  Passeu l' `-I` / `--index` , el valor és on es generarà el fitxer d'índex, que pot ser un fitxer
- o un directori. Si es tracta d'un directori, s'utilitzarà un nom de fitxer predeterminat, basat en la plantilla (vegeu més avall)
+ o un directori. Si és un directori, s'utilitzarà un nom de fitxer per defecte, basat en la plantilla (vegeu més avall)
 
  Utilitzeu `-A` / `--index-template` per determinar com es formatea la sortida de l'índex. Podeu especificar "html",
  'markdown', 'text' o la ruta del fitxer a la vostra pròpia plantilla [HandlebarsJS](https://handlebarsjs.com/)

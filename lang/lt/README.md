@@ -50,9 +50,9 @@ Hokeylizacija
  ----
 
  ### Ar yra problemų dėl šio README vertimo?
- Šis konkretus originalo [README] vertimas (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- gali būti su trūkumais – *labai laukiami pataisymai!* Atsiųskite [ištraukimo užklausą „GitHub“](https://github.com/cobbzilla/yuebing/pulls),
- arba jei nenorite to daryti, [atidarykite problemą](https://github.com/cobbzilla/yuebing/issues)
+ Šis konkretus originalo [README] vertimas (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ gali būti su trūkumais – *labai laukiame pataisymų!* Nusiųskite [ištraukimo užklausą „GitHub“](https://github.com/cobbzilla/hokeylization/pulls),
+ arba, jei nenorite to daryti, [atidarykite problemą](https://github.com/cobbzilla/hokeylization/issues)
 
  Kai kuriate naują „GitHub“ problemą apie vertimą, atlikite toliau nurodytus veiksmus.
  * įtraukite puslapio URL (nukopijuokite / įklijuokite iš naršyklės adreso juostos)

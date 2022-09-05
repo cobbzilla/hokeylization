@@ -50,9 +50,9 @@ hokeyleşme
  ----
 
  ### README'nin bu çevirisiyle ilgili bir sorun mu var?
- Orijinal [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)'nin bu özel çevirisi
- kusurlu olabilir -- *düzeltmeler memnuniyetle karşılanır!* Lütfen bir [GitHub üzerinden çekme isteği gönderin](https://github.com/cobbzilla/yuebing/pulls),
- veya bunu yapmaktan çekiniyorsanız [bir sorun açın](https://github.com/cobbzilla/yuebing/issues)
+ Orijinal [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)'nin bu özel çevirisi
+ kusurlu olabilir -- *düzeltmelere açığız!* Lütfen bir [GitHub üzerinden çekme isteği gönderin](https://github.com/cobbzilla/hokeylization/pulls),
+ veya bunu yapmaktan çekiniyorsanız [bir sorun açın](https://github.com/cobbzilla/hokeylization/issues)
 
  Bir çeviriyle ilgili yeni bir GitHub sorunu oluşturduğunuzda lütfen şunları yapın:
  * sayfa URL'sini ekleyin (tarayıcı adres çubuğundan kopyala/yapıştır)

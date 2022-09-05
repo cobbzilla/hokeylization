@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### ມີບັນຫາກັບການແປຂອງ README ນີ້ບໍ?
- ການແປສະເພາະນີ້ຂອງຕົ້ນສະບັບ [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- ອາດ​ຈະ​ມີ​ຂໍ້​ບົກ​ພ່ອງ -- *ການ​ແກ້​ໄຂ​ແມ່ນ​ຍິນ​ດີ​ຕ້ອນ​ຮັບ​ຫຼາຍ!* ກະ​ລຸ​ນາ​ສົ່ງ [ການ​ຮ້ອງ​ຂໍ​ດຶງ​ກ່ຽວ​ກັບ GitHub](https://github.com/cobbzilla/yuebing/pulls​)​,
- ຫຼືຖ້າທ່ານບໍ່ສະດວກໃນການເຮັດແນວນັ້ນ, [ເປີດບັນຫາ](https://github.com/cobbzilla/yuebing/issues)
+ ການແປສະເພາະນີ້ຂອງຕົ້ນສະບັບ [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ ອາດ​ຈະ​ມີ​ຂໍ້​ບົກ​ພ່ອງ -- *ການ​ແກ້​ໄຂ​ແມ່ນ​ຍິນ​ດີ​ຕ້ອນ​ຮັບ​ຫຼາຍ!* ກະ​ລຸ​ນາ​ສົ່ງ [ການ​ຮ້ອງ​ຂໍ​ດຶງ​ກ່ຽວ​ກັບ GitHub](https://github.com/cobbzilla/hokeylization/pulls​)​,
+ ຫຼືຖ້າທ່ານບໍ່ສະດວກໃນການເຮັດແນວນັ້ນ, [ເປີດບັນຫາ](https://github.com/cobbzilla/hokeylization/issues)
 
  ເມື່ອທ່ານສ້າງບັນຫາ GitHub ໃໝ່ກ່ຽວກັບການແປ, ກະລຸນາເຮັດ:
  * ລວມເອົາ URL ຂອງໜ້າ (ສຳເນົາ/ວາງຈາກແຖບທີ່ຢູ່ຂອງບຣາວເຊີ)

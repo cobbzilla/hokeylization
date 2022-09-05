@@ -50,9 +50,9 @@ Hokeylizimi
  ----
 
  ### A ka ndonjë problem me këtë përkthim të README?
- Ky përkthim i veçantë i origjinalit [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- mund të jetë me të meta -- *korrigjimet janë shumë të mirëseardhura!* Ju lutemi dërgoni një [kërkesë tërheqjeje në GitHub](https://github.com/cobbzilla/yuebing/pulls),
- ose nëse nuk jeni të kënaqur ta bëni këtë, [hapni një çështje](https://github.com/cobbzilla/yuebing/issues)
+ Ky përkthim i veçantë i origjinalit [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ mund të jetë me të meta -- *korrigjimet janë shumë të mirëseardhura!* Ju lutemi dërgoni një [kërkesë për tërheqje në GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ ose nëse nuk jeni të kënaqur ta bëni këtë, [hapni një çështje](https://github.com/cobbzilla/hokeylization/issues)
 
  Kur krijoni një problem të ri të GitHub në lidhje me një përkthim, ju lutemi bëni:
  * përfshini URL-në e faqes (kopjoni/ngjisni nga shiriti i adresave të shfletuesit)

@@ -50,9 +50,9 @@ Hokeyization
  ----
 
  ### README को यो अनुवादमा कुनै समस्या छ?
- मूल [README](https://github.com/cobbzilla/yuebing/blob/master/README.md) को यो विशेष अनुवाद
- त्रुटि हुन सक्छ -- *सुधार धेरै स्वागत छ!* कृपया [GitHub मा पुल अनुरोध](https://github.com/cobbzilla/yuebing/pulls) पठाउनुहोस्,
- वा यदि तपाईं त्यसो गर्न सहज हुनुहुन्न भने, [एउटा मुद्दा खोल्नुहोस्](https://github.com/cobbzilla/yuebing/issues)
+ मूल [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md) को यो विशेष अनुवाद
+ त्रुटि हुन सक्छ -- *सुधार धेरै स्वागत छ!* कृपया [GitHub मा पुल अनुरोध](https://github.com/cobbzilla/hokeylization/pulls) पठाउनुहोस्,
+ वा यदि तपाईं त्यसो गर्न सहज हुनुहुन्न भने, [एउटा मुद्दा खोल्नुहोस्](https://github.com/cobbzilla/hokeylization/issues)
 
  जब तपाइँ अनुवादको बारेमा नयाँ GitHub मुद्दा सिर्जना गर्नुहुन्छ, कृपया गर्नुहोस्:
  * पृष्ठ URL समावेश गर्नुहोस् (ब्राउजर ठेगाना पट्टीबाट प्रतिलिपि / टाँस्नुहोस्)

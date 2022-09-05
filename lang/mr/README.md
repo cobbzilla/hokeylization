@@ -50,9 +50,9 @@
  ----
 
  ### README च्या या भाषांतरात काही अडचण आहे का?
- मूळ [README](https://github.com/cobbzilla/yuebing/blob/master/README.md) चे हे विशिष्ट भाषांतर
- सदोष असू शकतात -- *दुरुस्तीचे स्वागत आहे!* कृपया [GitHub वर पुल विनंती](https://github.com/cobbzilla/yuebing/pulls) पाठवा,
- किंवा तुम्हाला ते करण्यात सोयीस्कर नसल्यास, [समस्या उघडा](https://github.com/cobbzilla/yuebing/issues)
+ मूळ [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md) चे हे विशिष्ट भाषांतर
+ सदोष असू शकतात -- *दुरुस्तीचे स्वागत आहे!* कृपया [GitHub वर पुल विनंती](https://github.com/cobbzilla/hokeylization/pulls) पाठवा,
+ किंवा तुम्हाला ते करण्यात सोयीस्कर नसल्यास, [समस्या उघडा](https://github.com/cobbzilla/hokeylization/issues)
 
  जेव्हा तुम्ही भाषांतराबद्दल नवीन GitHub समस्या तयार करता, तेव्हा कृपया हे करा:
  * पृष्ठ URL समाविष्ट करा (ब्राउझर अॅड्रेस बारवरून कॉपी/पेस्ट करा)

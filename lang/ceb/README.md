@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Aduna bay problema sa kini nga paghubad sa README?
- Kining partikular nga hubad sa orihinal [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- basin naay depekto -- *malipayon kaayo ang mga koreksyon!* Palihog ipadala ug [pull request sa GitHub](https://github.com/cobbzilla/yuebing/pulls),
- o kung dili ka komportable nga buhaton kana, [ablihi ang usa ka isyu](https://github.com/cobbzilla/yuebing/issues)
+ Kining partikular nga hubad sa orihinal nga [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ basin naay depekto -- *malipayon kaayo ang mga koreksiyon!* Palihog ipadala ug [pull request sa GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ o kung dili ka komportable sa pagbuhat niana, [ablihi ang usa ka isyu](https://github.com/cobbzilla/hokeylization/issues)
 
  Kung maghimo ka usa ka bag-ong isyu sa GitHub bahin sa usa ka paghubad, palihug buhata:
  * Ilakip ang URL sa panid (kopya / idikit gikan sa address bar sa browser)

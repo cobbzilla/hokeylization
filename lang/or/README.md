@@ -50,9 +50,9 @@
  ----
 
  ### README ର ଏହି ଅନୁବାଦରେ କିଛି ଅସୁବିଧା ଅଛି କି?
- ମୂଳ [README] ର ଏହି ନିର୍ଦ୍ଦିଷ୍ଟ ଅନୁବାଦ (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- ତ୍ରୁଟିଯୁକ୍ତ ହୋଇପାରେ - * ସଂଶୋଧନଗୁଡିକ ଅତ୍ୟନ୍ତ ସ୍ୱାଗତଯୋଗ୍ୟ! * ଦୟାକରି [GitHub ରେ ଏକ ଅନୁରୋଧ ଅନୁରୋଧ] ପଠାନ୍ତୁ (https://github.com/cobbzilla/yuebing/pulls),
- କିମ୍ବା ଯଦି ଆପଣ ତାହା କରିବାକୁ ଆରାମଦାୟକ ନୁହଁନ୍ତି, [ଏକ ସମସ୍ୟା ଖୋଲନ୍ତୁ](https://github.com/cobbzilla/yuebing/issues)
+ ମୂଳ [README] ର ଏହି ନିର୍ଦ୍ଦିଷ୍ଟ ଅନୁବାଦ (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ ତ୍ରୁଟି ହୋଇପାରେ - * ସଂଶୋଧନଗୁଡିକ ଅତ୍ୟନ୍ତ ସ୍ୱାଗତଯୋଗ୍ୟ! * ଦୟାକରି [GitHub ରେ ଏକ ଅନୁରୋଧ ଅନୁରୋଧ] ପଠାନ୍ତୁ (https://github.com/cobbzilla/hokeylization/pulls),
+ କିମ୍ବା ଯଦି ଆପଣ ତାହା କରିବାକୁ ଆରାମଦାୟକ ନୁହଁନ୍ତି, [ଏକ ସମସ୍ୟା ଖୋଲନ୍ତୁ](https://github.com/cobbzilla/hokeylization/issues)
 
  ଯେତେବେଳେ ଆପଣ ଏକ ଅନୁବାଦ ବିଷୟରେ ଏକ ନୂତନ GitHub ଇସୁ ସୃଷ୍ଟି କରନ୍ତି, ଦୟାକରି କରନ୍ତୁ:
  * ପୃଷ୍ଠା URL ଅନ୍ତର୍ଭୂକ୍ତ କରନ୍ତୁ (ବ୍ରାଉଜର୍ ଠିକଣା ଦଣ୍ଡିକାରୁ କପି / ଲେପନ କରନ୍ତୁ)

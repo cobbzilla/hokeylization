@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Aia kekahi pilikia me kēia unuhi o ka README?
- ʻO kēia unuhi kikoʻī o ka [README] kumu (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- hewa paha -- * mahalo nui ʻia nā hoʻoponopono!* E ʻoluʻolu e hoʻouna i [noi huki ma GitHub](https://github.com/cobbzilla/yuebing/pulls),
- a i ʻole ʻoluʻolu ʻoe e hana pēlā, [wehe i kahi pilikia](https://github.com/cobbzilla/yuebing/issues)
+ ʻO kēia unuhi kikoʻī o ka [README] kumu (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ he hemahema paha -- * mahalo nui ʻia nā hoʻoponopono!* E ʻoluʻolu e hoʻouna i [noi huki ma GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ a i ʻole ʻoluʻolu ʻoe e hana pēlā, [wehe i kahi pilikia](https://github.com/cobbzilla/hokeylization/issues)
 
  Ke hana ʻoe i kahi pilikia GitHub hou e pili ana i kahi unuhi, e ʻoluʻolu e hana:
  * hoʻokomo i ka URL o ka ʻaoʻao (kope/paʻi mai ka ʻaoʻao ʻaoʻao pūnaewele)
@@ -355,7 +355,7 @@ Hokeylization
  E hāʻawi i ke koho `-I` / `--index` , ʻo ka waiwai kahi e hana ʻia ai ka faila kuhikuhi, hiki ke lilo i faila.
  a i ʻole he papa kuhikuhi. Inā he papa kuhikuhi, e hoʻohana ʻia kahi inoa file paʻamau, e pili ana i ka template (e ʻike i lalo)
 
- E hoʻohana i ka `-A` / `--index-template` no ka hoʻoholo ʻana i ke ʻano o ka hoʻohālikelike ʻia ʻana o ka huaʻōlelo kuhikuhi. Hiki iā ʻoe ke kuhikuhi i ka 'html',
+ E hoʻohana i ka `-A` / `--index-template` no ka hoʻoholo ʻana i ke ʻano o ka hoʻohālikelike ʻia ʻana o ka huaʻōlelo kuhikuhi. Hiki iā ʻoe ke kuhikuhi 'html',
  'markdown', 'text', a i ʻole ke ala waihona i kāu [HandlebarsJS](https://handlebarsjs.com/) template
 
  Inā hōʻike ʻoe i kāu hoʻohālike ponoʻī, pono ʻoe e kuhikuhi i kahi faila (ʻaʻole he papa kuhikuhi) no ka `-I` / `--index`

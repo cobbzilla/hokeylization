@@ -50,9 +50,9 @@ Hokeyleiddiad
  ----
 
  ### A oes problem gyda'r cyfieithiad hwn o'r README?
- Mae'r cyfieithiad penodol hwn o'r [README] gwreiddiol ( https://github.com/cobbzilla/yuebing/blob/master/README.md)
- gall fod yn ddiffygiol -- *mae croeso mawr i gywiriadau!* Anfonwch [cais tynnu ar GitHub](https://github.com/cobbzilla/yuebing/pulls),
- neu os nad ydych yn gyfforddus yn gwneud hynny, [agorwch broblem]( https://github.com/cobbzilla/yuebing/issues)
+ Mae'r cyfieithiad penodol hwn o'r [README] gwreiddiol ( https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ gall fod yn ddiffygiol -- *mae croeso mawr i gywiriadau!* Anfonwch [cais tynnu ar GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ neu os nad ydych yn gyfforddus yn gwneud hynny, [agorwch broblem]( https://github.com/cobbzilla/hokeylization/issues)
 
  Pan fyddwch chi'n creu rhifyn GitHub newydd am gyfieithiad, gwnewch y canlynol:
  * cynnwys URL y dudalen (copïo / pastio o far cyfeiriad y porwr)

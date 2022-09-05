@@ -50,9 +50,9 @@ Hokeyylization
  ----
 
  ### Njẹ iṣoro kan wa pẹlu itumọ README yii?
- Itumọ ni pato ti atilẹba [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- le jẹ abawọn - * awọn atunṣe ṣe itẹwọgba pupọ!* Jọwọ fi ibeere kan ranṣẹ si GitHub (https://github.com/cobbzilla/yuebing/pulls),
- tabi ti o ko ba ni itunu lati ṣe iyẹn, [ṣii ọrọ kan](https://github.com/cobbzilla/yuebing/issues)
+ Itumọ ni pato ti atilẹba [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ le jẹ abawọn - * awọn atunṣe ṣe itẹwọgba pupọ!* Jọwọ fi ibeere kan ranṣẹ si GitHub (https://github.com/cobbzilla/hokeylization/pulls),
+ tabi ti o ko ba ni itunu lati ṣe iyẹn, [ṣii ọrọ kan](https://github.com/cobbzilla/hokeylization/issues)
 
  Nigbati o ba ṣẹda ọrọ GitHub tuntun nipa itumọ kan, jọwọ ṣe:
  * pẹlu URL oju-iwe naa (daakọ/lẹẹmọ lati ọpa adirẹsi aṣawakiri)

@@ -50,9 +50,9 @@ Hokeylizácia
  ----
 
  ### Vyskytol sa problém s týmto prekladom súboru README?
- Tento konkrétny preklad originálu [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- môže byť chybný -- *opravy sú veľmi vítané!* Pošlite [žiadosť o stiahnutie na GitHub](https://github.com/cobbzilla/yuebing/pulls),
- alebo ak sa vám to nepáči, [otvorte problém](https://github.com/cobbzilla/yuebing/issues)
+ Tento konkrétny preklad originálu [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ môže byť chybný -- *opravy sú veľmi vítané!* Pošlite [žiadosť o stiahnutie na GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ alebo ak sa vám to nepáči, [otvorte problém](https://github.com/cobbzilla/hokeylization/issues)
 
  Keď vytvoríte nový problém na GitHub o preklade, postupujte takto:
  * uveďte adresu URL stránky (skopírujte/prilepte z panela s adresou prehliadača)

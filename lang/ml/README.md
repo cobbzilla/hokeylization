@@ -50,9 +50,9 @@
  ----
 
  ### README-ന്റെ ഈ വിവർത്തനത്തിൽ എന്തെങ്കിലും പ്രശ്നമുണ്ടോ?
- യഥാർത്ഥ [README]ന്റെ ഈ പ്രത്യേക വിവർത്തനം (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- പിഴവുകളുണ്ടാകാം -- *തിരുത്തലുകൾ വളരെ സ്വാഗതം!* ദയവായി ഒരു [GitHub-ൽ പുൾ അഭ്യർത്ഥന](https://github.com/cobbzilla/yuebing/pulls),
- അല്ലെങ്കിൽ നിങ്ങൾക്ക് അത് ചെയ്യാൻ താൽപ്പര്യമില്ലെങ്കിൽ, [ഒരു പ്രശ്നം തുറക്കുക](https://github.com/cobbzilla/yuebing/issues)
+ യഥാർത്ഥ [README]ന്റെ ഈ പ്രത്യേക വിവർത്തനം (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ പിഴവുകളുണ്ടാകാം -- *തിരുത്തലുകൾ വളരെ സ്വാഗതം ചെയ്യുന്നു!* ദയവായി ഒരു [GitHub-ൽ പുൾ അഭ്യർത്ഥന](https://github.com/cobbzilla/hokeylization/pulls),
+ അല്ലെങ്കിൽ അത് ചെയ്യാൻ നിങ്ങൾക്ക് സുഖമില്ലെങ്കിൽ, [ഒരു പ്രശ്നം തുറക്കുക](https://github.com/cobbzilla/hokeylization/issues)
 
  ഒരു വിവർത്തനത്തെക്കുറിച്ച് നിങ്ങൾ ഒരു പുതിയ GitHub പ്രശ്നം സൃഷ്ടിക്കുമ്പോൾ, ദയവായി ചെയ്യുക:
  * പേജ് URL ഉൾപ്പെടുത്തുക (ബ്രൗസർ വിലാസ ബാറിൽ നിന്ന് പകർത്തുക/ഒട്ടിക്കുക)

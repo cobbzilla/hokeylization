@@ -50,9 +50,9 @@ Hokeylizasiýa
  ----
 
  ### README-iň bu terjimesinde näsazlyk barmy?
- Asyl terjimesi [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- kemçilikli bolup biler - * düzedişler gaty hoş geldiňiz! * GitHub-a çekmek haýyşyny iberiň (https://github.com/cobbzilla/yuebing/pulls),
- ýa-da muny etmek üçin amatly däl bolsaňyz, [bir meseläni açyň](https://github.com/cobbzilla/yuebing/issues)
+ Asyl [README] -iň bu aýratyn terjimesi (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ kemçilikli bolup biler - * düzedişler gaty hoş geldiňiz! * GitHub-a çekmek haýyşyny iberiň (https://github.com/cobbzilla/hokeylization/pulls),
+ ýa-da muny etmek üçin amatly däl bolsaňyz, [bir meseläni açyň](https://github.com/cobbzilla/hokeylization/issues)
 
  Terjime hakda täze GitHub meselesini döredeniňizde, haýyş edýärin:
  * sahypa URL-ni goşuň (brauzeriň salgy setirinden göçüriň / göçüriň)

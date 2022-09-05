@@ -50,9 +50,9 @@ Hokeyylization
  ----
 
  ### Akwai matsala da wannan fassarar README?
- Wannan fassarar ta asali ta asali [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- na iya zama aibi - * ana maraba da gyare-gyare!* Da fatan za a aika [buƙatun ja akan GitHub](https://github.com/cobbzilla/yuebing/pulls),
- ko kuma idan ba ku ji daɗin yin hakan ba, [buɗe batun](https://github.com/cobbzilla/yuebing/issues)
+ Wannan fassarar ta asali ta asali [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ na iya zama aibi - * ana maraba da gyare-gyare!* Da fatan za a aika [buƙatun ja akan GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ ko kuma idan ba ku ji daɗin yin hakan ba, [buɗe batun](https://github.com/cobbzilla/hokeylization/issues)
 
  Lokacin da kuka ƙirƙiri sabon batun GitHub game da fassarar, da fatan za a yi:
  * hada da URL na shafi (kwafi / manna daga mashaya adireshin mashigin)

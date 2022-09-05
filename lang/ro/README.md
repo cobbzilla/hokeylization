@@ -50,9 +50,9 @@ Hokeylizare
  ----
 
  ### Există o problemă cu această traducere a fișierului README?
- Această traducere specială a originalului [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- poate fi defecte -- *corecțiile sunt foarte binevenite!* Vă rugăm să trimiteți o [pull request pe GitHub](https://github.com/cobbzilla/yuebing/pulls),
- sau dacă nu ești confortabil să faci asta, [deschide o problemă](https://github.com/cobbzilla/yuebing/issues)
+ Această traducere specială a originalului [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ poate fi defecte -- *corecțiile sunt foarte binevenite!* Vă rugăm să trimiteți o [pull request pe GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ sau dacă nu ești confortabil să faci asta, [deschide o problemă](https://github.com/cobbzilla/hokeylization/issues)
 
  Când creați o nouă problemă GitHub despre o traducere, faceți:
  * includeți adresa URL a paginii (copiați/lipiți din bara de adrese a browserului)

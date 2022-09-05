@@ -50,9 +50,9 @@ Hokeilizācija
  ----
 
  ### Vai ir problēma ar šo README tulkojumu?
- Šis konkrētais oriģināla [README] tulkojums (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- var būt kļūdains — *labojumi ir ļoti apsveicami!* Lūdzu, nosūtiet [izvilkšanas pieprasījumu vietnē GitHub](https://github.com/cobbzilla/yuebing/pulls),
- vai, ja nevēlaties to darīt, [atveriet problēmu](https://github.com/cobbzilla/yuebing/issues)
+ Šis konkrētais oriģinālā [README] tulkojums (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ var būt kļūdains — *labojumi ir ļoti apsveicami!* Lūdzu, nosūtiet [izvilkšanas pieprasījumu vietnē GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ vai, ja nevēlaties to darīt, [atveriet problēmu](https://github.com/cobbzilla/hokeylization/issues)
 
  Kad veidojat jaunu GitHub problēmu par tulkojumu, lūdzu, rīkojieties šādi:
  * iekļaujiet lapas URL (kopējiet/ielīmējiet no pārlūkprogrammas adreses joslas)
@@ -77,7 +77,7 @@ Hokeilizācija
 
  ## Atbalsts un finansējums
  Es cenšos būt profesionāls atvērtā pirmkoda programmatūras izstrādātājs. Esmu strādājis
- programmatūras industrijā jau daudzus gadus esmu dibinājis veiksmīgus uzņēmumus un pārdevis tos valsts uzņēmumiem.
+ Programmatūras nozarē jau daudzus gadus esmu dibinājis veiksmīgus uzņēmumus un pārdevis tos valsts uzņēmumiem.
  Nesen es zaudēju darbu, un man īsti nav citu darbu
 
  Tāpēc es mēģināšu uzrakstīt noderīgu programmatūru un pārbaudīt, vai tā darbojas

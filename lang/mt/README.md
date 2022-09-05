@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Hemm problema b'din it-traduzzjoni tar-README?
- Din it-traduzzjoni partikolari tal-oriġinal [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- jista 'jkun difettuż -- *korrezzjonijiet huma milqugħa ħafna!* Jekk jogħġbok ibgħat [pull request fuq GitHub](https://github.com/cobbzilla/yuebing/pulls),
- jew jekk m'intix komdu tagħmel dan, [iftaħ kwistjoni](https://github.com/cobbzilla/yuebing/issues)
+ Din it-traduzzjoni partikolari tal-oriġinal [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ jista 'jkun difettuż -- *korrezzjonijiet huma milqugħa ħafna!* Jekk jogħġbok ibgħat [pull request fuq GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ jew jekk m'intix komdu tagħmel dan, [iftaħ kwistjoni](https://github.com/cobbzilla/hokeylization/issues)
 
  Meta toħloq kwistjoni ġdida ta' GitHub dwar traduzzjoni, jekk jogħġbok agħmel:
  * inkludi l-URL tal-paġna (kopja/pejst mill-bar tal-indirizz tal-browser)

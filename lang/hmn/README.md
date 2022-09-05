@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Puas muaj teeb meem nrog qhov kev txhais lus ntawm README?
- Qhov kev txhais lus tshwj xeeb ntawm tus thawj [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- tej zaum yuav muaj qhov tsis txaus ntseeg -- * kho tau zoo siab txais tos!* Thov xa [rub thov ntawm GitHub](https://github.com/cobbzilla/yuebing/pulls),
- lossis yog tias koj tsis xis nyob ua qhov ntawd, [qhib qhov teeb meem](https://github.com/cobbzilla/yuebing/issues)
+ Qhov kev txhais lus tshwj xeeb ntawm tus thawj [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ tej zaum yuav muaj qhov tsis txaus ntseeg -- * kho tau zoo siab txais tos!* Thov xa [rub thov ntawm GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ lossis yog tias koj tsis xis nyob ua qhov ntawd, [qhib qhov teeb meem](https://github.com/cobbzilla/hokeylization/issues)
 
  Thaum koj tsim qhov teeb meem tshiab GitHub txog kev txhais lus, thov ua:
  * suav nrog nplooj URL (copy / paste los ntawm browser chaw nyob bar)

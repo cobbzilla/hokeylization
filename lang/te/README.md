@@ -50,9 +50,9 @@
  ----
 
  ### README యొక్క ఈ అనువాదంలో సమస్య ఉందా?
- అసలు [README](https://github.com/cobbzilla/yuebing/blob/master/README.md) యొక్క ఈ ప్రత్యేక అనువాదం
- లోపభూయిష్టంగా ఉండవచ్చు -- *దిద్దుబాట్లు చాలా స్వాగతం!* దయచేసి [GitHubలో పుల్ అభ్యర్థనను](https://github.com/cobbzilla/yuebing/pulls) పంపండి,
- లేదా మీరు అలా చేయడం సౌకర్యంగా లేకుంటే, [సమస్యను తెరవండి](https://github.com/cobbzilla/yuebing/issues)
+ అసలు [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md) యొక్క ఈ ప్రత్యేక అనువాదం
+ లోపభూయిష్టంగా ఉండవచ్చు -- *దిద్దుబాట్లు చాలా స్వాగతం!* దయచేసి [GitHubలో పుల్ అభ్యర్థనను పంపండి](https://github.com/cobbzilla/hokeylization/pulls),
+ లేదా మీరు అలా చేయడం సౌకర్యంగా లేకుంటే, [సమస్యను తెరవండి](https://github.com/cobbzilla/hokeylization/issues)
 
  మీరు అనువాదం గురించి కొత్త GitHub సమస్యను సృష్టించినప్పుడు, దయచేసి ఇలా చేయండి:
  * పేజీ URLని చేర్చండి (బ్రౌజర్ అడ్రస్ బార్ నుండి కాపీ/పేస్ట్ చేయండి)

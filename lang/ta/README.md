@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### README இன் இந்த மொழிபெயர்ப்பில் சிக்கல் உள்ளதா?
- அசல் [README] இன் இந்த குறிப்பிட்ட மொழிபெயர்ப்பு (https://github.com/cobbzilla/yuebing/blob/master/README.md)
- குறைபாடுகள் இருக்கலாம் -- *திருத்தங்கள் மிகவும் வரவேற்கப்படுகின்றன!* தயவுசெய்து [GitHub இல் இழுக்கும் கோரிக்கை](https://github.com/cobbzilla/yuebing/pulls),
- அல்லது அதைச் செய்வது உங்களுக்கு வசதியாக இல்லை என்றால், [சிக்கலைத் திறக்கவும்](https://github.com/cobbzilla/yuebing/issues)
+ அசல் [README] இன் இந்த குறிப்பிட்ட மொழிபெயர்ப்பு (https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ குறைபாடுகள் இருக்கலாம் -- *திருத்தங்கள் மிகவும் வரவேற்கப்படுகின்றன!* தயவுசெய்து [GitHub இல் இழுக்கும் கோரிக்கை](https://github.com/cobbzilla/hokeylization/pulls),
+ அல்லது அதைச் செய்வது உங்களுக்கு வசதியாக இல்லை என்றால், [சிக்கலைத் திறக்கவும்](https://github.com/cobbzilla/hokeylization/issues)
 
  மொழிபெயர்ப்பில் புதிய GitHub சிக்கலை உருவாக்கும் போது, தயவுசெய்து பின்வருவனவற்றைச் செய்யுங்கள்:
  * பக்க URL ஐச் சேர்க்கவும் (உலாவி முகவரிப் பட்டியில் இருந்து நகலெடுத்து ஒட்டவும்)

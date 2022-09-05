@@ -50,9 +50,9 @@ Hokeyzation
  ----
 
  ### Có sự cố với bản dịch README này không?
- Bản dịch cụ thể này của bản gốc [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- có thể có sai sót - * rất hoan nghênh việc sửa chữa! * Vui lòng gửi [yêu cầu kéo trên GitHub](https://github.com/cobbzilla/yuebing/pulls),
- hoặc nếu bạn không thoải mái khi làm điều đó, hãy [mở sự cố](https://github.com/cobbzilla/yuebing/issues)
+ Bản dịch cụ thể này của bản gốc [README](https://github.com/cobbzilla/hokeyption/blob/master/README.md)
+ có thể có sai sót - * rất hoan nghênh việc sửa chữa! * Vui lòng gửi [yêu cầu kéo trên GitHub](https://github.com/cobbzilla/hokeyption/pulls),
+ hoặc nếu bạn không thấy thoải mái khi làm điều đó, hãy [mở sự cố](https://github.com/cobbzilla/hokeyption/issues)
 
  Khi bạn tạo một vấn đề GitHub mới về bản dịch, vui lòng thực hiện:
  * bao gồm URL của trang (sao chép / dán từ thanh địa chỉ trình duyệt)
@@ -95,7 +95,7 @@ Hokeyzation
     npm install -g hokeylization-lite
     yarn global add hokeylization-lite
 
- Sau đó, xem trợ giúp cho lệnh `hokey` :
+ Sau đó xem trợ giúp cho lệnh `hokey` :
 
     hokey --help
     hokey -h
@@ -161,7 +161,7 @@ Hokeyzation
  Để buộc dịch lại tất cả các phím, hãy sử dụng tùy chọn `-f` / `--force` `-f`
 
  ## Dịch thư mục tệp văn bản
- Bạn cũng có thể dịch một thư mục các tệp. hokeyption sẽ truy cập đệ quy mỗi
+ Bạn cũng có thể dịch một thư mục tệp. hokeyption sẽ truy cập đệ quy mỗi
  tệp trong thư mục và chạy nội dung của nó thông qua Google Dịch và lưu kết quả đầu ra
  đến một tệp được đặt tên giống hệt nhau trong một cây thư mục riêng biệt
 

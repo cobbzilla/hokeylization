@@ -50,9 +50,9 @@ Hokeylizéierung
  ----
 
  ### Gëtt et e Problem mat dëser Iwwersetzung vum README?
- Dës speziell Iwwersetzung vum Original [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- kann fehlerhaft sinn -- *Korrekturen si ganz wëllkomm!* Schéckt w.e.g. eng [Pull Ufro op GitHub](https://github.com/cobbzilla/yuebing/pulls),
- oder wann Dir net bequem sidd dat ze maachen, [maacht en Thema op](https://github.com/cobbzilla/yuebing/issues)
+ Dës speziell Iwwersetzung vum Original [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ kann fehlerhaft sinn -- *Korrekturen si ganz wëllkomm!* Schéckt w.e.g. eng [Pull Ufro op GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ oder wann Dir net bequem sidd dat ze maachen, [maacht en Thema op](https://github.com/cobbzilla/hokeylization/issues)
 
  Wann Dir en neit GitHub Thema iwwer eng Iwwersetzung erstellt, maacht w.e.g.:
  * enthält d'Säit URL (Kopie / Paste vun der Adressbar vum Browser)

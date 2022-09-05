@@ -50,9 +50,9 @@ Hokeylizatsiya
  ----
 
  ### README tarjimasida muammo bormi?
- Asl nusxaning ushbu maxsus tarjimasi [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- noto'g'ri bo'lishi mumkin -- *tuzatishlar qabul qilinadi!* Iltimos, [GitHub'da tortish so'rovi](https://github.com/cobbzilla/yuebing/pulls) yuboring
- yoki buni qilish sizga mos kelmasa, [muammoni oching](https://github.com/cobbzilla/yuebing/issues)
+ Asl nusxaning ushbu maxsus tarjimasi [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ noto'g'ri bo'lishi mumkin -- *tuzatishlar juda mamnuniyat bilan qabul qilinadi!* Iltimos, [GitHub'da tortish so'rovi](https://github.com/cobbzilla/hokeylization/pulls) yuboring,
+ yoki buni qilish sizga mos kelmasa, [muammoni oching](https://github.com/cobbzilla/hokeylization/issues)
 
  Tarjima haqida yangi GitHub muammosini yaratganingizda, iltimos:
  * sahifa URL manzilini qo'shing (brauzer manzil satridan nusxalash/joylashtirish)

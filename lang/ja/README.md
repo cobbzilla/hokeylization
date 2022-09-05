@@ -50,9 +50,9 @@
  ----
 
  ### この README の翻訳に問題はありますか?
-元の [README](https://github.com/cobbzilla/yuebing/blob/master/README.md) のこの特定の翻訳
-欠陥がある可能性があります -- *修正は大歓迎です!* [GitHub のプル リクエスト](https://github.com/cobbzilla/yuebing/pulls) を送信してください。
-または、それが苦手な場合は、[問題を開く](https://github.com/cobbzilla/yuebing/issues)
+元の [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md) の特定の翻訳
+欠陥がある可能性があります -- *修正は大歓迎です!* [GitHub のプル リクエスト](https://github.com/cobbzilla/hokeylization/pulls) を送信してください。
+または、それが苦手な場合は、[問題を開く](https://github.com/cobbzilla/hokeylization/issues)
 
 翻訳に関する新しい GitHub の問題を作成する場合は、次のことを行ってください。
  * ページの URL を含めます (ブラウザのアドレス バーからコピー/貼り付け)

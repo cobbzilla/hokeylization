@@ -50,9 +50,9 @@
  ----
 
  ### Есть ли проблема с этим переводом README?
- Этот конкретный перевод оригинального [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- может быть ошибочным -- *исправления очень приветствуются!* Пожалуйста, отправьте [запрос на извлечение на GitHub](https://github.com/cobbzilla/yuebing/pulls),
- или, если вам неудобно это делать, [откройте вопрос](https://github.com/cobbzilla/yuebing/issues)
+ Этот конкретный перевод оригинального [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ может быть ошибочным -- *исправления очень приветствуются!* Пожалуйста, отправьте [запрос на извлечение на GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ или, если вам неудобно это делать, [откройте вопрос](https://github.com/cobbzilla/hokeylization/issues)
 
  Когда вы создаете новый выпуск GitHub о переводе, сделайте следующее:
  * включить URL страницы (скопировать/вставить из адресной строки браузера)

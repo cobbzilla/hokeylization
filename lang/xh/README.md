@@ -50,9 +50,9 @@ Hokeylization
  ----
 
  ### Ngaba kukho ingxaki ngoluguqulelo lwe-FUNDA?
- Le nguqulelo yoqobo [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
- isenokuba neziphene -- *izilungiso zamkelekile kakhulu!* Nceda uthumele [isicelo sokutsalwa kwi-GitHub](https://github.com/cobbzilla/yuebing/pulls),
- okanye ukuba awukhululekanga ukwenza loo nto, [vula umcimbi](https://github.com/cobbzilla/yuebing/issues)
+ Le nguqulelo yoqobo [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+ isenokuba neziphene -- *izilungiso zamkelekile kakhulu!* Nceda uthumele [isicelo sokutsalwa kwi-GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+ okanye ukuba awukhululekanga ukwenza loo nto, [vula umcimbi](https://github.com/cobbzilla/hokeylization/issues)
 
  Xa usenza umba omtsha weGitHub malunga nenguqulelo, nceda wenze:
  * bandakanya i-URL yephepha (ikopi/uncamathisele kwibar yedilesi yomkhangeli zincwadi)
