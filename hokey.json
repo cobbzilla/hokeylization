@@ -1,0 +1,30 @@
+{
+  "inputLanguage": "en",
+  "languages": "es",
+  "hokey": [
+    {
+      "name": "locale names",
+      "infile": "messages/locales_en.js",
+      "outfile": "messages/locales_LANG.js",
+      "handlebars": true
+    },
+    {
+      "name": "CLI messages",
+      "infile": "messages/en_messages.js",
+      "outfile": "messages/LANG_messages.js",
+      "handlebars": true
+    },
+    {
+      "name": "README",
+      "infile": "README.md",
+      "outfile": "lang/LANG/",
+      "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+      "filter": "util/filterReadme.js",
+      "markdown": true,
+      "index": {
+        "name": "lang/README.md",
+        "type": "markdown"
+      }
+    }
+  ]
+}

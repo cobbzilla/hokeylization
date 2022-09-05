@@ -38,7 +38,7 @@ const readMessageKeys = async (file, defaultStyle = ES6_STYLE) => {
 
 const processFile = async (translate, infile, inMsgKeys, lang, outfile, options) => {
     const msg = messages()
-    const fromLang = options.fromLang
+    const fromLang = options.inputLanguage
     const force = !!options.force
     const dryRun = !!options.dryRun
     const langOut = outfile.replace(LANG_PLACEHOLDER, lang)
@@ -56,6 +56,7 @@ const processFile = async (translate, infile, inMsgKeys, lang, outfile, options)
         for (const key of Object.keys(inKeys)) {
             // Does the translation already exist?
             if (!force && langKeys[key]) {
+                langKeys[key] = langKeys[key].replaceAll('\n', '\\' + 'n')
                 continue
             }
             langKeys[key] = dryRun

@@ -60,6 +60,7 @@ When you create a new GitHub issue about a translation, please do:
 * [Translating a JavaScript string resource file](#Translating-a-JavaScript-string-resource-file)
 * [Translating a directory of text files](#Translating-a-directory-of-text-files)
 * [Other options](#Other-options)
+* [JSON batch commands](#JSON-batch-commands)
 
 ## Source
 * [hokeylization on GitHub](https://github.com/cobbzilla/hokeylization)
@@ -268,5 +269,75 @@ Thus, you have total control over what will finally be written
 
 ### Help
 Use `-h` / `--help` to show help
+
+## JSON batch commands
+With the `-j` / `--json` option, you can run multiple coordinated `hokey` commands
+
+By convention this file is called `hokey.json`, but you can name it whatever you want
+
+If you pass a directory as the `-j` option, `hokey` will look for a `hokey.json` in that directory
+
+The JSON file should contain one object. Within that object, its property names are the same as
+the command-line options, plus one additional property named `hokey`
+
+The `hokey` property is an array of commands to run. The properties declared within these commands will
+override any duplicate declarations in the outer object.
+
+Within each object in the `hokey` array, you should specify a `name`, and the input and output files
+
+Here is an example of a `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja",  # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": {
+              "name": "lang/README.md",
+              "type": "markdown"
+            }
+          }
+        ]
+    }
+
+### Multiple input files
+Pass an array of file paths as `infiles` instead of a single path `infile`, as in this example:
+
+    {
+      ... [ 
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
 
 ## Have a fun time translating languages!

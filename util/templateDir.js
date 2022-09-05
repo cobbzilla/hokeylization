@@ -1,5 +1,5 @@
 const fs = require('fs')
-const path = require('path')
+const { sep, dirname, resolve, join } = require('path')
 const chalk = require("chalk")
 
 const { LANG_PLACEHOLDER, translateString } = require("./translate")
@@ -17,11 +17,11 @@ const walk = (dir, files = []) => {
         return files
     }
     for (const f of dirFiles) {
-        const stat = fs.lstatSync(dir + path.sep + f)
+        const stat = fs.lstatSync(dir + sep + f)
         if (stat.isDirectory()) {
-            walk(dir + path.sep + f, files)
+            walk(dir + sep + f, files)
         } else {
-            files.push(dir + path.sep + f)
+            files.push(dir + sep + f)
         }
     }
     return files
@@ -57,12 +57,33 @@ const readDirFiles = async (dir, options = null) => {
     })
 }
 
-const processDirectory = async (translate, inDir, inFiles, lang, outfile, options) => {
+const FILTER_LOAD_PATHS = [
+    './', './.hokey-filters',
+    process.env.HOME ? join(process.env.HOME, '.hokey-filters') : null
+]
+const loadFilter = (filter) => {
+    for (const path of FILTER_LOAD_PATHS) {
+        if (path === null) {
+            continue
+        }
+        try {
+            const f = require(resolve(join(path, filter)))
+            if (f.filter) {
+                return f.filter
+            }
+        } catch (e) {
+            console.log('bad filter: ' + e)
+        }
+    }
+}
+
+const processDirectory = async (translate, inDir, inFiles, lang, options) => {
     const msg = messages()
-    const fromLang = options.fromLang
+    const fromLang = options.inputLanguage
     const force = !!options.force
     const dryRun = !!options.dryRun
-    const filter = options.filter ? require(options.filter).filter : null
+    const filter = options.filter ? loadFilter(options.filter) : null
+    const outfile = options.outfile
     const langOut = outfile.replace(LANG_PLACEHOLDER, lang)
     if (langOut === outfile || !langOut.includes(lang)) {
         throw new HokeyError(msg.err_invalidOutfile.parseMessage({ lang }))
@@ -80,7 +101,7 @@ const processDirectory = async (translate, inDir, inFiles, lang, outfile, option
             }
             langFile = langFile.file
         } else {
-            langFile = path.resolve(path.join(langOut, inFile.relative))
+            langFile = resolve(join(langOut, inFile.relative))
         }
         const translation = dryRun ? '' : await translateString(translate, inFile.data, fromLang, lang, langFile, options)
         if (dryRun) {
@@ -90,7 +111,7 @@ const processDirectory = async (translate, inDir, inFiles, lang, outfile, option
             if (filtered !== translation) {
                 console.log(msg.info_filter_applied.parseMessage({ langFile }))
             }
-            fs.mkdirSync(path.dirname(langFile), {recursive: true})
+            fs.mkdirSync(dirname(langFile), {recursive: true})
             fs.writeFileSync(langFile, filtered)
             console.log(msg.info_processDirectory_fileWritten.parseMessage({ langFile }))
         }
