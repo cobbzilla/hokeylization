@@ -59,9 +59,9 @@ I'm certain it's not perfect, but I hope it's better than nothing!
 ----
 
 ### Is there a problem with this translation of the README?
-This particular translation of the original [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
-may be flawed -- *corrections are very welcome!* Please send a [pull request on GitHub](https://github.com/cobbzilla/yuebing/pulls),
-or if you're not comfortable doing that, [open an issue](https://github.com/cobbzilla/yuebing/issues)
+This particular translation of the original [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
+may be flawed -- *corrections are very welcome!* Please send a [pull request on GitHub](https://github.com/cobbzilla/hokeylization/pulls),
+or if you're not comfortable doing that, [open an issue](https://github.com/cobbzilla/hokeylization/issues)
 
 When you create a new GitHub issue about a translation, please do:
 * include the page URL (copy/paste from browser address bar)
