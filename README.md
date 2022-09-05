@@ -1,12 +1,20 @@
 Hokeylization-lite
 ==================
-The name is a portmanteau, meaning 'hokey localization'
+Why can't I run my whole app or site through Google Translate and get a basic translation in another language?
 
-It's hokey because it's very simple: it sends strings to Google Translate
+***Now, you can!***
+
+The name `hokeylization` is a portmanteau, meaning 'hokey localization'
+
+It's somewhat hokey because it's very simple: it sends strings to Google Translate
+
+And it is simple, yet also very powerful. It has special support for HTML documents,
+[HandlebarsJS](https://handlebarsjs.com/) templates,
+and [Markdown](https://daringfireball.net/projects/markdown) files.
 
 You can translate:
 * a JavaScript object containing messages
-* a directory of files, recursively
+* any number of files or directories, always traversing directories recursively
 
 ### This is hokeylization-lite
 In order to lighten the weight of this npm package, this branch does not include any localized translations
@@ -24,31 +32,43 @@ This README.md document has been translated, using the hokeylization tool itself
 
 I'm certain it's not perfect, but I hope it's better than nothing!
 
-&nbsp;&nbsp;&nbsp;[🇸🇦 Arabic](https://github.com/cobbzilla/hokeylization/blob/master/lang/ar/README.md)
-&nbsp;&nbsp;&nbsp;[🇧🇩 Bengali](https://github.com/cobbzilla/hokeylization/blob/master/lang/bn/README.md)
-&nbsp;&nbsp;&nbsp;[🇩🇪 German](https://github.com/cobbzilla/hokeylization/blob/master/lang/de/README.md)
-&nbsp;&nbsp;&nbsp;[🇺🇸 English](https://github.com/cobbzilla/hokeylization/blob/master/lang/en/README.md)
-&nbsp;&nbsp;&nbsp;[🇪🇸 Spanish](https://github.com/cobbzilla/hokeylization/blob/master/lang/es/README.md)
-&nbsp;&nbsp;&nbsp;[🇫🇷 French](https://github.com/cobbzilla/hokeylization/blob/master/lang/fr/README.md)
-&nbsp;&nbsp;&nbsp;[🇹🇩 Hausa](https://github.com/cobbzilla/hokeylization/blob/master/lang/ha/README.md)
-&nbsp;&nbsp;&nbsp;[🇮🇳 Hindi](https://github.com/cobbzilla/hokeylization/blob/master/lang/hi/README.md)
-&nbsp;&nbsp;&nbsp;[🇮🇩 Indonesian](https://github.com/cobbzilla/hokeylization/blob/master/lang/id/README.md)
-&nbsp;&nbsp;&nbsp;[🇮🇹 Italian](https://github.com/cobbzilla/hokeylization/blob/master/lang/it/README.md)
-&nbsp;&nbsp;&nbsp;[🇯🇵 Japanese](https://github.com/cobbzilla/hokeylization/blob/master/lang/ja/README.md)
-&nbsp;&nbsp;&nbsp;[🇰🇷 Korean](https://github.com/cobbzilla/hokeylization/blob/master/lang/ko/README.md)
-&nbsp;&nbsp;&nbsp;[🇮🇳 Maranthi](https://github.com/cobbzilla/hokeylization/blob/master/lang/mr/README.md)
-&nbsp;&nbsp;&nbsp;[🇵🇱 Polish](https://github.com/cobbzilla/hokeylization/blob/master/lang/pl/README.md)
-&nbsp;&nbsp;&nbsp;[🇧🇷 Portuguese](https://github.com/cobbzilla/hokeylization/blob/master/lang/pt/README.md)
-&nbsp;&nbsp;&nbsp;[🇷🇺 Russian](https://github.com/cobbzilla/hokeylization/blob/master/lang/ru/README.md)
-&nbsp;&nbsp;&nbsp;[🇰🇪 Swahili](https://github.com/cobbzilla/hokeylization/blob/master/lang/sw/README.md)
-&nbsp;&nbsp;&nbsp;[🇵🇭 Tagalog](https://github.com/cobbzilla/hokeylization/blob/master/lang/tl/README.md)
-&nbsp;&nbsp;&nbsp;[🇹🇷 Turkish](https://github.com/cobbzilla/hokeylization/blob/master/lang/tr/README.md)
-&nbsp;&nbsp;&nbsp;[🇵🇰 Urdu](https://github.com/cobbzilla/hokeylization/blob/master/lang/ur/README.md)
-&nbsp;&nbsp;&nbsp;[🇻🇳 Vietnamese](https://github.com/cobbzilla/hokeylization/blob/master/lang/vi/README.md)
-&nbsp;&nbsp;&nbsp;[🇨🇳 Chinese](https://github.com/cobbzilla/hokeylization/blob/master/lang/zh/README.md)
+&nbsp;&nbsp;&nbsp;[🇸🇦 Arabic](lang/ar/README.md)
+&nbsp;&nbsp;&nbsp;[🇧🇩 Bengali](lang/bn/README.md)
+&nbsp;&nbsp;&nbsp;[🇩🇪 German](lang/de/README.md)
+&nbsp;&nbsp;&nbsp;[🇺🇸 English](lang/en/README.md)
+&nbsp;&nbsp;&nbsp;[🇪🇸 Spanish](lang/es/README.md)
+&nbsp;&nbsp;&nbsp;[🇫🇷 French](lang/fr/README.md)
+&nbsp;&nbsp;&nbsp;[🇹🇩 Hausa](lang/ha/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇳 Hindi](lang/hi/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇩 Indonesian](lang/id/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇹 Italian](lang/it/README.md)
+&nbsp;&nbsp;&nbsp;[🇯🇵 Japanese](lang/ja/README.md)
+&nbsp;&nbsp;&nbsp;[🇰🇷 Korean](lang/ko/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇳 Maranthi](lang/mr/README.md)
+&nbsp;&nbsp;&nbsp;[🇵🇱 Polish](lang/pl/README.md)
+&nbsp;&nbsp;&nbsp;[🇧🇷 Portuguese](lang/pt/README.md)
+&nbsp;&nbsp;&nbsp;[🇷🇺 Russian](lang/ru/README.md)
+&nbsp;&nbsp;&nbsp;[🇰🇪 Swahili](lang/sw/README.md)
+&nbsp;&nbsp;&nbsp;[🇵🇭 Tagalog](lang/tl/README.md)
+&nbsp;&nbsp;&nbsp;[🇹🇷 Turkish](lang/tr/README.md)
+&nbsp;&nbsp;&nbsp;[🇵🇰 Urdu](lang/ur/README.md)
+&nbsp;&nbsp;&nbsp;[🇻🇳 Vietnamese](lang/vi/README.md)
+&nbsp;&nbsp;&nbsp;[🇨🇳 Chinese](lang/zh/README.md)
 <br/>
-&nbsp;&nbsp;&nbsp;**[📚 ... All Languages ...](https://github.com/cobbzilla/hokeylization/blob/master/lang/README.md)**
+&nbsp;&nbsp;&nbsp;**[📚 ... All Languages ...](lang/README.md)**
 ----
+
+### Is there a problem with this translation of the README?
+This particular translation of the original [README](https://github.com/cobbzilla/yuebing/blob/master/README.md)
+may be flawed -- *corrections are very welcome!* Please send a [pull request on GitHub](https://github.com/cobbzilla/yuebing/pulls),
+or if you're not comfortable doing that, [open an issue](https://github.com/cobbzilla/yuebing/issues)
+
+When you create a new GitHub issue about a translation, please do:
+* include the page URL (copy/paste from browser address bar)
+* include the exact text that is wrong (copy/paste from browser)
+* please describe what is wrong -- is the translation incorrect? is the formatting broken somehow?
+* kindly offer a suggestion of a better translation, or how the text should be properly formatted
+* **Thank you!**
 
 # Contents
 * [Source](#Source)
@@ -58,6 +78,7 @@ I'm certain it's not perfect, but I hope it's better than nothing!
 * [Translating a JavaScript string resource file](#Translating-a-JavaScript-string-resource-file)
 * [Translating a directory of text files](#Translating-a-directory-of-text-files)
 * [Other options](#Other-options)
+* [JSON batch commands](#JSON-batch-commands)
 
 ## Source
 * [hokeylization on GitHub](https://github.com/cobbzilla/hokeylization)
@@ -232,7 +253,7 @@ Markdown is neither text nor html, so Google Translate has some difficulties wit
 
 The `-M` / `--markdown` flag enables special handling for markdown files
 
-Hokeylizer handles things decently well, but with markdown files, you may oftentimes these problems:
+With markdown files, if you don't use the `-M` flag, you will probably find these problems:
 * Broken links. In the translation, a space character appears after a markdown link description ends (with `]`) but
 before its target link begins (with `(`). This causes the markdown to render incorrectly, and the link
 is broken when viewing the document.
@@ -267,4 +288,86 @@ Thus, you have total control over what will finally be written
 ### Help
 Use `-h` / `--help` to show help
 
-## Happy Translating!
+## JSON batch commands
+With the `-j` / `--json` option, you can run multiple coordinated `hokey` commands
+
+By convention this file is called `hokey.json`, but you can name it whatever you want
+
+If you pass a directory as the `-j` option, `hokey` will look for a `hokey.json` in that directory
+
+The JSON file should contain one object. Within that object, its property names are the same as
+the command-line options, plus one additional property named `hokey`
+
+The `hokey` property is an array of commands to run. The properties declared within these commands will
+override any duplicate declarations in the outer object.
+
+Within each object in the `hokey` array, you should specify a `name`, and the input and output files
+
+Here is an example of a `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja",  # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+### Multiple input files
+Pass an array of file paths as `infiles` instead of a single path `infile`, as in this example:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+### Indexes
+When translating to many languages, `hokey` can create an index file that lists all the translations made
+and provides links to them
+
+*When generating indexes, you can have only one input source*
+
+Pass the `-I` / `--index` option, the value is where the index file will be generated, which can be a file
+or a directory. If it's a directory, a default filename will be used, based on the template (see below)
+
+Use the `-A` / `--index-template` to determine how the index output is formatted. You can specify 'html',
+'markdown', 'text', or the file path to your own [HandlebarsJS](https://handlebarsjs.com/) template
+
+If you specify your own template, you must also specify a file (not a directory) for the `-I` / `--index`
+option
+
+## Have a fun time translating languages!

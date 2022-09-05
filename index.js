@@ -1,15 +1,14 @@
 require('dotenv').config()
 const fs = require('fs')
+const { dirname, resolve, join } = require('path')
 const commander = require('commander')
-const { Translate } = require('@google-cloud/translate').v2
-const { readMessageKeys, processFile } = require('./util/messageFile')
-const { readDirFiles, processDirectory } = require('./util/templateDir')
-const { messages } = require('./util/localize')
-const { HokeyError } = require('./util/error')
 const chalk = require("chalk")
+const { Translate } = require('@google-cloud/translate').v2
 
-// change the env var, don't change this
-const DEFAULT_LOCALE = process.env.HOKEY_DEFAULT_LOCALE || 'en'
+const { runHokeyCommand, handleIndex } = require('./util/command')
+const { messages } = require('./util/localize')
+const { DEFAULT_LANG, ALL_LANGS, ALL_LANGS_NAME, VERSION, DEFAULT_HOKEY_JSON_FILE} = require('./util/constants')
+const { runJsonCommand } = require("./util/jsonCommand");
 
 const msg = messages()
 
@@ -19,10 +18,7 @@ if (process.env.___HOKEY_PWD) {
     process.chdir(process.env.___HOKEY_PWD)
 }
 
-// verify env vars
 const projectId = process.env.GOOGLE_TRANSLATE_PROJECT_ID
-
-const VERSION = require('./package.json').version;
 
 const verifyEnv = () => {
     if (!projectId) {
@@ -39,68 +35,72 @@ const program = new commander.Command()
     .command('hokey')
     .summary(msg.info_summary.parseMessage({ VERSION }))
     .description(msg.info_description)
-    .option('-i, --input-language <lang>', msg.info_option_inputLanguage.parseMessage({ DEFAULT_LOCALE }))
+    .option('-j, --json [json-file]', msg.info_option_jsonFile)
+    .option('-I, --index [index-file]', msg.info_option_indexFile)
+    .option('-A, --index-template <index-template>', msg.info_option_indexTemplate)
+    .option('-i, --input-language <lang>', msg.info_option_inputLanguage.parseMessage({ DEFAULT_LOCALE: DEFAULT_LANG }))
     .option('-p, --process-as <type>', msg.info_option_processAs)
     .option('-m, --match <regex>', msg.info_option_match)
     .option('-e, --excludes <regexes...>', msg.info_option_excludes)
+    .option('-r, --regular', msg.info_option_regular)
     .option('-T, --filter <js-file>', msg.info_option_filter)
     .option('-n, --dry-run', msg.info_option_dryRun)
-    .requiredOption('-l, --languages <lang>', msg.info_option_languages)
-    .requiredOption('-o, --outfile <out-file>', msg.info_option_outfile)
+    .option('-l, --languages <lang>', msg.info_option_languages)
+    .option('-o, --outfile <out-file>', msg.info_option_outfile)
     .option('-f, --force', msg.info_option_force)
     .option('-H, --handlebars', msg.info_option_handlebars)
     .option('-M, --markdown', msg.info_option_markdown)
-    .argument('<source>', msg.info_arg_source)
+    .argument('[sources...]', msg.info_arg_sources)
     .version(VERSION)
     .showHelpAfterError()
-    .action(async (jsFile, opts) => {
+    .action(async (sources, opts) => {
         verifyEnv() // die if env vars not set correctly
-        const langs = opts.languages.toLowerCase().split(',')
-        const outfile = opts.outfile
-        const fromLang = opts.fromLanguage || 'en'
-        const handlebars = opts.handlebars || false
-        const markdown = opts.markdown || false
-        const processAs = opts.processAs || 'text'
-        if (processAs !== 'text' && processAs !== 'html') {
-            program.error(chalk.redBright(msg.err_option_processAs_invalid))
-            return
-        }
-        const dryRun = opts.dryRun || false
-        const force = opts.force || false
-        const match = opts.match || null
-        const excludes = opts.excludes || null
-        const filter = opts.filter || null
-        const options = { fromLang, handlebars, markdown, processAs, dryRun, force, match, excludes, filter }
         const translate = new Translate({projectId})
-        const stat = fs.lstatSync(jsFile, {throwIfNoEntry: false})
-        if (!stat) {
-            program.error(chalk.redBright(msg.err_infileNotFound.parseMessage({ jsFile })))
-            return
-        }
-        try {
-            if (stat.isDirectory()) {
-                const inFiles = await readDirFiles(jsFile, options)
-                for (const lang of langs) {
-                    if (lang.trim().length === 0) {
-                        continue
-                    }
-                    await processDirectory(translate, jsFile, inFiles, lang, outfile, options)
-                }
-            } else {
-                const msgKeys = await readMessageKeys(jsFile)
-                for (const lang of langs) {
-                    if (lang.trim().length === 0) {
-                        continue
-                    }
-                    await processFile(translate, jsFile, msgKeys, lang, outfile, options)
-                }
+        if (opts.json) {
+            await runJsonCommand(program, translate, opts)
+        } else {
+            if (sources.length === 0) {
+                program.error(chalk.redBright(msg.err_noSources))
+                return
             }
-        } catch (e) {
-            if (e instanceof HokeyError) {
-                program.error(chalk.redBright(msg.err_processing.parseMessage({ e: e.message })))
-            } else {
-                program.error(chalk.redBright(msg.err_processing.parseMessage({ e })))
+            if (!opts.outfile) {
+                program.error(chalk.redBright(msg.err_option_outfile_required))
+                return
             }
+            if (!opts.languages) {
+                program.error(chalk.redBright(msg.err_option_languages_required))
+                return
+            }
+            const languages = (opts.languages === ALL_LANGS_NAME ? ALL_LANGS : opts.languages).toLowerCase().split(',')
+
+            let exc = opts.excludes || null
+            if (exc) {
+                exc = exc.map(ex => new RegExp(ex))
+            } else {
+                exc = null
+            }
+            const processAs = opts.processAs || 'text'
+            if (processAs !== 'text' && processAs !== 'html') {
+                program.error(chalk.redBright(msg.err_option_processAs_invalid))
+                return
+            }
+            const command = {
+                sources,
+                languages,
+                inputLanguage: opts.inputLanguage || DEFAULT_LANG,
+                force: opts.force || false,
+                match: opts.match || null,
+                processAs,
+                excludes: exc,
+                handlebars: opts.handlebars || false,
+                markdown: opts.markdown || false,
+                regular: opts.regular || opts.markdown || false,
+                dryRun: opts.dryRun || false,
+                filter: opts.filter || null,
+                outfile: opts.outfile,
+                index: handleIndex(opts, {}, sources)
+            }
+            await runHokeyCommand(program, translate, command)
         }
     })
 
