@@ -8,13 +8,7 @@ const { readMessageKeys, processFile } = require("./messageFile")
 const { HokeyError } = require("./error")
 const { messages } = require("./localize")
 
-const { ALL_LANGS_NAME, ALL_LANGS } = require("./constants")
-const {LANG_PLACEHOLDER} = require("./translate");
-
-// from https://stackoverflow.com/a/3561711/1251543
-function escapeRegex(string) {
-    return string.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')
-}
+const { ALL_LANGS_NAME, ALL_LANGS, escapeRegex } = require("./constants")
 
 const indexForType = (type) => type === 'markdown' || type === 'md'
     ? 'README.md'

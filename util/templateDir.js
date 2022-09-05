@@ -64,14 +64,20 @@ const FILTER_LOAD_PATHS = [
 ]
 const loadFilter = (filter) => {
     const msg = messages()
+    const parts = filter.split(/\s+/)
+    const filterName = parts[0].endsWith('.js') ? parts[0] : parts[0] + '.js'
     for (const path of FILTER_LOAD_PATHS) {
         if (path === null) {
             continue
         }
         try {
-            const f = require(resolve(join(path, filter)))
+            const filterPath = resolve(join(path, filterName));
+            const f = require(filterPath)
             if (f.filter) {
-                return f.filter
+                return {
+                    filter: f.filter,
+                    args: parts.length === 1 ? null : parts.slice(1)
+                }
             }
         } catch (e) {
             // it's OK, we will try another
@@ -112,7 +118,7 @@ const processDirectory = async (translate, inDir, inFiles, lang, options) => {
             console.log(msg.info_dryRun_file.parseMessage({ langOut: langFile }))
             writtenFiles.push(langFile)
         } else {
-            const filtered = filter ? await filter(translation) : translation
+            const filtered = filter ? await filter.filter(translation, ...filter.args) : translation
             if (filtered !== translation) {
                 console.log(msg.info_filter_applied.parseMessage({ langFile }))
             }

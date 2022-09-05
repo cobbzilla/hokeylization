@@ -19,7 +19,7 @@
       "infile": "README.md",
       "outfile": "lang/LANG/",
       "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-      "filter": "filterReadme.js",
+      "filter": "relativizeMarkdownLinks lang",
       "force": true,
       "markdown": true,
       "index": "lang/README.md"
