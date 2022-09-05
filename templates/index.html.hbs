@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>{{ msg.label_indexOfTranslations }} - {{ source }}</title>
+</head>
+<body>
+
+<h3><b><a href="https://cloud.google.com/translate/docs/languages">{{ msg.label_findYourLanguageCode }}</a></b></h3>
+
+{{#each langs}}
+    <h4><a href="{{{relativePath}}}">{{nativeName}} &#11834; `{{iso}}` &#11834; {{inputName}}</a></h4>
+{{/each}}
+
+</body>
+</html>

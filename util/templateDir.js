@@ -92,6 +92,7 @@ const processDirectory = async (translate, inDir, inFiles, lang, options) => {
         throw new HokeyError(msg.err_cannotWriteSource.parseMessage({ source: inDir }))
     }
     const outFiles = await readDirFiles(langOut, options)
+    const writtenFiles = []
     for (const inFile of inFiles) {
         let langFile = outFiles.find(f => f.relative === inFile.relative);
         if (langFile) {
@@ -106,6 +107,7 @@ const processDirectory = async (translate, inDir, inFiles, lang, options) => {
         const translation = dryRun ? '' : await translateString(translate, inFile.data, fromLang, lang, langFile, options)
         if (dryRun) {
             console.log(msg.info_dryRun_file.parseMessage({ langOut: langFile }))
+            writtenFiles.push(langFile)
         } else {
             const filtered = filter ? await filter(translation) : translation
             if (filtered !== translation) {
@@ -113,9 +115,11 @@ const processDirectory = async (translate, inDir, inFiles, lang, options) => {
             }
             fs.mkdirSync(dirname(langFile), {recursive: true})
             fs.writeFileSync(langFile, filtered)
+            writtenFiles.push(langFile)
             console.log(msg.info_processDirectory_fileWritten.parseMessage({ langFile }))
         }
     }
+    return writtenFiles
 }
 
 module.exports = { readDirFiles, processDirectory }

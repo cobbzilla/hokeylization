@@ -1,9 +1,7 @@
 const he = require('he')
-const chalk = require('chalk')
+const { LANG_PLACEHOLDER } = require('./constants')
 
 const { messages } = require("./localize")
-
-const LANG_PLACEHOLDER = 'LANG'
 
 const NO_TRANSLATE_START_PREFIX = '<span class="notranslate"'
 

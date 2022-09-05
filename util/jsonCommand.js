@@ -1,7 +1,7 @@
 const fs = require('fs')
 const chalk = require('chalk')
 const { resolve, join } = require('path')
-const { runHokeyCommand } = require('./command')
+const { runHokeyCommand, handleIndex } = require('./command')
 const { messages } = require('./localize');
 const { DEFAULT_LANG, ALL_LANGS_NAME, DEFAULT_HOKEY_JSON_FILE } = require('./constants')
 
@@ -46,7 +46,10 @@ const runJsonCommand = async (program, translate, opts) => {
         markdown: opts.markdown || hokeyJson.markdown || false,
         regular: opts.regular || hokeyJson.regular || false,
         dryRun: opts.dryRun || hokeyJson.dryRun || false,
-        filter: opts.filter || hokeyJson.filter || null
+        filter: opts.filter || hokeyJson.filter || null,
+        indexTemplate: opts.indexTemplate || hokeyJson.indexTemplate || null,
+        index: null,
+        outfile: null
     }
 
     for (const config of hokeyJson.hokey) {
@@ -72,18 +75,19 @@ const runJsonCommand = async (program, translate, opts) => {
         }
         const command = Object.assign({}, defaults, {
             sources,
-            inputLanguage: config.inputLanguage || opts.inputLanguage || DEFAULT_LANG,
-            languages: config.languages || opts.languages || ALL_LANGS_NAME,
-            force: config.force || opts.force,
-            match: config.match || opts.match || null,
-            processAs: config.processAs || opts.processAs || null,
+            inputLanguage: config.inputLanguage || defaults.inputLanguage || DEFAULT_LANG,
+            languages: config.languages || defaults.languages || ALL_LANGS_NAME,
+            force: config.force || defaults.force,
+            match: config.match || defaults.match || null,
+            processAs: config.processAs || defaults.processAs || null,
             excludes: excludes,
-            handlebars: config.handlebars || opts.handlebars || false,
-            markdown: config.markdown || opts.markdown || false,
-            regular: config.regular || opts.regular || false,
-            dryRun: config.dryRun || opts.dryRun || false,
-            filter: config.filter || opts.filter || null,
-            outfile: config.outfile
+            handlebars: config.handlebars || defaults.handlebars || false,
+            markdown: config.markdown || defaults.markdown || false,
+            regular: config.regular || defaults.regular || false,
+            dryRun: config.dryRun || defaults.dryRun || false,
+            filter: config.filter || defaults.filter || null,
+            outfile: config.outfile,
+            index: handleIndex(config, defaults, sources)
         })
         await runHokeyCommand(program, translate, command)
     }

@@ -91,6 +91,7 @@ const processFile = async (translate, infile, inMsgKeys, lang, outfile, options)
     } catch (e) {
         console.error(chalk.redBright(msg.err_processFile_error.parseMessage({ e })))
     }
+    return langOut
 }
 
 module.exports = { readMessageKeys, processFile }

@@ -35,7 +35,7 @@ export default {
         'https://cloud.google.com/translate/docs/languages',
     info_option_jsonFile: 'Run multiple hokey commands specified in a JSON file. If no JSON file is provided, the command looks for a file named \'hokey.json\' in the current directory',
     info_option_indexFile: 'Generate an index file for the translations. The filename must end with `.html`, `.md` or `.txt`, unless you supply a template with `-A` / `--index-template`',
-    info_option_indexTemplateFile: 'Use this handlebars template when creating the index file. Look at the default templates in the hokeylization source code for examples',
+    info_option_indexTemplate: 'This can be \'html\', \'markdown\', \'text\', or a path to your own handlebars template. This template is used when creating the index file. Look at the default templates in the hokeylization source code for examples',
     info_option_inputLanguage: 'ISO code for languages to translate from. Default is {{DEFAULT_LOCALE}}',
     info_option_processAs: 'Type can be text or html. Default is text',
     info_option_match: 'When processing a directory, only consider files that match this regex',
@@ -61,5 +61,15 @@ export default {
 
     info_processDirectory_skippingExisting: 'processDirectory({{lang}}): skipping existing file: {{langFile.file}}',
     info_processDirectory_fileWritten: 'The file has been written: {{langFile}}',
-    info_jsonProcessing_start: 'JSON processing config: {{name}}'
+    info_jsonProcessing_start: 'JSON processing config: {{name}}',
+    err_index_singleFileMultipleSources: 'A single index file was specified, but there are multiple input files. Specify a directory instead of a file for the index',
+    err_index_targetDirAndNoTypeOrTemplate: 'A target directory was specified for the index, but no index template was specified. Use `-A` / `--indexTemplate` to select a template',
+    err_index_parentDirDoesNotExist: 'The parent directory of the index does not exist: {{ parentDir }}',
+    err_cannotNoExtCannotDetermineType: 'The filename has no extension so a template type cannot be determined: {{ file }}',
+    err_cannotInvalidExtCannotDetermineType: 'The filename has an invalid extension so a template type cannot be determined: {{ file }}',
+    err_index_templateLoadingError: 'An error occurred loading the custom template {{ file }}: {{ e }}',
+    err_index_templateCompilationError: 'An error occurred compiling the custom template {{ file }}: {{ e }}',
+    info_index_wroteFile: 'Successfully created index file: {{ indexFile }}',
+    label_indexOfTranslations: 'Index of translations',
+    label_findYourLanguageCode: 'Find your language code'
 }

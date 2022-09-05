@@ -319,10 +319,7 @@ Here is an example of a `hokey.json`
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
             "filter": "util/filterReadme.js",
             "markdown": true,
-            "index": {
-              "name": "lang/README.md",
-              "type": "markdown"
-            }
+            "index": "lang/README.md"
           }
         ]
     }
@@ -339,5 +336,20 @@ Pass an array of file paths as `infiles` instead of a single path `infile`, as i
           "markdown": true
       ]
     }
+
+### Indexes
+When translating to many languages, `hokey` can create an index file that lists all the translations made
+and provides links to them
+
+*When generating indexes, you can have only one input source*
+
+Pass the `-I` / `--index` option, the value is where the index file will be generated, which can be a file
+or a directory. If it's a directory, a default filename will be used, based on the template (see below)
+
+Use the `-A` / `--index-template` to determine how the index output is formatted. You can specify 'html',
+'markdown', 'text', or the file path to your own [HandlebarsJS](https://handlebarsjs.com/) template
+
+If you specify your own template, you must also specify a file (not a directory) for the `-I` / `--index`
+option
 
 ## Have a fun time translating languages!

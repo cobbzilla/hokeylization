@@ -5,7 +5,7 @@ const commander = require('commander')
 const chalk = require("chalk")
 const { Translate } = require('@google-cloud/translate').v2
 
-const { runHokeyCommand } = require('./util/command')
+const { runHokeyCommand, handleIndex } = require('./util/command')
 const { messages } = require('./util/localize')
 const { DEFAULT_LANG, ALL_LANGS, ALL_LANGS_NAME, VERSION, DEFAULT_HOKEY_JSON_FILE} = require('./util/constants')
 const { runJsonCommand } = require("./util/jsonCommand");
@@ -37,7 +37,7 @@ const program = new commander.Command()
     .description(msg.info_description)
     .option('-j, --json [json-file]', msg.info_option_jsonFile)
     .option('-I, --index [index-file]', msg.info_option_indexFile)
-    .option('-A, --index-template <index-template-file>', msg.info_option_indexTemplateFile)
+    .option('-A, --index-template <index-template>', msg.info_option_indexTemplate)
     .option('-i, --input-language <lang>', msg.info_option_inputLanguage.parseMessage({ DEFAULT_LOCALE: DEFAULT_LANG }))
     .option('-p, --process-as <type>', msg.info_option_processAs)
     .option('-m, --match <regex>', msg.info_option_match)
@@ -97,7 +97,8 @@ const program = new commander.Command()
                 regular: opts.regular || opts.markdown || false,
                 dryRun: opts.dryRun || false,
                 filter: opts.filter || null,
-                outfile: opts.outfile
+                outfile: opts.outfile,
+                index: handleIndex(opts, {}, sources)
             }
             await runHokeyCommand(program, translate, command)
         }
