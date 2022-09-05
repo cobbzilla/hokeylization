@@ -171,7 +171,7 @@ Hokeylization
 
  **TUPATOTANGA NUI**: I te wa e whakamaori ana i nga raarangi whaiaronga, ** KAUA E ** te tohu i tetahi raarangi whakaputa
  kei roto tena i to raarangi whakauru! Ki te mahi koe i tenei, ka:
- * whakakorikori mutunga kore
+ * whakaawe i te recursion mutunga kore
  * whakahaere i to pire Google
  * whakakiia to kōpae
  * iti ake te ngahau
@@ -276,11 +276,16 @@ Hokeylization
 
  No reira, kei a koe te mana katoa mo nga mea ka tuhia
 
- Ka rapua te tuhinga `filter` ki nga waahi e whai ake nei:
+ Ka rapua te tuhinga `filter` ki nga waahi e whai ake nei (me te `.js` ka apiti ki te tātari
+ ingoa, mena ka mutu ki `.js` )
  * Te whaiaronga o naianei
  * He whaiaronga ko `.hokey-filters` i roto i te whaiaronga o naianei
  * He whaiaronga ko `${HOME}/.hokey-filters` , ko `${HOME}` ko te whaiaronga kainga o te kaiwhakamahi o naianei
  * Ko te [whaiaronga tātari](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Tawhā Tātari
+ Ko te aho `filter` he maha nga kupu. I tenei take, ko te kupu tuatahi ko te ingoa tātari, me
+ ko nga kupu e toe ana ka tukuna hei tohenga mo te mahi `filter`
 
  ### Awhina
  Whakamahia `-h` / `--help` hei whakaatu awhina
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -364,7 +369,7 @@ Hokeylization
  Whakamahia te `-A` / `--index-template` ki te whakatau me pehea te whakahōputu o te putanga taupū. Ka taea e koe te tohu 'html',
  'tohutohu', 'kuputuhi', te ara konae ranei ki to ake [HandlebarsJS](https://handlebarsjs.com/) tauira
 
- Mena ka tohua e koe taau ake tauira, me tohu ano he konae (ehara i te whaiaronga) mo te `-I` / `--index`
+ Mēnā ka whakapūtā koe i tō ake tauira, me whakapūtā hoki he kōnae (ehara i te whaiaronga) mō te `-I` / `--index`
  kōwhiringa
 
  ## Kia ngahau ki te whakamaori i nga reo!

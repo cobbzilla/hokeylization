@@ -276,11 +276,16 @@ Hokeylization
 
  Mangkono, sampeyan duwe kontrol total babagan apa sing bakal ditulis
 
- Skrip `filter` bakal digoleki ing lokasi ing ngisor iki:
+ Skrip `filter` bakal digoleki ing lokasi ing ngisor iki (karo `.js` bakal ditambahake menyang filter
+ jeneng, kajaba wis dipungkasi nganggo `.js` )
  * Direktori saiki
  * Direktori sing jenenge `.hokey-filters` ing direktori saiki
  * Direktori `${HOME}/.hokey-filters` , ing ngendi `${HOME}` minangka direktori ngarep pangguna saiki
  * Dibangun ing [direktori saringan](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Parameter Filter
+ String `filter` bisa dadi pirang-pirang tembung. Ing kasus iki, tembung pisanan jeneng Filter, lan
+ tembung sing isih ana bakal diterusake minangka argumen menyang fungsi `filter`
 
  ### Bantuan
  Gunakake `-h` / `--help` kanggo nuduhake pitulung
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

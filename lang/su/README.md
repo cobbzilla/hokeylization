@@ -146,7 +146,7 @@ Hokeylization
 
  `LANG` diganti ku kode basa pikeun file kaluaran
 
- Janten paréntah di luhur nyiptakeun file:
+ Ku kituna paréntah di luhur nyiptakeun file:
 
     myfile.es.js
     myfile.de.js
@@ -172,11 +172,11 @@ Hokeylization
  **PERHATOSAN BESAR**: Nalika narjamahkeun diréktori, **ULAH** tangtukeun diréktori kaluaran
  anu aya dina diréktori input anjeun! Upami anjeun ngalakukeun ieu, anjeun bakal:
  * induce recursion taya wates
- * ngajalankeun up tagihan Google Anjeun
+ * ngajalankeun tagihan Google Anjeun
  * eusian disk anjeun
  *kurang senang
 
- Ieu conto naon anu * henteu kedah dilakukeun *:
+ Ieu conto naon *teu kedah dilakukeun*:
 
     hokey -l es -o templates/es templates # <--- DON'T DO THIS!
 
@@ -276,11 +276,16 @@ Hokeylization
 
  Ku kituna, anjeun boga kontrol total leuwih naon tungtungna bakal ditulis
 
- `filter` bakal dipilarian di lokasi ieu:
+ `filter` bakal dipilarian di lokasi di handap ieu (kalayan `.js` bakal ditambah kana saringan
+ ngaran, iwal mun geus ditungtungan ku `.js` )
  * Diréktori ayeuna
  * A diréktori ngaranna `.hokey-filters` dina diréktori ayeuna
  * Diréktori ngaranna `${HOME}/.hokey-filters` , dimana `${HOME}` nyaéta diréktori imah pamaké ayeuna
  * Diwangun-di [diréktori saringan](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Parameter Filter
+ `filter` tiasa sababaraha kecap. Dina hal ieu, kecap munggaran nyaéta ngaran filter, sarta
+ kecap sésana bakal diliwatan salaku argumen pikeun fungsi `filter`
 
  ### Tulung
  Anggo `-h` / `--help` pikeun nunjukkeun pitulung
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

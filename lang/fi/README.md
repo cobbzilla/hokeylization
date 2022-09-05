@@ -276,11 +276,16 @@ Hokeylisaatio
 
  Näin ollen sinulla on täysi määräysvalta siihen, mitä lopulta kirjoitetaan
 
- `filter` seuraavista paikoista:
+ Suodatinkomentosarjaa `.js` `filter` suodattimeen
+ nimi, ellei se jo pääty `.js` :iin)
  * Nykyinen hakemisto
  * Hakemisto nimeltä `.hokey-filters` nykyisessä hakemistossa
  * Hakemisto nimeltä `${HOME}/.hokey-filters` , jossa `${HOME}` on nykyisen käyttäjän kotihakemisto
  * Sisäänrakennettu [suodatinhakemisto](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Suodatinparametrit
+ `filter` voi olla useita sanoja. Tässä tapauksessa ensimmäinen sana on suodattimen nimi ja
+ loput sanat välitetään argumentteina `filter`
 
  ### Auta
  Käytä `-h` / `--help` näyttääksesi ohjeen
@@ -332,7 +337,7 @@ Hokeylisaatio
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

@@ -95,7 +95,7 @@ Hokeylisering
     npm install -g hokeylization-lite
     yarn global add hokeylization-lite
 
- Se derefter hjælpen til kommandoen `hokey` :
+ Se derefter hjælpen til `hokey` kommandoen:
 
     hokey --help
     hokey -h
@@ -276,11 +276,16 @@ Hokeylisering
 
  Dermed har du total kontrol over, hvad der til sidst skal skrives
 
- `filter` vil blive ledt efter følgende steder:
+ `filter` scriptet vil blive ledt efter på følgende steder (med `.js` vil blive tilføjet til filteret
+ navn, medmindre det allerede ender på `.js` )
  * Den aktuelle mappe
  * En mappe med navnet `.hokey-filters` i den aktuelle mappe
  * En mappe ved navn `${HOME}/.hokey-filters` , hvor `${HOME}` er den aktuelle brugers hjemmemappe
  * Den indbyggede [filtermappe](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filterparametre
+ `filter` kan være flere ord. I dette tilfælde er det første ord filternavnet og
+ de resterende ord vil blive sendt som argumenter til `filter` -funktionen
 
  ### Hjælp
  Brug `-h` / `--help` for at vise hjælp
@@ -332,7 +337,7 @@ Hokeylisering
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

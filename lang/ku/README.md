@@ -225,7 +225,7 @@ Hokeylization
  Dema ku hûn guman dikin, hûn dikarin vê vebijarkê bi `-n` / `--dry-run` re hev bikin da ku bibînin ka kîjan pel dê werin wergerandin.
 
  ### Derdixe
- Carinan `-m` we gelek pelan li hev dike. `-e` / `--excludes` bikar bînin da ku bi eşkereyî jêbirin
+ Carinan `-m` we pir pelan li hev dike. `-e` / `--excludes` bikar bînin da ku bi eşkereyî jêbirin
  pelên ku wekî din dê li hev bihata
 
  Hûn dikarin gelek regexes navnîş bikin, ji hêla cîhan ve têne veqetandin
@@ -276,16 +276,21 @@ Hokeylization
 
  Bi vî rengî, hûn li ser tiştê ku dê di dawiyê de were nivîsandin de kontrola tevahî heye
 
- `filter` dê li cîhên jêrîn were peyda kirin:
+ `filter` dê li cîhên jêrîn were gerîn (bi `.js` dê li parzûnê were zêdekirin
+ nav, heya ku ew jixwe bi `.js` bi dawî nebe)
  * Peldanka heyî
  * Di pelrêça heyî de pelrêçek bi navê `.hokey-filters`
  * Peldanka bi navê `${HOME}/.hokey-filters` , ku `${HOME}` pelrêça malê ya bikarhênerê heyî ye
  * Navnîşana [Pelrêça peldankan](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
 
+ #### Parametreyên Parzûnê
+ Rêza `filter` dikare çend peyvan be. Di vê rewşê de, peyva yekem navê Parzûnê ye, û
+ peyvên mayî dê wek argûman derbasî fonksiyona `filter`
+
  ### Alîkarî
  Ji bo nîşankirina alîkariyê `-h` / `--help` bînin
 
- ## Fermanên komê JSON
+ ## Fermanên hevîrê JSON
  Bi `-j` / `--json` , hûn dikarin gelek fermanên hevrêz ên `hokey`
 
  Li gorî peymanê navê vê pelê `hokey.json` tê gotin, lê hûn dikarin navê wê çi bixwazin
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -362,7 +367,7 @@ Hokeylization
  an pelrêçek. Ger ew pelrêçek be, dê li ser bingeha şablonê navek pelê ya xwerû were bikar anîn (li jêr binêre)
 
  "-A" / " `-A` `--index-template` bînin da ku hûn diyar bikin ka derana pêvekê çawa tê format kirin. Hûn dikarin 'html' diyar bikin,
- 'markdown', 'text', an jî riya pelê ya ji bo şablonê [HandlebarsJS](https://handlebarsjs.com/) xwe
+ 'markdown', 'text', an jî riya pelê ya ji bo şablonê [HandlebarsJS](https://handlebarsjs.com/) ya xweya xwe
 
  Ger hûn şablonê xwe diyar bikin, divê hûn ji bo `-I` / `--index` (ne pelrêçek) jî diyar bikin.
  dibe

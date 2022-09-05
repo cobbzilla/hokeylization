@@ -276,11 +276,16 @@ I-Hokeylization
 
  Ngakho-ke, uyakwazi ukulawula lokho okuzobhalwa ekugcineni
 
- Iskripthi `filter` sizobhekwa ezindaweni ezilandelayo:
+ Iskripthi `filter` sizobhekwa ezindaweni ezilandelayo (ene `.js` esihlungini
+ igama, ngaphandle uma `.js` )
  * Inkomba yamanje
  * Uhla lwemibhalo `.hokey-filters` ngaphakathi kohla lwemibhalo lwamanje
  * Uhla lwemibhalo `${HOME}/.hokey-filters` , lapho `${HOME}` kuwuhlu lwamanje lwasekhaya lomsebenzisi
  * Uhlu olwakhelwe ngaphakathi [lwemibhalo yezihlungi](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Amapharamitha wesihlungi
+ Iyunithi yezinhlamvu `filter` ingaba amagama amaningi. Kulokhu, igama lokuqala igama lokuhlunga, futhi
+ amagama asele azodluliswa njengama-agumenti kumsebenzi `filter`
 
  ### Usizo
  Sebenzisa `-h` / `--help` ukuze ubonise usizo
@@ -332,7 +337,7 @@ I-Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -364,7 +369,7 @@ I-Hokeylization
  Sebenzisa `-A` / `--index-template` ukuze unqume ukuthi okukhiphayo kwenkomba kufomethwe kanjani. Ungacacisa 'html',
  'markdown', 'text', noma indlela yefayela eya [HandlebarsJS](https://handlebarsjs.com/) isifanekiso sakho
 
- Uma ucacisa isifanekiso sakho, kufanele futhi ucacise ifayela (hhayi uhla lwemibhalo) le `-I` / `--index`
+ Uma ucacisa isifanekiso sakho, kufanele ucacise ifayela (hhayi uhla lwemibhalo) le `-I` / `--index`
  inketho
 
  ## Yiba nesikhathi esimnandi sokuhumusha izilimi!

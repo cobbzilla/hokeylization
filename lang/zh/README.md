@@ -276,13 +276,18 @@ Markdown 既不是文本也不是 html，所以谷歌翻译有一些困难
 
 因此，您可以完全控制最终将要写入的内容
 
-`filter`脚本将在以下位置查找：
+`filter`脚本将在以下位置查找（使用`.js`将附加到过滤器
+名称，除非它已经以`.js` ）
  * 当前目录
 * 当前目录中名为`.hokey-filters`的目录
 * 一个名为`${HOME}/.hokey-filters` ，其中`${HOME}`是当前用户的主目录
 * 内置[filters目录](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
 
- ＃＃＃ 帮助
+ #### 过滤器参数
+`filter`字符串可以是多个单词。在这种情况下，第一个单词是过滤器名称，并且
+剩余的单词将作为参数传递给`filter`函数
+
+＃＃＃ 帮助
 使用`-h` / `--help`显示帮助
 
 ## JSON 批处理命令
@@ -332,7 +337,7 @@ Markdown 既不是文本也不是 html，所以谷歌翻译有一些困难
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

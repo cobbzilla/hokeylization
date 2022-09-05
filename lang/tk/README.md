@@ -276,11 +276,16 @@ Hokeylizasiýa
 
  Şeýlelik bilen, ahyrynda ýazyljak zatlara doly gözegçilik edýärsiňiz
 
- " `filter` " skripti aşakdaky ýerlerde gözlener:
+ " `filter` " skripti aşakdaky ýerlerde gözlener ( `.js` ".js" goşular)
+ ady, " `.js` " bilen gutarmasa)
  * Häzirki katalog
  * Häzirki katalogyň içinde " `.hokey-filters` " atly katalog
  * " `${HOME}/.hokey-filters` " atly katalog, bu ýerde " `${HOME}` " häzirki ulanyjynyň öý bukjasydyr.
  * Gurlan [süzgüçler katalogy](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Süzgüç parametrleri
+ " `filter` " setiri birnäçe söz bolup biler. Bu ýagdaýda birinji söz süzgüçiň ady we
+ galan sözler " `filter` " funksiýasyna argument hökmünde geçer
 
  ### Kömek ediň
  `--help` görkezmek üçin "-h" / " `-h` " ulanyň
@@ -332,7 +337,7 @@ Hokeylizasiýa
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

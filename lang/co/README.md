@@ -156,7 +156,7 @@ Hokeylization
 
  Se u schedariu di output esiste digià, serà esaminatu per determinà quale chjave esiste digià.
  E chjave esistenti ùn saranu micca tradutte. E traduzioni per i chjavi mancanti saranu generati è appiccicati
- à a fine di l'ughjettu JS. U schedariu sanu hè sempre riscritto.
+ à a fine di l'ughjettu JS. Tuttu u schedariu hè sempre riscritto.
 
  Per furzà a ritraduzzione di tutte e chjave, utilizate l' `-f` / `--force`
 
@@ -276,11 +276,16 @@ Hokeylization
 
  Cusì, avete un cuntrollu tutale di ciò chì serà infine scrittu
 
- U script `filter` " serà cercatu in i seguenti lochi:
+ U script `filter` serà cercatu in i seguenti lochi (cù `.js` sarà appiccicatu à u filtru
+ nome, salvu chì ùn finisce digià in `.js` )
  * U cartulare attuale
  * Un repertoriu chjamatu `.hokey-filters` in u cartulare attuale
  * Un repertoriu chjamatu `${HOME}/.hokey-filters` , induve `${HOME}` hè u cartulare di casa di l'utilizatori attuale
  * U [directory di filtri] integratu (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Parametri di filtru
+ A stringa `filter` pò esse parechje parolle. In questu casu, a prima parolla hè u nome di filtru, è
+ e parolle restanti seranu passate cum'è argumenti à a funzione `filter` .
 
  ### Aiutu
  Aduprate `-h` / `--help` per mustrà l'aiutu
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

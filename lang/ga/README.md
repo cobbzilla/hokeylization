@@ -276,11 +276,16 @@ Hokeylization
 
  Mar sin, tá smacht iomlán agat ar an méid a scríobhfar ar deireadh
 
- `filter` sna háiteanna seo a leanas:
+ Lorgófar an script `filter` seo a leanas (le `.js` cuirfear i gceangal leis an scagaire
+ ainm, ach amháin má chríochnaíonn sé cheana féin i `.js` )
  * An eolaire reatha
  * Comhadlann darb ainm `.hokey-filters` laistigh den eolaire reatha
  * Comhadlann darb ainm `${HOME}/.hokey-filters` , arb é `${HOME}` eolaire baile an úsáideora reatha
  * An [eolaire scagairí] ionsuite (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Scag Paraiméadair
+ Is féidir focail iolracha a bheith sa teaghrán `filter` . Sa chás seo, is é an chéad fhocal an t-ainm scagaire, agus
+ cuirfear na focail atá fágtha ar aghaidh mar argóintí don fheidhm `filter`
 
  ### Cabhrú
  Úsáid `-h` / `--help` chun cabhair a thaispeáint
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

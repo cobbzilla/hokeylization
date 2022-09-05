@@ -276,11 +276,16 @@ Hokeylization
 
  ដូច្នេះ អ្នកមានការគ្រប់គ្រងទាំងស្រុងលើអ្វីដែលនឹងត្រូវសរសេរជាចុងក្រោយ
 
- ស្គ្រីប `filter` នឹងត្រូវបានរកមើលនៅកន្លែងដូចខាងក្រោម៖
+ ស្គ្រីប `filter` នឹងត្រូវបានរកមើលនៅក្នុងទីតាំងខាងក្រោម (ជាមួយ `.js` នឹងត្រូវបានបន្ថែមទៅតម្រង
+ ឈ្មោះ លុះត្រាតែវាបញ្ចប់ក្នុង `.js` )
  * ថតបច្ចុប្បន្ន
  * ថតមួយដែលមានឈ្មោះថា `.hokey-filters` នៅក្នុងថតបច្ចុប្បន្ន
  * ថតមួយដែលមានឈ្មោះថា `${HOME}/.hokey-filters` ដែល `${HOME}` គឺជាថតផ្ទះរបស់អ្នកប្រើប្រាស់បច្ចុប្បន្ន
  * ភ្ជាប់មកជាមួយ [ថតឯកសារ](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### ប៉ារ៉ាម៉ែត្រតម្រង
+ ខ្សែអក្សរ `filter` អាចជាពាក្យច្រើន។ ក្នុងករណីនេះ ពាក្យដំបូងគឺឈ្មោះតម្រង និង
+ ពាក្យដែលនៅសល់នឹងត្រូវបានបញ្ជូនជាអាគុយម៉ង់ទៅមុខងារ `filter`
 
  ### ជួយ
  ប្រើ `-h` / `--help` ដើម្បីបង្ហាញជំនួយ
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

@@ -276,11 +276,16 @@ hokeyleşme
 
  Böylece, sonunda ne yazılacağı üzerinde tam kontrole sahip olursunuz.
 
- `filter` komut dosyası aşağıdaki konumlarda aranacaktır:
+ `filter` komut dosyası aşağıdaki konumlarda aranacaktır ( `.js` ile eklenecektir)
+ ad, zaten `.js` ile bitmiyorsa)
  * Geçerli dizin
  * Geçerli dizinde `.hokey-filters` adlı bir dizin
  * `${HOME}/.hokey-filters` adlı bir dizin, burada `${HOME}` geçerli kullanıcının ana dizini
  * Yerleşik [filtreler dizini](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filtre Parametreleri
+ `filter` dizesi birden çok kelime olabilir. Bu durumda, ilk sözcük filtre adıdır ve
+ kalan kelimeler `filter` işlevine argüman olarak iletilecektir.
 
  ### Yardım
  Yardımı göstermek için `-h` / `--help` kullanın
@@ -332,7 +337,7 @@ hokeyleşme
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

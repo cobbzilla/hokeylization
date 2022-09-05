@@ -276,11 +276,16 @@ Hokeylization
 
  Nokudaro, une simba rose pane zvichazonyorwa pakupedzisira
 
- Iyo `filter` script ichatsvakwa munzvimbo dzinotevera:
+ `filter` achatsvakwa munzvimbo dzinotevera (ine `.js`
+ zita, kunze kwekunge zvatopera muna `.js` )
  * Iyo yazvino dhairekitori
  * Dhairekitori rine zita `.hokey-filters` mukati medhairekitori razvino
  * Dhairekitori rine zita `${HOME}/.hokey-filters` , uko `${HOME}` ndiro dhairekitori remusha remushandisi
  * Iyo yakavakirwa-mukati [mafirita dhairekitori](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Sefa Parameters
+ `filter` inogona kuva mazwi akawanda. Muchiitiko ichi, izwi rekutanga ndiro zita resefa, uye
+ mazwi asara achapfuudzwa senharo ku `filter` basa
 
  ### Batsira
  Shandisa `-h` / `--help` kuratidza rubatsiro
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

@@ -276,11 +276,16 @@ Hokeylizatsiya
 
  Shunday qilib, siz oxirida nima yozilishini to'liq nazorat qilasiz
 
- " `filter` " skripti quyidagi joylarda qidiriladi:
+ " `filter` " skripti quyidagi joylarda qidiriladi (filtrga " `.js` " bilan qo'shiladi)
+ nomi, agar u `.js` bilan tugamasa)
  * Joriy katalog
  * Joriy katalog ichidagi `.hokey-filters` nomli katalog
  * `${HOME}/.hokey-filters` , bu yerda `${HOME}` joriy foydalanuvchining uy katalogi
  * O'rnatilgan [filtrlar katalogi](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filtr parametrlari
+ " `filter` " qatori bir nechta so'zlardan iborat bo'lishi mumkin. Bunday holda, birinchi so'z filtr nomi va
+ qolgan so'zlar " `filter` funksiyasiga argument sifatida uzatiladi
 
  ### Yordam bering
  Yordamni ko'rsatish uchun `-h` / `--help` dan foydalaning
@@ -332,7 +337,7 @@ Hokeylizatsiya
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

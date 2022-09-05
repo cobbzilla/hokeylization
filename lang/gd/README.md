@@ -276,11 +276,16 @@ Hokeylization
 
  Mar sin, tha smachd iomlan agad air na thèid a sgrìobhadh mu dheireadh
 
- Bithear a’ coimhead airson an sgriobt ‘ `filter` ’ anns na h-àiteachan a leanas:
+ Thèid an sgriobt `filter` a shireadh anns na h-ionadan a leanas (le `.js` ga cheangal ris a' chriathrag
+ ainm, mura h-eil e mu thràth a’ crìochnachadh ann an `.js` )
  * An eòlaire gnàthach
  * Eòlaire leis an ainm `.hokey-filters` taobh a-staigh an eòlaire gnàthach
  * Eòlaire leis an ainm `${HOME}/.hokey-filters` , far a bheil `${HOME}` mar eòlaire dachaigh a' chleachdaiche làithreach
  * An [eòlaire sìoltachain] a chaidh a thogail a-steach (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filter Parameters
+ Faodaidh an sreang `filter` a bhith ioma-fhacal. Anns a 'chùis seo, is e a' chiad fhacal an t-ainm sìoltachain, agus
+ thèid na faclan a tha air fhàgail a thoirt seachad mar argamaidean don ghnìomh `filter`
 
  ### Cuideachadh
  Cleachd `-h` / `--help` gus cuideachadh a shealltainn
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

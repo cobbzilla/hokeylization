@@ -170,7 +170,7 @@ Hokeylization
  Chosankha cha `-o` / `--outfile` chimatchula zotuluka
 
  **CHENJEZO LAKULU**: Mukamasulira maulolezo, **OSATI** tchulani chikwatu chotulutsa
- zomwe zili mkati mwazolembera zanu! Ngati muchita izi, mudza:
+ zomwe zili mkati mwazolembera zanu! Mukachita izi, mudzachita:
  * yambitsani kubwereza kosatha
  * tsitsani ndalama zanu za Google
  * lembani disk yanu
@@ -276,11 +276,16 @@ Hokeylization
 
  Choncho, muli ndi mphamvu zonse pa zomwe zidzalembedwe
 
- Zolemba za `filter` m'malo otsatirawa:
+ Zolemba za `filter` m'malo otsatirawa (ndi `.js` zidzawonjezedwa ku fyuluta
+ dzina, pokhapokha litatha kale mu `.js` )
  * Chikwatu chapano
  * Chikwatu chotchedwa `.hokey-filters` mkati mwa chikwatu chomwe chilipo
  * Chikwatu chotchedwa `${HOME}/.hokey-filters` , pomwe `${HOME}` ndi chikwatu chakunyumba kwa ogwiritsa ntchito pano
  * Zomangamanga [zosefera](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Zosefera Zosefera
+ Chingwe cha `filter` chikhoza kukhala mawu angapo. Pankhaniyi, mawu oyamba ndi dzina fyuluta, ndi
+ mawu otsalawo adzaperekedwa ngati zotsutsana ku ntchito ya `filter`
 
  ### Thandizeni
  Gwiritsani ntchito `-h` / `--help` kuti muwonetse thandizo
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

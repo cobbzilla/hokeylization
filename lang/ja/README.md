@@ -276,13 +276,18 @@ Markdown はテキストでも html でもありません。
 
 したがって、最終的に何が書き込まれるかを完全に制御できます
 
-`filter`スクリプトは、次の場所で検索されます。
+`filter`スクリプトは次の場所で検索されます ( `.js`がフィルタに追加されます)
+名前、すでに`.js`で終わっていない限り)
  * 現在のディレクトリ
 * 現在のディレクトリ内の`.hokey-filters`という名前のディレクトリ
 * `${HOME}/.hokey-filters`という名前のディレクトリ。ここで、 `${HOME}`は現在のユーザーのホーム ディレクトリです。
  * 組み込みの [filters ディレクトリ](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
 
- ＃＃＃ ヘルプ
+ #### フィルタ パラメータ
+`filter`文字列は複数の単語にすることができます。この場合、最初の単語はフィルター名です。
+残りの単語は引数として`filter`関数に渡されます
+
+＃＃＃ ヘルプ
 ヘルプを表示するには、 `-h` / `--help` help」を使用します
 
 ## JSON バッチ コマンド
@@ -332,7 +337,7 @@ Markdown はテキストでも html でもありません。
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -352,7 +357,7 @@ Markdown はテキストでも html でもありません。
       ]
     }
 
- ### インデックス
+ ### 索引
 多くの言語に翻訳する場合、 `hokey`は、行われたすべての翻訳をリストするインデックス ファイルを作成できます。
 それらへのリンクを提供します
 

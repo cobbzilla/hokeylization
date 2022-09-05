@@ -276,11 +276,16 @@ Hokeylizéierung
 
  Also hutt Dir total Kontroll iwwer dat wat endlech geschriwwe gëtt
 
- De `filter` Skript gëtt op de folgende Plazen gesicht:
+ De `filter` Skript gëtt op de folgende Plazen gesicht (mat `.js` gëtt an de Filter bäigefüügt
+ Numm, ausser et endet schonn op `.js` )
  * Den aktuelle Verzeechnes
  * E Verzeechnes mam Numm `.hokey-filters` am aktuellen Verzeechnes
  * E Verzeichnis mam Numm `${HOME}/.hokey-filters` , wou `${HOME}` den aktuelle Benotzer säin Heemverzeichnis ass
  * Den agebaute [Filterverzeechnes](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filterparameter
+ De String `filter` ka verschidde Wierder sinn. An dësem Fall ass dat éischt Wuert de Filternumm, an
+ déi verbleiwen Wierder ginn als Argumenter un d' `filter`
 
  ### Hëllef
  Benotzt `-h` / `--help` fir Hëllef ze weisen
@@ -332,7 +337,7 @@ Hokeylizéierung
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

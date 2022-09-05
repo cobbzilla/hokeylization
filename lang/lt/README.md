@@ -276,11 +276,16 @@ Hokeylizacija
 
  Taigi jūs visiškai kontroliuojate, kas pagaliau bus parašyta
 
- Scenarijaus `filter` bus ieškoma šiose vietose:
+ Scenarijus `filter` “ bus ieškomas šiose vietose (prie filtro bus pridėtas `.js`
+ pavadinimas, nebent jis jau baigiasi `.js` )
  * Dabartinis katalogas
  * Katalogas pavadinimu `.hokey-filters` “ dabartiniame kataloge
  * Katalogas pavadinimu `${HOME}/.hokey-filters` , kur `${HOME}` yra dabartinio vartotojo namų katalogas
  * Integruotas [filtrų katalogas](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filtruoti parametrus
+ `filter` eilutę gali sudaryti keli žodžiai. Šiuo atveju pirmasis žodis yra filtro pavadinimas ir
+ likę žodžiai bus perduoti kaip argumentai funkcijai `filter`
 
  ### Pagalba
  Norėdami parodyti pagalbą, naudokite `-h` / `--help` .
@@ -332,7 +337,7 @@ Hokeylizacija
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

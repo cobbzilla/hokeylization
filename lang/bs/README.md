@@ -276,11 +276,16 @@ Hokeilizacija
 
  Dakle, imate potpunu kontrolu nad onim što će konačno biti napisano
 
- Skripta `filter` će se tražiti na sljedećim lokacijama:
+ Skripta `filter` će se tražiti na sljedećim lokacijama (sa `.js` će biti dodat filteru
+ ime, osim ako se već završava na `.js` )
  * Trenutni direktorij
  * Direktorij pod nazivom `.hokey-filters` unutar trenutnog direktorija
  * Direktorij pod nazivom `${HOME}/.hokey-filters` , gdje `${HOME}` početni direktorij trenutnog korisnika
  * Ugrađeni [direktorij filtera](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Parametri filtera
+ `filter` može biti više riječi. U ovom slučaju, prva riječ je naziv filtera i
+ preostale riječi će biti proslijeđene kao argumenti funkciji `filter`
 
  ### Pomoć
  Koristite `-h` / `--help` za prikaz pomoći
@@ -332,7 +337,7 @@ Hokeilizacija
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

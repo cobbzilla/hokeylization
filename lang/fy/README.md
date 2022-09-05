@@ -276,11 +276,16 @@ Hokeylisearring
 
  Sa hawwe jo totale kontrôle oer wat úteinlik skreaun wurde sil
 
- It `filter` skript sil socht wurde op de folgjende lokaasjes:
+ It `filter` skript sil socht wurde op de folgjende lokaasjes (mei `.js` wurdt taheakke oan it filter
+ namme, útsein as it al einiget op `.js` )
  * De hjoeddeistige map
  * In map mei de namme `.hokey-filters` binnen de hjoeddeiske map
  * In map mei de namme `${HOME}/.hokey-filters` , wêrby `${HOME}` de thúsmap fan de hjoeddeiske brûker is
  * De ynboude [filtermap](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filterparameters
+ De `filter` tekenrige kin meardere wurden wêze. Yn dit gefal is it earste wurd de filternamme, en
+ de oerbleaune wurden wurde trochjûn as arguminten nei de funksje `filter`
 
  ### Help
  Brûk `-h` / `--help` om help te sjen
@@ -332,7 +337,7 @@ Hokeylisearring
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -364,7 +369,7 @@ Hokeylisearring
  Brûk de `-A` / `--index-template` om te bepalen hoe't de yndeksútfier is opmakke. Jo kinne 'html' opjaan,
  'markdown', 'text', of it bestânpaad nei jo eigen [HandlebarsJS](https://handlebarsjs.com/) sjabloan
 
- As jo jo eigen sjabloan oantsjutte, moatte jo ek in bestân (gjin map) opjaan foar de `-I` / `--index`
+ As jo jo eigen sjabloan oantsjutte, moatte jo ek in bestân opjaan (net in map) foar de `-I` / `--index`
  opsje
 
  ## Hawwe in leuke tiid mei it oersetten fan talen!

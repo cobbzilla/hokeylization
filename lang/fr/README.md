@@ -85,7 +85,7 @@ Hokeyylisation
  J'apprécierais sincèrement même la plus petite [contribution mensuelle via Patreon](https://www.patreon.com/cobbzilla)
 
  ## Installation
- Pour utiliser l'outil de ligne de commande, installez en utilisant `npm` ou `yarn` :
+ Pour utiliser l'outil de ligne de commande, installez en utilisant `npm` ou `yarn` :
 
     npm install -g hokeylization
     yarn global add hokeylization
@@ -208,7 +208,7 @@ Hokeyylisation
 
  ## Autres options
 
- ### Essai à vide
+ ### Essai à sec
  Passez `-n` / `--dry-run` pour afficher ce qui serait fait, mais n'effectuez pas d'appels d'API ni n'écrivez de fichiers
 
  ### Force
@@ -276,11 +276,16 @@ Hokeyylisation
 
  Ainsi, vous avez un contrôle total sur ce qui sera finalement écrit
 
- Le script `filter` sera recherché aux emplacements suivants :
+ Le script `filter` sera recherché dans les emplacements suivants (avec `.js` sera ajouté au filtre
+ name, à moins qu'il ne se termine déjà par `.js` )
  * Le répertoire courant
  * Un répertoire nommé `.hokey-filters` dans le répertoire courant
  * Un répertoire nommé `${HOME}/.hokey-filters` , où `${HOME}` est le répertoire personnel de l'utilisateur actuel
  * Le [répertoire des filtres] intégré (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Paramètres de filtre
+ La chaîne `filter` peut être composée de plusieurs mots. Dans ce cas, le premier mot est le nom du filtre, et
+ les mots restants seront passés en arguments à la fonction `filter`
 
  ### Aider
  Utilisez `-h` / `--help` pour afficher l'aide
@@ -332,7 +337,7 @@ Hokeyylisation
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

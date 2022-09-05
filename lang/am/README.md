@@ -276,11 +276,16 @@
 
  ስለዚህ፣ በመጨረሻ በሚፃፈው ላይ ሙሉ ቁጥጥር አለህ
 
- የ `filter` ስክሪፕቱ በሚከተሉት ቦታዎች ላይ ይፈለጋል
+ `filter` ስክሪፕቱ በሚከተሉት ቦታዎች ይታያል ( `.js` ጋር በማጣሪያው ላይ ይታከላል)
+ ስም፣ በ`.js` ላይ `.js` በስተቀር
  * የአሁኑ ማውጫ
  * አሁን ባለው ማውጫ ውስጥ `.hokey-filters` የሚል ማውጫ
  * `${HOME}/.hokey-filters` ፣ `${HOME}` የአሁኑ የተጠቃሚ ቤት ማውጫ የሆነበት
  * አብሮ የተሰራው [የማጣሪያ ማውጫ](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### የማጣሪያ መለኪያዎች
+ `filter` ሕብረቁምፊ ብዙ ቃላት ሊሆን ይችላል። በዚህ አጋጣሚ, የመጀመሪያው ቃል የማጣሪያ ስም ነው, እና
+ የተቀሩት ቃላቶች ወደ “ማጣሪያ” ተግባር እንደ ነጋሪ እሴት `filter`
 
  ### እገዛ
  እገዛን ለማሳየት `-h` / `--help` ን ይጠቀሙ
@@ -332,7 +337,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -362,7 +367,7 @@
  ወይም ማውጫ. ማውጫ ከሆነ በአብነት ላይ በመመስረት ነባሪ የፋይል ስም ጥቅም ላይ ይውላል (ከዚህ በታች ይመልከቱ)
 
  የመረጃ ጠቋሚ ውፅዓት እንዴት እንደሚቀረፅ ለማወቅ `-A` / `--index-template` ን ይጠቀሙ። ኤችቲኤምኤልን መግለጽ ይችላሉ ፣
- 'markdown'፣ 'text' ወይም የፋይል ዱካ ወደ እርስዎ [HandlebarsJS](https://handlebarsjs.com/) አብነት
+ 'markdown'፣ 'text'፣ ወይም የፋይል ዱካ ወደራስዎ [HandlebarsJS](https://handlebarsjs.com/) አብነት
 
  የራስዎን አብነት ከገለጹ፣ `-I` / `--index` ፋይል (ማህደር ሳይሆን) መግለጽ አለቦት።
  አማራጭ

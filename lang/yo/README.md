@@ -276,11 +276,16 @@ Hokeyylization
 
  Nitorinaa, o ni iṣakoso lapapọ lori ohun ti yoo kọ nikẹhin
 
- Iwe afọwọkọ `filter` naa yoo wa fun ni awọn ipo wọnyi:
+ Iwe afọwọkọ `filter` ni ao wa fun ni awọn ipo wọnyi (pẹlu `.js` yoo wa ni fikun si àlẹmọ
+ orukọ, ayafi ti o ba ti pari tẹlẹ ni `.js` )
  * Awọn ti isiyi liana
  * Ilana ti a npè ni `.hokey-filters` laarin ilana lọwọlọwọ
  * Ilana kan ti a npè ni `${HOME}/.hokey-filters` , nibiti `${HOME}` ti jẹ ilana ile olumulo lọwọlọwọ
  * Ti a ṣe sinu [itọsọna awọn asẹ](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Awọn paramita Ajọ
+ Okun `filter` le jẹ awọn ọrọ lọpọlọpọ. Ni idi eyi, ọrọ akọkọ jẹ orukọ àlẹmọ, ati
+ awọn ọrọ ti o ku yoo kọja bi awọn ariyanjiyan si iṣẹ `filter`
 
  ### Egba Mi O
  Lo `-h` / `--help` lati ṣe afihan iranlọwọ
@@ -332,7 +337,7 @@ Hokeyylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

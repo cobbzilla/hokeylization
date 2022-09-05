@@ -276,11 +276,16 @@
 
  بنابراین، شما کنترل کاملی بر آنچه در نهایت نوشته خواهد شد دارید
 
- اسکریپت `filter` در مکان‌های زیر جستجو می‌شود:
+ اسکریپت `filter` در مکان‌های زیر جستجو می‌شود (با `.js` به فیلتر اضافه می‌شود
+ نام، مگر اینکه از قبل به `.js` )
  * دایرکتوری فعلی
  * دایرکتوری به نام `.hokey-filters` در دایرکتوری فعلی
  * دایرکتوری به نام `${HOME}/.hokey-filters` » که در آن `${HOME}` فهرست اصلی کاربر فعلی است
  * [دایرکتوری فیلترها] داخلی (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### پارامترهای فیلتر
+ رشته `filter` می تواند چندین کلمه باشد. در این حالت اولین کلمه نام فیلتر و
+ کلمات باقی مانده به عنوان آرگومان به تابع `filter` می شوند
 
  ### کمک
  برای نشان دادن کمک از `-h` » / `--help` استفاده کنید
@@ -332,7 +337,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

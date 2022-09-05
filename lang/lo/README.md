@@ -276,11 +276,16 @@ Hokeylization
 
  ດັ່ງນັ້ນ, ທ່ານມີການຄວບຄຸມທັງຫມົດກ່ຽວກັບສິ່ງທີ່ຈະຂຽນໃນທີ່ສຸດ
 
- script `filter` ຈະຖືກຊອກຫາຢູ່ໃນສະຖານທີ່ຕໍ່ໄປນີ້:
+ script `filter` ຈະຖືກຊອກຫາໃນສະຖານທີ່ຕໍ່ໄປນີ້ (ດ້ວຍ `.js` ຈະຖືກຕໍ່ທ້າຍໃສ່ຕົວກອງ.
+ ຊື່, ເວັ້ນເສຍແຕ່ວ່າມັນສິ້ນສຸດລົງໃນ `.js` )
  * ລະ​ບົບ​ປະ​ຈຸ​ບັນ​
  * ໄດເຣັກທໍຣີທີ່ມີຊື່ວ່າ `.hokey-filters` ພາຍໃນໄດເລກະທໍລີປະຈຸບັນ
  * ໄດເຣັກທໍຣີທີ່ມີຊື່ວ່າ `${HOME}/.hokey-filters` , ເຊິ່ງ `${HOME}` ແມ່ນໄດເຣັກທໍຣີຫຼັກຂອງຜູ້ໃຊ້ປັດຈຸບັນ.
  * ໃນຕົວ [ໄດເລກະທໍລີການກັ່ນຕອງ](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### ຕົວກໍານົດການກັ່ນຕອງ
+ string `filter` ສາມາດເປັນຫຼາຍຄຳສັບ. ໃນກໍລະນີນີ້, ຄໍາທໍາອິດແມ່ນຊື່ການກັ່ນຕອງ, ແລະ
+ ຄໍາທີ່ຍັງເຫຼືອຈະຖືກສົ່ງຜ່ານເປັນການໂຕ້ຖຽງກັບຫນ້າທີ່ `filter`
 
  ### ຊ່ວຍ
  ໃຊ້ `-h` / `--help` ເພື່ອສະແດງການຊ່ວຍເຫຼືອ
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

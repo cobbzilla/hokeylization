@@ -276,11 +276,16 @@ Hokeyzation
 
  Do đó, bạn có toàn quyền kiểm soát những gì cuối cùng sẽ được viết
 
- Tập lệnh `filter` sẽ được tìm kiếm ở các vị trí sau:
+ Tập lệnh `filter` sẽ được tìm kiếm ở các vị trí sau ( `.js` sẽ được thêm vào bộ lọc
+ tên, trừ khi nó đã kết thúc bằng `.js` )
  * Thư mục hiện tại
  * Một thư mục có tên `.hokey-filters` trong thư mục hiện tại
  * Một thư mục có tên là `${HOME}/.hokey-filters` , trong đó` `${HOME}` là thư mục chính của người dùng hiện tại
  * [Thư mục bộ lọc] tích hợp sẵn (https://github.com/cobbzilla/hokeyption/tree/master/util/filter)
+
+ #### Tham số Bộ lọc
+ Chuỗi `filter` có thể là nhiều từ. Trong trường hợp này, từ đầu tiên là tên bộ lọc và
+ các từ còn lại sẽ được chuyển làm đối số cho hàm `filter`
 
  ### Cứu giúp
  Sử dụng `-h` / `--help` để hiển thị trợ giúp
@@ -332,7 +337,7 @@ Hokeyzation
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

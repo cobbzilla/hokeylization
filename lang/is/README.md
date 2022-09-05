@@ -276,11 +276,16 @@ Hókýlvæðing
 
  Þannig hefur þú fulla stjórn á því sem að lokum verður skrifað
 
- Leitað verður að `filter` forskriftinni á eftirfarandi stöðum:
+ `filter` verður að „síu“ forskriftinni á eftirfarandi stöðum (með `.js` verður bætt við síuna
+ nafn, nema það endi nú þegar á `.js` )
  * Núverandi möppu
  * Skrá sem heitir `.hokey-filters` í núverandi möppu
  * Skrá sem heitir `${HOME}/.hokey-filters` , þar sem `${HOME}` er heimaskrá núverandi notanda
  * Innbyggða [síuskráin](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Síufæribreytur
+ `filter` strengurinn getur verið mörg orð. Í þessu tilviki er fyrsta orðið síuheitið og
+ orðin sem eftir eru verða send sem rök í `filter` fallið
 
  ### Hjálp
  Notaðu `-h` / `--help` til að sýna hjálp
@@ -332,7 +337,7 @@ Hókýlvæðing
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -362,7 +367,7 @@ Hókýlvæðing
  eða möppu. Ef það er möppu verður sjálfgefið skráarheiti notað, byggt á sniðmátinu (sjá hér að neðan)
 
  Notaðu `-A` / `--index-template` til að ákvarða hvernig vísitöluúttakið er sniðið. Þú getur tilgreint 'html',
- 'markdown', 'texti' eða skráarslóðina að þínu eigin [HandlebarsJS](https://handlebarsjs.com/) sniðmáti
+ 'markdown', 'text' eða skráarslóðina að þínu eigin [HandlebarsJS](https://handlebarsjs.com/) sniðmáti
 
  Ef þú tilgreinir þitt eigið sniðmát verður þú einnig að tilgreina skrá (ekki möppu) fyrir `-I` / `--index`
  valmöguleika

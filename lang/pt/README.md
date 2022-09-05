@@ -276,11 +276,16 @@ Hokeylização
 
  Assim, você tem total controle sobre o que finalmente será escrito
 
- O script `filter` será procurado nos seguintes locais:
+ O script `filter` será procurado nos seguintes locais (com `.js` será anexado ao filtro
+ nome, a menos que já termine em `.js` )
  * O diretório atual
  * Um diretório chamado `.hokey-filters` dentro do diretório atual
  * Um diretório chamado `${HOME}/.hokey-filters` , onde `${HOME}` é o diretório inicial do usuário atual
  * O [diretório de filtros] integrado (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Parâmetros de filtro
+ A string `filter` pode ter várias palavras. Nesse caso, a primeira palavra é o nome do filtro e
+ as palavras restantes serão passadas como argumentos para a função `filter`
 
  ### Ajuda
  Use `-h` / `--help` para mostrar a ajuda
@@ -332,7 +337,7 @@ Hokeylização
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

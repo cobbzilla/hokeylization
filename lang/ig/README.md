@@ -119,7 +119,7 @@ Hokeyylization
  Ọ bụrụ na ị na-agba ọsọ site na koodu isi mmalite, ị nwekwara ike itinye ndị a na faịlụ `.env` na isi mmalite
  A ga-ebunye ndekọ aha ha na oge ojiri gaa site na [dotenv](https://www.npmjs.com/package/dotenv)
 
- ## Ịsụgharị faịlụ akụrụngwa Javascript
+ ## Ịsụgharị faịlụ akụ eriri Javascript
  Tebụl eriri gị ** ga-abụrịrị na faịlụ Javascript n'otu n'ime ụdị abụọ a:
 
  Mbupu ES6:
@@ -276,11 +276,16 @@ Hokeyylization
 
  Ya mere, ị na-achịkwa ihe niile a ga-ede n'ikpeazụ
 
- A ga-achọ edemede `filter` n'ebe ndị a:
+ A ga-achọ edemede `filter` n'ebe ndị a (a ga-etinye `.js` na nzacha.
+ aha, belụsọ na ọ kwụsịrị na `.js` )
  * Akwụkwọ ndekọ aha ugbu a
  * Akwụkwọ ndekọ aha `.hokey-filters` n'ime ndekọ aha ugbu a
  * Ndekọ aha ya bụ `${HOME}/.hokey-filters` , ebe `${HOME}` bụ ndekọ ụlọ nke onye ọrụ ugbu a
  * Ihe arụnyere n'ime [ndekọ ihe nzacha](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Ihe nzacha nzacha
+ `filter` nwere ike ịbụ ọtụtụ okwu. N'okwu a, okwu mbụ bụ aha nzacha, na
+ A ga-agafe okwu ndị fọdụrụ dị ka arụmụka maka ọrụ `filter`
 
  ### Enyemaka
  Jiri `-h` / `--help` gosi enyemaka
@@ -332,7 +337,7 @@ Hokeyylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -362,7 +367,7 @@ Hokeyylization
  ma ọ bụ ndekọ. Ọ bụrụ na ọ bụ ndekọ aha, a ga-eji aha faịlụ ndabara, dabere na ndebiri (lee n'okpuru)
 
  Jiri `-A` / `--index-template` ' chọpụta ka esi ahazi mmepụta ndeksi. Ị nwere ike ịkọwapụta 'html',
- 'markdown', 'ederede', ma ọ bụ ụzọ faịlụ gaa na nke gị [HandlebarsJS](https://handlebarsjs.com/) ndebiri
+ 'markdown', 'ederede', ma ọ bụ ụzọ faịlụ gaa na nke gị [HandlebarsJS](https://handlebarsjs.com/) template
 
  Ọ bụrụ na ị kọwapụta template nke gị, ị ga-ezipụtakwa otu faịlụ (ọ bụghị akwụkwọ ndekọ aha) maka `-I` / `--index`
  nhọrọ

@@ -276,11 +276,16 @@
 
  ان ڪري، توهان وٽ مڪمل ڪنٽرول آهي جيڪو آخر ۾ لکيو ويندو
 
- `filter` اسڪرپٽ کي هيٺين جڳهن ۾ ڳوليو ويندو:
+ `filter` اسڪرپٽ کي هيٺين جڳهن ۾ `.js` ويندو (جي ايس سان گڏ فلٽر ۾ شامل ڪيو ويندو
+ نالو، جيستائين اهو اڳ ۾ ئي ختم نه ٿئي `.js` )
  * موجوده ڊاريڪٽري
  * موجوده ڊاريڪٽري اندر `.hokey-filters` نالي هڪ ڊاريڪٽري
  * هڪ ڊاريڪٽري نالي `${HOME}/.hokey-filters` ، جتي `${HOME}` موجوده استعمال ڪندڙ جي گهر ڊاريڪٽري آهي
  * بلٽ ان [فلٽر ڊاريڪٽري](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### فلٽر پيٽرولر
+ `filter` اسٽرنگ ڪيترائي لفظ ٿي سگھن ٿا. انهي حالت ۾، پهريون لفظ فلٽر جو نالو آهي، ۽
+ باقي لفظن کي `filter` فنڪشن ڏانهن دليلن طور منظور ڪيو ويندو
 
  ### مدد
  مدد ڏيکارڻ لاءِ `-h` / `--help` استعمال ڪريو
@@ -332,7 +337,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

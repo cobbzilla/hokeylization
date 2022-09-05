@@ -276,11 +276,16 @@ Hokeyləşmə
 
  Beləliklə, nəhayət yazılacaqlara tam nəzarət edirsiniz
 
- `filter` skripti aşağıdakı yerlərdə axtarılacaq:
+ `filter` skripti aşağıdakı yerlərdə axtarılacaq ( `.js` ilə əlavə olunacaq)
+ ad, əgər artıq `.js` )
  * Cari kataloq
  * Cari kataloq daxilində `.hokey-filters` adlı kataloq
  * `${HOME}/.hokey-filters` adlı kataloq, burada `${HOME}` cari istifadəçinin ev kataloqudur
  * Daxili [filtrlər kataloqu](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filtr Parametrləri
+ `filter` sətri bir neçə sözdən ibarət ola bilər. Bu halda ilk söz filtrin adıdır və
+ qalan sözlər `filter` funksiyasına arqument kimi ötürüləcək
 
  ### Kömək
  Yardım göstərmək üçün `-h` / `--help` istifadə edin
@@ -332,7 +337,7 @@ Hokeyləşmə
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

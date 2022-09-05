@@ -276,11 +276,16 @@ Hokeylizálás
 
  Így teljes ellenőrzése alatt áll, hogy végül mi kerül megírásra
 
- A `filter` szkriptet a következő helyeken kell keresni:
+ A `filter` szkriptet a következő helyeken keresi a rendszer (a `.js` hozzá lesz fűzve a szűrőhöz
+ név, kivéve, ha már `.js` )
  * Az aktuális könyvtár
  * Egy `.hokey-filters` nevű könyvtár az aktuális könyvtárban
  * Egy `${HOME}/.hokey-filters` nevű könyvtár, ahol a `${HOME}` az aktuális felhasználó saját könyvtára
  * A beépített [szűrők könyvtára](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Szűrőparaméterek
+ A `filter` karakterlánc több szóból állhat. Ebben az esetben az első szó a szűrő neve, és
+ a fennmaradó szavak argumentumként kerülnek átadásra a `filter` függvénynek
 
  ### Segítség
  Használja a `-h` / `--help` a súgó megjelenítéséhez
@@ -332,7 +337,7 @@ Hokeylizálás
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

@@ -276,11 +276,16 @@ Hokeylization
 
  Oleh itu, anda mempunyai kawalan penuh ke atas apa yang akhirnya akan ditulis
 
- Skrip `filter` akan dicari di lokasi berikut:
+ Skrip `filter` akan dicari di lokasi berikut (dengan `.js` akan dilampirkan pada penapis
+ nama, melainkan ia sudah berakhir dengan `.js` )
  * Direktori semasa
  * Direktori bernama `.hokey-filters` dalam direktori semasa
  * Direktori bernama `${HOME}/.hokey-filters` , dengan `${HOME}` ialah direktori rumah pengguna semasa
  * [Direktori penapis] terbina dalam(https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Parameter Penapis
+ Rentetan `filter` boleh terdiri daripada berbilang perkataan. Dalam kes ini, perkataan pertama ialah nama penapis, dan
+ perkataan yang selebihnya akan dihantar sebagai hujah kepada fungsi `filter`
 
  ### Bantuan
  Gunakan `-h` / `--help` untuk menunjukkan bantuan
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

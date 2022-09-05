@@ -276,11 +276,16 @@ Hokeylization
 
  No laila, loaʻa iā ʻoe ka mana piha ma luna o ka mea e kākau hope ʻia
 
- E ʻimi ʻia ka `filter` ma kēia mau wahi:
+ E ʻimi ʻia ka palapala `filter` ma kēia mau wahi (me ka `.js` e hoʻopili ʻia i ka kānana
+ inoa, ke ʻole e pau i ka `.js` )
  * ʻO ka papa kuhikuhi o kēia manawa
  * He papa kuhikuhi i kapa `.hokey-filters` i loko o ka papa kuhikuhi o kēia manawa
  * He papa kuhikuhi i kapa `${HOME}/.hokey-filters` , kahi `${HOME}` ka papa kuhikuhi home o ka mea hoʻohana i kēia manawa
  * ʻO ka [papa kuhikuhi kānana] i kūkulu ʻia (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Nā ʻāpana kānana
+ Hiki i ke kaula `filter` he mau hua'ōlelo. I kēia hihia, ʻo ka huaʻōlelo mua ka inoa kānana, a
+ e hāʻawi ʻia nā huaʻōlelo i koe ma ke ʻano he hoʻopaʻapaʻa no ka hana `filter`
 
  ### Kōkua
  E hoʻohana `-h` / `--help` e hōʻike i ke kōkua
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -364,7 +369,7 @@ Hokeylization
  E hoʻohana i ka `-A` / `--index-template` no ka hoʻoholo ʻana i ke ʻano o ka hoʻohālikelike ʻia ʻana o ka huaʻōlelo kuhikuhi. Hiki iā ʻoe ke kuhikuhi i ka 'html',
  'markdown', 'text', a i ʻole ke ala waihona i kāu [HandlebarsJS](https://handlebarsjs.com/) template
 
- Inā hōʻike ʻoe i kāu hoʻohālike ponoʻī, pono ʻoe e kuhikuhi i kahi faila (ʻaʻole he papa kuhikuhi) no ka `-I` / `--index`
+ Inā ʻoe e kuhikuhi i kāu hoʻohālike ponoʻī, pono ʻoe e kuhikuhi i kahi faila (ʻaʻole he papa kuhikuhi) no ka `-I` / `--index`
  koho
 
  ## E hauʻoli i ka unuhi ʻana i nā ʻōlelo!

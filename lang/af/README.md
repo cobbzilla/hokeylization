@@ -276,11 +276,16 @@ Hokielisering
 
  Jy het dus totale beheer oor wat uiteindelik geskryf gaan word
 
- Die `filter` skrip sal op die volgende plekke gesoek word:
+ Die `filter` skrip sal op die volgende plekke gesoek word (met `.js` sal by die filter aangeheg word
+ naam, tensy dit reeds op `.js` eindig)
  * Die huidige gids
  * 'n Gids met die naam `.hokey-filters` binne die huidige gids
  * 'n Gids met die naam `${HOME}/.hokey-filters` , waar `${HOME}` die huidige gebruiker se tuisgids is
  * Die ingeboude [filtergids](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filterparameters
+ Die `filter` -string kan veelvuldige woorde wees. In hierdie geval is die eerste woord die filternaam, en
+ die oorblywende woorde sal as argumente na die `filter` funksie deurgegee word
 
  ### Hulp
  Gebruik `-h` / `--help` om hulp te wys
@@ -332,7 +337,7 @@ Hokielisering
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -362,7 +367,7 @@ Hokielisering
  of 'n gids. As dit 'n gids is, sal 'n verstek lêernaam gebruik word, gebaseer op die sjabloon (sien hieronder)
 
  Gebruik die `-A` / `--index-template` om te bepaal hoe die indeksuitvoer geformateer word. Jy kan 'html' spesifiseer,
- 'markdown', 'text', of die lêerpad na jou eie [HandlebarsJS](https://handlebarsjs.com/) sjabloon
+ 'markdown', 'text', of die lêerpad na jou eie [HandlebarsJS](https://handlebarsjs.com/)-sjabloon
 
  As jy jou eie sjabloon spesifiseer, moet jy ook 'n lêer (nie 'n gids nie) spesifiseer vir die `-I` / `--index`
  opsie

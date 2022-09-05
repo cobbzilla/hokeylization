@@ -276,11 +276,16 @@ Hokeyliseerimine
 
  Seega on teil täielik kontroll selle üle, mida lõpuks kirjutatakse
 
- Skripti `filter` järgmistest asukohtadest:
+ Skripti `filter` otsitakse järgmistest asukohtadest (koos `.js` lisatakse filtrile
+ nimi, välja arvatud juhul, kui see juba lõppeb `.js` )
  * Praegune kataloog
  * Kataloog nimega `.hokey-filters` " praeguses kataloogis
  * Kataloog nimega `${HOME}/.hokey-filters` , kus `${HOME}` on praeguse kasutaja kodukataloog
  * Sisseehitatud [filtrite kataloog](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filtri parameetrid
+ `filter` võib olla mitu sõna. Sel juhul on esimene sõna filtri nimi ja
+ ülejäänud sõnad edastatakse argumentidena funktsioonile `filter`
 
  ### Abi
  Kasutage abi kuvamiseks klahve `-h` / `--help` .
@@ -332,7 +337,7 @@ Hokeyliseerimine
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

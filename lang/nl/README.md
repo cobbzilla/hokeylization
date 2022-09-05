@@ -276,11 +276,16 @@ Hokeylization
 
  Zo heb je totale controle over wat er uiteindelijk zal worden geschreven
 
- Het `filter` script wordt gezocht op de volgende locaties:
+ Het `filter` script wordt gezocht op de volgende locaties (met `.js` wordt aan het filter toegevoegd
+ naam, tenzij deze al eindigt op `.js` )
  * De huidige map
  * Een map met de naam `.hokey-filters` in de huidige map
  * Een map met de naam `${HOME}/.hokey-filters` , waarbij `${HOME}` de basismap van de huidige gebruiker is
  * De ingebouwde [filtermap](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filterparameters
+ De string `filter` kan uit meerdere woorden bestaan. In dit geval is het eerste woord de filternaam, en
+ de overige woorden worden als argumenten doorgegeven aan de functie `filter`
 
  ### Helpen
  Gebruik `-h` / `--help` om hulp weer te geven
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

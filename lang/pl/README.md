@@ -57,7 +57,7 @@ Hokeylizacja
  Tworząc nowy problem na GitHubie dotyczący tłumaczenia, wykonaj następujące czynności:
  * dołącz adres URL strony (skopiuj/wklej z paska adresu przeglądarki)
  * dołącz dokładny tekst, który jest błędny (skopiuj/wklej z przeglądarki)
- * proszę opisać co jest nie tak - czy tłumaczenie jest niepoprawne? czy formatowanie jest jakoś zepsute?
+ * proszę opisać, co jest nie tak – czy tłumaczenie jest niepoprawne? czy formatowanie jest jakoś zepsute?
  * uprzejmie zasugeruj lepsze tłumaczenie, czyli jak tekst powinien być odpowiednio sformatowany
  * **Dziękuję Ci!**
 
@@ -276,11 +276,16 @@ Hokeylizacja
 
  Dzięki temu masz całkowitą kontrolę nad tym, co ostatecznie zostanie napisane
 
- Skrypt `filter` będzie szukany w następujących lokalizacjach:
+ Skrypt `filter` będzie szukany w następujących lokalizacjach (z `.js` zostanie dołączony do filtra
+ nazwa, chyba że kończy się już na `.js` )
  * Aktualny katalog
  * Katalog o nazwie `.hokey-filters` w bieżącym katalogu
  * Katalog o nazwie `${HOME}/.hokey-filters` , gdzie `${HOME}` jest katalogiem domowym bieżącego użytkownika
  * Wbudowany [katalog filtrów](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Parametry filtra
+ Ciąg `filter` może składać się z wielu słów. W tym przypadku pierwsze słowo to nazwa filtra, a
+ pozostałe słowa zostaną przekazane jako argumenty do funkcji `filter`
 
  ### Pomoc
  Użyj `-h` / `--help` , aby wyświetlić pomoc
@@ -332,7 +337,7 @@ Hokeylizacja
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
@@ -364,7 +369,7 @@ Hokeylizacja
  Użyj `-A` / `--index-template` aby określić sposób formatowania danych wyjściowych indeksu. Możesz podać 'html',
  „markdown”, „text” lub ścieżka pliku do własnego szablonu [HandlebarsJS](https://handlebarsjs.com/)
 
- Jeśli określisz swój własny szablon, musisz również podać plik (nie katalog) dla `-I` / `--index`
+ Jeśli określisz swój własny szablon, musisz także podać plik (nie katalog) dla `-I` / `--index`
  opcja
 
  ## Baw się dobrze, tłumacząc języki!

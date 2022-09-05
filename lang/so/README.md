@@ -208,7 +208,7 @@ Hokeyylization
 
  ## Doorashooyin kale
 
- ### orod qallalan
+ ### orod qalalan
  Gudub `-n` / `--dry-run` si aad u muujiso waxa la samayn doono, laakiin dhab ahaantii ha samayn wax wicitaan API ah ama ha qorin wax fayl ah
 
  ### Xoog
@@ -276,11 +276,16 @@ Hokeyylization
 
  Markaa, waxaad si buuxda gacanta ugu haysaa waxa ugu dambayn la qori doono
 
- Qoraalka `filter` waxaa laga raadin doonaa meelaha soo socda:
+ Qoraalka `filter` ayaa laga raadin doonaa meelaha soo socda (oo leh `.js` ayaa lagu dhejin doonaa shaandhada
+ magaca, ilaa uu ku dhammaado `.js` )
  * Hagaha hadda jira
  * Hagaha lagu magacaabo `.hokey-filters` oo ku dhex jira hagaha hadda
  * Hagaha lagu magacaabo `${HOME}/.hokey-filters` , halkaasoo `${HOME}` uu yahay tusaha guriga isticmaalaha hadda
  * Ku dhex-dhisan [tusaha filtarrada](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Hababka Sifeynta
+ Xadhiga ' `filter` ' wuxuu noqon karaa erayo badan. Xaaladdan oo kale, erayga ugu horreeya waa magaca filter, iyo
+ Erayada soo haray waxaa loo gudbin doonaa dood ahaan shaqada `filter`
 
  ### I caawi
  Isticmaal `-h` / `--help` si aad u muujiso caawimo
@@ -332,7 +337,7 @@ Hokeyylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

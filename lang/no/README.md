@@ -276,11 +276,16 @@ Hokeylisering
 
  Dermed har du total kontroll over hva som til slutt skal skrives
 
- `filter` skriptet vil bli sett etter på følgende steder:
+ `filter` skriptet vil bli sett etter på følgende steder (med `.js` vil bli lagt til filteret
+ navn, med mindre det allerede slutter på `.js` )
  * Gjeldende katalog
  * En katalog kalt `.hokey-filters` i gjeldende katalog
  * En katalog kalt `${HOME}/.hokey-filters` , der `${HOME}` er gjeldende brukers hjemmekatalog
  * Den innebygde [filterkatalogen](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filterparametere
+ `filter` strengen kan være flere ord. I dette tilfellet er det første ordet filternavnet, og
+ de resterende ordene vil bli sendt som argumenter til `filter` -funksjonen
 
  ### Hjelp
  Bruk `-h` / `--help` for å vise hjelp
@@ -332,7 +337,7 @@ Hokeylisering
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

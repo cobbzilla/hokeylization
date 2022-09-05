@@ -85,7 +85,7 @@ Hokeylizazioa
  Zintzoki eskertuko nuke [Patreon bidez hileko ekarpena] txikiena ere (https://www.patreon.com/cobbzilla)
 
  ## Instalazioa
- Komando-lerroko tresna erabiltzeko, instalatu `npm` " edo `yarn` :
+ Komando lerroko tresna erabiltzeko, instalatu `npm` edo `yarn` erabiliz:
 
     npm install -g hokeylization
     yarn global add hokeylization
@@ -276,11 +276,16 @@ Hokeylizazioa
 
  Horrela, azkenean idatziko denaren gaineko kontrol osoa duzu
 
- `filter` script-a kokapen hauetan bilatuko da:
+ `filter` script-a ondoko kokapenetan bilatuko da ( `.js` -arekin iragazkiari erantsiko zaio
+ izena, dagoeneko `.js` -n amaitzen ez bada behintzat)
  * Uneko direktorioa
  * `.hokey-filters` izeneko direktorio bat uneko direktorioaren barruan
  * `${HOME}/.hokey-filters` izeneko direktorio bat, non `${HOME}` uneko erabiltzailearen hasierako direktorioa den
  * [iragazkien direktorioa] integratua (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Iragazi-parametroak
+ `filter` katea hainbat hitz izan daiteke. Kasu honetan, lehen hitza iragazkiaren izena da, eta
+ gainerako hitzak `filter` funtziora argumentu gisa pasatuko dira
 
  ### Laguntza
  Erabili `-h` / `--help` laguntza erakusteko
@@ -332,7 +337,7 @@ Hokeylizazioa
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

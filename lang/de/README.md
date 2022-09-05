@@ -276,16 +276,21 @@ Hokeylisierung
 
  Somit haben Sie die volle Kontrolle darüber, was letztendlich geschrieben wird
 
- Das `filter` wird an den folgenden Orten gesucht:
+ Das Skript „filter“ wird an den folgenden Stellen gesucht (wobei `.js` `filter` an den Filter angehängt wird
+ Name, es sei denn, er endet bereits auf `.js` )
  * Das aktuelle Verzeichnis
  * Ein Verzeichnis namens `.hokey-filters` innerhalb des aktuellen Verzeichnisses
  * Ein Verzeichnis namens `${HOME}/.hokey-filters` , wobei `${HOME}` das Heimatverzeichnis des aktuellen Benutzers ist
  * Das eingebaute [Filterverzeichnis](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
 
+ #### Filterparameter
+ Die `filter` kann aus mehreren Wörtern bestehen. In diesem Fall ist das erste Wort der Filtername und
+ die restlichen Wörter werden als Argumente an die `filter` Funktion übergeben
+
  ### Hilfe
  Verwenden Sie `-h` / `--help` , um Hilfe anzuzeigen
 
- ## JSON-Stapelbefehle
+ ## JSON-Batch-Befehle
  Mit der Option `-j` / `--json` können Sie mehrere koordinierte `hokey` Befehle ausführen
 
  Konventionell heißt diese Datei `hokey.json` , aber Sie können sie beliebig benennen
@@ -332,7 +337,7 @@ Hokeylisierung
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

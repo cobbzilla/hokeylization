@@ -276,11 +276,16 @@ Hokeilizācija
 
  Tādējādi jums ir pilnīga kontrole pār to, kas beidzot tiks uzrakstīts
 
- `filter` skripts tiks meklēts šādās vietās:
+ `filter` skripts tiks meklēts tālāk norādītajās vietās (filtram tiks pievienots `.js`
+ nosaukums, ja vien tas jau nebeidzas ar `.js` )
  * Pašreizējais direktorijs
  * Katalogs ar nosaukumu `.hokey-filters` " pašreizējā direktorijā
  * Direktorijs ar nosaukumu `${HOME}/.hokey-filters` , kur `${HOME}` ir pašreizējā lietotāja mājas direktorijs
  * Iebūvētais [filtru direktorijs](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filtrēt parametrus
+ `filter` virknē var būt vairāki vārdi. Šajā gadījumā pirmais vārds ir filtra nosaukums un
+ pārējie vārdi tiks nodoti kā argumenti funkcijai `filter`
 
  ### Palīdzība
  Lai parādītu palīdzību, izmantojiet taustiņu `-h` / `--help`
@@ -332,7 +337,7 @@ Hokeilizācija
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

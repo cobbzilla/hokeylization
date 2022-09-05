@@ -276,11 +276,16 @@ Hokeylization
 
  O lea la, ua ia te oe le pule atoa i mea o le a mulimuli ane tusia
 
- O le `filter` script o le a su'eina i nofoaga nei:
+ O le `filter` script o le a su'eina i nofoaga nei (faatasi ai ma `.js` o le a fa'apipi'i i le faamama.
+ igoa, se'i vagana ua uma ona faaiu i le `.js` )
  * Le lisi o iai nei
  * O se lisi e ta'ua `.hokey-filters` i totonu o le lisi o iai nei
  * O se lisi e ta'ua o `${HOME}/.hokey-filters` , lea `${HOME}` o lo'o iai le lisi o le fale a le tagata o lo'o iai nei.
  * O le faletusi [filters directory](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filifili Parameter
+ Ole manoa `filter` e mafai ona tele upu. I lenei tulaga, o le upu muamua o le igoa faamama, ma
+ o isi upu o le a pasia e fai ma finauga i le `filter` galuega
 
  ### Fesoasoani
  Fa'aaoga `-h` / `--help` e fa'aali ai le fesoasoani
@@ -332,14 +337,14 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
         ]
     }
 
- ### Faiga faila e tele
+ ### Fa'ailoga faila e tele
  Tu'u atu le tele o ala faila e pei o `infiles` nai lo le tasi ala `infile` , pei o lenei fa'ata'ita'iga:
 
     {
@@ -362,9 +367,9 @@ Hokeylization
  po'o se fa'atonuga. Afai o se fa'atonuga, o le a fa'aogaina le igoa faila, fa'atatau i le fa'ata'ita'iga (silasila i lalo)
 
  Fa'aoga le `-A` / `--index-template` e iloa ai pe fa'afefea ona fa'atulaga le fa'ailoga. E mafai ona e faʻamaonia 'html',
- 'markdown', 'text', po'o le ala faila i lau lava [HandlebarsJS](https://handlebarsjs.com/) template
+ 'markdown', 'text', po'o le ala faila i lau lava [HandlebarsJS](https://handlebarsjs.com/) mamanu
 
- Afai e te faʻamaonia lau lava faʻataʻitaʻiga, e tatau foi ona e faʻamaoti se faila (e le o se faʻatonuga) mo le `-I` / `--index`
+ Afai e te faʻamaonia lau lava faʻataʻitaʻiga, e tatau foi ona e faʻamaonia se faila (e le o se faʻatonuga) mo le `-I` / `--index`
  filifiliga
 
  ## Ia maua se taimi fiafia e faaliliu gagana!

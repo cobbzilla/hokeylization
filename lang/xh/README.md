@@ -276,11 +276,16 @@ Hokeylization
 
  Ke, unolawulo olupheleleyo kwinto eza kubhalwa ekugqibeleni
 
- I-script `filter` siya kukhangelwa kwezi ndawo zilandelayo:
+ I `filter` lokubhaliweyo` liya kukhangelwa kwiindawo ezilandelayo (ene `.js` kwisihluzo.
+ igama, ngaphandle kokuba sele iphele ngo `.js` )
  * Uluhlu lwangoku
  * Uluhlu olunikwe igama `.hokey-filters` ngaphakathi kulawulo lwangoku
  * Uvimba weefayili onikwe igama `${HOME}/.hokey-filters` , apho `${HOME}` lulawulo lwangoku lwasekhaya lomsebenzisi
  * Eyakhelwe ngaphakathi [uluhlu lwezihluzi](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Iiparamitha zokuHluza
+ `filter` unokuba ngamagama amaninzi. Kule meko, igama lokuqala ligama lokucoca, kwaye
+ Amagama aseleyo azakugqithiswa njengeengxoxo ku `filter` umsebenzi
 
  ### Nceda
  Sebenzisa `-h` / `--help` ukubonisa uncedo
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

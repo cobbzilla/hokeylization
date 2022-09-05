@@ -276,11 +276,16 @@ Hokeylization
 
  Kwa hivyo, una udhibiti kamili juu ya kile kitakachoandikwa
 
- Hati ya `filter` katika maeneo yafuatayo:
+ Hati ya `filter` katika maeneo yafuatayo (yenye `.js` itaongezwa kwenye kichujio.
+ jina, isipokuwa tayari inaisha kwa `.js` )
  * Saraka ya sasa
  * Saraka inayoitwa `.hokey-filters` ndani ya saraka ya sasa
  * Saraka inayoitwa `${HOME}/.hokey-filters` , ambapo `${HOME}` ndio saraka ya nyumbani ya mtumiaji wa sasa
  * [saraka ya vichujio] iliyojengewa ndani (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Vigezo vya Kichujio
+ `filter` unaweza kuwa maneno mengi. Katika kesi hii, neno la kwanza ni jina la chujio, na
+ maneno yaliyosalia yatapitishwa kama hoja kwa kitendakazi cha `filter`
 
  ### Msaada
  Tumia `-h` / `--help` ili kuonyesha usaidizi
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

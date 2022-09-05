@@ -146,7 +146,7 @@ Hokeylization
 
  `LANG` ranplase ak kòd lang pou fichye pwodiksyon yo
 
- Se konsa, kòmandman ki anwo a kreye dosye yo:
+ Kidonk, kòmandman ki anwo a kreye dosye yo:
 
     myfile.es.js
     myfile.de.js
@@ -170,7 +170,7 @@ Hokeylization
  Opsyon `-o` / `--outfile` presize anyè pwodiksyon an
 
  **GWO AVÈTISMAN**: Lè wap tradui anyè, **PA** espesifye yon anyè pwodiksyon.
- ki nan anyè opinyon ou! Si w fè sa, w ap:
+ sa se nan anyè D' ou! Si w fè sa, w ap:
  * pwovoke repetisyon enfini
  * monte bòdwo Google ou a
  * ranpli disk ou a
@@ -276,11 +276,16 @@ Hokeylization
 
  Kidonk, ou gen total kontwòl sou sa ki pral finalman ekri
 
- Y `filter` la nan kote sa yo:
+ Y ap chèche script `filter` nan kote sa yo (yo pral ajoute `.js` nan filtè a
+ non, sof si li deja fini an `.js` )
  * Anyè aktyèl la
  * Yon anyè ki rele `.hokey-filters` nan anyè aktyèl la
  * Yon anyè ki rele `${HOME}/.hokey-filters` , kote `${HOME}` se anyè lakay itilizatè aktyèl la.
  * Bati-an [anyè filtè](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Filtre paramèt
+ `filter` kapab plizyè mo. Nan ka sa a, premye mo a se non filtre a, ak
+ mo ki rete yo pral pase kòm agiman nan fonksyon `filter`
 
  ### Ede
  Sèvi ak `-h` / `--help` pou montre èd
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

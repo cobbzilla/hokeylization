@@ -156,7 +156,7 @@ Hokeylization
 
  Jekk il-fajl tal-output diġà jeżisti, se jiġi eżaminat biex jiġi ddeterminat liema ċwievet diġà jeżistu.
  Iċ-ċwievet eżistenti mhux se jiġu tradotti. It-traduzzjonijiet għaċ-ċwievet neqsin jiġu ġġenerati u mehmuża
- sat-tmiem tal-oġġett JS. Il-fajl kollu huwa dejjem miktub mill-ġdid.
+ sal-aħħar tal-oġġett JS. Il-fajl kollu huwa dejjem miktub mill-ġdid.
 
  Biex tisforza t-traduzzjoni mill-ġdid taċ-ċwievet kollha, uża l- `-f` / `--force`
 
@@ -171,7 +171,7 @@ Hokeylization
 
  **TWISSIJA KBIRA**: Meta tittraduċi direttorji, **MA** tispeċifika direttorju tal-output
  li huwa fid-direttorju input tiegħek! Jekk tagħmel dan, int se:
- * jinduċu rikorsi infinit
+ * jinduċi rikorsjoni infinita
  * iżżid il-kont tal-Google tiegħek
  * imla d-disk tiegħek
  * tieħdu pjaċir inqas
@@ -276,11 +276,16 @@ Hokeylization
 
  Għalhekk, għandek kontroll totali fuq dak li finalment se jinkiteb
 
- L-iskritt `filter` se jitfittex fil-postijiet li ġejjin:
+ L-iskript `filter` se jiġi mfittex fil-postijiet li ġejjin (bil- `.js` se jiġi mehmuż mal-filtru
+ isem, sakemm ma jkunx diġà jispiċċa fi `.js` )
  * Id-direttorju attwali
  * Direttorju msemmi `.hokey-filters` fid-direttorju kurrenti
  * Direttorju jismu `${HOME}/.hokey-filters` , fejn `${HOME}` huwa d-direttorju tad-dar tal-utent kurrenti
  * Id-[direttorju tal-filtri] inkorporat (https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Iffiltra Parametri
+ Is-sekwenza `filter` tista' tkun kliem multipli. F'dan il-każ, l-ewwel kelma hija l-isem tal-filtru, u
+ il-kliem li jifdal se jiġu mgħoddija bħala argumenti għall-funzjoni `filter`
 
  ### Għajnuna
  Uża `-h` / `--help` biex turi l-għajnuna
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

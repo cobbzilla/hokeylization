@@ -254,7 +254,7 @@
 
  `-M` / `--markdown` 플래그가 활성화된 경우:
  * 패턴 `](` 은 `]( `](` 로 압축되어 끊어진 마크다운 링크를 수정합니다.
- * "번역 없음" 래퍼는 들여쓰기된 코드 블록 주위에 배치되어 적절한 들여쓰기를 유지하고 번역되지 않도록 합니다.
+ * "번역 없음" 래퍼가 들여쓰기된 코드 블록 주위에 배치되어 적절한 들여쓰기를 유지하고 번역되지 않도록 합니다.
  * 번역되지 않도록 `backticks` 내의 텍스트 주위에 "번역 없음" 래퍼가 배치됩니다.
 
  ### 처리 방식
@@ -276,11 +276,16 @@
 
  따라서 최종적으로 작성될 내용을 완전히 제어할 수 있습니다.
 
- `filter` 스크립트는 다음 위치에서 찾습니다.
+ `filter` 스크립트는 다음 위치에서 검색됩니다( `.js` 를 사용하면 필터에 추가됩니다.
+ 이미 `.js` 로 끝나지 않는 한 이름)
  * 현재 디렉토리
  * 현재 디렉토리 내의 `.hokey-filters` 라는 디렉토리
  * `${HOME}/.hokey-filters` 라는 디렉토리, 여기서 `${HOME}` 은 현재 사용자의 홈 디렉토리입니다.
  * 내장 [필터 디렉토리](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### 필터 매개변수
+ `filter` 문자열은 여러 단어일 수 있습니다. 이 경우 첫 번째 단어는 필터 이름이고
+ 나머지 단어는 `filter` 함수에 인수로 전달됩니다.
 
  ### 돕다
  `-h` / `--help` 를 사용하여 도움말 표시
@@ -332,7 +337,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

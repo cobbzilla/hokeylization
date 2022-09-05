@@ -276,11 +276,16 @@ Hokeyylization
 
  Don haka, kuna da cikakken iko akan abin da a ƙarshe za a rubuta
 
- Za a nemo rubutun `filter` a wurare masu zuwa:
+ Za a nemo rubutun `filter` a wurare masu zuwa (tare da `.js` za a saka a cikin tacewa.
+ suna, sai dai idan ya riga ya ƙare a `.js` )
  * Littafin jagora na yanzu
  * Littafin adireshi mai suna `.hokey-filters` a cikin kundin adireshi na yanzu
  * Littafin adireshi mai suna `${HOME}/.hokey-filters` , inda `${HOME}` shine kundin adireshin gida na mai amfani na yanzu
  * Ginin da aka gina (directory directory)(https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Ma'aunin Tace
+ `filter` na iya zama kalmomi da yawa. A wannan yanayin, kalmar farko ita ce sunan tace, kuma
+ sauran kalmomin za a wuce su azaman muhawara zuwa aikin `filter`
 
  ### Taimako
  Yi amfani `-h` / `--help` don nuna taimako
@@ -332,7 +337,7 @@ Hokeyylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

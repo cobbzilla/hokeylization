@@ -276,11 +276,16 @@ Hokeylization
 
  මේ අනුව, අවසානයේ ලියන දේ පිළිබඳ සම්පූර්ණ පාලනය ඔබට ඇත
 
- `filter` ස්ක්‍රිප්ටය පහත ස්ථානවල සොයනු ඇත:
+ `filter` ස්ක්‍රිප්ට් පහත ස්ථානවල සොයනු ඇත ( `.js` සමඟ පෙරහනට එකතු වේ
+ නම, එය දැනටමත් අවසන් වන්නේ නම් මිස `.js` )
  * වත්මන් නාමාවලිය
  * වත්මන් නාමාවලිය තුළ `.hokey-filters` නම් නාමාවලියක්
  * `${HOME}/.hokey-filters` , මෙහි `${HOME}` වත්මන් පරිශීලකයාගේ මුල් නාමාවලිය වේ
  * තනා ඇති [පෙරහන් නාමාවලිය](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### පෙරහන් පරාමිතීන්
+ `filter` වචන කිහිපයක් විය හැක. මෙම අවස්ථාවේදී, පළමු වචනය පෙරහන් නම, සහ
+ ඉතිරි වචන `filter` තර්ක ලෙස යවනු ලැබේ
 
  ### උදව්
  උදව් පෙන්වීමට `-h` / `--help` භාවිත කරන්න
@@ -332,7 +337,7 @@ Hokeylization
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }

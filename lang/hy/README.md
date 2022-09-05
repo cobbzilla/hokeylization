@@ -276,11 +276,16 @@
 
  Այսպիսով, դուք լիովին վերահսկում եք այն, ինչ վերջապես կգրվի
 
- `filter` հետևյալ վայրերում.
+ `filter` հետևյալ վայրերում ( `.js` ով կկցվի զտիչին
+ անունը, եթե այն արդեն ավարտվում է `.js` -ով)
  * Ընթացիկ գրացուցակը
  * `.hokey-filters` անունով գրացուցակ ընթացիկ գրացուցակում
  * `${HOME}/.hokey-filters` » անունով գրացուցակ, որտեղ `${HOME}` -ը ներկայիս օգտվողի հիմնական գրացուցակն է
  * Ներկառուցված [ֆիլտրերի գրացուցակը](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
+ #### Զտիչի պարամետրեր
+ `filter` տողը կարող է լինել մի քանի բառ: Այս դեպքում առաջին բառը ֆիլտրի անունն է, և
+ մնացած բառերը որպես արգումենտ `filter` ֆունկցիային
 
  ### Օգնություն
  Օգտագործեք `-h` / `--help` օգնություն ցույց տալու համար
@@ -332,7 +337,7 @@
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "filterReadme.js",
+            "filter": "relativizeMarkdownLinks lang",
             "markdown": true,
             "index": "lang/README.md"
           }
