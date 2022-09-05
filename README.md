@@ -285,6 +285,12 @@ The return value from the `filter` function is what will actually be written to 
 
 Thus, you have total control over what will finally be written
 
+The `filter` script will be looked for in the following locations:
+* The current directory
+* A directory named `.hokey-filters` within the current directory
+* A directory named `${HOME}/`.hokey-filters`, where `${HOME}` is the current user's home directory
+* The built-in [filters directory](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
+
 ### Help
 Use `-h` / `--help` to show help
 
@@ -335,7 +341,7 @@ Here is an example of a `hokey.json`
             "infile": "README.md",
             "outfile": "lang/LANG/",
             "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
-            "filter": "util/filterReadme.js",
+            "filter": "filterReadme.js",
             "markdown": true,
             "index": "lang/README.md"
           }
