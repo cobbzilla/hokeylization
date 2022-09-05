@@ -1,12 +1,20 @@
 Hokeylization
  ==============
- Non an se yon portmanteau, sa vle di 'lokalizasyon hokey'
+ Poukisa mwen pa ka kouri tout aplikasyon mwen an oswa sit mwen an atravè Google Translate epi jwenn yon tradiksyon debaz nan yon lòt lang?
 
- Li se hokey paske li trè senp: li voye fisèl nan Google Translate
+ ***Kounye a, ou kapab!***
+
+ Non `hokeylization` se yon pòtay, ki vle di 'lokalizasyon hokey'.
+
+ Li se yon ti jan hokey paske li trè senp: li voye fisèl nan Google Translate
+
+ Epi li se senp, men tou trè pwisan. Li gen sipò espesyal pou dokiman HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) modèl,
+ ak [Markdown](https://daringfireball.net/projects/markdown) dosye.
 
  Ou ka tradui:
  * yon objè JavaScript ki gen mesaj
- * yon anyè nan dosye, recursively
+ * nenpòt ki kantite fichye oswa anyè, toujou travèse repèrtwar rekursif
 
  # Li sa nan yon lòt lang
  Dokiman README.md sa a te tradui, lè l sèvi avèk zouti nan hokeylization tèt li, nan
@@ -50,7 +58,7 @@ Hokeylization
  * enkli URL paj la (kopi/kole nan ba adrès navigatè a)
  * enkli tèks egzak ki mal (kopi/kole nan navigatè a)
  * Tanpri dekri sa ki mal -- èske tradiksyon an pa kòrèk? se fòma a kase yon jan kanmenm?
- * Tanpri ofri yon sijesyon pou yon pi bon tradiksyon, oswa ki jan tèks la ta dwe byen fòma
+ * Tanpri ofri yon sijesyon sou yon pi bon tradiksyon, oswa ki jan tèks la ta dwe byen fòma
  * **Mèsi!**
 
  # Kontni
@@ -61,6 +69,7 @@ Hokeylization
  * [Tradui yon fichye resous JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Tradui yon anyè dosye tèks](#Translating-a-directory-of-text-files)
  * [Lòt opsyon](#Other-options)
+ * [JSON pakèt kòmandman](#JSON-batch-kòmand)
 
  ## Sous
  * [hokeylization sou GitHub](https://github.com/cobbzilla/hokeylization)
@@ -137,7 +146,7 @@ Hokeylization
 
  `LANG` ranplase ak kòd lang pou fichye pwodiksyon yo
 
- Se konsa, kòmandman ki anwo a kreye dosye yo:
+ Kidonk, kòmandman ki anwo a kreye dosye yo:
 
     myfile.es.js
     myfile.de.js
@@ -161,7 +170,7 @@ Hokeylization
  Opsyon `-o` / `--outfile` presize anyè pwodiksyon an
 
  **GWO AVÈTISMAN**: Lè wap tradui anyè, **PA** espesifye yon anyè pwodiksyon.
- ki nan anyè opinyon ou! Si w fè sa, w ap:
+ sa se nan anyè D' ou! Si w fè sa, w ap:
  * pwovoke repetisyon enfini
  * monte bòdwo Google ou a
  * ranpli disk ou a
@@ -261,7 +270,7 @@ Hokeylization
 
  Fonksyon `filter` dwe `async` paske `await` pral rele sou li
 
- Anvan yo ekri dosye yo sou disk, tout sa ki nan dosye yo pral pase nan fonksyon `filter` kòm yon kòd.
+ Anvan yo ekri fichye yo sou disk, tout sa ki nan dosye yo pral pase nan fonksyon `filter` kòm yon kòd.
 
  Valè retounen nan fonksyon `filter` se sa ki pral aktyèlman ekri nan depo
 
@@ -270,6 +279,88 @@ Hokeylization
  ### Ede
  Sèvi ak `-h` / `--help` pou montre èd
 
- ## Pran yon tan amizan tradui lang!
+ ## Kòmandman pakèt JSON
+ Avèk `-j` / `--json` , ou ka kouri plizyè `hokey` kowòdone.
+
+ Dapre konvansyon, yo rele fichye sa a `hokey.json` , men ou ka bay non li nenpòt sa ou vle
+
+ Si ou pase yon anyè kòm opsyon ` `-j` , `hokey` ap chèche yon `hokey.json` nan anyè sa a.
+
+ Fichye JSON a ta dwe genyen yon sèl objè. Nan objè sa a, non pwopriyete li yo se menm jan ak
+ opsyon liy kòmand yo, plis yon pwopriyete adisyonèl ki rele `hokey`
+
+ Pwopriyete `hokey` se yon seri kòmandman pou kouri. Pwopriyete yo te deklare nan kòmandman sa yo pral
+ pase sou nenpòt deklarasyon kopi nan objè a deyò.
+
+ Nan chak objè nan etalaj `hokey` , ou ta dwe presize yon `name` , ak dosye yo antre ak pwodiksyon.
+
+ Men yon egzanp yon `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Plizyè dosye antre
+ Pase yon seri chemen dosye kòm `infiles` olye de yon sèl chemen `infile` , tankou nan egzanp sa a:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Endis
+ Lè wap tradui nan plizyè lang, `hokey` ka kreye yon fichye endèks ki bay lis tout tradiksyon yo te fè.
+ epi li bay lyen pou yo
+
+ *Lè w ap jenere endèks, ou ka gen yon sèl sous antre*
+
+ Pase `-I` / `--index` , valè a se kote dosye endèks la pral pwodwi, ki ka yon dosye
+ oswa yon anyè. Si se yon anyè, yo pral itilize yon non fichye default, ki baze sou modèl la (gade anba a)
+
+ Sèvi ak `-A` / `--index-template` pou detèmine kijan pwodiksyon endèks la fòme. Ou ka presize 'html',
+ 'markdown', 'tèks', oswa chemen dosye a nan pwòp modèl [HandlebarsJS](https://handlebarsjs.com/) ou
+
+ Si ou presize pwòp modèl ou a, ou dwe tou presize yon fichye (pa yon anyè) pou `-I` / `--index`
+ opsyon
+
+ ## Pran yon tan amizan tradui lang yo!
 
 </pre>

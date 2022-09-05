@@ -1,12 +1,20 @@
 Hokeylizasiýa
  =============
- Ady portmanteau bolup, 'hokkeý lokalizasiýasy' diýmekdir.
+ Näme üçin ähli programmamy ýa-da sahypamy Google Translate arkaly işledip, başga dilde esasy terjime alyp bilemok?
 
- Bu gaty ýönekeý, sebäbi Google Translate-a setirler iberýär
+ *** Indi edip bilersiňiz! ***
+
+ " `hokeylization` " ady portmanteau bolup, "hokkeý lokalizasiýasy" manysyny berýär.
+
+ Bu birneme ýönekeý, sebäbi gaty ýönekeý: Google Translate-a setirler iberýär
+
+ Bu ýönekeý, ýöne gaty güýçli. HTML resminamalary üçin aýratyn goldaw bar,
+ [HandlebarsJS](https://handlebarsjs.com/) şablonlary,
+ we [Markdown](https://daringfireball.net/projects/markdown) faýllary.
 
  Terjime edip bilersiňiz:
  * habarlary öz içine alýan JavaScript obýekti
- * faýllaryň katalogy, yzygiderli
+ * islendik faýl ýa-da katalog, elmydama kataloglary yzygiderli geçirýär
 
  # Muny başga dilde okaň
  Bu README.md resminamasy, hokeylizasiýa guralyny ulanyp terjime edildi
@@ -61,6 +69,7 @@ Hokeylizasiýa
  * [JavaScript simli çeşme faýlyny terjime etmek](# Terjime-a-JavaScript-string-source-file)
  * [Tekst faýllarynyň katalogyny terjime etmek](# Tekst-faýllaryň terjimesi-a-katalogy)
  * [Beýleki wariantlar](# Beýleki wariantlar)
+ * [JSON partiýa buýruklary](# JSON-part-buýruklar)
 
  ## Çeşme
  * [GitHub-da hokeylizasiýa](https://github.com/cobbzilla/hokeylization)
@@ -263,12 +272,94 @@ Hokeylizasiýa
 
  Faýllar diske ýazylmazdan ozal ähli faýl mazmuny setir hökmünde “ `filter` ” funksiýasyna geçiriler
 
- " `filter` " funksiýasyndan yzyna gaýtaryş gymmaty, aslynda ammarda ýazylar
+ " `filter` " funksiýasyndan yzyna gaýtaryş gymmaty, hakykatda ammarda ýazylar
 
  Şeýlelik bilen, ahyrynda ýazyljak zatlara doly gözegçilik edýärsiňiz
 
  ### Kömek ediň
  `--help` görkezmek üçin "-h" / " `-h` " ulanyň
+
+ ## JSON partiýa buýruklary
+ " `--json` `-j` opsiýasy bilen, köp utgaşdyrylan `hokey` buýruklaryny işledip bilersiňiz
+
+ Düzgüne görä bu faýla " `hokey.json` " diýilýär, ýöne islän zadyňyza at berip bilersiňiz
+
+ " `-j` " opsiýasy hökmünde bir katalogy geçirseňiz, " `hokey.json` `hokey` gözlär.
+
+ JSON faýlynda bir obýekt bolmaly. Şol obýektiň içinde onuň emläk atlary birmeňzeş
+ buýruk setiriniň opsiýalary we " `hokey` " atly goşmaça emläk
+
+ " `hokey` " häsiýeti, işlemeli buýruklar toplumy. Bu buýruklaryň içinde yglan edilen häsiýetler
+ daşarky obýektdäki islendik dublikat beýannamalary ýok et.
+
+ " `hokey` " massiwindäki her bir obýektiň içinde " `name` ", giriş we çykyş faýllaryny görkezmeli
+
+ Ine, “ `hokey.json` ” -yň mysaly
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Birnäçe giriş faýly
+ Bu mysaldaky ýaly bir ýoluň ýerine "infile" ýerine faýl ýollarynyň bir `infile` `infiles` hökmünde geçiriň:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeksler
+ Köp dile terjime edilende, “ `hokey` ” edilen ähli terjimeleriň sanawyny görkezýän indeks faýly döredip biler
+ we olara baglanyşyk berýär
+
+ * Indeksler döredilende diňe bir giriş çeşmesi bolup biler *
+
+ "-I" / " `-I` " opsiýasyny `--index` , baha faýl bolup biljek indeks faýlynyň dörediljek ýeri.
+ ýa-da katalog. Katalog bolsa, şablonyň esasynda deslapky faýl ady ulanylar (aşaga serediň)
+
+ Indeks çykyşynyň nähili formatlanýandygyny kesgitlemek üçin " `-A` " / `--index-template` " ulanyň. 'Html' görkezip bilersiňiz,
+ 'markdown', 'text' ýa-da öz [HandlebarsJS](https://handlebarsjs.com/) şablonyna faýl ýoly
+
+ Öz şablonyňyzy görkezýän bolsaňyz, "-I" / " `-I` " üçin bir faýl (katalog däl) `--index`
+ görnüşi
 
  ## Dilleri terjime etmekde hezil ediň!
 

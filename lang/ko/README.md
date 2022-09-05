@@ -1,12 +1,20 @@
 호키화
  =============
- 이름은 '호키 현지화'를 의미하는 portmanteau입니다.
+ Google 번역을 통해 전체 앱 또는 사이트를 실행하고 다른 언어로 기본 번역을 얻을 수 없는 이유는 무엇입니까?
 
- 매우 간단하기 때문에 중요합니다. 문자열을 Google 번역으로 보냅니다.
+ ***이제 할 수 있습니다!***
+
+ `hokeylization` 이라는 이름은 'hokey localization'을 의미하는 portmanteau입니다.
+
+ 매우 간단하기 때문에 다소 엉터리입니다. 문자열을 Google 번역으로 보냅니다.
+
+ 그리고 간단하면서도 매우 강력합니다. HTML 문서에 대한 특별한 지원이 있습니다.
+ [HandlebarsJS](https://handlebarsjs.com/) 템플릿,
+ 및 [Markdown](https://daringfireball.net/projects/markdown) 파일.
 
  다음을 번역할 수 있습니다.
  * 메시지를 포함하는 JavaScript 객체
- * 재귀적으로 파일 디렉토리
+ * 임의의 수의 파일 또는 디렉터리, 항상 디렉터리를 재귀적으로 순회
 
  # 다른 언어로 읽어보세요
  이 README.md 문서는 hokeylization 도구 자체를 사용하여 다음으로 번역되었습니다.
@@ -61,6 +69,7 @@
  * [JavaScript 문자열 리소스 파일 번역](#Translating-a-JavaScript-string-resource-file)
  * [텍스트 파일 디렉토리 번역](#텍스트 파일 디렉토리 번역)
  * [기타옵션](#기타옵션)
+ * [JSON 일괄 명령](#JSON-batch-commands)
 
  ## 원천
  * [GitHub의 hokeylization](https://github.com/cobbzilla/hokeylization)
@@ -163,7 +172,7 @@
  **중대한 경고**: 디렉토리를 번역할 때 **출력 디렉토리를 지정하지 마세요**
  그것은 당신의 입력 디렉토리 안에 있습니다! 이렇게 하면 다음을 수행할 수 있습니다.
  * 무한 재귀 유도
- * Google 청구서를 실행
+ * 귀하의 Google 청구서를 실행
  * 디스크 채우기
  * 재미가 덜하다
 
@@ -240,12 +249,12 @@
  대상 링크가 시작되기 전에( `(` )) 이로 인해 마크다운이 잘못 렌더링되고 링크가
  문서를 볼 때 깨집니다.
  * 코드 블록이 번역됩니다. Google 번역은 마크다운이 코드로 간주하는 것과 코드가 고려하지 않는 것을 알지 못합니다.
- * 들여쓰기된 코드 블록의 잘못된 간격. 번역에서 간격을 유지하기 어렵습니다.
+ * 들여쓴 코드 블록의 간격이 잘못되었습니다. 번역 시 간격을 유지하기 어렵습니다.
  * 거의 항상 리터럴 값을 원할 때 `backticks` 내부의 내용이 번역됩니다.
 
  `-M` / `--markdown` 플래그가 활성화된 경우:
  * 패턴 `](` 은 `]( `](` 로 압축되어 끊어진 마크다운 링크를 수정합니다.
- * "번역 없음" 래퍼가 들여쓰기된 코드 블록 주위에 배치되어 적절한 들여쓰기를 유지하고 번역되지 않도록 합니다.
+ * "번역 없음" 래퍼는 들여쓰기된 코드 블록 주위에 배치되어 적절한 들여쓰기를 유지하고 번역되지 않도록 합니다.
  * 번역되지 않도록 `backticks` 내의 텍스트 주위에 "번역 없음" 래퍼가 배치됩니다.
 
  ### 처리 방식
@@ -269,6 +278,88 @@
 
  ### 돕다
  `-h` / `--help` 를 사용하여 도움말 표시
+
+ ## JSON 배치 명령
+ `-j` / `--json` 옵션을 사용하면 여러 개의 조정된 `hokey` 명령을 실행할 수 있습니다.
+
+ 관례상 이 파일의 이름은 `hokey.json` 이지만 원하는 대로 이름을 지정할 수 있습니다.
+
+ 디렉토리를 `-j` 옵션으로 전달하면 `hokey.json` `hokey` 찾습니다.
+
+ JSON 파일에는 하나의 개체가 포함되어야 합니다. 해당 개체 내에서 속성 이름은 다음과 같습니다.
+ 명령줄 옵션과 `hokey` 라는 추가 속성
+
+ `hokey` 속성은 실행할 명령의 배열입니다. 이러한 명령 내에서 선언된 속성은
+ 외부 개체의 중복 선언을 재정의합니다.
+
+ `hokey` 배열의 각 객체 내에서 ` `name` 과 입력 및 출력 파일을 지정해야 합니다.
+
+ 다음은 `hokey.json` 의 예입니다.
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### 여러 입력 파일
+ 다음 예에서와 같이 단일 경로 `infile` `infiles` 대신에 파일 경로 배열을 `infiles`로 전달합니다.
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### 인덱스
+ 여러 언어로 번역할 때 `hokey` 는 모든 번역을 나열하는 색인 파일을 만들 수 있습니다.
+ 그리고 그들에 대한 링크를 제공합니다
+
+ *인덱스 생성 시 입력 소스는 하나만 사용할 수 있습니다.*
+
+ `-I` / `--index` 옵션을 전달합니다. 값은 인덱스 파일이 생성될 위치이며 파일일 수 있습니다.
+ 또는 디렉토리. 디렉토리인 경우 템플릿에 따라 기본 파일 이름이 사용됩니다(아래 참조).
+
+ 색인 출력 형식을 결정하려면 `-A` / `--index-template` 을 사용하세요. 'html'을 지정할 수 있습니다.
+ 'markdown', 'text' 또는 자신의 [HandlebarsJS](https://handlebarsjs.com/) 템플릿에 대한 파일 경로
+
+ 고유한 템플릿을 지정하는 경우 `-I` / `--index` 에 대한 파일(디렉토리 아님)도 지정해야 합니다.
+ 옵션
 
  ## 즐거운 시간 보내세요!
 

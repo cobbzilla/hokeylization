@@ -1,12 +1,20 @@
 Hokeylization
  ==============
- Navê portmanteau ye, tê wateya 'herêmîkirina hokey'
+ Çima ez nikarim tevaya sepan an malpera xwe bi rêya Google Wergerê bixebitim û wergerek bingehîn bi zimanekî din bistînim?
 
- Ji ber ku ew pir hêsan e: ew rêzan ji Google Wergerê re dişîne
+ ***Niha, hûn dikarin!***
+
+ Navê `hokeylization` " portmanteau ye, tê wateya "herêmîkirina hokey"
+
+ Ji ber ku ew pir hêsan e: ew rêzikên ji Google Wergerê re dişîne
+
+ Û ew hêsan e, di heman demê de pir bi hêz e. Piştgiriyek taybetî ji bo belgeyên HTML heye,
+ Şablonên [HandlebarsJS](https://handlebarsjs.com/),
+ û pelên [Markdown](https://daringfireball.net/projects/markdown).
 
  Hûn dikarin wergerînin:
  * Tiştek JavaScriptê ku peyaman vedihewîne
- * pelrêçek pelan, bi paşverû
+ * her jimarek pel an pelrêçan, her gav pelrêçan bi paşvekişîn digere
 
  # Vê bi zimanekî din bixwînin
  Ev belgeya README.md, bi karanîna amûra hokeylîzasyonê bixwe, hatî wergerandin
@@ -61,6 +69,7 @@ Hokeylization
  * [Wergerandina pelê çavkaniyek rêzika JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Wergerandina pelrêça pelên nivîsê](#Translating-a-directory-of-text-files)
  * [Vebijarkên din](# Vebijêrkên din)
+ * [fermanên komê yên JSON](#JSON-hevî-ferman)
 
  ## Çavkanî
  * [hokeylization li ser GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Alîkarî
  Ji bo nîşankirina alîkariyê `-h` / `--help` bînin
+
+ ## Fermanên hevîrê JSON
+ Bi `-j` / `--json` , hûn dikarin gelek fermanên hevrêz ên `hokey`
+
+ Li gorî peymanê navê vê pelê `hokey.json` tê gotin, lê hûn dikarin navê wê çi bixwazin
+
+ Ger hûn `-j` vebijarka `hokey` bikin, dê `hokey.json` di wê pelrêçayê de li `hokey.json` bigere.
+
+ Divê pelê JSON yek tişt hebe. Di hundurê wê heyberê de, navên milkên wê wek hev in
+ vebijarkên rêzika fermanê, plus yek taybetmendiyek din bi navê `hokey`
+
+ Taybetmendiya `hokey` komek fermanan e ku têne xebitandin. Taybetmendiyên ku di nav van fermanan de hatine ragihandin dê
+ her daxuyaniyên dubare yên di tiştê derveyî de derbas bikin.
+
+ Di nav her tiştê di rêza `hokey` de, divê hûn `name` , û pelên ketin û derketinê diyar bikin.
+
+ Li vir mînakek `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Pelên têketinê yên pirjimar
+ Li şûna rêgezek yekane `infile` , rêzek rêyên pelan wekî `infiles` bikin, wekî di vê nimûneyê de:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeks
+ Dema ku ji bo gelek zimanan tê wergerandin, `hokey` dikare pelek nîşanek çêbike ku hemî wergerên ku hatine kirin navnîş dike
+ û ji wan re girêdan peyda dike
+
+ *Dema ku indexan çêdikin, hûn dikarin tenê yek çavkaniyek têketinê hebin*
+
+ `-I` / `--index` bikin, nirx ew e ku pelê pêvekê lê were çêkirin, ku dikare bibe pelek
+ an pelrêçek. Ger ew pelrêçek be, dê li ser bingeha şablonê navek pelê ya xwerû were bikar anîn (li jêr binêre)
+
+ "-A" / " `-A` `--index-template` bînin da ku hûn diyar bikin ka derana pêvekê çawa tê format kirin. Hûn dikarin 'html' diyar bikin,
+ 'markdown', 'text', an jî riya pelê ya ji bo şablonê [HandlebarsJS](https://handlebarsjs.com/) xwe
+
+ Ger hûn şablonê xwe diyar bikin, divê hûn ji bo `-I` / `--index` (ne pelrêçek) jî diyar bikin.
+ dibe
 
  ## Wergerandina zimanan dem xweş be!
 

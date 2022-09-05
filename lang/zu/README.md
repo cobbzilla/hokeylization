@@ -1,12 +1,20 @@
 I-Hokeylization
  ==============
- Igama liyi-portmanteau, okusho ukuthi 'indawo ye-hokey'
+ Kungani ngingakwazi ukusebenzisa lonke uhlelo lwami lokusebenza noma isayithi nge-Google Translate futhi ngithole ukuhumusha okuyisisekelo ngolunye ulimi?
 
- I-hokey ngoba ilula kakhulu: ithumela uchungechunge ku-Google Translate
+ ***Manje, ungakwazi!***
+
+ Igama elithi `hokeylization` liyi-portmanteau, okusho ukuthi 'indawo ye-hokey'
+
+ I-hokey ngandlela-thile ngoba ilula kakhulu: ithumela uchungechunge ku-Google Translate
+
+ Futhi ilula, kodwa futhi inamandla kakhulu. Inokusekelwa okukhethekile kwemibhalo ye-HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) izifanekiso,
+ kanye namafayela [Markdown](https://daringfireball.net/projects/markdown).
 
  Ungakwazi ukuhumusha:
  * into ye-JavaScript equkethe imilayezo
- * umkhombandlela wamafayela, ngokuphindaphindiwe
+ * Noma iyiphi inombolo yamafayela noma izinkomba, ehlala enqamula uhla lwemibhalo ngokuphindaphindiwe
 
  # Funda lokhu ngolunye ulimi
  Lo mbhalo we-README.md uhunyushwe, kusetshenziswa ithuluzi le-hokeylization ngokwalo, kwaba
@@ -61,6 +69,7 @@ I-Hokeylization
  * [Kuhunyushwa ifayela lesisetshenziswa sochungechunge lwe-JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Ukuhumusha uhla lwemibhalo lwamafayela ombhalo](#Translating-a-directory-of-text-files)
  * [Ezinye izinketho](#Ezinye izinketho)
+ * [Imiyalo yenqwaba ye-JSON](#JSON-batch-commands)
 
  ## Umthombo
  * [hokeylization ku-GitHub](https://github.com/cobbzilla/hokeylization)
@@ -239,8 +248,8 @@ I-Hokeylization
  * Izixhumanisi eziphukile. Ekuhumusheni, kuvela uhlamvu lwesikhala ngemva kokuphela kwencazelo yesixhumanisi sokubeka phansi (nokuthi `]` ) kodwa
  ngaphambi kokuthi isixhumanisi sayo esiqondiswe kuso siqale (ngokuthi `(` ). Lokhu kubangela ukuthi ukubeke phansi kunikezwe ngokungalungile, kanye nesixhumanisi
  iphukile uma ubuka idokhumenti.
- * Amabhulokhi ekhodi ayahunyushwa. I-Google Translate ayazi ukuthi i-markdown icabangani ngekhodi nokuthi yini engayazi
- * Isikhala esingalungile samabhulokhi ekhodi ehlehlisiwe. Isikhala sinzima ukusigcina ekuhumusheni
+ * Amabhulokhi ekhodi ahunyushwa. I-Google Translate ayazi ukuthi i-markdown icabangani ngekhodi nokuthi yini engayazi
+ * Isikhala esingalungile samabhulokhi amakhodi ahlehlisiwe. Isikhala sinzima ukusigcina ekuhumusheni
  * Izinto ezingaphakathi kokuthi `backticks` zizohunyushwa, lapho cishe uhlale ufuna ukuthi abe amanani angokoqobo
 
  Uma `-M` / `--markdown` :
@@ -269,6 +278,88 @@ I-Hokeylization
 
  ### Usizo
  Sebenzisa `-h` / `--help` ukuze ubonise usizo
+
+ ## Imiyalo yenqwaba ye-JSON
+ `-j` / `--json` , ungasebenzisa imiyalo eminingi edidiyelwe `hokey`
+
+ Ngokwesimiso leli fayela libizwa ngokuthi `hokey.json` , kodwa ungakwazi ukusho noma yini oyifunayo
+
+ Uma uphasa uhla lwemibhalo njengenketho ethi `-j` , `hokey` izobheka `hokey.json` lwemibhalo.
+
+ Ifayela le-JSON kufanele liqukathe into eyodwa. Ngaphakathi kwaleyo nto, amagama ezakhiwo zayo ayafana
+ izinketho zomugqa womyalo, kanye nempahla eyodwa eyengeziwe ebizwa ngokuthi `hokey`
+
+ Indawo ethi `hokey` isetshenziswe. Izakhiwo ezimenyezelwe ngaphakathi kwale miyalo zizo
+ khipha noma yiziphi izimemezelo eziyimpinda entweni engaphandle.
+
+ Ngaphakathi kwento ngayinye ohlwini lwe- `hokey` , kufanele ucacise `name` , kanye namafayela okokufaka nokukhiphayo.
+
+ Nasi isibonelo se `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Amafayela okokufaka amaningi
+ Dlula uxhaxha lwezindlela zefayela njengokuthi `infiles` esikhundleni somzila owodwa `infile` , njengakulesi sibonelo:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Izinkomba
+ Lapho uhumushela ezilimini eziningi, `hokey` ingakha ifayela lenkomba elibonisa zonke izinguqulo ezenziwe
+ futhi inikeza izixhumanisi kubo
+
+ *Lapho ukhiqiza izinkomba, ungaba nomthombo owodwa kuphela wokufaka*
+
+ Dlula `-I` / `--index` , inani yilapho ifayela lenkomba lizokhiqizwa khona, okungaba ifayela
+ noma uhla lwemibhalo. Uma kuwuhla lwemibhalo, kuzosetshenziswa igama lefayela elizenzakalelayo, ngokusekelwe kusifanekiso (bona ngezansi)
+
+ Sebenzisa `-A` / `--index-template` ukuze unqume ukuthi okukhiphayo kwenkomba kufomethwe kanjani. Ungacacisa 'html',
+ 'markdown', 'text', noma indlela yefayela eya [HandlebarsJS](https://handlebarsjs.com/) isifanekiso sakho
+
+ Uma ucacisa isifanekiso sakho, kufanele futhi ucacise ifayela (hhayi uhla lwemibhalo) le `-I` / `--index`
+ inketho
 
  ## Yiba nesikhathi esimnandi sokuhumusha izilimi!
 

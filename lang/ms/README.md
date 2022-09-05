@@ -1,12 +1,20 @@
 Hokeylization
  =============
- Namanya ialah portmanteau, yang bermaksud 'penyetempatan hokey'
+ Mengapa saya tidak boleh menjalankan keseluruhan apl atau tapak saya melalui Terjemahan Google dan mendapatkan terjemahan asas dalam bahasa lain?
 
- Ini hokey kerana ia sangat mudah: ia menghantar rentetan ke Terjemahan Google
+ ***Sekarang kamu boleh!***
+
+ Nama `hokeylization` ialah portmanteau, yang bermaksud 'penyetempatan hokey'
+
+ Ia agak hokey kerana ia sangat mudah: ia menghantar rentetan ke Terjemahan Google
+
+ Dan ia mudah, tetapi juga sangat berkuasa. Ia mempunyai sokongan khas untuk dokumen HTML,
+ Templat [HandlebarsJS](https://handlebarsjs.com/),
+ dan fail [Markdown](https://daringfireball.net/projects/markdown).
 
  Anda boleh menterjemah:
  * objek JavaScript yang mengandungi mesej
- * direktori fail, secara rekursif
+ * sebarang bilangan fail atau direktori, sentiasa merentasi direktori secara rekursif
 
  # Baca ini dalam bahasa lain
  Dokumen README.md ini telah diterjemahkan, menggunakan alat hokeylization itu sendiri, ke dalam
@@ -61,6 +69,7 @@ Hokeylization
  * [Menterjemah fail sumber rentetan JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Menterjemah direktori fail teks](#Translating-a-directory-of-text-files)
  * [Pilihan lain](#Other-options)
+ * [Arahan kelompok JSON](#JSON-batch-commands)
 
  ## Sumber
  * [hokeylization pada GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Bantuan
  Gunakan `-h` / `--help` untuk menunjukkan bantuan
+
+ ## Perintah kelompok JSON
+ Dengan pilihan `-j` / `--json` , anda boleh menjalankan berbilang arahan `hokey` yang diselaraskan
+
+ Mengikut konvensyen fail ini dipanggil `hokey.json` , tetapi anda boleh menamakannya apa sahaja yang anda mahu
+
+ Jika anda menghantar direktori sebagai pilihan `-j` , `hokey` akan mencari `hokey.json` dalam direktori tersebut
+
+ Fail JSON harus mengandungi satu objek. Dalam objek itu, nama hartanya adalah sama dengan
+ pilihan baris arahan, ditambah satu sifat tambahan bernama `hokey`
+
+ Sifat `hokey` ialah susunan perintah untuk dijalankan. Sifat yang diisytiharkan dalam arahan ini akan
+ mengatasi sebarang pengisytiharan pendua dalam objek luar.
+
+ Dalam setiap objek dalam `hokey` , anda harus menentukan `name` , dan fail input dan output
+
+ Berikut ialah contoh `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Berbilang fail input
+ Lulus tatasusunan laluan fail sebagai `infiles` dan bukannya satu laluan `infile` , seperti dalam contoh ini:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeks
+ Apabila menterjemah kepada banyak bahasa, `hokey` boleh mencipta fail indeks yang menyenaraikan semua terjemahan yang dibuat
+ dan menyediakan pautan kepada mereka
+
+ *Apabila menjana indeks, anda hanya boleh mempunyai satu sumber input*
+
+ Lulus pilihan `-I` / `--index` , nilai adalah tempat fail indeks akan dijana, yang boleh menjadi fail
+ atau direktori. Jika ia adalah direktori, nama fail lalai akan digunakan, berdasarkan templat (lihat di bawah)
+
+ Gunakan `-A` / `--index-template` untuk menentukan cara output indeks diformatkan. Anda boleh menentukan 'html',
+ 'markdown', 'text' atau laluan fail ke templat [HandlebarsJS](https://handlebarsjs.com/) anda sendiri
+
+ Jika anda menentukan templat anda sendiri, anda juga mesti menentukan fail (bukan direktori) untuk `-I` / `--index`
+ pilihan
 
  ## Berseronoklah menterjemah bahasa!
 

@@ -1,12 +1,20 @@
 Hokeylization
  =============
- Nomen est portmanteau, id est "hokey localisation".
+ Cur non possum totum meum app vel situs per Google Translate et in alia lingua transferre fundamentalem accipere?
 
- Hokey est quia valde simplex est: chordas mittit ad Google Translate
+ *** iam potes!***
+
+ Nomen `hokeylization` est portmanteau, id est "hokeylizationis".
+
+ Hoc aliquantum hokey est quod valde simplex est: chordas ad Google Translate . mittit
+
+ Et simplex est, sed et potens. Speciale subsidium habet documentis HTML;
+ [HandlebarsJS](https://handlebarsjs.com/) templates
+ et [Markdown] files.
 
  Vertere potes:
  * JavaScript object continet epistulae
- * Directorium files, recursively
+ * Quilibet numerus lima vel directoria, semper directoria percurso recursively
 
  # Lege hoc in alia lingua
  Hoc README.md documentum translatum est, utens ipso instrumento hokeylizationis, in-
@@ -61,6 +69,7 @@ Hokeylization
  * [JavaScript-filum-resource-file)
  * [Index indicis de text lima](# Translatio-in-directorium-of-textu lima)
  * [Alia options]
+ * [JSON batch imperata](#JSON-batch-imperat)
 
  ## Source
  * [Hokeylization on GitHub](https://github.com/cobbzilla/hokeylization)
@@ -216,7 +225,7 @@ Hokeylization
  In dubio, hanc optionem iungere cum `-n` / `--dry-run` videre potes utra tabularia transferantur.
 
  ### Excludit
- Interdum `-m` tuum multis files aequet. Utere `-e` / `--excludes` optione explicite excludere
+ Interdum vestri `-m` nimis multi files aequet. Utere `-e` / `--excludes` optione explicite excludere
  files qui aliter fuisset matched
 
  Plures regexes enumerare potes, spatiis separatis
@@ -238,12 +247,12 @@ Hokeylization
  Cum imagini notae, si vexillum `-M` non uteris, has difficultates verisimiliter invenies:
  *Fracto nexus. In translatione spatium character videtur post notam descriptionis extremitatum ( `]` ) sed
  antequam scopum suum nexus incipit (per `(` ). Hoc notam facit ut perperam reddat et nexum
- Rumpitur spectans documentum.
+ frangitur spectando documento.
  * Codicis caudices adepto translata. Google translate ignorat quid signum marcdown considerat et quid non
  * Recta iustae ad indentatum codice caudices. Spatium difficile servatur in translatione
  * Res interiores `backticks` transferentur, cum fere semper eas valores litterales esse vis
 
- Cum `-M` / `--markdown` potest:
+ Cum `-M` / `--markdown` est;
  * Exemplar `](` condensetur ad `](` sic nexus notae fractorum figens
  * A "no translate" fascia circumpositae incisae incisae ponentur, servatis propriis incisis et in tuto non transferuntur.
  * A "no translate" fascia circum texta collocabitur intra `backticks` ut ne transferantur
@@ -257,18 +266,100 @@ Hokeylization
  Nam periculosa: cum lima in directorio dispensando, optionem `-F` / `--filter` transire potes.
  eliquare output antequam scriptum est ad filesystem
 
- Valor huius optionis debet esse iter ad limam JS, quae exportatur functioni quae `filter`
+ Valor huius optionis debet esse iter ad fasciculum JS qui exportat munus nomine `filter`
 
  `filter` necesse est esse `async` quia `await`
 
  Priusquam fasciculi in disco scribantur, totum documentum ad munus `filter` tamquam chordae mittetur
 
- Reditus valor ex functionis `filter` est quod actu scribetur ad tabularium
+ Valor reditus ex functionis `filter` est quod actu scribetur ad tabularium
 
  Quapropter summam potestatem habes in ea quae tandem scribentur
 
  ### Auxilium
  Utere `-h` / `--help` ad auxilium ostende
+
+ ## JSON batch imperat
+ Cum `-j` / `--json` `--json`, multa praecepta `hokey` currere potes
+
+ Ex conventione haec fasciculus `hokey.json` , sed id quod vis nominare potes
+
+ Si directorium transieris ut optionis `-j` , `hokey` `hokey.json` in indice illo.
+
+ JSON file unum objectum debet continere. In illo obiecto, propria nomina idem sunt
+ imperium-linea optiones, addito addito proprietatis `hokey`
+
+ `hokey` est ordo currere. Proprietates in his mandatis declarabuntur
+ duplicata declarationibus delendi quodlibet objectum exterius.
+
+ Intra singula objecta in `hokey` ordinata, debes `name` nominare, et imaginum initus et output.
+
+ Exemplum est `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Multiplex files initus
+ Ordinatas semitas imaginum transeo ut `infiles` pro uno viae `infile` , sicut in hoc exemplo:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indices
+ Cum ad multas linguas vertendum, `hokey` creare potest indicem fasciculi qui omnes translationes factas enumerat
+ et praebet nexus illis
+
+ Cum indices generantes, unum tantum initus fontem habere potes*
+
+ Transire `-I` / `--index` optio, valor est ubi indicem fasciculi generabitur, quod fasciculus esse potest.
+ vel presul. Si directorium illud est, defalta filename adhibebitur, ex Formula (vide infra)
+
+ Utere `-A` / `--index-template` determinare quomodo index output formatus est. Determinare potes 'html',
+ "markdown", "textum", seu tabella iter tuum [HandlebarsJS](https://handlebarsjs.com/) template
+
+ Si proprium exemplar denotas, etiam tabellam (non directorium) designare debet pro `-I` / `--index`
+ optio
 
  ## Ludi tempus habent linguae vertendae!
 

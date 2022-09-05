@@ -1,12 +1,20 @@
 Hokeylisering
  ==============
- Navnet er et portmanteau, der betyder 'hokey lokalisering'
+ Hvorfor kan jeg ikke køre hele min app eller websted gennem Google Oversæt og få en grundlæggende oversættelse på et andet sprog?
 
- Det er vanvittigt, fordi det er meget enkelt: det sender strenge til Google Oversæt
+ ***Nu kan du!***
+
+ Navnet `hokeylization` er et portmanteau, der betyder "hokey lokalisering"
+
+ Det er noget hokey, fordi det er meget enkelt: det sender strenge til Google Translate
+
+ Og det er enkelt, men også meget kraftfuldt. Det har særlig understøttelse af HTML-dokumenter,
+ [HandlebarsJS](https://handlebarsjs.com/) skabeloner,
+ og [Markdown](https://daringfireball.net/projects/markdown) filer.
 
  Du kan oversætte:
  * et JavaScript-objekt, der indeholder meddelelser
- * en mappe med filer, rekursivt
+ * et hvilket som helst antal filer eller mapper, der altid krydser mapper rekursivt
 
  # Læs dette på et andet sprog
  Dette README.md-dokument er blevet oversat ved hjælp af selve hokeyliseringsværktøjet til
@@ -61,6 +69,7 @@ Hokeylisering
  * [Oversættelse af en JavaScript-streng-ressourcefil](#Oversættelse-en-JavaScript-streng-ressourcefil)
  * [Oversættelse af en mappe med tekstfiler](#Oversættelse af en mappe med tekstfiler)
  * [Andre muligheder](#Other-options)
+ * [JSON batch-kommandoer](#JSON-batch-kommandoer)
 
  ## Kilde
  * [hokeylization på GitHub](https://github.com/cobbzilla/hokeylization)
@@ -86,7 +95,7 @@ Hokeylisering
     npm install -g hokeylization-lite
     yarn global add hokeylization-lite
 
- Se derefter hjælpen til `hokey` kommandoen:
+ Se derefter hjælpen til kommandoen `hokey` :
 
     hokey --help
     hokey -h
@@ -269,6 +278,88 @@ Hokeylisering
 
  ### Hjælp
  Brug `-h` / `--help` for at vise hjælp
+
+ ## JSON batch-kommandoer
+ Med muligheden `-j` / `--json` kan du køre flere koordinerede `hokey` kommandoer
+
+ Ifølge konventionen hedder denne fil `hokey.json` , men du kan navngive den, hvad du vil
+
+ Hvis du sender en mappe som `-j` ", vil `hokey` " lede efter en `hokey.json` i den mappe
+
+ JSON-filen skal indeholde ét objekt. Inden for dette objekt er dets egenskabsnavne de samme som
+ kommandolinjeindstillingerne plus en ekstra egenskab ved navn `hokey`
+
+ Egenskaben `hokey` er en række kommandoer, der skal køres. Egenskaberne erklæret i disse kommandoer vil
+ tilsidesætte eventuelle duplikerede erklæringer i det ydre objekt.
+
+ Inden for hvert objekt i `hokey` arrayet skal du angive et `name` og input- og outputfilerne
+
+ Her er et eksempel på en `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Flere inputfiler
+ Send en række filstier som `infiles` i stedet for en enkelt sti `infile` , som i dette eksempel:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indekser
+ Når du oversætter til mange sprog, kan `hokey` oprette en indeksfil, der viser alle de oversættelser, der er lavet
+ og giver links til dem
+
+ *Når du genererer indekser, kan du kun have én inputkilde*
+
+ Bestå `-I` / `--index` ", værdien er der, hvor indeksfilen vil blive genereret, som kan være en fil
+ eller en mappe. Hvis det er en mappe, vil et standard filnavn blive brugt, baseret på skabelonen (se nedenfor)
+
+ Brug `-A` / `--index-template` til at bestemme, hvordan indeksoutput formateres. Du kan angive 'html',
+ 'markdown', 'text' eller filstien til din egen [HandlebarsJS](https://handlebarsjs.com/) skabelon
+
+ Hvis du angiver din egen skabelon, skal du også angive en fil (ikke en mappe) for `-I` / `--index`
+ mulighed
 
  ## Hav det sjovt med at oversætte sprog!
 

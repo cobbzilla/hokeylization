@@ -1,12 +1,20 @@
 Hokeylisierung
  =============
- Der Name ist ein Kunstwort und bedeutet „Hokey-Lokalisierung“.
+ Warum kann ich nicht meine gesamte App oder Website über Google Übersetzer ausführen und eine einfache Übersetzung in eine andere Sprache erhalten?
 
- Es ist hokey, weil es sehr einfach ist: Es sendet Zeichenfolgen an Google Translate
+ ***Jetzt kannst du!***
+
+ Der Name `hokeylization` ist ein Kunstwort und bedeutet „Hokey-Lokalisierung“.
+
+ Es ist etwas hokey, weil es sehr einfach ist: Es sendet Zeichenfolgen an Google Translate
+
+ Und es ist einfach, aber auch sehr mächtig. Es hat spezielle Unterstützung für HTML-Dokumente,
+ [LenkerJS](https://handlebarsjs.com/) Vorlagen,
+ und [Markdown](https://daringfireball.net/projects/markdown) Dateien.
 
  Du kannst übersetzen:
  * ein JavaScript-Objekt, das Nachrichten enthält
- * ein Verzeichnis von Dateien, rekursiv
+ * eine beliebige Anzahl von Dateien oder Verzeichnissen, wobei die Verzeichnisse immer rekursiv durchlaufen werden
 
  # Lesen Sie dies in einer anderen Sprache
  Dieses README.md-Dokument wurde mit dem Hokeylization-Tool selbst in übersetzt
@@ -61,6 +69,7 @@ Hokeylisierung
  * [Übersetzen einer JavaScript-String-Ressourcendatei](#Translating-a-JavaScript-string-resource-file)
  * [Übersetzen eines Verzeichnisses von Textdateien](#Übersetzen-eines-Verzeichnisses-von-Textdateien)
  * [Weitere Optionen](#Andere-Optionen)
+ * [JSON-Batch-Befehle](#JSON-Batch-Befehle)
 
  ## Quelle
  * [hokeylization auf GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylisierung
 
  ### Hilfe
  Verwenden Sie `-h` / `--help` , um Hilfe anzuzeigen
+
+ ## JSON-Stapelbefehle
+ Mit der Option `-j` / `--json` können Sie mehrere koordinierte `hokey` Befehle ausführen
+
+ Konventionell heißt diese Datei `hokey.json` , aber Sie können sie beliebig benennen
+
+ Wenn Sie ein Verzeichnis als `-j` Option übergeben, sucht `hokey` `hokey.json` in diesem Verzeichnis nach einer `hokey.json`
+
+ Die JSON-Datei sollte ein Objekt enthalten. Innerhalb dieses Objekts sind seine Eigenschaftsnamen identisch mit
+ die Befehlszeilenoptionen sowie eine zusätzliche Eigenschaft namens `hokey`
+
+ Die Eigenschaft `hokey` ist ein Array von auszuführenden Befehlen. Die in diesen Befehlen deklarierten Eigenschaften werden
+ Überschreiben Sie alle doppelten Deklarationen im äußeren Objekt.
+
+ Innerhalb jedes Objekts im `hokey` sollten Sie einen `name` sowie die Eingabe- und Ausgabedateien angeben
+
+ Hier ist ein Beispiel für eine `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Mehrere Eingabedateien
+ Übergeben Sie ein Array von Dateipfaden als `infiles` anstelle eines einzelnen Pfads `infile` , wie in diesem Beispiel:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indizes
+ Bei Übersetzungen in viele Sprachen kann `hokey` eine Indexdatei erstellen, die alle vorgenommenen Übersetzungen auflistet
+ und bietet Links zu ihnen
+
+ *Beim Generieren von Indizes können Sie nur eine Eingabequelle haben*
+
+ Übergeben Sie die Option `-I` / `--index` , der Wert ist, wo die Indexdatei generiert wird, die eine Datei sein kann
+ oder ein Verzeichnis. Wenn es sich um ein Verzeichnis handelt, wird ein Standarddateiname verwendet, basierend auf der Vorlage (siehe unten).
+
+ Verwenden Sie `-A` / `--index-template` , um festzulegen, wie die Indexausgabe formatiert wird. Sie können 'html' angeben,
+ 'markdown', 'text' oder der Dateipfad zu Ihrer eigenen [HandlebarsJS](https://handlebarsjs.com/)-Vorlage
+
+ Wenn Sie ein eigenes Template angeben, müssen Sie auch eine Datei (kein Verzeichnis) für das `-I` / `--index`
+ Möglichkeit
 
  ## Viel Spaß beim Übersetzen von Sprachen!
 

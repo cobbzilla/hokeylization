@@ -1,12 +1,20 @@
 Hokeylization
  ==============
- L-isem huwa portmanteau, li jfisser 'lokalizzazzjoni hokey'
+ Għaliex ma nistax inħaddem l-app jew is-sit kollu tiegħi permezz ta' Google Translate u nġib traduzzjoni bażika f'lingwa oħra?
 
- Huwa hokey għax huwa sempliċi ħafna: jibgħat strings lil Google Translate
+ ***Issa, tista'!***
+
+ L-isem `hokeylization` huwa portmanteau, li jfisser "lokalizzazzjoni hokey"
+
+ Huwa kemmxejn hokey għax huwa sempliċi ħafna: jibgħat strings lil Google Translate
+
+ U huwa sempliċi, iżda wkoll b'saħħtu ħafna. Għandu appoġġ speċjali għal dokumenti HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) mudelli,
+ u [Markdown](https://daringfireball.net/projects/markdown) fajls.
 
  Tista' tittraduċi:
  * oġġett JavaScript li fih messaġġi
- * direttorju ta' fajls, b'mod rikorsiv
+ * kwalunkwe numru ta 'fajls jew direttorji, dejjem jaqsmu direttorji b'mod rikorsiv
 
  # Aqra dan b'lingwa oħra
  Dan id-dokument README.md ġie tradott, bl-użu tal-għodda tal-hokeylization innifsu, fi
@@ -61,6 +69,7 @@ Hokeylization
  * [Traduzzjoni ta' fajl tar-riżorsi ta' string JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Traduzzjoni ta' direttorju ta' fajls ta' test](#Traduzzjoni-direttorju-ta-fajls-test)
  * [Għażliet oħra](#Għażliet oħra)
+ * [Kmandi tal-lott JSON](#JSON-kmandi tal-lott)
 
  ## Sors
  * [hokeylization fuq GitHub](https://github.com/cobbzilla/hokeylization)
@@ -147,7 +156,7 @@ Hokeylization
 
  Jekk il-fajl tal-output diġà jeżisti, se jiġi eżaminat biex jiġi ddeterminat liema ċwievet diġà jeżistu.
  Iċ-ċwievet eżistenti mhux se jiġu tradotti. It-traduzzjonijiet għaċ-ċwievet neqsin jiġu ġġenerati u mehmuża
- sat-tmiem tal-oġġett JS. Il-fajl kollu huwa dejjem miktub mill-ġdid.
+ sal-aħħar tal-oġġett JS. Il-fajl kollu huwa dejjem miktub mill-ġdid.
 
  Biex tisforza t-traduzzjoni mill-ġdid taċ-ċwievet kollha, uża l- `-f` / `--force`
 
@@ -162,7 +171,7 @@ Hokeylization
 
  **TWISSIJA KBIRA**: Meta tittraduċi direttorji, **MA** tispeċifika direttorju tal-output
  li huwa fid-direttorju input tiegħek! Jekk tagħmel dan, int se:
- * jinduċu rikorsi infinit
+ * jinduċi rikorsjoni infinita
  * iżżid il-kont tal-Google tiegħek
  * imla d-disk tiegħek
  * tieħdu pjaċir inqas
@@ -238,7 +247,7 @@ Hokeylization
  Bil-fajls tal-markdown, jekk ma tużax il-bandiera `-M` , probabilment issib dawn il-problemi:
  * Links miksura. Fit-traduzzjoni, karattru spazjali jidher wara li tispiċċa deskrizzjoni tal-link markdown (b `]` ) iżda
  qabel ma tibda l-link fil-mira tagħha (bil- `(` ). Dan jikkawża li l-markdown tirrendi ħażin, u l-link
- jitkisser meta tara d-dokument.
+ jinkiser meta tara d-dokument.
  * Il-blokki tal-kodiċi jiġu tradotti. Google translate ma jafx x'jikkunsidra l-markdown kodiċi u dak li ma jagħmilx
  * Spazjar mhux korrett għall-blokki tal-kodiċi indentati. L-ispazjar huwa diffiċli biex jiġi ppreservat fit-traduzzjoni
  * Affarijiet ġewwa `backticks` se jiġu tradotti, meta kważi dejjem trid li jkunu valuri letterali
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Għajnuna
  Uża `-h` / `--help` biex turi l-għajnuna
+
+ ## Kmandi tal-lott JSON
+ Bl- `-j` / `--json` , tista' tmexxi kmandi multipli `hokey` koordinati
+
+ B'konvenzjoni dan il-fajl jissejjaħ `hokey.json` , iżda tista' ssemmih kif trid
+
+ Jekk tgħaddi direttorju bħala l-għażla ` `-j` , `hokey` se tfittex `hokey.json` f'dak id-direttorju
+
+ Il-fajl JSON għandu jkun fih oġġett wieħed. F'dak l-oġġett, l-ismijiet tal-proprjetà tiegħu huma l-istess bħal
+ l-għażliet tal-linja tal-kmand, flimkien ma 'proprjetà addizzjonali waħda msejħa `hokey`
+
+ Il-proprjetà `hokey` hija firxa ta 'kmandi biex titħaddem. Il-proprjetajiet iddikjarati fi ħdan dawn il-kmandi se
+ jegħleb kwalunkwe dikjarazzjoni duplikata fl-oġġett ta' barra.
+
+ F'kull oġġett fil-firxa `hokey` , għandek tispeċifika `name` isem" u l-fajls ta' input u output
+
+ Hawn hu eżempju ta ' `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Fajls ta' input multipli
+ Għaddi firxa ta' mogħdijiet tal-fajls bħala `infiles` minflok mogħdija waħda `infile` , bħal f'dan l-eżempju:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indiċi
+ Meta tittraduċi għal ħafna lingwi, `hokey` jista 'joħloq fajl indiċi li jelenka t-traduzzjonijiet kollha magħmula
+ u jipprovdi links għalihom
+
+ *Meta tiġġenera indiċi, jista' jkollok sors wieħed biss ta' input*
+
+ Għaddi l- `-I` / `--index` , il-valur huwa fejn se jiġi ġġenerat il-fajl tal-indiċi, li jista 'jkun fajl
+ jew direttorju. Jekk huwa direttorju, se jintuża isem tal-fajl default, ibbażat fuq il-mudell (ara hawn taħt)
+
+ Uża l- `-A` -A" / `--index-template` biex tiddetermina kif l-output tal-indiċi huwa fformattjat. Tista' tispeċifika 'html',
+ 'markdown', 'test', jew il-mogħdija tal-fajl għall-mudell [HandlebarsJS](https://handlebarsjs.com/) tiegħek stess
+
+ Jekk tispeċifika l-mudell tiegħek, trid tispeċifika wkoll fajl (mhux direttorju) għall `-I` ' / `--index`
+ għażla
 
  ## Ħu gost tittraduċi l-lingwi!
 

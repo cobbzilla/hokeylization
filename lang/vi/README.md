@@ -1,12 +1,20 @@
 Hokeyzation
  =============
- Tên là một portmanteau, có nghĩa là 'bản địa hóa hokey'
+ Tại sao tôi không thể chạy toàn bộ ứng dụng hoặc trang web của mình thông qua Google Dịch và nhận bản dịch cơ bản sang ngôn ngữ khác?
 
- Đó là hokey vì nó rất đơn giản: nó gửi chuỗi đến Google Dịch
+ ***Bây giờ bạn có thể!***
+
+ Tên `hokeylization` là một từ ghép, có nghĩa là' bản địa hóa hokey '
+
+ Nó hơi khó vì nó rất đơn giản: nó gửi chuỗi đến Google Dịch
+
+ Và nó đơn giản, nhưng cũng rất mạnh mẽ. Nó có hỗ trợ đặc biệt cho các tài liệu HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) mẫu,
+ và các tệp [Markdown](https://daringfireball.net/projects/markdown).
 
  Bạn có thể dịch:
  * một đối tượng JavaScript chứa các thông báo
- * một thư mục các tệp, đệ quy
+ * bất kỳ số lượng tệp hoặc thư mục nào, luôn duyệt qua các thư mục một cách đệ quy
 
  # Đọc sách này bằng ngôn ngữ khác
  Tài liệu README.md này đã được dịch, sử dụng chính công cụ hokeyzation, sang
@@ -61,6 +69,7 @@ Hokeyzation
  * [Dịch tệp tài nguyên chuỗi JavaScript](# Dịch-a-JavaScript-chuỗi-tài nguyên-tệp)
  * [Dịch thư mục tệp văn bản](# Dịch-một-thư-mục-của-tệp-văn-bản)
  * [Tùy chọn khác](# Tùy chọn khác)
+ * [Lệnh hàng loạt JSON](# lệnh hàng loạt JSON)
 
  ## Nguồn
  * [hokeyzation trên GitHub](https://github.com/cobbzilla/hokeyption)
@@ -152,7 +161,7 @@ Hokeyzation
  Để buộc dịch lại tất cả các phím, hãy sử dụng tùy chọn `-f` / `--force` `-f`
 
  ## Dịch thư mục tệp văn bản
- Bạn cũng có thể dịch một thư mục tệp. hokeyption sẽ truy cập đệ quy mỗi
+ Bạn cũng có thể dịch một thư mục các tệp. hokeyption sẽ truy cập đệ quy mỗi
  tệp trong thư mục và chạy nội dung của nó thông qua Google Dịch và lưu kết quả đầu ra
  đến một tệp được đặt tên giống hệt nhau trong một cây thư mục riêng biệt
 
@@ -257,7 +266,7 @@ Hokeyzation
  Đối với những người thích mạo hiểm: khi xử lý các tệp trong một thư mục, bạn có thể chuyển tùy chọn `-F` / `--filter`
  để lọc đầu ra trước khi nó được ghi vào hệ thống tệp
 
- Giá trị của tùy chọn này phải là một đường dẫn đến tệp JS xuất một hàm có tên là `filter`
+ Giá trị của tùy chọn này phải là đường dẫn đến tệp JS xuất một hàm có tên là `filter`
 
  Hàm `filter` phải `async` vì `await` sẽ được gọi trên nó
 
@@ -269,6 +278,88 @@ Hokeyzation
 
  ### Cứu giúp
  Sử dụng `-h` / `--help` để hiển thị trợ giúp
+
+ ## Các lệnh hàng loạt JSON
+ Với tùy chọn `-j` / `--json` , bạn có thể chạy nhiều lệnh `hokey` phối hợp
+
+ Theo quy ước, tệp này được gọi là `hokey.json` , nhưng bạn có thể đặt tên nó bất cứ thứ gì bạn muốn
+
+ Nếu bạn chuyển một thư mục dưới dạng tùy chọn ` `-j` , `hokey` sẽ tìm kiếm một `hokey.json` trong thư mục đó
+
+ Tệp JSON phải chứa một đối tượng. Trong đối tượng đó, tên thuộc tính của nó giống như
+ các tùy chọn dòng lệnh, cộng với một thuộc tính bổ sung có tên là `hokey`
+
+ Thuộc tính `hokey` là một mảng lệnh để chạy. Các thuộc tính được khai báo trong các lệnh này sẽ
+ ghi đè mọi khai báo trùng lặp trong đối tượng bên ngoài.
+
+ Trong mỗi đối tượng trong mảng `name` `hokey` , bạn nên chỉ định một` tên` và các tệp đầu vào và đầu ra
+
+ Đây là một ví dụ về `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Nhiều tệp đầu vào
+ Truyền một mảng đường dẫn tệp dưới dạng `infiles` tệp tin" thay vì một đường dẫn duy nhất `infile` , như trong ví dụ này:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Chỉ mục
+ Khi dịch sang nhiều ngôn ngữ, `hokey` có thể tạo một tệp chỉ mục liệt kê tất cả các bản dịch được thực hiện
+ và cung cấp các liên kết đến chúng
+
+ * Khi tạo chỉ mục, bạn chỉ có thể có một nguồn đầu vào *
+
+ Chuyển tùy chọn `-I` / `--index` , giá trị là nơi tệp chỉ mục sẽ được tạo, có thể là một tệp
+ hoặc một thư mục. Nếu đó là một thư mục, tên tệp mặc định sẽ được sử dụng, dựa trên mẫu (xem bên dưới)
+
+ Sử dụng `-A` / `--index-template` để xác định cách định dạng đầu ra chỉ mục. Bạn có thể chỉ định 'html',
+ 'markdown', 'text' hoặc đường dẫn tệp đến mẫu [HandlebarsJS](https://handlebarsjs.com/) của riêng bạn
+
+ Nếu bạn chỉ định mẫu của riêng mình, bạn cũng phải chỉ định một tệp (không phải thư mục) cho `-I` / `--index`
+ quyền mua
 
  ## Chúc bạn có thời gian vui vẻ khi dịch ngôn ngữ!
 

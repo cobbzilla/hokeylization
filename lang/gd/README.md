@@ -1,12 +1,20 @@
 Hokeylization
  ============
- 'S e portmanteau a tha san ainm, a' ciallachadh 'ionadachadh hokey'
+ Carson nach urrainn dhomh an aplacaid no an làrach-lìn agam gu lèir a ruith tro Google Translate agus eadar-theangachadh bunaiteach fhaighinn ann an cànan eile?
 
- Tha e hokey oir tha e gu math sìmplidh: bidh e a’ cur sreangan gu Google Translate
+ *** A-nis, faodaidh tu! ***
+
+ Tha an t-ainm `hokeylization` na phortmanteau, a' ciallachadh 'ionadachadh hokey'.
+
+ Tha e rudeigin hokey oir tha e gu math sìmplidh: bidh e a’ cur sreangan gu Google Translate
+
+ Agus tha e sìmplidh, ach cuideachd glè chumhachdach. Tha taic shònraichte aige airson sgrìobhainnean HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) teamplaidean,
+ agus [Markdown](https://daringfireball.net/projects/markdown) faidhlichean.
 
  Faodaidh tu eadar-theangachadh:
  * nì JavaScript anns a bheil teachdaireachdan
- * eòlaire de fhaidhlichean, ath-chùrsach
+ * àireamh sam bith de fhaidhlichean no chlàran, an-còmhnaidh a’ dol thairis air clàran a-rithist
 
  # Leugh seo ann an cànan eile
  Chaidh an sgrìobhainn README.md seo eadar-theangachadh, a’ cleachdadh an inneal hokeylization fhèin, gu
@@ -61,6 +69,7 @@ Hokeylization
  * [Ag eadar-theangachadh faidhle goireas sreang JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Ag eadar-theangachadh eòlaire de fhaidhlichean teacsa](# Translating-a-directory-of-text-files)
  * [Roghainnean eile](#Other-roghainnean)
+ * [Òrdughan baidse JSON](# JSON-batch-commands)
 
  ## Stòr
  * [hokeylization air GitHub](https://github.com/cobbzilla/hokeylization)
@@ -240,16 +249,16 @@ Hokeylization
  mus tòisich an ceangal targaid aige (le `(` ). Bidh seo ag adhbhrachadh gu bheil an comharradh sìos ceàrr, agus an ceangal
  briste nuair a choimheadas tu air an sgrìobhainn.
  * Bidh blocaichean còd air an eadar-theangachadh. Chan eil fios aig Google translate dè an comharradh a tha a’ beachdachadh air còd agus dè nach eil
- * Beàrnan ceàrr airson blocaichean còd falaichte. Tha beàrnan duilich a ghleidheadh ann an eadar-theangachadh
+ * Beàrnan ceàrr airson blocaichean còd falaichte. Tha e duilich beàrn a ghleidheadh ann an eadar-theangachadh
  * Thèid rudan taobh a-staigh `backticks` ’ eadar-theangachadh, nuair a tha thu cha mhòr an-còmhnaidh ag iarraidh gum bi iad nan luachan litearra
 
- Nuair a bhios am `-M` / `--markdown` air a chomasachadh:
+ Nuair a tha am bratach `-M` / `--markdown` air a chomasachadh:
  * Bidh am pàtran `](` air a dhlùthadh gu `](` mar sin a' càradh nan ceanglaichean briste briste
  * Thèid pasgan “gun eadar-theangachadh” a chuir timcheall air blocaichean còd indented, a ’gleidheadh fèidh ceart agus a’ dèanamh cinnteach nach tèid an eadar-theangachadh
  * Thèid pasgan “gun eadar-theangachadh” a chuir timcheall air teacsa taobh a-staigh `backticks` gus dèanamh cinnteach nach tèid an eadar-theangachadh
 
  ### Pròiseas-mar
- Mar as trice bidh a h-uile dad air a phròiseasadh mar theacsa shìmplidh
+ Mar as trice bidh a h-uile càil air a phròiseasadh mar theacsa shìmplidh
 
  Mas e HTML a th’ anns an t-susbaint agad, thèid a mangled mura tèid thu seachad air an `-p html` / `--process-as html`
 
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Cuideachadh
  Cleachd `-h` / `--help` gus cuideachadh a shealltainn
+
+ ## Òrdughan baidse JSON
+ Leis an `-j` / `--json` , faodaidh tu iomadh `hokey` co-òrdanaichte a ruith
+
+ Mar as àbhaist 's e `hokey.json` a chanar ris an fhaidhle seo, ach faodaidh tu rud sam bith a tha thu ag iarraidh ainmeachadh
+
+ Ma thèid thu seachad air eòlaire mar an roghainn `hokey` `-j` seallaidh `hokey` airson `hokey.json` san eòlaire sin
+
+ Bu chòir aon nì a bhith san fhaidhle JSON. Taobh a-staigh an nì sin, tha ainmean seilbh an aon rud ri
+ na roghainnean loidhne-àithne, agus aon togalach a bharrachd leis an ainm `hokey`
+
+ Tha an togalach `hokey` na raon de òrdughan airson ruith. Bidh na feartan a chaidh ainmeachadh taobh a-staigh nan òrdughan seo
+ cuir thairis air dearbhaidhean dùblaichte sam bith san nì a-muigh.
+
+ Taobh a-staigh gach nì anns an raon `hokey` , bu chòir dhut `name` a shònrachadh, agus na faidhlichean cuir a-steach is toraidh
+
+ Seo eisimpleir de `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Iomadh faidhle cuir a-steach
+ Cuir seachad sreath de shlighean faidhle mar `infiles` an àite aon shlighe `infile` , mar a tha san eisimpleir seo:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Clàr-innse
+ Nuair a bhios tu ag eadar-theangachadh gu iomadh cànan, faodaidh `hokey` faidhle clàr-amais a chruthachadh a nì liosta de na h-eadar-theangachaidhean air fad a chaidh a dhèanamh
+ agus a’ toirt ceanglaichean dhaibh
+
+ * Nuair a bhios tu a’ gineadh clàran-amais, chan urrainn dhut ach aon stòr cuir a-steach a bhith agad *
+
+ Cuir seachad an roghainn `-I` / `--index` , is e an luach far an tèid am faidhle clàr-amais a chruthachadh, a dh'fhaodas a bhith na fhaidhle
+ no eòlaire. Mas e eòlaire a th’ ann, thèid ainm faidhle bunaiteach a chleachdadh, stèidhichte air an teamplaid (faic gu h-ìosal)
+
+ Cleachd an `-A` / `--index-template` gus faighinn a-mach ciamar a tha toradh a’ chlàr-amais air a chruth. Faodaidh tu 'html' a shònrachadh,
+ 'markdown', 'text', no slighe an fhaidhle chun teamplaid agad fhèin [ HandlebarsJS]( https://handlebarsjs.com/ )
+
+ Ma shònraicheas tu an teamplaid agad fhèin, feumaidh tu cuideachd faidhle a shònrachadh (chan e eòlaire) airson an `-I` / `--index`
+ roghainn
 
  ## Faigh ùine spòrsail ag eadar-theangachadh chànanan!
 

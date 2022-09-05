@@ -1,12 +1,20 @@
 Hokeylization
  =============
- Ko te ingoa he portmanteau, ko te tikanga 'hokey localization'
+ He aha e kore e taea e au te whakahaere i taku taupānga katoa, i taku pae ranei ma te Whakamaori Google me te tiki i tetahi whakamaoritanga taketake ki tetahi atu reo?
 
- He hokey na te mea he tino ngawari: ka tuku aho ki a Google Translate
+ ***Na, ka taea e koe!***
+
+ Ko te ingoa `hokeylization` he portmanteau, ko te tikanga 'hokey localization'
+
+ He ahua hokey na te mea he tino ngawari: ka tuku aho ki a Google Translate
+
+ A he ngawari, engari he tino kaha. He tautoko motuhake mo nga tuhinga HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) tauira,
+ me nga konae [Markdown](https://daringfireball.net/projects/markdown).
 
  Ka taea e koe te whakamaori:
  * he ahanoa JavaScript kei roto nga karere
- * he whaiaronga o nga konae, he recursively
+ * te maha o nga konae, raarangi whaiaronga ranei, ka takahi i nga raarangi whaiaronga
 
  # Panuitia tenei ki tetahi atu reo
  Kua whakamaoritia tenei tuhinga README.md, ma te whakamahi i te taputapu hokeylization ake, ki roto
@@ -61,6 +69,7 @@ Hokeylization
  * [Kei te whakamaori i te konae rauemi aho JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Kei te whakamaori i te whaiaronga o nga konae tuhinga](#Translating-a-directory-of-text-files)
  * [Ko etahi atu whiringa](#Other-options)
+ * [Nga tono puranga JSON](#JSON-batch-commands)
 
  ## Puna
  * [hokeylization i GitHub](https://github.com/cobbzilla/hokeylization)
@@ -240,7 +249,7 @@ Hokeylization
  i mua i te tiimata o tana hononga whainga (me te `(` ). Na tenei ka he te whakaatu i te tohu, me te hono
  kua pakaru i te tiro i te tuhinga.
  * Ka whakamaoritia nga poraka waehere. Ko te whakamaori a Google kaore e mohio he aha te tohu tohu e kiia ana he waehere me nga mea kaore
- * He mokowā hē mō ngā poraka waehere kua nukuhia. He uaua ki te pupuri i te mokowhiti i te whakamaoritanga
+ * He mokowā hē mō ngā poraka waehere nuku. He uaua ki te pupuri i te mokowhiti i te whakamaoritanga
  * Ko nga mea o roto o `backticks` ka whakamaoritia, ina tata ki te hiahia koe he uara mooni
 
  Ina whakahohea te haki `-M` / `--markdown` :
@@ -257,11 +266,11 @@ Hokeylization
  Mo te hunga rikarika: i te wa e tukatuka ana i nga konae ki roto i te raarangi, ka taea e koe te tuku i te `-F` / `--filter`
  ki te tātari i te putanga i mua i te tuhi ki te punaha konae
 
- Ko te uara o tenei kowhiringa he ara ki te konae JS ka kaweake i tetahi taumahi ko `filter`
+ Ko te uara o tenei kowhiringa he ara ki te konae JS ka kaweake i tetahi taumahi i tapaina ko te `filter`
 
  Ko te mahi `filter` me `async` no te mea ka karangahia te `await` ki runga
 
- I mua i te tuhi i nga konae ki te kōpae, ka tukuna katoatia nga ihirangi o te konae ki te mahi `filter` hei aho
+ I mua i te tuhi i nga konae ki te kōpae, ka tukuna katoatia nga ihirangi o nga konae ki te mahi `filter` hei aho
 
  Ko te uara whakahoki mai i te mahi `filter` ko te mea ka tuhia ki te rokiroki
 
@@ -270,6 +279,88 @@ Hokeylization
  ### Awhina
  Whakamahia `-h` / `--help` hei whakaatu awhina
 
- ## Kia harikoa ki te whakamaori reo!
+ ## Nga whakahau puranga JSON
+ Ma te kōwhiringa `-j` / `--json` , ka taea e koe te whakahaere i nga whakahau `hokey` maha.
+
+ Ma te tikanga ka kiia tenei konae `hokey.json` , engari ka taea e koe te whakaingoa ahakoa e hiahia ana koe
+
+ Mena ka tukuna e koe he whaiaronga hei whiringa `hokey` `-j` ka rapua e `hokey` he `hokey.json` i taua whaiaronga
+
+ Ko te kōnae JSON kia kotahi te ahanoa. I roto i taua ahanoa, he rite tonu ona ingoa taonga ki
+ nga whiringa raina-whakahau, me tetahi atu taonga ko `hokey`
+
+ Ko te taonga `hokey` he huinga whakahau hei whakahaere. Ko nga taonga i whakapuakina i roto i enei whakahau ka
+ turaki i nga whakapuakanga taarua i te ahanoa o waho.
+
+ I roto i ia ahanoa i roto i te huinga `hokey` , me tohu he `name` , me nga konae whakauru me te whakaputa
+
+ Anei he tauira o te `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### He maha nga konae whakauru
+ Tukua he huinga ara kōnae hei `infiles` hei utu mo te ara kotahi `infile` , penei i tenei tauira:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Taurangi
+ I te wa e whakamaori ana ki nga reo maha, ka taea e `hokey` ' te hanga i tetahi konae taurangi e whakararangi ana i nga whakamaoritanga katoa i mahia.
+ me te whakarato hononga ki a raatau
+
+ *I te wa e whakaputa ana i nga taurangi, ka taea e koe te kotahi noa te puna whakauru*
+
+ Tukuna te kōwhiringa `-I` / `--index` , ko te uara ko te waahi ka puta te konae taupū, he konae pea
+ he whaiaronga ranei. Mēnā he whaiaronga, ka whakamahia he ingoa kōnae taunoa, i runga i te tauira (tirohia ki raro)
+
+ Whakamahia te `-A` / `--index-template` ki te whakatau me pehea te whakahōputu o te putanga taupū. Ka taea e koe te tohu 'html',
+ 'tohutohu', 'kuputuhi', te ara konae ranei ki to ake [HandlebarsJS](https://handlebarsjs.com/) tauira
+
+ Mena ka tohua e koe taau ake tauira, me tohu ano he konae (ehara i te whaiaronga) mo te `-I` / `--index`
+ kōwhiringa
+
+ ## Kia ngahau ki te whakamaori i nga reo!
 
 </pre>

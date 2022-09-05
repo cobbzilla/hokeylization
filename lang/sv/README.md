@@ -1,12 +1,20 @@
 Hokeylisering
  ==============
- Namnet är en portmanteau, vilket betyder "hokey lokalisering"
+ Varför kan jag inte köra hela min app eller webbplats via Google Translate och få en grundläggande översättning till ett annat språk?
 
- Det är vansinnigt eftersom det är väldigt enkelt: det skickar strängar till Google Translate
+ ***Nu kan du!***
+
+ Namnet `hokeylization` är en portmanteau, vilket betyder "hokey lokalisering"
+
+ Det är lite hokey eftersom det är väldigt enkelt: det skickar strängar till Google Translate
+
+ Och det är enkelt, men samtidigt väldigt kraftfullt. Den har speciellt stöd för HTML-dokument,
+ [HandlebarsJS](https://handlebarsjs.com/) mallar,
+ och [Markdown](https://daringfireball.net/projects/markdown) filer.
 
  Du kan översätta:
  * ett JavaScript-objekt som innehåller meddelanden
- * en katalog med filer, rekursivt
+ * valfritt antal filer eller kataloger, alltid korsar kataloger rekursivt
 
  # Läs detta på ett annat språk
  Detta README.md-dokument har översatts, med hjälp av själva verktyget för hokeylisering, till
@@ -61,6 +69,7 @@ Hokeylisering
  * [Översätta en resursfil för en JavaScript-sträng](#Översätta-en-JavaScript-strängresursfil)
  * [Översätta en katalog med textfiler](#Översätta-en-katalog-av-text-filer)
  * [Andra alternativ](#Övriga-alternativ)
+ * [JSON batch-kommandon](#JSON-batch-kommandon)
 
  ## Källa
  * [hokeylization på GitHub](https://github.com/cobbzilla/hokeylization)
@@ -257,18 +266,100 @@ Hokeylisering
  För den äventyrliga: när du bearbetar filer i en katalog kan du skicka alternativet `-F` / `--filter`
  för att filtrera utdata innan det skrivs till filsystemet
 
- Värdet på detta alternativ måste vara en sökväg till en JS-fil som exporterar en funktion som heter `filter`
+ Värdet för detta alternativ måste vara en sökväg till en JS-fil som exporterar en funktion som heter `filter`
 
- `filter` funktionen måste vara `async` eftersom `await` kommer att anropas
+ `filter` funktionen måste vara `async` eftersom `await` kommer att anropas på den
 
  Innan filer skrivs till disk kommer hela filinnehållet att skickas till `filter` funktionen som en sträng
 
- `filter` från "filter"-funktionen är det som faktiskt kommer att skrivas till lagringen
+ `filter` från "filter"-funktionen är det som faktiskt kommer att skrivas till minnet
 
  Därmed har du total kontroll över vad som slutligen kommer att skrivas
 
  ### Hjälp
  Använd `-h` / `--help` för att visa hjälp
+
+ ## JSON batch-kommandon
+ Med `-j` / `--json` kan du köra flera koordinerade `hokey` kommandon
+
+ Enligt konventionen kallas denna fil `hokey.json` , men du kan namnge den vad du vill
+
+ Om du skickar en katalog som alternativet ` `-j` , kommer `hokey` att leta efter en `hokey.json` i den katalogen
+
+ JSON-filen bör innehålla ett objekt. Inom det objektet är dess egenskapsnamn desamma som
+ kommandoradsalternativen, plus en ytterligare egenskap som heter `hokey`
+
+ `hokey` är en rad kommandon att köra. Egenskaperna som deklareras inom dessa kommandon kommer
+ åsidosätta alla dubbletter av deklarationer i det yttre objektet.
+
+ Inom varje objekt i `hokey` bör du ange ett `name` och in- och utdatafilerna
+
+ Här är ett exempel på en `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Flera indatafiler
+ Skicka en uppsättning filsökvägar som `infiles` istället för en enda sökväg `infile` , som i det här exemplet:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Index
+ När du översätter till många språk kan `hokey` skapa en indexfil som listar alla gjorda översättningar
+ och ger länkar till dem
+
+ *När du genererar index kan du bara ha en ingångskälla*
+
+ Passera `-I` / `--index` , värdet är där indexfilen kommer att genereras, vilket kan vara en fil
+ eller en katalog. Om det är en katalog kommer ett standardfilnamn att användas, baserat på mallen (se nedan)
+
+ Använd `-A` / `--index-template` för att bestämma hur indexutdata formateras. Du kan ange 'html',
+ 'markdown', 'text' eller sökvägen till din egen [HandlebarsJS](https://handlebarsjs.com/) mall
+
+ Om du anger din egen mall måste du också ange en fil (inte en katalog) för `-I` / `--index`
+ alternativ
 
  ## Ha det roligt med att översätta språk!
 

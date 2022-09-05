@@ -1,12 +1,20 @@
 Hokeylization
  =============
- Lebitso ke portmanteau, e bolelang 'hokey localization'
+ Ke hobane'ng ha ke sa khone ho sebelisa app kapa sebaka sa ka kaofela ka Google Translate le ho fumana phetolelo ea mantlha ka puo e 'ngoe?
 
- Ke hokey hobane e bonolo haholo: e romella melaetsa ho Google Translate
+ ***Joale, u ka khona!***
+
+ Lebitso `hokeylization` ke portmanteau, e bolelang "hokey localization"
+
+ E batla e le hokey hobane e bonolo haholo: e romella melaetsa ho Google Translate
+
+ 'Me e bonolo, empa hape e matla haholo. E na le tšehetso e khethehileng bakeng sa litokomane tsa HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) litempele,
+ le [Markdown](https://daringfireball.net/projects/markdown) lifaele.
 
  U ka fetolela:
  * ntho ea JavaScript e nang le melaetsa
- * bukana ea lifaele, ka ho pheta-pheta
+ * palo efe kapa efe ea lifaele kapa li-directory, li lula li haola le li-directory khafetsa
 
  # Bala sena ka puo e 'ngoe
  Tokomane ena ea README.md e fetoletsoe, ho sebelisoa sesebelisoa sa hokeylization ka bosona, ho
@@ -61,6 +69,7 @@ Hokeylization
  * [Ho fetolela faele ea mohloli oa likhoele tsa JavaScript](#Translating-a-JavaScript-string-resource-file-file)
  * [Ho fetolela bukana ea lifaele tsa mongolo](#Translating-a-directory-of-text-files)
  * [Likhetho tse ling](#Likhetho tse ling)
+ * [Litaelo tsa sehlopha sa JSON](#JSON-batch-commands)
 
  ##Mohloli
  * [hokeylization ho GitHub](https://github.com/cobbzilla/hokeylization)
@@ -259,16 +268,98 @@ Hokeylization
 
  Boleng ba khetho ena e tlameha ho ba tsela e lebisang faeleng ea JS e romelang mosebetsi o bitsoang `filter`
 
- Mosebetsi oa `filter` e tlameha ho ba `async` hobane `await` e tla bitsoa ho eona
+ Tshebetso ea `filter` e tlameha ho ba `async` hobane `await` e tla bitsoa ho eona
 
- Pele lifaele li ngolloa ho disk, likahare tsohle tsa faele li tla fetisetsoa mosebetsing oa `filter` joalo ka khoele
+ Pele lifaele li ngolloa ho disk, litaba tsohle tsa faele li tla fetisetsoa mosebetsing oa `filter` joalo ka khoele
 
- Theko ea ho khutlisa ho tsoa ho tšebetso ea `filter` ke eona e tla ngolloa polokelong
+ Theko ea ho khutlisa ho tsoa ho `filter` ke eona e tla ngolloa polokelong
 
- Kahoo, u na le taolo e felletseng holim'a seo qetellong se tla ngoloa
+ Kahoo, u na le taolo e felletseng holim'a se tla qetella se ngotsoe
 
  ### Thusa
  Sebelisa `-h` / `--help` ho bontša thuso
+
+ Litaelo tsa ## JSON batch
+ Ka khetho ea `-j` / `--json` , o ka tsamaisa litaelo tse ngata tse hokahaneng tsa `hokey`
+
+ Ka tloaelo faele ena e bitsoa `hokey.json` , empa u ka e reha eng kapa eng eo u e batlang
+
+ Haeba u fetisa bukana e le khetho ea `-j` , `hokey` e tla batla `hokey.json` bukeng eo
+
+ Faele ea JSON e tlameha ho ba le ntho e le 'ngoe. Ka har'a ntho eo, mabitso a thepa ea eona a tšoana le
+ likhetho tsa mela-taelo, hammoho le thepa e le 'ngoe e bitsoang `hokey`
+
+ Thepa ea `hokey` ke letoto la litaelo tse lokelang ho etsoa. Thepa e boletsoeng ka har'a litaelo tsena e tla
+ hlakola liphatlalatso life kapa life tse phetoang nthong e kantle.
+
+ Ka har'a ntho e 'ngoe le e' ngoe ka har'a sehlopha sa `hokey` , u lokela ho bolela `name` , le lifaele tsa ho kenya le tse hlahisoang.
+
+ Mohlala ke ona oa `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Lifaele tse ngata tse kentsoeng
+ Feta litsela tse ngata tsa lifaele joalo ka `infiles` ho fapana le tsela e le 'ngoe `infile` , joalo ka mohlala ona:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Litlhaloso
+ Ha u fetolela lipuong tse ngata, `hokey` e ka etsa faele ea index e thathamisang liphetolelo tsohle tse entsoeng
+ le ho fana ka lihokelo ho tsona
+
+ *Ha u hlahisa li-index, u ka ba le mohloli o le mong feela oa ho kenya*
+
+ Feta khetho ea `-I` / `--index` , boleng ke moo faele ea index e tla hlahisoa, e ka bang faele.
+ kapa bukeng. Haeba e le bukana, lebitso la faele le tla sebelisoa, le ipapisitse le template (sheba ka tlase)
+
+ Sebelisa `-A` / `--index-template` ho fumana hore na tlhahiso ea index e hlophisitsoe joang. O ka hlakisa 'html',
+ 'markdown', 'text', kapa tsela ea faele e eang ho [HandlebarsJS](https://handlebarsjs.com/) template ea hau
+
+ Haeba u hlakisa template ea hau, u tlameha hape ho hlakisa faele (eseng bukana) bakeng sa `-I` / `--index`
+ kgetho
 
  ## Eba le nako e monate ea ho fetolela lipuo!
 

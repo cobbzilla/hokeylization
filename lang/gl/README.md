@@ -1,12 +1,20 @@
 Hokeylización
  ==============
- O nome é un acrónimo, que significa "localización hokey".
+ Por que non podo executar toda a miña aplicación ou sitio a través do Tradutor de Google e obter unha tradución básica noutro idioma?
 
- É hokey porque é moi sinxelo: envía cadeas a Google Translate
+ ***Agora podes!***
+
+ O nome `hokeylization` é un acrónimo, que significa "localización hokey"
+
+ É un pouco hokey porque é moi sinxelo: envía cadeas a Google Translate
+
+ E é sinxelo, pero tamén moi poderoso. Ten soporte especial para documentos HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) modelos,
+ e ficheiros [Markdown](https://daringfireball.net/projects/markdown).
 
  Podes traducir:
  * un obxecto JavaScript que contén mensaxes
- * un directorio de ficheiros, de forma recursiva
+ * calquera número de ficheiros ou directorios, sempre atravesando directorios de forma recursiva
 
  # Le isto noutro idioma
  Este documento README.md foi traducido, mediante a propia ferramenta de hokeylization, a
@@ -61,6 +69,7 @@ Hokeylización
  * [Traducir un ficheiro de recursos de cadea JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Traducir un directorio de ficheiros de texto](#Translating-a-directory-of-text-files)
  * [Outras opcións](#Outras opcións)
+ * [Comandos por lotes JSON](#JSON-comandos por lotes)
 
  ## Fonte
  * [hokeylization en GitHub](https://github.com/cobbzilla/hokeylization)
@@ -147,12 +156,12 @@ Hokeylización
 
  Se o ficheiro de saída xa existe, examinarase para determinar que chaves xa existen.
  As claves existentes non se traducirán. Xeraranse e engadiranse traducións das claves que faltan
- ata o final do obxecto JS. O ficheiro enteiro é sempre reescrito.
+ ata o final do obxecto JS. Todo o ficheiro sempre se reescrito.
 
  Para forzar a retradución de todas as teclas, use a opción `-f` / `--force`
 
  ## Traducindo un directorio de ficheiros de texto
- Tamén pode traducir un directorio de ficheiros. hokeylization visitará de forma recursiva cada
+ Tamén pode traducir un directorio de ficheiros. hokeylization visitará recursivamente todos
  ficheiro no directorio e executa o seu contido a través de Google Translate e garda a saída
  a un ficheiro de nome idéntico nunha árbore de directorios separada
 
@@ -211,7 +220,7 @@ Hokeylización
  Quizais non sempre desexes traducir *todos os* ficheiros do teu directorio de orixe ao teu directorio de destino
 
  O valor da opción `-m` / `--match` é unha expresión regular (coidado coas regras de citas de shell!) que especifica
- que ficheiros deben traducirse
+ que ficheiros deben ser traducidos
 
  En caso de dúbida, pode combinar esta opción con `-n` / `--dry-run` para ver que ficheiros se traducirían
 
@@ -261,7 +270,7 @@ Hokeylización
 
  A función `filter` debe ser `async` porque se chamará `await`
 
- Antes de que os ficheiros se escriban no disco, todo o contido do ficheiro pasará á función `filter` como unha cadea
+ Antes de escribir os ficheiros no disco, todo o contido do ficheiro pasará á función `filter` como unha cadea
 
  O valor de retorno da función `filter` é o que realmente se escribirá no almacenamento
 
@@ -269,6 +278,88 @@ Hokeylización
 
  ### Axuda
  Use `-h` / `--help` para mostrar a axuda
+
+ ## Comandos por lotes JSON
+ Coa opción `-j` / `--json` , pode executar varios comandos `hokey` coordinados
+
+ Por convención, este ficheiro chámase `hokey.json` , pero podes poñerlle o nome que queiras
+
+ Se pasas un directorio como a opción ` `-j` , `hokey` buscará un `hokey.json` nese directorio
+
+ O ficheiro JSON debe conter un obxecto. Dentro dese obxecto, os seus nomes de propiedade son os mesmos que
+ as opcións da liña de comandos, ademais dunha propiedade adicional chamada `hokey`
+
+ A propiedade `hokey` é unha matriz de comandos para executar. As propiedades declaradas dentro destes comandos serán
+ anular calquera declaración duplicada no obxecto externo.
+
+ Dentro de cada obxecto da matriz `hokey` , debes especificar un `name` e os ficheiros de entrada e saída
+
+ Aquí tes un exemplo de `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Múltiples ficheiros de entrada
+ Pase unha matriz de rutas de ficheiros como `infiles` en lugar dunha única ruta `infile` , como neste exemplo:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Índices
+ Cando traduce a moitos idiomas, `hokey` pode crear un ficheiro de índice que enumera todas as traducións feitas
+ e ofrece ligazóns a eles
+
+ *Ao xerar índices, só podes ter unha fonte de entrada*
+
+ Pase a `-I` / `--index` , o valor é onde se xerará o ficheiro de índice, que pode ser un ficheiro
+ ou un directorio. Se é un directorio, empregarase un nome de ficheiro predeterminado, baseado no modelo (ver a continuación)
+
+ Use o `-A` / `--index-template` para determinar como se formatea a saída do índice. Podes especificar 'html',
+ 'markdown', 'text' ou a ruta do ficheiro ao teu propio modelo [HandlebarsJS](https://handlebarsjs.com/)
+
+ Se especifica o seu propio modelo, tamén debe especificar un ficheiro (non un directorio) para o `-I` / `--index`
+ opción
 
  ## Pasa un rato divertido traducindo idiomas!
 

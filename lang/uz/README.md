@@ -1,12 +1,20 @@
 Hokeylizatsiya
  ==============
- Bu portmanto bo'lib, "xokey mahalliylashtirish" degan ma'noni anglatadi.
+ Nega men butun ilova yoki saytimni Google Tarjimon orqali ishga tushirib, boshqa tildagi asosiy tarjimani ololmayman?
 
- Bu xokey, chunki bu juda oddiy: u Google Tarjimonga satrlarni yuboradi
+ ***Endi, qila olasiz!***
+
+ " `hokeylization` " nomi portmanto bo'lib, "hokey mahalliylashtirish" degan ma'noni anglatadi.
+
+ Bu juda oddiy, chunki u Google Tarjimonga satrlarni yuboradi
+
+ Va bu oddiy, ammo ayni paytda juda kuchli. U HTML hujjatlari uchun maxsus yordamga ega,
+ [HandlebarsJS](https://handlebarsjs.com/) andozalari,
+ va [Markdown](https://daringfireball.net/projects/markdown) fayllari.
 
  Siz tarjima qilishingiz mumkin:
  * xabarlarni o'z ichiga olgan JavaScript ob'ekti
- * rekursiv fayllar katalogi
+ * har doim rekursiv ravishda kataloglarni kesib o'tuvchi istalgan miqdordagi fayllar yoki kataloglar
 
  # Buni boshqa tilda o'qing
  Ushbu README.md hujjati hokeylizatsiya vositasi yordamida tarjima qilingan
@@ -61,6 +69,7 @@ Hokeylizatsiya
  * [JavaScript string manba faylini tarjima qilish](#Translating-a-JavaScript-string-resource-fayl)
  * [Matnli fayllar katalogini tarjima qilish](#Matnli fayllar katalogini tarjima qilish)
  * [Boshqa variantlar](#Boshqa variantlar)
+ * [JSON ommaviy ish buyruqlari](#JSON-batch-buyruqlar)
 
  ## Manba
  * [GitHub-da hokeylizatsiya](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylizatsiya
 
  ### Yordam bering
  Yordamni ko'rsatish uchun `-h` / `--help` dan foydalaning
+
+ ## JSON ommaviy buyruqlari
+ `-j` / `--json` opsiyasi bilan siz bir nechta muvofiqlashtirilgan `hokey` buyruqlarini bajarishingiz mumkin
+
+ An'anaga ko'ra, bu fayl " `hokey.json` " deb ataladi, lekin siz uni xohlaganingizcha nomlashingiz mumkin
+
+ Agar siz katalogni “-j” varianti sifatida `hokey` , “hokey” ushbu katalogdan “ `-j` ” ni `hokey.json` .
+
+ JSON faylida bitta ob'ekt bo'lishi kerak. Ushbu ob'ekt ichida uning mulk nomlari bir xil
+ buyruq qatori parametrlari, shuningdek, " `hokey` " nomli qo'shimcha xususiyat
+
+ “ `hokey` ” xossasi bajariladigan buyruqlar majmuasidir. Ushbu buyruqlar ichida e'lon qilingan xususiyatlar bo'ladi
+ tashqi ob'ektdagi har qanday takroriy deklaratsiyalarni bekor qilish.
+
+ " `hokey` " massividagi har bir ob'ekt ichida siz " `name` " va kirish va chiqish fayllarini belgilashingiz kerak.
+
+ Bu yerda “ `hokey.json` ” ga misol
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Bir nechta kirish fayllari
+ Ushbu misoldagi kabi bitta yo'l `infile` `infiles` o'rniga fayl yo'llari qatorini `infiles` sifatida o'tkazing:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### indekslar
+ Ko'p tillarga tarjima qilishda " `hokey` " qilingan barcha tarjimalar ro'yxatini ko'rsatadigan indeks faylini yaratishi mumkin.
+ va ularga havolalar beradi
+
+ *Indekslarni yaratishda siz faqat bitta kirish manbasiga ega bo'lishingiz mumkin*
+
+ `-I` / `--index` opsiyasini o`tkazing, qiymat indeks fayli yaratiladigan joy, bu fayl bo`lishi mumkin
+ yoki katalog. Agar bu katalog bo'lsa, shablonga asoslangan standart fayl nomi ishlatiladi (pastga qarang)
+
+ Indeks chiqishi qanday formatlanganligini aniqlash uchun `-A` / `--index-template` foydalaning. Siz "html" ni belgilashingiz mumkin,
+ 'markdown', 'matn' yoki o'zingizning [HandlebarsJS](https://handlebarsjs.com/) shabloniga fayl yo'li
+
+ Agar siz o'zingizning shabloningizni belgilasangiz, `-I` / `--index` uchun faylni (katalog emas) ham ko'rsatishingiz kerak.
+ variant
 
  ## Tillarni tarjima qilishdan zavqlaning!
 

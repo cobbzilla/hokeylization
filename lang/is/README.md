@@ -1,12 +1,20 @@
 Hókýlvæðing
  ==============
- Nafnið er portmanteau, sem þýðir „hókastaðsetning“
+ Af hverju get ég ekki keyrt allt forritið mitt eða síðuna í gegnum Google Translate og fengið grunnþýðingu á öðru tungumáli?
 
- Það er hógvær vegna þess að það er mjög einfalt: það sendir strengi til Google Translate
+ ***Nú geturðu það!***
+
+ Nafnið `hokeylization` er portmanteau, sem þýðir "hokey localization"
+
+ Það er dálítið vandræðalegt vegna þess að það er mjög einfalt: það sendir strengi til Google Translate
+
+ Og það er einfalt en samt mjög öflugt. Það hefur sérstakan stuðning fyrir HTML skjöl,
+ [HandlebarsJS](https://handlebarsjs.com/) sniðmát,
+ og [Markdown](https://daringfireball.net/projects/markdown) skrár.
 
  Þú getur þýtt:
  * JavaScript hlutur sem inniheldur skilaboð
- * skráaskrá, endurkvæmt
+ * hvaða fjölda skráa eða möppur sem er, alltaf að fara í gegnum möppur afturkvæmt
 
  # Lestu þetta á öðru tungumáli
  Þetta README.md skjal hefur verið þýtt, með því að nota hókeylization tólið sjálft, á
@@ -61,6 +69,7 @@ Hókýlvæðing
  * [Þýðir JavaScript strengjaforðaskrá](#Translating-a-JavaScript-string-resource-file)
  * [Þýðir möppu með textaskrám](#Þýðir-a-möppu-af-textaskrám)
  * [Aðrir valkostir](#Aðrir valkostir)
+ * [JSON hópskipanir](#JSON-lotuskipanir)
 
  ## Heimild
  * [hokeylization á GitHub](https://github.com/cobbzilla/hokeylization)
@@ -151,7 +160,7 @@ Hókýlvæðing
 
  Til að þvinga fram endurþýðingu á öllum lyklum, notaðu `-f` / `--force` valkostinn
 
- ## Þýða möppu með textaskrám
+ ## Þýðir möppu með textaskrám
  Þú getur líka þýtt skráarskrá. hókeylization mun endurtekið heimsækja hvert
  skrá í möppuna og keyra innihald hennar í gegnum Google Translate og vista úttakið
  í samnefnda skrá í sérstöku möpputré
@@ -163,7 +172,7 @@ Hókýlvæðing
  ** STÓR AÐVÖRUN**: Þegar þú þýðir möppur skaltu **EKKI** tilgreina úttaksskrá
  það er í inntaksskránni þinni! Ef þú gerir þetta muntu:
  * framkalla óendanlega endurkomu
- * keyra upp Google reikninginn þinn
+ * keyrðu upp Google reikninginn þinn
  * fylltu upp diskinn þinn
  * hafa minna gaman
 
@@ -211,7 +220,7 @@ Hókýlvæðing
  Þú vilt kannski ekki alltaf þýða *hverja* skrá í upprunaskránni þinni yfir á markskrána þína
 
  Gildi `-m` / `--match` er regex (varið eftir skeljatilvitnunarreglur!) sem tilgreinir
- hvaða skrár ætti að þýða
+ hvaða skrár á að þýða
 
  Þegar þú ert í vafa geturðu sameinað þennan valkost með `-n` / `--dry-run` til að sjá hvaða skrár yrðu þýddar
 
@@ -259,9 +268,9 @@ Hókýlvæðing
 
  Gildi þessa valmöguleika verður að vera slóð að JS skrá sem flytur út fall sem heitir `filter`
 
- `filter` fallið verður að vera `async` vegna þess að `await` verður kallað á það
+ `filter` aðgerðin verður að vera `async` vegna þess að `await` verður kallað á hana
 
- Áður en skrár eru skrifaðar á disk verður allt skráarinnihaldið sent yfir í `filter` aðgerðina sem strengur
+ Áður en skrár eru skrifaðar á disk, verður allt skráarinnihaldið sent til `filter` aðgerðarinnar sem strengur
 
  Skilagildið frá `filter` fallinu er það sem í raun verður skrifað í geymslu
 
@@ -269,6 +278,88 @@ Hókýlvæðing
 
  ### Hjálp
  Notaðu `-h` / `--help` til að sýna hjálp
+
+ ## JSON runuskipanir
+ Með `-j` / `--json` valkostinum geturðu keyrt margar samræmdar `hokey` skipanir
+
+ Samkvæmt venju er þessi skrá kölluð `hokey.json` , en þú getur nefnt hana hvað sem þú vilt
+
+ Ef þú sendir möppu sem `-j` valmöguleikann mun `hokey` leita að `hokey.json` í þeirri möppu
+
+ JSON skráin ætti að innihalda einn hlut. Innan þess hlutar eru eiginleikanöfn hans þau sömu og
+ skipanalínuvalkostunum, auk einni eign til viðbótar sem heitir `hokey`
+
+ Eiginleikinn `hokey` er fjöldi skipana til að keyra. Eiginleikar sem lýst er yfir innan þessara skipana munu
+ hnekkja öllum tvíteknum yfirlýsingum í ytri hlutnum.
+
+ Innan hvers hlutar í `hokey` fylkinu ættirðu að tilgreina `name` og inntaks- og úttaksskrárnar
+
+ Hér er dæmi um `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Margar inntaksskrár
+ Sendu fjölda skráarslóða sem `infiles` í stað einnar slóðar `infile` , eins og í þessu dæmi:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Vísitölur
+ Þegar þýtt er yfir á mörg tungumál getur `hokey` búið til vísitöluskrá sem sýnir allar þýðingar sem gerðar eru
+ og gefur tengla á þær
+
+ *Þegar þú býrð til vísitölur geturðu aðeins haft einn inntaksgjafa*
+
+ Farðu framhjá `-I` / `--index` valkostinum, gildið er þar sem vísitöluskráin verður búin til, sem getur verið skrá
+ eða möppu. Ef það er möppu verður sjálfgefið skráarheiti notað, byggt á sniðmátinu (sjá hér að neðan)
+
+ Notaðu `-A` / `--index-template` til að ákvarða hvernig vísitöluúttakið er sniðið. Þú getur tilgreint 'html',
+ 'markdown', 'text' eða skráarslóðina að þínu eigin [HandlebarsJS](https://handlebarsjs.com/) sniðmáti
+
+ Ef þú tilgreinir þitt eigið sniðmát verður þú einnig að tilgreina skrá (ekki möppu) fyrir `-I` / `--index`
+ valmöguleika
 
  ## Skemmtu þér vel við að þýða tungumál!
 

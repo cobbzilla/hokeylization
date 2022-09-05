@@ -1,12 +1,20 @@
 Hokeyylization
  ===========
- Aha ahụ bụ portmanteau, nke pụtara 'nchịkọta hokey'
+ Kedu ihe kpatara na enweghị m ike ịmegharị ngwa ma ọ bụ saịtị m niile site na Google Translate wee nweta ntụgharị asụsụ bụ isi n'asụsụ ọzọ?
 
- Ọ bụ hokey n'ihi na ọ dị mfe: ọ na-eziga eriri na Google Translate
+ *** Ugbu a, ị nwere ike!
+
+ Aha `hokeylization` bụ portmanteau, nke pụtara 'nchịkọta hokey'
+
+ Ọ dị ntakịrị hokey n'ihi na ọ dị mfe: ọ na-eziga eriri na Google Translate
+
+ Ma ọ dị mfe, ma dịkwa ike. Ọ nwere nkwado pụrụ iche maka akwụkwọ HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) ndebiri,
+ na [Markdown](https://daringfireball.net/projects/markdown) faịlụ.
 
  Ị nwere ike ịtụgharị:
  * ihe Javascript nwere ozi
- * akwụkwọ ndekọ aha faịlụ, ugboro ugboro
+ * ọnụọgụ faịlụ ma ọ bụ akwụkwọ ndekọ aha ọ bụla, na-agafe akwụkwọ ndekọ aha mgbe niile
 
  # Gụọ nke a n'asụsụ ọzọ
  Atụgharịala akwụkwọ README.md a, na-eji ngwa hokeyylization n'onwe ya, banye
@@ -61,6 +69,7 @@ Hokeyylization
  * [Na-atụgharị faịlụ akụrụngwa eriri Javascript](#Translating-a-JavaScript-string-resource-file)
  * [Ịtụgharị akwụkwọ ndekọ aha faịlụ ederede](#Translating-a-directory-of-text-files)
  * [Nhọrọ ndị ọzọ](#Nhọrọ ndị ọzọ)
+ * [JSON batch nyere iwu](#JSON-batch-commands)
 
  ## Isi mmalite
  * [hokeylization na GitHub](https://github.com/cobbzilla/hokeylization)
@@ -110,7 +119,7 @@ Hokeyylization
  Ọ bụrụ na ị na-agba ọsọ site na koodu isi mmalite, ị nwekwara ike itinye ndị a na faịlụ `.env` na isi mmalite
  A ga-ebunye ndekọ aha ha na oge ojiri gaa site na [dotenv](https://www.npmjs.com/package/dotenv)
 
- ## Ịsụgharị faịlụ akụ eriri Javascript
+ ## Ịsụgharị faịlụ akụrụngwa Javascript
  Tebụl eriri gị ** ga-abụrịrị na faịlụ Javascript n'otu n'ime ụdị abụọ a:
 
  Mbupu ES6:
@@ -269,6 +278,88 @@ Hokeyylization
 
  ### Enyemaka
  Jiri `-h` / `--help` gosi enyemaka
+
+ ## JSON batch nyere iwu
+ Site na `-j` / `--json` , ị nwere ike igba ọtụtụ iwu `hokey`
+
+ Site na nkwekọrịta a na-akpọ faịlụ a `hokey.json` , mana ị nwere ike ịkpọ ya ihe ọ bụla ịchọrọ
+
+ Ọ bụrụ na ịgafe akwụkwọ ndekọ aha dị ka nhọrọ ` `-j` , `hokey` ga-achọ `hokey.json` na ndekọ ahụ.
+
+ Faịlụ JSON kwesịrị inwe otu ihe. N'ime ihe ahụ, aha ihe onwunwe ya bụ otu ihe ahụ
+ nhọrọ ahịrị iwu, gbakwunyere otu ihe agbakwunyere aha ya bụ `hokey`
+
+ Ngwongwo `hokey` bụ ọtụtụ iwu iji na-agba ọsọ. Ngwongwo ekwuputara n'ime iwu ndị a ga-
+ kagbuo nkwupụta oyiri ọ bụla dị na mpụta ihe.
+
+ N'ime ihe ọ bụla dị n'usoro `hokey` , ị ga-akọwapụta `name` , yana faịlụ ntinye na mmepụta
+
+ Nke a bụ ọmụmaatụ `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Ọtụtụ faịlụ ntinye
+ Nyefee ọtụtụ ụzọ faịlụ dị ka `infiles` kama otu ụzọ `infile` , dịka na ọmụmaatụ a:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Index
+ Mgbe ị na-atụgharị asụsụ n'ọtụtụ asụsụ, `hokey` nwere ike ịmepụta faịlụ index nke depụtara ntụgharị asụsụ niile emere
+ ma na-enye njikọ na ha
+
+ * Mgbe ị na-emepụta index, ị nwere ike ịnwe naanị otu ntinye ntinye*
+
+ Nyefee nhọrọ `-I` / `--index` , uru ya bụ ebe a ga-ewepụta faịlụ ndeksi, nke nwere ike ịbụ faịlụ.
+ ma ọ bụ ndekọ. Ọ bụrụ na ọ bụ ndekọ aha, a ga-eji aha faịlụ ndabara, dabere na ndebiri (lee n'okpuru)
+
+ Jiri `-A` / `--index-template` ' chọpụta ka esi ahazi mmepụta ndeksi. Ị nwere ike ịkọwapụta 'html',
+ 'markdown', 'ederede', ma ọ bụ ụzọ faịlụ gaa na nke gị [HandlebarsJS](https://handlebarsjs.com/) ndebiri
+
+ Ọ bụrụ na ị kọwapụta template nke gị, ị ga-ezipụtakwa otu faịlụ (ọ bụghị akwụkwọ ndekọ aha) maka `-I` / `--index`
+ nhọrọ
 
  ## Nwee obi ụtọ ịsụgharị asụsụ!
 

@@ -1,12 +1,20 @@
 Hokeylisearring
  ==============
- De namme is in portmanteau, wat 'hokey-lokalisaasje' betsjut
+ Wêrom kin ik myn hiele app of side net fia Google Translate útfiere en in basisoersetting yn in oare taal krije?
 
- It is hokey, om't it heul ienfâldich is: it stjoert snaren nei Google Translate
+ ***No kinsto!***
+
+ De namme `hokeylization` is in portmanteau, wat 'hokey-lokalisaasje' betsjut
+
+ It is wat hokey, om't it heul ienfâldich is: it stjoert snaren nei Google Translate
+
+ En it is ienfâldich, mar ek tige krêftich. It hat spesjale stipe foar HTML-dokuminten,
+ [HandlebarsJS](https://handlebarsjs.com/) sjabloanen,
+ en [Markdown](https://daringfireball.net/projects/markdown) bestannen.
 
  Jo kinne oersette:
  * in JavaScript-objekt mei berjochten
- * in map mei bestannen, rekursyf
+ * elk oantal bestannen as mappen, altyd rekursyf troch troch mappen
 
  # Lês dit yn in oare taal
  Dit README.md-dokumint is oerset, mei it hokeylisearringsark sels, yn
@@ -61,6 +69,7 @@ Hokeylisearring
  * [Oersette fan in JavaScript-string-boarnebestân](#Translating-a-JavaScript-string-resource-file)
  * [It oersetten fan in map mei tekstbestannen](#Translating-a-directory-of-text-files)
  * [Oare opsjes](#Oare-opsjes)
+ * [JSON-batch-kommando's](#JSON-batch-kommando's)
 
  ## Boarne
  * [hokeylization op GitHub](https://github.com/cobbzilla/hokeylization)
@@ -243,7 +252,7 @@ Hokeylisearring
  * Ferkearde ôfstân foar ynspringende koadeblokken. Spaasje is lestich te behâlden yn oersetting
  * Dingen yn `backticks` sille oerset wurde, as jo hast altyd wolle dat se letterlike wearden binne
 
- As de flagge `-M` / `--markdown` ynskeakele is:
+ As de flagge `-M` / `--markdown` is ynskeakele:
  * It patroan `](` sil kondinsearre wurde ta `](` sadat de brutsen markdown-keppelings reparearje
  * In omslach "gjin oersetten" sil pleatst wurde om ynspringende koadeblokken, it behâld fan juste ynspringen en garandearret dat se net oerset wurde
  * In "no translate" wrapper sil pleatst wurde om tekst binnen `backticks` om te soargjen dat se net oerset wurde
@@ -257,7 +266,7 @@ Hokeylisearring
  Foar de aventoerlike: by it ferwurkjen fan bestannen yn in map, kinne jo de opsje `-F` / `--filter`
  om de útfier te filterjen foardat it nei it bestânsysteem skreaun wurdt
 
- De wearde fan dizze opsje moat in paad wêze nei in JS-bestân dat in funksje eksportearret mei de namme `filter`
+ De wearde fan dizze opsje moat in paad wêze nei in JS-bestân dat in funksje mei de namme `filter`
 
  De funksje `filter` ' moat `async` om't `await` oanroppen wurde sil
 
@@ -265,10 +274,92 @@ Hokeylisearring
 
  De `filter` fan 'e funksje 'filter' is wat wirklik nei opslach skreaun wurdt
 
- Sa hawwe jo folsleine kontrôle oer wat úteinlik skreaun wurde sil
+ Sa hawwe jo totale kontrôle oer wat úteinlik skreaun wurde sil
 
  ### Help
  Brûk `-h` / `--help` om help te sjen
+
+ ## JSON batch kommando's
+ Mei de opsje `-j` / `--json` kinne jo meardere koördinearre `hokey` kommando's útfiere
+
+ Troch konvinsje wurdt dizze triem `hokey.json` neamd, mar jo kinne it neame wat jo wolle
+
+ As jo in map as de opsje `hokey` `-j` sil `hokey` sykje nei in `hokey.json` yn dy map
+
+ It JSON-bestân moat ien objekt befetsje. Binnen dat objekt binne syn eigendomsnammen itselde as
+ de kommando-rigelopsjes, plus ien ekstra eigenskip mei de namme `hokey`
+
+ De eigenskip `hokey` is in array fan kommando's om út te fieren. De eigenskippen ferklearre binnen dizze kommando's sille
+ oerskriuwe alle dûbele deklaraasjes yn it bûtenste objekt.
+
+ Binnen elk objekt yn 'e array `hokey` moatte jo in `name` namme' opjaan, en de ynfier- en útfierbestannen
+
+ Hjir is in foarbyld fan in `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Meardere ynfierbestannen
+ Trochjaan in array fan triempaden as `infiles` ynstee fan in inkeld paad `infile` , lykas yn dit foarbyld:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Yndeksen
+ By it oersetten nei in protte talen kin `hokey` in yndeksbestân oanmeitsje dy't alle makke oersettingen oplist
+ en jout keppelings nei harren
+
+ *By it generearjen fan yndeksen kinne jo mar ien ynfierboarne hawwe*
+
+ Gean de opsje `-I` / `--index` , de wearde is wêr't it yndeksbestân oanmakke wurdt, dat kin in triem wêze
+ of in map. As it in map is, sil in standert bestânsnamme brûkt wurde, basearre op it sjabloan (sjoch hjirûnder)
+
+ Brûk de `-A` / `--index-template` om te bepalen hoe't de yndeksútfier is opmakke. Jo kinne 'html' opjaan,
+ 'markdown', 'text', of it bestânpaad nei jo eigen [HandlebarsJS](https://handlebarsjs.com/) sjabloan
+
+ As jo jo eigen sjabloan oantsjutte, moatte jo ek in bestân (gjin map) opjaan foar de `-I` / `--index`
+ opsje
 
  ## Hawwe in leuke tiid mei it oersetten fan talen!
 

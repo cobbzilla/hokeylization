@@ -1,12 +1,20 @@
 Hokeylizzazione
  ==============
- Il nome è un portmanteau, che significa "localizzazione hokey"
+ Perché non posso eseguire l'intera app o il sito tramite Google Translate e ottenere una traduzione di base in un'altra lingua?
 
- È hokey perché è molto semplice: invia le stringhe a Google Translate
+ ***Ora puoi!***
+
+ Il nome `hokeylization` è un portmanteau, che significa "localizzazione hokey"
+
+ È un po' strano perché è molto semplice: invia stringhe a Google Translate
+
+ Ed è semplice, ma anche molto potente. Ha un supporto speciale per documenti HTML,
+ modelli [HandlebarsJS](https://handlebarsjs.com/),
+ e file [Markdown](https://daringfireball.net/projects/markdown).
 
  Puoi tradurre:
  * un oggetto JavaScript contenente messaggi
- * una directory di file, ricorsivamente
+ * qualsiasi numero di file o directory, attraversando sempre le directory in modo ricorsivo
 
  # Leggi questo in un'altra lingua
  Questo documento README.md è stato tradotto, utilizzando lo stesso strumento di hokeylization, in
@@ -61,6 +69,7 @@ Hokeylizzazione
  * [Traduzione di un file di risorse stringa JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Tradurre una directory di file di testo](#Tradurre-una-directory-di-file-di-testo)
  * [Altre opzioni](#Altre-opzioni)
+ * [Comandi batch JSON](#comandi-batch-JSON)
 
  ## Fonte
  * [hokeylization su GitHub](https://github.com/cobbzilla/hokeylization)
@@ -216,7 +225,7 @@ Hokeylizzazione
  In caso di dubbio, puoi combinare questa opzione con `-n` / `--dry-run` per vedere quali file verrebbero tradotti
 
  ### Esclude
- A volte il tuo `-m` corrisponde a troppi file. Utilizzare l' `-e` / `--excludes` per escludere esplicitamente
+ A volte il tuo `-m` corrisponde a troppi file. Usa l' `-e` / `--excludes` per escludere esplicitamente
  file che altrimenti avrebbero corrisposto
 
  Puoi elencare più espressioni regolari, separate da spazi
@@ -269,6 +278,88 @@ Hokeylizzazione
 
  ### Aiuto
  Usa `-h` / `--help` per mostrare la guida
+
+ ## Comandi batch JSON
+ Con l' `-j` / `--json` , puoi eseguire più comandi `hokey` coordinati
+
+ Per convenzione questo file è chiamato `hokey.json` , ma puoi nominarlo come preferisci
+
+ Se passi una directory come opzione ` `-j` , `hokey` cercherà un `hokey.json` in quella directory
+
+ Il file JSON deve contenere un oggetto. All'interno di quell'oggetto, i suoi nomi di proprietà sono gli stessi di
+ le opzioni della riga di comando, più una proprietà aggiuntiva denominata `hokey`
+
+ La proprietà `hokey` è un array di comandi da eseguire. Le proprietà dichiarate all'interno di questi comandi lo faranno
+ ignorare eventuali dichiarazioni duplicate nell'oggetto esterno.
+
+ All'interno di ogni oggetto `hokey` , dovresti specificare un `name` e i file di input e output
+
+ Ecco un esempio di `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### File di input multipli
+ Passa un array di percorsi di file come `infiles` invece di un singolo percorso `infile` , come in questo esempio:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indici
+ Quando si traduce in molte lingue, `hokey` può creare un file di indice che elenca tutte le traduzioni effettuate
+ e fornisce collegamenti ad essi
+
+ *Durante la generazione degli indici, puoi avere una sola sorgente di input*
+
+ Passa l' `-I` / `--index` , il valore è dove verrà generato il file di indice, che può essere un file
+ o una directory. Se è una directory, verrà utilizzato un nome file predefinito, basato sul modello (vedi sotto)
+
+ Usa `-A` / `--index-template` per determinare come è formattato l'output dell'indice. Puoi specificare 'html',
+ 'markdown', 'text' o il percorso del file del tuo modello [HandlebarsJS](https://handlebarsjs.com/)
+
+ Se specifichi il tuo modello, devi anche specificare un file (non una directory) per `-I` / `--index`
+ opzione
 
  ## Divertiti a tradurre le lingue!
 

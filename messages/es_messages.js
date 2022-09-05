@@ -41,5 +41,19 @@ export default {
   err_readDirFiles_notDir: 'readDirFiles( {{dir}} ): esta ruta no es un directorio',
   info_processDirectory_skippingExisting: 'processDirectory( {{lang}} ): omitiendo el archivo existente: {{langFile.file}}',
   info_processDirectory_fileWritten: 'El archivo ha sido escrito: {{langFile}}',
-  info_jsonProcessing_start: 'Configuración de procesamiento JSON: {{name}}'
+  info_jsonProcessing_start: 'Configuración de procesamiento JSON: {{name}}',
+  info_option_indexFile: 'Genere un archivo de índice para las traducciones. El nombre del archivo debe terminar con `.html`, `.md` o `.txt`, a menos que proporcione una plantilla con `-A` / `--index-template`',
+  info_option_indexTemplate: 'Puede ser \'html\', \'markdown\', \'text\' o una ruta a su propia plantilla de manillar. Esta plantilla se utiliza al crear el archivo de índice. Mire las plantillas predeterminadas en el código fuente de hokeylization para ver ejemplos',
+  err_index_singleFileMultipleSources: 'Se especificó un solo archivo de índice, pero hay varios archivos de entrada. Especifique un directorio en lugar de un archivo para el índice',
+  err_index_targetDirAndNoTypeOrTemplate: 'Se especificó un directorio de destino para el índice, pero no se especificó ninguna plantilla de índice. Use `-A` / `--indexTemplate` para seleccionar una plantilla',
+  err_index_parentDirDoesNotExist: 'El directorio principal del índice no existe: {{ parentDir }}',
+  err_cannotNoExtCannotDetermineType: 'El nombre de archivo no tiene extensión, por lo que no se puede determinar un tipo de plantilla: {{ file }}',
+  err_cannotInvalidExtCannotDetermineType: 'El nombre del archivo tiene una extensión no válida, por lo que no se puede determinar un tipo de plantilla: {{ file }}',
+  err_index_templateLoadingError: 'Se produjo un error al cargar la plantilla personalizada {{ file }} : {{ e }}',
+  err_index_templateCompilationError: 'Se produjo un error al compilar la plantilla personalizada {{ file }} : {{ e }}',
+  info_index_wroteFile: 'Archivo de índice creado con éxito: {{ indexFile }}',
+  label_indexOfTranslations: 'Índice de traducciones',
+  label_findYourLanguageCode: 'Encuentra tu código de idioma',
+  err_processing_unknown: '*** Error inesperado: {{e}}\n {{e.stack}}',
+  warn_missingLangFile: 'No se generó ningún archivo de salida para el idioma {{ lang }} , por lo que se excluirá del índice'
 }

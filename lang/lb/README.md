@@ -1,12 +1,20 @@
 Hokeylizéierung
  ==============
- Den Numm ass e Portmanteau, dat heescht 'Hokey Lokalisatioun'
+ Firwat kann ech meng ganz App oder Site net iwwer Google Translate lafen an eng Basis Iwwersetzung an enger anerer Sprooch kréien?
 
- Et ass hokey well et ganz einfach ass: et schéckt Saiten op Google Translate
+ ***Elo, Dir kënnt!***
+
+ Den Numm `hokeylization` ass e Portmanteau, dat heescht "Hokey Lokalisatioun"
+
+ Et ass e bëssen hokey well et ganz einfach ass: et schéckt Saiten op Google Translate
+
+ An et ass einfach, awer och ganz mächteg. Et huet speziell Ënnerstëtzung fir HTML Dokumenter,
+ [HandlebarsJS](https://handlebarsjs.com/) Templates,
+ an [Markdown](https://daringfireball.net/projects/markdown) Dateien.
 
  Dir kënnt iwwersetzen:
  * e JavaScript Objet mat Messagen
- * e Verzeechnes vu Fichieren, rekursiv
+ * all Zuel vu Fichieren oder Verzeichnisser, ëmmer duerch Verzeichnisser rekursiv
 
  # Liest dëst an enger anerer Sprooch
  Dëst README.md Dokument gouf iwwersat, mam Hokeylizéierungsinstrument selwer, an
@@ -61,6 +69,7 @@ Hokeylizéierung
  * [Eng JavaScript String Ressource Datei iwwersetzen](#Iwwersetzen-e-JavaScript-String-Ressource-Datei)
  * [E Verzeechnes vun Textdateien iwwersetzen](#Iwwersetzen-en-Verzeechnes-vun-Text-Dateien)
  * [Aner Optiounen](#Aner-Optiounen)
+ * [JSON Batch Kommandoen](#JSON-Batch-Commande)
 
  ## Quell
  * [Hokeylization op GitHub](https://github.com/cobbzilla/hokeylization)
@@ -216,8 +225,8 @@ Hokeylizéierung
  Wann Dir Zweifel hutt, kënnt Dir dës Optioun mat `-n` / `--dry-run` fir ze kucken wéi eng Dateien iwwersat ginn
 
  ### Ausgeschloss
- Heiansdo passt Ären `-m` ze vill Dateien. Benotzt d' `-e` / `--excludes` fir explizit auszeschléissen
- Dateien déi soss matenee passen
+ Heiansdo passt Är `-m` ze vill Dateien. Benotzt d' `-e` / `--excludes` fir explizit auszeschléissen
+ Dateien déi soss passend hätten
 
  Dir kënnt verschidde Regexes oplëschten, getrennt vu Plazen
 
@@ -255,7 +264,7 @@ Hokeylizéierung
 
  ### Filter
  Fir Abenteuer: Wann Dir Dateien an engem Verzeichnis veraarbecht, kënnt Dir d'Optioun `-F` / `--filter`
- fir den Ausgang ze filteren ier en an de Dateiesystem geschriwwe gëtt
+ fir den Ausgang ze filteren ier se an de Dateiesystem geschriwwe gëtt
 
  De Wäert vun dëser Optioun muss e Wee zu enger JS-Datei sinn, déi eng Funktioun mam Numm `filter`
 
@@ -263,12 +272,94 @@ Hokeylizéierung
 
  Ier Dateien op Disk geschriwwe ginn, gëtt de ganze Fichierinhalt un d' `filter` als String weiderginn
 
- De `filter` vun der 'Filter' Funktioun ass wat tatsächlech op d'Späichere geschriwwe gëtt
+ De `filter` vun der "Filter" Funktioun ass wat tatsächlech op d'Späichere geschriwwe gëtt
 
  Also hutt Dir total Kontroll iwwer dat wat endlech geschriwwe gëtt
 
  ### Hëllef
  Benotzt `-h` / `--help` fir Hëllef ze weisen
+
+ ## JSON Batch Kommandoen
+ Mat der `-j` / `--json` kënnt Dir verschidde koordinéiert `hokey` Kommandoen ausféieren
+
+ Vun der Konventioun gëtt dëse Fichier `hokey.json` genannt, awer Dir kënnt et nennen wat Dir wëllt
+
+ Wann Dir e Verzeechnes als `-j` Optioun passéiert, sicht "hokey" no engem `hokey.json` `hokey` deem Verzeichnis
+
+ D'JSON-Datei soll een Objet enthalen. Bannent deem Objet sinn seng Eegeschaftenamen déiselwecht wéi
+ d'Kommando- `hokey` , plus eng zousätzlech Eegeschafte mam Numm 'hokey'
+
+ D'Eegeschaft `hokey` ass eng Rei vun Kommandoen fir ze lafen. D'Eegeschafte, déi an dëse Kommandoen deklaréiert sinn, wäerten
+ iwwerschreiden all duplizéiert Deklaratiounen am baussenzegen Objet.
+
+ Bannent all Objet an der `hokey` Array, sollt Dir en "Numm" spezifizéieren, an d'Input- an `name`
+
+ Hei ass e Beispill vun engem `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Multiple Inputdateien
+ Gitt eng Array vu Dateiweeër als `infiles` anstatt en eenzege Wee `infile` , wéi an dësem Beispill:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indexen
+ Wann Dir a ville Sproochen iwwersetzt, kann `hokey` eng Indexdatei erstellen déi all déi gemaachte Iwwersetzungen oplëscht
+ a gëtt Linken op hinnen
+
+ *Wann Dir Indexen generéiert, kënnt Dir nëmmen eng Inputquell hunn*
+
+ Gitt d'Optioun `-I` / `--index` , de Wäert ass wou d'Indexdatei generéiert gëtt, wat e Fichier kann sinn
+ oder e Verzeechnes. Wann et e Verzeechnes ass, gëtt e Standard Dateinumm benotzt, baséiert op der Schabloun (kuckt hei ënnen)
+
+ Benotzt den `-A` / `--index-template` fir ze bestëmmen wéi d'Indexoutput formatéiert ass. Dir kënnt 'html' spezifizéieren,
+ 'markdown', 'Text' oder de Dateiwee op Ären eegene [HandlebarsJS](https://handlebarsjs.com/) Schabloun
+
+ Wann Dir Är eege Schabloun uginn hutt, musst Dir och e Fichier (net e Verzeichnis) fir den `-I` / `--index`
+ Optioun
 
  ## Vill Spaass beim Iwwersetzen vun Sproochen!
 

@@ -1,12 +1,20 @@
 ሆኪላይዜሽን
  ===========
- ስሙ ፖርማንቴው ነው፣ ትርጉሙም 'ሆኪ ለትርጉም'
+ ለምንድን ነው የእኔን ሙሉ መተግበሪያ ወይም ጣቢያ በ Google ትርጉም በኩል ማሄድ እና መሠረታዊ ትርጉም በሌላ ቋንቋ ማግኘት የማልችለው?
 
- ሆኪ ነው ምክንያቱም በጣም ቀላል ነው፡ ሕብረቁምፊዎችን ወደ ጎግል ትርጉም ይልካል
+ *** አሁን፣ ትችላለህ!
+
+ 'ሆኪላይዜሽን' የሚለው ስም `hokeylization` ነው፣ ትርጉሙም 'ሆኪ ለትርጉም'
+
+ በጣም ቀላል ስለሆነ በመጠኑ ሆኪ ነው፡ ገመዶችን ወደ ጎግል ትርጉም ይልካል
+
+ እና ቀላል ነው, ግን በጣም ኃይለኛ ነው. ለኤችቲኤምኤል ሰነዶች ልዩ ድጋፍ አለው ፣
+ [HandlebarsJS](https://handlebarsjs.com/) አብነቶች፣
+ እና [Markdown](https://daringfireball.net/projects/markdown) ፋይሎች።
 
  መተርጎም ትችላለህ፡-
  * መልዕክቶችን የያዘ የጃቫ ስክሪፕት ነገር
- * የፋይሎች ማውጫ ፣ በተደጋጋሚ
+ * ማንኛውም የፋይሎች ወይም ማውጫዎች፣ ሁል ጊዜ ማውጫዎችን በተከታታይ የሚያልፍ
 
  # ይህንን በሌላ ቋንቋ ያንብቡ
  ይህ README.md ሰነድ እራሱን የሆኪላይዜሽን መሳሪያ በመጠቀም ተተርጉሟል
@@ -61,6 +69,7 @@
  * [የጃቫስክሪፕት ሕብረቁምፊ ምንጭ ፋይልን መተርጎም](#Translating-a-JavaScript-string-resource-file)
  * [የጽሑፍ ፋይሎችን ማውጫ መተርጎም](#Translating-a-directory-of-text-files)
  * [ሌሎች አማራጮች](#ሌሎች-አማራጮች)
+ * [JSON ባች ትዕዛዞች](#JSON-batch-ትዕዛዞች)
 
  ## ምንጭ
  * [በGitHub ላይ ሆኪላይዜሽን](https://github.com/cobbzilla/hokeylization)
@@ -257,18 +266,100 @@
  ለጀብደኛዎቹ፡ ፋይሎችን በማውጫ ውስጥ `-F` / `--filter` አማራጭ ማለፍ ይችላሉ።
  በፋይል ስርዓቱ ላይ ከመጻፉ በፊት ውጤቱን ለማጣራት
 
- የዚህ አማራጭ ዋጋ `filter` የሚባል ተግባር ወደ ውጭ ወደ ውጭ ወደ ውጭ ወደ ውጭ የሚላክ የጄኤስ ፋይል ዱካ መሆን አለበት።
+ የዚህ አማራጭ ዋጋ `filter` የሚባል ተግባር ወደ ውጭ ወደ ውጭ ወደ ውጪ ወደ ውጭ የሚላክ የጄኤስ ፋይል ዱካ መሆን አለበት።
 
- `filter` ተግባር `async` አስምር' መሆን አለበት ምክንያቱም `await` በእሱ ላይ ይጠራል
+ `filter` ተግባር ' `async` መሆን አለበት ምክንያቱም `await` በእሱ ላይ ይጠራል
 
- ፋይሎች ወደ ዲስክ `filter` በፊት፣ የፋይሉ ይዘቶች በሙሉ ወደ “ማጣሪያ” ተግባር እንደ ሕብረቁምፊ ይተላለፋሉ
+ ፋይሎች ወደ ዲስክ `filter` በፊት፣ የፋይሉ ይዘቶች በሙሉ ወደ ‹ማጣሪያ› ተግባር እንደ ሕብረቁምፊ ይተላለፋሉ
 
  ከ `filter` ተግባር የሚገኘው የመመለሻ እሴት ወደ ማከማቻ የሚጻፈው ነው።
 
- ስለዚህ በመጨረሻ በሚፃፈው ላይ ሙሉ ቁጥጥር አለህ
+ ስለዚህ፣ በመጨረሻ በሚፃፈው ላይ ሙሉ ቁጥጥር አለህ
 
  ### እገዛ
  እገዛን ለማሳየት `-h` / `--help` ን ይጠቀሙ
+
+ ## JSON ባች ያዛል
+ `-j` / `--json` አማራጭ፣ በርካታ የተቀናጁ `hokey` ትዕዛዞችን ማሄድ ትችላለህ
+
+ በስምምነት ይህ ፋይል `hokey.json` ፣ ነገር ግን የፈለከውን ስም ልትሰይመው ትችላለህ
+
+ ማውጫ እንደ `-j` አማራጭ `hokey` `hokey.json` ን ይፈልጋል።
+
+ የJSON ፋይል አንድ ነገር መያዝ አለበት። በዚያ ነገር ውስጥ፣ የንብረቱ ስሞች ከ ጋር ተመሳሳይ ናቸው።
+ የትእዛዝ መስመር አማራጮች እና አንድ ተጨማሪ ንብረት `hokey`
+
+ የ `hokey` ንብረት ለማሄድ ብዙ ትዕዛዞች ነው። በእነዚህ ትዕዛዞች ውስጥ የተገለጹት ንብረቶቹ ይኖራሉ
+ በውጫዊው ነገር ውስጥ ያሉ ማናቸውንም የተባዙ መግለጫዎችን መሻር።
+
+ በ `hokey` አደራደር ውስጥ ባለው እያንዳንዱ ነገር ውስጥ የ‹ስም› እና የግቤት እና የውጤት ፋይሎችን መግለጽ አለብዎት `name`
+
+ `hokey.json` ምሳሌ ይኸውና።
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### በርካታ የግቤት ፋይሎች
+ በዚህ ምሳሌ ላይ እንደሚታየው ከአንድ ዱካ `infile` `infiles` ፡-
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### ኢንዴክሶች
+ ወደ ብዙ ቋንቋዎች ሲተረጎም `hokey` ሁሉንም የተሰሩ ትርጉሞች የሚዘረዝር መረጃ ጠቋሚ ፋይል መፍጠር ይችላል።
+ እና ለእነሱ አገናኞችን ያቀርባል
+
+ *ኢንዴክሶችን በሚፈጥሩበት ጊዜ አንድ የግቤት ምንጭ ብቻ ሊኖርዎት ይችላል*
+
+ `-I` / `--index` አማራጩን እለፍ፣ እሴቱ የመረጃ ጠቋሚ ፋይሉ የሚመነጨው ነው፣ ይህም ፋይል ሊሆን ይችላል።
+ ወይም ማውጫ. ማውጫ ከሆነ በአብነት ላይ በመመስረት ነባሪ የፋይል ስም ጥቅም ላይ ይውላል (ከዚህ በታች ይመልከቱ)
+
+ የመረጃ ጠቋሚ ውፅዓት እንዴት እንደሚቀረፅ ለማወቅ `-A` / `--index-template` ን ይጠቀሙ። ኤችቲኤምኤልን መግለጽ ይችላሉ ፣
+ 'markdown'፣ 'text' ወይም የፋይል ዱካ ወደ እርስዎ [HandlebarsJS](https://handlebarsjs.com/) አብነት
+
+ የራስዎን አብነት ከገለጹ፣ `-I` / `--index` ፋይል (ማህደር ሳይሆን) መግለጽ አለቦት።
+ አማራጭ
 
  ## ቋንቋዎችን በመተርጎም መልካም ጊዜ ይሁንላችሁ!
 

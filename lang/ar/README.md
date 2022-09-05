@@ -1,12 +1,20 @@
 الهوكيلة
  =============
- الاسم هو بورتمانتو ، ويعني "توطين الهوكي".
+ لماذا لا يمكنني تشغيل تطبيقي أو موقعي بالكامل من خلال الترجمة من Google والحصول على ترجمة أساسية بلغة أخرى؟
 
- إنه أمر رائع لأنه بسيط للغاية: فهو يرسل سلاسل إلى خدمة الترجمة من Google
+ ***الآن انت تستطيع!***
+
+ الاسم `hokeylization` هو Portmanteau ، ويعني "hokey localization"
+
+ إنه أمر مضحك إلى حد ما لأنه بسيط للغاية: فهو يرسل سلاسل إلى خدمة الترجمة من Google
+
+ وهو بسيط ولكنه قوي أيضًا. يحتوي على دعم خاص لمستندات HTML ،
+ [مقاود JS](https://handlebarsjs.com/) قوالب ،
+ و [Markdown](https://daringfireball.net/projects/markdown) ملفات.
 
  تستطيع ان تترجم:
  * كائن JavaScript يحتوي على رسائل
- * دليل الملفات بشكل متكرر
+ * أي عدد من الملفات أو الدلائل ، يتم عبور الدلائل دائمًا بشكل متكرر
 
  # اقرأ هذا بلغة أخرى
  تمت ترجمة هذا المستند README.md ، باستخدام أداة hokeylization نفسها ، إلى
@@ -61,6 +69,7 @@
  * [ترجمة ملف مورد سلسلة JavaScript](# Translating-a-JavaScript-string-Resource-file)
  * [ترجمة دليل ملفات نصية](# Translating-a-directory-of-text-files)
  * [خيارات أخرى](# خيارات أخرى)
+ * [أوامر دفعة JSON](أوامر دفعة JSON #)
 
  ## مصدر
  * [hokeylization on GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@
 
  ### مساعدة
  استخدم `-h` " / `--help` لإظهار المساعدة
+
+ ## أوامر دفعة JSON
+ باستخدام الخيار `-j` / `--json` ، يمكنك تشغيل عدة أوامر `hokey`
+
+ يُطلق على هذا الملف اسم `hokey.json` ، ولكن يمكنك تسميته كما تريد
+
+ إذا قمت بتمرير دليل على أنه الخيار "-j" ، `hokey` عن `hokey.json` `-j` هذا الدليل
+
+ يجب أن يحتوي ملف JSON على كائن واحد. داخل هذا الكائن ، تكون أسماء خصائصه هي نفسها
+ خيارات سطر الأوامر ، بالإضافة إلى خاصية إضافية واحدة تسمى `hokey`
+
+ خاصية `hokey` هي مجموعة من الأوامر لتشغيلها. سيتم الإعلان عن الخصائص ضمن هذه الأوامر
+ تجاوز أي تصريحات مكررة في الكائن الخارجي.
+
+ داخل كل كائن في المصفوفة `hokey` ، يجب تحديد `name` الإدخال والإخراج
+
+ فيما يلي مثال على `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### ملفات إدخال متعددة
+ قم بتمرير مصفوفة من مسارات الملفات كـ `infiles` بدلاً من مسار واحد `infile` ، كما في هذا المثال:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### الفهارس
+ عند الترجمة إلى العديد من اللغات ، يمكن `hokey` إنشاء ملف فهرس يسرد جميع الترجمات التي تمت
+ ويوفر روابط لهم
+
+ * عند إنشاء الفهارس ، يمكن أن يكون لديك مصدر إدخال واحد فقط *
+
+ مرر الخيار `-I` " / `--index` ، القيمة هي المكان الذي سيتم إنشاء ملف الفهرس فيه ، والذي يمكن أن يكون ملفًا
+ أو دليل. إذا كان دليلًا ، فسيتم استخدام اسم ملف افتراضي ، بناءً على القالب (انظر أدناه)
+
+ استخدم `-A` / `--index-template` لتحديد كيفية تنسيق ناتج الفهرس. يمكنك تحديد "html" ،
+ "markdown" أو "text" أو مسار الملف إلى نموذجك [HandlebarsJS](https://handlebarsjs.com/)
+
+ إذا حددت قالبك الخاص ، يجب عليك أيضًا تحديد ملف (وليس دليل) لـ `-I` / `--index`
+ اختيار
 
  ## استمتع بوقتك في ترجمة اللغات!
 

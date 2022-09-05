@@ -1,12 +1,20 @@
 Hokeyylization
  ============
- Magacu waa portmanteau, oo macneheedu yahay 'meelaynta hokey'
+ Waa maxay sababta aanan u maamuli karin abkayga oo dhan ama goobtayda Google Translate oo aan u helo turjumaadda aasaasiga ah ee luqad kale?
 
- Waa hokey sababtoo ah aad ayey u fududahay: waxay u soo dirtaa xargaha Google Translate
+ *** Hadda, waad awoodaa! ***
+
+ Magaca `hokeylization` waa portmanteau, oo macneheedu yahay 'meelaynta hokey'
+
+ Waa xoogaa hokey sababtoo ah aad ayey u fududahay: waxay u soo dirtaa xargaha Google Translate
+
+ Waana mid fudud, haddana aad u xoog badan. Waxay taageero gaar ah u leedahay dukumentiyada HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) qaabyaal,
+ iyo [Markdown](https://daringfireball.net/projects/markdown) faylasha.
 
  Waad turjumi kartaa:
  * shay JavaScript ka kooban fariimo
- * Hagaha faylalka, si isdaba joog ah
+ * tiro kasta oo faylal ah ama hagayaal, had iyo jeer u gudba hagayaasha si isdaba joog ah
 
  # Ku akhri luqad kale
  Dukumeentigan README.md waa la turjumay, iyada oo la adeegsanayo qalabaynta lafteeda, la geliyay
@@ -61,6 +69,7 @@ Hokeyylization
  * [Turjumaadda faylka kheyraadka xargaha JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Turjumaadda tusaha faylasha qoraalka](#Translating-a-directory-of-text-files)
  * [Ikhtiyaar kale](#Doorasho kale)
+ * [Amarrada dufcadda JSON]
 
  ## Isha
  * [hokeylization on GitHub](https://github.com/cobbzilla/hokeylization)
@@ -199,7 +208,7 @@ Hokeyylization
 
  ## Doorashooyin kale
 
- ### orod qalalan
+ ### orod qallalan
  Gudub `-n` / `--dry-run` si aad u muujiso waxa la samayn doono, laakiin dhab ahaantii ha samayn wax wicitaan API ah ama ha qorin wax fayl ah
 
  ### Xoog
@@ -240,7 +249,7 @@ Hokeyylization
  ka hor inta uusan bilaabin isku xirka bartilmaameedka ( `(` ) Tani waxay keenaysaa in calaamadaynta si khaldan loo sameeyo, iyo isku xidhka
  wuu jabaa marka la eego dukumeentiga.
  * Xirmooyinka kood waa la turjumay Turjumida Google ma garanayso waxa calaamadayntu ay tixgeliso koodka iyo waxa aanu ahayn
- * Kala fogaanshaha khaldan ee baloogyada koodka ee goglan. Kala dheeraynta way adagtahay in lagu xafido tarjumaada
+ * Kala fogaanshaha khaldan ee blocks kood godan Kala dheeraynta way adagtahay in lagu xafido tarjumaada
  * Waxyaabaha ku jira `backticks` waa la tarjumi doonaa, marka aad had iyo jeer rabto inay noqdaan qiyam sax ah
 
  Marka calanka `-M` / `--markdown` la furo:
@@ -263,12 +272,94 @@ Hokeyylization
 
  Ka hor inta aan faylasha loo qorin saxanka, dhammaan waxa ku jira faylka waxaa loo gudbin doonaa shaqada `filter` ' sida xadhig ahaan
 
- Qiimaha soo `filter` waa waxa runtii lagu qori doono kaydinta
+ Qiimaha soo `filter` waa waxa run ahaantii lagu qori doono kaydinta
 
  Markaa, waxaad si buuxda gacanta ugu haysaa waxa ugu dambayn la qori doono
 
  ### I caawi
  Isticmaal `-h` / `--help` si aad u muujiso caawimo
+
+ ## JSON dufcaddii amarrada
+ `-j` / `--json` , waxaad ku socodsiin kartaa amarada `hokey` ee la isku duway
+
+ Sida caadiga ah faylkan waxaa loo yaqaan `hokey.json` , laakiin waxaad u magacaabi kartaa waxaad rabto
+
+ Haddii aad u gudbiso hagaha sida ikhtiyaarka ` `-j` , `hokey` waxa ay ka dhex raadin doontaa `hokey.json`
+
+ Faylka JSON waa inuu ka kooban yahay hal shay. Shayga dhexdiisa, magacyada hantidiisu waa isku mid
+ ikhtiyaarka-khadka taliska, oo lagu daray hal hanti oo dheeraad ah oo loo yaqaan `hokey`
+
+ Hantida `hokey` waa amarro kala duwan oo lagu ordo. Guryaha lagu sheegay amarradan ayaa noqon doona
+ burin baaqyada nuqul ka mid ah shayga dibadda
+
+ Shay kasta oo ku jira `hokey` , waa inaad ku qeexdaa `name` , iyo galka iyo soo saarida faylasha
+
+ Waa kan tusaale `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Faylal gelinta badan
+ U gudbi wadooyin faylal ah oo kala duwan sida `infiles` halkii aad ka ahaan lahayd hal waddo `infile` , sida tusaalahan:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Tusmooyinka
+ Marka loo turjumayo luqado badan, `hokey` waxa ay abuuri kartaa faylal tusmeed oo taxaya dhammaan tarjumaada la sameeyay
+ waxayna siisaa xiriirin iyaga
+
+ * Markaad abuurto tusmooyin, waxaad yeelan kartaa hal il oo kaliya*
+
+ Gudbi `-I` / `--index` , qiimuhu waa halka faylka tusaha laga soo saari doono, kaas oo noqon kara fayl
+ ama tusaha. Haddii ay tahay hagaha, faylka magaca caadiga ah ayaa la isticmaali doonaa, oo ku salaysan qaabka (hoos eeg)
+
+ Isticmaal `-A` / `--index-template` si loo go'aamiyo sida wax soo saarka tusmada loo qaabeeyey. Waxaad qeexi kartaa 'html',
+ 'markdown', 'text', ama dariiqa faylka aad adigu leedahay [HandlebarsJS](https://handlebarsjs.com/) template
+
+ Haddii aad qeexdo qaab-dhismeedkaaga, waa inaad sidoo kale qeexdaa fayl (ma aha hagaha) `-I` / `--index`
+ doorasho
 
  ## Ku raaxayso tarjumaada luqadaha!
 

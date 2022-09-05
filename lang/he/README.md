@@ -1,12 +1,20 @@
 הוקליזציה
  =============
- השם הוא פורטמנטאו, כלומר 'לוקליזציה של הוקי'
+ למה אני לא יכול להפעיל את כל האפליקציה או האתר שלי דרך Google Translate ולקבל תרגום בסיסי בשפה אחרת?
 
- זה מגניב כי זה מאוד פשוט: הוא שולח מחרוזות ל-Google Translate
+ ***עכשיו אתה יכול!***
+
+ השם `hokeylization` הוא פורטמנטאו, שפירושו 'לוקליזציה הוקי'
+
+ זה קצת מגניב כי זה מאוד פשוט: הוא שולח מחרוזות ל-Google Translate
+
+ וזה פשוט, אך גם חזק מאוד. יש לו תמיכה מיוחדת עבור מסמכי HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) תבניות,
+ וקבצי [Markdown](https://daringfireball.net/projects/markdown).
 
  אתה יכול לתרגם:
  * אובייקט JavaScript המכיל הודעות
- * ספריית קבצים, רקורסיבית
+ * כל מספר של קבצים או ספריות, תמיד חוצה ספריות באופן רקורסיבי
 
  # קרא את זה בשפה אחרת
  מסמך README.md זה תורגם, באמצעות כלי ההקליזציה עצמו, ל
@@ -61,6 +69,7 @@
  * [תרגום קובץ משאב מחרוזת JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [תרגום ספריה של קבצי טקסט](#תרגום-ספרייה של קבצי טקסט)
  * [אפשרויות אחרות](#אפשרויות אחרות)
+ * [פקודות אצווה JSON](#JSON-batch-commands)
 
  ## מקור
  * [hokeylization ב-GitHub](https://github.com/cobbzilla/hokeylization)
@@ -251,7 +260,7 @@
  ### Process-as
  בדרך כלל הכל מעובד כטקסט רגיל
 
- אם התוכן שלך הוא HTML, הוא ישתבש אלא אם תעבור את האפשרות `-p html` / `--process-as html`
+ אם התוכן שלך הוא HTML, הוא יתקלקל אלא אם תעבור את האפשרות `-p html` / `--process-as html`
 
  ### מסנן
  להרפתקנים: בעת עיבוד קבצים בספרייה, ניתן לעבור את `-F` / `--filter`
@@ -259,7 +268,7 @@
 
  הערך של אפשרות זו חייב להיות נתיב לקובץ JS `filter`
 
- הפונקציה `filter` חייבת להיות `async` `await` תיקרא עליה
+ הפונקציה `filter` חייבת להיות `async` מכיוון ש- `await` תיקרא עליה
 
  לפני כתיבת קבצים לדיסק, כל תוכן הקובץ יועבר `filter` כמחרוזת
 
@@ -269,6 +278,88 @@
 
  ### עזרה
  השתמש `-h` / `--help` כדי להציג עזרה
+
+ ## פקודות אצווה של JSON
+ עם האפשרות `-j` / `--json` , אתה יכול להפעיל מספר פקודות `hokey`
+
+ לפי המוסכמה, הקובץ הזה נקרא `hokey.json` , אבל אתה יכול לקרוא לו איך שאתה רוצה
+
+ אם תעביר ספריה כאפשרות `-j` ', `hokey` את `hokey.json` בספרייה זו
+
+ קובץ JSON צריך להכיל אובייקט אחד. בתוך האובייקט הזה, שמות המאפיינים שלו זהים לזה
+ אפשרויות שורת הפקודה, בתוספת מאפיין אחד נוסף בשם `hokey`
+
+ המאפיין `hokey` הוא מערך של פקודות להפעלה. המאפיינים שהוכרזו בפקודות אלה יהיו
+ לעקוף כל הצהרות כפולות באובייקט החיצוני.
+
+ בתוך כל אובייקט במערך `hokey` , עליך לציין `name` ואת קבצי הקלט והפלט
+
+ הנה דוגמה של `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### קבצי קלט מרובים
+ העבר מערך של נתיבי קבצים בתור `infiles` במקום נתיב יחיד `infile` , כמו בדוגמה זו:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### אינדקסים
+ בעת תרגום לשפות רבות, `hokey` יכול ליצור קובץ אינדקס המפרט את כל התרגומים שנעשו
+ ומספק קישורים אליהם
+
+ *בעת יצירת אינדקסים, אתה יכול לקבל רק מקור קלט אחד*
+
+ העבר את `-I` / `--index` , הערך הוא המקום שבו יווצר קובץ האינדקס, שיכול להיות קובץ
+ או ספרייה. אם מדובר בספריה, ישמש שם קובץ ברירת מחדל, בהתבסס על התבנית (ראה להלן)
+
+ השתמש ב- `-A` / `--index-template` כדי לקבוע כיצד פלט האינדקס מעוצב. אתה יכול לציין 'html',
+ 'markdown', 'text', או נתיב הקובץ לתבנית [HandlebarsJS](https://handlebarsjs.com/) משלך
+
+ אם אתה מציין תבנית משלך, עליך לציין גם קובץ (לא ספריה) עבור `-I` / `--index`
+ אוֹפְּצִיָה
 
  ## תהנה בתרגום שפות!
 

@@ -1,12 +1,20 @@
 Hokeylization
  =============
- Ny anarana dia portmanteau, midika hoe 'hokey localization'
+ Nahoana aho no tsy afaka mampiasa ny fampiharana na tranokalako manontolo amin'ny alàlan'ny Dikanteny Google ary mahazo dikanteny fototra amin'ny fiteny hafa?
 
- Hokey io satria tena tsotra: mandefa tady amin'ny Google Translate
+ ***Ankehitriny, azonao atao!***
+
+ Ny anarana `hokeylization` dia portmanteau, midika hoe 'hokey localization'
+
+ Somary hokey izy io satria tena tsotra: mandefa tady amin'ny Google Translate
+
+ Ary tsotra izy io, nefa tena mahery. Manana fanohanana manokana amin'ny antontan-taratasy HTML izy io,
+ [HandlebarsJS](https://handlebarsjs.com/) maodely,
+ ary rakitra [Markdown](https://daringfireball.net/projects/markdown).
 
  Afaka mandika:
  * zavatra JavaScript misy hafatra
- * lahatahiry misy rakitra, miverimberina
+ * misy rakitra na lahatahiry rehetra, mamakivaky lahatahiry miverimberina foana
 
  # Vakio amin'ny fiteny hafa ity
  Ity antontan-taratasy README.md ity dia nadika, tamin'ny fampiasana ny fitaovana hokeylization mihitsy, ho
@@ -61,6 +69,7 @@ Hokeylization
  * [Mandika rakitra loharanon-dahatsary JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Mandika lahatahiry misy rakitra lahatsoratra](#Translating-a-directory-of-text-files)
  * [Safidy hafa](#Other-Options)
+ * [JSON batch commands](#JSON-batch-commands)
 
  ## Loharano
  * [hokeylization amin'ny GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Vonjeo
  Ampiasao `-h` / `--help` hanehoana fanampiana
+
+ ## baiko andiany JSON
+ Miaraka amin'ny safidy `-j` / `--json` dia azonao atao ny mandefa baiko `hokey` maromaro mifandrindra.
+
+ Araka ny fifanarahana dia antsoina hoe `hokey.json` ity rakitra ity, saingy azonao atao ny manonona azy izay tianao
+
+ Raha mandalo lahatahiry ho safidy `-j` `hokey` ianao dia hitady `hokey.json` ao amin'io lahatahiry io ny `hokey`.
+
+ Ny rakitra JSON dia tokony ahitana zavatra iray. Ao anatin'io zavatra io, ny anaran'ny fananany dia mitovy amin'ny
+ ny safidy andalana baiko, miampy fananana fanampiny iray antsoina hoe `hokey`
+
+ Ny fananana `hokey` dia andiana baiko atao. Ny fananana ambara ao anatin'ireo baiko ireo dia
+ manafoana ny fanambarana dika mitovy amin'ny zavatra ivelany.
+
+ Ao anatin'ny zavatra tsirairay ao amin'ny `hokey` array, dia tokony hanondro `name` , ary ny rakitra fampidirana sy famoahana.
+
+ Ity misy ohatra iray momba ny `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### rakitra fampidirana marobe
+ Alefaso ny lalan'ny rakitra ho `infiles` fa tsy lalana tokana `infile` , toy ny amin'ity ohatra ity:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Fanondroana
+ Rehefa mandika amin'ny fiteny maro, ny `hokey` dia afaka mamorona fisie fanondroana mirakitra ny dikanteny rehetra natao.
+ ary manome rohy ho azy ireo
+
+ *Rehefa mamorona fanondroana dia afaka manana loharano iray ihany ianao*
+
+ Alefaso ny safidy `-I` / `--index` , ny sandany dia toerana hamokarana ny rakitra index, izay mety ho rakitra
+ na lahatahiry iray. Raha lahatahiry izy io, dia misy anaran-drakitra ampiasaina, mifototra amin'ny môdely (jereo eto ambany)
+
+ Ampiasao ny `-A` / `--index-template` hamaritana ny fomba fandrafetana ny vokatra fanondroana. Azonao atao ny mamaritra ny 'html',
+ 'markdown', 'text', na ny lalan'ny rakitra mankany amin'ny môdely [HandlebarsJS](https://handlebarsjs.com/) anao manokana
+
+ Raha mamaritra ny môdely anao manokana ianao dia tsy maintsy mamaritra rakitra (fa tsy lahatahiry) ho an'ny `-I` / `--index`
+ SAFIDY
 
  ## Mahafinaritra ny mandika teny!
 

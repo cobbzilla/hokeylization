@@ -1,12 +1,20 @@
 Hokeylization
  =============
- Ang ngalan usa ka portmanteau, nagpasabut nga 'hokey localization'
+ Ngano nga dili nako mapadagan ang akong tibuuk nga app o site pinaagi sa Google Translate ug makakuha usa ka sukaranan nga paghubad sa lain nga lengguwahe?
 
- Kini usa ka hokey tungod kay kini yano kaayo: nagpadala kini og mga string sa Google Translate
+ ***Karon, mahimo nimo!***
+
+ Ang ngalan nga `hokeylization` kay usa ka portmanteau, nagpasabut nga 'hokey localization'
+
+ Kini medyo hokey tungod kay kini yano kaayo: nagpadala kini og mga string sa Google Translate
+
+ Ug kini yano, apan gamhanan usab kaayo. Kini adunay espesyal nga suporta alang sa mga dokumento sa HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) templates,
+ ug [Markdown](https://daringfireball.net/projects/markdown) nga mga file.
 
  Mahimo nimong hubaron ang:
  * usa ka butang sa JavaScript nga adunay mga mensahe
- * usa ka direktoryo sa mga file, recursively
+ * bisan unsang gidaghanon sa mga file o mga direktoryo, kanunay nga nagsubay sa mga direktoryo nga balikbalik
 
  # Basaha kini sa laing pinulongan
  Kining README.md nga dokumento gihubad, gamit ang hokeylization tool mismo, ngadto sa
@@ -61,6 +69,7 @@ Hokeylization
  * [Paghubad sa JavaScript string resource file](#Translating-a-JavaScript-string-resource-file)
  * [Paghubad sa direktoryo sa mga text file](#Translating-a-directory-of-text-files)
  * [Ubang mga kapilian](#Other-options)
+ * [JSON batch commands](#JSON-batch-commands)
 
  ## Tinubdan
  * [hokeylization sa GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Tabang
  Gamita `-h` / `--help` aron ipakita ang tabang
+
+ ## JSON batch nga mga sugo
+ Uban sa `-j` / `--json` nga kapilian, mahimo nimong ipadagan ang daghang mga coordinated nga `hokey` mga sugo
+
+ Pinaagi sa kombensiyon kini nga payl gitawag og `hokey.json` , apan mahimo nimo kining hinganlan sa bisan unsa nga imong gusto
+
+ Kung imong ipasa ang usa ka direktoryo ingon nga `-j` nga kapilian, ang `hokey` mangita alang sa usa ka `hokey.json` sa kana nga direktoryo
+
+ Ang JSON file kinahanglan adunay usa ka butang. Sulod niana nga butang, ang mga ngalan sa kabtangan niini parehas sa
+ ang mga kapilian sa command-line, dugang usa ka dugang nga kabtangan nga ginganlag `hokey`
+
+ Ang kabtangan nga `hokey` kay usa ka han-ay sa mga sugo nga ipadagan. Ang mga kabtangan nga gipahayag sa sulod niini nga mga sugo
+ i-override ang bisan unsang duplicate nga deklarasyon sa gawas nga butang.
+
+ Sulod sa matag butang sa `hokey` array, kinahanglan nimong itakda ang usa ka `name` , ug ang input ug output nga mga file
+
+ Ania ang usa ka pananglitan sa usa ka `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Daghang input file
+ Ipasa ang usa ka han-ay sa mga agianan sa file isip `infiles` imbes nga usa ka dalan `infile` , sama niini nga pananglitan:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Mga indeks
+ Kung naghubad sa daghang mga pinulongan, ang `hokey` makahimo og index file nga naglista sa tanang mga hubad nga gihimo
+ ug naghatag og mga link ngadto kanila
+
+ *Sa paghimo og mga indeks, mahimo ka nga adunay usa lamang ka tinubdan sa input*
+
+ Ipasa ang `-I` / `--index` nga kapilian, ang bili diin ang index file mabuhat, nga mahimong usa ka file
+ o usa ka direktoryo. Kung kini usa ka direktoryo, usa ka default filename ang gamiton, base sa template (tan-awa sa ubos)
+
+ Gamita ang `-A` / `--index-template` aron mahibal-an kung giunsa pagporma ang index output. Mahimo nimong ipiho ang 'html',
+ 'markdown', 'text', o ang file path sa imong kaugalingong [HandlebarsJS](https://handlebarsjs.com/) template
+
+ Kung imong ipiho ang imong kaugalingon nga template, kinahanglan ka usab magbutang usa ka file (dili usa ka direktoryo) para sa `-I` / `--index`
+ kapilian
 
  ## Paglingaw sa paghubad sa mga pinulongan!
 

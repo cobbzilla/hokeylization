@@ -1,12 +1,20 @@
 Hokeylisation
  =============
- Izina ni portmanteau, bisobanura ngo 'hokey localisation'
+ Kuki ntashobora gukoresha porogaramu yanjye yose cyangwa urubuga nkoresheje Google Translate nkabona ibisobanuro byibanze mu rundi rurimi?
 
- Nibyiza kuko biroroshye cyane: byohereza imirongo kuri Google Translate
+ *** Noneho, urashobora! ***
+
+ Izina `hokeylization` ni portmanteau, bisobanura 'aho hokey'.
+
+ Nibintu bimwe byoroshye kuko biroroshye cyane: byohereza imirongo kuri Google Translate
+
+ Kandi biroroshye, ariko kandi birakomeye cyane. Ifite inkunga idasanzwe yinyandiko za HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) inyandikorugero,
+ na [Markdown](https://daringfireball.net/imishinga/markdown) dosiye.
 
  Urashobora guhindura:
  * ikintu cya JavaScript gikubiyemo ubutumwa
- * ububiko bwamadosiye, mubisubiramo
+ * umubare uwo ariwo wose wa dosiye cyangwa ububiko, burigihe unyura mububiko
 
  # Soma ibi mu rundi rurimi
  Iyi nyandiko ya README.md yarahinduwe, ikoresheje igikoresho cya hokeylisation ubwayo, muri
@@ -61,6 +69,7 @@ Hokeylisation
  *
  * [Guhindura ububiko bwamadosiye yinyandiko](# Guhindura-a-ububiko-bw-inyandiko-dosiye)
  * [Ubundi buryo](# Ibindi-amahitamo)
+ * [Amabwiriza ya JSON] [# JSON-batch-command)
 
  ## Inkomoko
  * [hokeylisation kuri GitHub](https://github.com/cobbzilla/hokeylization)
@@ -257,19 +266,101 @@ Hokeylisation
  Kubitangaza: mugihe utunganya dosiye mububiko, urashobora gutambutsa `-F` / `--filter`
  gushungura ibisohoka mbere yuko byandikwa kuri dosiye
 
- Agaciro kiyi option igomba kuba inzira ya dosiye ya JS yohereza hanze imikorere yitwa `filter`
+ Agaciro kiyi option igomba kuba inzira igana dosiye ya JS yohereza hanze imikorere yitwa `filter`
 
- Imikorere ya " `filter` igomba kuba `async` `await` izahamagarwa
+ Imikorere ya " `filter` igomba kuba `async` kuko `await` " izahamagarwa
 
  Mbere yuko dosiye zandikwa kuri disiki, ibiri muri dosiye byose bizanyuzwa mumikorere ya 'filteri' `filter`
 
- Garuka agaciro kuva mumikorere ya `filter` nicyo kizandikwa mububiko
+ Garuka agaciro kiva mumikorere ya `filter` nicyo kizandikwa mububiko
 
  Rero, ufite igenzura ryuzuye kubizarangira
 
  ### Ubufasha
  Koresha `-h` / `--help` kwerekana ubufasha
 
- ## Mugire ibihe bishimishije muguhindura indimi!
+ ## Amabwiriza ya JSON
+ Hamwe na `-j` / `--json` ihitamo, urashobora gukoresha amategeko menshi ahuza `hokey`
+
+ Mubisanzwe iyi dosiye yitwa `hokey.json` , ariko urashobora kuyita icyo ushaka
+
+ Niba unyuze mububiko nkuburyo bwa `-j` , `hokey` izashakisha `hokey.json` muri ubwo bubiko
+
+ Idosiye ya JSON igomba kuba irimo ikintu kimwe. Muri icyo kintu, amazina yumutungo ni kimwe na
+ amabwiriza-umurongo uhitamo, wongeyeho umutungo umwe wongeyeho witwa `hokey`
+
+ Umutungo wa "hokey" ni umurongo `hokey` yo gukora. Ibintu byatangajwe muri aya mabwiriza bizabikora
+ kurenga ibyatangajwe byigana mubintu byo hanze.
+
+ Muri buri kintu muri array ya `hokey` , ugomba kwerekana " `name` ", hamwe ninjiza nibisohoka dosiye
+
+ Dore urugero rwa `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Amadosiye menshi yinjiza
+ Hisha umurongo wa dosiye yinzira nka `infiles` aho kuba inzira `infile` , nkuko mururugero:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Ibipimo
+ Iyo uhinduye indimi nyinshi, `hokey` irashobora gukora indangagaciro ya dosiye yerekana ibisobanuro byose byakozwe
+ kandi itanga amahuza kuri bo
+
+ * Mugihe utanga indangagaciro, urashobora kugira isoko imwe gusa yo kwinjiza *
+
+ `-I` inzira ya -II / `--index` , agaciro niho hazerekanwa dosiye yerekana indangagaciro, ishobora kuba dosiye
+ cyangwa ububiko. Niba ari ububiko, izina risanzwe rizakoreshwa, ukurikije inyandikorugero (reba hano hepfo)
+
+ Koresha `-A` / `--index-template` kugirango umenye uko ibyasohotse bisohoka. Urashobora kwerekana 'html',
+ 'akamenyetso', 'inyandiko', cyangwa inzira ya dosiye kugiti cyawe [HandlebarsJS](https://handlebarsjs.com/) inyandikorugero
+
+ Niba ugaragaje icyitegererezo cyawe, ugomba kandi kwerekana dosiye (ntabwo ari ububiko) kuri `-I` / `--index`
+ ihitamo
+
+ ## Mugire ibihe byiza byo guhindura indimi!
 
 </pre>

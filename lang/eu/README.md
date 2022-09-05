@@ -1,12 +1,20 @@
 Hokeylizazioa
  ==============
- Izena portmanteau bat da, 'hokey lokalizazioa' esan nahi duena
+ Zergatik ezin dut nire aplikazio edo gune osoa Google Translate bidez exekutatu eta oinarrizko itzulpena beste hizkuntza batean lortu?
 
- Hokey da, oso sinplea delako: kateak bidaltzen ditu Google Translate-ra
+ ***Orain, dezakezu!***
+
+ `hokeylization` izena hitz bat da, 'hokey lokalizazioa' esan nahi duena
+
+ Hokey samarra da, oso sinplea delako: kateak bidaltzen ditu Google Translate-ra
+
+ Eta sinplea da, baina oso indartsua ere bada. HTML dokumentuetarako euskarri berezia du,
+ [HandlebarsJS](https://handlebarsjs.com/) txantiloiak,
+ eta [Markdown](https://daringfireball.net/projects/markdown) fitxategiak.
 
  Itzul dezakezu:
  * mezuak dituen JavaScript objektu bat
- * Fitxategien direktorio bat, modu errekurtsiboan
+ * edozein fitxategi edo direktorio, beti direktorioak modu errekurtsiboan zeharkatuz
 
  # Irakurri hau beste hizkuntza batean
  README.md dokumentu hau, hokeylization tresna bera erabiliz, itzuli da
@@ -61,6 +69,7 @@ Hokeylizazioa
  * [JavaScript kate-baliabide-fitxategi bat itzultzen](#Translating-a-JavaScript-string-resource-file)
  * [Testu fitxategien direktorio bat itzultzea](#Translating-a-directory-of-text-fitxategiak)
  * [Beste aukera batzuk](#Beste aukerak)
+ * [JSON batch komandoak](#JSON-batch-commands)
 
  ## Iturria
  * [hokeylization GitHub-en](https://github.com/cobbzilla/hokeylization)
@@ -240,7 +249,7 @@ Hokeylizazioa
  helburuko esteka hasi baino lehen ( `(` )-rekin). Honek markdown-a gaizki errendatzea eragiten du, eta esteka
  dokumentua ikustean hautsita dago.
  * Kode blokeak itzultzen dira. Google Translate-k ez daki markdown-ek zer den kodea hartzen duen eta zer ez
- * Koskatutako kode-blokeetarako tarte okerra. Zaila da tartea mantentzea itzulpenean
+ * Koskatutako kode-blokeen tarte okerra. Zaila da tartea mantentzea itzulpenean
  * `backticks` barruan dauden gauzak itzuliko dira, ia beti balio literalak izatea nahi duzunean
 
  `-M` / `--markdown` bandera gaituta dagoenean:
@@ -263,12 +272,94 @@ Hokeylizazioa
 
  Fitxategiak diskoan idatzi aurretik, fitxategiaren eduki osoa `filter` funtziora pasatuko da kate gisa
 
- `filter` funtzioaren itzulera-balioa benetan biltegiratzean idatziko dena da
+ `filter` funtzioaren itzulera-balioa biltegiratze-ra benetan idatziko dena da
 
  Horrela, azkenean idatziko denaren gaineko kontrol osoa duzu
 
  ### Laguntza
  Erabili `-h` / `--help` laguntza erakusteko
+
+ ## JSON batch komandoak
+ `-j` / `--json` aukerarekin, hainbat `hokey` komando koordinatu exekutatu ditzakezu
+
+ Konbentzioz fitxategi honi `hokey.json` deitzen zaio, baina nahi duzuna izendatu diezaiokezu
+
+ Direktorio bat `-j` aukera gisa pasatzen baduzu, `hokey` `hokey.json` du direktorio horretan
+
+ JSON fitxategiak objektu bat izan behar du. Objektu horren barruan, bere propietate-izenak berdinak dira
+ komando-lerroko aukerak, gehi `hokey` izeneko propietate gehigarri bat
+
+ `hokey` propietatea exekutatzeko komando sorta bat da. Komando horien barruan deklaratutako propietateak izango dira
+ gainidatzi kanpoko objektuko deklarazio bikoiztuak.
+
+ `hokey` matrizeko objektu bakoitzaren barruan, ` `name` eta sarrerako eta irteerako fitxategiak zehaztu behar dituzu.
+
+ Hona hemen `hokey.json` baten adibide bat
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Hainbat sarrera-fitxategi
+ Pasatu fitxategi-bideen array bat `infile` `infiles` gisa `infile' bide bakar baten ordez, adibide honetan bezala:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Aurkibideak
+ Hizkuntza askotara itzultzean, `hokey` -k egindako itzulpen guztiak zerrendatzen dituen indize fitxategi bat sor dezake
+ eta estekak eskaintzen ditu
+
+ *Indizeak sortzerakoan, sarrera iturri bakarra izan dezakezu*
+
+ Pasa `-I` / `--index` aukera, balioa indize-fitxategia non sortuko da, fitxategi bat izan daitekeena
+ edo direktorio bat. Direktorio bat bada, fitxategi-izen lehenetsi bat erabiliko da, txantiloiaren arabera (ikus behean)
+
+ Erabili `-A` / `--index-template` indizearen irteera nola formateatzen den zehazteko. 'html' zehaztu dezakezu,
+ 'markdown', 'testua' edo zure [HandlebarsJS](https://handlebarsjs.com/) txantiloiaren fitxategiaren bidea
+
+ Zure txantiloia zehazten baduzu, fitxategi bat (ez direktorio bat) ere zehaztu behar duzu `-I` / `--index`
+ aukera
 
  ## Ondo pasa hizkuntzak itzultzen!
 

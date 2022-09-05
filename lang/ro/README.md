@@ -1,12 +1,20 @@
 Hokeylizare
  ==============
- Numele este un portmanteau, care înseamnă „localizare hokey”
+ De ce nu pot rula întreaga aplicație sau site-ul meu prin Google Translate și nu pot obține o traducere de bază într-o altă limbă?
 
- Este hokey pentru că este foarte simplu: trimite șiruri la Google Translate
+ ***Acum poti!***
+
+ Numele `hokeylization` este un portmanteau, care înseamnă „localizare hokey”
+
+ Este oarecum hokey pentru că este foarte simplu: trimite șiruri la Google Translate
+
+ Și este simplu, dar și foarte puternic. Are suport special pentru documente HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) șabloane,
+ și fișierele [Markdown](https://daringfireball.net/projects/markdown).
 
  Puteți traduce:
  * un obiect JavaScript care conține mesaje
- * un director de fișiere, recursiv
+ * orice număr de fișiere sau directoare, traversând întotdeauna directoare recursiv
 
  # Citiți asta într-o altă limbă
  Acest document README.md a fost tradus, folosind instrumentul de hokeylization propriu-zis, în
@@ -61,6 +69,7 @@ Hokeylizare
  * [Traducerea unui fișier resursă șir JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Traducerea unui director de fișiere text](#Translating-a-directory-of-text-files)
  * [Alte opțiuni](#Alte-opțiuni)
+ * [Comenzi batch JSON](#JSON-batch-comenzi)
 
  ## Sursă
  * [hokeylization pe GitHub](https://github.com/cobbzilla/hokeylization)
@@ -211,7 +220,7 @@ Hokeylizare
  Este posibil să nu doriți întotdeauna să traduceți *fiecare* fișier din directorul sursă în directorul țintă
 
  Valoarea `-m` / `--match` este o expresie regex (atenție la regulile de citare a shell-ului!) care specifică
- care fișiere trebuie traduse
+ ce fișiere trebuie traduse
 
  Când aveți îndoieli, puteți combina această opțiune cu `-n` / `--dry-run` pentru a vedea ce fișiere vor fi traduse
 
@@ -269,6 +278,88 @@ Hokeylizare
 
  ### Ajutor
  Folosiți `-h` / `--help` pentru a afișa ajutor
+
+ ## Comenzi batch JSON
+ Cu opțiunea `-j` / `--json` , puteți rula mai multe comenzi coordonate `hokey`
+
+ Prin convenție, acest fișier se numește `hokey.json` , dar îl puteți denumi cum doriți
+
+ Dacă treceți un director ca opțiune ` `-j` , `hokey` va căuta un `hokey.json` în acel director
+
+ Fișierul JSON ar trebui să conțină un singur obiect. În cadrul acelui obiect, numele proprietăților sale sunt aceleași cu
+ opțiunile liniei de comandă, plus o proprietate suplimentară numită `hokey`
+
+ Proprietatea `hokey` este o serie de comenzi de rulat. Proprietățile declarate în cadrul acestor comenzi vor
+ suprascrie orice declarații duplicate din obiectul exterior.
+
+ În cadrul fiecărui obiect din `hokey` , ar trebui să specificați un `name` și fișierele de intrare și de ieșire
+
+ Iată un exemplu de `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Mai multe fișiere de intrare
+ Treceți o matrice de căi de fișiere ca `infiles` în loc de o singură cale `infile` , ca în acest exemplu:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indici
+ Când traduceți în mai multe limbi, `hokey` poate crea un fișier index care listează toate traducerile făcute
+ și oferă link-uri către ele
+
+ *Când generați indici, puteți avea o singură sursă de intrare*
+
+ Treceți opțiunea `-I` / `--index` , valoarea este locul unde va fi generat fișierul index, care poate fi un fișier
+ sau un director. Dacă este un director, va fi folosit un nume de fișier implicit, pe baza șablonului (vezi mai jos)
+
+ Utilizați `-A` / `--index-template` pentru a determina modul în care este formatată rezultatul indexului. Puteți specifica „html”,
+ „markdown”, „text” sau calea fișierului către propriul șablon [HandlebarsJS](https://handlebarsjs.com/)
+
+ Dacă specificați propriul șablon, trebuie să specificați și un fișier (nu un director) pentru `-I` / `--index`
+ opțiune
 
  ## Distrează-te traducând limbi!
 

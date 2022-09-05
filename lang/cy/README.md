@@ -1,12 +1,20 @@
 Hokeyleiddiad
  ============
- Portmanteau yw'r enw, sy'n golygu 'lleoleiddio hokey'
+ Pam na allaf redeg fy ap neu wefan gyfan trwy Google Translate a chael cyfieithiad sylfaenol mewn iaith arall?
 
- Mae'n hokey oherwydd mae'n syml iawn: mae'n anfon llinynnau i Google Translate
+ *** Nawr, gallwch chi! ***
+
+ Portmanteau yw'r enw `hokeylization` , sy'n golygu 'lleoleiddio hoci'
+
+ Mae braidd yn hokey oherwydd mae'n syml iawn: mae'n anfon llinynnau i Google Translate
+
+ Ac mae'n syml, ond hefyd yn bwerus iawn. Mae ganddo gefnogaeth arbennig ar gyfer dogfennau HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) templedi,
+ a [Markdown](https://daringfireball.net/projects/markdown) ffeiliau.
 
  Gallwch chi gyfieithu:
  * gwrthrych JavaScript sy'n cynnwys negeseuon
- * cyfeiriadur o ffeiliau, yn ailadroddus
+ * unrhyw nifer o ffeiliau neu gyfeiriaduron, bob amser yn croesi cyfeiriaduron yn gyson
 
  # Darllenwch hwn mewn iaith arall
  Mae'r ddogfen README.md hon wedi'i chyfieithu, gan ddefnyddio'r offeryn hokeylization ei hun, i
@@ -61,6 +69,7 @@ Hokeyleiddiad
  * [Cyfieithu ffeil adnodd llinyn JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Cyfieithu cyfeiriadur o ffeiliau testun](#Cyfieithu-cyfeiriadur-o-ffeiliau testun)
  * [Dewisiadau eraill](#Other-options)
+ * [gorchmynion swp JSON](#JSON-batch-commands)
 
  ## Ffynhonnell
  * [hokeylization ar GitHub]( https://github.com/cobbzilla/hokeylization)
@@ -263,12 +272,94 @@ Hokeyleiddiad
 
  Cyn i ffeiliau gael eu hysgrifennu ar ddisg, bydd holl gynnwys y ffeil yn cael ei drosglwyddo i'r swyddogaeth `filter` fel llinyn
 
- Y gwerth dychwelyd o'r swyddogaeth `filter` yw'r hyn a fydd yn cael ei ysgrifennu i'r storfa
+ Y gwerth dychwelyd o'r swyddogaeth `filter` yw'r hyn a fydd yn cael ei ysgrifennu i storio mewn gwirionedd
 
  Felly, mae gennych reolaeth lwyr dros yr hyn a fydd yn cael ei ysgrifennu yn y pen draw
 
  ### Help
  Defnyddiwch `-h` / `--help` i ddangos help
+
+ ## gorchmynion swp JSON
+ Gyda'r `-j` / `--json` , gallwch redeg sawl gorchymyn `hokey`
+
+ Yn ôl y confensiwn gelwir y ffeil hon yn `hokey.json` , ond gallwch ei henwi beth bynnag a fynnoch
+
+ Os byddwch yn pasio cyfeiriadur fel yr opsiwn ` `-j` , bydd `hokey` yn chwilio am `hokey.json` yn y cyfeiriadur hwnnw
+
+ Dylai'r ffeil JSON gynnwys un gwrthrych. O fewn y gwrthrych hwnnw, mae ei enwau eiddo yr un fath â
+ yr opsiynau llinell orchymyn, ynghyd ag un eiddo ychwanegol o'r enw `hokey`
+
+ Mae'r eiddo `hokey` yn amrywiaeth o orchmynion i'w rhedeg. Bydd y priodweddau a ddatgenir o fewn y gorchmynion hyn
+ diystyru unrhyw ddatganiadau dyblyg yn y gwrthrych allanol.
+
+ O fewn pob gwrthrych yn yr `hokey` , dylech nodi `name` , a'r ffeiliau mewnbwn ac allbwn
+
+ Dyma enghraifft o `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Ffeiliau mewnbwn lluosog
+ Pasiwch amrywiaeth o lwybrau ffeil fel `infiles` yn lle un llwybr `infile` , fel yn yr enghraifft hon:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Mynegai
+ Wrth gyfieithu i lawer o ieithoedd, gall `hokey` greu ffeil mynegai sy'n rhestru'r holl gyfieithiadau a wnaed
+ ac yn darparu dolenni iddynt
+
+ *Wrth gynhyrchu mynegeion, dim ond un ffynhonnell fewnbwn y gallwch chi ei chael*
+
+ Pasiwch yr opsiwn `-I` / `--index` , y gwerth yw lle bydd y ffeil mynegai yn cael ei gynhyrchu, a all fod yn ffeil
+ neu gyfeiriadur. Os yw'n gyfeiriadur, bydd enw ffeil rhagosodedig yn cael ei ddefnyddio, yn seiliedig ar y templed (gweler isod)
+
+ Defnyddiwch y `-A` / `--index-template` i benderfynu sut mae allbwn y mynegai yn cael ei fformatio. Gallwch chi nodi 'html',
+ 'markdown', 'text', neu'r llwybr ffeil i'ch templed [HandlebarsJS](https://handlebarsjs.com/) eich hun
+
+ Os byddwch yn nodi eich templed eich hun, rhaid i chi hefyd nodi ffeil (nid cyfeiriadur) ar gyfer y `-I` / `--index`
+ opsiwn
 
  ## Cael hwyl yn cyfieithu ieithoedd!
 

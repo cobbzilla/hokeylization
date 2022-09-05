@@ -1,12 +1,20 @@
 Hokeylisaatio
  ==============
- Nimi on portmanteau, joka tarkoittaa "hokey lokalisointia"
+ Miksi en voi käyttää koko sovellusta tai sivustoa Google-kääntäjän kautta ja saada peruskäännöstä toisella kielellä?
 
- Se on hokey, koska se on hyvin yksinkertainen: se lähettää merkkijonoja Google-kääntäjälle
+ ***Nyt voit!***
+
+ Nimi `hokeylization` on portmanteau, joka tarkoittaa "hokey lokalisointia"
+
+ Se on jokseenkin hokey, koska se on hyvin yksinkertainen: se lähettää merkkijonoja Google-kääntäjälle
+
+ Ja se on yksinkertainen, mutta myös erittäin tehokas. Siinä on erityinen tuki HTML-dokumenteille,
+ [HandlebarsJS](https://handlebarsjs.com/) mallit,
+ ja [Markdown](https://daringfireball.net/projects/markdown) tiedostot.
 
  Voit kääntää:
  * JavaScript-objekti, joka sisältää viestejä
- * tiedostohakemisto, rekursiivisesti
+ * mikä tahansa määrä tiedostoja tai hakemistoja, aina hakemistoissa rekursiivisesti
 
  # Lue tämä toisella kielellä
  Tämä README.md-dokumentti on käännetty itse hokeylisointityökalulla kielelle
@@ -61,6 +69,7 @@ Hokeylisaatio
  * [JavaScript-merkkijonoresurssitiedoston kääntäminen](#Translating-a-JavaScript-string-resource-file)
  * [Tekstitiedostojen hakemiston kääntäminen](#Translating-a-directory-of-text-files)
  * [Muut vaihtoehdot](#Other-optiot)
+ * [JSON-eräkomennot](#JSON-batch-commands)
 
  ## Lähde
  * [hokeylization GitHubissa](https://github.com/cobbzilla/hokeylization)
@@ -240,7 +249,7 @@ Hokeylisaatio
  ennen kuin sen kohdelinkki alkaa (merkillä `(` ). Tämä saa merkinnän hahmontumaan väärin ja linkki
  on rikki asiakirjaa katseltaessa.
  * Koodilohkot käännetään. Google-kääntäjä ei tiedä, mitä markdown pitää koodina ja mitä ei
- * Väärä välitys sisennetyille koodilohkoille. Välilyöntejä on vaikea säilyttää käännöksessä
+ * Väärä välilyönti sisennetyille koodilohkoille. Välilyöntejä on vaikea säilyttää käännöksessä
  * `backticks` sisällä olevat asiat käännetään, kun haluat melkein aina niiden olevan kirjaimellisia arvoja
 
  Kun `-M` / `--markdown` on käytössä:
@@ -269,6 +278,88 @@ Hokeylisaatio
 
  ### Auta
  Käytä `-h` / `--help` näyttääksesi ohjeen
+
+ ## JSON-eräkomennot
+ `-j` / `--json` -vaihtoehdolla voit suorittaa useita koordinoituja `hokey` -komentoja
+
+ Käytännössä tätä tiedostoa kutsutaan nimellä `hokey.json` , mutta voit nimetä sen miksi haluat
+
+ Jos annat hakemiston `-j` -vaihtoehdoksi, `hokey` `hokey.json` kyseisestä hakemistosta.
+
+ JSON-tiedoston tulee sisältää yksi objekti. Objektin sisällä sen ominaisuuksien nimet ovat samat kuin
+ komentorivin valinnat sekä yksi lisäominaisuus nimeltä `hokey`
+
+ `hokey` ominaisuus on joukko suoritettavia komentoja. Näissä komentoissa ilmoitetut ominaisuudet tulevat voimaan
+ ohittaa mahdolliset päällekkäiset ilmoitukset ulkoisessa objektissa.
+
+ Jokaisessa `hokey` taulukon objektissa sinun tulee määrittää `name` ja tulo- ja tulostustiedostot
+
+ Tässä on esimerkki `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Useita syöttötiedostoja
+ Anna joukko tiedostopolkuja nimellä `infiles` yhden polun `infile` , kuten tässä esimerkissä:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeksit
+ Käännettäessä useille kielille `hokey` voi luoda hakemistotiedoston, jossa luetellaan kaikki tehdyt käännökset
+ ja tarjoaa linkkejä niihin
+
+ *Indeksejä luotaessa sinulla voi olla vain yksi tulolähde*
+
+ Välitä vaihtoehto "-I" / `--index` `-I` arvo on paikka, jossa indeksitiedosto luodaan, joka voi olla tiedosto
+ tai hakemistosta. Jos se on hakemisto, oletustiedostonimeä käytetään mallin perusteella (katso alla)
+
+ Käytä `-A` / `--index-template` " määrittääksesi, miten indeksituloste muotoillaan. Voit määrittää "html",
+ "markdown", "text" tai tiedostopolku omaan [HandlebarsJS](https://handlebarsjs.com/) -malliisi
+
+ Jos määrität oman mallin, sinun on määritettävä myös tiedosto (ei hakemisto) `-I` / `--index`
+ vaihtoehto
 
  ## Pidä hauskaa kielten kääntämisestä!
 

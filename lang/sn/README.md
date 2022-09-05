@@ -1,12 +1,20 @@
 Hokeylization
  ==============
- Iro zita ndere portmanteau, zvichireva kuti 'hokey localization'
+ Sei ndisingakwanisi kushandisa app yangu yese kana saiti kuburikidza neGoogle Translate kuti ndiwane shanduro yemumwe mutauro?
 
- Ihokey nekuti iri nyore: inotumira tambo kuGoogle Translate
+ ***Zvino, unogona!***
+
+ Zita rekuti `hokeylization` is a portmanteau, zvichireva kuti 'hokey localization'.
+
+ Yakati hokey nekuti iri nyore: inotumira tambo kuGoogle Translate
+
+ Uye iri nyore, asi ine simba kwazvo. Iine rutsigiro rwakakosha kune zvinyorwa zveHTML,
+ [HandlebarsJS](https://handlebarsjs.com/) zvidhori,
+ uye [Markdown](https://daringfireball.net/projects/markdown) mafaera.
 
  Unogona kushandura:
  * chinhu cheJavaScript chine mameseji
- * dhairekitori remafaira, achidzokorodza
+ * chero nhamba yemafaira kana madhairekitori, anogara achiyambuka madhairekitori achidzokororwa
 
  # Verenga izvi mune mumwe mutauro
  Gwaro iri README.md rakashandurwa, pachishandiswa hokeylization turusi pachayo, kupinda
@@ -61,6 +69,7 @@ Hokeylization
  * [Kushandura faira renziyo yeJavaScript](#Kushandura-a-JavaScript-tambo-resource-file)
  * [Kushandura dhairekitori remafaira ezvinyorwa](#Kushandura-dhairekitori-rezvinyorwa-mafaira)
  * [Dzimwe sarudzo](#Zvimwe-sarudzo)
+ * [JSON batch commands](#JSON-batch-commands)
 
  ## Source
  * [hokeylization paGitHub](https://github.com/cobbzilla/hokeylization)
@@ -240,7 +249,7 @@ Hokeylization
  pamberi pekuti chinongedzo chayo chisati chatanga (ne `(` ).
  yakaputsika pakuona gwaro.
  * Mabhuroki ekodhi anoshandurwa. Google kuturikira haizive kuti chiratidzo chinotariswa sei nekodhi uye zvachisingazive
- * Nzvimbo isiriyo yemabhuraki ekodhi. Kupatsanura kwakaoma kuchengetedza mushanduro
+ * Nzvimbo isiriyo yemabhuraki ekodhi. Kupatsanura kwakaoma kuchengetedza mukududzira
  * Zvinhu zviri mukati me `backticks` zvinoshandurwa, kana iwe uchinge wagara uchida kuti zvive chaizvo zvakakosha
 
  Kana iyo `-M` / `--markdown` mureza inogoneswa:
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Batsira
  Shandisa `-h` / `--help` kuratidza rubatsiro
+
+ ## JSON batch mirairo
+ Neyo `-j` / `--json` sarudzo, unogona kumhanya akawanda akarongeka `hokey` mirairo.
+
+ Nekusangana faira iri rinonzi `hokey.json` , asi unogona kuripa chero chaunoda
+
+ Kana ukapasa dhairekitori sekuti `-j` sarudzo, `hokey` `hokey.json` iroro.
+
+ Iyo JSON faira inofanira kunge iine chinhu chimwe chete. Mukati mechinhu ichocho, mazita ayo epfuma akafanana ne
+ iyo yekuraira-mutsara sarudzo, pamwe neimwe yekuwedzera pfuma inonzi `hokey`
+
+ Iyo `hokey` pfuma ine hurongwa hwemirairo yekumhanya. Zvinhu zvakaziviswa mukati memirairo iyi zvichave
+ pfuura chero duplicate zvirevo muchinhu chekunze.
+
+ Mukati mechinhu chimwe nechimwe chiri mu `hokey` array, iwe unofanirwa kutsanangura `name` , uye yekuisa uye inobuda mafaera.
+
+ Heino muenzaniso we `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Mafaira ekuisa akawanda
+ Pfuura nzira dzemafaira se `infiles` pachinzvimbo cheimwe nzira `infile` , semumuenzaniso uyu:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indexes
+ Kana uchiturikira kumitauro yakawanda, `hokey` inogona kugadzira index file inonyora shanduro dzese dzakaitwa
+ uye inopa zvinongedzo kwavari
+
+ *Paunenge uchigadzira indexes, unogona kuve negiyo imwe chete yekuisa sosi *
+
+ Pfuura iyo `-I` / `--index` sarudzo, kukosha ndiko kuchagadzirwa iyo index file, inogona kuva faira.
+ kana dhairekitori. Kana iri dhairekitori, zita rezita refaira richashandiswa, zvichibva pane template (ona pazasi)
+
+ Shandisa iyo `-A` / `--index-template` kuona kuti index inobuda yakarongwa sei. Unogona kutsanangura 'html',
+ 'markdown', 'text', kana nzira yefaira kune yako [HandlebarsJS](https://handlebarsjs.com/) template
+
+ Kana iwe ukatsanangura yako template, iwe unofanirwawo kutsanangura faira (kwete dhairekitori) ye `-I` / `--index`
+ sarudzo
 
  ## Iva nenguva inonakidza kushandura mitauro!
 

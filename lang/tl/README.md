@@ -1,12 +1,20 @@
 Hokeylization
  =============
- Ang pangalan ay isang portmanteau, ibig sabihin ay 'hokey localization'
+ Bakit hindi ko mapatakbo ang aking buong app o site sa pamamagitan ng Google Translate at makakuha ng pangunahing pagsasalin sa ibang wika?
 
- Ito ay hokey dahil ito ay napaka-simple: nagpapadala ito ng mga string sa Google Translate
+ ***Ngayon, kaya mo na!***
+
+ Ang pangalang `hokeylization` ay isang portmanteau, ibig sabihin ay 'hokey localization'
+
+ Ito ay medyo hokey dahil ito ay napaka-simple: nagpapadala ito ng mga string sa Google Translate
+
+ At ito ay simple, ngunit napakalakas din. Mayroon itong espesyal na suporta para sa mga HTML na dokumento,
+ [HandlebarsJS](https://handlebarsjs.com/) na mga template,
+ at [Markdown](https://daringfireball.net/projects/markdown) na mga file.
 
  Maaari mong isalin ang:
  * isang JavaScript object na naglalaman ng mga mensahe
- * isang direktoryo ng mga file, recursively
+ * anumang bilang ng mga file o direktoryo, palaging binabagtas ang mga direktoryo nang paulit-ulit
 
  # Basahin ito sa ibang wika
  Itong README.md na dokumento ay isinalin, gamit ang hokeylization tool mismo, sa
@@ -61,6 +69,7 @@ Hokeylization
  * [Pagsasalin ng JavaScript string resource file](#Translating-a-JavaScript-string-resource-file)
  * [Pagsasalin ng direktoryo ng mga text file](#Translating-a-directory-of-text-files)
  * [Iba pang mga opsyon](#Other-options)
+ * [JSON batch commands](#JSON-batch-commands)
 
  ## Pinagmulan
  * [hokeylization sa GitHub](https://github.com/cobbzilla/hokeylization)
@@ -240,10 +249,10 @@ Hokeylization
  bago magsimula ang target na link nito (na may `(` ). Nagdudulot ito ng hindi tamang pag-render ng markdown, at ang link
  ay sira kapag tinitingnan ang dokumento.
  * Ang mga bloke ng code ay naisalin. Hindi alam ng Google translate kung ano ang itinuturing ng markdown na code at kung ano ang hindi
- * Maling espasyo para sa mga naka-indent na bloke ng code. Mahirap panatilihin ang espasyo sa pagsasalin
+ * Maling spacing para sa mga naka-indent na bloke ng code. Mahirap panatilihin ang espasyo sa pagsasalin
  * Ang mga bagay sa loob ng `backticks` ay isasalin, kapag halos palaging gusto mong maging literal na halaga ang mga ito
 
- Kapag ang `-M` / `--markdown` flag ay pinagana:
+ Kapag pinagana ang flag na `-M` / `--markdown` :
  * Ang pattern `](` ay gagawing `](` kaya inaayos ang mga sirang markdown link
  * Maglalagay ng wrapper na "no translate" sa paligid ng mga naka-indent na bloke ng code, na pinapanatili ang wastong indentation at tinitiyak na hindi ito isinasalin
  * Maglalagay ng wrapper na "no translate" sa paligid ng text sa loob ng `backticks` upang matiyak na hindi isinasalin ang mga ito
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Tulong
  Gamitin `-h` / `--help` para magpakita ng tulong
+
+ ## Mga batch na command ng JSON
+ Gamit ang `-j` / `--json` , maaari kang magpatakbo ng maraming coordinated na command `hokey`
+
+ Ayon sa convention ang file na ito ay tinatawag na `hokey.json` , ngunit maaari mo itong pangalanan kahit anong gusto mo
+
+ Kung ipapasa mo ang isang direktoryo bilang opsyong `hokey` `-j` maghahanap ang `hokey` ng `hokey.json` sa direktoryong iyon
+
+ Ang JSON file ay dapat maglaman ng isang bagay. Sa loob ng bagay na iyon, ang mga pangalan ng property nito ay kapareho ng
+ ang mga opsyon sa command-line, kasama ang isang karagdagang property na pinangalanang `hokey`
+
+ Ang property `hokey` ay isang hanay ng mga command na tatakbo. Ang mga katangiang idineklara sa loob ng mga utos na ito ay
+ i-override ang anumang mga duplicate na deklarasyon sa panlabas na bagay.
+
+ Sa loob ng bawat bagay sa hanay ng `hokey` , dapat kang tumukoy ng `name` , at ang mga input at output na file
+
+ Narito ang isang halimbawa ng `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Maramihang input file
+ Magpasa ng hanay ng mga path ng file bilang `infiles` sa halip na isang path `infile` , tulad ng sa halimbawang ito:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Mga index
+ Kapag nagsasalin sa maraming wika, maaaring lumikha ang `hokey` index file na naglilista ng lahat ng ginawang pagsasalin
+ at nagbibigay ng mga link sa kanila
+
+ *Kapag bumubuo ng mga index, maaari kang magkaroon lamang ng isang input source*
+
+ Ipasa ang `-I` / `--index` , ang halaga ay kung saan bubuo ang index file, na maaaring isang file
+ o isang direktoryo. Kung ito ay isang direktoryo, isang default na filename ang gagamitin, batay sa template (tingnan sa ibaba)
+
+ Gamitin ang `-A` / `--index-template` upang matukoy kung paano naka-format ang index output. Maaari mong tukuyin ang 'html',
+ 'markdown', 'text', o ang file path sa iyong sariling [HandlebarsJS](https://handlebarsjs.com/) na template
+
+ Kung tinukoy mo ang iyong sariling template, kailangan mo ring tumukoy ng file (hindi isang direktoryo) para sa `-I` / `--index`
+ opsyon
 
  ## Magsaya sa pagsasalin ng mga wika!
 

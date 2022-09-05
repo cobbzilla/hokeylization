@@ -1,12 +1,20 @@
 Hokeylizálás
  =============
- A név portmanteau, jelentése „hokey lokalizáció”
+ Miért nem futtathatom a teljes alkalmazásomat vagy webhelyemet a Google Fordítón keresztül, és miért nem tudok egy másik nyelvre fordítani?
 
- Ez hokey, mert nagyon egyszerű: stringeket küld a Google Fordítónak
+ ***Most már tudod!***
+
+ A `hokeylization` név egy portmanteau, jelentése "hokey lokalizáció"
+
+ Ez kissé hokey, mert nagyon egyszerű: karakterláncokat küld a Google Fordítónak
+
+ És ez egyszerű, ugyanakkor nagyon erős. Speciálisan támogatja a HTML dokumentumokat,
+ [HandlebarsJS](https://handlebarsjs.com/) sablonok,
+ és [Markdown](https://daringfireball.net/projects/markdown) fájlokat.
 
  Lefordíthatod:
  * üzeneteket tartalmazó JavaScript objektum
- * fájlok könyvtára, rekurzívan
+ * tetszőleges számú fájl vagy könyvtár, mindig rekurzívan bejárva a könyvtárakat
 
  # Olvassa el ezt egy másik nyelven
  Ezt a README.md dokumentumot maga a hokeylization eszköz segítségével fordították le
@@ -61,6 +69,7 @@ Hokeylizálás
  * [JavaScript karakterlánc-erőforrásfájl fordítása](#Translating-a-JavaScript-string-resource-file)
  * [Szövegfájlok könyvtárának fordítása](#Translating-a-directory-of-text-files)
  * [Egyéb opciók](#Other-options)
+ * [JSON kötegelt parancsok](#JSON-batch-commands)
 
  ## Forrás
  * [hokeylization a GitHubon](https://github.com/cobbzilla/hokeylization)
@@ -265,10 +274,92 @@ Hokeylizálás
 
  A `filter` függvény visszatérési értéke az, ami ténylegesen a tárolóba kerül
 
- Így teljes irányítása alatt áll, hogy végül mi kerül megírásra
+ Így teljes ellenőrzése alatt áll, hogy végül mi kerül megírásra
 
  ### Segítség
  Használja a `-h` / `--help` a súgó megjelenítéséhez
+
+ ## JSON kötegelt parancsok
+ A `-j` / `--json` opcióval több koordinált `hokey` parancsot futtathat
+
+ Megállapodás szerint ezt a fájlt `hokey.json` hívják, de tetszés szerint nevezheti el
+
+ Ha egy könyvtárat ad meg "-j" opcióként, a `hokey` `-j` " a " `hokey.json` " fájlt keresi abban a könyvtárban
+
+ A JSON-fájlnak egy objektumot kell tartalmaznia. Ezen az objektumon belül a tulajdonságnevei megegyeznek a
+ a parancssori opciókat, plusz egy további, `hokey` nevű tulajdonságot
+
+ A `hokey` tulajdonság a futtatandó parancsok tömbje. Az ezekben a parancsokban deklarált tulajdonságok
+ felülírja a duplikált deklarációkat a külső objektumban.
+
+ A `hokey` tömb minden objektumán belül meg kell adnia egy "nevet `name` és a bemeneti és kimeneti fájlokat
+
+ Íme egy példa a `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Több bemeneti fájl
+ Adja meg a fájl elérési útjainak `infiles` egyetlen elérési út helyett `infile` , mint ebben a példában:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indexek
+ Ha sok nyelvre fordít, a `hokey` létrehozhat egy indexfájlt, amely felsorolja az összes fordítást
+ és linkeket biztosít hozzájuk
+
+ *Indexek generálásakor csak egy bemeneti forrás lehet*
+
+ Adja meg az `-I` / `--index` opciót, az érték az, ahol az indexfájl létrejön, amely lehet egy fájl
+ vagy egy könyvtárat. Ha ez egy könyvtár, akkor a sablon alapján egy alapértelmezett fájlnevet használunk (lásd alább)
+
+ A `-A` / `--index-template` segítségével határozza meg az indexkimenet formázását. Megadhatja a 'html'-t,
+ „markdown”, „text” vagy a fájl elérési útja a saját [HandlebarsJS](https://handlebarsjs.com/) sablonjához
+
+ Ha saját sablont ad meg, akkor egy fájlt (nem egy könyvtárat) is meg kell adnia az `-I` " / `--index`
+ választási lehetőség
 
  ## Jó szórakozást a nyelvek fordításához!
 

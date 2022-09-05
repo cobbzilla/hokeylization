@@ -1,12 +1,20 @@
 Hokeylization
  =============
- ឈ្មោះគឺជា portmanteau មានន័យថា "ការធ្វើមូលដ្ឋានីយកម្ម hokey"
+ ហេតុអ្វីខ្ញុំមិនអាចដំណើរការកម្មវិធី ឬគេហទំព័រទាំងមូលរបស់ខ្ញុំតាមរយៈ Google Translate និងទទួលបានការបកប្រែជាមូលដ្ឋានជាភាសាផ្សេង?
 
- វា​ជា​គន្លឹះ​ដោយ​សារ​វា​សាមញ្ញ​ណាស់៖ វា​ផ្ញើ​ខ្សែ​អក្សរ​ទៅ Google Translate
+ ***ឥឡូវ​អ្នក​អាច!***
+
+ ឈ្មោះ `hokeylization` គឺជា portmanteau មានន័យថា 'hokey localization'
+
+ វា​ជា​គន្លឹះ​មួយ​ចំនួន ព្រោះ​វា​សាមញ្ញ​ណាស់៖ វា​ផ្ញើ​ខ្សែ​អក្សរ​ទៅ Google Translate
+
+ ហើយវាមានលក្ខណៈសាមញ្ញ ប៉ុន្តែក៏មានថាមពលខ្លាំងផងដែរ។ វាមានការគាំទ្រពិសេសសម្រាប់ឯកសារ HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) គំរូ,
+ និង [Markdown](https://daringfireball.net/projects/markdown) ឯកសារ។
 
  អ្នកអាចបកប្រែ៖
  * វត្ថុ JavaScript ដែលមានសារ
- * ថតឯកសារ, ឡើងវិញ
+ * ចំនួនឯកសារ ឬថតឯកសារណាមួយ តែងតែឆ្លងកាត់ថតចម្លងឡើងវិញ
 
  # អាននេះជាភាសាផ្សេង
  ឯកសារ README.md នេះត្រូវបានបកប្រែ ដោយប្រើឧបករណ៍ hokeylization ខ្លួនវាចូលទៅក្នុង
@@ -61,6 +69,7 @@ Hokeylization
  * [ការបកប្រែឯកសារប្រភព JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [ការបកប្រែថតឯកសារអត្ថបទ](#Translating-a-directory-of-text-files)
  * [ជម្រើសផ្សេងទៀត](#ជម្រើសផ្សេងទៀត)
+ * [ពាក្យបញ្ជាបាច់ JSON](#JSON-batch-commands)
 
  ## ប្រភព
  * [hokeylization នៅលើ GitHub](https://github.com/cobbzilla/hokeylization)
@@ -270,6 +279,88 @@ Hokeylization
  ### ជួយ
  ប្រើ `-h` / `--help` ដើម្បីបង្ហាញជំនួយ
 
- ## រីករាយក្នុងការបកប្រែភាសា!
+ ## ពាក្យបញ្ជាបាច់ JSON
+ ជាមួយនឹងជម្រើស `-j` / `--json` អ្នកអាចដំណើរការពាក្យបញ្ជា `hokey` ដែលបានសម្របសម្រួលច្រើន។
+
+ តាមអនុសញ្ញាឯកសារនេះត្រូវបានគេហៅថា `hokey.json` ប៉ុន្តែអ្នកអាចដាក់ឈ្មោះវាតាមដែលអ្នកចង់បាន
+
+ ប្រសិនបើអ្នកឆ្លងកាត់ថតជាជម្រើស ` `-j` នោះ `hokey` នឹងស្វែងរក `hokey.json` នៅក្នុងថតនោះ
+
+ ឯកសារ JSON គួរតែមានវត្ថុមួយ។ នៅក្នុងវត្ថុនោះ ឈ្មោះទ្រព្យសម្បត្តិរបស់វាគឺដូចគ្នាទៅនឹង
+ ជម្រើសបន្ទាត់ពាក្យបញ្ជា បូកនឹងទ្រព្យសម្បត្តិបន្ថែមមួយដែលមានឈ្មោះថា `hokey`
+
+ លក្ខណៈសម្បត្តិ `hokey` គឺជាអារេនៃពាក្យបញ្ជាដែលត្រូវដំណើរការ។ លក្ខណៈសម្បត្តិដែលបានប្រកាសនៅក្នុងពាក្យបញ្ជាទាំងនេះនឹង
+ បដិសេធការប្រកាសស្ទួនណាមួយនៅក្នុងវត្ថុខាងក្រៅ។
+
+ នៅក្នុងវត្ថុនីមួយៗក្នុងអារេ `hokey` អ្នកគួរតែបញ្ជាក់ `name` និងឯកសារបញ្ចូល និងលទ្ធផល
+
+ នេះគឺជាឧទាហរណ៍នៃ `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### ឯកសារបញ្ចូលច្រើន។
+ ឆ្លងកាត់អារេនៃផ្លូវឯកសារជា `infiles` ជំនួសឱ្យផ្លូវតែមួយ `infile` ដូចក្នុងឧទាហរណ៍នេះ៖
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### សន្ទស្សន៍
+ នៅពេលបកប្រែទៅជាភាសាជាច្រើន `hokey` អាចបង្កើតឯកសារលិបិក្រមដែលរាយបញ្ជីការបកប្រែទាំងអស់ដែលបានធ្វើ
+ និងផ្តល់តំណភ្ជាប់ទៅពួកគេ។
+
+ *នៅពេលបង្កើតលិបិក្រម អ្នកអាចមានប្រភពបញ្ចូលតែមួយគត់*
+
+ ឆ្លងកាត់ជម្រើស `-I` / `--index` តម្លៃគឺជាកន្លែងដែលឯកសារលិបិក្រមនឹងត្រូវបានបង្កើត ដែលអាចជាឯកសារ
+ ឬថតឯកសារ។ ប្រសិនបើវាជាថត ឈ្មោះឯកសារលំនាំដើមនឹងត្រូវបានប្រើ ដោយផ្អែកលើគំរូ (សូមមើលខាងក្រោម)
+
+ ប្រើ `-A` / `--index-template` ដើម្បីកំណត់ពីរបៀបដែលលទ្ធផលលិបិក្រមត្រូវបានធ្វើទ្រង់ទ្រាយ។ អ្នកអាចបញ្ជាក់ 'html',
+ 'markdown', 'text' ឬផ្លូវឯកសារទៅកាន់គំរូ [HandlebarsJS](https://handlebarsjs.com/) ផ្ទាល់ខ្លួនរបស់អ្នក
+
+ ប្រសិនបើអ្នកបញ្ជាក់គំរូផ្ទាល់ខ្លួនរបស់អ្នក អ្នកក៏ត្រូវតែបញ្ជាក់ឯកសារ (មិនមែនជាថត) សម្រាប់ `-I` / `--index`
+ ជម្រើស
+
+ ## សូមរីករាយក្នុងការបកប្រែភាសា!
 
 </pre>

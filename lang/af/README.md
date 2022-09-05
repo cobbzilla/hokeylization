@@ -1,12 +1,20 @@
 Hokielisering
  ==============
- Die naam is 'n portmanteau, wat 'hokey lokalisering' beteken
+ Hoekom kan ek nie my hele toepassing of werf deur Google Translate laat loop en 'n basiese vertaling in 'n ander taal kry nie?
 
- Dit is hokey, want dit is baie eenvoudig: dit stuur stringe na Google Translate
+ ***Nou kan jy!***
+
+ Die naam `hokeylization` is 'n portmanteau, wat "hokey lokalisering" beteken
+
+ Dit is ietwat hokey, want dit is baie eenvoudig: dit stuur stringe na Google Translate
+
+ En dit is eenvoudig, maar ook baie kragtig. Dit het spesiale ondersteuning vir HTML-dokumente,
+ [HandlebarsJS](https://handlebarsjs.com/) sjablone,
+ en [Markdown](https://daringfireball.net/projects/markdown) lêers.
 
  Jy kan vertaal:
  * 'n JavaScript-objek wat boodskappe bevat
- * 'n gids van lêers, rekursief
+ * enige aantal lêers of gidse, altyd deur dopgehou rekursief
 
  # Lees dit in 'n ander taal
  Hierdie README.md-dokument is met behulp van die hokeylisasie-instrument self vertaal in
@@ -61,6 +69,7 @@ Hokielisering
  * [Vertaal 'n JavaScript-string-hulpbronlêer](#Translating-a-JavaScript-string-resource-file)
  * [Vertaal 'n gids van tekslêers](#Translating-a-directory-of-text-files)
  * [Ander opsies](#Ander-opsies)
+ * [JSON-joernaalopdragte](#JSON-batch-opdragte)
 
  ## Bron
  * [hokeylization op GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokielisering
 
  ### Hulp
  Gebruik `-h` / `--help` om hulp te wys
+
+ ## JSON joernaal opdragte
+ Met die `-j` / `--json` opsie, kan jy verskeie gekoördineerde `hokey` opdragte uitvoer
+
+ Volgens konvensie word hierdie lêer `hokey.json` genoem, maar jy kan dit noem wat jy wil
+
+ As jy 'n gids as die `-j` opsie deurgee, sal `hokey` vir 'n `hokey.json` in daardie gids soek
+
+ Die JSON-lêer moet een voorwerp bevat. Binne daardie voorwerp is sy eiendomsname dieselfde as
+ die opdragreëlopsies, plus een bykomende eiendom genaamd `hokey`
+
+ Die `hokey` eienskap is 'n reeks opdragte om uit te voer. Die eiendomme wat binne hierdie opdragte verklaar word, sal
+ ignoreer enige duplikaatverklarings in die buitenste voorwerp.
+
+ Binne elke voorwerp in die `hokey` skikking moet jy 'n `name` en die invoer- en uitvoerlêers spesifiseer
+
+ Hier is 'n voorbeeld van 'n `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Veelvuldige invoerlêers
+ Slaag 'n verskeidenheid lêerpaaie as `infiles` in plaas van 'n enkele pad `infile` , soos in hierdie voorbeeld:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indekse
+ Wanneer jy na baie tale vertaal, kan `hokey` 'n indekslêer skep wat al die vertalings wat gemaak is, lys
+ en verskaf skakels na hulle
+
+ *Wanneer u indekse genereer, kan u slegs een invoerbron hê*
+
+ Slaag die `-I` / `--index` opsie, die waarde is waar die indekslêer gegenereer sal word, wat 'n lêer kan wees
+ of 'n gids. As dit 'n gids is, sal 'n verstek lêernaam gebruik word, gebaseer op die sjabloon (sien hieronder)
+
+ Gebruik die `-A` / `--index-template` om te bepaal hoe die indeksuitvoer geformateer word. Jy kan 'html' spesifiseer,
+ 'markdown', 'text', of die lêerpad na jou eie [HandlebarsJS](https://handlebarsjs.com/) sjabloon
+
+ As jy jou eie sjabloon spesifiseer, moet jy ook 'n lêer (nie 'n gids nie) spesifiseer vir die `-I` / `--index`
+ opsie
 
  ## Geniet dit om tale te vertaal!
 

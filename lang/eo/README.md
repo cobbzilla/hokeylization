@@ -1,12 +1,20 @@
 Hokeylization
  ==============
- La nomo estas miksvorto, kun la signifo "hokey-loko"
+ Kial mi ne povas ruli mian tutan apon aŭ retejon per Google Translate kaj ricevi bazan tradukon en alia lingvo?
 
- Ĝi estas hokey ĉar ĝi estas tre simpla: ĝi sendas ŝnurojn al Google Translate
+ ***Nun, vi povas!***
+
+ La nomo `hokeylization` estas miksvorto, kun la signifo "hokeylokigo"
+
+ Ĝi estas iom hokeca ĉar ĝi estas tre simpla: ĝi sendas ŝnurojn al Google Translate
+
+ Kaj ĝi estas simpla, sed ankaŭ tre potenca. Ĝi havas specialan subtenon por HTML-dokumentoj,
+ [HandlebarsJS](https://handlebarsjs.com/) ŝablonoj,
+ kaj [Markdown](https://daringfireball.net/projects/markdown) dosieroj.
 
  Vi povas traduki:
  * JavaScript objekto enhavanta mesaĝojn
- * dosierujo de dosieroj, rekursie
+ * ajna nombro da dosieroj aŭ dosierujoj, ĉiam trairante dosierujojn rekursie
 
  # Legu ĉi tion en alia lingvo
  Ĉi tiu dokumento README.md estis tradukita, uzante la hokeylization ilo mem, en
@@ -61,6 +69,7 @@ Hokeylization
  * [Tradukado de JavaScript-ŝnura rimeda dosiero](#Translating-a-JavaScript-string-resource-file)
  * [Tradukado de dosierujo de tekstaj dosieroj](#Translating-a-directory-of-text-files)
  * [Aliaj opcioj](#Aliaj-opcioj)
+ * [JSON-aroj-komandoj](#JSON-ataj-komandoj)
 
  ## Fonto
  * [hokeylization sur GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Helpu
  Uzu `-h` / `--help` por montri helpon
+
+ ## JSON-araj komandoj
+ Kun la `-j` / `--json` , vi povas ruli plurajn kunordigitajn `hokey` komandojn
+
+ Laŭ konvencio ĉi tiu dosiero nomiĝas `hokey.json` , sed vi povas nomi ĝin kiel ajn vi volas
+
+ Se vi pasas dosierujon kiel la opcion ` `-j` , `hokey` serĉos `hokey.json` en tiu dosierujo
+
+ La JSON-dosiero devus enhavi unu objekton. Ene de tiu objekto, ĝiaj posednomoj estas la sama kiel
+ la komandliniaj opcioj, plus unu kroma posedaĵo nomita `hokey`
+
+ La posedaĵo `hokey` estas tabelo de ordonoj por ruli. La propraĵoj deklaritaj ene de ĉi tiuj komandoj faros
+ superregi iujn duplikatajn deklarojn en la ekstera objekto.
+
+ Ene de ĉiu objekto en la tabelo `hokey` , vi devus specifi `name` , kaj la enigajn kaj eligajn dosierojn
+
+ Jen ekzemplo de `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Multoblaj enigdosieroj
+ Transdonu tabelon de dosiervojoj kiel `infiles` anstataŭ ununura vojo `infile` , kiel en ĉi tiu ekzemplo:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeksoj
+ Tradukante al multaj lingvoj, `hokey` povas krei indeksan dosieron kiu listigas ĉiujn tradukaĵojn faritajn.
+ kaj provizas ligilojn al ili
+
+ * Generante indeksojn, vi povas havi nur unu enigfonton*
+
+ Transiru la `-I` / `--index` , la valoro estas kie la indeksa dosiero estos generita, kiu povas esti dosiero
+ aŭ dosierujo. Se ĝi estas dosierujo, defaŭlta dosiernomo estos uzata, surbaze de la ŝablono (vidu sube)
+
+ Uzu la `-A` / `--index-template` por determini kiel la indeksa eligo estas formatita. Vi povas specifi 'html',
+ 'markdown', 'teksto' aŭ la dosiervojo al via propra ŝablono [HandlebarsJS](https://handlebarsjs.com/).
+
+ Se vi specifas vian propran ŝablonon, vi ankaŭ devas specifi dosieron (ne dosierujon) por la `-I` / `--index`
+ opcio
 
  ## Amuziĝu tradukante lingvojn!
 

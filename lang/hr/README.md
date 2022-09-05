@@ -1,12 +1,20 @@
 Hokeilizacija
  ==============
- Naziv je portmanteau, što znači 'lokalizacija hokeja'
+ Zašto ne mogu pokrenuti cijelu svoju aplikaciju ili web-lokaciju putem Google prevoditelja i dobiti osnovni prijevod na drugom jeziku?
 
- Šaljivo je jer je vrlo jednostavno: šalje nizove Google prevoditelju
+ ***Sada možeš!***
+
+ Naziv `hokeylization` je portmanteau, što znači 'lokalizacija hokeja'
+
+ Pomalo je šaljivo jer je vrlo jednostavno: šalje nizove Google prevoditelju
+
+ I jednostavan je, a opet vrlo moćan. Ima posebnu podršku za HTML dokumente,
+ [HandlebarsJS](https://handlebarsjs.com/) predlošci,
+ i [Markdown](https://daringfireball.net/projects/markdown) datoteke.
 
  Možete prevesti:
  * JavaScript objekt koji sadrži poruke
- * direktorij datoteka, rekurzivno
+ * bilo koji broj datoteka ili direktorija, uvijek rekurzivno prolazeći direktorije
 
  # Pročitajte ovo na drugom jeziku
  Ovaj dokument README.md preveden je pomoću samog alata za hokeilizaciju na
@@ -61,6 +69,7 @@ Hokeilizacija
  * [Prijevod datoteke resursa JavaScript niza](#Translating-a-JavaScript-string-resource-file)
  * [Prijevod direktorija tekstualnih datoteka](#Translating-a-directory-of-text-files)
  * [Ostale opcije](#Other-options)
+ * [JSON batch naredbe](#JSON-batch-commands)
 
  ## Izvor
  * [hokeylizacija na GitHubu](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeilizacija
 
  ### Pomozite
  Koristite `-h` / `--help` za prikaz pomoći
+
+ ## JSON skupne naredbe
+ S `-j` / `--json` možete pokrenuti više koordiniranih naredbi `hokey`
+
+ Prema konvenciji ova se datoteka zove `hokey.json` , ali je možete nazvati kako god želite
+
+ Ako proslijedite direktorij kao opciju `-j` , `hokey` će tražiti `hokey.json` u tom direktoriju
+
+ JSON datoteka treba sadržavati jedan objekt. Unutar tog objekta, nazivi njegovih svojstava su isti kao
+ opcije naredbenog retka, plus jedno dodatno svojstvo pod nazivom `hokey`
+
+ `hokey` je niz naredbi za pokretanje. Svojstva deklarirana unutar ovih naredbi će
+ nadjačati sve duple deklaracije u vanjskom objektu.
+
+ Unutar svakog objekta u nizu `hokey` trebate navesti `name` te ulazne i izlazne datoteke
+
+ Evo primjera `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Više ulaznih datoteka
+ Proslijedite niz staza datoteka kao `infiles` umjesto jedne staze `infile` , kao u ovom primjeru:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeksi
+ Kada prevodite na mnoge jezike, `hokey` može stvoriti indeksnu datoteku koja navodi sve napravljene prijevode
+ i daje poveznice na njih
+
+ *Prilikom generiranja indeksa, možete imati samo jedan izvor unosa*
+
+ Proslijedite opciju `-I` / `--index` , vrijednost je mjesto gdje će se generirati indeksna datoteka, koja može biti datoteka
+ ili imenik. Ako se radi o direktoriju, koristit će se zadani naziv datoteke na temelju predloška (pogledajte dolje)
+
+ Upotrijebite `-A` / `--index-template` da odredite kako je formatiran izlaz indeksa. Možete navesti 'html',
+ 'markdown', 'text' ili put datoteke do vlastitog predloška [HandlebarsJS](https://handlebarsjs.com/)
+
+ Ako navedete vlastiti predložak, morate također navesti datoteku (ne direktorij) za `-I` / `--index`
+ opcija
 
  ## Zabavite se prevodeći jezike!
 

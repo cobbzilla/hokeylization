@@ -1,12 +1,20 @@
 Hokeylization
  ==============
- U nome hè un portmanteau, chì significa "localizzazione hokey".
+ Perchè ùn possu micca eseguisce tutta a mo app o u situ cù Google Translate è avè una traduzzione basica in una altra lingua ?
 
- Hè hokey perchè hè assai simplice: manda strings à Google Translate
+ *** Avà, pudete ! ***
+
+ U nome `hokeylization` hè un portmanteau, chì significa "localizzazione hokey"
+
+ Hè un pocu hokey perchè hè assai simplice: manda strings à Google Translate
+
+ È hè simplice, ma ancu assai putente. Hà un supportu speciale per i documenti HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) mudelli,
+ è [Markdown](https://daringfireball.net/projects/markdown) schedarii.
 
  Pudete traduce:
  * un ughjettu JavaScript chì cuntene missaghji
- * un repertoriu di schedari, recursivamente
+ * qualsiasi numeru di fugliali o cartulari, sempre traversendu i cartulari in modu recursivo
 
  # Leghjite questu in un'altra lingua
  Stu documentu README.md hè statu traduttu, utilizendu l'uttellu di hokeylization stessu, in
@@ -59,8 +67,9 @@ Hokeylization
  * [Installazione](#Installazione)
  * [Configurazione](#Configurazione)
  * [Traduzzione di un schedariu di risorse di stringa JavaScript](#Translating-a-JavaScript-string-resource-file)
- * [Traduzzione di un repertoriu di schedarii di testu](#Traduzzione-di-directory-of-text-files)
+ * [Traduzzione di un repertoriu di schedarii di testu](#Translating-a-directory-of-text-files)
  * [Altre opzioni](#Altre-opzioni)
+ * [Cumandamenti in batch JSON](#JSON-batch-commands)
 
  ## Fonte
  * [hokeylization in GitHub](https://github.com/cobbzilla/hokeylization)
@@ -249,7 +258,7 @@ Hokeylization
  * Un wrapper "senza traduzzione" serà piazzatu intornu à u testu in `backticks` per assicurà chì ùn sò micca tradutti
 
  ### Prucessu-as
- Normalmente tuttu hè trattatu cum'è testu chjaru
+ Di solitu tuttu hè trattatu cum'è testu chjaru
 
  Se u vostru cuntenutu hè HTML, serà sguassatu à menu chì ùn passate l' `-p html` / `--process-as html`
 
@@ -257,7 +266,7 @@ Hokeylization
  Per l'avventurosi: quandu processate i schedari in un cartulare, pudete passà l' `-F` / `--filter`
  per filtrà l'output prima ch'ellu sia scrittu à u filesystem
 
- U valore di sta opzione deve esse una strada per un schedariu JS chì esporta una funzione chjamata `filter`
+ U valore di sta opzione deve esse una strada à un schedariu JS chì esporta una funzione chjamata `filter`
 
  A funzione `filter` deve esse `async` perchè `await` serà chjamatu
 
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Aiutu
  Aduprate `-h` / `--help` per mustrà l'aiutu
+
+ ## Cumandamenti in batch JSON
+ Cù l' `-j` / `--json` , pudete eseguisce parechje cumandamenti `hokey` coordinati
+
+ Per cunvenzione stu schedariu hè chjamatu `hokey.json` , ma pudete chjamà ciò chì vulete
+
+ Se passate un repertoriu cum'è l'opzione ` `-j` , `hokey` un `hokey.json` in quellu repertoriu
+
+ U schedariu JSON deve cuntene un oggettu. Dentru quellu ughjettu, i so nomi di pruprietà sò listessi
+ l'opzioni di linea di cumanda, più una pruprietà addiziale chjamata `hokey`
+
+ A pruprietà `hokey` hè una matrice di cumandamenti per eseguisce. E proprietà dichjarate in questi cumandamenti seranu
+ annullà qualsiasi dichjarazioni duplicate in l'ughjettu esternu.
+
+ Dentru ogni ughjettu in l'array `hokey` , duvete specificà un `name` , è i schedarii di input è output.
+
+ Eccu un esempiu di `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Diversi schedarii di input
+ Passa una matrice di percorsi di file cum'è `infiles` invece di una sola strada `infile` , cum'è in questu esempiu:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indici
+ Quandu traduce in parechje lingue, `hokey` pò creà un schedariu d'indici chì lista tutte e traduzioni fatte.
+ è furnisce ligami per elli
+
+ * Quandu generà indici, pudete avè una sola fonte di input *
+
+ Passa l' `-I` / `--index` , u valore hè induve u schedariu d'indici serà generatu, chì pò esse un schedariu
+ o un annuariu. S'ellu hè un cartulare, un nome di file predeterminatu serà utilizatu, basatu annantu à u mudellu (vede quì sottu)
+
+ Aduprate u `-A` / `--index-template` per determinà cumu u furmatu di l'indici hè furmatu. Pudete specificà "html",
+ 'markdown', 'text', o u percorsu di u schedariu à u vostru propiu mudellu [HandlebarsJS](https://handlebarsjs.com/)
+
+ Se specificate u vostru propiu mudellu, deve ancu specificà un schedariu (micca un cartulare) per u `-I` / `--index`
+ opzione
 
  ## Divertitevi à traduce e lingue!
 

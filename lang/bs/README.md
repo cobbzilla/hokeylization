@@ -1,12 +1,20 @@
 Hokeilizacija
  =============
- Ime je portmanteau, što znači 'hokey lokalizacija'
+ Zašto ne mogu pokrenuti cijelu svoju aplikaciju ili web lokaciju putem Google Translatea i dobiti osnovni prijevod na drugom jeziku?
 
- To je šaljivo jer je vrlo jednostavno: šalje stringove Google Translateu
+ ***Sada možeš!***
+
+ Naziv `hokeylization` je portmanteau, što znači "hokey lokalizacija"
+
+ Pomalo je zeznuto jer je vrlo jednostavno: šalje stringove Google Translateu
+
+ I jednostavan je, ali i veoma moćan. Ima posebnu podršku za HTML dokumente,
+ [HandlebarsJS](https://handlebarsjs.com/) predlošci,
+ i datoteke [Markdown](https://daringfireball.net/projects/markdown).
 
  Možete prevesti:
  * JavaScript objekat koji sadrži poruke
- * direktorij datoteka, rekurzivno
+ * bilo koji broj datoteka ili direktorija, uvijek prelazeći direktorije rekurzivno
 
  # Pročitajte ovo na drugom jeziku
  Ovaj README.md dokument je preveden, koristeći sam alat za hokeilizaciju, u
@@ -61,6 +69,7 @@ Hokeilizacija
  * [Prevođenje datoteke resursa sa JavaScript stringom](#Translating-a-JavaScript-string-resource-file)
  * [Prevođenje direktorija tekstualnih datoteka](#Translating-a-directory-of-text-files)
  * [Ostale opcije](#Ostale-opcije)
+ * [JSON batch komande](#JSON-batch-commands)
 
  ## Izvor
  * [hokeylization na GitHub](https://github.com/cobbzilla/hokeylization)
@@ -211,12 +220,12 @@ Hokeilizacija
  Možda nećete uvijek htjeti prevesti *svaku* datoteku u vašem izvornom direktoriju u ciljni direktorij
 
  Vrijednost opcije `-m` / `--match` je regex (pazite na pravila navođenja ljuske!) koji specificira
- koje datoteke treba prevesti
+ koje fajlove treba prevesti
 
  Kada ste u nedoumici, možete kombinirati ovu opciju sa `-n` / `--dry-run` da vidite koje datoteke će biti prevedene
 
  ### Isključuje
- Ponekad vaš `-m` odgovara previše datoteka. Koristite opciju `-e` / `--excludes` za eksplicitno izuzimanje
+ Ponekad vaš `-m` odgovara previše fajlova. Koristite opciju `-e` / `--excludes` za eksplicitno izuzimanje
  datoteke koje bi se inače podudarale
 
  Možete navesti više regularnih izraza, razdvojenih razmacima
@@ -257,7 +266,7 @@ Hokeilizacija
  Za avanturiste: kada obrađujete datoteke u direktoriju, možete proslijediti opciju `-F` / `--filter`
  za filtriranje izlaza prije nego što se upiše u sistem datoteka
 
- Vrijednost ove opcije mora biti putanja do JS datoteke koja izvozi funkciju pod nazivom `filter`
+ Vrijednost ove opcije mora biti put do JS datoteke koja izvozi funkciju pod nazivom `filter`
 
  Funkcija `filter` mora biti `async` jer će `await` biti pozvana na njoj
 
@@ -269,6 +278,88 @@ Hokeilizacija
 
  ### Pomoć
  Koristite `-h` / `--help` za prikaz pomoći
+
+ ## JSON skupne naredbe
+ Sa `-j` / `--json` , možete pokrenuti više koordinisanih `hokey` komandi
+
+ Po konvenciji se ovaj fajl zove `hokey.json` , ali ga možete imenovati kako god želite
+
+ Ako prosledite direktorijum kao opciju `-j` , `hokey` će tražiti `hokey.json` u tom direktoriju
+
+ JSON fajl treba da sadrži jedan objekat. Unutar tog objekta, imena njegovih svojstava su ista kao
+ opcije komandne linije, plus jedno dodatno svojstvo pod nazivom `hokey`
+
+ Svojstvo `hokey` je niz naredbi za pokretanje. Svojstva deklarisana unutar ovih naredbi će
+ nadjačati sve duple deklaracije u vanjskom objektu.
+
+ Unutar svakog objekta u nizu `hokey` , trebali biste navesti `name` i ulazne i izlazne datoteke
+
+ Evo primjera `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Višestruki ulazni fajlovi
+ Proslijedite niz putanja datoteka kao `infiles` umjesto jedne staze `infile` , kao u ovom primjeru:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeksi
+ Prilikom prevođenja na mnoge jezike, `hokey` može kreirati indeksni fajl koji navodi sve prijevode napravljene
+ i pruža veze do njih
+
+ *Prilikom generisanja indeksa, možete imati samo jedan izvor unosa*
+
+ Prenesite opciju `-I` / `--index` , vrijednost je mjesto gdje će se generirati indeksna datoteka, što može biti datoteka
+ ili imenik. Ako je to direktorij, koristit će se zadani naziv datoteke, na osnovu predloška (pogledajte dolje)
+
+ Koristite `-A` / `--index-template` da odredite kako je formatiran izlaz indeksa. Možete odrediti 'html',
+ 'markdown', 'text' ili putanja datoteke do vašeg vlastitog [HandlebarsJS](https://handlebarsjs.com/) predloška
+
+ Ako navedete svoj vlastiti predložak, također morate navesti datoteku (ne direktorij) za `-I` / `--index`
+ opcija
 
  ## Zabavite se prevodeći jezike!
 

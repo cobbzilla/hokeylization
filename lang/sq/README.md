@@ -1,12 +1,20 @@
 Hokeylizimi
  ==============
- Emri është një portmanto, që do të thotë 'lokalizimi i hokey'
+ Pse nuk mund ta ekzekutoj të gjithë aplikacionin ose sajtin tim përmes Google Translate dhe të marr një përkthim bazë në një gjuhë tjetër?
 
- Është e bukur sepse është shumë e thjeshtë: dërgon vargje në Google Translate
+ ***Tani mundesh!***
+
+ Emri `hokeylization` është një portmanteau, që do të thotë "lokalizimi i hokey"
+
+ Është disi e këndshme sepse është shumë e thjeshtë: dërgon vargje në Google Translate
+
+ Dhe është e thjeshtë, por edhe shumë e fuqishme. Ka mbështetje të veçantë për dokumentet HTML,
+ Modelet e [HandlebarsJS](https://handlebarsjs.com/),
+ dhe skedarët [Markdown](https://daringfireball.net/projects/markdown).
 
  Ju mund të përktheni:
  * një objekt JavaScript që përmban mesazhe
- * një drejtori skedarësh, në mënyrë rekursive
+ * çdo numër skedarësh ose drejtorish, gjithmonë duke përshkuar drejtoritë në mënyrë rekursive
 
  # Lexojeni këtë në një gjuhë tjetër
  Ky dokument README.md është përkthyer, duke përdorur vetë mjetin hokeylization, në
@@ -61,6 +69,7 @@ Hokeylizimi
  * [Përkthimi i skedarit të burimit të vargut JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Përkthimi i një drejtorie skedarësh teksti](#Translating-a-directory-of-text-files)
  * [Opsione të tjera](#Other-options)
+ * [JSON komandat e grupit](#JSON-batch-commands)
 
  ## Burimi
  * [hokeylization në GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylizimi
 
  ### Ndihmë
  Përdorni `-h` / `--help` për të treguar ndihmë
+
+ ## komandat e grupit JSON
+ Me `-j` / `--json` , mund të ekzekutoni komanda të shumta të koordinuara `hokey`
+
+ Sipas konventës, ky skedar quhet `hokey.json` , por ju mund ta emërtoni si të dëshironi
+
+ Nëse kaloni një direktori si opsioni `-j` , `hokey` do të kërkojë një `hokey.json` në atë direktori
+
+ Skedari JSON duhet të përmbajë një objekt. Brenda atij objekti, emrat e pronave të tij janë të njëjtë me
+ opsionet e linjës së komandës, plus një veçori shtesë të quajtur `hokey`
+
+ `hokey` është një grup komandash për t'u ekzekutuar. Vetitë e deklaruara brenda këtyre komandave do të
+ anashkaloni çdo deklaratë dublikate në objektin e jashtëm.
+
+ Brenda çdo objekti në grupin `hokey` , duhet të specifikoni një `name` dhe skedarët e hyrjes dhe daljes
+
+ Këtu është një shembull i një `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Skedarë të shumtë hyrës
+ Kaloni një grup shtigash skedarësh si `infiles` në vend të një shteg të vetëm `infile` , si në këtë shembull:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indekset
+ Kur përkthen në shumë gjuhë, `hokey` mund të krijojë një skedar indeksi që liston të gjitha përkthimet e bëra
+ dhe ofron lidhje me to
+
+ *Kur gjeneroni indekse, mund të keni vetëm një burim hyrje*
+
+ Kaloni `-I` / `--index` , vlera është vendi ku do të gjenerohet skedari i indeksit, i cili mund të jetë një skedar
+ ose një drejtori. Nëse është një drejtori, do të përdoret një emër skedari i paracaktuar, bazuar në shabllonin (shih më poshtë)
+
+ Përdorni `-A` " / `--index-template` për të përcaktuar se si është formatuar dalja e indeksit. Ju mund të specifikoni 'html',
+ 'shënjimi', 'teksti' ose shtegu i skedarit drejt shabllonit tuaj [HandlebarsJS](https://handlebarsjs.com/)
+
+ Nëse specifikoni shabllonin tuaj, duhet të specifikoni gjithashtu një skedar (jo një drejtori) për `-I` " / `--index`
+ opsion
 
  ## Kalofshi bukur duke përkthyer gjuhë!
 

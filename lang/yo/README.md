@@ -1,12 +1,20 @@
 Hokeyylization
  ===========
- Orukọ naa jẹ portmanteau, itumo 'isọdibilẹ hokey'
+ Kini idi ti MO ko le ṣiṣẹ gbogbo app tabi aaye mi nipasẹ Google Tumọ ati gba itumọ ipilẹ ni ede miiran?
 
- O jẹ hokey nitori pe o rọrun pupọ: o fi awọn okun ranṣẹ si Google Translate
+ *** Bayi, o le! ***
+
+ Orukọ `hokeylization` jẹ portmanteau, itumo 'isọdibilẹ hokey'
+
+ O jẹ hokey diẹ nitori pe o rọrun pupọ: o fi awọn okun ranṣẹ si Google Translate
+
+ Ati pe o rọrun, sibẹsibẹ tun lagbara pupọ. O ni atilẹyin pataki fun awọn iwe HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) awọn awoṣe,
+ ati [Markdown](https://daringfireball.net/projects/markdown) awọn faili.
 
  O le tumọ:
  * ohun JavaScript ti o ni awọn ifiranṣẹ ninu
- * itọsọna ti awọn faili, loorekoore
+ * nọmba eyikeyi ti awọn faili tabi awọn ilana, nigbagbogbo lilọ kiri awọn ilana loorekoore
 
  # Ka eyi ni ede miiran
  Iwe README.md yii ti ni itumọ, ni lilo ohun elo hokeylization funrararẹ, sinu
@@ -61,6 +69,7 @@ Hokeyylization
  * [Titumọ faili orisun okun JavaScript kan](#Translating-a-JavaScript-string-resource-file)
  * [Titumọ iwe ilana ti awọn faili ọrọ](#Translating-a-directory-of-text-files)
  * [Awọn aṣayan miiran](#Awọn aṣayan miiran)
+ * [Awọn pipaṣẹ ipele JSON](#JSON-batch-commands)
 
  ## Orisun
  * [hokeylization lori GitHub](https://github.com/cobbzilla/hokeylization)
@@ -239,11 +248,11 @@ Hokeyylization
  * Awọn ọna asopọ ti o bajẹ. Ninu itumọ, kikọ aaye kan han lẹhin apejuwe ọna asopọ isamisi ti pari (pẹlu `]` ) ṣugbọn
  ṣaaju ki ọna asopọ ibi-afẹde rẹ to bẹrẹ (pẹlu `(` ) Eyi fa isamisi lati ṣe ti ko tọ, ati ọna asopọ naa
  ti bajẹ nigba wiwo iwe-ipamọ naa.
- * Awọn bulọọki koodu ni itumọ. Google sélédemírán kò mọ ohun ti isamisi ka koodu ati ohun ti o ko
+ * Awọn bulọọki koodu ni itumọ. Google tumọ ko mọ kini isamisi ka koodu ati ohun ti kii ṣe
  * Aye ti ko tọ fun awọn bulọọki koodu indented. Aaye jẹ soro lati tọju ni itumọ
  * Awọn nkan inu `backticks` yoo ni itumọ, nigbati o fẹrẹ fẹ nigbagbogbo lati jẹ awọn iye gidi
 
- Nigbati `-M` / `--markdown` ti ṣiṣẹ:
+ Nigbati `-M` / `--markdown` wa ni sise:
  * Apẹrẹ `](` yoo jẹ dipọ si `](` nitorinaa atunṣe awọn ọna asopọ isamisi ti o bajẹ
  * Ohun ipari “ko si itumọ” ni yoo gbe ni ayika awọn bulọọki koodu indented, titọju ifisilẹ to dara ati rii daju pe wọn ko tumọ
  * A yoo gbe iwe-itumọ “ko si itumọ” ni ayika ọrọ laarin `backticks` lati rii daju pe wọn ko tumọ wọn
@@ -251,24 +260,106 @@ Hokeyylization
  ### Ilana-bi
  Ni deede ohun gbogbo ti ni ilọsiwaju bi ọrọ itele
 
- Ti akoonu rẹ ba jẹ HTML, yoo jẹ titọ ayafi ti o ba kọja `-p html` / `--process-as html`
+ Ti àkóónú rẹ ba jẹ HTML, yoo jẹ titọ ayafi ti o ba kọja `-p html` / `--process-as html`
 
  ### Ajọ
  Fun adventurous: nigba ṣiṣe awọn faili ni ilana, o le kọja `-F` / `--filter`
  lati ṣe àlẹmọ iṣelọpọ ṣaaju ki o to kọ ọ si eto faili
 
- Iye aṣayan yii gbọdọ jẹ ọna si faili JS ti o ṣe okeere iṣẹ kan ti a npè ni `filter`
+ Iye aṣayan yii gbọdọ jẹ ọna si faili JS kan ti o ṣe okeere iṣẹ kan ti a npè ni `filter`
 
  Iṣẹ `filter` gbọdọ jẹ `async` ' nitori a yoo pe `await` sori rẹ
 
- Ṣaaju ki o to kọ awọn faili si disiki, gbogbo akoonu faili yoo kọja si iṣẹ `filter` gẹgẹbi okun
+ Ṣaaju ki o to kọ awọn faili si disk, gbogbo akoonu faili yoo kọja si iṣẹ `filter` gẹgẹbi okun
 
  Iye ipadabọ lati iṣẹ `filter` jẹ ohun ti yoo kọ gangan si ibi ipamọ
 
  Nitorinaa, o ni iṣakoso lapapọ lori ohun ti yoo kọ nikẹhin
 
  ### Egba Mi O
- Lo `-h` / `--help` lati fi iranlọwọ han
+ Lo `-h` / `--help` lati ṣe afihan iranlọwọ
+
+ ## JSON ipele pipaṣẹ
+ Pẹlu `-j` / `--json` , o le ṣiṣẹ ọpọlọpọ awọn pipaṣẹ `hokey` a ti ṣeto pọ si
+
+ Nipa apejọpọ faili yii ni a pe ni `hokey.json` , ṣugbọn o le lorukọ rẹ ohunkohun ti o fẹ
+
+ Ti o ba kọja itọsọna kan bi aṣayan ` `-j` , `hokey` yoo wa `hokey.json` ninu iwe ilana yẹn
+
+ Faili JSON yẹ ki o ni nkan kan ninu. Laarin nkan yẹn, awọn orukọ ohun-ini rẹ jẹ kanna bii
+ awọn aṣayan ila-aṣẹ, pẹlu ohun-ini afikun kan ti a npè ni `hokey`
+
+ Ohun-ini `hokey` jẹ ọpọlọpọ awọn aṣẹ lati ṣiṣẹ. Awọn ohun-ini ti a sọ laarin awọn aṣẹ wọnyi yoo
+ fagilee eyikeyi awọn ikede ẹda-ẹda ninu ohun ita.
+
+ Ninu ohun kọọkan ninu `hokey` , o yẹ ki o pato `name` , ati titẹ sii ati awọn faili iṣelọpọ
+
+ Eyi jẹ apẹẹrẹ ti `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Awọn faili titẹ sii lọpọlọpọ
+ Kọja ọpọlọpọ awọn ọna faili bi `infiles` dipo ọna `infile` , bi ninu apẹẹrẹ yii:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Awọn atọka
+ Nigbati o ba n tumọ si ọpọlọpọ awọn ede, `hokey` le ṣẹda faili atọka ti o ṣe atokọ gbogbo awọn itumọ ti a ṣe
+ ati pese awọn ọna asopọ si wọn
+
+ * Nigbati o ba n ṣẹda awọn atọka, o le ni orisun titẹ sii kan ṣoṣo*
+
+ Kọja aṣayan `-I` / `--index` , iye naa wa nibiti faili atọka yoo ti ṣe ipilẹṣẹ, eyiti o le jẹ faili kan
+ tabi a liana. Ti o ba jẹ itọsọna kan, orukọ faili aiyipada yoo ṣee lo, da lori awoṣe (wo isalẹ)
+
+ Lo `-A` / `--index-template` lati pinnu bi a ṣe ṣe ọna kika atọka. O le pato 'html',
+ 'markdown', 'ọrọ', tabi ọna faili si tirẹ [HandlebarsJS](https://handlebarsjs.com/) awoṣe
+
+ Ti o ba pato awoṣe tirẹ, o tun gbọdọ pato faili kan (kii ṣe ilana) fun `-I` / `--index`
+ aṣayan
 
  ## Ni akoko igbadun titumọ awọn ede!
 

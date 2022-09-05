@@ -1,12 +1,20 @@
 Hokeylisering
  ==============
- Navnet er en portmanteau, som betyr 'hokey lokalisering'
+ Hvorfor kan jeg ikke kjøre hele appen eller nettstedet mitt gjennom Google Translate og få en grunnleggende oversettelse på et annet språk?
 
- Det er vanvittig fordi det er veldig enkelt: det sender strenger til Google Translate
+ ***Nå kan du!***
+
+ Navnet `hokeylization` er et portmanteau, som betyr "hokey lokalisering"
+
+ Det er litt hektisk fordi det er veldig enkelt: det sender strenger til Google Translate
+
+ Og den er enkel, men samtidig veldig kraftig. Den har spesiell støtte for HTML-dokumenter,
+ [HandlebarsJS](https://handlebarsjs.com/) maler,
+ og [Markdown](https://daringfireball.net/projects/markdown) filer.
 
  Du kan oversette:
  * et JavaScript-objekt som inneholder meldinger
- * en katalog med filer, rekursivt
+ * et hvilket som helst antall filer eller kataloger, som alltid krysser kataloger rekursivt
 
  # Les dette på et annet språk
  Dette README.md-dokumentet har blitt oversatt, ved å bruke selve hokeyliseringsverktøyet, til
@@ -61,6 +69,7 @@ Hokeylisering
  * [Oversette en JavaScript-strengressursfil](#Translating-a-JavaScript-string-resource-file)
  * [Oversette en katalog med tekstfiler](#Oversette-en-katalog med tekstfiler)
  * [Andre alternativer](#Andre-alternativer)
+ * [JSON batch-kommandoer](#JSON-batch-kommandoer)
 
  ## Kilde
  * [hokeylization på GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylisering
 
  ### Hjelp
  Bruk `-h` / `--help` for å vise hjelp
+
+ ## JSON batch-kommandoer
+ Med alternativet `-j` / `--json` kan du kjøre flere koordinerte `hokey` kommandoer
+
+ Ved konvensjon kalles denne filen `hokey.json` , men du kan navngi den hva du vil
+
+ Hvis du sender en katalog som `-j` -alternativet, vil `hokey` se etter en `hokey.json` i den katalogen
+
+ JSON-filen skal inneholde ett objekt. Innenfor dette objektet er egenskapsnavnene de samme som
+ kommandolinjealternativene, pluss en ekstra egenskap kalt `hokey`
+
+ `hokey` egenskapen er en rekke kommandoer som skal kjøres. Egenskapene deklarert innenfor disse kommandoene vil
+ overstyre eventuelle dupliserte erklæringer i det ytre objektet.
+
+ Innenfor hvert objekt i `hokey` matrisen bør du spesifisere et `name` og inndata- og utdatafilene
+
+ Her er et eksempel på en `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Flere inndatafiler
+ Send en rekke filbaner som `infiles` stedet for en enkelt bane `infile` , som i dette eksemplet:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indekser
+ Når du oversetter til mange språk, kan `hokey` lage en indeksfil som viser alle oversettelsene som er gjort
+ og gir lenker til dem
+
+ *Når du genererer indekser, kan du bare ha én inngangskilde*
+
+ Pass på `-I` / `--index` , verdien er der indeksfilen vil bli generert, som kan være en fil
+ eller en katalog. Hvis det er en katalog, vil et standard filnavn bli brukt, basert på malen (se nedenfor)
+
+ Bruk `-A` / `--index-template` for å bestemme hvordan indeksutdata er formatert. Du kan spesifisere 'html',
+ 'markdown', 'text' eller filbanen til din egen [HandlebarsJS](https://handlebarsjs.com/) mal
+
+ Hvis du spesifiserer din egen mal, må du også spesifisere en fil (ikke en katalog) for `-I` / `--index`
+ alternativ
 
  ## Ha det gøy med å oversette språk!
 

@@ -1,12 +1,20 @@
 Hokeylization
  ==============
- Igama yi-portmanteau, elithetha 'i-hokey localization'
+ Kutheni ndingakwazi ukusebenzisa yonke i-app yam okanye isayithi ngeToliki kaGoogle kwaye ndifumane inguqulelo esisiseko ngolunye ulwimi?
 
- Yihokey kuba ilula kakhulu: ithumela imitya kwiToliki kaGoogle
+ ***Ngoku, unako!***
+
+ Igama elithi `hokeylization` yi portmanteau, elithetha 'hokey localization'
+
+ Yihokey noko kuba ilula kakhulu: ithumela imitya kwiToliki kaGoogle
+
+ Kwaye ilula, ukanti inamandla kakhulu. Inenkxaso ekhethekileyo kumaxwebhu eHTML,
+ [HandlebarsJS](https://handlebarsjs.com/) iitemplates,
+ kunye [neMarkdown](https://daringfireball.net/projects/markdown) iifayile.
 
  Ungaguqulela:
  * into yeJavaScript equlethe imiyalezo
- * Uluhlu lweefayile, ngokuphindaphindiweyo
+ * Naliphi na inani leefayile okanye abalawuli, abasoloko benqumla abalawuli ngokuphindaphindiweyo
 
  # Funda oku ngolunye ulwimi
  Olu xwebhu README.md luguqulelwe, kusetyenziswa isixhobo se-hokeylization ngokwaso, kwi
@@ -61,6 +69,7 @@ Hokeylization
  * [Ukuguqulelwa kwefayile yomthombo womtya weJavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Ukuguqulelwa koluhlu lweefayile ezibhaliweyo](#Ukuguqulela-uluhlu- lwefayile-yefayile)
  * [Olunye ukhetho](#Olunye-ukhetho)
+ * [Imiyalelo yebhetshi yeJSON](#JSON-ibhetshi-imiyalelo)
 
  ## Umthombo
  * [hokeylization kwiGitHub](https://github.com/cobbzilla/hokeylization)
@@ -216,7 +225,7 @@ Hokeylization
  Xa uthandabuza, ungadibanisa olu khetho kunye `-n` / `--dry-run` ukubona ukuba zeziphi iifayile eziza kuguqulelwa.
 
  ### Akubandakanyi
- Ngamanye amaxesha `-m` yakho idibanisa iifayile ezininzi. Sebenzisa i `-e` / `--excludes` ukhetho lokukhuphela ngaphandle ngokucacileyo
+ Ngamanye amaxesha i `-m` yakho idibanisa iifayile ezininzi. Sebenzisa i `-e` / `--excludes` ukhetho lokukhuphela ngaphandle ngokucacileyo
  iifayile ebezinokudityaniswa ngenye indlela
 
  Ungadwelisa iiregeksi ezininzi, ezahlulwe zizithuba
@@ -243,7 +252,7 @@ Hokeylization
  * Izithuba ezingachanekanga kwiibhloko zekhowudi ezifakwe ngaphakathi. Izithuba kunzima ukuzigcina kwinguqulelo
  * Izinto ezingaphakathi kwe `backticks` ziya kuguqulelwa, xa usoloko ufuna ukuba zibengamaxabiso oqobo
 
- Xa i- `-M` / `--markdown` iflegi yenziwe yasebenza:
+ Xa `-M` / `--markdown` iflegi yenziwe yasebenza:
  * Ipatheni `](` iya kucushwa ibe ku `](` ngaloo ndlela kulungiswa amakhonkco okuphawula aphukileyo
  * Isisongelo esithi "akukho guquleli" siya kubekwa ngeenxa zonke kwiibhloko zekhowudi ezifakwe ngaphakathi, zigcina ukubekwa kwindawo efanelekileyo kunye nokuqinisekisa ukuba aziguqulelwanga.
  *Umqulu othi "akukho guquleli" uya kubekwa ujikeleze okubhaliweyo ngaphakathi `backticks` ukuqinisekisa ukuba aziguqulelwanga
@@ -265,10 +274,92 @@ Hokeylization
 
  Ixabiso `filter` yeyona nto iza kubhalwa kwindawo yokugcina
 
- Ke, unolawulo olupheleleyo malunga noko kuya kubhalwa ekugqibeleni
+ Ke, unolawulo olupheleleyo kwinto eza kubhalwa ekugqibeleni
 
  ### Nceda
  Sebenzisa `-h` / `--help` ukubonisa uncedo
+
+ ## Imiyalelo yebhetshi yeJSON
+ `-j` / `--json` , ungaqhuba imiyalelo elungelelanisiweyo emininzi `hokey`
+
+ Ngokwendibano le fayile ibizwa ngokuba `hokey.json` , kodwa ungayibiza nantoni na oyifunayo
+
+ Ukuba ugqithisa ulawulo njengolu khetho ` `-j` , `hokey` iya kukhangela i `hokey.json` kulo vimba weefayili.
+
+ Ifayile ye-JSON kufuneka iqulathe into enye. Ngaphakathi kwaloo nto, amagama alo propati ayafana
+ iinketho zelayini yomyalelo, kunye nepropati enye eyongezelelweyo ebizwa `hokey`
+
+ `hokey` lwemiyalelo ekufuneka iqhutywe. Iipropati ezibhengezwe kule miyalelo ziya kuthi
+ bhala ngaphezulu naziphi na izibhengezo eziphindiweyo kwinto engaphandle.
+
+ Ngaphakathi kwento nganye kwi `hokey` uluhlu, kufuneka uchaze `name` , kunye negalelo kunye neefayile zemveliso.
+
+ Nanku umzekelo we `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Iifayile zongeniso ezininzi
+ Dlula uluhlu lweendlela zefayile njenge `infiles` endaweni yendlela enye `infile` , njengakulo mzekelo:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Izalathisi
+ Xa uguqulela kwiilwimi ezininzi, `hokey` inokudala ifayile yesalathiso edwelisa zonke iinguqulelo ezenziweyo
+ kwaye ibonelela ngamakhonkco kubo
+
+ *Xa usenza izalathisi, unokuba nomthombo omnye wegalelo*
+
+ Dlula i `-I` / `--index` ukhetho, ixabiso kulapho ifayile yesalathisi iyakwenziwa, enokuba yifayile.
+ okanye uvimba weefayili. Ukuba luluhlu, igama lefayile elingagqibekanga liya kusetyenziswa, ngokusekwe kwithempleyithi (bona ngezantsi)
+
+ Sebenzisa i `-A` / `--index-template` ukumisela ukuba isalathisi semveliso ifomathwa njani. Ungakhankanya 'html',
+ 'markdown', 'text', okanye indlela yefayile eya kweyakho [HandlebarsJS](https://handlebarsjs.com/) template
+
+ Ukuba ukhankanya eyakho itemplate, kufuneka kwakhona uchaze ifayile (hayi uvimba weefayili) ukwenzela `-I` / `--index`
+ ukhetho
 
  ## Yiba nexesha elimnandi lokuguqulela iilwimi!
 

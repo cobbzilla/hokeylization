@@ -1,12 +1,20 @@
 Hokeylization
  ==============
- ชื่อเป็นกระเป๋าหิ้ว หมายถึง 'hokey localization'
+ เหตุใดฉันจึงไม่สามารถเรียกใช้ทั้งแอปหรือเว็บไซต์ผ่าน Google แปลภาษาและรับการแปลพื้นฐานในภาษาอื่นได้
 
- มันเป็นเรื่องที่น่ากลัวเพราะมันง่ายมาก: มันส่งสตริงไปยัง Google แปลภาษา
+ ***ตอนนี้คุณสามารถ!***
+
+ ชื่อ `hokeylization` เป็นกระเป๋าถือซึ่งหมายถึง 'hokey localization'
+
+ มันค่อนข้างน่าเบื่อเพราะมันง่ายมาก: มันส่งสตริงไปที่ Google Translate
+
+ และเรียบง่ายแต่ทรงพลังมาก มีการสนับสนุนพิเศษสำหรับเอกสาร HTML
+ [HandlebarsJS](https://handlebarsjs.com/) เทมเพลต
+ และไฟล์ [Markdown](https://daringfireball.net/projects/markdown)
 
  คุณสามารถแปล:
  * วัตถุ JavaScript ที่มีข้อความ
- * ไดเร็กทอรีของไฟล์แบบเรียกซ้ำ
+ * ไฟล์หรือไดเร็กทอรีจำนวนเท่าใดก็ได้ โดยจะข้ามไดเร็กทอรีซ้ำๆ เสมอ
 
  #อ่านเป็นภาษาอื่น
  เอกสาร README.md นี้ได้รับการแปลโดยใช้เครื่องมือ hokeylization เป็น
@@ -61,6 +69,7 @@ Hokeylization
  * [กำลังแปลไฟล์ทรัพยากรสตริง JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [การแปลไดเรกทอรีของไฟล์ข้อความ](#Translating-a-directory-of-text-files)
  * [ตัวเลือกอื่นๆ](#Other-options)
+ * [คำสั่งแบทช์ JSON](#JSON-batch-commands)
 
  ## แหล่งที่มา
  * [hokeylization บน GitHub](https://github.com/cobbzilla/hokeylization)
@@ -263,12 +272,94 @@ Hokeylization
 
  ก่อนที่ไฟล์จะถูกเขียนลงดิสก์ เนื้อหาไฟล์ทั้งหมดจะถูกส่งไปยังฟังก์ชัน `filter` เป็นสตริง
 
- ค่าส่งคืนจากฟังก์ชัน `filter` คือสิ่งที่จะถูกเขียนไปยัง storage จริงๆ
+ ค่าที่ส่งคืนจากฟังก์ชัน `filter` คือสิ่งที่จะถูกเขียนไปยัง storage จริงๆ
 
  ดังนั้นคุณจึงสามารถควบคุมสิ่งที่จะเขียนได้ในที่สุด
 
  ### ช่วย
  ใช้ `-h` / `--help` เพื่อแสดงความช่วยเหลือ
+
+ ## คำสั่งแบทช์ JSON
+ ด้วยตัวเลือก `-j` / `--json` คุณสามารถเรียกใช้คำสั่ง `hokey` ประสานกันได้หลายคำสั่ง
+
+ ตามธรรมเนียมไฟล์นี้เรียกว่า `hokey.json` แต่คุณสามารถตั้งชื่ออะไรก็ได้ตามต้องการ
+
+ หากคุณส่งไดเร็กทอรีเป็นตัวเลือก ` `-j` `hokey` จะค้นหา `hokey.json` ในไดเร็กทอรีนั้น
+
+ ไฟล์ JSON ควรมีหนึ่งวัตถุ ภายในอ็อบเจ็กต์นั้น ชื่อคุณสมบัติของมันเหมือนกับ
+ ตัวเลือกบรรทัดคำสั่ง บวกคุณสมบัติเพิ่มเติมหนึ่งรายการชื่อ `hokey`
+
+ คุณสมบัติ `hokey` คืออาร์เรย์ของคำสั่งที่จะเรียกใช้ คุณสมบัติที่ประกาศภายในคำสั่งเหล่านี้จะ
+ แทนที่การประกาศที่ซ้ำกันในวัตถุภายนอก
+
+ ภายในแต่ละอ็อบเจ็กต์ในอาร์เรย์ `hokey` คุณควรระบุ `name` และไฟล์อินพุตและเอาต์พุต
+
+ นี่คือตัวอย่างของ `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### ไฟล์อินพุตหลายไฟล์
+ ส่งอาร์เรย์ของเส้นทางไฟล์เป็น `infiles` แทนเส้นทางเดียว `infile` ดังในตัวอย่างนี้:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### ดัชนี
+ เมื่อแปลเป็นหลายภาษา `hokey` สามารถสร้างไฟล์ดัชนีที่แสดงคำแปลทั้งหมดที่ทำขึ้น
+ และให้ลิงค์ไปยังพวกเขา
+
+ *เมื่อสร้างดัชนี คุณสามารถมีแหล่งอินพุตได้เพียงแหล่งเดียว*
+
+ ผ่านตัวเลือก `-I` / `--index` ค่าคือตำแหน่งที่ไฟล์ดัชนีจะถูกสร้างขึ้น ซึ่งสามารถเป็นไฟล์ได้
+ หรือไดเร็กทอรี ถ้าเป็นไดเร็กทอรี ชื่อไฟล์เริ่มต้นจะถูกใช้ตามเทมเพลต (ดูด้านล่าง)
+
+ ใช้ `-A` / `--index-template` เพื่อกำหนดวิธีการจัดรูปแบบเอาต์พุตดัชนี คุณสามารถระบุ 'html'
+ 'markdown', 'text' หรือเส้นทางไฟล์ไปยังเทมเพลต [HandlebarsJS](https://handlebarsjs.com/) ของคุณเอง
+
+ หากคุณระบุเทมเพลตของคุณเอง คุณต้องระบุไฟล์ (ไม่ใช่ไดเร็กทอรี) สำหรับ `-I` / `--index`
+ ตัวเลือก
 
  ## ขอให้สนุกกับการแปลภาษา!
 

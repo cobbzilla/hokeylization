@@ -1,12 +1,20 @@
 Hokeylizacja
  =======
- Nazwa to portmanteau, co oznacza „lokalizację hokeja”
+ Dlaczego nie mogę uruchomić całej aplikacji lub witryny za pomocą Tłumacza Google i uzyskać podstawowego tłumaczenia w innym języku?
 
- To hojne, ponieważ jest bardzo proste: wysyła ciągi do Tłumacza Google
+ ***Teraz możesz!***
+
+ Nazwa `hokeylization` to portmanteau, co oznacza „lokalizację hokeja”
+
+ To trochę dziwaczne, ponieważ jest bardzo proste: wysyła ciągi do Tłumacza Google
+
+ I jest prosty, ale też bardzo potężny. Posiada specjalne wsparcie dla dokumentów HTML,
+ Szablony [HandlebarsJS](https://handlebarsjs.com/),
+ i pliki [Markdown](https://daringfireball.net/projects/markdown).
 
  Możesz przetłumaczyć:
  * obiekt JavaScript zawierający komunikaty
- * katalog plików, rekurencyjnie
+ * dowolna liczba plików lub katalogów, zawsze rekurencyjnie przemierzające katalogi
 
  # Przeczytaj to w innym języku
  Ten dokument README.md został przetłumaczony przy użyciu samego narzędzia do hokeylizacji na język
@@ -61,6 +69,7 @@ Hokeylizacja
  * [Tłumaczenie pliku zasobów ciągu JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Tłumaczenie katalogu plików tekstowych](#Tłumaczenie-katalogu-plików-tekstowych)
  * [Inne opcje](#Inne-opcje)
+ * [Polecenia wsadowe JSON](#JSON-batch-commands)
 
  ## Źródło
  * [hokeylization na GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylizacja
 
  ### Pomoc
  Użyj `-h` / `--help` , aby wyświetlić pomoc
+
+ ## Polecenia wsadowe JSON
+ Za pomocą opcji `-j` / `--json` możesz uruchamiać wiele skoordynowanych poleceń `hokey`
+
+ Zgodnie z konwencją ten plik nazywa się `hokey.json` , ale możesz go nazwać jak chcesz
+
+ Jeśli podasz katalog jako opcję ` `-j` , `hokey` będzie szukał `hokey.json` w tym katalogu
+
+ Plik JSON powinien zawierać jeden obiekt. W tym obiekcie jego nazwy właściwości są takie same jak
+ opcje wiersza poleceń plus jedna dodatkowa właściwość o nazwie `hokey`
+
+ Właściwość `hokey` to tablica poleceń do uruchomienia. Właściwości zadeklarowane w tych poleceniach:
+ zastąpić wszelkie zduplikowane deklaracje w zewnętrznym obiekcie.
+
+ W każdym obiekcie w tablicy `hokey` należy określić `name` oraz pliki wejściowe i wyjściowe
+
+ Oto przykład `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Wiele plików wejściowych
+ Przekaż tablicę ścieżek plików jako `infiles` zamiast pojedynczej ścieżki `infile` , jak w tym przykładzie:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeksy
+ Tłumacząc na wiele języków, `hokey` może utworzyć plik indeksu, który zawiera listę wszystkich wykonanych tłumaczeń
+ i udostępnia linki do nich
+
+ *Podczas generowania indeksów możesz mieć tylko jedno źródło danych wejściowych*
+
+ Przekaż `-I` / `--index` , wartością jest miejsce, w którym zostanie wygenerowany plik indeksu, który może być plikiem
+ lub katalog. Jeśli jest to katalog, zostanie użyta domyślna nazwa pliku, oparta na szablonie (patrz poniżej)
+
+ Użyj `-A` / `--index-template` aby określić sposób formatowania danych wyjściowych indeksu. Możesz podać 'html',
+ „markdown”, „text” lub ścieżka pliku do własnego szablonu [HandlebarsJS](https://handlebarsjs.com/)
+
+ Jeśli określisz swój własny szablon, musisz również podać plik (nie katalog) dla `-I` / `--index`
+ opcja
 
  ## Baw się dobrze, tłumacząc języki!
 

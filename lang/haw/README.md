@@ -1,12 +1,20 @@
 Hokeylization
  =============
- ʻO ka inoa he portmanteau, ʻo ia ka 'hokey localization'
+ No ke aha ʻaʻole hiki iaʻu ke holo i kaʻu polokalamu holoʻokoʻa a paena paha ma o Google Translate a loaʻa iaʻu kahi unuhi kumu ma ka ʻōlelo ʻē aʻe?
 
- He hokey no ka mea maʻalahi loa: hoʻouna i nā kaula i ka Unuhi Google
+ ***I kēia manawa, hiki iā ʻoe!***
+
+ ʻO ka inoa `hokeylization` ' he portmanteau, ʻo ia hoʻi 'hokey localization'
+
+ He ʻano hokey no ka mea maʻalahi loa: hoʻouna i nā kaula i ka Unuhi Google
+
+ A he maʻalahi, akā ikaika loa. Loaʻa iā ia ke kākoʻo kūikawā no nā palapala HTML,
+ [HandlebarsJS](https://handlebarsjs.com/),
+ a me [Markdown](https://daringfireball.net/projects/markdown) waihona.
 
  Hiki iā ʻoe ke unuhi:
  * he mea JavaScript me nā memo
- * he papa kuhikuhi o nā faila, recursively
+ * kekahi helu o nā faila a i ʻole nā papa kuhikuhi, e hele mau ana i nā papa kuhikuhi me ka recursively
 
  # E heluhelu i kēia ma ka ʻōlelo ʻē aʻe
  Ua unuhi ʻia kēia palapala README.md, me ka hoʻohana ʻana i ka mea hana hokeylization ponoʻī, i loko
@@ -61,6 +69,7 @@ Hokeylization
  * [Unuhi i ka waihona kumu waiwai JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Unuhi i ka papa kuhikuhi o nā waihona kikokikona](#Translating-a-directory-of-text-files)
  * [Nā koho ʻē aʻe](#Other-koho)
+ * [Nā kauoha pūʻulu JSON](#JSON-batch-kauoha)
 
  ## Puna
  * [hokeylization ma GitHub](https://github.com/cobbzilla/hokeylization)
@@ -240,7 +249,7 @@ Hokeylization
  ma mua o ka hoʻomaka ʻana o kāna loulou (me ka `(` ).
  ua haki ke nānā ʻana i ka palapala.
  * Unuhi ʻia nā poloka code. ʻAʻole ʻike ʻo Google Unuhi i ka manaʻo o ka markdown i ke code a me ka mea ʻaʻole
- * ʻAʻohe kaawale no nā poloka code indented. He paʻakikī ke mālama ʻana i ka hakahaka ma ka unuhi
+ * ʻAʻohe kaawale no nā poloka code indented. He mea paʻakikī ke mālama ʻana i ka hakahaka ma ka unuhi
  * E unuhi ʻia nā mea i loko o ka `backticks` ', ke makemake mau ʻoe iā lākou he waiwai maoli
 
  Ke hoʻohana ʻia ka hae `-M` / `--markdown` :
@@ -259,16 +268,98 @@ Hokeylization
 
  Pono ka waiwai o kēia koho he ala i kahi faila JS e hoʻokuʻu aku i kahi hana i kapa `filter`
 
- Pono ka hana `async` `filter` ka mea `await` ' e kāhea ʻia ma luna o ia
+ Pono ka hana `async` `filter` ka mea, e kāhea ʻia ʻo `await` '
 
  Ma mua o ka kākau ʻia ʻana o nā faila i ka diski, e hāʻawi ʻia nā ʻike āpau āpau i ka hana `filter` ma ke ʻano he kaula
 
- ʻO ka waiwai hoʻihoʻi mai ka hana `filter` ka mea e kākau maoli ʻia i ka waihona
+ ʻO ka waiwai hoʻihoʻi mai ka hana `filter` ka mea e kākau maoli ʻia i kahi waihona
 
  No laila, loaʻa iā ʻoe ka mana piha ma luna o ka mea e kākau hope ʻia
 
  ### Kōkua
  E hoʻohana `-h` / `--help` e hōʻike i ke kōkua
+
+ ## Nā kauoha pūʻulu JSON
+ Me ke `-j` / `--json` , hiki iā ʻoe ke holo i nā kauoha `hokey` i hui pū ʻia.
+
+ Ma ka convention ua kapa ʻia kēia faila `hokey.json` , akā hiki iā ʻoe ke kapa inoa i nā mea āu e makemake ai
+
+ Inā hāʻawi ʻoe i kahi papa kuhikuhi ma ke `-j` koho `hokey` , e ʻimi ʻo `hokey` i kahi `hokey.json` ma ia papa kuhikuhi.
+
+ Pono ka waihona JSON i hoʻokahi mea. I loko o ia mea, ua like kona inoa waiwai me
+ nā koho laina kauoha, a me hoʻokahi waiwai hou i kapa `hokey`
+
+ ʻO ka waiwai `hokey` ' he pūʻulu o nā kauoha e holo. ʻO nā waiwai i haʻi ʻia i loko o kēia mau kauoha
+ hoʻopau i nā ʻōlelo hoʻolaha pālua i ka mea i waho.
+
+ I loko o kēlā me kēia mea i ka `hokey` array, pono ʻoe e kuhikuhi i kahi `name` , a me nā faila komo a me nā faila.
+
+ Eia kekahi laʻana o ka `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Nā waihona hoʻokomo lehulehu
+ Hāʻawi i kahi ʻano o nā ala faila ma ke ʻano he `infiles` ma kahi o kahi ala hoʻokahi `infile` , e like me kēia hiʻohiʻona:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Nā papa kuhikuhi
+ I ka unuhi ʻana i nā ʻōlelo he nui, hiki i ka `hokey` ke hana i kahi faila kuhikuhi e papa inoa i nā unuhi āpau i hana ʻia.
+ a hāʻawi i nā loulou iā lākou
+
+ *I ka hana ʻana i nā kuhikuhi, hiki iā ʻoe ke loaʻa hoʻokahi kumu hoʻokomo wale nō*
+
+ E hāʻawi i ke koho `-I` / `--index` , ʻo ka waiwai kahi e hana ʻia ai ka faila kuhikuhi, hiki ke lilo i faila.
+ a i ʻole he papa kuhikuhi. Inā he papa kuhikuhi, e hoʻohana ʻia kahi inoa file paʻamau, e pili ana i ka template (e ʻike i lalo)
+
+ E hoʻohana i ka `-A` / `--index-template` no ka hoʻoholo ʻana i ke ʻano o ka hoʻohālikelike ʻia ʻana o ka huaʻōlelo kuhikuhi. Hiki iā ʻoe ke kuhikuhi i ka 'html',
+ 'markdown', 'text', a i ʻole ke ala waihona i kāu [HandlebarsJS](https://handlebarsjs.com/) template
+
+ Inā hōʻike ʻoe i kāu hoʻohālike ponoʻī, pono ʻoe e kuhikuhi i kahi faila (ʻaʻole he papa kuhikuhi) no ka `-I` / `--index`
+ koho
 
  ## E hauʻoli i ka unuhi ʻana i nā ʻōlelo!
 

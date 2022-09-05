@@ -1,12 +1,20 @@
 Hokeyləşmə
  ==============
- Adı portmantodur, mənası "xokey lokalizasiyası"dır.
+ Niyə mən bütün tətbiqimi və ya saytımı Google Translate vasitəsilə işlədə və başqa dildə əsas tərcümə əldə edə bilmirəm?
 
- Bu hokeydir, çünki çox sadədir: sətirləri Google Translate-ə göndərir
+ ***İndi bilərsən!***
+
+ `hokeylization` ' adı bir portmantodur, 'hokey localization' mənasını verir
+
+ Bu, bir qədər hokeydir, çünki çox sadədir: o, Google Translate-ə sətirlər göndərir
+
+ Və sadə, eyni zamanda çox güclüdür. HTML sənədləri üçün xüsusi dəstəyə malikdir,
+ [HandlebarsJS](https://handlebarsjs.com/) şablonları,
+ və [Markdown](https://daringfireball.net/projects/markdown) faylları.
 
  Tərcümə edə bilərsiniz:
  * mesajları ehtiva edən JavaScript obyekti
- * rekursiv olaraq faylların kataloqu
+ * İstənilən sayda fayl və ya qovluq, həmişə qovluqları rekursiv şəkildə keçərək
 
  # Bunu başqa dildə oxuyun
  Bu README.md sənədi hokeyləşdirmə alətinin özündən istifadə etməklə tərcümə edilmişdir
@@ -61,6 +69,7 @@ Hokeyləşmə
  * [JavaScript sətir resurs faylının tərcüməsi](#Translating-a-JavaScript-string-resource-file)
  * [Mətn faylları kataloqunun tərcüməsi](#Mətn fayllarının kataloqunun tərcüməsi)
  * [Digər seçimlər](#Digər-seçimlər)
+ * [JSON toplu əmrləri](#JSON toplu əmrləri)
 
  ## Mənbə
  * [GitHub-da hokeylizasiya](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeyləşmə
 
  ### Kömək
  Yardım göstərmək üçün `-h` / `--help` istifadə edin
+
+ ## JSON toplu əmrləri
+ `-j` / `--json` seçimi ilə siz çoxlu əlaqələndirilmiş `hokey` əmrlərini işlədə bilərsiniz
+
+ Konvensiyaya görə bu fayl `hokey.json` adlanır, lakin siz onu istədiyiniz kimi adlandıra bilərsiniz
+
+ Əgər kataloqu `-j` seçimi kimi keçirsəniz, `hokey` `hokey.json` .
+
+ JSON faylında bir obyekt olmalıdır. Həmin obyekt daxilində onun xassə adları ilə eynidir
+ komanda xətti seçimləri, üstəgəl `hokey` adlı bir əlavə xüsusiyyət
+
+ `hokey` . Bu əmrlər daxilində elan edilən xüsusiyyətlər olacaq
+ xarici obyektdəki hər hansı dublikat bəyannamələri ləğv edin.
+
+ `hokey` massivindəki hər bir obyekt daxilində siz `name` və giriş və çıxış fayllarını təyin etməlisiniz.
+
+ Budur `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Çoxsaylı daxiletmə faylları
+ Bu misalda olduğu kimi bir sıra fayl yollarını `infiles` tək yolun əvəzinə `infile` :
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### İndekslər
+ Bir çox dillərə tərcümə edərkən, `hokey` edilən bütün tərcümələri sadalayan indeks faylı yarada bilər.
+ və onlara bağlantılar təqdim edir
+
+ *İndekslər yaradan zaman yalnız bir giriş mənbəyinə sahib ola bilərsiniz*
+
+ `-I` / `--index` seçimini keçin, dəyər indeks faylının yaradılacağı yerdir, hansı fayl ola bilər
+ və ya kataloq. Əgər bu bir kataloqdursa, şablon əsasında standart fayl adı istifadə olunacaq (aşağıya bax)
+
+ İndeks çıxışının necə formatlandığını müəyyən etmək üçün `-A` / `--index-template` şablon`dan istifadə edin. 'html' təyin edə bilərsiniz,
+ 'markdown', 'mətn' və ya öz [HandlebarsJS](https://handlebarsjs.com/) şablonunuza gedən fayl yolu
+
+ Öz şablonunuzu göstərsəniz, `-I` / `--index` üçün fayl (kataloq deyil) də göstərməlisiniz.
+ seçim
 
  ## Dilləri tərcümə etməklə əylənin!
 

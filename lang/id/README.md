@@ -1,12 +1,20 @@
 Hokeylization
  ===============
- Namanya adalah portmanteau, yang berarti 'lokalisasi tipuan'
+ Mengapa saya tidak dapat menjalankan seluruh aplikasi atau situs saya melalui Google Terjemahan dan mendapatkan terjemahan dasar dalam bahasa lain?
 
- Ini tipu karena sangat sederhana: mengirimkan string ke Google Terjemahan
+ ***Sekarang kamu bisa!***
+
+ Nama `hokeylization` adalah portmanteau, yang berarti 'lokalisasi tipuan'
+
+ Ini agak tipu karena sangat sederhana: mengirimkan string ke Google Terjemahan
+
+ Dan itu sederhana, namun juga sangat kuat. Ini memiliki dukungan khusus untuk dokumen HTML,
+ [HandbarsJS](https://handbarsjs.com/) template,
+ dan file [Penurunan harga](https://daringfireball.net/projects/markdown).
 
  Anda dapat menerjemahkan:
  * objek JavaScript yang berisi pesan
- * direktori file, secara rekursif
+ * sejumlah file atau direktori, selalu melintasi direktori secara rekursif
 
  # Baca ini dalam bahasa lain
  Dokumen README.md ini telah diterjemahkan, menggunakan alat tipu muslihat itu sendiri, menjadi
@@ -61,6 +69,7 @@ Hokeylization
  * [Menerjemahkan file sumber daya string JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Menerjemahkan direktori file teks](#Translating-a-directory-of-text-files)
  * [Opsi lain](#Opsi lainnya)
+ * [Perintah batch JSON](#JSON-batch-commands)
 
  ## Sumber
  * [hokeylization di GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Membantu
  Gunakan `-h` / `--help` untuk menampilkan bantuan
+
+ ## Perintah batch JSON
+ Dengan opsi `-j` / `--json` , Anda dapat menjalankan beberapa perintah `hokey`
+
+ Berdasarkan konvensi, file ini disebut `hokey.json` , tetapi Anda dapat memberi nama apa pun yang Anda inginkan
+
+ Jika Anda melewati direktori sebagai opsi `-j` , `hokey` akan mencari `hokey.json` di direktori itu
+
+ File JSON harus berisi satu objek. Di dalam objek itu, nama propertinya sama dengan
+ opsi baris perintah, ditambah satu properti tambahan bernama `hokey`
+
+ Properti `hokey` adalah larik perintah untuk dijalankan. Properti yang dideklarasikan dalam perintah ini akan
+ menimpa deklarasi duplikat di objek luar.
+
+ Di dalam setiap objek dalam `hokey` , Anda harus menentukan `name` , serta file input dan output
+
+ Berikut adalah contoh `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Beberapa file masukan
+ Lewati larik jalur file sebagai `infiles` alih-alih satu jalur `infile` , seperti dalam contoh ini:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeks
+ Saat menerjemahkan ke banyak bahasa, `hokey` dapat membuat file indeks yang mencantumkan semua terjemahan yang dibuat
+ dan memberikan tautan ke mereka
+
+ *Saat membuat indeks, Anda hanya dapat memiliki satu sumber input*
+
+ Lewati opsi `-I` / `--index` , nilainya adalah tempat file indeks akan dihasilkan, yang dapat berupa file
+ atau sebuah direktori. Jika direktori, nama file default akan digunakan, berdasarkan template (lihat di bawah)
+
+ Gunakan `-A` / `--index-template` untuk menentukan bagaimana output indeks diformat. Anda dapat menentukan 'html',
+ 'penurunan harga', 'teks', atau jalur file ke template [HandbarsJS](https://handbarsjs.com/) Anda sendiri
+
+ Jika Anda menentukan template Anda sendiri, Anda juga harus menentukan file (bukan direktori) untuk `-I` / `--index`
+ pilihan
 
  ## Bersenang-senang menerjemahkan bahasa!
 

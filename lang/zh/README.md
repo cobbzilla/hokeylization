@@ -1,12 +1,20 @@
 霍基化
 ==============
-这个名字是一个portmanteau，意思是“hokey本地化”
+为什么我不能通过谷歌翻译运行我的整个应用程序或网站并获得另一种语言的基本翻译？
 
-它很简单，因为它非常简单：它将字符串发送到谷歌翻译
+ ***现在你可以！***
+
+ `hokeylization`这个名字是一个portmanteau，意思是“hokey本地化”
+
+它有点做作，因为它非常简单：它将字符串发送到谷歌翻译
+
+它很简单，但也非常强大。它对 HTML 文档有特殊的支持，
+ [HandlebarsJS](https://handlebarsjs.com/) 模板，
+和 [Markdown](https://daringfireball.net/projects/markdown) 文件。
 
 你可以翻译：
  * 一个包含消息的 JavaScript 对象
-* 文件目录，递归
+* 任意数量的文件或目录，总是递归遍历目录
 
 # 用另一种语言阅读
 此 README.md 文档已使用 hokeyization 工具本身翻译成
@@ -61,6 +69,7 @@
  * [翻译 JavaScript 字符串资源文件](#Translating-a-JavaScript-string-resource-file)
  * [翻译文本文件目录](#Translating-a-directory-of-text-files)
  * [其他选项](#Other-options)
+ * [JSON 批处理命令](#JSON-batch-commands)
 
  ＃＃ 资源
 * [GitHub上的hokeylization](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Markdown 既不是文本也不是 html，所以谷歌翻译有一些困难
 
 ＃＃＃ 帮助
 使用`-h` / `--help`显示帮助
+
+## JSON 批处理命令
+使用`-j` / `--json`选项，您可以运行多个协调的`hokey`命令
+
+按照惯例，这个文件被称为`hokey.json` ，但你可以随意命名它
+
+如果您将目录作为`-j`选项传递， `hokey`将在该目录中查找`hokey.json`
+
+ JSON 文件应包含一个对象。在该对象中，其属性名称与
+命令行选项，加上一个名为`hokey`的附加属性
+
+`hokey`属性是要运行的命令数组。这些命令中声明的属性将
+覆盖外部对象中的任何重复声明。
+
+在`hokey`数组中的每个对象中，您应该指定一个`name`以及输入和输出文件
+
+这是一个`hokey.json`的示例
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### 多个输入文件
+将文件路径数组作为`infiles` ，而不是单个路径`infile` ，如下例所示：
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### 索引
+当翻译成多种语言时， `hokey`可以创建一个索引文件，列出所有的翻译
+并提供他们的链接
+
+*生成索引时，只能有一个输入源*
+
+传递`-I` / `--index`选项，值是生成索引文件的地方，可以是文件
+或目录。如果是目录，将使用基于模板的默认文件名（见下文）
+
+使用`-A` / `--index-template`来确定索引输出的格式。您可以指定'html'，
+ 'markdown'、'text' 或您自己的 [HandlebarsJS](https://handlebarsjs.com/) 模板的文件路径
+
+如果指定自己的模板，还必须为`-I` / `--index`指定一个文件（不是目录）
+选项
 
 ## 享受翻译语言的乐趣！
 

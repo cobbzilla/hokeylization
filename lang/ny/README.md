@@ -1,12 +1,20 @@
 Hokeylization
  =============
- Dzinalo ndi portmanteau, kutanthauza 'kukhazikika kwa hokey'
+ Chifukwa chiyani sindingathe kugwiritsa ntchito pulogalamu yanga yonse kapena tsamba lanu kudzera mu Zomasulira za Google ndikupeza zomasulira m'chinenero china?
 
- Ndi hokey chifukwa ndiyosavuta: imatumiza zingwe ku Zomasulira za Google
+ ***Tsopano, mungathe!***
+
+ Dzina lakuti `hokeylization` ndi portmanteau, kutanthauza "hokey localization"
+
+ Ndizosavuta chifukwa ndizosavuta: zimatumiza zingwe ku Zomasulira za Google
+
+ Ndipo ndi yosavuta, komanso yamphamvu kwambiri. Ili ndi chithandizo chapadera cha zolemba za HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) zithunzi,
+ ndi [Markdown](https://daringfireball.net/projects/markdown) mafayilo.
 
  Mutha kumasulira:
  * chinthu cha JavaScript chokhala ndi mauthenga
- * chikwatu cha mafayilo, mobwerezabwereza
+ * Mafayilo angapo kapena maulalo, omwe amayenda mobwerezabwereza
 
  # Werengani izi muchilankhulo china
  Chikalata cha README.md chamasuliridwa, pogwiritsa ntchito chida cha hokeylization, kukhala
@@ -61,6 +69,7 @@ Hokeylization
  * [Kumasulira fayilo yachingwe cha JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Kumasulira chikwatu cha mafayilo amawu](#Translating-a-directory-of-text-files)
  * [Njira zina](#Njira Zina)
+ * [Malamulo a gulu la JSON](#JSON-batch-commands)
 
  ## Gwero
  * [hokeylization pa GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Thandizeni
  Gwiritsani ntchito `-h` / `--help` kuti muwonetse thandizo
+
+ ## JSON batch malamulo
+ Ndi njira ya `-j` / `--json` , mutha kuyendetsa malamulo angapo ogwirizana a `hokey`
+
+ Mwamsonkhano wapamwambayi imatchedwa `hokey.json` , koma mutha kutchula chilichonse chomwe mukufuna
+
+ Ngati mudutsa chikwatu monga `-j` mwina, `hokey` idzayang'ana `hokey.json` mu bukhuli.
+
+ Fayilo ya JSON iyenera kukhala ndi chinthu chimodzi. Mkati mwa chinthucho, mayina ake a katundu ndi ofanana ndi
+ zosankha za mzere wamalamulo, kuphatikiza katundu wina wina wotchedwa `hokey`
+
+ The `hokey` katundu ndi mndandanda wa malamulo kuthamanga. Zomwe zalengezedwa m'malamulo awa zidzatero
+ chepetsa mawu obwerezabwereza mu chinthu chakunja.
+
+ Muchinthu chilichonse mugulu la `hokey` , muyenera kutchula `name` , ndi mafayilo olowera ndi zotuluka.
+
+ Nachi chitsanzo cha `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Mafayilo olowetsa angapo
+ Dulani njira zingapo zamafayilo monga `infiles` m'malo mwa njira imodzi `infile` , monga mu chitsanzo ichi:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indexes
+ Pomasulira ku zilankhulo zambiri, `hokey` amatha kupanga fayilo yolozera yomwe imalemba zomasulira zonse zomwe zapangidwa
+ ndipo amapereka maulalo kwa iwo
+
+ *Mukapanga ma index, mutha kukhala ndi gwero limodzi lolowera *
+
+ Pitani njira ya `-I` / `--index` , mtengo wake ndi pomwe fayilo yolozera idzapangidwa, yomwe ikhoza kukhala fayilo.
+ kapena chikwatu. Ngati ndi chikwatu, dzina lafayilo losakhazikika lidzagwiritsidwa ntchito, kutengera template (onani pansipa)
+
+ Gwiritsani ntchito `-A` / `--index-template` kuti muwone momwe zotulutsazo zimapangidwira. Mutha kutchula 'html',
+ 'markdown', 'text', kapena njira yamafayilo yofikira [HandlebarsJS](https://handlebarsjs.com/) template yanu
+
+ Ngati mutchula template yanu, muyenera kufotokozeranso fayilo (osati chikwatu) cha `-I` / `--index`
+ mwina
 
  ## Khalani ndi nthawi yosangalatsa yomasulira zilankhulo!
 

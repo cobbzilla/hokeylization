@@ -1,12 +1,20 @@
 Hokeylization
  ==============
- Jina ni portmanteau, ikimaanisha 'ujanibishaji wa hokey'
+ Kwa nini siwezi kuendesha programu au tovuti yangu yote kupitia Google Tafsiri na kupata tafsiri ya kimsingi katika lugha nyingine?
 
- Ni hokey kwa sababu ni rahisi sana: hutuma masharti kwa Google Tafsiri
+ ***Sasa, unaweza!***
+
+ Jina `hokeylization` ni portmanteau, ikimaanisha 'ujanibishaji wa hokey'
+
+ Ni hokey kwa kiasi fulani kwa sababu ni rahisi sana: hutuma masharti kwa Google Tafsiri
+
+ Na ni rahisi, lakini pia nguvu sana. Ina msaada maalum kwa hati za HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) violezo,
+ na [Markdown](https://daringfireball.net/projects/markdown) faili.
 
  Unaweza kutafsiri:
  * Kitu cha JavaScript kilicho na ujumbe
- * saraka ya faili, kwa kurudia
+ * idadi yoyote ya faili au saraka, kila wakati hupitia saraka kwa kujirudia
 
  # Soma hii kwa lugha nyingine
  Hati hii ya README.md imetafsiriwa, kwa kutumia zana ya hokeylization yenyewe, kuwa
@@ -61,6 +69,7 @@ Hokeylization
  * [Kutafsiri faili ya nyenzo ya mfuatano wa JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Kutafsiri saraka ya faili za maandishi](#Kutafsiri-saraka-ya-faili-za-maandishi)
  * [Chaguo zingine](#Chaguzi-Nyingine)
+ * [Amri za kundi la JSON](#JSON-bechi-amri)
 
  ## Chanzo
  * [hokeylization kwenye GitHub](https://github.com/cobbzilla/hokeylization)
@@ -257,7 +266,7 @@ Hokeylization
  Kwa adventurous: wakati wa kusindika faili kwenye saraka, unaweza kupitisha chaguo la `-F` / `--filter`
  kuchuja matokeo kabla ya kuandikwa kwa mfumo wa faili
 
- Thamani ya chaguo hili lazima iwe njia ya faili ya JS inayohamisha chaguo la kukokotoa `filter`
+ Thamani ya chaguo hili lazima iwe njia ya faili ya JS inayohamisha kipengele cha kukokotoa kiitwacho `filter`
 
  `filter` za kukokotoa za `kichujio` lazima `async` kwa sababu `await` itaitwa juu yake
 
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Msaada
  Tumia `-h` / `--help` ili kuonyesha usaidizi
+
+ ## Amri za kundi la JSON
+ Ukiwa na chaguo la `-j` / `--json` , unaweza kuendesha amri nyingi za `hokey`
+
+ Kwa kawaida faili hii inaitwa `hokey.json` , lakini unaweza kuipa jina lolote utakalo
+
+ Ukipitisha saraka kama chaguo ` `-j` , `hokey` `hokey.json` kwenye saraka hiyo.
+
+ Faili ya JSON inapaswa kuwa na kitu kimoja. Ndani ya kitu hicho, majina ya mali yake ni sawa na
+ chaguzi za safu ya amri, pamoja na mali moja ya ziada inayoitwa `hokey`
+
+ Sifa ya `hokey` ni safu ya amri za kutekeleza. Sifa zilizotangazwa ndani ya amri hizi zitafanya
+ kubatilisha marudio ya matamko yoyote katika kitu cha nje.
+
+ Ndani ya kila kitu kwenye safu ya `hokey` , unapaswa kutaja `name` , na faili za pembejeo na towe.
+
+ Huu hapa ni mfano wa `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Faili nyingi za ingizo
+ Pitisha safu ya njia za faili kama `infiles` badala ya njia moja `infile` , kama katika mfano huu:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Fahirisi
+ Wakati wa kutafsiri kwa lugha nyingi, `hokey` inaweza kuunda faili ya faharasa inayoorodhesha tafsiri zote zilizofanywa
+ na hutoa viungo kwao
+
+ *Unapotengeneza faharasa, unaweza kuwa na chanzo kimoja tu cha ingizo*
+
+ Pitisha chaguo la `-I` / `--index` , thamani ni pale faili ya faharisi itatolewa, ambayo inaweza kuwa faili.
+ au saraka. Ikiwa ni saraka, jina la faili chaguo-msingi litatumika, kulingana na kiolezo (tazama hapa chini)
+
+ Tumia `-A` / `--index-template` ili kubaini jinsi matokeo ya faharasa yameumbizwa. Unaweza kutaja 'html',
+ 'markdown', 'text', au njia ya faili kwa kiolezo chako [HandlebarsJS](https://handlebarsjs.com/)
+
+ Ukibainisha kiolezo chako mwenyewe, lazima pia ubainishe faili (sio saraka) ya `-I` / `--index`
+ chaguo
 
  ## Furahia kutafsiri lugha!
 

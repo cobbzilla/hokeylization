@@ -1,12 +1,20 @@
 Hokeylizacija
  ==============
- Pavadinimas yra portmanteau, reiškiantis „hokey lokalizaciją“
+ Kodėl negaliu paleisti visos programos ar svetainės naudodamas „Google“ vertėją ir gauti pagrindinio vertimo kita kalba?
 
- Tai labai paprasta, nes ji siunčia eilutes į „Google“ vertėją
+ ***Dabar gali!***
+
+ Pavadinimas `hokeylization` yra portmanteau, reiškiantis "hokey lokalizacija"
+
+ Tai šiek tiek keista, nes labai paprasta: siunčia eilutes į „Google“ vertėją
+
+ Ir tai paprasta, bet kartu ir labai galinga. Jis turi specialų palaikymą HTML dokumentams,
+ [HandlebarsJS](https://handlebarsjs.com/) šablonai,
+ ir [Markdown](https://daringfireball.net/projects/markdown) failus.
 
  Galite išversti:
  * JavaScript objektas, kuriame yra pranešimų
- * failų katalogas, rekursyviai
+ * bet koks failų ar katalogų skaičius, visada rekursyviai keliaujant katalogais
 
  # Skaitykite tai kita kalba
  Šis README.md dokumentas buvo išverstas naudojant patį hokeylization įrankį į
@@ -61,6 +69,7 @@ Hokeylizacija
  * [„JavaScript“ eilutės išteklių failo vertimas](#Translating-a-JavaScript-string-resource-file)
  * [Teksto failų katalogo vertimas](#Translating-a-directory-of-text-files)
  * [Kitos parinktys](#Other-options)
+ * [JSON paketinės komandos](#JSON-batch-commands)
 
  ## Šaltinis
  * [hokeylization naudojant GitHub](https://github.com/cobbzilla/hokeylization)
@@ -240,10 +249,10 @@ Hokeylizacija
  prieš prasidedant tikslinei nuorodai (su `(` ). Dėl to žymėjimas pateikiamas neteisingai, o nuoroda
  sugenda peržiūrint dokumentą.
  * Kodo blokai išverčiami. „Google“ vertėjas nežino, ką žymėjimas laiko kodu, o ką ne
- * Neteisingas tarpas tarp kodo blokų su įtrauka. Vertinant sunku išsaugoti tarpus
+ * Neteisingas tarpas tarp įtrauktų kodų blokų. Vertinant sunku išsaugoti tarpus
  * `backticks` esantys dalykai bus išversti, kai beveik visada norite, kad tai būtų tiesioginės vertės
 
- Kai įgalinta vėliavėlė `-M` / `--markdown` “:
+ Kai įgalinta žyma `-M` / `--markdown` “:
  * Šablonas `](` bus sutrumpintas į `](` taip pataisomos sugedusios žymėjimo nuorodos
  * Aplink įtrauktus kodo blokus bus įdėtas įvynioklis „be vertimo“, išsaugant tinkamą įtrauką ir užtikrinant, kad jie nebūtų išversti.
  * Aplink tekstą, esantį `backticks` “, bus įdėtas įvynioklis „neverčiamas“, siekiant užtikrinti, kad jie nebūtų išversti
@@ -255,7 +264,7 @@ Hokeylizacija
 
  ### Filtras
  Mėgstantiems nuotykius: apdorodami failus kataloge, galite perduoti parinktį `-F` / `--filter`
- filtruoti išvestį prieš įrašant ją į failų sistemą
+ filtruoti išvestį prieš ją įrašant į failų sistemą
 
  Šios parinkties reikšmė turi būti kelias į JS failą, kuris eksportuoja funkciją, pavadintą `filter`
 
@@ -269,6 +278,88 @@ Hokeylizacija
 
  ### Pagalba
  Norėdami parodyti pagalbą, naudokite `-h` / `--help` .
+
+ ## JSON paketinės komandos
+ Naudodami parinktį `-j` / `--json` , galite paleisti kelias suderintas `hokey` komandas
+
+ Pagal susitarimą šis failas vadinamas `hokey.json` , bet galite jį pavadinti kaip tik norite
+
+ Jei pateiksite katalogą kaip parinktį `hokey` “, „hokey“ tame kataloge ieškos `hokey.json` `-j` .
+
+ JSON faile turi būti vienas objektas. Tame objekte jo savybių pavadinimai yra tokie patys kaip
+ komandinės eilutės parinktis ir vieną papildomą ypatybę, pavadintą `hokey`
+
+ `hokey` yra paleidžiamų komandų masyvas. Šiose komandose deklaruotos savybės bus
+ nepaisyti bet kokių pasikartojančių deklaracijų išoriniame objekte.
+
+ Kiekviename `hokey` masyvo objekte turėtumėte nurodyti `name` “ ir įvesties bei išvesties failus
+
+ Štai `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Keli įvesties failai
+ Perduokite failų kelių masyvą kaip `infiles` , o ne vieną kelią `infile` , kaip šiame pavyzdyje:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeksai
+ `hokey` gali sukurti rodyklės failą, kuriame pateikiami visi atlikti vertimai
+ ir pateikia nuorodas į juos
+
+ *Generuodami indeksus galite turėti tik vieną įvesties šaltinį*
+
+ Perduokite parinktį `-I` / `--index` , reikšmė yra vieta, kur bus sugeneruotas indekso failas, kuris gali būti failas
+ arba katalogą. Jei tai katalogas, bus naudojamas numatytasis failo pavadinimas, pagrįstas šablonu (žr. toliau)
+
+ Norėdami nustatyti, kaip formatuojama indekso išvestis, naudokite `-A` / `--index-template` . Galite nurodyti „html“,
+ „markdown“, „tekstas“ arba failo kelias į jūsų [HandlebarsJS](https://handlebarsjs.com/) šabloną
+
+ Jei nurodote savo šabloną, taip pat turite nurodyti failą (ne katalogą) `-I` / `--index`
+ variantas
 
  ## Smagiai praleiskite laiką versdami kalbas!
 

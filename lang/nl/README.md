@@ -1,12 +1,20 @@
 Hokeylization
  =============
- De naam is een samentrekking, wat 'hokey localization' betekent
+ Waarom kan ik niet mijn hele app of site via Google Translate laten lopen en een basisvertaling in een andere taal krijgen?
 
- Het is hokey omdat het heel eenvoudig is: het stuurt strings naar Google Translate
+ ***Nu kan je!***
+
+ De naam `hokeylization` is een samentrekking, wat 'hokey-lokalisatie' betekent
+
+ Het is een beetje hokey omdat het heel eenvoudig is: het stuurt strings naar Google Translate
+
+ En het is eenvoudig, maar ook erg krachtig. Het heeft speciale ondersteuning voor HTML-documenten,
+ [HandlebarsJS](https://handlebarsjs.com/) sjablonen,
+ en [Markdown](https://daringfireball.net/projects/markdown) bestanden.
 
  Jij kan vertalen:
  * een JavaScript-object dat berichten bevat
- * een map met bestanden, recursief
+ * een willekeurig aantal bestanden of mappen, altijd recursief door mappen bladeren
 
  # Lees dit in een andere taal
  Dit README.md document is vertaald, met behulp van de hokeylization tool zelf, in
@@ -61,6 +69,7 @@ Hokeylization
  * [Een JavaScript-tekenreeksbronbestand vertalen](#Translating-a-JavaScript-string-resource-bestand)
  * [Een directory met tekstbestanden vertalen](#Translating-a-directory-of-text-files)
  * [Overige opties](#Overige-opties)
+ * [JSON batch-commando's](#JSON-batch-commands)
 
  ## Bron
  * [hokeylization op GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Helpen
  Gebruik `-h` / `--help` om hulp weer te geven
+
+ ## JSON batch-opdrachten
+ Met de optie `-j` / `--json` kunt u meerdere gecoördineerde `hokey` opdrachten uitvoeren
+
+ Volgens afspraak wordt dit bestand `hokey.json` genoemd, maar je kunt het een naam geven die je wilt
+
+ Als u een directory doorgeeft als de optie `hokey` `-j` een `hokey.json` in die directory
+
+ Het JSON-bestand moet één object bevatten. Binnen dat object zijn de eigenschapsnamen hetzelfde als
+ de opdrachtregelopties, plus een extra eigenschap genaamd `hokey`
+
+ De eigenschap `hokey` is een reeks opdrachten die moeten worden uitgevoerd. De eigenschappen die in deze opdrachten zijn gedeclareerd, zullen:
+ overschrijf eventuele dubbele declaraties in het buitenste object.
+
+ Binnen elk object in de `hokey` array, moet je een `name` , en de invoer- en uitvoerbestanden
+
+ Hier is een voorbeeld van een `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Meerdere invoerbestanden
+ Geef een array van bestandspaden door als `infiles` in plaats van een enkel pad `infile` , zoals in dit voorbeeld:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indexen
+ Bij het vertalen naar veel talen kan `hokey` een indexbestand maken met alle gemaakte vertalingen
+ en biedt links naar hen
+
+ *Bij het genereren van indexen kunt u slechts één invoerbron hebben*
+
+ Geef de optie `-I` / `--index` , de waarde is waar het indexbestand wordt gegenereerd, wat een bestand kan zijn
+ of een map. Als het een map is, wordt een standaard bestandsnaam gebruikt, gebaseerd op de sjabloon (zie hieronder)
+
+ Gebruik de `-A` / `--index-template` om te bepalen hoe de indexuitvoer wordt geformatteerd. U kunt 'html' opgeven,
+ 'markdown', 'text' of het bestandspad naar uw eigen [HandlebarsJS](https://handlebarsjs.com/) sjabloon
+
+ Als u uw eigen sjabloon opgeeft, moet u ook een bestand (geen map) opgeven voor de `-I` / `--index`
+ keuze
 
  ## Veel plezier met het vertalen van talen!
 

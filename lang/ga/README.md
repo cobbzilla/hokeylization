@@ -1,12 +1,20 @@
 Hokeylization
  ============
- Portmanteau is ea an t-ainm, rud a chiallaíonn 'logánú hokey'
+ Cén fáth nach féidir liom m'aip nó mo shuíomh iomlán a rith trí Google Translate agus bunaistriúchán a fháil i dteanga eile?
 
- Tá sé hokey mar tá sé an-simplí: seolann sé teaghráin chuig Google Translate
+ ***Anois, is féidir leat!**
+
+ Is portmanteau é an t-ainm `hokeylization` , rud a chiallaíonn 'logánú hokey'
+
+ Tá sé beagán hokey mar tá sé an-simplí: seolann sé teaghráin chuig Google Translate
+
+ Agus tá sé simplí, ach freisin an-chumhachtach. Tá tacaíocht speisialta aige do dhoiciméid HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) teimpléid,
+ agus comhaid [Markdown](https://daringfireball.net/projects/markdown).
 
  Is féidir leat aistriúchán:
  * réad JavaScript ina bhfuil teachtaireachtaí
- * eolaire comhad, go hathchúrsach
+ * líon ar bith comhad nó eolairí, ag trasnú eolairí go hathchúrsach i gcónaí
 
  # Léigh é seo i dteanga eile
  Aistríodh an doiciméad README.md seo, ag baint úsáide as an uirlis hokeylization féin, go
@@ -61,6 +69,7 @@ Hokeylization
  * [Comhad acmhainne teaghrán JavaScript a aistriú](#Translating-a-JavaScript-string-resource-file)
  * [Eolaire comhaid téacs a aistriú](#Translating-a-directory-of-text-files)
  * [Roghanna eile](#Other-options)
+ * [orduithe baisc JSON](# JSON-batch-commands)
 
  ## Foinse
  * [hokeylization ar GitHub]( https://github.com/cobbzilla/hokeylization)
@@ -257,7 +266,7 @@ Hokeylization
  Don eachtrúil: agus comhaid á bpróiseáil in eolaire, is féidir leat pas a fháil sa `-F` / `--filter`
  chun an t-aschur a scagadh sula scríobhtar chuig an gcóras comhad é
 
- Caithfidh luach an rogha seo a bheith ina chonair chuig comhad JS a easpórtálann feidhm darb ainm `filter`
+ Caithfidh luach na rogha seo a bheith ina chonair chuig comhad JS a easpórtálann feidhm darb ainm `filter`
 
  Ní mór `filter` a bheith san fheidhm `async` toisc go nglaofar `await` air
 
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Cabhrú
  Úsáid `-h` / `--help` chun cabhair a thaispeáint
+
+ ## orduithe baisce JSON
+ Leis an `-j` / `--json` , is féidir leat `hokey` comhordaithe a rith
+
+ De réir an ghnáis tugtar `hokey.json` ar an gcomhad seo, ach is féidir leat cibé rud is mian leat a ainmniú
+
+ Má éiríonn leat eolaire mar an rogha `hokey` `-j` lorgóidh `hokey.json` san eolaire sin
+
+ Ba cheart go mbeadh réad amháin i gcomhad JSON. Laistigh den réad sin, is ionann a ainmneacha maoine agus
+ na roghanna ordú-líne, móide airí breise amháin darb ainm `hokey`
+
+ Is éard atá sa mhaoin `hokey` ná sraith orduithe le rith. Déanfaidh na hairíonna a dhearbhaítear laistigh de na horduithe seo
+ aon dearbhuithe dúblacha sa réad seachtrach a shárú.
+
+ Laistigh de gach réad san eagar `hokey` , ba cheart duit `name` a shonrú, agus na comhaid ionchuir agus aschuir
+
+ Seo sampla de `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Comhaid ionchuir iolracha
+ Cuir raon de chonairí comhaid ar aghaidh mar `infiles` in ionad conair aonair `infile` , mar atá sa sampla seo:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Innéacsanna
+ Agus é á aistriú go dtí go leor teangacha, is féidir le `hokey` comhad innéacs a chruthú a liostaíonn na haistriúcháin go léir a rinneadh
+ agus cuireann sé naisc ar fáil dóibh
+
+ *Agus innéacsanna á ngin agat, ní féidir ach foinse ionchuir amháin a bheith agat*
+
+ Pas an `-I` / `--index` -- index`, is é an luach a ghinfear an comhad innéacs, is féidir a bheith ina chomhad
+ nó eolaire. Más eolaire é, úsáidfear ainm réamhshocraithe comhaid, bunaithe ar an teimpléad (féach thíos)
+
+ Úsáid an `-A` / `--index-template` chun a fháil amach conas a fhormáidítear an t-aschur innéacs. Is féidir leat 'html' a shonrú,
+ 'markdown', 'text', nó cosán an chomhaid chuig do theimpléad [HandlebarsJS](https://handlebarsjs.com/)
+
+ Má shonraíonn tú do theimpléad féin, ní mór duit comhad a shonrú freisin (ní eolaire) don `-I` / `--index`
+ rogha
 
  ##Bíodh am spraoi agat ag aistriú teangacha!
 

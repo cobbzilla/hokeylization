@@ -1,12 +1,20 @@
 hokeyleşme
  =============
- Adı, 'hokey yerelleştirme' anlamına gelen bir portmanteau'dur.
+ Neden tüm uygulamamı veya sitemi Google Çeviri üzerinden çalıştırıp başka bir dilde temel bir çeviri alamıyorum?
 
- Çok basit çünkü çok basit: Google Translate'e dizeler gönderiyor
+ ***Şimdi yapabilirsin!***
+
+ `hokeylization` adı, "hokey yerelleştirme" anlamına gelen bir portmantodur.
+
+ Biraz hokey çünkü çok basit: dizeleri Google Translate'e gönderiyor
+
+ Ve basit, ama aynı zamanda çok güçlü. HTML belgeleri için özel desteği vardır,
+ [HandlebarsJS](https://handlebarsjs.com/) şablonları,
+ ve [Markdown](https://daringfireball.net/projects/markdown) dosyaları.
 
  Tercüme edebilirsin:
  * mesajları içeren bir JavaScript nesnesi
- * özyinelemeli bir dosya dizini
+ * herhangi bir sayıda dosya veya dizin, her zaman dizinleri yinelemeli olarak çaprazlama
 
  # Bunu başka bir dilde oku
  Bu README.md belgesi, hokeylization aracının kendisi kullanılarak şu dile çevrilmiştir:
@@ -61,6 +69,7 @@ hokeyleşme
  * [JavaScript dize kaynak dosyasını çevirme](#Translating-a-JavaScript-string-resource-file)
  * [Metin dosyalarının bir dizinini çevirme](#Metin dosyalarının-dizinini çevirme)
  * [Diğer seçenekler](#Diğer seçenekler)
+ * [JSON toplu komutları](#JSON-toplu komutlar)
 
  ## Kaynak
  * [GitHub'da hokeylization](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ hokeyleşme
 
  ### Yardım
  Yardımı göstermek için `-h` / `--help` kullanın
+
+ ## JSON toplu komutları
+ `-j` / `--json` seçeneği ile birden çok koordineli `hokey` komutunu çalıştırabilirsiniz.
+
+ Geleneksel olarak bu dosyaya `hokey.json` adı verilir, ancak onu istediğiniz şekilde adlandırabilirsiniz.
+
+ Bir dizini `-j` seçeneği olarak iletirseniz, `hokey` " o dizinde bir `hokey.json` .
+
+ JSON dosyası bir nesne içermelidir. Bu nesne içinde, özellik adları ile aynıdır.
+ komut satırı seçenekleri ve `hokey` adlı bir ek özellik
+
+ `hokey` özelliği çalıştırılacak bir dizi komuttur. Bu komutlar içinde bildirilen özellikler,
+ dış nesnedeki yinelenen bildirimleri geçersiz kılar.
+
+ `hokey` dizisindeki her nesne içinde bir `name` ve giriş ve çıkış dosyalarını belirtmelisiniz.
+
+ İşte bir `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Çoklu giriş dosyaları
+ Bu örnekte olduğu gibi, tek bir yol "infile" yerine bir dizi dosya yolunu `infile` `infiles` iletin:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Dizinler
+ Birçok dile çeviri yaparken, `hokey` yapılan tüm çevirileri listeleyen bir dizin dosyası oluşturabilir.
+ ve onlara bağlantılar sağlar
+
+ *İndeks oluştururken yalnızca bir giriş kaynağınız olabilir*
+
+ `-I` / `--index` seçeneğini iletin, değer, bir dosya olabilen indeks dosyasının oluşturulacağı yerdir.
+ veya bir dizin. Bu bir dizinse, şablona dayalı olarak varsayılan bir dosya adı kullanılacaktır (aşağıya bakın)
+
+ Dizin çıktısının nasıl biçimlendirildiğini belirlemek için `-A` / `--index-template` kullanın. 'html' belirtebilirsiniz,
+ 'markdown', 'text' veya kendi [HandlebarsJS](https://handlebarsjs.com/) şablonunuzun dosya yolu
+
+ Kendi şablonunuzu belirtirseniz, `-I` / `--index` için de bir dosya (bir dizin değil) belirtmelisiniz.
+ seçenek
 
  ## Dil çevirirken iyi eğlenceler!
 

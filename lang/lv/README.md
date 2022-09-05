@@ -1,12 +1,20 @@
 Hokeilizācija
  ==============
- Nosaukums ir portmanteau, kas nozīmē "hokey lokalizācija"
+ Kāpēc es nevaru palaist visu savu lietotni vai vietni, izmantojot Google tulkotāju, un iegūt pamata tulkojumu citā valodā?
 
- Tas ir ļoti vienkārši, jo tas nosūta virknes Google tulkotājam
+ ***Tagad Tu vari!***
+
+ Nosaukums `hokeylization` ir portmanteau, kas nozīmē "hokey lokalizācija"
+
+ Tas ir nedaudz dīvaini, jo tas ir ļoti vienkārši: tas nosūta virknes Google tulkotājam
+
+ Un tas ir vienkārši, bet arī ļoti spēcīgs. Tam ir īpašs atbalsts HTML dokumentiem,
+ [HandlebarsJS](https://handlebarsjs.com/) veidnes,
+ un [Markdown](https://daringfireball.net/projects/markdown) faili.
 
  Jūs varat tulkot:
  * JavaScript objekts, kas satur ziņojumus
- * rekursīvi failu direktorijs
+ * neierobežots skaits failu vai direktoriju, vienmēr rekursīvi šķērsojot direktorijus
 
  # Lasiet to citā valodā
  Šis README.md dokuments ir tulkots, izmantojot pašu hokeylizācijas rīku
@@ -61,6 +69,7 @@ Hokeilizācija
  * [JavaScript virknes resursa faila tulkošana](#Translating-a-JavaScript-string-resource-file)
  * [Teksta failu direktorija tulkošana](#Translating-a-directory-of-text-files)
  * [Citas opcijas](#Other-options)
+ * [JSON pakešu komandas](#JSON-batch-commands)
 
  ## Avots
  * [hokeylization vietnē GitHub](https://github.com/cobbzilla/hokeylization)
@@ -254,7 +263,7 @@ Hokeilizācija
  Ja jūsu saturs ir HTML, tas tiks sabojāts, ja vien nenodosit opciju `-p html` " / `--process-as html`
 
  ### Filtrs
- Piedzīvojumu meklētājiem: apstrādājot failus direktorijā, varat nodot opciju `-F` / `--filter`
+ Piedzīvojumu cienītājiem: apstrādājot failus direktorijā, varat nodot opciju `-F` / `--filter`
  lai filtrētu izvadi, pirms tā tiek ierakstīta failu sistēmā
 
  Šīs opcijas vērtībai ir jābūt ceļam uz JS failu, kas eksportē funkciju ar nosaukumu `filter`
@@ -269,6 +278,88 @@ Hokeilizācija
 
  ### Palīdzība
  Lai parādītu palīdzību, izmantojiet taustiņu `-h` / `--help`
+
+ ## JSON pakešu komandas
+ Izmantojot opciju `-j` / `--json` , varat palaist vairākas koordinētas `hokey` komandas
+
+ Parasti šis fails tiek saukts par `hokey.json` , taču varat to nosaukt, kā vien vēlaties
+
+ Ja nododat direktoriju kā opciju "-j", `hokey` `hokey.json` `-j` šajā direktorijā.
+
+ JSON failā ir jābūt vienam objektam. Šajā objektā tā rekvizītu nosaukumi ir tādi paši kā
+ komandrindas opcijas, kā arī viens papildu rekvizīts ar nosaukumu `hokey`
+
+ Īpašums `hokey` ir izpildāmo komandu masīvs. Šajās komandās deklarētās īpašības būs
+ ignorēt visas dublētās deklarācijas ārējā objektā.
+
+ Katrā masīva `hokey` ir jānorāda `name` un ievades un izvades faili
+
+ Šeit ir `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Vairāki ievades faili
+ Nododiet failu ceļu masīvu kā `infiles` nevis vienu ceļu `infile` , kā tas ir šajā piemērā:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeksi
+ Tulkojot daudzās valodās, `hokey` var izveidot indeksa failu, kurā uzskaitīti visi veiktie tulkojumi
+ un nodrošina saites uz tiem
+
+ *Ģenerējot indeksus, var būt tikai viens ievades avots*
+
+ Nododiet opciju `-I` / `--index` , vērtība ir vieta, kur tiks ģenerēts indeksa fails, kas var būt fails
+ vai direktoriju. Ja tas ir direktorijs, tiks izmantots noklusējuma faila nosaukums, pamatojoties uz veidni (skatiet tālāk)
+
+ Izmantojiet `-A` / `--index-template` , lai noteiktu, kā tiek formatēta indeksa izvade. Jūs varat norādīt "html",
+ “markdown”, “text” vai faila ceļš uz jūsu [HandlebarsJS](https://handlebarsjs.com/) veidni
+
+ Ja norādāt savu veidni, jums ir jānorāda arī fails (nevis direktorijs) `-I` "-I" / `--index`
+ opciju
 
  ## Jautri laiku tulkojot valodas!
 

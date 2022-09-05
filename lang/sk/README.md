@@ -1,12 +1,20 @@
 Hokeylizácia
  ==============
- Názov je portmanteau, čo znamená „hokey lokalizácia“
+ Prečo nemôžem spustiť celú svoju aplikáciu alebo web cez Google Translate a získať základný preklad do iného jazyka?
 
- Je to vtipné, pretože je to veľmi jednoduché: posiela reťazce do Google Translate
+ ***Teraz môžeš!***
+
+ Názov `hokeylization` je portmanteau, čo znamená „hokey lokalizácia“
+
+ Je to trochu šialené, pretože je to veľmi jednoduché: posiela reťazce do Google Translate
+
+ A je to jednoduché, no zároveň veľmi výkonné. Má špeciálnu podporu pre HTML dokumenty,
+ [HandlebarsJS](https://handlebarsjs.com/) šablóny,
+ a súbory [Markdown](https://daringfireball.net/projects/markdown).
 
  Môžete preložiť:
  * objekt JavaScript obsahujúci správy
- * adresár súborov, rekurzívne
+ * ľubovoľný počet súborov alebo adresárov, vždy prechádzajúce adresármi rekurzívne
 
  # Prečítajte si to v inom jazyku
  Tento dokument README.md bol preložený pomocou samotného nástroja na hokeyylizáciu
@@ -61,6 +69,7 @@ Hokeylizácia
  * [Preklad zdrojového súboru s reťazcom JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Preklad adresára textových súborov](#Translating-a-directory-of-text-files)
  * [Ďalšie možnosti](#Other-options)
+ * [dávkové príkazy JSON](#JSON-batch-commands)
 
  ## Zdroj
  * [hokeylizácia na GitHub](https://github.com/cobbzilla/hokeylization)
@@ -239,7 +248,7 @@ Hokeylizácia
  * Nefunkčné odkazy. V preklade sa medzera objaví po ukončení popisu odkazu označenia (s `]` ), ale
  predtým, než sa začne jeho cieľový odkaz (s `(` ). To spôsobí nesprávne vykreslenie označenia a odkazu
  pri prezeraní dokumentu sa pokazí.
- * Bloky kódu sa prekladajú. Prekladač Google nevie, čo markdown považuje za kód a čo nie
+ * Bloky kódu sa preložia. Prekladač Google nevie, čo markdown považuje za kód a čo nie
  * Nesprávne medzery pre odsadené bloky kódu. V preklade je ťažké zachovať medzery
  * Veci vnútri `backticks` sa preložia, keď takmer vždy chcete, aby to boli doslovné hodnoty
 
@@ -269,6 +278,88 @@ Hokeylizácia
 
  ### Pomoc
  Na zobrazenie pomoci použite `-h` / `--help`
+
+ ## dávkové príkazy JSON
+ S `-j` / `--json` môžete spustiť viacero koordinovaných príkazov `hokey`
+
+ Podľa konvencie sa tento súbor nazýva `hokey.json` , ale môžete si ho pomenovať ako chcete
+
+ Ak zadáte adresár ako možnosť `-j` , `hokey` vyhľadá v tomto adresári súbor `hokey.json`
+
+ Súbor JSON by mal obsahovať jeden objekt. V rámci tohto objektu sú jeho názvy vlastností rovnaké ako
+ možnosti príkazového riadka plus jedna ďalšia vlastnosť s názvom `hokey`
+
+ Vlastnosť `hokey` predstavuje pole príkazov, ktoré sa majú spustiť. Vlastnosti deklarované v týchto príkazoch budú
+ prepísať všetky duplicitné deklarácie vo vonkajšom objekte.
+
+ V rámci každého objektu v poli `hokey` by ste mali zadať `name` a vstupné a výstupné súbory
+
+ Tu je príklad súboru `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Viac vstupných súborov
+ Odovzdajte pole ciest k súborom ako `infiles` súbory“ namiesto jedinej cesty `infile` , ako v tomto príklade:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indexy
+ Pri preklade do mnohých jazykov môže `hokey` vytvoriť indexový súbor, ktorý obsahuje zoznam všetkých vykonaných prekladov
+ a poskytuje na ne odkazy
+
+ *Pri generovaní indexov môžete mať iba jeden vstupný zdroj*
+
+ Zadajte možnosť `-I` / `--index` , hodnota je miesto, kde sa vygeneruje indexový súbor, čo môže byť súbor
+ alebo adresár. Ak je to adresár, použije sa predvolený názov súboru na základe šablóny (pozri nižšie)
+
+ Na určenie formátu výstupu indexu použite `-A` / `--index-template` . Môžete zadať „html“,
+ 'markdown', 'text' alebo cesta k súboru k vašej vlastnej šablóne [HandlebarsJS](https://handlebarsjs.com/)
+
+ Ak zadáte vlastnú šablónu, musíte zadať aj súbor (nie adresár) pre `-I` / `--index`
+ možnosť
 
  ## Príjemnú zábavu pri prekladaní jazykov!
 

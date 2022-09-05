@@ -1,12 +1,20 @@
 Hokeylization
  =============
- O le igoa o le portmanteau, o lona uiga o le 'hokey localization'
+ Aisea e le mafai ai ona ou fa'agasolo uma la'u app po'o le saite e ala i le Google Translate ma maua se fa'aliliuga autu i se isi gagana?
 
- O le hokey aua e matua faigofie lava: e auina atu manoa ile Google Translate
+ ***Ia, e te mafaia!***
+
+ O le igoa `hokeylization` o se portmanteau, o lona uiga 'hokey localization'
+
+ E fai lava si hokey aua e matua faigofie lava: e auina atu manoa ile Google Translate
+
+ Ma e faigofie, ae matua mamana foi. E iai le lagolago fa'apitoa mo pepa HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) mamanu,
+ ma [Markdown](https://daringfireball.net/projects/markdown) faila.
 
  E mafai ona e fa'aliliu:
  * o se mea JavaScript o loʻo iai feʻau
- * se lisi o faila, faʻasolosolo
+ * so'o se numera o faila po'o fa'atonuga, fa'asolosolo fa'asolosolo fa'atonuga
 
  # Faitau lenei i se isi gagana
  O lenei README.md pepa ua faaliliuina, faʻaaoga le meafaigaluega hokeylization lava ia, i totonu
@@ -61,6 +69,7 @@ Hokeylization
  * [Faaliliuina o se faila punaoa string JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Faaliliuina o se lisi o faila faila](#Translating-a-directory-of-text-files)
  * [O isi filifiliga](#Other-options)
+ * [JSON batch commands](#JSON-batch-commands)
 
  ## Punavai
  * [hokeylization i le GitHub](https://github.com/cobbzilla/hokeylization)
@@ -259,7 +268,7 @@ Hokeylization
 
  O le tau o lenei filifiliga e tatau ona avea ma ala i se faila JS e auina atu i fafo se galuega e igoa `filter`
 
- O le galuega `filter` e tatau ona `async` aua `await` ' o le a vala'au i ai
+ O le galuega `filter` e tatau ona `async` aua `await` ' o le a valaauina i ai
 
  A'o le'i tusia faila i le tisiki, o le a tu'uina atu uma mea o lo'o i totonu o faila i le `filter` galuega o se manoa
 
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Fesoasoani
  Fa'aaoga `-h` / `--help` e fa'aali ai le fesoasoani
+
+ ## Poloaiga a le JSON
+ Faatasi ai ma le `-j` / `--json` filifiliga, e mafai ona e faʻatautaia le tele o faʻatonuga `hokey`
+
+ E ala i le faʻasalalauga ua taʻua lenei faila `hokey.json` , ae e mafai ona e faʻaigoaina soʻo se mea e te manaʻo ai
+
+ Afai e te pasia se lisi e fai ma filifiliga `-j` , `hokey` o le a su'e se `hokey.json` i lena lisi
+
+ O le faila JSON e tatau ona iai se mea e tasi. I totonu o lena mea, o ona igoa meatotino e tutusa ma
+ o filifiliga laina-fa'atonu, fa'atasi ai ma se meatotino fa'aopoopo e igoa `hokey`
+
+ O le `hokey` meatotino o se fa'asologa o fa'atonuga e fa'atino. O meatotino o loʻo faʻaalia i totonu o nei poloaiga o le a
+ soloia so'o se ta'utinoga fa'alua i le mea i fafo.
+
+ I totonu o mea taʻitasi i le `hokey` array, e tatau ona e faʻamaoti se `name` , ma faila faila ma faila faila.
+
+ Ole fa'ata'ita'iga lea ole `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Fa'ailoga faila e tele
+ Tu'u atu le tele o ala faila e pei o `infiles` nai lo le tasi ala `infile` , pei o lenei fa'ata'ita'iga:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Fa'asinomaga
+ A fa'aliliu i le tele o gagana, `hokey` e mafai ona fai se faila fa'asino igoa e lisi uma ai fa'aliliuga na faia.
+ ma maua ai sootaga ia i latou
+
+ *Pe a fa'atupu fa'asino igoa, e mafai ona na'o le tasi le puna fa'aoga*
+
+ Pasia le `-I` / `--index` filifiliga, o le tau o le mea lea o le a gaosia ai le faila faila, lea e mafai ona avea ma faila.
+ po'o se fa'atonuga. Afai o se fa'atonuga, o le a fa'aogaina le igoa faila, fa'atatau i le fa'ata'ita'iga (silasila i lalo)
+
+ Fa'aoga le `-A` / `--index-template` e iloa ai pe fa'afefea ona fa'atulaga le fa'ailoga. E mafai ona e faʻamaonia 'html',
+ 'markdown', 'text', po'o le ala faila i lau lava [HandlebarsJS](https://handlebarsjs.com/) template
+
+ Afai e te faʻamaonia lau lava faʻataʻitaʻiga, e tatau foi ona e faʻamaoti se faila (e le o se faʻatonuga) mo le `-I` / `--index`
+ filifiliga
 
  ## Ia maua se taimi fiafia e faaliliu gagana!
 

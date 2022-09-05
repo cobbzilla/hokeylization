@@ -1,12 +1,20 @@
 Հոկեյլիզացիա
  ==============
- Անունը portmanteau է, որը նշանակում է «հոկեյի տեղայնացում»
+ Ինչո՞ւ ես չեմ կարող իմ ամբողջ հավելվածը կամ կայքը գործարկել Google Translate-ի միջոցով և ստանալ հիմնական թարգմանություն այլ լեզվով:
 
- Այն հոքեյ է, քանի որ շատ պարզ է. այն տողեր է ուղարկում Google Translate-ին
+ ***Հիմա կարող ես:***
+
+ `hokeylization` » անվանումը պորտմանտո է, որը նշանակում է «հոկեյլի տեղայնացում»
+
+ Այն ինչ-որ չափով հուզիչ է, քանի որ շատ պարզ է. այն տողեր է ուղարկում Google Translate-ին
+
+ Եվ դա պարզ է, բայց նաև շատ հզոր: Այն ունի հատուկ աջակցություն HTML փաստաթղթերի համար,
+ [HandlebarsJS](https://handlebarsjs.com/) կաղապարներ,
+ և [Markdown](https://daringfireball.net/projects/markdown) ֆայլերը:
 
  Դուք կարող եք թարգմանել.
  * JavaScript օբյեկտ, որը պարունակում է հաղորդագրություններ
- * ֆայլերի գրացուցակ, ռեկուրսիվ
+ * ցանկացած թվով ֆայլեր կամ գրացուցակներ, որոնք միշտ անցնում են ռեկուրսիվ դիրեկտորիաներով
 
  # Կարդացեք սա այլ լեզվով
  Այս README.md փաստաթուղթը թարգմանվել է հենց hokeylization գործիքի միջոցով
@@ -61,6 +69,7 @@
  * [Translating a JavaScript string resource file](#Translating-a-JavaScript-string-resource-file)
  * [Translating a directory of text files](#Translating-a-directory-of-text-files)
  * [Այլ տարբերակներ](#Other-options)
+ * [JSON խմբաքանակի հրամաններ](#JSON-batch-commands)
 
  ## Աղբյուր
  * [hokeylization GitHub-ում](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@
 
  ### Օգնություն
  Օգտագործեք `-h` / `--help` օգնություն ցույց տալու համար
+
+ ## JSON խմբաքանակի հրամաններ
+ `-j` / `--json` տարբերակով կարող եք գործարկել բազմաթիվ համակարգված `hokey` հրամաններ
+
+ Պայմանականորեն այս ֆայլը կոչվում է `hokey.json` , բայց դուք կարող եք այն անվանել այնպես, ինչպես ցանկանում եք
+
+ Եթե գրացուցակը փոխանցեք որպես `-j` տարբերակ, `hokey` »-ն այդ գրացուցակում `hokey.json` »:
+
+ JSON ֆայլը պետք է պարունակի մեկ օբյեկտ: Այդ օբյեկտի ներսում նրա գույքի անվանումները նույնն են, ինչ
+ հրամանի տողի ընտրանքները, գումարած մեկ լրացուցիչ հատկություն՝ `hokey` անունով
+
+ `hokey` հատկությունը գործարկվող հրամանների զանգված է: Այս հրամաններում հայտարարված հատկությունները կլինեն
+ վերացնել արտաքին օբյեկտի ցանկացած կրկնօրինակ հայտարարություն:
+
+ `hokey` զանգվածի յուրաքանչյուր օբյեկտի ներսում դուք պետք է նշեք `name` անունը» և մուտքային և ելքային ֆայլերը:
+
+ Ահա `hokey.json` »-ի օրինակ
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Բազմաթիվ մուտքային ֆայլեր
+ Անցեք ֆայլի ուղիների զանգվածը որպես `infiles` »՝ մեկ ուղու `infile` -ի փոխարեն, ինչպես այս օրինակում.
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### ինդեքսներ
+ Շատ լեզուներով `hokey` կարող է ստեղծել ինդեքսային ֆայլ, որը թվարկում է կատարված բոլոր թարգմանությունները
+ և տրամադրում է դրանց հղումներ
+
+ *Ինդեքսի ստեղծման ժամանակ դուք կարող եք ունենալ միայն մեկ մուտքային աղբյուր*
+
+ Անցեք `-I` / `--index` տարբերակը, արժեքն այն է, որտեղ կստեղծվի ինդեքսային ֆայլը, որը կարող է լինել ֆայլ:
+ կամ գրացուցակ: Եթե դա գրացուցակ է, կօգտագործվի լռելյայն ֆայլի անունը՝ հիմնված ձևանմուշի վրա (տես ստորև)
+
+ Օգտագործեք `-A` / `--index-template` ՝ որոշելու, թե ինչպես է ինդեքսի ելքը ձևաչափված: Դուք կարող եք նշել «html»,
+ «markdown», «տեքստ» կամ ֆայլի ուղին դեպի ձեր սեփական [HandlebarsJS](https://handlebarsjs.com/) ձևանմուշը
+
+ Եթե նշեք ձեր սեփական ձևանմուշը, ապա պետք է նաև նշեք ֆայլ (ոչ գրացուցակ) `-I` / `--index` համար:
+ տարբերակ
 
  ## Զվարճացեք լեզուներ թարգմանելով:
 

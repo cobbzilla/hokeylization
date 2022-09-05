@@ -1,12 +1,20 @@
 Hokeylization
  =============
- Jeneng kasebut minangka portmanteau, tegese 'lokalisasi hokey'
+ Napa aku ora bisa mbukak kabeh aplikasi utawa situs liwat Google Translate lan entuk terjemahan dhasar ing basa liya?
 
- Iku hokey amarga iku banget prasaja: ngirim strings menyang Google Translate
+ ***Saiki, sampeyan bisa!***
+
+ Jeneng `hokeylization` minangka portmanteau, tegese 'lokalisasi hokey'
+
+ Iku rada hokey amarga prasaja banget: ngirim strings menyang Google Translate
+
+ Lan prasaja, nanging uga kuat banget. Nduwe dhukungan khusus kanggo dokumen HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) cithakan,
+ lan [Markdown](https://daringfireball.net/projects/markdown) file.
 
  Sampeyan bisa nerjemahake:
  * obyek JavaScript sing ngemot pesen
- * direktori file, rekursif
+ * sawetara file utawa direktori, tansah ngliwati direktori kanthi rekursif
 
  # Waca iki ing basa liya
  Dokumen README.md iki wis diterjemahake, nggunakake alat hokeylization dhewe, menyang
@@ -61,6 +69,7 @@ Hokeylization
  * [Nerjemahake file sumber daya string JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Nerjemahake direktori file teks](#Translating-a-directory-of-text-files)
  * [Opsi liyane](#Opsi-Other)
+ * [JSON batch printah](#JSON-batch-commands)
 
  ## Sumber
  * [hokeylization ing GitHub](https://github.com/cobbzilla/hokeylization)
@@ -263,12 +272,94 @@ Hokeylization
 
  Sadurunge file ditulis menyang disk, kabeh isi file bakal diterusake menyang fungsi `filter` minangka string
 
- Nilai bali saka fungsi `filter` apa bener bakal ditulis kanggo panyimpenan
+ Nilai bali saka fungsi `filter` yaiku apa sing bakal ditulis ing panyimpenan
 
  Mangkono, sampeyan duwe kontrol total babagan apa sing bakal ditulis
 
  ### Bantuan
  Gunakake `-h` / `--help` kanggo nuduhake pitulung
+
+ ## Prentah kumpulan JSON
+ Kanthi `-j` / `--json` , sampeyan bisa nglakokake sawetara perintah `hokey`
+
+ Miturut konvènsi berkas iki diarani `hokey.json` , nanging sampeyan bisa menehi jeneng apa wae sing dikarepake
+
+ Yen sampeyan ngliwati direktori minangka opsi ` `-j` , `hokey` bakal nggoleki `hokey.json` ing direktori kasebut
+
+ File JSON kudu ngemot siji obyek. Ing obyek kasebut, jeneng properti padha karo
+ opsi baris printah, plus siji properti tambahan jenenge `hokey`
+
+ Properti `hokey` minangka susunan perintah sing kudu ditindakake. Properti sing diumumake ing printah kasebut bakal
+ ngilangi deklarasi duplikat ing obyek njaba.
+
+ Ing saben obyek ing `hokey` , sampeyan kudu nemtokake `name` , lan file input lan output.
+
+ Punika conto `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Akeh file input
+ Lewati array path file minangka `infiles` tinimbang path `infile` , kaya ing conto iki:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeks
+ Nalika nerjemahake menyang akeh basa, `hokey` bisa nggawe file indeks sing nampilake kabeh terjemahan sing digawe
+ lan menehi pranala menyang wong-wong mau
+
+ *Nalika ngasilake indeks, sampeyan mung bisa duwe siji sumber input*
+
+ Lewati opsi `-I` / `--index` , nilai kasebut ing ngendi file indeks bakal diasilake, sing bisa dadi file
+ utawa direktori. Yen direktori, jeneng berkas standar bakal digunakake, adhedhasar cithakan (ndeleng ngisor)
+
+ Gunakake `-A` / `--index-template` kanggo nemtokake cara format output indeks. Sampeyan bisa nemtokake 'html',
+ 'markdown', 'text', utawa path file menyang template [HandlebarsJS](https://handlebarsjs.com/) sampeyan dhewe
+
+ Yen sampeyan nemtokake cithakan sampeyan dhewe, sampeyan uga kudu nemtokake file (dudu direktori) kanggo `-I` / `--index`
+ pilihan
 
  ## Seneng nerjemahake basa!
 

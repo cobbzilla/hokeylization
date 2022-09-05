@@ -1,12 +1,20 @@
 Hokeylization
  ========
- Lub npe yog portmanteau, lub ntsiab lus 'hokey localization'
+ Vim li cas kuv thiaj tsis tuaj yeem khiav tag nrho kuv lub app lossis qhov chaw hauv Google Txhais lus thiab tau txais kev txhais lus yooj yim ua lwm hom lus?
 
- Nws yog hokey vim nws yooj yim heev: nws xa cov hlua rau Google Txhais lus
+ *** Tam sim no, koj tuaj yeem!***
+
+ Lub npe `hokeylization` yog portmanteau, lub ntsiab lus 'hokey localization'
+
+ Nws yog me ntsis hokey vim nws yooj yim heev: nws xa cov hlua rau Google Txhais lus
+
+ Thiab nws yog qhov yooj yim, tseem muaj zog heev. Nws muaj kev txhawb tshwj xeeb rau cov ntaub ntawv HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) templates,
+ thiab [Markdown](https://daringfireball.net/projects/markdown) cov ntaub ntawv.
 
  Koj tuaj yeem txhais:
  * ib qho khoom siv JavaScript uas muaj cov lus
- * ib daim ntawv teev cov ntaub ntawv, recursively
+ * txhua tus lej ntawm cov ntaub ntawv lossis cov npe, ib txwm hla cov npe rov ua dua
 
  # Nyeem qhov no ua lwm hom lus
  Cov ntaub ntawv README.md no tau raug txhais, siv cov cuab yeej hokeylization nws tus kheej, rau hauv
@@ -61,6 +69,7 @@ Hokeylization
  * [Kev txhais cov ntaub ntawv JavaScript string resource](#Translating-a-JavaScript-string-resource-file)
  * [Hloov cov npe ntawm cov ntawv nyeem](#Translating-a-directory-of-text-files)
  * [Lwm txoj kev xaiv](#Lwm txoj kev xaiv)
+ * [JSON batch commands](#JSON-batch-commands)
 
  ## Source
  * [hokeylization ntawm GitHub](https://github.com/cobbzilla/hokeylization)
@@ -265,10 +274,92 @@ Hokeylization
 
  Tus nqi xa rov qab los ntawm `filter` muaj nuj nqi yog dab tsi tiag tiag yuav sau rau khaws cia
 
- Yog li, koj muaj peev xwm tswj tau tag nrho cov uas yuav tau sau thaum kawg
+ Yog li, koj muaj peev xwm tswj tau tag nrho qhov yuav tsum tau sau thaum kawg
 
  ### Pab
  Siv `-h` / `--help` los qhia kev pab
+
+ ## JSON batch commands
+ Nrog rau `-j` / `--json` kev xaiv, koj tuaj yeem khiav ntau qhov sib koom ua ke `hokey` cov lus txib
+
+ Los ntawm convention cov ntaub ntawv no yog hu ua `hokey.json` , tab sis koj tuaj yeem hu nws txhua yam koj xav tau
+
+ Yog tias koj hla ib daim ntawv teev npe raws li qhov kev xaiv `-j` -j', `hokey` yuav nrhiav `hokey.json` hauv phau ntawv ntawd
+
+ Cov ntaub ntawv JSON yuav tsum muaj ib yam khoom. Nyob rau hauv cov khoom ntawd, nws cov khoom npe yog tib yam li
+ cov kev xaiv kab hais kom ua, ntxiv rau ib qho khoom ntxiv hu ua `hokey`
+
+ Cov cuab yeej `hokey` yog ib qho array ntawm cov lus txib kom khiav. Cov khoom uas tau tshaj tawm hauv cov lus txib no yuav
+ override tej duplicate declarations nyob rau hauv cov khoom txheej.
+
+ Nyob rau hauv txhua yam khoom hauv `hokey` array, koj yuav tsum qhia meej `name` lub npe', thiab cov ntaub ntawv tawm tswv yim thiab tso tawm
+
+ Nov yog ib qho piv txwv ntawm `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Ntau cov ntaub ntawv nkag
+ Hla ib qho array ntawm cov ntaub ntawv paths li `infiles` es tsis txhob ntawm ib txoj kev `infile` , xws li hauv qhov piv txwv no:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Index
+ Thaum txhais tau ntau hom lus, `hokey` tuaj yeem tsim cov ntaub ntawv ntsuas uas teev tag nrho cov kev txhais lus ua
+ thiab muab txuas rau lawv
+
+ * Thaum tsim cov indexes, koj muaj peev xwm tsuas muaj ib tug input qhov chaw *
+
+ Dhau qhov kev xaiv `-I` / `--index` , tus nqi yog qhov twg cov ntaub ntawv index yuav raug tsim, uas tuaj yeem yog cov ntaub ntawv
+ los yog ib daim ntawv teev npe. Yog tias nws yog ib daim ntawv teev npe, lub npe filename yuav raug siv, raws li tus qauv (saib hauv qab)
+
+ Siv `-A` / `--index-template` los txiav txim siab seb qhov ntsuas qhov ntsuas tau ua li cas. Koj tuaj yeem qhia 'html',
+ 'markdown', 'text', lossis txoj hauv kev rau koj tus kheej [HandlebarsJS](https://handlebarsjs.com/) template
+
+ Yog hais tias koj qhia koj tus kheej template, koj yuav tsum tau qhia ib cov ntaub ntawv (tsis yog ib tug directory) rau cov `-I` / `--index`
+ kev xaiv
 
  ## Txaus siab rau lub sijhawm txhais lus!
 

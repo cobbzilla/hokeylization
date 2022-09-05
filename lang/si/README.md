@@ -1,12 +1,20 @@
 Hokeylization
  =============
- නම portmanteau, එහි තේරුම 'hokey දේශීයකරණය'
+ මට මගේ සම්පූර්ණ යෙදුම හෝ වෙබ් අඩවිය Google පරිවර්තනය හරහා ධාවනය කර වෙනත් භාෂාවකින් මූලික පරිවර්තනයක් ලබා ගත නොහැක්කේ ඇයි?
 
- එය ඉතා සරල නිසා එය hokey: එය Google Translate වෙත නූල් යවයි
+ ***දැන්, ඔබට පුළුවන්!***
+
+ `hokeylization` යන නම portmanteau, එහි තේරුම 'hokey localization'
+
+ එය ඉතා සරල බැවින් එය තරමක් හොකී ය: එය Google පරිවර්තනය වෙත නූල් යවයි
+
+ එය සරල නමුත් ඉතා බලවත් ය. එය HTML ලේඛන සඳහා විශේෂ සහාය ඇත,
+ [HandlebarsJS](https://handlebarsjs.com/) සැකිලි,
+ සහ [Markdown](https://daringfireball.net/projects/markdown) ගොනු.
 
  ඔබට පරිවර්තනය කළ හැකිය:
  * පණිවිඩ අඩංගු JavaScript වස්තුවක්
- * ගොනු නාමාවලියක්, පුනරාවර්තන ලෙස
+ * ඕනෑම ගොනු හෝ නාමාවලි සංඛ්‍යාවක්, සෑම විටම ප්‍රත්‍යාවර්තීව නාමාවලි හරහා ගමන් කරයි
 
  # මෙය වෙනත් භාෂාවකින් කියවන්න
  මෙම README.md ලේඛනය hokeylization මෙවලම භාවිතයෙන් පරිවර්තනය කර ඇත
@@ -61,6 +69,7 @@ Hokeylization
  * [JavaScript string සම්පත් ගොනුවක් පරිවර්තනය කිරීම](#Translating-a-JavaScript-string-resource-file)
  * [පෙළ ගොනු නාමාවලියක් පරිවර්තනය කිරීම](#Translating-a-directory-of-text-files)
  * [වෙනත් විකල්ප](#වෙනත්-විකල්ප)
+ * [JSON කණ්ඩායම් විධාන](#JSON-batch-commands)
 
  ## මූලාශ්රය
  * [GitHub මත hokeylization](https://github.com/cobbzilla/hokeylization)
@@ -259,16 +268,98 @@ Hokeylization
 
  මෙම විකල්පයේ අගය `filter` නම් ශ්‍රිතයක් අපනයනය කරන JS ගොනුවකට මාර්ගයක් විය යුතුය
 
- `filter` ශ්‍රිතය `async` විය යුතුය, මන්ද `await` එය මත කැඳවනු ඇත
+ `filter` ශ්‍රිතය 'අසමමුහුර්ත' විය යුතුය, මන්ද එය මත `await` `async` ' කැඳවනු ඇත
 
  ගොනු තැටියට ලිවීමට පෙර, සම්පූර්ණ ගොනු අන්තර්ගතය තන්තුවක් ලෙස `filter` ලැබේ.
 
- `filter` ලැබෙන ප්‍රතිලාභ අගය වන්නේ ගබඩාවට සැබවින්ම ලියා ඇති දෙයයි
+ `filter` ලැබෙන ප්‍රතිලාභ අගය සැබවින්ම ගබඩාවට ලියනු ලැබේ
 
  මේ අනුව, අවසානයේ ලියන දේ පිළිබඳ සම්පූර්ණ පාලනය ඔබට ඇත
 
  ### උදව්
  උදව් පෙන්වීමට `-h` / `--help` භාවිත කරන්න
+
+ ## JSON කණ්ඩායම් විධාන
+ `-j` / `--json` විකල්පය සමඟ, ඔබට බහු සම්බන්ධිත `hokey` විධාන ධාවනය කළ හැකිය
+
+ සම්මුතිය අනුව මෙම ගොනුව හඳුන්වන්නේ `hokey.json` , නමුත් ඔබට එය ඔබට අවශ්‍ය ඕනෑම දෙයක් නම් කළ හැක
+
+ ඔබ ඩිරෙක්ටරියක් `-j` විකල්පය ලෙස සම්මත කළහොත්, `hokey` එම නාමාවලියෙහි `hokey.json` ඇත.
+
+ JSON ගොනුවේ එක් වස්තුවක් අඩංගු විය යුතුය. එම වස්තුව තුළ, එහි දේපල නම් සමාන වේ
+ විධාන රේඛා විකල්පයන්, ඊට අමතරව `hokey` නම් අතිරේක දේපලක්
+
+ `hokey` ගුණාංගය යනු ධාවනය කිරීමට ඇති විධාන මාලාවකි. මෙම විධානයන් තුළ ප්‍රකාශිත ගුණාංග වනු ඇත
+ බාහිර වස්තුවේ ඇති ඕනෑම අනුපිටපත් ප්‍රකාශයන් අභිබවා යන්න.
+
+ `hokey` අරාවේ ඇති සෑම වස්තුවක් තුළම, ඔබ විසින් `name` සහ ආදාන සහ ප්‍රතිදාන ගොනු සඳහන් කළ යුතුය.
+
+ මෙන්න `hokey.json` සඳහා උදාහරණයක්
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### බහු ආදාන ගොනු
+ මෙම උදාහරණයේ මෙන්, තනි මාර්ගයක් වෙනුවට `infile` `infiles` ලෙස ගොනු මාර්ග මාලාවක් පසු කරන්න:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### දර්ශක
+ බොහෝ භාෂාවලට පරිවර්තනය කරන විට, `hokey` හට සිදු කරන ලද සියලුම පරිවර්තන ලැයිස්තුගත කරන දර්ශක ගොනුවක් සෑදිය හැක
+ සහ ඒවාට සබැඳි සපයයි
+
+ *දර්ශක උත්පාදනය කරන විට, ඔබට තිබිය හැක්කේ එක් ආදාන මූලාශ්‍රයක් පමණි*
+
+ `-I` / `--index` විකල්පය පසු කරන්න, අගය යනු දර්ශක ගොනුව ජනනය වන ස්ථානයයි, එය ගොනුවක් විය හැකිය
+ හෝ නාමාවලියක්. එය නාමාවලියක් නම්, සැකිල්ල මත පදනම්ව පෙරනිමි ගොනු නාමයක් භාවිතා කරනු ඇත (පහත බලන්න)
+
+ දර්ශක ප්‍රතිදානය ෆෝමැට් කර ඇති ආකාරය තීරණය කිරීමට `-A` / `--index-template` භාවිතා කරන්න. ඔබට 'html' සඳහන් කළ හැක,
+ 'markdown', 'text', හෝ ඔබේම [HandlebarsJS](https://handlebarsjs.com/) අච්චුව වෙත ගොනු මාර්ගය
+
+ ඔබ ඔබේම අච්චුවක් සඳහන් කරන්නේ නම්, ඔබ විසින් `-I` / `--index` සඳහා ගොනුවක් (ඩිරෙක්ටරියක් නොවේ) ද නියම කළ යුතුය.
+ විකල්පය
 
  ## භාෂා පරිවර්තනය කිරීමට විනෝදජනක කාලයක් ගත කරන්න!
 

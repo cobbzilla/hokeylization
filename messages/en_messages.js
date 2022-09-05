@@ -20,6 +20,7 @@ export default {
     err_processFile_writeFile: '*** Error writing to outfile for {{lang}}: {{langOut}}: {{e}}',
     err_processFile_error: '*** Error translating: {{e}}',
     err_processing: '*** Unexpected error: {{e}}',
+    err_processing_unknown: '*** Unexpected error: {{e}}\n{{e.stack}}',
     warn_missing_close_notranslate_tag: 'Output from translation was missing a closing tag where one was expected. Label {{ label }}, line number {{ lineNumber }}, line: {{ line }}',
 
     info_summary: 'Quick translation service using Google Translate\nVersion {{VERSION}}',
@@ -69,6 +70,7 @@ export default {
     err_cannotInvalidExtCannotDetermineType: 'The filename has an invalid extension so a template type cannot be determined: {{ file }}',
     err_index_templateLoadingError: 'An error occurred loading the custom template {{ file }}: {{ e }}',
     err_index_templateCompilationError: 'An error occurred compiling the custom template {{ file }}: {{ e }}',
+    warn_missingLangFile: 'No output file was generated for language {{ lang }}, so it will be excluded from the index',
     info_index_wroteFile: 'Successfully created index file: {{ indexFile }}',
     label_indexOfTranslations: 'Index of translations',
     label_findYourLanguageCode: 'Find your language code'

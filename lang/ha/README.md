@@ -1,12 +1,20 @@
 Hokeyylization
  ==========
- Sunan portmanteau ne, ma'ana 'kwantar da hokey'
+ Me ya sa ba zan iya tafiyar da dukkan manhaja ko rukunin yanar gizona ta Google Translate ba kuma in sami fassarar asali a cikin wani yare?
 
- Hokey ne saboda yana da sauƙi: yana aika kirtani zuwa Google Translate
+ *** Yanzu, zaku iya! ***
+
+ Sunan `hokeylization` ' portmanteau ne, ma'ana 'kwayar hokey'
+
+ Yana da ɗan hokey saboda yana da sauƙi sosai: yana aika kirtani zuwa Google Translate
+
+ Kuma yana da sauƙi, amma kuma yana da ƙarfi sosai. Yana da tallafi na musamman don takaddun HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) samfuri,
+ da [Markdown](https://daringfireball.net/projects/markdown) fayiloli.
 
  Kuna iya fassara:
  * Abun JavaScript mai ɗauke da saƙonni
- * kundin adireshi na fayiloli, akai-akai
+ * kowane adadin fayiloli ko kundayen adireshi, koyaushe suna bin kundayen adireshi akai-akai
 
  # Karanta wannan a wani yare
  An fassara wannan takaddar README.md, ta amfani da kayan aikin hokeylization kanta, zuwa cikin
@@ -61,6 +69,7 @@ Hokeyylization
  * [Fassara fayil ɗin albarkatun kirtani na JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Fassara kundin fayilolin rubutu](#Translating-a-directory-of-text-files)
  * [Sauran zaɓuɓɓuka](#Sauran-zaɓuɓɓuka)
+ * [JSON batch umarni](#JSON-batch-umarni)
 
  ## Source
  * [hokeylization akan GitHub](https://github.com/cobbzilla/hokeylization)
@@ -110,7 +119,7 @@ Hokeyylization
  Idan kuna gudana daga lambar tushe, kuna iya sanya waɗannan a cikin fayil `.env` a cikin tushen
  directory za a loda su a lokacin aiki ta [dotenv](https://www.npmjs.com/package/dotenv)
 
- ## Fassara fayil albarkatun kirtani JavaScript
+ ## Fassara fayil ɗin albarkatun kirtani na JavaScript
  Teburin kirtani na ku **dole ne** ya kasance cikin fayil ɗin JavaScript a ɗayan waɗannan nau'ikan guda biyu:
 
  ES6 fitarwa:
@@ -239,14 +248,14 @@ Hokeyylization
  * Abubuwan da aka karye. A cikin fassarar, yanayin sararin samaniya yana bayyana bayan bayanin hanyar haɗin gwiwa ya ƙare (tare da `]` ) amma
  kafin a fara hanyar haɗin yanar gizon sa (tare da `(` ) Wannan yana sa alamar ta yi kuskure, da kuma hanyar haɗin yanar gizon.
  ya karye lokacin kallon takardar.
- * An fassara tubalan lambobi. Google Translation bai san abin da alamar ke ɗaukar lamba da abin da baya sani ba
- * Ba daidai ba tazara don tubalan lamba. Tazara yana da wuyar adanawa a cikin fassarar
+ * An fassara tubalan lamba. Google Translation bai san abin da alamar ke ɗaukar lamba da abin da baya sani ba
+ * Ba daidai ba tazara don tubalan lambobi. Tazara yana da wuyar adanawa a cikin fassarar
  * Abubuwan da ke cikin `backticks` za a fassara su, lokacin da kusan koyaushe kuna son su zama dabi'u na zahiri
 
  Lokacin da aka kunna tutar `-M` / `--markdown` :
  * Alamar `](` za'a tattara ta zuwa `](` don haka gyara hanyoyin haɗin da aka karye
  * Za a sanya murfi na "babu fassarar" a kusa da ɓangarorin lambobi, adana ingantacciyar shigar da kuma tabbatar da cewa ba a fassara su ba.
- * Za a sanya murfi na "babu fassarar" a kusa da rubutu a cikin `backticks` don tabbatar da cewa ba a fassara su ba
+ * Za a sanya murfi na "babu fassara" a kusa da rubutu a cikin `backticks` don tabbatar da cewa ba a fassara su ba
 
  ### Tsari-kamar
  Yawanci ana sarrafa komai azaman rubutu bayyananne
@@ -269,6 +278,88 @@ Hokeyylization
 
  ### Taimako
  Yi amfani `-h` / `--help` don nuna taimako
+
+ ## JSON batch umarni
+ Tare da `-j` / `--json` , zaku iya gudanar da umarni na `hokey` masu daidaitawa da yawa.
+
+ Ta al'ada wannan fayil ana kiransa `hokey.json` , amma zaka iya sanya masa suna duk abin da kake so
+
+ Idan kun wuce kundin adireshi azaman zaɓi na `-j` , `hokey` zai nemi `hokey.json` a cikin wannan kundin adireshin
+
+ Fayil ɗin JSON yakamata ya ƙunshi abu ɗaya. A cikin wannan abun, sunayen kadarorinsa iri daya ne da
+ zaɓuɓɓukan layin umarni, da ƙarin dukiya guda ɗaya mai suna `hokey`
+
+ Kayan `hokey` jerin umarni ne don gudana. Kaddarorin da aka bayyana a cikin waɗannan umarni zasu
+ soke duk wani kwafin bayanin da ke cikin abin waje.
+
+ A cikin kowane abu a cikin tsararrun `hokey` , yakamata ku saka `name` , da shigar da fayilolin fitarwa.
+
+ Ga misalin `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Fayilolin shigarwa da yawa
+ Wuce jerin hanyoyin fayil azaman `infiles` maimakon hanya `infile` , kamar a cikin wannan misali:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Fihirisa
+ Lokacin fassara zuwa harsuna da yawa, `hokey` iya ƙirƙirar fayil ɗin fihirisa wanda ya jera duk fassarorin da aka yi
+ kuma yana ba da hanyoyin haɗi zuwa gare su
+
+ *Lokacin samar da fihirisa, za ku iya samun tushen shigarwa guda ɗaya kawai*
+
+ Wuce zaɓi na `-I` / `--index` , ƙimar ita ce inda za a samar da fayil ɗin fihirisa, wanda zai iya zama fayil
+ ko directory. Idan kundin adireshi ne, za a yi amfani da tsohon sunan fayil, dangane da samfuri (duba ƙasa)
+
+ Yi amfani da `-A` / `--index-template` don tantance yadda aka tsara fitar da fihirisa. Kuna iya saka 'html',
+ 'markdown', 'rubutu', ko hanyar fayil zuwa naka [HandlebarsJS](https://handlebarsjs.com/) samfuri
+
+ Idan kun saka samfurin ku, dole ne ku kuma saka fayil (ba directory) na `-I` / `--index`
+ zaɓi
 
  ## Yi farin ciki da fassarar harsuna!
 

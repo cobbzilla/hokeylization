@@ -1,12 +1,20 @@
 Hokeylização
  =============
- O nome é um portmanteau, que significa 'localização piegas'
+ Por que não consigo executar todo o meu aplicativo ou site por meio do Google Tradutor e obter uma tradução básica em outro idioma?
 
- É piegas porque é muito simples: envia strings para o Google Translate
+ ***Agora você pode!***
+
+ O nome `hokeylization` é um portmanteau, que significa 'localização hokey'
+
+ É um pouco piegas porque é muito simples: envia strings para o Google Translate
+
+ E é simples, mas também muito poderoso. Possui suporte especial para documentos HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) modelos,
+ e arquivos [Markdown](https://daringfireball.net/projects/markdown).
 
  Você pode traduzir:
  * um objeto JavaScript contendo mensagens
- * um diretório de arquivos, recursivamente
+ * qualquer número de arquivos ou diretórios, sempre percorrendo os diretórios recursivamente
 
  # Leia isso em outro idioma
  Este documento README.md foi traduzido, usando a própria ferramenta de hokeylization, para
@@ -61,6 +69,7 @@ Hokeylização
  * [Traduzindo um arquivo de recurso de string JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Traduzindo um diretório de arquivos de texto](#Translating-a-directory-of-text-files)
  * [Outras opções](#Other-options)
+ * [Comandos em lote JSON](#JSON-batch-commands)
 
  ## Fonte
  * [hokeylization no GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylização
 
  ### Ajuda
  Use `-h` / `--help` para mostrar a ajuda
+
+ ## Comandos em lote JSON
+ Com a `-j` / `--json` , você pode executar vários comandos coordenados `hokey`
+
+ Por convenção, este arquivo é chamado `hokey.json` , mas você pode nomeá-lo como quiser
+
+ Se você passar um diretório como a opção ` `-j` , o `hokey` procurará por um `hokey.json` nesse diretório
+
+ O arquivo JSON deve conter um objeto. Dentro desse objeto, seus nomes de propriedade são os mesmos que
+ as opções de linha de comando, mais uma propriedade adicional chamada `hokey`
+
+ A propriedade `hokey` é um array de comandos a serem executados. As propriedades declaradas nesses comandos serão
+ substituir quaisquer declarações duplicadas no objeto externo.
+
+ Dentro de cada objeto no array `hokey` , você deve especificar um `name` e os arquivos de entrada e saída
+
+ Aqui está um exemplo de um `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Vários arquivos de entrada
+ Passe uma matriz de caminhos de arquivo como `infiles` em vez de um único caminho `infile` , como neste exemplo:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Índices
+ Ao traduzir para vários idiomas, `hokey` pode criar um arquivo de índice que lista todas as traduções feitas
+ e fornece links para eles
+
+ *Ao gerar índices, você pode ter apenas uma fonte de entrada*
+
+ Passe a `-I` / `--index` , o valor é onde será gerado o arquivo de índice, que pode ser um arquivo
+ ou um diretório. Se for um diretório, um nome de arquivo padrão será usado, com base no modelo (veja abaixo)
+
+ Use o `-A` / `--index-template` para determinar como a saída do índice é formatada. Você pode especificar 'html',
+ 'markdown', 'text' ou o caminho do arquivo para o seu próprio modelo [HandlebarsJS](https://handlebarsjs.com/)
+
+ Se você especificar seu próprio modelo, também deverá especificar um arquivo (não um diretório) para o `-I` / `--index`
+ opção
 
  ## Divirta-se traduzindo idiomas!
 

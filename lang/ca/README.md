@@ -1,12 +1,20 @@
 Hokeylització
  ==============
- El nom és un acrònim, que significa "localització hokey".
+ Per què no puc executar tota la meva aplicació o lloc a través de Google Translate i obtenir una traducció bàsica en un altre idioma?
 
- És divertit perquè és molt senzill: envia cadenes a Google Translate
+ ***Ara pots!***
+
+ El nom `hokeylization` és un acrònim, que significa "localització hokey"
+
+ És una mica hokey perquè és molt senzill: envia cadenes a Google Translate
+
+ I és senzill, però també molt potent. Té suport especial per a documents HTML,
+ Plantilles [HandlebarsJS](https://handlebarsjs.com/),
+ i fitxers [Markdown](https://daringfireball.net/projects/markdown).
 
  Podeu traduir:
  * un objecte JavaScript que conté missatges
- * un directori de fitxers, de forma recursiva
+ * qualsevol nombre de fitxers o directoris, sempre recorrent directoris de manera recursiva
 
  # Llegeix això en un altre idioma
  Aquest document README.md s'ha traduït, utilitzant la pròpia eina hokeylization, a
@@ -61,6 +69,7 @@ Hokeylització
  * [Traduint un fitxer de recurs de cadena JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Traducció d'un directori de fitxers de text](#Translating-a-directory-of-text-files)
  * [Altres opcions](#Other-options)
+ * [Ordres JSON per lots](#JSON-comandes per lots)
 
  ## Font
  * [hokeylization a GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylització
 
  ### Ajuda
  Utilitzeu `-h` / `--help` per mostrar l'ajuda
+
+ ## Ordres per lots JSON
+ Amb l' `-j` / `--json` , podeu executar diverses ordres coordinades `hokey`
+
+ Per convenció, aquest fitxer s'anomena `hokey.json` , però podeu anomenar-lo com vulgueu
+
+ Si passeu un directori com a opció ` `-j` , `hokey` buscarà un `hokey.json` en aquest directori
+
+ El fitxer JSON ha de contenir un objecte. Dins d'aquest objecte, els seus noms de propietat són els mateixos que
+ les opcions de la línia d'ordres, més una propietat addicional anomenada `hokey`
+
+ La propietat `hokey` és una matriu d'ordres per executar. Les propietats declarades dins d'aquestes ordres ho faran
+ anul·la qualsevol declaració duplicada a l'objecte extern.
+
+ Dins de cada objecte de la matriu `hokey` , hauríeu d'especificar un `name` i els fitxers d'entrada i sortida
+
+ Aquí teniu un exemple d'un `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Fitxers d'entrada múltiples
+ Passeu una matriu de camins de fitxer com a `infiles` en comptes d'un sol camí `infile` , com en aquest exemple:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Índexs
+ Quan es tradueix a molts idiomes, `hokey` pot crear un fitxer d'índex que enumera totes les traduccions fetes
+ i ofereix enllaços a ells
+
+ *Quan genereu índexs, només podeu tenir una font d'entrada*
+
+ Passeu l' `-I` / `--index` , el valor és on es generarà el fitxer d'índex, que pot ser un fitxer
+ o un directori. Si es tracta d'un directori, s'utilitzarà un nom de fitxer predeterminat, basat en la plantilla (vegeu més avall)
+
+ Utilitzeu `-A` / `--index-template` per determinar com es formatea la sortida de l'índex. Podeu especificar "html",
+ 'markdown', 'text' o la ruta del fitxer a la vostra pròpia plantilla [HandlebarsJS](https://handlebarsjs.com/)
+
+ Si especifiqueu la vostra pròpia plantilla, també heu d'especificar un fitxer (no un directori) per a `-I` / `--index`
+ opció
 
  ## Passeu-vos una estona divertida traduint idiomes!
 

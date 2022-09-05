@@ -1,12 +1,20 @@
 Hokeylization
  =============
- Ngaranna portmanteau, hartina 'lokalisasi hokey'
+ Naha kuring henteu tiasa ngajalankeun sadaya aplikasi atanapi situs ngalangkungan Google Tarjamah sareng nampi tarjamahan dasar dina basa sanés?
 
- Ieu hokey sabab basajan pisan: ngirim string ka Google Tarjamah
+ ***Ayeuna, anjeun tiasa!***
+
+ Ngaran `hokeylization` mangrupakeun portmanteau, hartina 'hokey lokalisasi'
+
+ Ieu rada hokey sabab basajan pisan: ngirim string ka Google Tarjamah
+
+ Tur éta basajan, tapi ogé pohara kuat. Éta gaduh dukungan khusus pikeun dokumén HTML,
+ [HandlebarsJS](https://handlebarsjs.com/) témplat,
+ jeung [Markdown](https://daringfireball.net/projects/markdown) file.
 
  Anjeun tiasa narjamahkeun:
  * objék JavaScript ngandung pesen
- * diréktori file, sacara rekursif
+ * sajumlah file atanapi diréktori, sok ngaliwat diréktori sacara rekursif
 
  # Baca ieu dina basa sanés
  Ieu dokumén README.md geus ditarjamahkeun, ngagunakeun alat hokeylization sorangan, kana
@@ -61,6 +69,7 @@ Hokeylization
  * [Narjamahkeun file sumberdaya string JavaScript](#Translating-a-JavaScript-string-resource-file)
  * [Narjamahkeun diréktori file téks](#Translating-a-directory-of-text-files)
  * [Pilihan séjén](#Other-options)
+ * [Paréntah angkatan JSON](#JSON-batch-commands)
 
  ## Sumber
  * [hokeylization dina GitHub](https://github.com/cobbzilla/hokeylization)
@@ -269,6 +278,88 @@ Hokeylization
 
  ### Tulung
  Anggo `-h` / `--help` pikeun nunjukkeun pitulung
+
+ ## Paréntah bets JSON
+ Kalayan pilihan `-j` / `--json` , anjeun tiasa ngajalankeun sababaraha paréntah `hokey` anu ngagabung
+
+ Ku konvénsi file ieu disebut `hokey.json` , tapi anjeun bisa ngaranan eta naon rék
+
+ Upami anjeun ngalangkungan diréktori salaku pilihan `-j` , `hokey` bakal milarian `hokey.json` dina diréktori éta
+
+ Berkas JSON kedah ngandung hiji obyék. Dina obyék éta, nami milikna sami sareng
+ pilihan garis paréntah, ditambah hiji sipat tambahan ngaranna `hokey`
+
+ `hokey` mangrupa susunan paréntah pikeun ngajalankeun. Sipat anu dinyatakeun dina paréntah ieu bakal
+ override sagala duplikat deklarasi dina objék luar.
+
+ Dina unggal obyék dina `hokey` Asép Sunandar Sunarya, anjeun kudu nangtukeun hiji `name` , sarta input sarta output file.
+
+ Ieu conto `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Sababaraha file input
+ Lebetkeun sakumpulan jalur file salaku `infiles` tinimbang hiji jalur `infile` , sapertos dina conto ieu:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indéks
+ Nalika narjamahkeun kana seueur basa, `hokey` tiasa nyiptakeun file indéks anu daptar sadaya tarjamahan anu dilakukeun.
+ sarta nyadiakeun Tumbu ka aranjeunna
+
+ *Nalika ngahasilkeun indéks, anjeun ngan ukur tiasa gaduh hiji sumber input*
+
+ Lebetkeun pilihan `-I` / `--index` , nilaina dimana file indéks bakal dibangkitkeun, anu tiasa janten file
+ atawa diréktori. Upami éta diréktori, nami file standar bakal dianggo, dumasar kana citakan (tingali di handap)
+
+ Anggo `-A` / `--index-template` pikeun nangtukeun kumaha kaluaran indéks diformat. Anjeun tiasa nangtukeun 'html',
+ 'markdown', 'text', atawa jalur file ka template [HandlebarsJS](https://handlebarsjs.com/) anjeun sorangan
+
+ Upami anjeun netepkeun template anjeun nyalira, anjeun ogé kedah netepkeun file (sanés diréktori) pikeun `-I` / `--index`
+ pilihan
 
  ## Wilujeng narjamahkeun basa!
 

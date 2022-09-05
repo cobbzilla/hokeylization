@@ -1,14 +1,22 @@
 ホケイ化
 =============
-名前はかばん語で、「ホーキー ローカリゼーション」を意味します。
+アプリまたはサイト全体を Google 翻訳で実行して、別の言語で基本的な翻訳を取得できないのはなぜですか?
 
-非常に単純なため、これはばかげています。文字列を Google 翻訳に送信します。
+ ***今、できます!***
+
+ `hokeylization`という名前はかばん語で、「ホーキー ローカリゼーション」を意味します。
+
+非常に単純なので、ややばかげています。文字列を Google 翻訳に送信します。
+
+シンプルでありながら非常に強力です。 HTMLドキュメントを特別にサポートしています。
+ [HandlebarsJS](https://handlebarsjs.com/) テンプレート、
+ [Markdown](https://daringfireball.net/projects/markdown) ファイル。
 
 あなたは翻訳することができます：
  * メッセージを含む JavaScript オブジェクト
-* ファイルのディレクトリ、再帰的
+* 任意の数のファイルまたはディレクトリ。常にディレクトリを再帰的にトラバースします。
 
-# これを別の言語で読む
+ # これを別の言語で読む
 この README.md ドキュメントは、フック化ツール自体を使用して、
  **[Google 翻訳でサポートされているすべての言語](https://cloud.google.com/translate/docs/languages)!**
 
@@ -61,6 +69,7 @@
  * [JavaScript 文字列リソース ファイルの翻訳](#Translating-a-JavaScript-string-resource-file)
  * [テキスト ファイルのディレクトリの翻訳](#テキスト ファイルのディレクトリの翻訳)
  * [その他のオプション](#その他のオプション)
+ * [JSON バッチ コマンド](#JSON-バッチ コマンド)
 
  ＃＃ ソース
 * [GitHub の Hokeylization](https://github.com/cobbzilla/hokeylization)
@@ -240,7 +249,7 @@ Markdown はテキストでも html でもありません。
 ターゲット リンクが始まる前 ( `(`を使用)。これにより、マークダウンが正しくレンダリングされず、リンクが
 ドキュメントを表示すると壊れています。
  * コード ブロックが翻訳されます。 Google翻訳は、マークダウンがコードと見なすものとそうでないものを認識していません
-* インデントされたコード ブロックの間隔が正しくありません。翻訳で間隔を維持するのは難しい
+* インデントされたコード ブロックの間隔が正しくありません。翻訳でスペースを維持するのは難しい
 * ほとんどの場合、リテラル値にしたい場合、 `backticks`内のものは変換されます
 
 `-M` / `--markdown`フラグが有効な場合:
@@ -269,6 +278,88 @@ Markdown はテキストでも html でもありません。
 
 ＃＃＃ ヘルプ
 ヘルプを表示するには、 `-h` / `--help` help」を使用します
+
+## JSON バッチ コマンド
+`-j` / `--json`オプションを使用すると、複数の調整され`hokey`コマンドを実行できます
+
+慣例により、このファイルは`hokey.json`と呼ばれますが、好きな名前を付けることができます
+
+`-j`オプションとしてディレクトリを渡すと、 `hokey.json`はそのディレクトリで`hokey`を探します。
+
+ JSON ファイルには 1 つのオブジェクトが含まれている必要があります。そのオブジェクト内では、そのプロパティ名は
+コマンドライン オプションと、 `hokey`という名前の 1 つの追加プロパティ
+
+`hokey`プロパティは、実行するコマンドの配列です。これらのコマンド内で宣言されたプロパティは、
+外側のオブジェクトで重複する宣言をオーバーライドします。
+
+ `hokey`配列の各オブジェクト内で、 `name` name` と入力ファイルと出力ファイルを指定する必要があります
+
+これは`hokey.json`の例です
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### 複数の入力ファイル
+次の例のように、単一のパス`infile` `infiles`として渡します。
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### インデックス
+多くの言語に翻訳する場合、 `hokey`は、行われたすべての翻訳をリストするインデックス ファイルを作成できます。
+それらへのリンクを提供します
+
+*インデックスを生成する場合、入力ソースは 1 つしか持てません*
+
+ `-I` / `--index`オプションを渡します。値は、インデックス ファイルが生成される場所です。
+またはディレクトリ。ディレクトリの場合、テンプレートに基づいてデフォルトのファイル名が使用されます (以下を参照)。
+
+ `-A` / `--index-template`を使用して、インデックス出力のフォーマット方法を決定します。 「html」を指定できます。
+ 「markdown」、「text」、または独自の [HandlebarsJS](https://handlebarsjs.com/) テンプレートへのファイル パス
+
+独自のテンプレートを指定する場合は、 `-I` / `--index`に (ディレクトリではなく) ファイルも指定する必要があります
+オプション
 
 ## 言語の翻訳を楽しんでください!
 

@@ -1,12 +1,20 @@
 Hokeyliseerimine
  ==============
- Nimi on portmanteau, mis tähendab "hokey lokaliseerimist"
+ Miks ma ei saa kogu oma rakendust või saiti Google'i tõlke kaudu käitada ega hankida põhitõlget teises keeles?
 
- See on hookey, sest see on väga lihtne: see saadab stringid Google'i tõlkele
+ ***Nüüd sa saad!***
+
+ Nimi `hokeylization` on portmanteau, mis tähendab "hokey lokaliseerimine"
+
+ See on mõnevõrra segane, sest see on väga lihtne: see saadab stringid Google'i tõlkele
+
+ Ja see on lihtne, kuid samas ka väga võimas. Sellel on spetsiaalne tugi HTML-dokumentidele,
+ [HandlebarsJS](https://handlebarsjs.com/) mallid,
+ ja [Markdown](https://daringfireball.net/projects/markdown) failid.
 
  Saate tõlkida:
  * sõnumeid sisaldav JavaScripti objekt
- * failide kataloog rekursiivselt
+ * suvaline arv faile või katalooge, läbides katalooge alati rekursiivselt
 
  # Lugege seda teises keeles
  See README.md dokument on tõlgitud keelde, kasutades hokeyliseerimise tööriista
@@ -61,6 +69,7 @@ Hokeyliseerimine
  * [JavaScripti stringi ressursifaili tõlkimine](#Translating-a-JavaScript-string-resource-file)
  * [Tekstifailide kataloogi tõlkimine](#Translating-a-directory-of-text-files)
  * [Muud valikud](#Other-options)
+ * [JSON-i partiikäsud](#JSON-batch-commands)
 
  ## Allikas
  * [hokeyliseerimine GitHubis](https://github.com/cobbzilla/hokeylization)
@@ -259,7 +268,7 @@ Hokeyliseerimine
 
  Selle suvandi väärtus peab olema JS-faili tee, mis ekspordib funktsiooni nimega `filter`
 
- Funktsioon `filter` peab olema `async` , kuna sellele kutsutakse välja „oota `await`
+ Funktsioon `filter` peab olema `async` , kuna sellele kutsutakse välja "oota `await`
 
  Enne failide kettale kirjutamist edastatakse kogu faili sisu stringina funktsioonile `filter`
 
@@ -269,6 +278,88 @@ Hokeyliseerimine
 
  ### Abi
  Kasutage abi kuvamiseks klahve `-h` / `--help` .
+
+ ## JSON-i partiikäsud
+ `-j` "-j" / `--json` abil saate käivitada mitu koordineeritud `hokey` käsku
+
+ Tavapäraselt nimetatakse seda faili `hokey.json` , kuid võite sellele nime anda mis iganes soovite
+
+ Kui sisestate kataloogi valikuna `hokey` , otsib "hokey" sellest kataloogist `hokey.json` `-j`
+
+ JSON-fail peaks sisaldama ühte objekti. Selle objekti sees on selle atribuutide nimed samad, mis
+ käsurea suvandid ja üks täiendav atribuut nimega `hokey`
+
+ `hokey` on käivitatavate käskude massiiv. Nendes käskudes deklareeritud omadused
+ alistama kõik välises objektis olevad dubleeritud deklaratsioonid.
+
+ Igas massiivi `hokey` peaksite määrama `name` ning sisend- ja väljundfailid
+
+ Siin on näide `hokey.json`
+
+    {
+        "inputLanguage": "en",
+        "languages": "es,fr,ja", # can also be an array of strings
+        "force": false,
+        "match": null,
+        "processAs": null,
+        "excludes": ["exclude-1", "exclude-2"],
+        "handlebars": false,
+        "markdown": false,
+        "regular": false,
+        "dryRun": false,
+        "filter": "theFilter.js",
+        "hokey": [
+          {
+            "name": "locale names",
+            "infile": "messages/locales_en.js",
+            "outfile": "messages/locales_LANG.js",
+            "handlebars": true
+          },
+          {
+            "name": "CLI messages",
+            "infile": "messages/en_messages.js",
+            "outfile": "messages/LANG_messages.js",
+            "handlebars": true
+          },
+          {
+            "name": "README",
+            "infile": "README.md",
+            "outfile": "lang/LANG/",
+            "excludes": ["lang/", "node_modules/", "\\.git/", "tmp/"],
+            "filter": "util/filterReadme.js",
+            "markdown": true,
+            "index": "lang/README.md"
+          }
+        ]
+    }
+
+ ### Mitu sisendfaili
+ Edastage failiteede massiiv kui `infiles` , mitte ühe tee `infile` , nagu selles näites:
+
+    {
+      ... [
+        {
+          "name": "my docs",
+          "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
+          "outfile": "docs/LANG/",
+          "markdown": true
+      ]
+    }
+
+ ### Indeksid
+ Paljudesse keeltesse tõlkimisel võib `hokey` luua registrifaili, mis loetleb kõik tehtud tõlked
+ ja pakub neile linke
+
+ *Indekside loomisel võib teil olla ainult üks sisendallikas*
+
+ Jätke valik "-I" / `--index` `-I` väärtus on koht, kus luuakse indeksifail, mis võib olla fail
+ või kataloog. Kui see on kataloog, kasutatakse malli alusel vaikimisi failinime (vt allpool)
+
+ Kasutage `-A` / `--index-template` määramaks, kuidas indeksi väljund on vormindatud. Saate määrata "html",
+ 'markdown', 'text' või failitee teie enda [HandlebarsJS](https://handlebarsjs.com/) mallini
+
+ Kui määrate oma malli, peate määrama ka faili (mitte kataloogi) `-I` "-I" / `--index`
+ valik
 
  ## Lõbutsege keelte tõlkimise aega!
 
