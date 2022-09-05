@@ -122,6 +122,15 @@ const loadLocaleNames = (lang) => {
     return require(join(__dirname, `../messages/locales_${lang}.js`))
 }
 
+const relPath = (indexFile, lang, langFiles) => {
+    const msg = messages()
+    if (langFiles && langFiles.length > 0) {
+        return join(relative(indexFile, langFiles[0]))
+    }
+    console.warn(chalk.yellowBright(msg.warn_missingLangFile.parseMessage({ lang })))
+    return null
+}
+
 const runHokeyCommand = async (program, translate, command) => {
     const msg = messages()
     const sources = command.sources
@@ -170,8 +179,8 @@ const runHokeyCommand = async (program, translate, command) => {
                     iso: lang,
                     nativeName: loadLocaleNames(lang)[`locale_${lang}`],
                     inputName: inputNames[`locale_${lang}`],
-                    relativePath: join(relative(indexFile, outfiles[lang][0]))
-                }})
+                    relativePath: relPath(indexFile, lang, outfiles[lang])
+                }}).filter(l => l.relativePath !== null)
                 const ctx = {
                     msg,
                     source: sources[0],
@@ -185,7 +194,7 @@ const runHokeyCommand = async (program, translate, command) => {
             if (e instanceof HokeyError) {
                 program.error(chalk.redBright(msg.err_processing.parseMessage({e: e.message})))
             } else {
-                program.error(chalk.redBright(msg.err_processing.parseMessage({e})))
+                program.error(chalk.redBright(msg.err_processing_unknown.parseMessage({e})))
             }
         }
     }

@@ -1,12 +1,20 @@
 Hokeylization
 =============
-The name is a portmanteau, meaning 'hokey localization'
+Why can't I run my whole app or site through Google Translate and get a basic translation in another language?
 
-It's hokey because it's very simple: it sends strings to Google Translate
+***Now, you can!***
+
+The name `hokeylization` is a portmanteau, meaning 'hokey localization'
+
+It's somewhat hokey because it's very simple: it sends strings to Google Translate
+
+And it is simple, yet also very powerful. It has special support for HTML documents,
+[HandlebarsJS](https://handlebarsjs.com/) templates,
+and [Markdown](https://daringfireball.net/projects/markdown) files.
 
 You can translate:
 * a JavaScript object containing messages
-* a directory of files, recursively
+* any number of files or directories, always traversing directories recursively
 
 # Read this in another language
 This README.md document has been translated, using the hokeylization tool itself, into
@@ -328,7 +336,7 @@ Here is an example of a `hokey.json`
 Pass an array of file paths as `infiles` instead of a single path `infile`, as in this example:
 
     {
-      ... [ 
+      ... [
         {
           "name": "my docs",
           "infiles": ["README.md", "INSTALL.md", "TUTORIAL.md"],
