@@ -31,6 +31,8 @@ const verifyEnv = () => {
     }
 }
 
+const DEFAULT_HOKEY_JSON = './hokey.json'
+
 const program = new commander.Command()
     .command('hokey')
     .summary(msg.info_summary.parseMessage({ VERSION }))
@@ -56,6 +58,16 @@ const program = new commander.Command()
     .action(async (sources, opts) => {
         verifyEnv() // die if env vars not set correctly
         const translate = new Translate({projectId})
+        // if no json and no sources, check for hokey.json in current file
+        if (!opts.json && sources.length === 0) {
+            const hokeyJsonStat = fs.lstatSync(DEFAULT_HOKEY_JSON, { throwIfNoEntry: false })
+            if (hokeyJsonStat === null) {
+                program.error(chalk.redBright(msg.err_noSources))
+                return
+            } else {
+                opts.json = DEFAULT_HOKEY_JSON
+            }
+        }
         if (opts.json) {
             await runJsonCommand(program, translate, opts)
         } else {

@@ -81,7 +81,10 @@ Recently I lost my job, and I don't really have any other work lined up
 
 So I'm going to try writing helpful software and see if that works
 
-I would sincerely appreciate even the smallest [monthly contribution via Patreon](https://www.patreon.com/cobbzilla)
+If you enjoy using this software, I would be so happy to receive even the
+smallest [monthly contribution via Patreon](https://www.patreon.com/cobbzilla)
+
+*Thank you!*
 
 ## Installation
 To use the command line tool, install using `npm` or `yarn`:
