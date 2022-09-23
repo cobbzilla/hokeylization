@@ -78,7 +78,7 @@ const processFile = async (translate, infile, inMsgKeys, lang, outfile, options)
             const quotedTranslation = val.replaceAll("'", "\\'");
             result += `${key}: '${quotedTranslation}'`
         }
-        result += '\n}'
+        result += '\n}\n'
         if (dryRun) {
             console.log(msg.info_dryRun_file.parseMessage({ langOut }))
         } else {
