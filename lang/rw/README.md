@@ -82,7 +82,10 @@ Hokeylisation
 
  Ngiye rero kugerageza kwandika software ifasha ndebe niba ibyo bikora
 
- Ndashimira byimazeyo nintoya [umusanzu wa buri kwezi ukoresheje Patreon](https://www.patreon.com/cobbzilla)
+ Niba ukunda gukoresha iyi software, nishimiye cyane kwakira niyo
+ ntoya [umusanzu wa buri kwezi ukoresheje Patreon](https://www.patreon.com/cobbzilla)
+
+ * Urakoze! *
 
  ## Kwinjiza
  Kugira ngo ukoreshe igikoresho cyumurongo, shyiramo ukoresheje `npm` `yarn` :

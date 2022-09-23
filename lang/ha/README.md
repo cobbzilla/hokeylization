@@ -82,7 +82,10 @@ Hokeyylization
 
  Don haka zan gwada rubuta software mai taimako don ganin ko hakan yana aiki
 
- Zan yi godiya da gaske har ma mafi ƙarancin [gudunmawar wata-wata ta hanyar Patreon](https://www.patreon.com/cobbzilla)
+ Idan kuna jin daɗin amfani da wannan software, zan yi farin cikin karɓar ko da
+ mafi ƙanƙanta [gudunmawar wata-wata ta hanyar Patreon](https://www.patreon.com/cobbzilla)
+
+ *Na gode!*
 
  ## Shigarwa
  Don amfani da kayan aikin layin umarni, shigar ta amfani da `npm` ko `yarn` :
@@ -366,7 +369,7 @@ Hokeyylization
  Wuce zaɓi na `-I` / `--index` , ƙimar ita ce inda za a samar da fayil ɗin fihirisa, wanda zai iya zama fayil
  ko directory. Idan kundin adireshi ne, za a yi amfani da tsohon sunan fayil, dangane da samfuri (duba ƙasa)
 
- Yi amfani da `-A` / `--index-template` don tantance yadda aka tsara fitar da fihirisa. Kuna iya saka 'html',
+ Yi amfani da `-A` / `--index-template` don tantance yadda aka tsara fitarwar fihirisa. Kuna iya saka 'html',
  'markdown', 'rubutu', ko hanyar fayil zuwa naka [HandlebarsJS](https://handlebarsjs.com/) samfuri
 
  Idan kun saka samfurin ku, dole ne ku kuma saka fayil (ba directory) na `-I` / `--index`

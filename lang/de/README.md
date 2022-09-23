@@ -82,7 +82,10 @@ Hokeylisierung
 
  Also werde ich versuchen, hilfreiche Software zu schreiben und sehen, ob das funktioniert
 
- Ich würde mich sehr über jeden noch so kleinen [monatlichen Beitrag über Patreon] freuen (https://www.patreon.com/cobbzilla)
+ Wenn Sie diese Software gerne verwenden, würde ich mich sehr über eine Zusendung freuen
+ kleinster [monatlicher Beitrag über Patreon](https://www.patreon.com/cobbzilla)
+
+ *Vielen Dank!*
 
  ## Installation
  Um das Befehlszeilentool zu verwenden, installieren Sie es mit `npm` oder `yarn` :
@@ -290,7 +293,7 @@ Hokeylisierung
  ### Hilfe
  Verwenden Sie `-h` / `--help` , um Hilfe anzuzeigen
 
- ## JSON-Batch-Befehle
+ ## JSON-Stapelbefehle
  Mit der Option `-j` / `--json` können Sie mehrere koordinierte `hokey` Befehle ausführen
 
  Konventionell heißt diese Datei `hokey.json` , aber Sie können sie beliebig benennen

@@ -82,7 +82,10 @@ Hokeylization
 
  Dadi aku bakal nyoba nulis piranti lunak sing migunani lan ndeleng manawa bisa digunakake
 
- Aku bakal ngormati sing paling cilik [kontribusi saben wulan liwat Patreon](https://www.patreon.com/cobbzilla)
+ Yen sampeyan seneng nggunakake piranti lunak iki, Aku bakal dadi seneng nampa malah ing
+ paling cilik [kontribusi saben wulan liwat Patreon](https://www.patreon.com/cobbzilla)
+
+ *Matur nuwun!*
 
  ## Instalasi
  Kanggo nggunakake alat baris perintah, instal nggunakake `npm` utawa `yarn` :

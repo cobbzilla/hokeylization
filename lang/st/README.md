@@ -82,7 +82,10 @@ Hokeylization
 
  Kahoo ke tla leka ho ngola software e thusang mme ke bone hore na e ea sebetsa
 
- Ke tla leboha ka 'nete le tse nyane [kabelo ea khoeli le khoeli ka Patreon](https://www.patreon.com/cobbzilla)
+ Haeba u natefeloa ke ho sebelisa software ena, ke tla thabela ho amohela le eona
+ e nyane [monehelo oa khoeli le khoeli ka Patreon](https://www.patreon.com/cobbzilla)
+
+ *Kea leboha!*
 
  ## Kemiso
  Ho sebelisa sesebelisoa sa mola oa taelo, kenya o sebelisa `npm` kapa `yarn` :
@@ -364,7 +367,7 @@ Hokeylization
  *Ha u hlahisa li-index, u ka ba le mohloli o le mong feela oa ho kenya*
 
  Feta khetho ea `-I` / `--index` , boleng ke moo faele ea index e tla hlahisoa, e ka bang faele.
- kapa bukeng. Haeba e le bukana, lebitso la faele le tla sebelisoa, le ipapisitse le template (sheba ka tlase)
+ kapa bukeng. Haeba e le bukana, ho tla sebelisoa lebitso la faele la kamehla, le ipapisitse le template (sheba ka tlase)
 
  Sebelisa `-A` / `--index-template` ho fumana hore na tlhahiso ea index e hlophisitsoe joang. O ka hlakisa 'html',
  'markdown', 'text', kapa tsela ea faele e eang ho [HandlebarsJS](https://handlebarsjs.com/) template ea hau

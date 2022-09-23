@@ -58,7 +58,7 @@ Hokeylization
  * enkli URL paj la (kopi/kole nan ba adrès navigatè a)
  * enkli tèks egzak ki mal (kopi/kole nan navigatè a)
  * Tanpri dekri sa ki mal -- èske tradiksyon an pa kòrèk? se fòma a kase yon jan kanmenm?
- * Tanpri ofri yon sijesyon sou yon pi bon tradiksyon, oswa ki jan tèks la ta dwe byen fòma
+ * Tanpri ofri yon sijesyon pou yon pi bon tradiksyon, oswa ki jan tèks la ta dwe byen fòma
  * **Mèsi!**
 
  # Kontni
@@ -82,7 +82,10 @@ Hokeylization
 
  Se konsa, mwen pral eseye ekri lojisyèl itil epi wè si sa ap travay
 
- Mwen ta sensèman apresye menm pi piti a [kontribisyon chak mwa atravè Patreon](https://www.patreon.com/cobbzilla)
+ Si ou renmen itilize lojisyèl sa a, mwen ta kontan pou resevwa menm a
+ pi piti [kontribisyon chak mwa atravè Patreon](https://www.patreon.com/cobbzilla)
+
+ *Mèsi!*
 
  ## Enstalasyon
  Pou itilize zouti liy lòd la, enstale lè l sèvi avèk `npm` oswa `yarn` :

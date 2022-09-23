@@ -82,7 +82,10 @@ Hokeylizasiýa
 
  Şonuň üçin peýdaly programma üpjünçiligini ýazmaga synanyşaryn we munuň işleýändigini ýa-da ýokdugyny görerin
 
- Iň kiçisine-de [Patreonyň üsti bilen aýlyk goşant] tüýs ýürekden minnetdar bolardym (https://www.patreon.com/cobbzilla)
+ Bu programma üpjünçiligini ulanmakdan lezzet alýan bolsaňyz, hatda alanyma-da begenýärin
+ iň kiçi [Patreonyň üsti bilen aýlyk goşant](https://www.patreon.com/cobbzilla)
+
+ *Sagbol!*
 
  ## Gurmak
  Buýruk setiriniň guralyny ulanmak üçin " `npm` ýa-da "ýüplük" ulanyp `yarn` :
@@ -363,10 +366,10 @@ Hokeylizasiýa
 
  * Indeksler döredilende diňe bir giriş çeşmesi bolup biler *
 
- "-I" / " `-I` " opsiýasyny `--index` , baha faýl bolup biljek indeks faýlynyň dörediljek ýeri.
- ýa-da katalog. Katalog bolsa, şablonyň esasynda deslapky faýl ady ulanylar (aşaga serediň)
+ "-I" / " `-I` " opsiýasyny `--index` , baha faýl bolup biljek indeks faýly dörediler.
+ ýa-da katalog. Katalog bolsa, şablona esaslanan deslapky faýl ady ulanylar (aşaga serediň)
 
- Indeks çykyşynyň nähili formatlanýandygyny kesgitlemek üçin " `-A` " / `--index-template` " ulanyň. 'Html' görkezip bilersiňiz,
+ Indeks çykyşynyň nähili formatlanýandygyny kesgitlemek üçin "-A" / " `-A` `--index-template` " ulanyň. 'Html' görkezip bilersiňiz,
  'markdown', 'text' ýa-da öz [HandlebarsJS](https://handlebarsjs.com/) şablonyna faýl ýoly
 
  Öz şablonyňyzy görkezýän bolsaňyz, "-I" / " `-I` " üçin bir faýl (katalog däl) `--index`

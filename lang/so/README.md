@@ -82,7 +82,10 @@ Hokeyylization
 
  Markaa waxaan isku dayi doonaa inaan qoro software waxtar leh oo aan eego inay taasi shaqaynayso
 
- Waxaan si daacad ah u qadarin lahaa xitaa ugu yar [wax ku darsiga billaha ah ee Patreon](https://www.patreon.com/cobbzilla)
+ Haddii aad ku raaxaysato isticmaalka software-kan, aad baan ugu faraxsanahay inaan helo xitaa
+ ugu yar [wax ku darsiga billaha ah ee loo maro Patreon](https://www.patreon.com/cobbzilla)
+
+ *Mahadsanid!*
 
  ## Rakibaadda
  Si aad u isticmaasho khadka taliska, ku rakib addoo isticmaalaya `npm` ama `yarn` :
@@ -208,7 +211,7 @@ Hokeyylization
 
  ## Doorashooyin kale
 
- ### orod qalalan
+ ### orod qallalan
  Gudub `-n` / `--dry-run` si aad u muujiso waxa la samayn doono, laakiin dhab ahaantii ha samayn wax wicitaan API ah ama ha qorin wax fayl ah
 
  ### Xoog
@@ -283,7 +286,7 @@ Hokeyylization
  * Hagaha lagu magacaabo `${HOME}/.hokey-filters` , halkaasoo `${HOME}` uu yahay tusaha guriga isticmaalaha hadda
  * Ku dhex-dhisan [tusaha filtarrada](https://github.com/cobbzilla/hokeylization/tree/master/util/filter)
 
- #### Hababka Sifeynta
+ #### Hababka Shaandhaynta
  Xadhiga ' `filter` ' wuxuu noqon karaa erayo badan. Xaaladdan oo kale, erayga ugu horreeya waa magaca filter, iyo
  Erayada soo haray waxaa loo gudbin doonaa dood ahaan shaqada `filter`
 
@@ -366,7 +369,7 @@ Hokeyylization
  Gudbi `-I` / `--index` , qiimuhu waa halka faylka tusaha laga soo saari doono, kaas oo noqon kara fayl
  ama tusaha. Haddii ay tahay hagaha, faylka magaca caadiga ah ayaa la isticmaali doonaa, oo ku salaysan qaabka (hoos eeg)
 
- Isticmaal `-A` / `--index-template` si loo go'aamiyo sida wax soo saarka tusmada loo qaabeeyey. Waxaad qeexi kartaa 'html',
+ Isticmaal `-A` / `--index-template` si aad u go'aamiso sida wax soo saarka tusmada loo qaabeeyey. Waxaad qeexi kartaa 'html',
  'markdown', 'text', ama dariiqa faylka aad adigu leedahay [HandlebarsJS](https://handlebarsjs.com/) template
 
  Haddii aad qeexdo qaab-dhismeedkaaga, waa inaad sidoo kale qeexdaa fayl (ma aha hagaha) `-I` / `--index`

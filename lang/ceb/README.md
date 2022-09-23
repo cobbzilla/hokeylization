@@ -82,7 +82,10 @@ Hokeylization
 
  Mao nga sulayan nako ang pagsulat sa makatabang nga software ug tan-awon kung kini molihok
 
- Ako kinasingkasing nga magpasalamat bisan sa pinakagamay [binulan nga kontribusyon pinaagi sa Patreon](https://www.patreon.com/cobbzilla)
+ Kung malingaw ka sa paggamit niini nga software, malipay ako nga makadawat bisan ang
+ pinakagamay [binulan nga kontribusyon pinaagi sa Patreon](https://www.patreon.com/cobbzilla)
+
+ *Salamat!*
 
  ## Pag-instalar
  Aron magamit ang command line tool, i-install gamit ang `npm` o `yarn` :

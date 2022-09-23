@@ -82,7 +82,10 @@ Hokeylization
 
  Ji ber vê yekê ez ê hewl bidim ku nermalava alîkar binivîsim û bibînim ka ew kar dike
 
- Ez ê ji dil spasiya herî piçûk jî [beşdariya mehane bi rêya Patreon](https://www.patreon.com/cobbzilla)
+ Heke hûn ji karanîna vê nermalavê kêfê digirin, ez ê pir kêfxweş bibim ku ez jî wergirim
+ herî piçûk [beşdariya mehane bi rêya Patreon](https://www.patreon.com/cobbzilla)
+
+ *Spas dikim!*
 
  ## Sazkirin
  Ji bo ku amûra rêzika fermanê bikar bînin, bi karanîna `npm` an `yarn` :
@@ -225,7 +228,7 @@ Hokeylization
  Dema ku hûn guman dikin, hûn dikarin vê vebijarkê bi `-n` / `--dry-run` re hev bikin da ku bibînin ka kîjan pel dê werin wergerandin.
 
  ### Derdixe
- Carinan `-m` we pir pelan li hev dike. `-e` / `--excludes` bikar bînin da ku bi eşkereyî jêbirin
+ Carinan `-m` we gelek pelan li hev dike. `-e` / `--excludes` bikar bînin da ku bi eşkereyî jêbirin
  pelên ku wekî din dê li hev bihata
 
  Hûn dikarin gelek regexes navnîş bikin, ji hêla cîhan ve têne veqetandin

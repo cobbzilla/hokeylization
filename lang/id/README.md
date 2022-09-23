@@ -82,7 +82,10 @@ Hokeylization
 
  Jadi saya akan mencoba menulis perangkat lunak yang bermanfaat dan melihat apakah itu berhasil
 
- Saya akan sangat menghargai bahkan yang terkecil [kontribusi bulanan melalui Patreon](https://www.patreon.com/cobbzilla)
+ Jika Anda menikmati menggunakan perangkat lunak ini, saya akan sangat senang menerima bahkan
+ terkecil [kontribusi bulanan melalui Patreon](https://www.patreon.com/cobbzilla)
+
+ *Terima kasih!*
 
  ## Instalasi
  Untuk menggunakan alat baris perintah, instal menggunakan `npm` atau `yarn` :

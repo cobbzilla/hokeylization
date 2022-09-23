@@ -82,7 +82,10 @@ Hokeylization
 
  Mar sin táim chun iarracht a dhéanamh bogearraí cabhrach a scríobh agus féachaint an n-oibríonn sin
 
- Bheinn buíoch ó chroí fiú an méid is lú [de chuidiú míosúil trí Patreon](https://www.patreon.com/cobbzilla)
+ Má bhaineann tú taitneamh as na bogearraí seo a úsáid, bheinn chomh sásta fiú na bogearraí seo a fháil
+ [ranníocaíocht mhíosúil trí Patreon](https://www.patreon.com/cobbzilla)
+
+ *Go raibh maith agat!*
 
  ## Suiteáil
  Chun an uirlis líne ordaithe a úsáid, suiteáil le `npm` nó `yarn` :

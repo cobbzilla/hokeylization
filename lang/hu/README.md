@@ -82,7 +82,10 @@ Hokeylizálás
 
  Tehát megpróbálok hasznos szoftvereket írni, és megnézem, működik-e
 
- Őszintén hálás lennék a legkisebb [havi hozzájárulásért is a Patreonon keresztül](https://www.patreon.com/cobbzilla)
+ Ha szívesen használja ezt a szoftvert, nagyon örülnék, ha megkapnám még a
+ legkisebb [havi hozzájárulás a Patreonon keresztül](https://www.patreon.com/cobbzilla)
+
+ *Köszönöm!*
 
  ## Telepítés
  A parancssori eszköz használatához telepítse az `npm` " vagy a `yarn` :
@@ -363,8 +366,8 @@ Hokeylizálás
 
  *Indexek generálásakor csak egy bemeneti forrás lehet*
 
- Adja meg az `-I` / `--index` opciót, az érték az, ahol az indexfájl létrejön, amely lehet egy fájl
- vagy egy könyvtárat. Ha ez egy könyvtár, akkor a sablon alapján egy alapértelmezett fájlnevet használunk (lásd alább)
+ Adja meg az `-I` / `--index` opciót, az érték az, ahol az indexfájl generálódik, amely lehet egy fájl
+ vagy egy könyvtárat. Ha ez egy könyvtár, akkor a rendszer az alapértelmezett fájlnevet használja a sablon alapján (lásd alább)
 
  A `-A` / `--index-template` segítségével határozza meg az indexkimenet formázását. Megadhatja a 'html'-t,
  „markdown”, „text” vagy a fájl elérési útja a saját [HandlebarsJS](https://handlebarsjs.com/) sablonjához

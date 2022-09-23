@@ -82,7 +82,10 @@ Hokeilizacija
 
  Zato ću pokušati da napišem koristan softver i da vidim da li radi
 
- Iskreno bih cijenio čak i najmanji [mjesečni doprinos putem Patreona](https://www.patreon.com/cobbzilla)
+ Ako uživate u korištenju ovog softvera, bio bih tako sretan da dobijem čak i ovaj softver
+ najmanji [mjesečni doprinos putem Patreona](https://www.patreon.com/cobbzilla)
+
+ *Hvala ti!*
 
  ## Instalacija
  Da biste koristili alat naredbene linije, instalirajte koristeći `npm` ili `yarn` :

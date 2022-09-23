@@ -82,7 +82,10 @@ Hokeylisearring
 
  Dat ik sil besykje nuttige software te skriuwen en te sjen oft dat wurket
 
- Ik soe sels de lytste [moanlikse bydrage fia Patreon] oprjocht wurdearje (https://www.patreon.com/cobbzilla)
+ As jo genietsje fan in gebrûk dizze sêftguod, Ik soe wêze sa bliid te ûntfangen sels de
+ lytste [moanlikse bydrage fia Patreon](https://www.patreon.com/cobbzilla)
+
+ *Dankewol!*
 
  ## Ynstallaasje
  Om it kommandorigelark te brûken, ynstallearje mei `npm` of `yarn` :
@@ -366,7 +369,7 @@ Hokeylisearring
  Gean de opsje `-I` / `--index` , de wearde is wêr't it yndeksbestân oanmakke wurdt, dat kin in triem wêze
  of in map. As it in map is, sil in standert bestânsnamme brûkt wurde, basearre op it sjabloan (sjoch hjirûnder)
 
- Brûk de `-A` / `--index-template` om te bepalen hoe't de yndeksútfier is opmakke. Jo kinne 'html' opjaan,
+ Brûk de `-A` / `--index-template` om te bepalen hoe't de yndeksútfier opmakke is. Jo kinne 'html' opjaan,
  'markdown', 'text', of it bestânpaad nei jo eigen [HandlebarsJS](https://handlebarsjs.com/) sjabloan
 
  As jo jo eigen sjabloan oantsjutte, moatte jo ek in bestân opjaan (net in map) foar de `-I` / `--index`

@@ -82,7 +82,10 @@ Hokeylization
 
  Dus ik ga proberen nuttige software te schrijven en kijken of dat werkt
 
- Ik zou zelfs de kleinste [maandelijkse bijdrage via Patreon](https://www.patreon.com/cobbzilla) oprecht waarderen
+ Als u deze software graag gebruikt, zou ik zo blij zijn om zelfs de
+ kleinste [maandelijkse bijdrage via Patreon](https://www.patreon.com/cobbzilla)
+
+ *Dank je!*
 
  ## Installatie
  Om de opdrachtregeltool te gebruiken, installeert u met `npm` of `yarn` :

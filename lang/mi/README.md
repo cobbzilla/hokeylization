@@ -82,7 +82,10 @@ Hokeylization
 
  Na ka ngana ahau ki te tuhi i nga raupaparorohiko awhina me te kite mena ka mahi tera
 
- Ka maioha ahau ahakoa te iti rawa [koha-marama ma Patreon](https://www.patreon.com/cobbzilla)
+ Mena he pai ki a koe te whakamahi i tenei rorohiko, ka tino koa ahau ki te whiwhi i te
+ iti rawa [koha-marama ma Patreon](https://www.patreon.com/cobbzilla)
+
+ *Mauruuru!*
 
  ## Tāutanga
  Hei whakamahi i te taputapu raina whakahau, whakauruhia ma te whakamahi i te `npm` , i te `yarn` yarn` ranei:
@@ -171,7 +174,7 @@ Hokeylization
 
  **TUPATOTANGA NUI**: I te wa e whakamaori ana i nga raarangi whaiaronga, ** KAUA E ** te tohu i tetahi raarangi whakaputa
  kei roto tena i to raarangi whakauru! Ki te mahi koe i tenei, ka:
- * whakaawe i te recursion mutunga kore
+ * whakakorikori mutunga kore
  * whakahaere i to pire Google
  * whakakiia to kōpae
  * iti ake te ngahau

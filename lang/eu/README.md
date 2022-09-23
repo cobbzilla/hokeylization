@@ -82,10 +82,13 @@ Hokeylizazioa
 
  Beraz, software lagungarria idazten saiatuko naiz eta ea funtzionatzen duen
 
- Zintzoki eskertuko nuke [Patreon bidez hileko ekarpena] txikiena ere (https://www.patreon.com/cobbzilla)
+ Software hau erabiltzea gustatzen bazaizu, oso pozik jasoko nuke
+ txikiena [Patreon bidezko hileko ekarpena](https://www.patreon.com/cobbzilla)
+
+ *Eskerrik asko!*
 
  ## Instalazioa
- Komando lerroko tresna erabiltzeko, instalatu `npm` edo `yarn` erabiliz:
+ Komando-lerroko tresna erabiltzeko, instalatu `npm` " edo `yarn` :
 
     npm install -g hokeylization
     yarn global add hokeylization

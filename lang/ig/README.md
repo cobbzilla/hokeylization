@@ -82,7 +82,10 @@ Hokeyylization
 
  Ya mere, m ga-agbalị ide software na-enyere aka hụ ma ọ na-arụ ọrụ
 
- M ga-eji ezi obi nwee ekele ọbụlagodi obere onyinye [onyinye kwa ọnwa site na Patreon](https://www.patreon.com/cobbzilla)
+ Ọ bụrụ na ị na-enwe mmasị iji nke a software, M ga-enwe nnọọ obi ụtọ na-enweta ọbụna
+ kacha nta [onyinye kwa ọnwa site na Patreon](https://www.patreon.com/cobbzilla)
+
+ *Daalụ!*
 
  ## Nwụnye
  Iji jiri ngwa ahịrị iwu, wụnye na iji `npm` ma ọ bụ `yarn` :
@@ -119,7 +122,7 @@ Hokeyylization
  Ọ bụrụ na ị na-agba ọsọ site na koodu isi mmalite, ị nwekwara ike itinye ndị a na faịlụ `.env` na isi mmalite
  A ga-ebunye ndekọ aha ha na oge ojiri gaa site na [dotenv](https://www.npmjs.com/package/dotenv)
 
- ## Ịsụgharị faịlụ akụ eriri Javascript
+ ## Ịsụgharị faịlụ akụrụngwa Javascript
  Tebụl eriri gị ** ga-abụrịrị na faịlụ Javascript n'otu n'ime ụdị abụọ a:
 
  Mbupu ES6:

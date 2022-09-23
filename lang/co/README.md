@@ -82,7 +82,10 @@ Hokeylization
 
  Dunque, aghju da pruvà à scrive un software utile è vede s'ellu funziona
 
- Aghju sinceramente apprezzà ancu u più chjucu [cuntribuzione mensile via Patreon](https://www.patreon.com/cobbzilla)
+ Se ti piace à utilizà stu software, saria tantu felice di riceve ancu u
+ più chjucu [cuntribuzione mensuale via Patreon](https://www.patreon.com/cobbzilla)
+
+ *Grazie!*
 
  ## Installazione
  Per utilizà l'uttellu di linea di cumanda, installate cù `npm` o `yarn` :

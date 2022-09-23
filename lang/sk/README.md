@@ -82,7 +82,10 @@ Hokeylizácia
 
  Takže skúsim napísať užitočný softvér a uvidím, či to funguje
 
- Úprimne by som ocenil aj ten najmenší [mesačný príspevok cez Patreon](https://www.patreon.com/cobbzilla)
+ Ak radi používate tento softvér, bol by som veľmi rád, keby ste dostali aj to
+ najmenší [mesačný príspevok cez Patreon](https://www.patreon.com/cobbzilla)
+
+ *Ďakujem!*
 
  ## Inštalácia
  Ak chcete použiť nástroj príkazového riadka, nainštalujte pomocou `npm` alebo `yarn` :

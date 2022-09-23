@@ -82,10 +82,13 @@ Hokeylization
 
  Noho izany dia hanandrana manoratra rindrambaiko mahasoa aho ary hijery raha mety izany
 
- Ankasitrahako amin-kitsimpo na dia ny kely indrindra [fandraisan'anjara isam-bolana amin'ny alàlan'ny Patreon](https://www.patreon.com/cobbzilla)
+ Raha tianao ny mampiasa ity logiciel ity dia ho faly tokoa aho handray na dia ny
+ kely indrindra [fanomezana isam-bolana amin'ny alàlan'ny Patreon](https://www.patreon.com/cobbzilla)
+
+ *Misaotra anao!*
 
  ## Fametrahana
- Raha hampiasa ny fitaovana andalana baiko dia apetraho amin'ny fampiasana `npm` na `yarn` :
+ Raha hampiasa ny fitaovana andalana baiko dia apetraho amin'ny alalan'ny `npm` na `yarn` :
 
     npm install -g hokeylization
     yarn global add hokeylization
@@ -155,7 +158,7 @@ Hokeylization
  [tohanan'ny Google Translate](https://cloud.google.com/translate/docs/languages)
 
  Raha efa misy ny rakitra mivoaka dia hojerena mba hamaritana izay fanalahidy efa misy.
- Ny fanalahidy efa misy dia tsy hadika. Dikanteny ho an'ny fanalahidy tsy hita dia hatsangana sy ampiana
+ Tsy hadika ny lakile efa misy. Dikanteny ho an'ny fanalahidy tsy hita dia hatsangana sy ampiana
  hatramin'ny faran'ny zavatra JS. Ny rakitra manontolo dia averina soratana foana.
 
  Raha hanery ny fandikana indray ny fanalahidy rehetra dia ampiasao ny safidy `-f` / `--force`
@@ -176,7 +179,7 @@ Hokeylization
  * fenoy ny kapilanao
  * miala voly kely
 
- Ity misy ohatra amin'ny *tsy tokony hatao*:
+ Ity misy ohatra iray amin'ny *tsy tokony hatao*:
 
     hokey -l es -o templates/es templates # <--- DON'T DO THIS!
 

@@ -82,10 +82,13 @@ Hokeyylisation
 
  Je vais donc essayer d'écrire un logiciel utile et voir si cela fonctionne
 
- J'apprécierais sincèrement même la plus petite [contribution mensuelle via Patreon](https://www.patreon.com/cobbzilla)
+ Si vous aimez utiliser ce logiciel, je serais si heureux de recevoir même le
+ la plus petite [contribution mensuelle via Patreon](https://www.patreon.com/cobbzilla)
+
+ *Merci!*
 
  ## Installation
- Pour utiliser l'outil de ligne de commande, installez en utilisant `npm` ou `yarn` :
+ Pour utiliser l'outil de ligne de commande, installez en utilisant `npm` ou `yarn` :
 
     npm install -g hokeylization
     yarn global add hokeylization

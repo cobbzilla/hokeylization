@@ -82,7 +82,10 @@ Hokeylization
 
  Kaya't susubukan kong magsulat ng kapaki-pakinabang na software at tingnan kung gumagana iyon
 
- Taos-puso akong nagpapasalamat kahit na ang pinakamaliit na [buwanang kontribusyon sa pamamagitan ng Patreon](https://www.patreon.com/cobbzilla)
+ Kung masiyahan ka sa paggamit ng software na ito, magiging masaya akong makatanggap kahit na ang
+ pinakamaliit [buwanang kontribusyon sa pamamagitan ng Patreon](https://www.patreon.com/cobbzilla)
+
+ *Salamat!*
 
  ## Pag-install
  Para gamitin ang command line tool, i-install gamit `npm` o `yarn` :

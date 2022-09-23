@@ -82,7 +82,10 @@ Hokeyləşmə
 
  Beləliklə, mən faydalı proqram yazmağa çalışacağam və bunun işlədiyini görəcəyəm
 
- Ən kiçik [Patreon vasitəsilə aylıq töhfəni] belə səmimi qəlbdən qiymətləndirərdim(https://www.patreon.com/cobbzilla)
+ Bu proqram təminatından istifadə etməkdən zövq alırsınızsa, mən hətta onu da almaqdan çox məmnun olaram
+ ən kiçik [Patreon vasitəsilə aylıq töhfə](https://www.patreon.com/cobbzilla)
+
+ *Çox sağ ol!*
 
  ## Quraşdırma
  Komanda xətti alətindən istifadə etmək üçün `npm` və ya `yarn` istifadə edərək quraşdırın:
@@ -366,7 +369,7 @@ Hokeyləşmə
  `-I` / `--index` seçimini keçin, dəyər indeks faylının yaradılacağı yerdir, hansı fayl ola bilər
  və ya kataloq. Əgər bu bir kataloqdursa, şablon əsasında standart fayl adı istifadə olunacaq (aşağıya bax)
 
- İndeks çıxışının necə formatlandığını müəyyən etmək üçün `-A` / `--index-template` şablon`dan istifadə edin. 'html' təyin edə bilərsiniz,
+ İndeks çıxışının necə formatlandığını müəyyən etmək üçün `-A` / `--index-template` istifadə edin. 'html' təyin edə bilərsiniz,
  'markdown', 'mətn' və ya öz [HandlebarsJS](https://handlebarsjs.com/) şablonunuza gedən fayl yolu
 
  Öz şablonunuzu göstərsəniz, `-I` / `--index` üçün fayl (kataloq deyil) də göstərməlisiniz.

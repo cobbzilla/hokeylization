@@ -82,7 +82,10 @@ Hokeylization
 
  Yog li kuv yuav sim sau cov software pab tau thiab saib seb qhov ntawd ua haujlwm
 
- Kuv xav ua tsaug txawm tias qhov tsawg tshaj plaws [kev pab nyiaj hli ntawm Patreon](https://www.patreon.com/cobbzilla)
+ Yog tias koj txaus siab rau siv cov software no, kuv yuav zoo siab heev kom tau txais txawm tias
+ tsawg tshaj plaws [kev pab nyiaj hli ntawm Patreon](https://www.patreon.com/cobbzilla)
+
+ * Ua tsaug!*
 
  ## Kev teeb tsa
  Txhawm rau siv cov cuab yeej hais kom ua kab, nruab siv `npm` lossis `yarn` :
@@ -359,7 +362,7 @@ Hokeylization
 
  ### Index
  Thaum txhais tau ntau hom lus, `hokey` tuaj yeem tsim cov ntaub ntawv ntsuas uas teev tag nrho cov kev txhais lus ua
- thiab muab txuas rau lawv
+ thiab muab kev txuas rau lawv
 
  * Thaum tsim cov indexes, koj muaj peev xwm tsuas muaj ib tug input qhov chaw *
 

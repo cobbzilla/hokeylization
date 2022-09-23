@@ -82,7 +82,10 @@ Hokeylizéierung
 
  Also ech probéieren hëllefräich Software ze schreiwen a kucken ob dat funktionnéiert
 
- Ech schätzen och déi klengst [monatlecht Bäitrag iwwer Patreon](https://www.patreon.com/cobbzilla)
+ Wann Dir genéisst dës Software ze benotzen, Ech géif esou frou sinn souguer de
+ klengste [monatlecht Bäitrag iwwer Patreon](https://www.patreon.com/cobbzilla)
+
+ *Merci!*
 
  ## Installatioun
  Fir de Kommandozeil-Tool ze benotzen, installéiere mat `npm` oder `yarn` :
@@ -366,7 +369,7 @@ Hokeylizéierung
  Gitt d'Optioun `-I` / `--index` , de Wäert ass wou d'Indexdatei generéiert gëtt, wat e Fichier kann sinn
  oder e Verzeechnes. Wann et e Verzeechnes ass, gëtt e Standard Dateinumm benotzt, baséiert op der Schabloun (kuckt hei ënnen)
 
- Benotzt den `-A` / `--index-template` fir ze bestëmmen wéi d'Indexoutput formatéiert ass. Dir kënnt 'html' spezifizéieren,
+ Benotzt den `-A` / `--index-template` fir ze bestëmmen wéi den Indexoutput formatéiert ass. Dir kënnt 'html' spezifizéieren,
  'markdown', 'Text' oder de Dateiwee op Ären eegene [HandlebarsJS](https://handlebarsjs.com/) Schabloun
 
  Wann Dir Är eege Schabloun uginn hutt, musst Dir och e Fichier (net e Verzeichnis) fir den `-I` / `--index`

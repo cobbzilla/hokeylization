@@ -82,7 +82,10 @@ Hokeyliseerimine
 
  Nii et proovin kirjutada kasulikku tarkvara ja vaadata, kas see töötab
 
- Oleksin siiralt tänulik isegi väikseima [igakuise panuse eest Patreoni kaudu](https://www.patreon.com/cobbzilla)
+ Kui teile meeldib seda tarkvara kasutada, oleks mul hea meel isegi selle üle saada
+ väikseim [igakuine sissemakse Patreoni kaudu](https://www.patreon.com/cobbzilla)
+
+ *Aitäh!*
 
  ## Paigaldamine
  Käsurea tööriista kasutamiseks installige käsuga `npm` või `yarn` :

@@ -82,7 +82,10 @@ Hokeylization
 
  Mar sin tha mi a’ dol a dh’fheuchainn ri bathar-bog feumail a sgrìobhadh agus faicinn a bheil sin ag obair
 
- Bhithinn gu dùrachdach a’ cur luach air eadhon an tabhartas as lugha [tabhartas mìosail tro Patreon](https://www.patreon.com/cobbzilla)
+ Ma tha e a’ còrdadh riut a bhith a’ cleachdadh a’ bhathar-bog seo, bhithinn cho toilichte eadhon am bathar-bog fhaighinn
+ as lugha [tabhartas mìosail tro Patreon](https://www.patreon.com/cobbzilla)
+
+ *Tapadh leat!*
 
  ## Stàladh
  Gus an inneal loidhne-àithne a chleachdadh, stàlaich le bhith a’ cleachdadh `npm` no `yarn` :
@@ -366,7 +369,7 @@ Hokeylization
  Cuir seachad an roghainn `-I` / `--index` , is e an luach far an tèid am faidhle clàr-amais a chruthachadh, a dh'fhaodas a bhith na fhaidhle
  no eòlaire. Mas e eòlaire a th’ ann, thèid ainm faidhle bunaiteach a chleachdadh, stèidhichte air an teamplaid (faic gu h-ìosal)
 
- Cleachd an `-A` / `--index-template` gus faighinn a-mach ciamar a tha toradh a’ chlàr-amais air a chruth. Faodaidh tu 'html' a shònrachadh,
+ Cleachd an `-A` / `--index-template` gus faighinn a-mach mar a tha toradh clàr-amais air a chruth. Faodaidh tu 'html' a shònrachadh,
  'markdown', 'text', no slighe an fhaidhle chun teamplaid agad fhèin [ HandlebarsJS]( https://handlebarsjs.com/ )
 
  Ma shònraicheas tu an teamplaid agad fhèin, feumaidh tu cuideachd faidhle a shònrachadh (chan e eòlaire) airson an `-I` / `--index`

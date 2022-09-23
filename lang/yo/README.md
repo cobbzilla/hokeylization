@@ -82,7 +82,10 @@ Hokeyylization
 
  Nitorinaa Emi yoo gbiyanju kikọ sọfitiwia iranlọwọ ati rii boya iyẹn ṣiṣẹ
 
- Emi yoo dupẹ lọwọ pẹlu otitọ paapaa ohun ti o kere julọ [ilowosi oṣooṣu nipasẹ Patreon](https://www.patreon.com/cobbzilla)
+ Ti o ba gbadun lilo sọfitiwia yii, inu mi yoo dun pupọ lati gba paapaa awọn
+ ti o kere julọ [ilowosi oṣooṣu nipasẹ Patreon](https://www.patreon.com/cobbzilla)
+
+ *E dupe!*
 
  ## Fifi sori ẹrọ
  Lati lo irinṣẹ laini aṣẹ, fi sori ẹrọ ni lilo `npm` tabi `yarn` :
@@ -358,12 +361,12 @@ Hokeyylization
     }
 
  ### Awọn atọka
- Nigbati o ba n tumọ si ọpọlọpọ awọn ede, `hokey` le ṣẹda faili atọka ti o ṣe atokọ gbogbo awọn itumọ ti a ṣe
+ Nigbati o ba tumọ si ọpọlọpọ awọn ede, `hokey` le ṣẹda faili atọka ti o ṣe atokọ gbogbo awọn itumọ ti a ṣe
  ati pese awọn ọna asopọ si wọn
 
  * Nigbati o ba n ṣẹda awọn atọka, o le ni orisun titẹ sii kan ṣoṣo*
 
- Kọja aṣayan `-I` / `--index` , iye naa wa nibiti faili atọka yoo ti ṣe ipilẹṣẹ, eyiti o le jẹ faili kan
+ Kọja aṣayan `-I` / `--index` , iye naa wa nibiti faili atọka yoo ti ṣe ipilẹṣẹ, eyiti o le jẹ faili
  tabi a liana. Ti o ba jẹ itọsọna kan, orukọ faili aiyipada yoo ṣee lo, da lori awoṣe (wo isalẹ)
 
  Lo `-A` / `--index-template` lati pinnu bi a ṣe ṣe ọna kika atọka. O le pato 'html',

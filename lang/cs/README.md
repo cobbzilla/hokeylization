@@ -82,7 +82,10 @@ Hokeylizace
 
  Takže zkusím napsat užitečný software a uvidím, jestli to funguje
 
- Upřímně bych ocenil i ten nejmenší [měsíční příspěvek přes Patreon](https://www.patreon.com/cobbzilla)
+ Pokud rádi používáte tento software, budu tak rád, že obdržím i
+ nejmenší [měsíční příspěvek přes Patreon](https://www.patreon.com/cobbzilla)
+
+ *Děkuji!*
 
  ## Instalace
  Chcete-li použít nástroj příkazového řádku, nainstalujte pomocí `npm` nebo `yarn` :

@@ -82,7 +82,10 @@ Hokeilizacija
 
  Stoga ću pokušati napisati koristan softver i vidjeti hoće li to uspjeti
 
- Iskreno bih cijenio i najmanji [mjesečni doprinos putem Patreona](https://www.patreon.com/cobbzilla)
+ Ako uživate u korištenju ovog softvera, rado bih primio čak i
+ najmanji [mjesečni doprinos putem Patreona](https://www.patreon.com/cobbzilla)
+
+ *Hvala vam!*
 
  ## Instalacija
  Za korištenje alata naredbenog retka, instalirajte pomoću `npm` ili `yarn` :
@@ -363,7 +366,7 @@ Hokeilizacija
 
  *Prilikom generiranja indeksa, možete imati samo jedan izvor unosa*
 
- Proslijedite opciju `-I` / `--index` , vrijednost je mjesto gdje će se generirati indeksna datoteka, koja može biti datoteka
+ Proslijedite opciju `-I` / `--index` , vrijednost je mjesto gdje će se generirati datoteka indeksa, koja može biti datoteka
  ili imenik. Ako se radi o direktoriju, koristit će se zadani naziv datoteke na temelju predloška (pogledajte dolje)
 
  Upotrijebite `-A` / `--index-template` da odredite kako je formatiran izlaz indeksa. Možete navesti 'html',

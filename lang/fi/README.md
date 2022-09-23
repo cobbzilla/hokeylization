@@ -82,7 +82,10 @@ Hokeylisaatio
 
  Joten yritän kirjoittaa hyödyllisiä ohjelmistoja ja katsoa, toimiiko se
 
- Arvostan vilpittömästi pienintäkin [kuukausittaista lahjoitusta Patreonin kautta](https://www.patreon.com/cobbzilla)
+ Jos pidät tämän ohjelmiston käyttämisestä, otan mielelläni vastaan jopa
+ pienin [kuukausimaksu Patreonin kautta](https://www.patreon.com/cobbzilla)
+
+ *Kiitos!*
 
  ## Asennus
  Jos haluat käyttää komentorivityökalua, asenna komennolla `npm` tai `yarn` :

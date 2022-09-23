@@ -82,7 +82,10 @@ Hokeylization
 
  No laila e hoʻāʻo wau e kākau i nā polokalamu kōkua a ʻike inā pono ia
 
- Mahalo nui wau i ka mea liʻiliʻi loa [ko ka mahina hāʻawi ma o Patreon](https://www.patreon.com/cobbzilla)
+ Inā hauʻoli ʻoe i ka hoʻohana ʻana i kēia polokalamu, hauʻoli wau i ka loaʻa ʻana o ka
+ liʻiliʻi loa [koʻikoʻi o kēlā me kēia mahina ma o Patreon](https://www.patreon.com/cobbzilla)
+
+ *Mahalo!*
 
  ## Hoʻokomo
  No ka hoʻohana ʻana i ka mea hana laina kauoha, e hoʻokomo me ka hoʻohana ʻana i ka `npm` a `yarn` :
@@ -366,7 +369,7 @@ Hokeylization
  E hāʻawi i ke koho `-I` / `--index` , ʻo ka waiwai kahi e hana ʻia ai ka faila kuhikuhi, hiki ke lilo i faila.
  a i ʻole he papa kuhikuhi. Inā he papa kuhikuhi, e hoʻohana ʻia kahi inoa file paʻamau, e pili ana i ka template (e ʻike i lalo)
 
- E hoʻohana i ka `-A` / `--index-template` no ka hoʻoholo ʻana i ke ʻano o ka hoʻohālikelike ʻia ʻana o ka huaʻōlelo kuhikuhi. Hiki iā ʻoe ke kuhikuhi i ka 'html',
+ E hoʻohana i ka `-A` / `--index-template` no ka hoʻoholo ʻana i ke ʻano o ka hoʻohālikelike ʻia ʻana o ka huaʻōlelo kuhikuhi. Hiki iā ʻoe ke kuhikuhi 'html',
  'markdown', 'text', a i ʻole ke ala waihona i kāu [HandlebarsJS](https://handlebarsjs.com/) template
 
  Inā ʻoe e kuhikuhi i kāu hoʻohālike ponoʻī, pono ʻoe e kuhikuhi i kahi faila (ʻaʻole he papa kuhikuhi) no ka `-I` / `--index`

@@ -82,7 +82,10 @@ Hokeylizare
 
  Așa că voi încerca să scriu un software util și să văd dacă funcționează
 
- Aș aprecia sincer chiar și cea mai mică [contribuție lunară prin Patreon](https://www.patreon.com/cobbzilla)
+ Dacă vă place să utilizați acest software, aș fi atât de fericit să primesc chiar și
+ cea mai mică [contribuție lunară prin Patreon](https://www.patreon.com/cobbzilla)
+
+ *Mulțumesc!*
 
  ## Instalare
  Pentru a utiliza instrumentul de linie de comandă, instalați folosind `npm` sau `yarn` :

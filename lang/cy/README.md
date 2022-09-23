@@ -82,7 +82,10 @@ Hokeyleiddiad
 
  Felly rydw i'n mynd i geisio ysgrifennu meddalwedd defnyddiol a gweld a yw hynny'n gweithio
 
- Byddwn yn gwerthfawrogi'n ddiffuant y cyfraniad lleiaf [misol trwy Patreon]( https://www.patreon.com/cobbzilla )
+ Os ydych chi'n mwynhau defnyddio'r feddalwedd hon, byddwn mor hapus i dderbyn hyd yn oed y
+ lleiaf [cyfraniad misol trwy Patreon]( https://www.patreon.com/cobbzilla)
+
+ *Diolch!*
 
  ## Gosod
  I ddefnyddio'r offeryn llinell orchymyn, gosodwch gan ddefnyddio `npm` neu `yarn` :

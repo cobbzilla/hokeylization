@@ -4,7 +4,7 @@ Hokeyzation
 
  ***Bây giờ bạn có thể!***
 
- Tên `hokeylization` là một từ ghép, có nghĩa là' bản địa hóa hokey '
+ Tên `hokeylization` là một từ ghép, có nghĩa là 'bản địa hóa hokey'
 
  Nó hơi khó vì nó rất đơn giản: nó gửi chuỗi đến Google Dịch
 
@@ -33,7 +33,7 @@ Hokeyzation
  [🇮🇩 tiếng Indonesia](lang / id / README.md)
  [🇮🇹 tiếng Ý](lang / it / README.md)
  [🇯🇵 Tiếng Nhật](lang / ja / README.md)
- [🇰🇷 Tiếng Hàn](lang / ko / README.md)
+ [🇰🇷 Korean](lang / ko / README.md)
  [🇮🇳 Maranthi](lang / mr / README.md)
  [🇵🇱 Tiếng Ba Lan](lang / pl / README.md)
  [🇧🇷 tiếng Bồ Đào Nha](lang / pt / README.md)
@@ -49,10 +49,10 @@ Hokeyzation
  ** [📚 ... Tất cả các ngôn ngữ ...](lang / README.md) **
  ----
 
- ### Có sự cố với bản dịch README này không?
+ ### Bản dịch README này có vấn đề gì không?
  Bản dịch cụ thể này của bản gốc [README](https://github.com/cobbzilla/hokeyption/blob/master/README.md)
  có thể có sai sót - * rất hoan nghênh việc sửa chữa! * Vui lòng gửi [yêu cầu kéo trên GitHub](https://github.com/cobbzilla/hokeyption/pulls),
- hoặc nếu bạn không thấy thoải mái khi làm điều đó, hãy [mở sự cố](https://github.com/cobbzilla/hokeyption/issues)
+ hoặc nếu bạn không cảm thấy thoải mái khi làm điều đó, hãy [mở sự cố](https://github.com/cobbzilla/hokeyption/issues)
 
  Khi bạn tạo một vấn đề GitHub mới về bản dịch, vui lòng thực hiện:
  * bao gồm URL của trang (sao chép / dán từ thanh địa chỉ trình duyệt)
@@ -73,7 +73,7 @@ Hokeyzation
 
  ## Nguồn
  * [hokeyzation trên GitHub](https://github.com/cobbzilla/hokeyption)
- * [hokeyfication on npm](https://www.npmjs.com/package/hokeyption)
+ * [hokeyption on npm](https://www.npmjs.com/package/hokeyption)
 
  ## Hỗ trợ và Tài trợ
  Tôi đang cố gắng trở thành một nhà phát triển phần mềm nguồn mở chuyên nghiệp. Tôi đã làm việc ở
@@ -82,7 +82,10 @@ Hokeyzation
 
  Vì vậy, tôi sẽ thử viết phần mềm hữu ích và xem nó có hoạt động không
 
- Tôi chân thành đánh giá cao dù là nhỏ nhất [đóng góp hàng tháng qua Patreon](https://www.patreon.com/cobbzilla)
+ Nếu bạn thích sử dụng phần mềm này, tôi sẽ rất vui khi nhận được
+ nhỏ nhất [đóng góp hàng tháng qua Patreon](https://www.patreon.com/cobbzilla)
+
+ *Cảm ơn bạn!*
 
  ## Cài đặt
  Để sử dụng công cụ dòng lệnh, hãy cài đặt bằng cách sử dụng `npm` `yarn` :
@@ -95,12 +98,12 @@ Hokeyzation
     npm install -g hokeylization-lite
     yarn global add hokeylization-lite
 
- Sau đó xem trợ giúp cho lệnh `hokey` :
+ Sau đó, xem trợ giúp cho lệnh `hokey` :
 
     hokey --help
     hokey -h
 
- Bạn muốn xem đầu ra bằng ngôn ngữ của bạn hoặc ngôn ngữ khác?
+ Bạn muốn xem đầu ra bằng ngôn ngữ của bạn hoặc một ngôn ngữ khác?
 
  `hokey` cố gắng phát hiện ngôn ngữ tự động từ các biến môi trường của trình bao của bạn
 
@@ -114,7 +117,7 @@ Hokeyzation
  Đặt biến môi trường `GOOGLE_TRANSLATE_PROJECT_ID` để xác định dự án Google Dịch của bạn
 
  Đặt biến môi trường `GOOGLE_APPLICATION_CREDENTIALS` thành thông tin đăng nhập JSON mà bạn đã tải xuống
- sau khi tìm hiểu cách xác thực hoạt động trên đám mây của Google (có thể rất thú vị)
+ sau khi tìm ra cách xác thực hoạt động trên đám mây của Google (có thể rất thú vị)
 
  Nếu bạn đang chạy từ mã nguồn, bạn cũng có thể đặt chúng vào tệp `.env` trong nguồn
  thư mục chúng sẽ được tải trong thời gian chạy qua [dotenv](https://www.npmjs.com/package/dotenv)
@@ -161,7 +164,7 @@ Hokeyzation
  Để buộc dịch lại tất cả các phím, hãy sử dụng tùy chọn `-f` / `--force` `-f`
 
  ## Dịch thư mục tệp văn bản
- Bạn cũng có thể dịch một thư mục tệp. hokeyption sẽ truy cập đệ quy mỗi
+ Bạn cũng có thể dịch một thư mục các tệp. hokeyption sẽ truy cập đệ quy mỗi
  tệp trong thư mục và chạy nội dung của nó thông qua Google Dịch và lưu kết quả đầu ra
  đến một tệp được đặt tên giống hệt nhau trong một cây thư mục riêng biệt
 
@@ -169,7 +172,7 @@ Hokeyzation
 
  Tùy chọn `-o` / `--outfile` chỉ định thư mục đầu ra
 
- ** CẢNH BÁO LỚN **: Khi dịch thư mục, ** KHÔNG ** chỉ định thư mục đầu ra
+ ** CẢNH BÁO LỚN **: Khi dịch các thư mục, ** KHÔNG ** chỉ định một thư mục đầu ra
  đó là trong thư mục đầu vào của bạn! Nếu bạn làm điều này, bạn sẽ:
  * tạo ra đệ quy vô hạn
  * chạy hết hóa đơn Google của bạn
@@ -217,7 +220,7 @@ Hokeyzation
  ### Cuộc thi đấu
  `-m` / `--match` để giới hạn các tệp được xử lý khi chạy ở chế độ thư mục
 
- Không phải lúc nào bạn cũng có thể muốn dịch * mọi tệp * trong thư mục nguồn sang thư mục đích của mình
+ Có thể không phải lúc nào bạn cũng muốn dịch * mọi tệp * trong thư mục nguồn sang thư mục đích của mình
 
  Giá trị của tùy chọn `-m` / `--match` là một regex (hãy cẩn thận với các quy tắc trích dẫn shell!) Chỉ định
  những tập tin nào nên được dịch
@@ -280,7 +283,7 @@ Hokeyzation
  tên, trừ khi nó đã kết thúc bằng `.js` )
  * Thư mục hiện tại
  * Một thư mục có tên `.hokey-filters` trong thư mục hiện tại
- * Một thư mục có tên là `${HOME}/.hokey-filters` , trong đó` `${HOME}` là thư mục chính của người dùng hiện tại
+ * Thư mục có tên `${HOME}/.hokey-filters` , trong đó` `${HOME}` là thư mục chính của người dùng hiện tại
  * [Thư mục bộ lọc] tích hợp sẵn (https://github.com/cobbzilla/hokeyption/tree/master/util/filter)
 
  #### Tham số Bộ lọc
@@ -358,7 +361,7 @@ Hokeyzation
     }
 
  ### Chỉ mục
- Khi dịch sang nhiều ngôn ngữ, `hokey` có thể tạo một tệp chỉ mục liệt kê tất cả các bản dịch được thực hiện
+ Khi dịch sang nhiều ngôn ngữ, `hokey` có thể tạo một tệp chỉ mục liệt kê tất cả các bản dịch đã thực hiện
  và cung cấp các liên kết đến chúng
 
  * Khi tạo chỉ mục, bạn chỉ có thể có một nguồn đầu vào *

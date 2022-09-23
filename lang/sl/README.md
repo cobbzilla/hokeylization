@@ -82,7 +82,10 @@ Hokeilizacija
 
  Zato bom poskusil napisati uporabno programsko opremo in preveril, ali deluje
 
- Iskreno bi bil hvaležen tudi za najmanjši [mesečni prispevek prek Patreona](https://www.patreon.com/cobbzilla)
+ Če radi uporabljate to programsko opremo, bi bil zelo vesel, če bi prejel celo
+ najmanjši [mesečni prispevek prek Patreona](https://www.patreon.com/cobbzilla)
+
+ *Hvala vam!*
 
  ## Namestitev
  Če želite uporabiti orodje ukazne vrstice, namestite z uporabo `npm` ali `yarn` :

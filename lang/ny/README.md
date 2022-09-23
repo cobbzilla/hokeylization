@@ -82,7 +82,10 @@ Hokeylization
 
  Chifukwa chake ndiyesera kulemba mapulogalamu othandiza ndikuwona ngati izi zikugwira ntchito
 
- Ndingayamikire ngakhale zazing'ono kwambiri [zopereka pamwezi kudzera pa Patreon](https://www.patreon.com/cobbzilla)
+ Ngati mumakonda kugwiritsa ntchito pulogalamuyo, ndingakhale wokondwa kulandira ngakhale
+ zing'onozing'ono [zopereka pamwezi kudzera pa Patreon](https://www.patreon.com/cobbzilla)
+
+ *Zikomo!*
 
  ## Kukhazikitsa
  Kuti mugwiritse ntchito chida cha mzere wolamula, yikani kugwiritsa ntchito `npm` kapena `yarn` :
@@ -170,7 +173,7 @@ Hokeylization
  Chosankha cha `-o` / `--outfile` chimatchula zotuluka
 
  **CHENJEZO LAKULU**: Mukamasulira maulolezo, **OSATI** tchulani chikwatu chotulutsa
- zomwe zili mkati mwazolembera zanu! Mukachita izi, mudzachita:
+ zomwe zili mkati mwazolembera zanu! Ngati muchita izi, mudza:
  * yambitsani kubwereza kosatha
  * tsitsani ndalama zanu za Google
  * lembani disk yanu
@@ -369,7 +372,7 @@ Hokeylization
  Gwiritsani ntchito `-A` / `--index-template` kuti muwone momwe zotulutsazo zimapangidwira. Mutha kutchula 'html',
  'markdown', 'text', kapena njira yamafayilo yofikira [HandlebarsJS](https://handlebarsjs.com/) template yanu
 
- Ngati mutchula template yanu, muyenera kufotokozeranso fayilo (osati chikwatu) cha `-I` / `--index`
+ Ngati mutchula template yanu, muyeneranso kufotokoza fayilo (osati chikwatu) cha `-I` / `--index`
  mwina
 
  ## Khalani ndi nthawi yosangalatsa yomasulira zilankhulo!

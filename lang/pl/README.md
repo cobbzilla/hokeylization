@@ -57,7 +57,7 @@ Hokeylizacja
  Tworząc nowy problem na GitHubie dotyczący tłumaczenia, wykonaj następujące czynności:
  * dołącz adres URL strony (skopiuj/wklej z paska adresu przeglądarki)
  * dołącz dokładny tekst, który jest błędny (skopiuj/wklej z przeglądarki)
- * proszę opisać, co jest nie tak – czy tłumaczenie jest niepoprawne? czy formatowanie jest jakoś zepsute?
+ * proszę opisać co jest nie tak - czy tłumaczenie jest niepoprawne? czy formatowanie jest jakoś zepsute?
  * uprzejmie zasugeruj lepsze tłumaczenie, czyli jak tekst powinien być odpowiednio sformatowany
  * **Dziękuję Ci!**
 
@@ -82,7 +82,10 @@ Hokeylizacja
 
  Więc spróbuję napisać pomocne oprogramowanie i zobaczę, czy to działa
 
- Szczerze doceniłbym nawet najmniejszy [miesięczny wkład przez Patreon](https://www.patreon.com/cobbzilla)
+ Jeśli lubisz korzystać z tego oprogramowania, byłbym bardzo szczęśliwy mogąc otrzymać nawet
+ najmniejsza [miesięczna składka przez Patreon](https://www.patreon.com/cobbzilla)
+
+ *Dziękuję Ci!*
 
  ## Instalacja
  Aby użyć narzędzia wiersza poleceń, zainstaluj używając `npm` lub `yarn` :

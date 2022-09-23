@@ -82,7 +82,10 @@ Hokeylization
 
  Do mi provos verki helpeman programaron kaj vidi ĉu tio funkcias
 
- Mi sincere dankus eĉ la plej malgrandan [monatan kontribuon per Patreon](https://www.patreon.com/cobbzilla)
+ Se vi ĝuas uzi ĉi tiun programaron, mi estus tiel feliĉa ricevi eĉ la
+ plej malgranda [monata kontribuo per Patreon](https://www.patreon.com/cobbzilla)
+
+ *Dankon!*
 
  ## Instalado
  Por uzi la komandlinian ilon, instalu uzante `npm` aŭ `yarn` :

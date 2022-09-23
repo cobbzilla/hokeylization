@@ -82,7 +82,10 @@ Hokeylisering
 
  Så jeg skal prøve å skrive nyttig programvare og se om det fungerer
 
- Jeg vil virkelig sette pris på selv den minste [månedlige bidrag via Patreon](https://www.patreon.com/cobbzilla)
+ Hvis du liker å bruke denne programvaren, vil jeg være så glad for å motta selv
+ minste [månedlig bidrag via Patreon](https://www.patreon.com/cobbzilla)
+
+ *Takk skal du ha!*
 
  ## Installasjon
  For å bruke kommandolinjeverktøyet, installer med `npm` eller `yarn` :
@@ -366,7 +369,7 @@ Hokeylisering
  Pass på `-I` / `--index` , verdien er der indeksfilen vil bli generert, som kan være en fil
  eller en katalog. Hvis det er en katalog, vil et standard filnavn bli brukt, basert på malen (se nedenfor)
 
- Bruk `-A` / `--index-template` for å bestemme hvordan indeksutdata er formatert. Du kan spesifisere 'html',
+ Bruk `-A` / `--index-template` for å bestemme hvordan indeksutdataene er formatert. Du kan spesifisere 'html',
  'markdown', 'text' eller filbanen til din egen [HandlebarsJS](https://handlebarsjs.com/) mal
 
  Hvis du spesifiserer din egen mal, må du også spesifisere en fil (ikke en katalog) for `-I` / `--index`

@@ -82,7 +82,10 @@ Hokeylization
 
  O lea o le a ou taumafai e tusi le polokalama fesoasoani ma vaai pe aoga
 
- Ou te matua talisapaia e tusa lava pe itiiti [saomea faalemasina e ala i Patreon](https://www.patreon.com/cobbzilla)
+ Afai e te fiafia e faʻaaoga lenei polokalama, ou te matua fiafia lava e maua e oʻo lava i le
+ aupito itiiti [saomea faalemasina e ala i Patreon](https://www.patreon.com/cobbzilla)
+
+ *Faafetai!*
 
  ## Fa'apipi'i
  Mo le faʻaogaina o le meafaigaluega laina, faʻapipiʻi le faʻaaogaina `npm` poʻo `yarn` :
@@ -366,7 +369,7 @@ Hokeylization
  Pasia le `-I` / `--index` filifiliga, o le tau o le mea lea o le a gaosia ai le faila faila, lea e mafai ona avea ma faila.
  po'o se fa'atonuga. Afai o se fa'atonuga, o le a fa'aogaina le igoa faila, fa'atatau i le fa'ata'ita'iga (silasila i lalo)
 
- Fa'aoga le `-A` / `--index-template` e iloa ai pe fa'afefea ona fa'atulaga le fa'ailoga. E mafai ona e faʻamaonia 'html',
+ Fa'aaoga le `-A` / `--index-template` e iloa ai pe fa'afefea ona fa'atulaga le fa'ailoga. E mafai ona e faʻamaonia 'html',
  'markdown', 'text', po'o le ala faila i lau lava [HandlebarsJS](https://handlebarsjs.com/) mamanu
 
  Afai e te faʻamaonia lau lava faʻataʻitaʻiga, e tatau foi ona e faʻamaonia se faila (e le o se faʻatonuga) mo le `-I` / `--index`

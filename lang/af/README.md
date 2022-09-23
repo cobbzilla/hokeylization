@@ -82,7 +82,10 @@ Hokielisering
 
  So ek gaan probeer om nuttige sagteware te skryf en kyk of dit werk
 
- Ek sal selfs die kleinste [maandelikse bydrae via Patreon](https://www.patreon.com/cobbzilla) opreg waardeer
+ As jy dit geniet om hierdie sagteware te gebruik, sal ek so bly wees om selfs die
+ kleinste [maandelikse bydrae via Patreon](https://www.patreon.com/cobbzilla)
+
+ *Dankie!*
 
  ## Installasie
  Om die opdragreëlnutsding te gebruik, installeer met `npm` of `yarn` :

@@ -82,7 +82,10 @@ Hokeylization
 
  Allura jien ser nipprova nikteb softwer utli u nara jekk dan jaħdem
 
- Sinċerament napprezza anke l-iżgħar [kontribuzzjoni ta' kull xahar permezz ta' Patreon](https://www.patreon.com/cobbzilla)
+ Jekk inti tgawdi tuża dan is-software, inkun daqshekk kuntent li tirċievi anke l-
+ l-iżgħar [kontribuzzjoni ta' kull xahar permezz ta' Patreon](https://www.patreon.com/cobbzilla)
+
+ *Grazzi!*
 
  ## Installazzjoni
  Biex tuża l-għodda tal-linja tal-kmand, installa billi tuża `npm` " jew `yarn` :

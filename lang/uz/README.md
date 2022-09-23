@@ -82,7 +82,10 @@ Hokeylizatsiya
 
  Shuning uchun men foydali dasturiy ta'minot yozishga harakat qilaman va bu ishlayotganligini tekshiraman
 
- Men hatto eng kichik [Patreon orqali oylik hissa] uchun chin dildan minnatdorman (https://www.patreon.com/cobbzilla)
+ Agar siz ushbu dasturiy ta'minotdan foydalanishni yoqtirsangiz, men hatto uni olishdan juda xursand bo'laman
+ eng kichik [Patreon orqali oylik hissa](https://www.patreon.com/cobbzilla)
+
+ *Rahmat!*
 
  ## O'rnatish
  Buyruqlar qatori vositasidan foydalanish uchun " `npm` yoki `yarn` " yordamida o'rnating:

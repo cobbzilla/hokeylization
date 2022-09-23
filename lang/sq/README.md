@@ -82,7 +82,10 @@ Hokeylizimi
 
  Kështu që unë do të përpiqem të shkruaj softuer të dobishëm dhe të shikoj nëse funksionon
 
- Unë do të vlerësoja sinqerisht edhe kontributin më të vogël [kontributi mujor nëpërmjet Patreon](https://www.patreon.com/cobbzilla)
+ Nëse ju pëlqen të përdorni këtë softuer, do të isha shumë i lumtur ta pranoja edhe atë
+ më i vogël [kontributi mujor nëpërmjet Patreon](https://www.patreon.com/cobbzilla)
+
+ *Faleminderit!*
 
  ## Instalimi
  Për të përdorur mjetin e linjës së komandës, instaloni duke përdorur `npm` ose `yarn` :
@@ -366,7 +369,7 @@ Hokeylizimi
  Kaloni `-I` / `--index` , vlera është vendi ku do të gjenerohet skedari i indeksit, i cili mund të jetë një skedar
  ose një drejtori. Nëse është një drejtori, do të përdoret një emër skedari i paracaktuar, bazuar në shabllonin (shih më poshtë)
 
- Përdorni `-A` " / `--index-template` për të përcaktuar se si është formatuar dalja e indeksit. Ju mund të specifikoni 'html',
+ Përdorni `-A` " / `--index-template` për të përcaktuar se si formatohet dalja e indeksit. Ju mund të specifikoni 'html',
  'shënjimi', 'teksti' ose shtegu i skedarit drejt shabllonit tuaj [HandlebarsJS](https://handlebarsjs.com/)
 
  Nëse specifikoni shabllonin tuaj, duhet të specifikoni gjithashtu një skedar (jo një drejtori) për `-I` " / `--index`

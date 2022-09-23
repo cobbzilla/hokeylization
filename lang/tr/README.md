@@ -82,7 +82,10 @@ hokeyleşme
 
  Bu yüzden yararlı bir yazılım yazmayı deneyeceğim ve işe yarayıp yaramadığını göreceğim.
 
- En küçük [Patreon aracılığıyla aylık katkıyı] bile içtenlikle takdir ediyorum(https://www.patreon.com/cobbzilla)
+ Bu yazılımı kullanmaktan hoşlanıyorsanız,
+ en küçük [Patreon aracılığıyla aylık katkı](https://www.patreon.com/cobbzilla)
+
+ *Teşekkürler!*
 
  ## Kurulum
  Komut satırı aracını kullanmak için `npm` veya `yarn` kullanarak kurun:

@@ -82,7 +82,10 @@ Hokeylization
 
  Janten kuring badé nyobian nyerat parangkat lunak anu mangpaat sareng ningali upami éta jalanna
 
- Abdi bakal ngahargaan pisan bahkan anu pangleutikna [kontribusi bulanan via Patreon](https://www.patreon.com/cobbzilla)
+ Upami anjeun resep nganggo parangkat lunak ieu, kuring bakal bagja nampi malah
+ pangleutikna [kontribusi bulanan via Patreon](https://www.patreon.com/cobbzilla)
+
+ *Hatur nuhun!*
 
  ## Pamasangan
  Pikeun nganggo alat baris paréntah, pasang nganggo `npm` atanapi `yarn` :
@@ -146,7 +149,7 @@ Hokeylization
 
  `LANG` diganti ku kode basa pikeun file kaluaran
 
- Ku kituna paréntah di luhur nyiptakeun file:
+ Janten paréntah di luhur nyiptakeun file:
 
     myfile.es.js
     myfile.de.js
@@ -172,11 +175,11 @@ Hokeylization
  **PERHATOSAN BESAR**: Nalika narjamahkeun diréktori, **ULAH** tangtukeun diréktori kaluaran
  anu aya dina diréktori input anjeun! Upami anjeun ngalakukeun ieu, anjeun bakal:
  * induce recursion taya wates
- * ngajalankeun tagihan Google Anjeun
+ * ngajalankeun up tagihan Google Anjeun
  * eusian disk anjeun
  *kurang senang
 
- Ieu conto naon *teu kedah dilakukeun*:
+ Ieu conto naon anu * henteu kedah dilakukeun *:
 
     hokey -l es -o templates/es templates # <--- DON'T DO THIS!
 

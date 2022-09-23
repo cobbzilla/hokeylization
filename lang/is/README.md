@@ -82,7 +82,10 @@ Hókýlvæðing
 
  Svo ég ætla að prófa að skrifa gagnlegan hugbúnað og sjá hvort það virkar
 
- Ég myndi þakka innilega jafnvel minnstu [mánaðarlegt framlag í gegnum Patreon](https://www.patreon.com/cobbzilla)
+ Ef þú hefur gaman af því að nota þennan hugbúnað, myndi ég vera svo ánægð að fá jafnvel
+ minnsta [mánaðarlegt framlag í gegnum Patreon](https://www.patreon.com/cobbzilla)
+
+ *Þakka þér fyrir!*
 
  ## Uppsetning
  Til að nota skipanalínutólið skaltu setja upp með því að nota `npm` eða `yarn` :
@@ -367,7 +370,7 @@ Hókýlvæðing
  eða möppu. Ef það er möppu verður sjálfgefið skráarheiti notað, byggt á sniðmátinu (sjá hér að neðan)
 
  Notaðu `-A` / `--index-template` til að ákvarða hvernig vísitöluúttakið er sniðið. Þú getur tilgreint 'html',
- 'markdown', 'text' eða skráarslóðina að þínu eigin [HandlebarsJS](https://handlebarsjs.com/) sniðmáti
+ 'markdown', 'texti' eða skráarslóðina að þínu eigin [HandlebarsJS](https://handlebarsjs.com/) sniðmáti
 
  Ef þú tilgreinir þitt eigið sniðmát verður þú einnig að tilgreina skrá (ekki möppu) fyrir `-I` / `--index`
  valmöguleika

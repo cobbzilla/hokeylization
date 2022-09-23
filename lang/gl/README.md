@@ -82,7 +82,10 @@ Hokeylización
 
  Entón, vou tentar escribir un software útil e ver se funciona
 
- Agradecería sinceramente ata a máis pequena [contribución mensual a través de Patreon](https://www.patreon.com/cobbzilla)
+ Se che gusta usar este software, estaría moi feliz de recibir ata o
+ máis pequena [contribución mensual a través de Patreon](https://www.patreon.com/cobbzilla)
+
+ *Grazas!*
 
  ## Instalación
  Para usar a ferramenta de liña de comandos, instálea usando `npm` ou `yarn` :

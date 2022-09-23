@@ -82,7 +82,10 @@
 
 所以我将尝试编写有用的软件，看看是否可行
 
-即使是最小的 [通过 Patreon 的每月贡献]，我也会真诚地感谢（https://www.patreon.com/cobbzilla）
+如果您喜欢使用这个软件，我会很高兴收到
+最小的 [通过 Patreon 的每月贡献](https://www.patreon.com/cobbzilla)
+
+ *谢谢！*
 
  ＃＃ 安装
 要使用命令行工具，请使用`npm`或`yarn`安装：

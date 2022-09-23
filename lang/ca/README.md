@@ -82,7 +82,10 @@ Hokeylització
 
  Així que intentaré escriure programari útil i veure si funciona
 
- Agrairia sincerament fins i tot la més petita [contribució mensual a través de Patreon](https://www.patreon.com/cobbzilla)
+ Si us agrada utilitzar aquest programari, m'agradaria molt rebre fins i tot el
+ més petita [contribució mensual a través de Patreon](https://www.patreon.com/cobbzilla)
+
+ *Gràcies!*
 
  ## Instal·lació
  Per utilitzar l'eina de línia d'ordres, instal·leu-lo amb `npm` ' o `yarn` :
@@ -161,7 +164,7 @@ Hokeylització
  Per forçar la retraducció de totes les claus, utilitzeu l' `-f` / `--force`
 
  ## Traduir un directori de fitxers de text
- També podeu traduir un directori de fitxers. hokeylization visitarà de forma recursiva tots
+ També podeu traduir un directori de fitxers. hokeylization visitarà de manera recursiva tots
  fitxer al directori i executeu-ne el contingut mitjançant Google Translate i deseu la sortida
  a un fitxer de nom idèntic en un arbre de directoris independent
 
@@ -364,7 +367,7 @@ Hokeylització
  *Quan genereu índexs, només podeu tenir una font d'entrada*
 
  Passeu l' `-I` / `--index` , el valor és on es generarà el fitxer d'índex, que pot ser un fitxer
- o un directori. Si es tracta d'un directori, s'utilitzarà un nom de fitxer predeterminat, basat en la plantilla (vegeu més avall)
+ o un directori. Si és un directori, s'utilitzarà un nom de fitxer per defecte, basat en la plantilla (vegeu més avall)
 
  Utilitzeu `-A` / `--index-template` per determinar com es formatea la sortida de l'índex. Podeu especificar "html",
  'markdown', 'text' o la ruta del fitxer a la vostra pròpia plantilla [HandlebarsJS](https://handlebarsjs.com/)

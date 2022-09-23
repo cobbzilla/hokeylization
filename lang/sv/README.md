@@ -82,7 +82,10 @@ Hokeylisering
 
  Så jag ska försöka skriva användbar programvara och se om det fungerar
 
- Jag skulle verkligen uppskatta även den minsta [månadsbidrag via Patreon](https://www.patreon.com/cobbzilla)
+ Om du gillar att använda den här programvaran, skulle jag vara så glad att få även den
+ minsta [månadsbidrag via Patreon](https://www.patreon.com/cobbzilla)
+
+ *Tack!*
 
  ## Installation
  För att använda kommandoradsverktyget, installera med `npm` eller `yarn` :
@@ -161,7 +164,7 @@ Hokeylisering
  För att tvinga om översättning av alla nycklar, använd `-f` / `--force`
 
  ## Översätta en katalog med textfiler
- Du kan också översätta en katalog med filer. hokeylisering kommer rekursivt att besöka varje
+ Du kan också översätta en katalog med filer. hokeylization kommer rekursivt att besöka varje
  filen i katalogen och kör dess innehåll via Google Translate och spara utdata
  till en fil med samma namn i ett separat katalogträd
 

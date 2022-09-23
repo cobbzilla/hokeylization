@@ -82,7 +82,10 @@ Hokeylization
 
  Saka ndichaedza kunyora software inobatsira uye kuona kana izvo zvinoshanda
 
- Ndingatenda nemoyo wese kunyange diki [mupiro wepamwedzi kuburikidza nePatreon](https://www.patreon.com/cobbzilla)
+ Kana iwe uchinakidzwa nekushandisa iyi software, ndingafara kwazvo kugamuchira kunyange iyo
+ diki [mupiro wepamwedzi nePatreon](https://www.patreon.com/cobbzilla)
+
+ *Ndatenda!*
 
  ## Kuiswa
  Kuti ushandise chirairo chekuraira, isa uchishandisa `npm` kana `yarn` :
@@ -361,10 +364,10 @@ Hokeylization
  Kana uchiturikira kumitauro yakawanda, `hokey` inogona kugadzira index file inonyora shanduro dzese dzakaitwa
  uye inopa zvinongedzo kwavari
 
- *Paunenge uchigadzira indexes, unogona kuve negiyo imwe chete yekuisa sosi *
+ *Paunenge uchigadzira indexes, unogona kuva negiyo imwe chete yekupinza*
 
- Pfuura iyo `-I` / `--index` sarudzo, kukosha ndiko kuchagadzirwa iyo index file, inogona kuva faira.
- kana dhairekitori. Kana iri dhairekitori, zita rezita refaira richashandiswa, zvichibva pane template (ona pazasi)
+ Pfuura iyo `-I` / `--index` sarudzo, kukosha ndiko kuchagadzirwa iyo index file, inogona kunge iri faira.
+ kana dhairekitori. Kana iri dhairekitori, zita refaira rekutanga richashandiswa, zvichibva pane template (ona pazasi)
 
  Shandisa iyo `-A` / `--index-template` kuona kuti index inobuda yakarongwa sei. Unogona kutsanangura 'html',
  'markdown', 'text', kana nzira yefaira kune yako [HandlebarsJS](https://handlebarsjs.com/) template

@@ -82,7 +82,10 @@ Hokeylisering
 
  Så jeg vil prøve at skrive nyttig software og se om det virker
 
- Jeg vil oprigtigt sætte pris på selv den mindste [månedlige bidrag via Patreon](https://www.patreon.com/cobbzilla)
+ Hvis du kan lide at bruge denne software, ville jeg være så glad for at modtage selv
+ mindste [månedligt bidrag via Patreon](https://www.patreon.com/cobbzilla)
+
+ *Tak skal du have!*
 
  ## Installation
  For at bruge kommandolinjeværktøjet skal du installere ved at bruge `npm` eller `yarn` :
@@ -95,7 +98,7 @@ Hokeylisering
     npm install -g hokeylization-lite
     yarn global add hokeylization-lite
 
- Se derefter hjælpen til `hokey` kommandoen:
+ Se derefter hjælpen til kommandoen `hokey` :
 
     hokey --help
     hokey -h

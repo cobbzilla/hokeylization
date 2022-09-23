@@ -82,7 +82,10 @@ Hokeylization
 
  Ke ndiza kuzama ukubhala isoftware eluncedo kwaye ndibone ukuba iyasebenza na
 
- Ndingabulela ngokungazenzisiyo nelona lincinci [igalelo lenyanga ngePatreon](https://www.patreon.com/cobbzilla)
+ Ukuba uyakonwabela ukusebenzisa le software, ndingavuya kakhulu ukufumana i
+ incinci [igalelo lenyanga ngePatreon](https://www.patreon.com/cobbzilla)
+
+ *Enkosi!*
 
  ## Ukufakela
  Ukusebenzisa isixhobo somgca womyalelo, hlohla usebenzisa `npm` okanye `yarn` :
@@ -366,7 +369,7 @@ Hokeylization
  Dlula i `-I` / `--index` ukhetho, ixabiso kulapho ifayile yesalathisi iyakwenziwa, enokuba yifayile.
  okanye uvimba weefayili. Ukuba luluhlu, igama lefayile elingagqibekanga liya kusetyenziswa, ngokusekwe kwithempleyithi (bona ngezantsi)
 
- Sebenzisa i `-A` / `--index-template` ukumisela ukuba isalathisi semveliso ifomathwa njani. Ungakhankanya 'html',
+ Sebenzisa i `-A` / `--index-template` ukujonga ukuba isalathisi semveliso ifomathwa njani. Ungakhankanya 'html',
  'markdown', 'text', okanye indlela yefayile eya kweyakho [HandlebarsJS](https://handlebarsjs.com/) template
 
  Ukuba ukhankanya eyakho itemplate, kufuneka kwakhona uchaze ifayile (hayi uvimba weefayili) ukwenzela `-I` / `--index`

@@ -82,7 +82,10 @@ I-Hokeylization
 
  Ngakho-ke ngizozama ukubhala isoftware ewusizo futhi ngibone ukuthi lokho kuyasebenza
 
- Ngingabonga kakhulu [umnikelo wanyanga zonke nge-Patreon](https://www.patreon.com/cobbzilla)
+ Uma ujabulela ukusebenzisa le software, ngingajabula kakhulu ukuthola noma
+ okuncane kakhulu [umnikelo wanyanga zonke nge-Patreon](https://www.patreon.com/cobbzilla)
+
+ *Ngiyabonga!*
 
  ## Ukufakwa
  Ukuze usebenzise ithuluzi lomugqa womyalo, faka usebenzisa `npm` noma `yarn` :

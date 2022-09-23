@@ -82,7 +82,10 @@ Hokeylization
 
  Kwa hivyo nitajaribu kuandika programu muhimu na kuona ikiwa hiyo inafanya kazi
 
- Ningeshukuru kwa dhati hata mchango mdogo zaidi [wa kila mwezi kupitia Patreon](https://www.patreon.com/cobbzilla)
+ Ikiwa unafurahia kutumia programu hii, ningefurahi sana kupokea hata
+ ndogo zaidi [mchango wa kila mwezi kupitia Patreon](https://www.patreon.com/cobbzilla)
+
+ *Asante!*
 
  ## Ufungaji
  Ili kutumia zana ya mstari wa amri, sakinisha kwa kutumia `npm` au `yarn` :
@@ -366,7 +369,7 @@ Hokeylization
  Pitisha chaguo la `-I` / `--index` , thamani ni pale faili ya faharisi itatolewa, ambayo inaweza kuwa faili.
  au saraka. Ikiwa ni saraka, jina la faili chaguo-msingi litatumika, kulingana na kiolezo (tazama hapa chini)
 
- Tumia `-A` / `--index-template` ili kubaini jinsi matokeo ya faharasa yameumbizwa. Unaweza kutaja 'html',
+ Tumia `-A` / `--index-template` ili kubainisha jinsi matokeo ya faharasa yameumbizwa. Unaweza kutaja 'html',
  'markdown', 'text', au njia ya faili kwa kiolezo chako [HandlebarsJS](https://handlebarsjs.com/)
 
  Ukibainisha kiolezo chako mwenyewe, lazima pia ubainishe faili (sio saraka) ya `-I` / `--index`

@@ -82,7 +82,10 @@ Hokeilizācija
 
  Tāpēc es mēģināšu uzrakstīt noderīgu programmatūru un pārbaudīt, vai tā darbojas
 
- Es patiesi novērtēšu pat vismazāko [ikmēneša ieguldījumu, izmantojot Patreon](https://www.patreon.com/cobbzilla)
+ Ja jums patīk izmantot šo programmatūru, es būtu ļoti priecīgs saņemt pat
+ mazākais [ikmēneša ieguldījums, izmantojot Patreon](https://www.patreon.com/cobbzilla)
+
+ *Paldies!*
 
  ## Uzstādīšana
  Lai izmantotu komandrindas rīku, instalējiet, izmantojot `npm` vai `yarn` :
@@ -363,7 +366,7 @@ Hokeilizācija
 
  *Ģenerējot indeksus, var būt tikai viens ievades avots*
 
- Nododiet opciju `-I` / `--index` , vērtība ir vieta, kur tiks ģenerēts indeksa fails, kas var būt fails
+ Nododiet opciju `-I` / `--index` , vērtība ir vieta, kur tiks ģenerēts indeksa fails, kas var būt fails.
  vai direktoriju. Ja tas ir direktorijs, tiks izmantots noklusējuma faila nosaukums, pamatojoties uz veidni (skatiet tālāk)
 
  Izmantojiet `-A` / `--index-template` , lai noteiktu, kā tiek formatēta indeksa izvade. Jūs varat norādīt "html",

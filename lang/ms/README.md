@@ -82,7 +82,10 @@ Hokeylization
 
  Jadi saya akan cuba menulis perisian yang berguna dan melihat sama ada ia berfungsi
 
- Saya amat menghargai walaupun yang terkecil [sumbangan bulanan melalui Patreon](https://www.patreon.com/cobbzilla)
+ Jika anda gemar menggunakan perisian ini, saya sangat gembira untuk menerima walaupun
+ terkecil [sumbangan bulanan melalui Patreon](https://www.patreon.com/cobbzilla)
+
+ *Terima kasih!*
 
  ## Pemasangan
  Untuk menggunakan alat baris arahan, pasang menggunakan `npm` atau `yarn` :

@@ -82,7 +82,10 @@ Hokeylizacija
 
  Taigi aš pabandysiu parašyti naudingą programinę įrangą ir pažiūrėti, ar ji veikia
 
- Būčiau nuoširdžiai dėkingas net už mažiausią [mėnesinį įnašą per Patreon](https://www.patreon.com/cobbzilla)
+ Jei jums patinka naudoti šią programinę įrangą, man būtų labai malonu gauti net
+ mažiausias [mėnesinis įnašas per Patreon](https://www.patreon.com/cobbzilla)
+
+ *Ačiū!*
 
  ## Diegimas
  Norėdami naudoti komandų eilutės įrankį, įdiekite naudodami `npm` arba `yarn` :

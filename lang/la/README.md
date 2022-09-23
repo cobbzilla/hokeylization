@@ -1,20 +1,20 @@
 Hokeylization
  =============
- Cur non possum totum meum app vel situs per Google Translate et in alia lingua transferre fundamentalem accipere?
+ Cur non totum app vel situs per Google Translate et in alia lingua interpretationem meam currere non possum?
 
- *** iam potes!***
+ ***Iam potes!***
 
  Nomen `hokeylization` est portmanteau, id est "hokeylizationis".
 
- Hoc aliquantum hokey est quod valde simplex est: chordas ad Google Translate . mittit
+ Hoc aliquantum hokey est quia valde simplex est: chordas ad Google Translate . mittit
 
  Et simplex est, sed et potens. Speciale subsidium habet documentis HTML;
- [HandlebarsJS](https://handlebarsjs.com/) templates
+ [HandlebarsJS](https://handlebarsjs.com/) template
  et [Markdown] files.
 
  Vertere potes:
  * JavaScript object continet epistulae
- * Quilibet numerus lima vel directoria, semper directoria percurso recursively
+ * Quisquis numerus lima vel directoria, semper directoria percurso recursively
 
  # Lege hoc in alia lingua
  Hoc README.md documentum translatum est, utens ipso instrumento hokeylizationis, in-
@@ -51,11 +51,11 @@ Hokeylization
 
  ### Estne problema cum hac translatione README?
  Haec praecipua translatio originalis [README](https://github.com/cobbzilla/hokeylization/blob/master/README.md)
- licet vitiosum esse -- * correctiones valde gratae sunt!* Mitte quaeso [in GitHub rogationem viverra](https://github.com/cobbzilla/hokeylization/pulls);
+ licet vitiosum esse -- * correctiones valde gratae sunt!* Mitte quaeso [in GitHub petitionem trahere](https://github.com/cobbzilla/hokeylization/pulls);
  vel si non es commodus id faciens, [aperi fluxum](https://github.com/cobbzilla/hokeylization/issues)
 
  Cum novam GitHub quaestionem de translatione creas, quaeso fac;
- * Paginam URL includere (exemplum / crustulum ex vecte electronica)
+ * Paginam URL includere (exemplum/crustulum ex vecte electronici)
  * Textum includere quod est nefas (exemplum / crustulum ex pasco)
  * Quaeso describere quid sit iniuria — est interpretatio falsa? fractum est forma aliqua?
  * benigne suggestionem praebeant translationis melioris vel quomodo textus debite formatus sit
@@ -67,8 +67,8 @@ Hokeylization
  * [Installation](#Installation)
  * [Setup](#Setup)
  * [JavaScript-filum-resource-file)
- * [Index indicis de text lima](# Translatio-in-directorium-of-textu lima)
- * [Alia options]
+ * [Index de text lima transferendo](# Translatio-in-indirectorium-of-textu lima)
+ * [Optiones aliae]
  * [JSON batch imperata](#JSON-batch-imperat)
 
  ## Source
@@ -76,16 +76,19 @@ Hokeylization
  * [Hokeylization in npm](https://www.npmjs.com/package/hokeylization)
 
  ## Support et Donec
- Conor esse professionalem fontem programmatum elit. I have been working in
+ Conor esse professionalem fontem elit programmandi. I have been working in
  industria programmatis multos annos feliciter societates incepi et eas societates publicas vendidi.
  Nuper officium meum perdidi, et aliud opus non instruxit
 
- Eo igitur experior utilium programmatum scribo et vide an opera sit
+ Eo igitur experiar scribendo utilem programmatum et vide an opera sit
 
- Sincere bene etiam minima [monthly contribution per Patreon](https://www.patreon.com/cobbzilla)
+ Si hoc programmate utendo frueris, ego tam laetus sum ut etiam thecam recipiam
+ minima [menstrua contributio per Patreon](https://www.patreon.com/cobbzilla)
+
+ *Gratias tibi!*
 
  ## Installation
- Utere utensilia instrumenti iubes, utens `npm` vel `yarn` :
+ Utendi linea mandandi instrumentum, utens `npm` vel `yarn` :
 
     npm install -g hokeylization
     yarn global add hokeylization
@@ -100,7 +103,7 @@ Hokeylization
     hokey --help
     hokey -h
 
- Vis videre output in lingua tua, vel alia lingua?
+ Vis videre output in lingua tua aut alia lingua?
 
  `hokey` lingua sponte deprehendere conatur ex scriptor environment variabilium testae tuae
 
@@ -154,7 +157,7 @@ Hokeylization
  The `-l` / `--languages` est comma separatum indicem in codice linguae ISO
  [a Google Translate](https://cloud.google.com/translate/docs/languages)
 
- Si fasciculus output iam existit, examinabitur uter iam exstantibus.
+ Si fasciculus output iam exstat, examinabitur uter iam exstantibus.
  Existens claves interpretari non poterunt. Translationes pro clauibus absentis generabuntur et apponentur
  ad finem JS objecti. Totus fasciculus semper revocetur.
 
@@ -167,7 +170,7 @@ Hokeylization
 
  Cum scopo translationis tuae directorium est, hic modus est enabled
 
- `-o` / `--outfile` optio cificat output directory
+ `-o` / `--outfile` optio specificat output directory
 
  ** Magnum MONITUM **: cum transferendis directoriis, ** non specificare an output Directory
  hoc est in input tuum presul! Si hoc feceris, eris;
@@ -200,7 +203,7 @@ Hokeylization
 
  In superioribus, `LANG` verbum reservatum est et in codice linguae ISO restituendum est
 
- Quid fit cum supra fugit;
+ Quod fit cum supra fugit;
  * `templates/email/es` ac `templates/email/de` directoriis creabuntur (si non sunt)
  * Omnis fasciculus in `templates/email/en` in Hispanica et Germanica transferetur
  * files output exsistens non regenerabitur nisi uteris `-f` / `--force`
@@ -209,7 +212,7 @@ Hokeylization
  ## Aliae optiones
 
  ### Siccum currere
- Transire `-n` / `--dry-run` ad ostentationem quae eventum est, sed non actu API vocat aliquod vel scribendo aliquod documentum.
+ Transire `-n` / `--dry-run` ad ostentationem quae eventum est, sed non actu API vocat vel scribendo aliquas tabulas.
 
  ### Force
  Transire `-f` / `--force` ad translationes semper renatas, etsi iam existunt
@@ -219,7 +222,7 @@ Hokeylization
 
  Non semper velis interpretari *omnia lima in tuo fonte presul ad scopum directorium tuum
 
- Valor `-m` / `--match` optio est regex (cave testa regulas commemorans!) quae specificat
+ Valor `-m` / `--match` est regex (cave testa regulas commemorans!) quae specificat
  quae files interpretari
 
  In dubio, hanc optionem iungere cum `-n` / `--dry-run` videre potes utra tabularia transferantur.
@@ -233,11 +236,11 @@ Hokeylization
  Communis usus esset: `--excludes node_modules dist \.git build tmp`
 
  ### Handlebars
- Fila transferendi, manubrii `{{ handlebars }}` templates contineant, vel cum duobus vel tribus bracteis crispis.
+ Fila transferendi possent `{{ handlebars }}` templates continere, vel cum duobus vel tribus bracteis crispis.
 
  Tu probabiliter noli vasa in illis exemplaribus interpretari
 
- `-H` / `--handlebars` vexillum, et quodcumque intra `{{ ... }}` , non transferetur.
+ `-H` / `--handlebars` vexillum transi, et quid intra `{{ ... }}` transferri non potest.
 
  ### Markdown
  Markdown non est textus nec html, ideo Google Translate nonnullas difficultates cum eo habet
@@ -247,23 +250,23 @@ Hokeylization
  Cum imagini notae, si vexillum `-M` non uteris, has difficultates verisimiliter invenies:
  *Fracto nexus. In translatione spatium character videtur post notam descriptionis extremitatum ( `]` ) sed
  antequam scopum suum nexus incipit (per `(` ). Hoc notam facit ut perperam reddat et nexum
- frangitur spectando documento.
- * Codicis caudices adepto translata. Google translate ignorat quid signum marcdown considerat et quid non
+ Rumpitur spectans documentum.
+ * Codicis caudices translati sunt. Google translate ignorat quid signum marcdown considerat et quid non
  * Recta iustae ad indentatum codice caudices. Spatium difficile servatur in translatione
  * Res interiores `backticks` transferentur, cum fere semper eas valores litterales esse vis
 
  Cum `-M` / `--markdown` est;
- * Exemplar `](` condensetur ad `](` sic nexus notae fractorum figens
- * A "no translate" fascia circumpositae incisae incisae ponentur, servatis propriis incisis et in tuto non transferuntur.
- * A "no translate" fascia circum texta collocabitur intra `backticks` ut ne transferantur
+ * Exemplar `](` condensetur ad `](` sic nexus notae fractos figens
+ * A "no translate" fascia incisa collocabitur circa caudices codicis, servata incisatione propria et in tuto non transfertur.
+ * A "ne translate" fasciculus circum textum intra `backticks` ut ne transferantur
 
- ### Processus-ut
+ ### Process-as
  Northmanni omnia discursum sicut patet in textu
 
- Si contentus es HTML, lacera nisi transeas `-p html` `--process-as html` optione
+ Si contentus es HTML, lacera nisi transieris `-p html` `--process-as html` optione
 
  ### Filter
- Nam periculosa: cum lima in directorio dispensando, optionem `-F` / `--filter` transire potes.
+ Nam periculosus: cum lima in directorio dispensando, optionem `-F` / `--filter` transire potes.
  eliquare output antequam scriptum est ad filesystem
 
  Valor huius optionis debet esse iter ad fasciculum JS qui exportat munus nomine `filter`
@@ -291,14 +294,14 @@ Hokeylization
  Utere `-h` / `--help` ad auxilium ostende
 
  ## JSON batch imperat
- Cum `-j` / `--json` `--json`, multa praecepta `hokey` currere potes
+ Cum `-j` / `--json` , currere potes multa `hokey` precepta ordinata
 
  Ex conventione haec fasciculus `hokey.json` , sed id quod vis nominare potes
 
- Si directorium transieris ut optionis `-j` , `hokey` `hokey.json` in indice illo.
+ Si directorium transieris ut optio ` `-j` , `hokey` `hokey.json` in indice illo.
 
- JSON file unum objectum debet continere. In illo obiecto, propria nomina idem sunt
- imperium-linea optiones, addito addito proprietatis `hokey`
+ JSON file unum objectum debet continere. In illo obiecto, proprietates eius idem sunt
+ order-line options, and one additional property named `hokey`
 
  `hokey` est ordo currere. Proprietates in his mandatis declarabuntur
  duplicata declarationibus delendi quodlibet objectum exterius.
@@ -345,7 +348,7 @@ Hokeylization
     }
 
  ### Multiplex files initus
- Ordinatas semitas imaginum transeo ut `infiles` pro uno viae `infile` , sicut in hoc exemplo:
+ Ordinatas semitas fasciculi ut `infiles` pro uno tramite `infile` , ut hoc exemplo:
 
     {
       ... [
@@ -363,7 +366,7 @@ Hokeylization
 
  Cum indices generantes, unum tantum initus fontem habere potes*
 
- Transire `-I` / `--index` optio, valor est ubi indicem fasciculi generabitur, quod fasciculus esse potest.
+ Transire `-I` / `--index` , valor est ubi indicem fasciculi generabitur, qui fasciculus esse potest.
  vel presul. Si directorium illud est, defalta filename adhibebitur, ex Formula (vide infra)
 
  Utere `-A` / `--index-template` determinare quomodo index output formatus est. Determinare potes 'html',
