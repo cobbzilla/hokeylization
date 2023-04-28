@@ -44,7 +44,7 @@ I'm certain it's not perfect, but I hope it's better than nothing!
 &nbsp;&nbsp;&nbsp;[🇮🇹 Italian](lang/it/README.md)
 &nbsp;&nbsp;&nbsp;[🇯🇵 Japanese](lang/ja/README.md)
 &nbsp;&nbsp;&nbsp;[🇰🇷 Korean](lang/ko/README.md)
-&nbsp;&nbsp;&nbsp;[🇮🇳 Maranthi](lang/mr/README.md)
+&nbsp;&nbsp;&nbsp;[🇮🇳 Marathi](lang/mr/README.md)
 &nbsp;&nbsp;&nbsp;[🇵🇱 Polish](lang/pl/README.md)
 &nbsp;&nbsp;&nbsp;[🇧🇷 Portuguese](lang/pt/README.md)
 &nbsp;&nbsp;&nbsp;[🇷🇺 Russian](lang/ru/README.md)
