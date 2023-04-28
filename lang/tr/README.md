@@ -34,7 +34,7 @@ hokeyleşme
  [🇮🇷 İtalyanca](../it/README.md)
  [🇯🇵 Japonca](../ja/README.md)
  [🇰🇷 Korean](../ko/README.md)
- [🇮🇳 Maranthi](../mr/README.md)
+ [🇮🇳 Marathi](../mr/README.md)
  [🇵🇱 Lehçe](../pl/README.md)
  [🇧🇷 Portekizce](../pt/README.md)
  [🇷🇺 Rusça](../ru/README.md)

@@ -34,7 +34,7 @@ Hokeylization
  [🇮🇹 ئىتالىيانچە](lang / it / README.md)
  [🇯🇵 ياپونچە](lang / ja / README.md)
  [🇰🇷 كورېيەچە](lang / ko / README.md)
- [🇮🇳 Maranthi](lang / mr / README.md)
+ [🇮🇳 Marathi](lang / mr / README.md)
  [Ish پولشاچە](lang / pl / README.md)
  [🇧🇷 پورتۇگالچە](lang / pt / README.md)
  [🇷🇺 رۇسچە](lang / ru / README.md)

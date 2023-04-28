@@ -34,7 +34,7 @@ Hokeylization
  [🇮🇹 IsiTaliyane](../it/README.md)
  [🇯🇵 Japanese](../ja/README.md)
  [🇰🇷 isiKorea](../ko/README.md)
- [🇮🇳 Maranthi](../mr/README.md)
+ [🇮🇳 Marathi](../mr/README.md)
  [🇵🇱 Polish](../pl/README.md)
  [🇧🇷 IsiPhuthukezi](../pt/README.md)
  [🇷🇺 IsiRashiya](../ru/README.md)

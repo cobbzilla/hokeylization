@@ -34,7 +34,7 @@ Hokeylization
  [🇮🇹 Itari](../it/README.md)
  [🇯🇵 Japanese](../ja/README.md)
  [🇰🇷 Korean](../ko/README.md)
- [🇮🇳 Maranthi](../mr/README.md)
+ [🇮🇳 Marathi](../mr/README.md)
  [🇵🇱 Poroni](../pl/README.md)
  [🇧🇷 Potiti](../pt/README.md)
  [🇷🇺 Ruhia](../ru/README.md)

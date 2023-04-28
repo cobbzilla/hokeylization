@@ -34,7 +34,7 @@ Hokeylisation
  [🇮🇹 Umutaliyani](lang / it / README.md)
  [🇯🇵 Ikiyapani](lang / ja / README.md)
  [🇰🇷 Igikoreya](lang / ko / README.md)
- [🇮🇳 Maranthi](lang / mr / README.md)
+ [🇮🇳 Marathi](lang / mr / README.md)
  [Ish Igipolonye](lang / pl / README.md)
  [🇧🇷 Igiporutugali](lang / pt / README.md)
  [🇷🇺 Ikirusiya](lang / ru / README.md)

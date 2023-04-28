@@ -34,7 +34,7 @@ Hokeylization
  [🇮🇹 Kiitaliano](../it/README.md)
  [🇯🇵 Kijapani](../ja/README.md)
  [🇰🇷 Kikorea](../ko/README.md)
- [🇮🇳 Maranthi](../mr/README.md)
+ [🇮🇳 Marathi](../mr/README.md)
  [🇵🇱 Kipolandi](../pl/README.md)
  [🇧🇷 Kireno](../pt/README.md)
  [🇷🇺 Kirusi](../ru/README.md)

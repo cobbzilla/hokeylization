@@ -34,7 +34,7 @@ Hokeylization
  [🇮🇹 Italian](../it/README.md)
  [🇯🇵 Giapponese](../ja/README.md)
  [🇰🇷 Coreano](../ko/README.md)
- [🇮🇳 Maranthi](../mr/README.md)
+ [🇮🇳 Marathi](../mr/README.md)
  [🇵🇱 Polacco](../pl/README.md)
  [🇧🇷 Portoghese](../pt/README.md)
  [🇷🇺 Russo](../ru/README.md)

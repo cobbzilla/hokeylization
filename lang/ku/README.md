@@ -34,7 +34,7 @@ Hokeylization
  [🇮🇹 Îtalî](ziman/ew/README.md)
  [🇯🇵 Japonî](../ja/README.md)
  [🇰🇷 Koreyî](../ko/README.md)
- [🇮🇳 Maranthi](ziman/mr/README.md)
+ [🇮🇳 Marathi](ziman/mr/README.md)
  [🇵🇱 Polonî](../pl/README.md)
  [🇧🇷 Portekîzî](ziman/pt/README.md)
  [🇷🇺 Rûsî](../ru/README.md)

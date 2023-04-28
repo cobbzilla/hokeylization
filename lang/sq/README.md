@@ -34,7 +34,7 @@ Hokeylizimi
  [🇮🇹 Italisht](gjuhë/it/README.md)
  [🇯🇵 Japonisht](../ja/README.md)
  [🇰🇷 Koreane](../ko/README.md)
- [🇮🇳 Maranthi](gjuhë/mr/README.md)
+ [🇮🇳 Marathi](gjuhë/mr/README.md)
  [🇵🇱 Polonisht](gjuhë/pl/README.md)
  [🇧🇷 Portugeze](gjuhë/pt/README.md)
  [🇷🇺 Rusisht](gjuhë/ru/README.md)

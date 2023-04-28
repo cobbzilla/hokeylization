@@ -34,7 +34,7 @@ Hokeylization
  [🇮🇹 Eadailtis](../it/README.md)
  [🇯🇵 Seapanais](../ja/README.md)
  [🇰🇷 Coirèanais](../ko/README.md)
- [🇮🇳 Maranthi](../mr/README.md)
+ [🇮🇳 Marathi](../mr/README.md)
  [🇵🇱 Pòlainn](../pl/README.md)
  [🇧🇷 Portuguese](../pt/README.md)
  [🇷🇺 Ruisis](../ru/README.md)

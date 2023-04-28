@@ -34,7 +34,7 @@ Hokeyzation
  [🇮🇹 tiếng Ý](lang / it / README.md)
  [🇯🇵 Tiếng Nhật](lang / ja / README.md)
  [🇰🇷 Korean](lang / ko / README.md)
- [🇮🇳 Maranthi](lang / mr / README.md)
+ [🇮🇳 Marathi](lang / mr / README.md)
  [🇵🇱 Tiếng Ba Lan](lang / pl / README.md)
  [🇧🇷 tiếng Bồ Đào Nha](lang / pt / README.md)
  [🇷🇺 tiếng Nga](lang / ru / README.md)

@@ -34,7 +34,7 @@ Hokeylizasiýa
  [🇮🇹 Italýança](lang / it / README.md)
  [🇯🇵 Japaneseaponça](lang / ja / README.md)
  [🇰🇷 Koreýçe](lang / ko / README.md)
- [🇮🇳 Maranthi](lang / mr / README.md)
+ [🇮🇳 Marathi](lang / mr / README.md)
  [Ish Polýakça](lang / pl / README.md)
  [🇧🇷 Portugaliýa](lang / pt / README.md)
  [🇷🇺 Rusça](lang / ru / README.md)
