@@ -85,13 +85,7 @@ When you create a new GitHub issue about a translation, please do:
 * [hokeylization on npm](https://www.npmjs.com/package/hokeylization)
 
 ## Support and Funding
-I am attempting to be a professional open source software developer. I have been working in
-the software industry for many years, I have started successful companies and sold them to public companies.
-Recently I lost my job, and I don't really have any other work lined up
-
-So I'm going to try writing helpful software and see if that works
-
-I would sincerely appreciate even the smallest [monthly contribution via Patreon](https://www.patreon.com/cobbzilla)
+I would sincerely appreciate any [contribution via Patreon](https://www.patreon.com/cobbzilla)
 
 ## Installation
 To use the command line tool, install using `npm` or `yarn`:
